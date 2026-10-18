@@ -23,7 +23,14 @@ namespace ArenaTatica
 namespace ArenaTatica.Core
 {
     // Loja: as 4 casas do meio são a barraca do mascate (decisão do autor, 11/10): ninguém entra e ela tapa a visão.
-    public enum Terrain { Livre, Arbusto, Arvore, Caixa, Loja }
+    // Parede (mapas fechados, 18/10): ninguém entra, nem voador, e tapa a visão. Porta: fechada é igual à parede; quem está
+    // colado gasta 1 PM para abrir (comando "abrir") e ela vira casa livre com TileObj.PortaAberta.
+    public enum Terrain { Livre, Arbusto, Arvore, Caixa, Loja, Parede, Porta }
+    // Objeto fixo da casa (Tile.obj), trazido do DungeonBDX (18/10). Baú: quem entra ganha BauMoedas e ele some.
+    // Espetos: quem entra andando ou empurrado (sem voar) leva 1 de dano e segue. Braseiro: obstáculo; quem começa o turno
+    // colado ganha +1 PA e, no Domínio, o único time colado nele no fim da rodada marca 1 ponto. Portal: liga à casa espelhada.
+    // Vela (labirinto): obstáculo; colado nela, "acender" tira a névoa do mapa para todos e dá 2 moedas a quem acendeu.
+    public enum TileObj { Nada, Bau, Espetos, Braseiro, Portal, PortaAberta, Vela }
     // A face de crítico do Krosmaster virou Cataclisma (decisão 11); o coringa Crítico/Esquiva virou Esquiva/Trava.
     public enum Face { Cataclisma, Escudo, Trava, Esquiva, CoringaEsquivaTrava, Coringa }
     public enum VictoryMode { Galeoes, Eliminacao, Tesouro, Dominio }
@@ -46,7 +53,9 @@ namespace ArenaTatica.Core
     public enum ShopKind { Item, Magia, Pet, Armadilha, Buff }
 
     // lava/mark: eventos (maré de lava, fogos). frozenBy: lutador que congelou a casa (+1 PM para entrar). trapPa: mina de gelo.
-    [Serializable] public class Tile { public int height, coins, trap, trapDamage, trapPa, frozenBy; public Terrain terrain; public bool zone, lava, mark; }
+    // obj: TileObj num único int (o snapshot de 18×18 precisa caber no Relay).
+    [Serializable] public class Tile { public int height, coins, trap, trapDamage, trapPa, frozenBy, obj; public Terrain terrain; public bool zone, lava, mark;
+        public TileObj Obj { get => (TileObj)obj; set => obj=(int)value; } }
     // Portal (sprint 1): casas de entrada e saída (Board.Index), quem abriu e turnos do dono que faltam. Fica numa lista do estado,
     // não em cada casa, para o snapshot de 6 jogadores caber no Relay.
     [Serializable] public class Portal { public int a, b, by, turns; }
@@ -217,6 +226,11 @@ namespace ArenaTatica.Core
         public uint rng;
         // Só visual: paleta e enfeites do cenário (MapGen.Themes).
         public int theme;
+        // Labirinto (cenário fechado): névoa (cada time só vê os inimigos na linha de visão de um aliado) até a vela ser acesa;
+        // boss: o evento do boss já saiu nesta partida (sai uma vez só).
+        public bool fog, revealed, boss;
+        // Mapa com paredes: salto e teleporte com metade do alcance e +1 PA (autor, 18/10).
+        public bool Walled() { foreach(var t in tiles) if(t.terrain==Terrain.Parede) return true; return false; }
         public bool over;
         // Fase de posicionamento (Sprint 1.3): assento que está arrumando os heróis nas casas de início; 0 = partida em curso.
         public int placing;

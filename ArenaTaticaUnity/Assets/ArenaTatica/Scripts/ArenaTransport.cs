@@ -32,6 +32,12 @@ namespace ArenaTatica
         public event Action<int,string> Message;
         public event Action<int> Connected, Disconnected;
         public event Action<string> Failed;
+        // Fila de saída de um peer chegou a 50% da capacidade: foi limpa sem aviso de erro; o jogo reenvia o estado inteiro
+        // (snapshot) a esse peer, então nada da partida se perde (só as animações intermediárias).
+        public event Action<int> Overflow;
+        public const int OutboxCapacity=64;
+        static int Half => OutboxCapacity/2;
+        readonly System.Collections.Generic.Dictionary<int,int> inFlight=new System.Collections.Generic.Dictionary<int,int>();
         public bool IsHost { get; private set; }
         // Host: algum jogador conectado. Cliente: ligado ao Host.
         public bool IsConnected { get; private set; }
@@ -148,7 +154,9 @@ namespace ArenaTatica
                     string text=new UTF8Encoding(false,true).GetString(data.ToArray());
                     // Bound main-thread backlog even if a remote peer floods the socket. Turno longo do Host manda um estado por
                     // ação; 128 derrubava o cliente num quadro lento (carregamento, tela em segundo plano).
-                    if(pending.Count>4096) throw new IOException("Muitas mensagens pendentes");
+                    // Fila de entrada a 50%: descarta esta mensagem em vez de derrubar a conexão; o cliente se recupera pelo
+                    // resync (salto de revisão/pong) e o Host só perde comandos repetidos.
+                    if(pending.Count>2048) continue;
                     Enqueue(gen,()=>Message?.Invoke(peer,text));
                 }
             }
@@ -160,13 +168,16 @@ namespace ArenaTatica
             if(IsHost&&!peers.TryGetValue(peer,out ws)) return;
             var token=lifetime?.Token??CancellationToken.None; int gen=generation;
             if(!IsConnected||ws==null||text.Length>65536) return;
+            // Envios esperando o socket a 50% da capacidade: limpa (não manda este) e pede um snapshot novo.
+            int busy; lock(inFlight) { inFlight.TryGetValue(peer,out busy); if(busy<Half) inFlight[peer]=busy+1; }
+            if(busy>=Half) { Enqueue(gen,()=>Overflow?.Invoke(peer)); return; }
             bool acquired=false;
             try {
                 await writeLock.WaitAsync(token); acquired=true;
                 if(gen!=generation||ws.State!=WebSocketState.Open) return;
                 var data=Encoding.UTF8.GetBytes(text); await ws.SendAsync(new ArraySegment<byte>(data),WebSocketMessageType.Text,true,token);
             } catch(Exception) { Enqueue(gen,()=>Failed?.Invoke("Não foi possível enviar a mensagem.")); }
-            finally { if(acquired) writeLock.Release(); }
+            finally { if(acquired) writeLock.Release(); lock(inFlight) { if(inFlight.TryGetValue(peer,out int n)) inFlight[peer]=Math.Max(0,n-1); } }
         }
         // Host derruba uma conexão (jogador substituído pela reconexão do mesmo assento).
         public void Kick(int peer)
@@ -334,8 +345,8 @@ namespace ArenaTatica
             var bytes=Encoding.UTF8.GetBytes(text);
             if(bytes.Length>RelayPayload) { Failed?.Invoke("Mensagem grande demais para a sala."); return; }
             if(!relayOutbox.TryGetValue(peer,out var queue)) relayOutbox[peer]=queue=new System.Collections.Generic.Queue<byte[]>();
-            // Fila travada há muito tempo: o cliente se recupera pelo resync (salto de revisão/pong).
-            if(queue.Count>=512) { queue.Clear(); Failed?.Invoke("Conexão lenta: mensagens descartadas, a partida será ressincronizada."); }
+            // Fila a 50%: as mensagens velhas não valem mais nada (cada estado é completo). Limpa e o jogo manda um snapshot.
+            if(queue.Count>=Half) { queue.Clear(); Enqueue(generation,()=>Overflow?.Invoke(peer)); return; }
             queue.Enqueue(bytes); Flush(peer);
         }
         void Flush(int peer)

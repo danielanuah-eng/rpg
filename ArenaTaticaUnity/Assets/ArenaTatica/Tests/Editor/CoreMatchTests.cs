@@ -81,14 +81,18 @@ namespace ArenaTatica.Core.Tests
             Assert.AreEqual(1,Match.ViewFor(S,1).At(at).trapPa);
         }
 
-        [Test] public void GeneratedMapIsMirroredAndConnected()
+        // Autor (18/10): cenário aleatório, sem espelho, mas com os lados justos (MapGen.Fair).
+        [Test] public void GeneratedMapIsRandomFairAndConnected()
         {
+            int asymmetric=0;
             for(uint seed=1;seed<30;seed++)
             {
                 var s=Match.New(new MatchSetup{ seed=seed }).S;
-                for(int i=0;i<s.tiles.Length;i++) { var c=new Cell(i%s.width,i/s.width); var a=s.At(c); var b=s.At(s.Mirror(c)); Assert.AreEqual(a.height,b.height); Assert.AreEqual(a.terrain,b.terrain); }
+                if(Enumerable.Range(0,s.tiles.Length).Any(i=>{ var c=new Cell(i%s.width,i/s.width); return s.At(c).terrain!=s.At(s.Mirror(c)).terrain; })) asymmetric++;
+                Assert.IsTrue(MapGen.Fair(s),"seed "+seed);
                 Assert.IsTrue(Board.Connected(s),"seed "+seed);
             }
+            Assert.Greater(asymmetric,20,"quase todos fora do espelho");
         }
         // Krosmaster: o jogador joga o time inteiro em sequência (maior Iniciativa primeiro); começa a maior soma de Iniciativa.
         [Test] public void KrosmasterTimelinePlaysWholeTeamAndStartsWithFullStats()
@@ -330,7 +334,7 @@ namespace ArenaTatica.Core.Tests
             {
                 var s=Match.New(new MatchSetup{ seed=seed, players=Enumerable.Range(0,n).Select(_=>new PlayerSetup()).ToArray() }).S;
                 Assert.AreEqual(Board.SizeFor(n),s.width);
-                for(int i=0;i<s.tiles.Length;i++) { var c=new Cell(i%s.width,i/s.width); Assert.AreEqual(s.At(c).height,s.At(s.Mirror(c)).height); }
+                Assert.IsTrue(MapGen.Fair(s),$"lados justos: {n} jogadores, seed {seed}");
                 Assert.IsTrue(Board.Connected(s),$"{n} jogadores, seed {seed}");
                 Assert.AreEqual(n,s.fighters.Select(f=>f.cell).Distinct().Count());
                 Assert.IsTrue(s.fighters.All(f=>s.At(f.cell).terrain==Terrain.Livre));

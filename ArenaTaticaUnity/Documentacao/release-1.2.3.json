@@ -1,0 +1,15 @@
+{
+    "version": "1.2.3",
+    "state": "publicado-itch-windows",
+    "protocol": 6,
+    "sourceCommit": "nao commitado (codigo em cima de bef4148b)",
+    "editMode": { "total": 417, "passed": 417, "failed": 0, "skipped": 0 },
+    "notes": "Filas de mensagens limpas a 50%: saida do Relay (64 msgs, limpa em 32), envios LAN esperando (32), entrada LAN (2048, descarta em vez de derrubar) e fila de animacoes (8, pula em 4). Ao limpar, o Host reenvia o snapshot do jogador (1 por segundo). Protocolo 6: joga online com a 1.2.2.",
+    "previousRelease": "release-1.2.2.json",
+    "platforms": {
+        "windows": { "package": "Builds/ArenaTatica-Windows.zip", "buildId": 2150386, "userVersion": "2026.10.18-1.2.3", "state": "completed" },
+        "android": { "state": "nao publicado", "reason": "build falhou: Unity 6000.6.4f1 sem PlaybackEngines/AndroidPlayer/Variations/il2cpp/Release/StaticLibs/arm64-v8a/baselib.a (apagado em 17/10 20:03); reinstalar o modulo Android pelo Unity Hub" }
+    },
+    "androidPhysical": "pendente",
+    "onlineTwoDevices": "pendente"
+}

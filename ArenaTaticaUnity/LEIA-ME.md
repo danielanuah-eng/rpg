@@ -1,4 +1,4 @@
-# Arena Tática — Unity 1.2.2
+# Arena Tática — Unity 1.2.3
 
 Jogo de combate tático por turnos para 2 a 6 participantes, desenvolvido em Unity 6000.6.4f1 com URP. Distribuição: https://eiediboy.itch.io/bdx-master. Consulte VALIDACAO.md para a evidência e as limitações da versão publicada.
 
@@ -70,3 +70,4 @@ O projeto editável usa Assets com seus .meta, Packages e ProjectSettings. Arte 
 Atualização 1.2.1: sprites de uso da bomba de fumaça, mina de gelo e totem; conjuração/impacto do motor quente; conjuração do chão de gelo; uso de quatro equipamentos/buffs da loja. Magias e pets só animam ao usar. Skills copiadas/sorteadas mantêm a arte e o tempo da original.
 
 Atualização 1.2.2 (protocolo 6): posicionamento inicial, desempate de iniciativa, gatos, formas, reviver, alturas, mina terrestre; quatro céus; lava cercada volta a crescer; 44 efeitos de impacto novos. Aparelhos na 1.2.1 não jogam online com a 1.2.2.
+Atualização 1.2.3 (protocolo 6, joga online com a 1.2.2): filas de mensagens da rede e de animações se limpam sozinhas ao chegar a 50%; o Host reenvia a partida inteira ao jogador atrasado, sem derrubar ninguém.

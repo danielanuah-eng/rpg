@@ -766,7 +766,7 @@ namespace ArenaTatica
                 bool spent=sk.perMatch>0&&f.usedMatch.Count(u=>u==sk.id)>=sk.perMatch, early=sk.minRound>s.round;
                 string cost=sk.kind==SkillKind.Aura?(f.auraOn?"ligada · desligar":f.auraPaid?"religar":$"{sk.pa} PA/turno"):$"{sk.pa} PA";
                 SetLabel(b,$"{sk.name} · {(spent?"usada":early?$"rodada {sk.minRound}":wait!=null?$"recarga {wait.uses}":cost)}{(charge!=null?$" ×{charge.uses}":"")}");
-                b.interactable=Game.CanAct&&f.pa>=Match.Cost(f,sk)&&wait==null&&!spent&&!early&&f.channel==0;
+                b.interactable=Game.CanAct&&f.pa>=Match.Cost(f,sk,Game.State)&&wait==null&&!spent&&!early&&f.channel==0;
                 // Destaque do 1º toque (mira armada) e do modo de mira: o mesmo tom escolhido de sempre.
                 ArenaTema.Paint(b,Game.Mode==sk.id||Confirming(ArenaActionConfirmation.Skill(sk.id)),chosen,idle);
             }

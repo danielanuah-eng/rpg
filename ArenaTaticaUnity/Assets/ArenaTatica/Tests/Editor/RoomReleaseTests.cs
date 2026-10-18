@@ -55,6 +55,9 @@ namespace ArenaTatica.Tests
         ArenaGame client;
         bool drop;
         readonly List<WireMessage> toClient=new List<WireMessage>();
+        // Fichas do Host: vão em partes, numa mensagem própria (protocolo 7).
+        readonly List<WireMessage> editsToClient=new List<WireMessage>();
+        string LastEdits() { int i=editsToClient.FindLastIndex(m=>m.text.StartsWith("0/")); return i<0?null:string.Concat(editsToClient.Skip(i).Select(m=>m.edits)); }
         // Cliente real no mesmo processo: o que o Host manda ao peer 102 chega ao cliente e vice-versa (drop = mensagem perdida).
         void Wire()
         {
@@ -64,7 +67,7 @@ namespace ArenaTatica.Tests
             typeof(ArenaGame).GetProperty("Menu").SetValue(client,null); typeof(ArenaGame).GetProperty("Hud").SetValue(client,null);
             typeof(ArenaTransport).GetProperty("Role").SetValue(client.Network,"Client");
             var receive=typeof(ArenaGame).GetMethod("Receive",Private);
-            game.Sent+=(peer,m)=>{ if(peer!=102) return; toClient.Add(m); if(!drop) receive.Invoke(client,new object[]{0,JsonUtility.ToJson(m)}); };
+            game.Sent+=(peer,m)=>{ if(peer!=102) return; if(m.kind!="edits") toClient.Add(m); else editsToClient.Add(m); if(!drop) receive.Invoke(client,new object[]{0,JsonUtility.ToJson(m)}); };
             client.Sent+=(peer,m)=>receive.Invoke(game,new object[]{102,JsonUtility.ToJson(m)});
         }
         void Pass() { var f=game.Active; Call("Execute",new Command{kind="passar",fighter=f.id,revision=game.State.revision},f.team,-1); }
@@ -89,6 +92,18 @@ namespace ArenaTatica.Tests
             var mine=game.State.fighters.First(f=>f.team==2);
             Call("Receive",102,JsonUtility.ToJson(new WireMessage{kind="command",command=new Command{kind="passar",fighter=mine.id,revision=stale}}));
             Assert.AreEqual("reject",toClient[0].kind); Assert.AreEqual(game.State.revision,client.State.revision);
+        }
+        [Test] public void FullOutboxIsReplacedByOneSnapshot()
+        {
+            Wire(); Host(2); toClient.Clear(); Call("Resend",102);
+            Assert.AreEqual("lobby",toClient.Single().kind,"na sala reenvia o resumo");
+            ((Dictionary<int,float>)typeof(ArenaGame).GetField("resent",Private).GetValue(game)).Clear();
+            game.StartRoom(); drop=true; Pass(); Pass(); drop=false; toClient.Clear();
+            Assert.Less(client.State.revision,game.State.revision);
+            Call("Resend",102); Call("Resend",102);
+            Assert.AreEqual(1,toClient.Count,"no máximo 1 snapshot por segundo"); Assert.AreEqual("resync",toClient[0].text);
+            Assert.AreEqual(game.State.revision,client.State.revision); Assert.IsTrue(client.Synced);
+            Assert.AreEqual(32,ArenaTransport.OutboxCapacity/2,"limpa a 50% da fila");
         }
         [Test] public void TurnTimeoutPassesStalledTurnOnHost()
         {
@@ -176,7 +191,8 @@ namespace ArenaTatica.Tests
                 Wire(); Host(2);
                 game.SetPreset("caro"); Assert.AreEqual(ArenaGame.TeamLevel,Content.Fighters["ciantia"].level);
                 CollectionAssert.AreEqual(new[]{"ciantia"},ArenaGame.ValidTeam(new[]{"ciantia",other}),"custo do preset vale na sala");
-                var lobby=toClient.Last(m=>m.kind=="lobby"); Assert.AreEqual(ArenaEdits.PresetJson("caro"),lobby.edits,"cliente valida com o preset do Host");
+                var lobby=toClient.Last(m=>m.kind=="lobby"); Assert.IsTrue(string.IsNullOrEmpty(lobby.edits),"fichas fora do resumo da sala");
+                Assert.AreEqual(ArenaEdits.PresetJson("caro"),LastEdits(),"cliente valida com o preset do Host");
                 StringAssert.Contains("Balanceamento: <b>caro</b>",game.LobbySummary());
                 Content.ApplyEdits(""); game.StartRoom();
                 Assert.AreEqual(ArenaEdits.PresetJson("caro"),game.State.edits);

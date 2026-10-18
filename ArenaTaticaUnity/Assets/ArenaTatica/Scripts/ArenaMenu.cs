@@ -309,6 +309,10 @@ namespace ArenaTatica
             Pick(Btn(row,"Jogador completo (Krosmaster)",()=>{ Game.SetTurns(TurnMode.Completo); Show(again); },0,40),Game.Turns==TurnMode.Completo);
             Pick(Btn(row,"Iniciativa alternada",()=>{ Game.SetTurns(TurnMode.Alternada); Show(again); },0,40),Game.Turns==TurnMode.Alternada);
             Para(c,Game.Turns==TurnMode.Completo?"Cada jogador joga o time inteiro, do lutador de maior Iniciativa para o de menor, e passa a vez.":"Um lutador de cada time por vez, da maior Iniciativa para a menor: o time A joga 1, o B joga 1, e assim por diante.");
+            Section(c,"Posições iniciais");
+            row=Row(c,44);
+            Pick(Btn(row,"Escolher onde cada herói começa",()=>{ Game.SetPlacement(true); Show(again); },0,40),Game.Placement);
+            Pick(Btn(row,"Começar nas casas padrão",()=>{ Game.SetPlacement(false); Show(again); },0,40),!Game.Placement);
             Section(c,"Vitória");
             row=Row(c,44);
             foreach(VictoryMode v in Enum.GetValues(typeof(VictoryMode))) { var k=v; Pick(Btn(row,VictoryName(v),()=>{ Game.SetVictory(k); Show(again); },0,40),Game.Victory==k); }
@@ -412,8 +416,8 @@ namespace ArenaTatica
             var c=Scroll(body);
             Section(c,"Mapa das próximas partidas");
             var row=Row(c,44);
-            Pick(Btn(row,"Um mapa do Codex a cada partida",()=>{ Game.MapName=""; Show("mapas"); },0,40),Game.MapName=="");
-            Pick(Btn(row,"Gerado na hora (MapGen)",()=>{ Game.MapName=ArenaMaps.Generated; Show("mapas"); },0,40),Game.MapName==ArenaMaps.Generated);
+            Pick(Btn(row,"Aleatório, gerado na hora",()=>{ Game.MapName=""; Show("mapas"); },0,40),Game.MapName==""||Game.MapName==ArenaMaps.Generated);
+            Pick(Btn(row,"Um mapa pronto do Codex",()=>{ Game.MapName=ArenaMaps.Codex; Show("mapas"); },0,40),Game.MapName==ArenaMaps.Codex);
             Para(c,"Um mapa vale para o número de jogadores do tamanho dele: 12×12 para 2, 16×16 para 3 ou 4, 18×18 para 5 ou 6. Na sala pela internet vale o mapa do Host. O meio é a loja (ninguém passa); a zona central são as 8 casas encostadas nela.");
             Section(c,"Mapas do Codex");
             foreach(var m in ArenaMaps.Builtin)
@@ -438,9 +442,12 @@ namespace ArenaTatica
             foreach(int size in new[]{12,16,18}) { int k=size; Btn(row,$"Vazio {k}×{k} ({MapGen.PlayersFor(k)} jog.)",()=>Game.MapEditor.Open(MapGen.NewMap(k)),0,40); }
             row=Row(c,44);
             foreach(int size in new[]{12,16,18}) { int k=size; Btn(row,$"A partir de um sorteado {k}×{k}",()=>Game.MapEditor.Open(MapGen.NewMap(k,(uint)Environment.TickCount|1)),0,40); }
-            Para(c,"No editor: suba e desça o relevo, coloque árvores, arbustos e caixas, troque o modelo de cada peça (pinheiro, palmeira, pedra…), espalhe enfeites do cenário, marque a zona central e mova as peças tocando na peça e depois no destino. O espelho repete cada mudança na casa oposta, para o mapa ficar justo.");
+            // Fechado (18/10): salas e corredores sorteados num dos cenários fechados (Cripta, Biblioteca, Jardim).
+            row=Row(c,44);
+            foreach(int size in new[]{12,16,18}) { int k=size; Btn(row,$"Fechado sorteado {k}×{k}",()=>{ uint seed=(uint)Environment.TickCount|1; Game.MapEditor.Open(MapGen.NewMap(k,seed,MapGen.OpenThemes+(int)(seed%(MapGen.Themes.Length-MapGen.OpenThemes)))); },0,40); }
+            Para(c,"No editor: suba e desça o relevo, coloque árvores, arbustos, caixas, paredes e objetos (baú, espetos, braseiro e portal), troque o modelo de cada peça (pinheiro, palmeira, pedra…), espalhe enfeites do cenário, marque a zona central e mova as peças tocando na peça e depois no destino. O espelho repete cada mudança na casa oposta, para o mapa ficar justo.");
         }
-        static string MapLabel(string name) => name==""?"um do Codex, sorteado":name==ArenaMaps.Generated?"gerado na hora":name;
+        static string MapLabel(string name) => name==""||name==ArenaMaps.Generated?"aleatório, gerado na hora":name==ArenaMaps.Codex?"um do Codex, sorteado":name;
         static string VictoryName(VictoryMode v) => v==VictoryMode.Galeoes?"Galeões":v==VictoryMode.Eliminacao?"Eliminação":v==VictoryMode.Tesouro?"Tesouro":"Domínio";
         static string VictoryHelp(VictoryMode v) => v switch {
             VictoryMode.Galeoes=>"Cada nocaute tira do time os Galeões iguais ao Nível do lutador. Time sem Galeões sai.",

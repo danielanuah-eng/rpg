@@ -78,3 +78,23 @@ Contexto completo do DungeonBDX: `coordenacao/dungeonbdx/HANDOFF-CLAUDE-17-10-20
 - Artes: `iron-blade` e `heavy-crossbow` desenhadas à mão no `pixelart_workbench` (grátis); as 10 cartas têm arte. README em `entregas/10-cartas-loja/`.
 - EditMode 436/436 (testes novos em `Tests/Arcadia/AqUpgradeTests.cs`).
 - Canva conectado pelo autor em 18/10 (conector do claude.ai).
+
+## Arco de teixo no Blender — feito (18/10)
+- Commit `bf0185b5` (push feito com aprovação do autor). EditMode 436/436, build Windows ok.
+- `yew-bow` refeito no Blender 5.2 (64×64, rampas da paleta das cartas, contorno `#141217`). Script e comparação em `entregas/10-cartas-loja/exemplo-blender/`; versão antiga em `yew-bow-pixflux-antiga.png`. Blender fora do PATH: `C:/Program Files/Blender Foundation/Blender 5.2/blender.exe -b -P blender_bow.py -- <saída.png>` (este PC não tem Python; usar o do Blender).
+- O sorteio fixo de `-dungeonbdx-aq-shop` não traz o arco; ainda sem captura dele no jogo.
+- Pendente: o autor dizer se lacaios/vilões estão fortes ou fracos e se aprova o arco; refazer no Blender as cartas que ele achar fracas.
+
+## Arena: DungeonBDX abandonado, labirintos e mapas aleatórios — feito, sem commit (18/10)
+- Autor desistiu do DungeonBDX; arte, props, personagens e funções passam para a Arena. EditMode 449/449, build Windows ok, capturas em `ArenaTaticaUnity/Artifacts/mapa-*.png`.
+- Mapas (MapGen reescrito): sem espelho; blocos temáticos prontos (girados/espelhados) + manchas; inícios opostos e `MapGen.Fair` (zona, vela, baú). Padrão do menu = aleatório; mapas do Codex só pela opção "Um mapa pronto do Codex" (`ArenaMaps.Codex`).
+- Piso: kit 3D do Blender como base (labirintos: Cripta→pedreira, Biblioteca→deserto, Jardim→bosque); pisos do DungeonBDX só em manchas (`Decor` "piso_<tile>", `MapGen.FloorPatches`).
+- Labirintos (temas 5–7, escolhidos no menu; o sorteio -1 só pega abertos): um tamanho acima (16/18/20), paredes, portas (encostar, 1 PM, comando `abrir`), névoa por linha de visão (`Match.Sees/Concealed`, ViewFor esconde), vela única (`acender`: tira a névoa, +2 moedas), boss único (evento `chefe`: Dragão Espectral Ancião, Necromante da Cripta, Rei Goblin Ferrugem; anda, abre portas, bate).
+- Objetos (`Tile.obj`/`TileObj`): baú (+3 moedas), espetos (1 de dano), braseiro (+1 PA; Domínio), portais fixos em pares pela ordem.
+- Mapa com paredes: Salto/Teleporte com metade do alcance e +1 PA (`Match.Cost(f,sk,s)`).
+- Menu: "Posições iniciais" liga/desliga a escolha das casas (`arena-posicionar`).
+- Multiplayer (protocolo 7): fichas editadas fora de lobby/draft/estado; vão em partes (`edits`, "i/n") só quando mudam por jogador; limpeza da fila (Overflow→Resend) reenvia fichas + snapshot completo; pedido em menos de 1 s fica pendente em vez de se perder.
+- Primal Beast (ex-Colosso) 3,1; Edgar 1,65; navio 2,1.
+- Build: faltava `ArenaTatica_Data/Resources/unity default resources` (o exe caía na abertura); copiado do build do DungeonBDX.
+- 18/10 tarde: piso das manchas sem frestas (escala 1). Testes 449/449 e build refeitos; capturas `Artifacts/aberto-tema1-1810-vista*.png` ok. Falta: retorno do autor (tamanhos Primal Beast/Edgar/navio, visual das portas) e aprovação do commit/push.
+- 18/10 (pedido "mais organizado"): MapGen sem manchas aleatórias. Pisos com forma em `Decor.rot` (Losango/Moldura/Cruz/Quadrado; Estrada+dir = trecho reto), blocos com piso desenhado, 0–2 desenhos com centro em mosaico (`Motif`), estrada de tijolos 0–2 vezes da beira até a zona (`Roads`, com tochas no `Decorate`), vilas (`praca`, `feira`, `poco`, `armazem`: fonte, barris, cerca, tocha, placa, fogueira), barris soltos e enfeites em canteiros. Testes 450/450, build ok, capturas `Artifacts/vila*-tema*.png`.

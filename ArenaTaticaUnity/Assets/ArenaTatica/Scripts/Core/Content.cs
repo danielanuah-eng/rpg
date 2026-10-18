@@ -82,7 +82,7 @@ namespace ArenaTatica.Core
             ["gato-malhado"]=Cat("gato-malhado","Gato preto e branco","GatoMalhado",new SkillDef { id="faisca-malhada", name="Faísca malhada", kind=SkillKind.Dano, minRange=1, maxRange=3, damage=1, pmLoss=2, anim="zap" }),
             ["gato-manchado"]=Cat("gato-manchado","Gato marrom manchado","GatoManchado",new SkillDef { id="faisca-manchada", name="Faísca manchada", kind=SkillKind.Dano, minRange=1, maxRange=3, damage=1, push=1, anim="zap" }),
             // Tanque gigante e lento: qualquer morte no mapa alimenta Devorar (+1 PA no custo da skill absorvida).
-            ["colosso"]=new FighterDef { id="colosso", name="O Colosso", sprites="Colosso", hp=18, pa=6, pm=2, initiative=1, level=6, immovable=true, devour=true, skills=new[] {
+            ["colosso"]=new FighterDef { id="colosso", name="Primal Beast", sprites="Colosso", hp=18, pa=6, pm=2, initiative=1, level=6, immovable=true, devour=true, skills=new[] {
                 new SkillDef { id="pancada-colossal", name="Pancada colossal", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=4 },
                 new SkillDef { id="pisao", name="Pisão", kind=SkillKind.Dano, pa=4, minRange=0, maxRange=0, sight=false, selfArea=true, square=true, area=1, damage=2, perTurn=1, anim="stomp" } } },
             // Pirata de óleo: tentáculos em volta, canhão de peito em 2 tempos e o gancho-broca que arremessa o alvo.
@@ -165,7 +165,18 @@ namespace ArenaTatica.Core
             ["brutamontes-errante"]=new FighterDef { id="brutamontes-errante", name="Brutamontes Errante", sprites="BrutamontesErrante", hp=20, pa=6, pm=3, level=0, picker=false, neutral=true, armor=1, immovable=true, skills=new[] {
                 new SkillDef { id="pancada-do-errante", name="Pancada do Errante", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3 },
                 new SkillDef { id="rugido", name="Rugido", kind=SkillKind.Dano, pa=0, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=0, pmLoss=2, anim="roar" } } },
+            // Bosses do labirinto (evento "chefe", 18/10): neutros; skills[0] = golpe colado, skills[1] = especial em volta a cada 2 rodadas.
+            ["chefe-dragao"]=new FighterDef { id="chefe-dragao", name="Dragão Espectral Ancião", sprites="DragaoEspectral", hp=22, pa=6, pm=4, level=0, picker=false, neutral=true, flying=true, armor=1, immovable=true, skills=new[] {
+                new SkillDef { id="garra-espectral", name="Garra espectral", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3 },
+                new SkillDef { id="sopro-do-alem", name="Sopro do além", kind=SkillKind.Dano, pa=0, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=2, anim="breath" } } },
+            ["chefe-necromante"]=new FighterDef { id="chefe-necromante", name="Necromante da Cripta", sprites="NecromanteCripta", hp=18, pa=6, pm=3, level=0, picker=false, neutral=true, immovable=true, skills=new[] {
+                new SkillDef { id="toque-sombrio", name="Toque sombrio", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3, paLoss=1 },
+                new SkillDef { id="lamento-da-cripta", name="Lamento da cripta", kind=SkillKind.Dano, pa=0, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=1, paLoss=2 } } },
+            ["chefe-rei-goblin"]=new FighterDef { id="chefe-rei-goblin", name="Rei Goblin Ferrugem", sprites="ReiGoblinFerrugem", hp=24, pa=6, pm=3, level=0, picker=false, neutral=true, armor=2, immovable=true, skills=new[] {
+                new SkillDef { id="machadada-enferrujada", name="Machadada enferrujada", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=4 },
+                new SkillDef { id="grito-de-guerra", name="Grito de guerra", kind=SkillKind.Dano, pa=0, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=0, pmLoss=2, anim="roar" } } },
         };
+        public static readonly string[] Bosses={"chefe-dragao","chefe-necromante","chefe-rei-goblin"};
         // Biblioteca de skills genéricas (autor, 13/10): modelos prontos inspirados em D&D, Krosmaster e golpes de anime, montados
         // só com efeitos que o motor já tem. O editor copia a escolhida para a ficha (id novo) e o autor ajusta os números.
         public static readonly (string group,SkillDef skill)[] Generic=

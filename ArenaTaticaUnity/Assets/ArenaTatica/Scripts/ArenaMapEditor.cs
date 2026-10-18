@@ -27,6 +27,8 @@ namespace ArenaTatica
         public static List<MapDef> All => Lib.maps;
         // Mapas do Codex (Resources/Mapas/codex.json, gerado por Tools/mapas-codex.mjs). Os que não passam em MapGen.Problem ficam de fora.
         public const string Generated="@gerado";
+        // Os mapas prontos do Codex (espelhados): só quando escolhidos no menu; o padrão é o gerador aleatório (autor, 18/10).
+        public const string Codex="@codex";
         static List<MapDef> builtin;
         public static List<MapDef> Builtin
         {
@@ -65,12 +67,16 @@ namespace ArenaTatica
         Font font;
         static readonly Color Bg=new Color(.065f,.085f,.13f,1), Idle=new Color(.14f,.19f,.27f), Chosen=new Color(.45f,.29f,.16f), Ink=new Color(.91f,.93f,.98f), Muted=new Color(.65f,.7f,.8f);
         static readonly (string id,string label)[] Tools={("subir","Subir relevo"),("descer","Descer relevo"),("arvore","Árvore"),("arbusto","Arbusto"),
-            ("caixa","Caixa"),("modelo","Trocar modelo da peça"),("enfeite","Enfeite"),("limpar","Limpar casa"),("zona","Zona central"),("mover","Mover peça")};
+            ("caixa","Caixa"),("parede","Parede"),("objeto","Objeto"),("modelo","Trocar modelo da peça"),("enfeite","Enfeite"),("limpar","Limpar casa"),("zona","Zona central"),("mover","Mover peça")};
+        // Objetos fixos do DungeonBDX (18/10). Portais ligam em pares pela ordem das casas (1º↔2º, 3º↔4º…).
+        static readonly (TileObj obj,string label)[] Objects={(TileObj.Bau,"Baú (+"+MapGen.BauMoedas+" moedas)"),(TileObj.Espetos,"Espetos (1 de dano)"),(TileObj.Braseiro,"Braseiro (+1 PA)"),(TileObj.Portal,"Portal (em pares, pela ordem)")};
+        int objectIndex; Button objectButton;
         // Modelos do kit para cada terreno (o primeiro é o padrão) e enfeites só visuais (Models/Mapa/<cenário> ou comum/).
         static readonly Dictionary<Terrain,string[]> Skins=new Dictionary<Terrain,string[]>{
-            [Terrain.Arvore]=new[]{"arvore","arvore_jovem","arvore_palmeira"}, [Terrain.Arbusto]=new[]{"arbusto"}, [Terrain.Caixa]=new[]{"caixa","caixa_rachada","pedra"} };
+            [Terrain.Arvore]=new[]{"arvore","arvore_jovem","arvore_palmeira"}, [Terrain.Arbusto]=new[]{"arbusto"}, [Terrain.Caixa]=new[]{"caixa","caixa_rachada","pedra"}.Concat(MapGen.DungeonBlocks).ToArray() };
         public static readonly string[] Ornaments={"enfeite_capim","enfeite_flores","enfeite_seixos","enfeite_pedra_baixa","enfeite_cogumelos","enfeite_raiz_chao",
-            "enfeite_cristal","enfeite_fogueira","enfeite_tocha","enfeite_placa","enfeite_cerca","enfeite_lago","relicario_solar","barricada_partida"};
+            "enfeite_cristal","enfeite_fogueira","enfeite_tocha","enfeite_placa","enfeite_cerca","enfeite_lago","relicario_solar","barricada_partida",
+            "dg_bones","dg_candles","dg_mushrooms","dg_weapons","dg_bush"};
         int ornament;
         Button ornamentButton;
 
@@ -81,7 +87,7 @@ namespace ArenaTatica
             board=new MatchState{ width=map.width, height=map.width, players=MapGen.PlayersFor(map.width), theme=Math.Max(0,map.theme), tiles=map.tiles, decor=map.decor };
             SpawnCells.Clear(); for(int slot=0;slot<board.players;slot++) SpawnCells.AddRange(MapGen.Spawns(board,slot));
             foreach(var c in SpawnCells) board.At(c).terrain=Terrain.Livre;
-            MapGen.Center(board);
+            MapGen.Center(board); MapGen.Portals(board);
             if(!canvas) Build();
             Active=true; Picked=null; panel.gameObject.SetActive(true); nameField.text=map.name;
             Game.Menu?.Close(); Game.BeginMapEdit(board); Refresh("Toque nas casas para aplicar a ferramenta.");
@@ -103,11 +109,19 @@ namespace ArenaTatica
             {
                 case "subir": Edit(c,x=>x.height=Math.Min(Board.MaxHeight,x.height+1)); break;
                 case "descer": Edit(c,x=>x.height=Math.Max(0,x.height-1)); break;
-                case "arvore": case "arbusto": case "caixa":
+                case "arvore": case "arbusto": case "caixa": case "parede":
                     if(spawn) { Refresh("Casa de início: fica sempre livre."); return; }
-                    var piece=tool=="arvore"?Terrain.Arvore:tool=="arbusto"?Terrain.Arbusto:Terrain.Caixa;
-                    Edit(c,x=>{ x.terrain=piece; x.zone=false; },true);
+                    var piece=tool=="arvore"?Terrain.Arvore:tool=="arbusto"?Terrain.Arbusto:tool=="parede"?Terrain.Parede:Terrain.Caixa;
+                    Edit(c,x=>{ x.terrain=piece; x.zone=false; x.obj=0; },true);
                     break;
+                case "objeto":
+                {
+                    if(spawn) { Refresh("Casa de início: fica sempre livre."); return; }
+                    var obj=Objects[objectIndex].obj; bool off=t.Obj==obj;
+                    Edit(c,x=>{ x.obj=off?0:(int)obj; x.zone=false; x.terrain=!off&&obj==TileObj.Braseiro?Terrain.Caixa:Terrain.Livre; },true);
+                    Refresh(off?"Objeto tirado.":$"Objeto: {Objects[objectIndex].label}.");
+                    return;
+                }
                 case "modelo":
                     if(!Skins.TryGetValue(t.terrain,out var skins)) { Refresh("Toque numa árvore, arbusto ou caixa para trocar o modelo."); return; }
                     var now=DecorAt(c).Find(d=>MapGen.SkinTerrain(d.piece)==t.terrain);
@@ -121,7 +135,7 @@ namespace ArenaTatica
                     EditDecor(c,list=>{ if(has) list.RemoveAll(d=>MapGen.SkinTerrain(d.piece)==Terrain.Livre); else list.Add(new Decor{ piece=orn }); });
                     Refresh(has?"Enfeite tirado.":$"Enfeite: {OrnamentName(orn)} (só visual, não bloqueia).");
                     return;
-                case "limpar": Edit(c,x=>{ x.terrain=Terrain.Livre; x.height=0; x.zone=false; },true); EditDecor(c,list=>list.Clear()); break;
+                case "limpar": Edit(c,x=>{ x.terrain=Terrain.Livre; x.height=0; x.zone=false; x.obj=0; },true); EditDecor(c,list=>list.Clear()); break;
                 case "zona":
                     if(t.terrain!=Terrain.Livre) { Refresh("A zona central só vai em casa livre."); return; }
                     bool on=!t.zone; Edit(c,x=>x.zone=on);
@@ -135,15 +149,15 @@ namespace ArenaTatica
                     var from=Picked.Value; Picked=null;
                     if(c==from) { Refresh("Movimento cancelado."); return; }
                     if(t.terrain!=Terrain.Livre||spawn||t.zone) { Refresh("O destino precisa ser uma casa livre, fora do início e da zona."); return; }
-                    var kind=board.At(from).terrain; var skin=DecorAt(from).Find(d=>MapGen.SkinTerrain(d.piece)==kind);
-                    Edit(from,x=>x.terrain=Terrain.Livre,true);
-                    // Com espelho, a peça espelhada vai para o espelho do destino (e leva o modelo junto).
-                    Edit(c,x=>x.terrain=kind);
+                    var kind=board.At(from).terrain; var skin=DecorAt(from).Find(d=>MapGen.SkinTerrain(d.piece)==kind); int moved=board.At(from).obj;
+                    Edit(from,x=>{ x.terrain=Terrain.Livre; x.obj=0; },true);
+                    // Com espelho, a peça espelhada vai para o espelho do destino (e leva o modelo e o braseiro junto).
+                    Edit(c,x=>{ x.terrain=kind; x.obj=moved; });
                     if(skin!=null) EditDecor(c,list=>list.Add(new Decor{ piece=skin.piece, rot=skin.rot }));
                     break;
             }
         }
-        static string OrnamentName(string piece) => piece.Replace("enfeite_","").Replace('_',' ');
+        static string OrnamentName(string piece) => piece.Replace("enfeite_","").Replace("dg_","").Replace('_',' ');
         // Enfeites e modelos cujo centro cai na casa c.
         List<Decor> DecorAt(Cell c) => map.decor.FindAll(d=>(int)Math.Round(d.x)==c.x&&(int)Math.Round(d.z)==c.z);
         // Muda a lista de enfeites da casa (e, com espelho, da casa oposta, girada 180°). Peças novas nascem no centro da casa.
@@ -166,6 +180,7 @@ namespace ArenaTatica
             foreach(var s in SpawnCells) board.At(s).terrain=Terrain.Livre;
             // Peça nova ou tirada: o modelo trocado da casa sai junto (volta o padrão do terreno).
             if(dropSkin) foreach(var at in mirror&&m!=c?new[]{c,m}:new[]{c}) map.decor.RemoveAll(d=>(int)Math.Round(d.x)==at.x&&(int)Math.Round(d.z)==at.z&&MapGen.SkinTerrain(d.piece)!=Terrain.Livre);
+            MapGen.Portals(board);
             board.revision++; Game.View.Sync(board,true); Refresh(null);
         }
 
@@ -174,6 +189,7 @@ namespace ArenaTatica
             foreach(var kv in toolImages) kv.Value.color=kv.Key==tool?Chosen:Idle;
             SetLabel(mirrorButton,mirror?"Espelho: ligado":"Espelho: desligado");
             SetLabel(ornamentButton,"Qual enfeite: "+OrnamentName(Ornaments[ornament])+" ›");
+            SetLabel(objectButton,"Qual objeto: "+Objects[objectIndex].label+" ›");
             SetLabel(themeButton,"Cenário: "+(map.theme<0?"sorteado":MapGen.Themes[map.theme]));
             title.text=$"EDITOR DE MAPAS · {map.width}×{map.width} ({MapGen.PlayersFor(map.width)} jog.)";
             string problem=MapGen.Problem(map);
@@ -204,6 +220,7 @@ namespace ArenaTatica
             nameField=Field();
             foreach(var t in Tools) { var id=t.id; var b=Btn(t.label,()=>{ tool=id; Picked=null; board.revision++; Refresh(null); }); toolImages[id]=b.GetComponent<Image>(); }
             ornamentButton=Btn("",()=>{ ornament=(ornament+1)%Ornaments.Length; tool="enfeite"; Refresh($"Enfeite escolhido: {OrnamentName(Ornaments[ornament])}. Toque numa casa livre."); });
+            objectButton=Btn("",()=>{ objectIndex=(objectIndex+1)%Objects.Length; tool="objeto"; Refresh($"Objeto escolhido: {Objects[objectIndex].label}. Toque numa casa livre."); });
             mirrorButton=Btn("",()=>{ mirror=!mirror; Refresh(mirror?"Cada mudança vale também na casa espelhada (mapa justo).":"Espelho desligado: mudanças só na casa tocada."); });
             themeButton=Btn("",()=>{ map.theme=map.theme+1>=MapGen.Themes.Length?-1:map.theme+1; board.theme=Math.Max(0,map.theme); Game.View.Sync(board,true); Refresh(null); });
             Btn("Salvar",()=>Save(false)).GetComponent<Image>().color=new Color(.2f,.36f,.27f);

@@ -18,6 +18,8 @@ namespace ArenaTatica.Core
             var sim=Match.FromState(Match.ViewFor(real.S,active.team)); var s=sim.S; var me=s.F(active.id);
             if(me==null||!me.Alive||me.channel>0) return Pass();
             var buy=Buy(s,me); if(buy!=null) return buy;
+            // Labirinto: vela apagada colada acende na hora (tira a névoa e dá moedas).
+            foreach(var d in Board.Dirs) if(Match.Interaction(s,me.cell+d)=="acender") return new Command{kind="acender",cell=me.cell+d};
             var plan=Search(sim,me,true);
             if(plan.cmd!=null&&plan.score>Worth) return plan.cmd;
             return Approach(s,me)??Pass();
@@ -63,7 +65,7 @@ namespace ArenaTatica.Core
                 double place=-.12*cost-(cost>0?.6*nearOrigin:0)-(ranged?.4*foes.Count(x=>x.cell.Distance(c)==1):0);
                 foreach(var sk in Match.Skills(me))
                 {
-                    if(me.pa<Match.Cost(me,sk)) continue;
+                    if(me.pa<Match.Cost(me,sk,s)) continue;
                     if(sk.kind==SkillKind.Forma&&(!allowForm||c!=origin)) continue;
                     foreach(var t in Targets(s,me,sk,foes))
                     {
@@ -85,8 +87,19 @@ namespace ArenaTatica.Core
             if(me.pm<=0) return null;
             var foes=Foes(s,me).Where(x=>!Content.Def(x).neutral).ToList(); if(foes.Count==0) foes=Foes(s,me);
             var costs=Board.Costs(s,me);
-            // Distância a pé de cada inimigo até cada casa (ignorando lutadores no caminho).
-            var fields=foes.Select(e=>Board.Costs(s,new Fighter{def=me.def,cell=e.cell,climber=me.climber},true)).ToList();
+            // Na névoa sem inimigo à vista: vai até a vela apagada ou, sem ela, explora rumo ao lado oposto do mapa.
+            var goals=foes.Select(e=>e.cell).ToList();
+            if(goals.Count==0&&s.fog) {
+                var candle=Enumerable.Range(0,s.tiles.Length).Where(i=>s.tiles[i].Obj==TileObj.Vela&&!s.revealed).Select(i=>new Cell(i%s.width,i/s.width)).ToList();
+                goals.Add(candle.Count>0?candle[0]:s.Mirror(me.cell));
+            }
+            // Distância a pé de cada inimigo até cada casa (ignorando lutadores no caminho e contando as portas).
+            var fields=goals.Select(g=>Board.Costs(s,new Fighter{def=me.def,cell=g,climber=me.climber},true,true)).ToList();
+            // Porta fechada colada que encurta o caminho: abre (1 PM).
+            if(fields.Count>0) {
+                int Near(Cell c) { int i=Board.Index(s,c); return fields.Min(f=>f[i]); }
+                foreach(var d in Board.Dirs) { var c=me.cell+d; if(Board.Contains(s,c)&&s.At(c).terrain==Terrain.Porta&&Near(c)<Near(me.cell)) return new Command{kind="abrir",cell=c}; }
+            }
             int reach=Reach(me), want=reach<=1?1:Math.Max(2,reach-1);
             double coinWeight=s.mode==VictoryMode.Tesouro?3:1.2, shopWeight=WantsShop(s,me)?1.5:0;
             double Score(Cell c,int cost)
@@ -96,6 +109,10 @@ namespace ArenaTatica.Core
                 if(fields.Count>0) { int d=fields.Min(f=>f[i]==int.MaxValue?99:f[i]); sc-=Math.Abs(d-want)*(d<want?.6:1); }
                 if(s.mode==VictoryMode.Dominio&&s.At(c).zone) sc+=2;
                 if(s.At(c).lava) sc-=3;
+                // Objetos fixos (18/10): baú vale como moedas, espetos ferem, braseiro colado dá PA (e ponto no Domínio).
+                var obj=s.At(c).Obj;
+                if(obj==TileObj.Bau) sc+=MapGen.BauMoedas*coinWeight; else if(obj==TileObj.Espetos&&!Content.Def(me).flying) sc-=1.5;
+                if(Board.Dirs.Any(d=>Board.Contains(s,c+d)&&s.At(c+d).Obj==TileObj.Braseiro)) sc+=s.mode==VictoryMode.Dominio?1.5:.8;
                 // Com compra possível, puxa de leve para o meio e premia a casa ao lado da loja.
                 if(shopWeight>0) sc+=Board.NextToShop(s,c)?shopWeight:-.1*MapGen.ShopCells(s).Min(x=>x.Distance(c));
                 return sc;

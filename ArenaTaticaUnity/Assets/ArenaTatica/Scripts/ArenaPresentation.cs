@@ -50,9 +50,10 @@ namespace ArenaTatica
         static readonly Dictionary<string,float> Heights=new Dictionary<string,float>{
             ["ciantia"]=1.6f, ["talyssa"]=1.6f, ["teantha"]=1.65f, ["devon"]=1.7f, ["diantus"]=1.6f, ["damian"]=1.6f,
             ["ezequiela"]=1.3f, ["ilusao"]=1.3f, ["tchu-tcha"]=1.85f, ["arqueiro-jack"]=1.6f, ["perry"]=1.2f, ["dragao-espectral"]=2f, ["lobo-de-cinzas"]=.8f,
-            ["asamyh"]=1.5f, ["gato-laranja"]=.55f, ["gato-branco"]=.55f, ["gato-malhado"]=.55f, ["gato-manchado"]=.55f, ["colosso"]=2.4f, ["cheiro-pneu"]=2.1f,
+            ["asamyh"]=1.5f, ["gato-laranja"]=.55f, ["gato-branco"]=.55f, ["gato-malhado"]=.55f, ["gato-manchado"]=.55f, ["colosso"]=3.1f, ["cheiro-pneu"]=2.1f, ["edgar"]=1.65f, ["navio-fantasma"]=2.1f,
             ["rei-bobett"]=1.5f, ["principe-kellen"]=1f, ["vespa-cinzenta"]=.8f, ["viuva-da-agulha"]=1.55f, ["guardiao-de-musgo"]=1.8f, ["domador-de-correntes"]=1.65f,
-            ["ogro-de-pedra"]=2f, ["baltazar"]=1.8f, ["totem-de-cura"]=.9f, ["papa-moedas"]=.6f, ["brutamontes-errante"]=2.5f };
+            ["ogro-de-pedra"]=2f, ["baltazar"]=1.8f, ["totem-de-cura"]=.9f, ["papa-moedas"]=.6f, ["brutamontes-errante"]=2.5f,
+            ["chefe-dragao"]=2.6f, ["chefe-necromante"]=2.1f, ["chefe-rei-goblin"]=2.3f };
         // Clone/ilusão (Fighter.disguise, preenchido pelo núcleo): o modelo, o sprite e o nome saem da identidade
         // de quem conjurou, nunca da etiqueta da ilusão. Sem disfarce, é o próprio lutador.
         static string ShownId(Fighter f) => f!=null&&!string.IsNullOrEmpty(f.disguise)&&Content.Fighters.ContainsKey(f.disguise)?f.disguise:f?.def;
@@ -111,7 +112,7 @@ namespace ArenaTatica
         static readonly Color[] PlayerColors={ Gold, Blue, Red, Green, new Color(.95f,.5f,.8f), new Color(.88f,.9f,.95f) };
         public static Color TeamColor(int player) => player==MatchState.Neutral?new Color(.55f,.55f,.5f):PlayerColors[Mathf.Clamp(player-1,0,PlayerColors.Length-1)];
         // Céu (tarefa 015 do Codex): Sprites/Ceus/<id>/fundo.png atrás do tabuleiro; o evento ativo troca o do cenário.
-        static readonly string[] ThemeSkies={"ceu-aberto","ceu-aberto","deserto-poente","nuvens-densas","cinzas-vulcanicas"};
+        static readonly string[] ThemeSkies={"ceu-aberto","ceu-aberto","deserto-poente","nuvens-densas","cinzas-vulcanicas","masmorra","masmorra","ceu-aberto"};
         static readonly Dictionary<string,(string sky,Color tint)> EventSkies=new Dictionary<string,(string,Color)>{
             ["chuva-de-moedas"]=("ceu-dourado",new Color(.2f,.15f,.05f)), ["nevoeiro"]=("nuvens-densas",new Color(.16f,.17f,.2f)), ["mare-de-lava"]=("cinzas-vulcanicas",new Color(.16f,.05f,.03f)),
             ["errante"]=("tempestade",new Color(.06f,.06f,.1f)), ["festival-de-fogos"]=("noite-festiva",new Color(.05f,.03f,.1f)) };
@@ -124,14 +125,18 @@ namespace ArenaTatica
         // Cenários (MapGen.Themes): piso xadrez a/b, zona, arbusto, tronco, copa, caixa, base, céu, luz ambiente e enfeites fora do tabuleiro.
         sealed class Palette { public Color a,b,zone,bush,trunk,crown,box,ground,sky,ambient; public string props; }
         // Piso de cada cenário (Textures/tile_<nome>, tarefa 007); "pedra" é o piso cinza antigo, só tingido.
-        static readonly string[] Tiles={"pedreira","grama","ruinas","cristal","pedra"};
+        static readonly string[] Tiles={"pedreira","grama","ruinas","cristal","pedra","pedra","pedra","grama"};
         static Color C(float r,float g,float b) => new Color(r,g,b);
         static readonly Palette[] Palettes={
             new Palette{ a=C(.67f,.7f,.77f), b=C(.36f,.41f,.49f), zone=C(.78f,.66f,.42f), bush=C(.32f,.58f,.3f), trunk=C(.42f,.3f,.2f), crown=C(.18f,.42f,.24f), box=C(.6f,.43f,.25f), ground=C(.16f,.2f,.27f), sky=C(.045f,.06f,.095f), ambient=C(.55f,.6f,.72f), props="pedras" },
             new Palette{ a=C(.47f,.63f,.37f), b=C(.34f,.5f,.29f), zone=C(.78f,.67f,.4f), bush=C(.24f,.52f,.22f), trunk=C(.4f,.28f,.18f), crown=C(.15f,.38f,.19f), box=C(.55f,.4f,.24f), ground=C(.2f,.16f,.11f), sky=C(.04f,.08f,.06f), ambient=C(.56f,.66f,.55f), props="arvores" },
             new Palette{ a=C(.86f,.74f,.5f), b=C(.74f,.6f,.38f), zone=C(.9f,.55f,.3f), bush=C(.5f,.6f,.3f), trunk=C(.5f,.36f,.22f), crown=C(.33f,.53f,.27f), box=C(.62f,.45f,.3f), ground=C(.42f,.29f,.17f), sky=C(.12f,.08f,.06f), ambient=C(.8f,.69f,.55f), props="cactos" },
             new Palette{ a=C(.9f,.93f,.97f), b=C(.74f,.8f,.88f), zone=C(.6f,.76f,.9f), bush=C(.84f,.9f,.93f), trunk=C(.38f,.3f,.25f), crown=C(.27f,.45f,.4f), box=C(.5f,.42f,.36f), ground=C(.3f,.36f,.46f), sky=C(.07f,.09f,.13f), ambient=C(.72f,.77f,.88f), props="pinheiros" },
-            new Palette{ a=C(.32f,.28f,.28f), b=C(.2f,.18f,.19f), zone=C(.85f,.4f,.15f), bush=C(.45f,.3f,.22f), trunk=C(.25f,.2f,.18f), crown=C(.55f,.22f,.12f), box=C(.4f,.3f,.25f), ground=C(.12f,.06f,.05f), sky=C(.09f,.03f,.03f), ambient=C(.72f,.52f,.46f), props="lava" } };
+            new Palette{ a=C(.32f,.28f,.28f), b=C(.2f,.18f,.19f), zone=C(.85f,.4f,.15f), bush=C(.45f,.3f,.22f), trunk=C(.25f,.2f,.18f), crown=C(.55f,.22f,.12f), box=C(.4f,.3f,.25f), ground=C(.12f,.06f,.05f), sky=C(.09f,.03f,.03f), ambient=C(.72f,.52f,.46f), props="lava" },
+            // Fechados (18/10): Cripta, Biblioteca e Jardim; o piso e as paredes vêm do DungeonBDX (BuildDungeon).
+            new Palette{ a=C(.6f,.64f,.7f), b=C(.45f,.5f,.56f), zone=C(.8f,.75f,.62f), bush=C(.3f,.45f,.3f), trunk=C(.3f,.28f,.27f), crown=C(.25f,.35f,.3f), box=C(.4f,.4f,.42f), ground=C(.08f,.09f,.12f), sky=C(.03f,.04f,.06f), ambient=C(.5f,.56f,.7f), props="pedras" },
+            new Palette{ a=C(.7f,.55f,.4f), b=C(.55f,.42f,.3f), zone=C(.85f,.7f,.45f), bush=C(.35f,.45f,.3f), trunk=C(.35f,.25f,.18f), crown=C(.3f,.4f,.28f), box=C(.5f,.36f,.22f), ground=C(.12f,.08f,.06f), sky=C(.05f,.03f,.03f), ambient=C(.72f,.62f,.52f), props="pedras" },
+            new Palette{ a=C(.5f,.66f,.4f), b=C(.38f,.54f,.32f), zone=C(.82f,.68f,.48f), bush=C(.26f,.5f,.24f), trunk=C(.4f,.28f,.18f), crown=C(.16f,.4f,.2f), box=C(.55f,.42f,.3f), ground=C(.16f,.2f,.12f), sky=C(.04f,.08f,.06f), ambient=C(.6f,.68f,.58f), props="arvores" } };
         // Disparo à distância (tarefa 006): nasce em quem ataca e o impacto coincide com o dano. Efeitos/<skill>.png do Codex, se existir,
         // vira a cabeça do projétil (Bala, Flecha, Orbe, Lamina, Bomba) ou a animação de impacto (Raio, Sopro).
         enum ShotKind { Bala, Flecha, Orbe, Lamina, Bomba, Raio, Sopro }
@@ -208,7 +213,7 @@ namespace ArenaTatica
         void BuildBoard(MatchState s)
         {
             ApplyTheme(s);
-            string key=s.theme+":"+string.Join(",",s.tiles.Select(t=>t.height*10+(int)t.terrain+(t.zone?100:0)))+"|"+string.Join(";",s.decor.Select(d=>d.piece+d.x+","+d.z+","+d.rot));
+            string key=s.theme+":"+string.Join(",",s.tiles.Select(t=>t.height*10+(int)t.terrain+(t.zone?100:0)+(t.Obj==TileObj.Bau?0:t.obj*1000)))+"|"+string.Join(";",s.decor.Select(d=>d.piece+d.x+","+d.z+","+d.rot));
             if(key==boardKey) return;
             // Tabuleiro de outro tamanho (2, 4 ou 6 jogadores): base e câmera acompanham.
             if(s.width!=boardSize) { boardSize=s.width; boardBase.transform.localScale=new Vector3(boardSize+.4f,.3f,boardSize+.4f); FitCamera(); }
@@ -216,6 +221,7 @@ namespace ArenaTatica
             foreach(Transform child in boardRoot) Destroy(child.gameObject);
             foreach(var m in generatedMeshes) Destroy(m); generatedMeshes.Clear();
             BuildHeights(s);
+            if(MapGen.Closed(s.theme)) { boardBase.SetActive(!HasKit(s.theme)); BuildDungeon(s); return; }
             int kitTheme=Mathf.Clamp(s.theme,0,KitFolders.Length-1);
             boardBase.SetActive(!HasKit(kitTheme));
             if(HasKit(kitTheme)) { BuildKit(s,kitTheme); return; }
@@ -228,6 +234,7 @@ namespace ArenaTatica
                 if(t.terrain==Terrain.Arbusto) Add(3,top+Vector3.up*.22f,new Vector3(.78f,.44f,.78f));
                 else if(t.terrain==Terrain.Arvore) { Add(4,top+Vector3.up*.45f,new Vector3(.28f,.9f,.28f)); Add(5,top+Vector3.up*1.2f,new Vector3(.86f,.8f,.86f)); }
                 else if(t.terrain==Terrain.Caixa) Add(6,top+Vector3.up*.42f,new Vector3(.84f,.84f,.84f));
+                else if(t.terrain==Terrain.Parede||t.terrain==Terrain.Porta) Add(6,top+Vector3.up*WallHeight*.5f,new Vector3(1,WallHeight,1));
             }
             for(int g=0;g<groups.Length;g++) {
                 if(groups[g].Count==0) continue;
@@ -271,13 +278,18 @@ namespace ArenaTatica
         {
             string key=theme+"/"+piece;
             if(kitCache.TryGetValue(key,out var prefab)) return prefab;
-            prefab=Resources.Load<GameObject>("Models/Mapa/"+KitFolders[theme]+"/"+piece)??Resources.Load<GameObject>("Models/Mapa/comum/"+piece);
+            prefab=Resources.Load<GameObject>("Models/Mapa/"+KitFolders[KitIndex(theme)]+"/"+piece)??Resources.Load<GameObject>("Models/Mapa/comum/"+piece);
             for(int i=0;!prefab&&i<KitFolders.Length;i++) prefab=Resources.Load<GameObject>("Models/Mapa/"+KitFolders[i]+"/"+piece);
             return kitCache[key]=prefab;
         }
         bool HasKit(int theme) => Kit(theme,"topo_a")!=null;
+        // Labirintos usam o kit 3D de um cenário aberto: Cripta → pedreira, Biblioteca → deserto, Jardim → bosque.
+        static readonly int[] ClosedKits={0,2,1};
+        static int KitIndex(int theme) => theme>=0&&theme<KitFolders.Length?theme:MapGen.Closed(theme)?ClosedKits[(theme-MapGen.OpenThemes)%ClosedKits.Length]:0;
         GameObject PlaceKit(int theme,string piece,Vector3 at,float yaw,Transform parent,float scale=1)
         {
+            if(piece!=null&&piece.StartsWith(MapGen.FloorPrefix)) return null;
+            if(piece!=null&&piece.StartsWith("dg_")) return DungeonProp(piece.Substring(3),at,yaw,scale,parent);
             var prefab=Kit(theme,piece); if(!prefab) return null;
             var go=Instantiate(prefab,parent); go.transform.localPosition=at; go.transform.localRotation=Quaternion.Euler(0,yaw,0);
             if(scale!=1) go.transform.localScale*=scale;
@@ -287,23 +299,49 @@ namespace ArenaTatica
         static string DefaultSkin(Terrain t) => t==Terrain.Arvore?"arvore":t==Terrain.Arbusto?"arbusto":"caixa";
         // Tampa de cada casa na altura do relevo (o topo da tampa é a altura de Position), colunas empilhadas embaixo,
         // beira nas bordas, árvores/arbustos/caixas (com o modelo escolhido no mapa), a loja no meio, os enfeites e o entorno.
+        // Pisos do DungeonBDX também nos cenários abertos (autor, 18/10): Pedreira, Bosque, Deserto, Neve e Vulcão; zona em mosaico.
+        // Piso (autor, 18/10): as tampas do kit 3D do Blender são a base; nas manchas de cenário (MapGen.FloorPatches) a casa
+        // vira um bloco com a textura do DungeonBDX (grama, pedra…). A zona central fica sempre com a tampa da zona do kit.
+        void BuildFloor(MatchState s,int kit)
+        {
+            var patches=MapGen.FloorPatches(s); var groups=new Dictionary<Material,List<CombineInstance>>();
+            for(int x=0;x<s.width;x++) for(int z=0;z<s.height;z++) {
+                var c=new Cell(x,z); var t=s.At(c); var top=Position(s,c); int hash=Hash(x,z);
+                if(t.terrain!=Terrain.Parede) {
+                    if(!t.zone&&patches.TryGetValue(c,out var tile)) {
+                        var m=DungeonMaterial("Tiles",tile,(x+z)%2==0?Color.white:C(.88f,.88f,.9f)); float h=top.y+.25f;
+                        if(!groups.TryGetValue(m,out var list)) groups[m]=list=new List<CombineInstance>();
+                        list.Add(new CombineInstance{mesh=cubeMesh,transform=Matrix4x4.TRS(new Vector3(top.x,top.y-h/2,top.z),Quaternion.identity,new Vector3(1,h,1))});
+                    } else {
+                        PlaceKit(kit,t.zone?"topo_zona":(x+z)%2==0?"topo_a":"topo_b",top+Vector3.down*.05f,90*(hash%4),boardRoot);
+                        for(int k=0;k<t.height;k++) PlaceKit(kit,(hash>>(k+2)&1)==0?"coluna_a":"coluna_b",new Vector3(top.x,-.05f+k*HStep,top.z),90*((hash>>(k+4))%4),boardRoot);
+                    }
+                }
+                // Beira: reta em cada lado de fora; a peça corre ao longo de x, então os lados ±x giram 90°.
+                if(z==0) PlaceKit(kit,"beira_reta",top+new Vector3(0,0,-.5f),180,boardRoot);
+                if(z==s.height-1) PlaceKit(kit,"beira_reta",top+new Vector3(0,0,.5f),0,boardRoot);
+                if(x==0) PlaceKit(kit,"beira_reta",top+new Vector3(-.5f,0,0),270,boardRoot);
+                if(x==s.width-1) PlaceKit(kit,"beira_reta",top+new Vector3(.5f,0,0),90,boardRoot);
+            }
+            int n=0;
+            foreach(var kv in groups) {
+                var mesh=new Mesh{name="Mancha"+n,indexFormat=UnityEngine.Rendering.IndexFormat.UInt32}; mesh.CombineMeshes(kv.Value.ToArray()); generatedMeshes.Add(mesh);
+                var go=new GameObject("Mancha"+n++,typeof(MeshFilter),typeof(MeshRenderer)); go.transform.SetParent(boardRoot,false);
+                go.GetComponent<MeshFilter>().sharedMesh=mesh; go.GetComponent<MeshRenderer>().sharedMaterial=kv.Key;
+            }
+            PlaceKit(kit,s.width==12?"entorno":"entorno_"+s.width,new Vector3(0,-.002f,0),0,boardRoot);
+        }
         void BuildKit(MatchState s,int theme)
         {
+            BuildFloor(s,theme);
             var skins=new Dictionary<Cell,Decor>();
             foreach(var d in s.decor) { var at=new Cell(Mathf.RoundToInt(d.x),Mathf.RoundToInt(d.z)); var t=MapGen.SkinTerrain(d.piece); if(t!=Terrain.Livre&&Board.Contains(s,at)&&s.At(at).terrain==t) skins[at]=d; }
             for(int x=0;x<s.width;x++) for(int z=0;z<s.height;z++) {
                 var c=new Cell(x,z); var t=s.At(c); var top=Position(s,c); int hash=Hash(x,z);
-                PlaceKit(theme,t.zone?"topo_zona":(x+z)%2==0?"topo_a":"topo_b",top+Vector3.down*.05f,90*(hash%4),boardRoot);
-                for(int k=0;k<t.height;k++) PlaceKit(theme,(hash>>(k+2)&1)==0?"coluna_a":"coluna_b",new Vector3(top.x,-.05f+k*HStep,top.z),90*((hash>>(k+4))%4),boardRoot);
-                if(t.terrain!=Terrain.Livre&&t.terrain!=Terrain.Loja) {
+                if(t.terrain!=Terrain.Livre&&t.terrain!=Terrain.Loja&&t.terrain!=Terrain.Parede&&t.Obj!=TileObj.Braseiro&&t.Obj!=TileObj.Vela) {
                     if(skins.TryGetValue(c,out var d)) PlaceKit(theme,d.piece,top+new Vector3(d.x-x,0,d.z-z),d.rot,boardRoot,d.scale);
                     else PlaceKit(theme,DefaultSkin(t.terrain),top,t.terrain==Terrain.Caixa?90*(hash%4):hash%360,boardRoot);
                 }
-                // Beira: reta em cada lado de fora; a peça corre ao longo de x, então os lados ±x giram 90°.
-                if(z==0) PlaceKit(theme,"beira_reta",top+new Vector3(0,0,-.5f),180,boardRoot);
-                if(z==s.height-1) PlaceKit(theme,"beira_reta",top+new Vector3(0,0,.5f),0,boardRoot);
-                if(x==0) PlaceKit(theme,"beira_reta",top+new Vector3(-.5f,0,0),270,boardRoot);
-                if(x==s.width-1) PlaceKit(theme,"beira_reta",top+new Vector3(.5f,0,0),90,boardRoot);
             }
             // Loja: a barraca do mascate nas 4 casas do meio, de frente para +z, no chão mais alto delas.
             var shop=MapGen.ShopCells(s);
@@ -316,12 +354,145 @@ namespace ArenaTatica
                 var at=new Cell(Mathf.Clamp(Mathf.RoundToInt(d.x),0,s.width-1),Mathf.Clamp(Mathf.RoundToInt(d.z),0,s.height-1));
                 var p=Position(s,at); PlaceKit(theme,d.piece,p+new Vector3(d.x-at.x,0,d.z-at.z),d.rot,boardRoot,d.scale);
             }
-            PlaceKit(theme,s.width==12?"entorno":"entorno_"+s.width,new Vector3(0,-.002f,0),0,boardRoot);
+            BuildWalls(s,"wall"); BuildObjects(s,null);
             // Props animados do Codex (fechamento 11/10): um par espelhado em 180° fora do tabuleiro, só enfeite (sem regra), em loop.
             if(AmbientProps.TryGetValue(theme,out var ambient)) foreach(int side in new[]{1,-1}) {
                 var go=PlaceKit(theme,ambient,new Vector3(side*(s.width/2f+.85f),0,side*s.height/4f),side>0?270:90,boardRoot);
                 if(go&&go.GetComponentInChildren<Animation>() is Animation anim&&anim.clip) { anim.wrapMode=WrapMode.Loop; anim.clip.wrapMode=WrapMode.Loop; anim.Play(); }
             }
+        }
+        // ── Cenários fechados (MapGen.Closed, 18/10): piso, zona e paredes com as texturas do DungeonBDX (Resources/DungeonBDX/Iso);
+        // obstáculos com modelo 3D quando ele existe (caixote, coluna, estante, braseiro, cristal, espetos) e o resto em sprite de pé,
+        // virado para a câmera como os lutadores.
+        public const float WallHeight=.95f;
+        const string DungeonArt="DungeonBDX/Iso/";
+        static readonly (string floor,string zone,string wall,string objective,string[] blocks,string tree)[] Dungeons={
+            ("crypt","marble","wall-crypt","braseiro",new[]{"sarcophagus","statue","pillar","crates"},"deadtree"),
+            ("wood","mosaic","wall-books","cristal",new[]{"table","bookshelf","barrels","crates"},"pillar"),
+            ("garden","street","hedge","braseiro",new[]{"fountain","statue","crates","deadtree"},"tree") };
+        static readonly Dictionary<string,string> PropModels=new Dictionary<string,string>{
+            ["crates"]="crate", ["pillar"]="column-bronze", ["bookshelf"]="bookcase", ["braseiro"]="brazier", ["cristal"]="objective-crystal", ["espetos"]="trap-spikes", ["entulho"]="rubble", ["arco"]="door-arch" };
+        // Tamanho (lado no chão, altura máxima) de cada prop, em casas.
+        static (float side,float tall) PropSize(string id) => id switch {
+            "tree"=>(.95f,1.45f), "pine"=>(.85f,1.45f), "deadtree"=>(.9f,1.35f), "statue"=>(.55f,1.25f), "pillar"=>(.55f,1.3f), "bookshelf"=>(.9f,1.25f),
+            "fountain"=>(.9f,.85f), "sarcophagus"=>(.85f,.75f), "table"=>(.8f,.7f), "crates"=>(.72f,.72f), "barrels"=>(.7f,.75f), "chest"=>(.6f,.6f),
+            "braseiro"=>(.55f,.85f), "cristal"=>(.5f,.95f), "espetos"=>(.86f,.3f), "candles"=>(.5f,.95f), "arco"=>(1f,1.15f), _=>(.6f,.6f) };
+        readonly Dictionary<string,Material> dungeonMaterials=new Dictionary<string,Material>();
+        Material DungeonMaterial(string folder,string id,Color tint)
+        {
+            string key=folder+"/"+id+"/"+ColorUtility.ToHtmlStringRGB(tint);
+            if(!dungeonMaterials.TryGetValue(key,out var m)) dungeonMaterials[key]=m=Material(tint,Resources.Load<Texture2D>(DungeonArt+folder+"/"+id));
+            return m;
+        }
+        void BuildDungeon(MatchState s)
+        {
+            var look=Dungeons[(s.theme-MapGen.OpenThemes)%Dungeons.Length];
+            BuildFloor(s,s.theme);
+            for(int x=0;x<s.width;x++) for(int z=0;z<s.height;z++) {
+                var c=new Cell(x,z); var t=s.At(c); if(t.terrain==Terrain.Parede) continue;
+                var top=Position(s,c); int hash=Hash(x,z);
+                if(t.terrain==Terrain.Caixa&&t.Obj!=TileObj.Braseiro&&t.Obj!=TileObj.Vela) {
+                    string piece=s.decor.Where(d=>Mathf.RoundToInt(d.x)==x&&Mathf.RoundToInt(d.z)==z&&d.piece.StartsWith("dg_")).Select(d=>d.piece.Substring(3)).FirstOrDefault()??look.blocks[hash%look.blocks.Length];
+                    DungeonProp(piece,top,90*(hash%4),1,boardRoot);
+                }
+                else if(t.terrain==Terrain.Arvore) DungeonProp(look.tree,top,hash%360,1,boardRoot);
+                else if(t.terrain==Terrain.Arbusto) DungeonProp("bush",top,0,1.3f,boardRoot);
+            }
+            BuildWalls(s,look.wall); BuildObjects(s,look.objective);
+            // Loja: a barraca do mascate do kit, como nos abertos.
+            var shop=MapGen.ShopCells(s);
+            if(shop.All(c=>s.At(c).terrain==Terrain.Loja)) {
+                var center=shop.Aggregate(Vector3.zero,(a,c)=>a+Position(s,c))/shop.Length; center.y=shop.Max(c=>s.At(c).height)*HStep;
+                PlaceKit(0,"loja_mascate",center,180,boardRoot);
+            }
+            foreach(var d in s.decor) {
+                if(MapGen.SkinTerrain(d.piece)!=Terrain.Livre) continue;
+                var at=new Cell(Mathf.Clamp(Mathf.RoundToInt(d.x),0,s.width-1),Mathf.Clamp(Mathf.RoundToInt(d.z),0,s.height-1));
+                if(s.At(at).terrain!=Terrain.Livre) continue;
+                PlaceKit(0,d.piece,Position(s,at)+new Vector3(d.x-at.x,0,d.z-at.z),d.rot,boardRoot,d.scale);
+            }
+        }
+        // Paredes: só as faces que dão para fora (casa vizinha sem parede ou borda) e a tampa, num mesh por material.
+        // A tira de estantes (1024×448) cobre 2 casas; as texturas quadradas, 1 casa por face.
+        void BuildWalls(MatchState s,string wall)
+        {
+            var sides=new MeshParts(); var tops=new MeshParts(); var doors=new MeshParts(); bool strip=wall=="wall-books";
+            for(int x=0;x<s.width;x++) for(int z=0;z<s.height;z++) {
+                var c=new Cell(x,z); bool door=s.At(c).terrain==Terrain.Porta; if(s.At(c).terrain!=Terrain.Parede&&!door) continue;
+                var top=Position(s,c); float y0=-.25f, y1=top.y+WallHeight;
+                tops.Quad(new Vector3(top.x-.5f,y1,top.z-.5f),new Vector3(top.x-.5f,y1,top.z+.5f),new Vector3(top.x+.5f,y1,top.z+.5f),new Vector3(top.x+.5f,y1,top.z-.5f),0,1);
+                foreach(var d in Board.Dirs) {
+                    var n=c+d; if(Board.Contains(s,n)&&s.At(n).terrain==Terrain.Parede) continue;
+                    var dir=new Vector3(d.x,0,d.z); var right=Vector3.Cross(Vector3.up,-dir)*.5f; var p=new Vector3(top.x,0,top.z)+dir*.5f;
+                    if(door) { (n.x>=0&&n.z>=0&&Board.Contains(s,n)&&s.At(n).terrain==Terrain.Livre?doors:sides).Quad(p-right+Vector3.up*y0,p-right+Vector3.up*y1,p+right+Vector3.up*y1,p+right+Vector3.up*y0,0,1); continue; }
+                    float u0=strip?((x+z)&1)*.5f:0, u1=strip?u0+.5f:1;
+                    sides.Quad(p-right+Vector3.up*y0,p-right+Vector3.up*y1,p+right+Vector3.up*y1,p+right+Vector3.up*y0,u0,u1);
+                }
+            }
+            sides.Build("Paredes",boardRoot,DungeonMaterial("Walls",wall,Color.white),generatedMeshes);
+            tops.Build("TopoDasParedes",boardRoot,DungeonMaterial("Walls",strip?"wall":wall,C(.55f,.55f,.6f)),generatedMeshes);
+            doors.Build("Portas",boardRoot,DungeonMaterial("Doors","door",Color.white),generatedMeshes);
+        }
+        // Objetos fixos que não mudam na partida: espetos e braseiros (o baú some ao abrir e fica nos marcadores).
+        void BuildObjects(MatchState s,string objective)
+        {
+            for(int x=0;x<s.width;x++) for(int z=0;z<s.height;z++) {
+                var t=s.At(new Cell(x,z)); var top=Position(s,new Cell(x,z));
+                if(t.Obj==TileObj.Espetos) DungeonProp("espetos",top,90*(Hash(x,z)%4),1,boardRoot);
+                else if(t.Obj==TileObj.Braseiro) DungeonProp(objective??"braseiro",top,0,1,boardRoot);
+                else if(t.Obj==TileObj.Vela) DungeonProp("candles",top,0,1,boardRoot);
+                // Porta aberta: o arco de pedra, de frente para o corredor.
+                else if(t.Obj==TileObj.PortaAberta) { bool alongX=Board.Contains(s,new Cell(x,z+1))&&s.At(new Cell(x,z+1)).terrain==Terrain.Parede; DungeonProp("arco",top,alongX?0:90,1,boardRoot); }
+            }
+        }
+        sealed class MeshParts
+        {
+            readonly List<Vector3> v=new List<Vector3>(); readonly List<Vector2> uv=new List<Vector2>(); readonly List<int> tri=new List<int>();
+            // a..d: embaixo à esquerda, em cima à esquerda, em cima à direita, embaixo à direita, vistos de frente (sentido horário).
+            public void Quad(Vector3 a,Vector3 b,Vector3 c,Vector3 d,float u0,float u1)
+            {
+                int i=v.Count; v.AddRange(new[]{a,b,c,d}); uv.AddRange(new[]{new Vector2(u0,0),new Vector2(u0,1),new Vector2(u1,1),new Vector2(u1,0)});
+                tri.AddRange(new[]{i,i+1,i+2,i,i+2,i+3});
+            }
+            public void Build(string name,Transform parent,Material material,List<Mesh> owned)
+            {
+                if(v.Count==0) return;
+                var mesh=new Mesh{name=name,indexFormat=UnityEngine.Rendering.IndexFormat.UInt32}; mesh.SetVertices(v); mesh.SetUVs(0,uv); mesh.SetTriangles(tri,0);
+                mesh.RecalculateNormals(); mesh.RecalculateBounds(); owned.Add(mesh);
+                var go=new GameObject(name,typeof(MeshFilter),typeof(MeshRenderer)); go.transform.SetParent(parent,false);
+                go.GetComponent<MeshFilter>().sharedMesh=mesh; go.GetComponent<MeshRenderer>().sharedMaterial=material;
+            }
+        }
+        // Prop do DungeonBDX no chão de uma casa (at = topo da casa): modelo 3D (cores do FBX no material da Arena) ou sprite em pé.
+        readonly Dictionary<string,Sprite> propSprites=new Dictionary<string,Sprite>();
+        readonly Dictionary<Color,Material> modelMaterials=new Dictionary<Color,Material>();
+        GameObject DungeonProp(string id,Vector3 at,float yaw,float scale,Transform parent)
+        {
+            var (side,tall)=PropSize(id); side*=scale; tall*=scale;
+            if(PropModels.TryGetValue(id,out var model)&&Resources.Load<GameObject>("DungeonBDX/Models/"+model) is GameObject prefab) {
+                var go=Instantiate(prefab,parent); go.name=id; go.transform.localPosition=Vector3.zero; go.transform.localRotation=Quaternion.Euler(0,yaw,0);
+                foreach(var col in go.GetComponentsInChildren<Collider>()) Destroy(col);
+                var renderers=go.GetComponentsInChildren<Renderer>();
+                foreach(var r in renderers) r.sharedMaterials=r.sharedMaterials.Select(m=>{
+                    var color=m&&m.HasProperty("_Color")?m.color:C(.55f,.46f,.34f);
+                    if(!modelMaterials.TryGetValue(color,out var mm)) modelMaterials[color]=mm=Material(color);
+                    return mm; }).ToArray();
+                if(renderers.Length==0) return go;
+                Bounds Measure() { var b=renderers[0].bounds; foreach(var r in renderers) b.Encapsulate(r.bounds); return b; }
+                var size=Measure().size; go.transform.localScale*=Mathf.Min(side/Mathf.Max(.01f,Mathf.Max(size.x,size.z)),tall/Mathf.Max(.01f,size.y));
+                var bounds=Measure(); go.transform.position+=parent.TransformPoint(at)-new Vector3(bounds.center.x,bounds.min.y,bounds.center.z);
+                return go;
+            }
+            if(!propSprites.TryGetValue(id,out var sprite)) {
+                var tex=Resources.Load<Texture2D>(DungeonArt+"Props/"+id)??Resources.Load<Texture2D>(DungeonArt+"Props/"+id+"_sw");
+                sprite=propSprites[id]=tex?Sprite.Create(tex,new Rect(0,0,tex.width,tex.height),new Vector2(.5f,0),Mathf.Max(tex.width/PropSize(id).side,tex.height/PropSize(id).tall)):null;
+            }
+            if(!sprite) return null;
+            var spriteObject=new GameObject("Prop_"+id,typeof(SpriteRenderer)); spriteObject.transform.SetParent(parent,false);
+            spriteObject.transform.localPosition=at+Vector3.up*.01f; spriteObject.transform.localScale=Vector3.one*scale;
+            var sr=spriteObject.GetComponent<SpriteRenderer>(); sr.sprite=sprite; if(spriteMaterial) sr.sharedMaterial=spriteMaterial;
+            var loop=spriteObject.AddComponent<SpriteLoop>(); loop.frames=new[]{sprite}; loop.billboard=true;
+            return spriteObject;
         }
         static readonly Dictionary<int,string> AmbientProps=new Dictionary<int,string>{
             [0]="ampulheta_das_ruinas", [1]="estandarte_da_clareira", [2]="cata_vento_solar", [3]="fonte_de_geada", [4]="braseiro_de_obsidiana" };
@@ -379,8 +550,8 @@ namespace ArenaTatica
             sky.sprite=art; sky.enabled=art; if(art&&spriteMaterial) sky.sharedMaterial=spriteMaterial; FitSky();
         }
         // Céu de dia por tema (topo → horizonte): montanha, bosque, deserto ao poente, neve e cinzas do vulcão.
-        static readonly Color[] SkyTops={C(.36f,.5f,.7f),C(.4f,.62f,.82f),C(.3f,.45f,.72f),C(.52f,.66f,.84f),C(.16f,.07f,.09f)};
-        static readonly Color[] SkyBottoms={C(.72f,.8f,.88f),C(.78f,.88f,.86f),C(.98f,.74f,.5f),C(.88f,.92f,.97f),C(.55f,.2f,.09f)};
+        static readonly Color[] SkyTops={C(.36f,.5f,.7f),C(.4f,.62f,.82f),C(.3f,.45f,.72f),C(.52f,.66f,.84f),C(.16f,.07f,.09f),C(.08f,.1f,.16f),C(.14f,.09f,.07f),C(.4f,.62f,.82f)};
+        static readonly Color[] SkyBottoms={C(.72f,.8f,.88f),C(.78f,.88f,.86f),C(.98f,.74f,.5f),C(.88f,.92f,.97f),C(.55f,.2f,.09f),C(.2f,.26f,.34f),C(.42f,.3f,.2f),C(.78f,.88f,.86f)};
         bool skyGradient; readonly Dictionary<string,Sprite> gradients=new Dictionary<string,Sprite>();
         Sprite GradientSky(Color top,Color bottom)
         {
@@ -425,6 +596,7 @@ namespace ArenaTatica
                 }
                 // Só quem é aliado do dono vê a armadilha (ownerOnly); a mina de gelo usa a tira de objeto em laço.
                 if(t.trap!=0&&(viewer==0||s.Ally(t.trap,viewer))) markers.Add((t.trapPa>0?ObjectLoop("mina-de-gelo-armada",p):null)??Cube("Armadilha",p+Vector3.up*.02f,new Vector3(.55f,.03f,.55f),t.trapPa>0?iceMaterial:trapMaterial,world));
+                if(t.Obj==TileObj.Bau&&DungeonProp("chest",p,0,1,world) is GameObject chest) { chest.name=ChestName(c); markers.Add(chest); }
                 if(t.lava) markers.Add(Overlay("lava",p,lavaMaterial,.94f));
                 if(t.frozenBy!=0) markers.Add(Overlay("gelo",p,iceMaterial,.9f));
                 if(t.mark) markers.Add(Overlay("fogos",p,markMaterial,.5f));
@@ -490,6 +662,7 @@ namespace ArenaTatica
             unit.position=Position(s,path[path.Length-1]);
         }
         static string CoinName(Cell c) => "Moeda_"+c.x+"_"+c.z;
+        static string ChestName(Cell c) => "Bau_"+c.x+"_"+c.z;
         void RemoveCoins(Cell c) { string name=CoinName(c); for(int i=markers.Count-1;i>=0;i--) if(markers[i]&&markers[i].name==name) { Destroy(markers[i]); markers.RemoveAt(i); } }
         public void FitCamera()
         {
@@ -530,8 +703,11 @@ namespace ArenaTatica
             foreach(var id in units.Keys.Where(id=>state.F(id)==null).ToList()) { if(units[id].childCount>0) rigs.Remove(units[id].GetChild(0)); Destroy(units[id].gameObject); units.Remove(id); }
             RefreshHidden(state); shownKey=null;
         }
+        // Fila de animações a 50% (muitas ações seguidas chegando): pula as que faltam e mostra direto o estado mais novo.
+        public const int QueueCapacity=8;
         public void Play(List<GameEvent> events,MatchState state)
         {
+            if(Ready&&queue.Count>=QueueCapacity/2) { Sync(state,true); return; }
             queue.Enqueue((events,state));
             if(!running) StartCoroutine(RunQueue());
         }
@@ -912,6 +1088,18 @@ namespace ArenaTatica
                     }
                     Game.Hud?.Log($"{Name(s,e.actor)} ganhou {e.value} moedas{(e.info!=null?" e "+Shop.Def(e.info)?.name:"")}"); break;
                 case "lava": if(target) { Hit(target,target.position+Vector3.down,e.value,C(1,.45f,.1f)); Float(target.position,$"−{e.value} lava",Red); PlayClip(target,"hit"); } yield return Wait(.3f); break;
+                case "espetos": if(target) { Hit(target,target.position+Vector3.down,e.value,C(.8f,.8f,.85f)); Float(target.position,$"−{e.value} espetos",Red); PlayClip(target,"hit"); } yield return Wait(.25f); break;
+                case "bau":
+                {
+                    string name=ChestName(e.cell); for(int i=markers.Count-1;i>=0;i--) if(markers[i]&&markers[i].name==name) { Destroy(markers[i]); markers.RemoveAt(i); }
+                    for(int i=0;i<Mathf.Min(e.value,5);i++) StartCoroutine(Coin(Position(s,e.cell)+Vector3.up*.3f,actor?actor.position+Vector3.up*1.3f:Position(s,e.cell)+Vector3.up*1.5f,i*.09f,.6f));
+                    Float(Position(s,e.cell),$"Baú! +{e.value} moedas",Gold); Game.Hud?.Log($"{Name(s,e.actor)} abriu um baú: +{e.value} moedas"); yield return Wait(.45f); break;
+                }
+                case "porta": BuildBoard(s); RefreshHidden(s); Float(Position(s,e.cell)+Vector3.up*.6f,"Porta aberta",Gold); Game.Hud?.Log($"{Name(s,e.actor)} abriu uma porta"); yield return Wait(.3f); break;
+                case "vela":
+                    Flash(Position(s,e.cell)+Vector3.up*.8f,Gold,24); RefreshHidden(s);
+                    Float(Position(s,e.cell)+Vector3.up*.8f,$"Vela acesa! +{e.value} moedas",Gold); Game.Hud?.Log($"{Name(s,e.actor)} acendeu a vela: o mapa todo à vista (+{e.value} moedas)"); yield return Wait(.5f); break;
+                case "braseiro": if(actor) Float(actor.position,"+1 PA (braseiro)",Gold); Game.Hud?.Log($"{Name(s,e.actor)} ganha +1 PA do braseiro"); break;
                 case "espinhos": if(target) { Float(target.position,$"−{e.value} espinhos",Red); PlayClip(target,"hit"); } yield return Wait(.25f); break;
                 case "explosao":
                 {
@@ -931,7 +1119,7 @@ namespace ArenaTatica
                     if(EffectFrames(e.info+"/fim") is Sprite[] outro) StartCoroutine(PlayEffect(outro,Vector3.up*1.5f,ArenaEfeitos.Fps("Sprites/Efeitos/"+e.info+"/fim",10),boardSize*.9f));
                     RefreshMarkers(s); ApplySky(s); Game.Hud?.Log($"Fim do evento: {EventName(e.info)}"); break;
                 case "rodada": Game.Hud?.Log("Rodada "+e.value); break;
-                case "dominio": Game.Hud?.Log($"{TeamName(s,e.actor)} domina o centro ({e.value})"); break;
+                case "dominio": Game.Hud?.Log($"{TeamName(s,e.actor)} domina {(e.info=="braseiro"?"um braseiro":"o centro")} ({e.value})"); break;
                 case "eliminado": Game.Hud?.Log($"{TeamName(s,e.actor)} está fora da partida"); break;
                 case "vitoria": Game.Hud?.Log(e.actor==0?"EMPATE":$"VITÓRIA de {TeamName(s,e.actor)} ({e.info})"); break;
             }
@@ -1024,11 +1212,32 @@ namespace ArenaTatica
         // Clipes que terminam fora de cena (morte, gato que some no zap) seguram o último quadro em vez de voltar ao idle.
         static bool Holds(string clip) => clip=="death"||clip=="zap";
         // Escondido: some para os inimigos de quem olha; para os aliados fica translúcido.
+        // Névoa do labirinto: escurece as casas fora da visão do time de quem olha (até a vela ser acesa).
+        GameObject fogObject; Mesh fogMesh;
+        void RefreshFog(MatchState s)
+        {
+            if(fogObject) Destroy(fogObject); if(fogMesh) Destroy(fogMesh); fogObject=null; fogMesh=null;
+            int team=Game.LocalTeam; if(!s.fog||s.revealed||team<=0||!spriteMaterial) return;
+            var seen=new bool[s.tiles.Length]; var eyes=s.fighters.Where(f=>f.Alive&&s.Ally(f.team,team)&&Board.Contains(s,f.cell)).Select(f=>f.cell).ToList();
+            for(int i=0;i<s.tiles.Length;i++) { var c=new Cell(i%s.width,i/s.width); seen[i]=eyes.Any(e=>e.Distance(c)<=1||Board.LineOfSight(s,e,c)); }
+            var v=new List<Vector3>(); var tri=new List<int>(); var col=new List<Color>();
+            for(int i=0;i<s.tiles.Length;i++) {
+                var t=s.tiles[i]; if(seen[i]||t.terrain==Terrain.Parede||t.terrain==Terrain.Porta) continue;
+                var p=Position(s,new Cell(i%s.width,i/s.width))+Vector3.up*.04f; int k=v.Count;
+                v.AddRange(new[]{p+new Vector3(-.5f,0,-.5f),p+new Vector3(-.5f,0,.5f),p+new Vector3(.5f,0,.5f),p+new Vector3(.5f,0,-.5f)});
+                for(int j=0;j<4;j++) col.Add(new Color(0,0,.02f,.62f)); tri.AddRange(new[]{k,k+1,k+2,k,k+2,k+3});
+            }
+            if(v.Count==0) return;
+            fogMesh=new Mesh{name="Nevoa",indexFormat=UnityEngine.Rendering.IndexFormat.UInt32}; fogMesh.SetVertices(v); fogMesh.SetColors(col); fogMesh.SetTriangles(tri,0); fogMesh.RecalculateBounds();
+            fogObject=new GameObject("Nevoa",typeof(MeshFilter),typeof(MeshRenderer)); fogObject.transform.SetParent(world,false);
+            fogObject.GetComponent<MeshFilter>().sharedMesh=fogMesh; fogObject.GetComponent<MeshRenderer>().sharedMaterial=spriteMaterial;
+        }
         void RefreshHidden(MatchState s)
         {
+            RefreshFog(s);
             foreach(var f in s.fighters) {
                 if(!units.TryGetValue(f.id,out var unit)||!unit) continue;
-                bool hidden=f.Alive&&f.hidden, mine=s.Ally(f.team,Game.LocalTeam);
+                bool hidden=f.Alive&&Match.Concealed(s,Game.LocalTeam,f), mine=s.Ally(f.team,Game.LocalTeam);
                 foreach(var r in unit.GetComponentsInChildren<Renderer>(true)) {
                     r.enabled=!hidden||mine;
                     if(r is SpriteRenderer sr&&r.name!="Silhueta") sr.color=new Color(1,1,1,hidden?.45f:1);
@@ -1101,7 +1310,7 @@ namespace ArenaTatica
         {
             var want=new List<(int id,string fx)>();
             foreach(var f in s.fighters) {
-                if(!f.Alive||(f.hidden&&!s.Ally(f.team,Game.LocalTeam))||!units.TryGetValue(f.id,out var unit)||!unit||!unit.gameObject.activeSelf) continue;
+                if(!f.Alive||Match.Concealed(s,Game.LocalTeam,f)||!units.TryGetValue(f.id,out var unit)||!unit||!unit.gameObject.activeSelf) continue;
                 foreach(var fx in ArenaEfeitos.StateLoops(f)) if(EffectFrames(fx)!=null) want.Add((f.id,fx));
             }
             foreach(var key in stateLoops.Keys.ToList()) if(!want.Contains(key)||!stateLoops[key]) { if(stateLoops[key]) Destroy(stateLoops[key].gameObject); stateLoops.Remove(key); }
@@ -1548,9 +1757,9 @@ namespace ArenaTatica
                 else if(valid&&tap&&Game.Placing) Game.PlaceTap(c);
                 else if(valid&&tap&&Game.Hud?.HasPendingConfirmation!=true) {
                     // Mover numa casa com lutador visível: abre a ficha dele (skills e o que fazem) em vez de tentar andar.
-                    var who=Board.At(s,c); bool seen=who!=null&&(!who.hidden||s.Ally(who.team,Game.LocalTeam));
+                    var who=Board.At(s,c); bool seen=who!=null&&!Match.Concealed(s,Game.LocalTeam,who);
                     if(Game.Mode==""&&seen) Game.Hud?.Inspect(who);
-                    else if(Game.Mode=="") Game.Submit("mover",c); else if(Game.Mode=="desejo-d") Game.Hud?.ChooseCopy(c); else if(Game.Hud?.ChooseRevive(c)!=true&&Game.Hud?.ChooseCat(c)!=true) SkillTap(c);
+                    else if(Game.Mode=="") Game.Submit(Match.Interaction(s,c)??"mover",c); else if(Game.Mode=="desejo-d") Game.Hud?.ChooseCopy(c); else if(Game.Hud?.ChooseRevive(c)!=true&&Game.Hud?.ChooseCat(c)!=true) SkillTap(c);
                 }
             } else hover.SetActive(false);
             var selected=EventSystem.current?EventSystem.current.currentSelectedGameObject:null; // "?." não enxerga objeto Unity destruído
