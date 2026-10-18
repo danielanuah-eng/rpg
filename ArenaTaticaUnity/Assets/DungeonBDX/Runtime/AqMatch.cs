@@ -16,7 +16,7 @@ namespace DungeonBDX
         AqMatchMenu menu;AqJournal journal;AqLocalSave store;GameObject world;AqBoardView view;Canvas canvas;RectTransform safe;
         readonly DungeonCameraInput input=new DungeonCameraInput();
         readonly List<RaycastResult> hits=new List<RaycastResult>();
-        int selected,card,lastW,lastH;string mode="move",pendingOperation;AqResult pendingResult;bool shop;
+        int selected,card,lastW,lastH;string mode="move",pendingOperation;AqResult pendingResult;bool shop;string root;
         AudioSource music,sfx;bool muted;
         public AqSession Session=>journal?.Session;
         public AqBoardView View=>view;
@@ -24,10 +24,11 @@ namespace DungeonBDX
         public string Message {get;private set;}="";
         public bool IsOpen=>world&&world.activeSelf;
         public bool SavePaused=>pendingOperation!=null;
-        public bool Open(AqMatchMenu owner,string scenario,string[][] parties,bool autoMonsters,bool resume,string storageRoot=null,int[] tuning=null)
+        public bool Open(AqMatchMenu owner,string scenario,string[][] parties,bool autoMonsters,bool resume,string storageRoot=null,int[] tuning=null,IEnumerable<AqCommand> carry=null)
         {
             try
             {
+                if(!resume&&carry!=null)tuning=null; // The carried chapter brings its own host adjustments.
                 var nextStore=new AqLocalSave(storageRoot??AqUi.Root,scenario);var stored=nextStore.Load();
                 if(resume&&stored==null){Message="Nenhuma partida salva neste cenário.";return false;}
                 var next=resume?stored:new AqJournal(scenario,parties,Environment.GetCommandLineArgs().Contains("-dungeonbdx-qa")?29u:unchecked((uint)DateTime.UtcNow.Ticks),autoMonsters);
@@ -35,8 +36,11 @@ namespace DungeonBDX
                 if(!resume&&tuning!=null)
                     for(int i=0;i<Math.Min(tuning.Length,AqTuning.Count);i++)
                         if(tuning[i]!=0&&!next.Session.Apply(new AqCommand("tune",card:i,x:tuning[i])).Accepted){Message="Ajuste do host inválido: "+AqTuning.Labels[i];return false;}
+                if(!resume&&carry!=null)
+                    foreach(var c in carry)
+                    {var r=next.Session.Apply(c);if(!r.Accepted){Message="Não foi possível trazer o capítulo anterior: "+r.Message;return false;}}
                 if(!resume)nextStore.Save(next,Guid.NewGuid().ToString("N"));
-                Cleanup();menu=owner;journal=next;store=nextStore;AqHeroImport.Apply(Session);input.Reset();
+                Cleanup();menu=owner;journal=next;store=nextStore;root=storageRoot;AqHeroImport.Apply(Session);input.Reset();
                 world=new GameObject("Arcadia adventure");world.transform.SetParent(transform,false);view=world.AddComponent<AqBoardView>();view.Build(Session.Scenario,Session.Units);
                 canvas=AqUi.Canvas(world.transform,"AQ bottom HUD");
                 selected=Session.Units.First(u=>!u.Monster&&u.Guild==Session.CurrentGuild&&!u.Huge).Id;
@@ -88,6 +92,8 @@ namespace DungeonBDX
             if(SavePaused)return new AqResult(false,"Salvamento pendente; tente salvar antes de continuar.");
             var result=Session.Apply(command);Message=result.Message;
             if(!result.Accepted){Draw();return result;}
+            // Hidden command meter: past 50% of the history limit, fold it into a snapshot at the turn boundary (no message to the players).
+            if(journal.ShouldCompact&&journal.Compact())Debug.Log($"DungeonBDX: histórico compactado ({journal.Compactions}x, carga {journal.CommandLoad:P0}).");
             pendingOperation=Guid.NewGuid().ToString("N");pendingResult=result;SavePending();return result;
         }
         void SavePending()
@@ -147,9 +153,12 @@ namespace DungeonBDX
                 var b=portrait?AqUi.Button(foot,"",heroArea.x+i*heroArea.width/3,heroArea.y,heroArea.width/3,heroArea.height,()=>Select(u.Id),selected==u.Id)
                     :AqUi.Button(foot,"",heroArea.x,heroArea.y+(2-i)*heroArea.height/3,heroArea.width,heroArea.height/3-.02f,()=>Select(u.Id),selected==u.Id);
                 AqUi.Portrait(b.transform,u.HeroId,.02f,.03f,portrait?.21f:.16f,.94f);
-                AqUi.Text(b.transform,portrait?u.Name+"\n"+(u.Alive?$"VIDA {u.Health}/{u.MaxHealth} · DEF {u.Defense}":"CAÍDO · DESCANSE"):u.Name+"   "+(u.Alive?$"{u.Health}/{u.MaxHealth} · DEF {u.Defense}":"CAÍDO"),
+                // Hero sheet: total defense counts armor cards; the carried cards show as small icons.
+                int def=u.Defense+u.Gear.Sum(g=>g.Defense);
+                AqUi.Text(b.transform,portrait?u.Name+"\n"+(u.Alive?$"VIDA {u.Health}/{u.MaxHealth} · DEF {def}":"CAÍDO · DESCANSE"):u.Name+"   "+(u.Alive?$"{u.Health}/{u.MaxHealth} · DEF {def}":"CAÍDO"),
                     portrait?.25f:.2f,.36f,portrait?.72f:.78f,.6f,portrait?16:15,u.Alive?AqUi.Ink:AqUi.Muted);
-                if(u.Alive)AqUi.LifeBar(b.transform,portrait?.25f:.2f,.1f,portrait?.6f:.5f,.24f,u.Health,u.MaxHealth);
+                if(u.Alive)AqUi.LifeBar(b.transform,portrait?.25f:.2f,.1f,portrait?.36f:.42f,.24f,u.Health,u.MaxHealth);
+                for(int k=0;k<u.Gear.Count&&k<4;k++)AqUi.GearIcon(b.transform,u.Gear[k],(portrait?.63f:.62f)+k*(portrait?.09f:.09f),.05f,portrait?.085f:.085f,.42f);
             }
             var hero=Session.Unit(selected);string ability=hero.AbilityText.Split(':')[0];
             string state=Session.Reaction!=null?$"GUILDA {Session.Controller+1}: REAÇÃO DE {Session.Unit(Session.Reaction.Monster).Name.ToUpperInvariant()} · MOV {Session.Reaction.Movement}"+(string.IsNullOrEmpty(Session.Unit(Session.Reaction.Monster).AbilityText)?"":" · "+Session.Unit(Session.Reaction.Monster).AbilityText.Split(':')[0]):
@@ -162,6 +171,7 @@ namespace DungeonBDX
                 var b=AqUi.Button(foot,g==null?"":g.Name+"\n<size=80%>"+detail+"</size>",cardArea.x+i*cardArea.width/4,cardArea.y,cardArea.width/4-.004f,cardArea.height,
                     ()=>{card=index;mode=Session.Resting?"transfer":"attack";Draw();},(mode=="attack"||Session.Resting&&mode=="transfer")&&card==i);
                 b.interactable=g!=null&&Session.Reaction==null&&(Session.Resting||!g.Exhausted&&!g.Passive);
+                if(g!=null)AqUi.Icon(b,g.Icon);
             }
             // Actions: one row in portrait; a 3 + 2 grid on PC.
             void Act(int slot,int count,int row,string text,Action click,bool on=false,bool enabled=true,string icon=null)
@@ -204,7 +214,13 @@ namespace DungeonBDX
             {
                 var win=AqUi.Box(safe,"Victory",.18f,.43f,.64f,.32f,AqUi.Panel);
                 AqUi.Text(win,$"GUILDA {Session.Winner+1} VITORIOSA\n\n"+Session.Scenario.Ending,.07f,.28f,.86f,.65f,25,AqUi.Gold,TextAlignmentOptions.Center);
-                AqUi.Button(win,"VOLTAR ÀS AVENTURAS",.15f,.07f,.7f,.19f,Close);
+                int chapter=Array.IndexOf(AqScenarios.Ids,Session.Scenario.Id);
+                if(chapter>=0&&chapter+1<AqScenarios.Ids.Length)
+                {
+                    AqUi.Button(win,"PRÓXIMO CAPÍTULO · LEVA MOEDAS E ITENS",.05f,.07f,.55f,.19f,NextChapter);
+                    AqUi.Button(win,"VOLTAR",.62f,.07f,.33f,.19f,Close);
+                }
+                else AqUi.Button(win,"VOLTAR ÀS AVENTURAS",.15f,.07f,.7f,.19f,Close);
             }
             Preview();
         }
@@ -220,6 +236,7 @@ namespace DungeonBDX
             {
                 int index=i;var item=items[i];
                 var b=AqUi.Button(panel,$"{item.Name} · {item.Cost} MOEDAS\n<size=72%>{item.Text}</size>",.02f+i%2*.48f,.14f+(rows-1-i/2)*h,.48f,h,()=>Do(new AqCommand("buy",selected,card:index)));
+                AqUi.Icon(b,item.Icon);
                 b.interactable=coins>=item.Cost&&hero.Gear.Count<4&&!SavePaused;
             }
             var chosen=card<hero.Gear.Count?hero.Gear[card]:null;bool signature=chosen!=null&&chosen.Id=="signature."+hero.HeroId;
@@ -240,6 +257,14 @@ namespace DungeonBDX
             else if(!Session.Resting)cells=Session.Range(selected,mode=="move",card);
             view.Select(selectedId);view.ShowCells(cells,mode!="attack");
         }
+        // Campaign: the same guilds start the next chapter with their coins, bought cards and host adjustments.
+        void NextChapter()
+        {
+            if(SavePaused)return;
+            var s=Session;string next=AqScenarios.Ids[Array.IndexOf(AqScenarios.Ids,s.Scenario.Id)+1];
+            if(!Open(menu,next,PartiesOf(s),s.AutoMonsters,false,root,null,s.CarryCommands().ToArray()))Draw();
+        }
+        public static string[][] PartiesOf(AqSession s)=>s.Guilds.Select(g=>s.Units.Where(u=>!u.Monster&&u.Guild==g.Index).OrderBy(u=>u.Id).Select(u=>u.HeroId).ToArray()).ToArray();
         void Close()
         {
             if(SavePaused){Message="Tente salvar a ação pendente antes de sair.";Draw();return;}
@@ -281,7 +306,7 @@ namespace DungeonBDX
             }
             catch(Exception e){failure=e;}
             yield return new WaitForSecondsRealtime(.25f);
-            try{Capture(path,view.Camera,canvas);}catch(Exception e){failure=e;}
+            try{Capture(path,view.Camera,canvas,view.LifeCanvas);}catch(Exception e){failure=e;}
             report.error=failure?.ToString();report.passed=failure==null&&report.sharedSpace&&report.colossusLarger&&report.uniqueAbilities&&report.saveReplay&&report.camera&&report.animation&&report.idleAnimated&&report.moved&&report.combat;
             File.WriteAllText(Path.ChangeExtension(path,".json"),JsonUtility.ToJson(report,true));Application.Quit(report.passed?0:1);
         }
@@ -291,7 +316,7 @@ namespace DungeonBDX
             for(int i=0;i<30;i++)yield return null;
             var r=Do(new AqCommand("rest"));shop=true;Draw();
             yield return new WaitForSecondsRealtime(.25f);
-            Capture(path,view.Camera,canvas);Application.Quit(r.Accepted&&Session.Resting?0:1);
+            Capture(path,view.Camera,canvas,view.LifeCanvas);Application.Quit(r.Accepted&&Session.Resting?0:1);
         }
         void ProbeCommands(Probe report)
         {
@@ -323,18 +348,19 @@ namespace DungeonBDX
         }
         void ProbeReactions()
         {for(int i=0;Session.Reaction!=null&&i<50;i++)Do(new AqCommand("react-skip"));}
-        public static void Capture(string path,Camera camera,Canvas captureCanvas)
+        public static void Capture(string path,Camera camera,Canvas captureCanvas,Canvas under=null)
         {
             Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(path)));
             var target=RenderTexture.GetTemporary(Screen.width,Screen.height,24,RenderTextureFormat.ARGB32);var oldTarget=camera.targetTexture;var active=RenderTexture.active;
-            var oldMode=captureCanvas.renderMode;var oldCamera=captureCanvas.worldCamera;Texture2D pixels=null;
+            var oldMode=captureCanvas.renderMode;var oldCamera=captureCanvas.worldCamera;Texture2D pixels=null;var underMode=under?under.renderMode:RenderMode.ScreenSpaceOverlay;
             try
             {
-                camera.targetTexture=target;captureCanvas.renderMode=RenderMode.ScreenSpaceCamera;captureCanvas.worldCamera=camera;captureCanvas.planeDistance=1;Canvas.ForceUpdateCanvases();
+                camera.targetTexture=target;captureCanvas.renderMode=RenderMode.ScreenSpaceCamera;captureCanvas.worldCamera=camera;captureCanvas.planeDistance=1;
+                if(under){under.renderMode=RenderMode.ScreenSpaceCamera;under.worldCamera=camera;under.planeDistance=1.5f;}Canvas.ForceUpdateCanvases();
                 if(GraphicsSettings.currentRenderPipeline){var request=new RenderPipeline.StandardRequest{destination=target};RenderPipeline.SubmitRenderRequest(camera,request);}else camera.Render();
                 RenderTexture.active=target;pixels=new Texture2D(Screen.width,Screen.height,TextureFormat.RGB24,false);pixels.ReadPixels(new Rect(0,0,Screen.width,Screen.height),0,0);pixels.Apply();File.WriteAllBytes(path,pixels.EncodeToPNG());
             }
-            finally{camera.targetTexture=oldTarget;RenderTexture.active=active;captureCanvas.renderMode=oldMode;captureCanvas.worldCamera=oldCamera;if(pixels)Destroy(pixels);RenderTexture.ReleaseTemporary(target);}
+            finally{camera.targetTexture=oldTarget;RenderTexture.active=active;captureCanvas.renderMode=oldMode;captureCanvas.worldCamera=oldCamera;if(under){under.renderMode=underMode;under.worldCamera=null;}if(pixels)Destroy(pixels);RenderTexture.ReleaseTemporary(target);}
         }
 #endif
     }

@@ -18,10 +18,24 @@ namespace DungeonBDX.Arcadia
         public int Monster,Hero,Movement;
         public bool Vengeance,Dying;
     }
+    [Serializable] public sealed class AqSnapshot
+    {
+        [Serializable] public sealed class UnitState{public int Id,Health,MaxHealth,Defense,Deaths,Movement,Dice,Overkill,Reward;public AqCell Cell;public bool SpentLife;public AqGear[] Gear;public string[] Carry;}
+        [Serializable] public sealed class GuildState{public int Coins,Emblems,Rituals;public string[] Completed;}
+        [Serializable] public sealed class TokenState{public AqCell Cell;public int Owner;public bool Taken;}
+        [Serializable] public sealed class ReactionState{public int Monster,Hero,Movement;public bool Vengeance,Dying;}
+        public uint Rng;
+        public int CurrentGuild,Turn,ActiveId,MovesLeft,Moved,Winner,RouteIndex,AttackTarget,AttackCard;
+        public bool Attacked,MovementClosed,MovementStarted,Resting,MoveStepGuarded,WaitingAttack,UsedPhase,UsedScout,UsedPortal,UsedDoor,UsedResonance;
+        public int[] Tuning,Damage,Healing,SpawnQueue,RestAllies,RoyalReward,ResolvedDeaths;
+        public string[] FirstQuests;
+        public AqCell[] MoveRoute;
+        public UnitState[] Units;public GuildState[] Guilds;public bool[] EdgesOpen;public TokenState[] Tokens;public ReactionState[] Reactions;
+    }
     // Independent ruleset: old AP/cooldown saves remain readable by the old expedition.
     public sealed class AqSession
     {
-        public const int Version=1,MaxDice=6,MaxDamageAction=30,MaxDamageTurn=60,MaxHealingAction=12,MaxHealingTurn=18;
+        public const int Version=1,MaxCommands=4096,MaxDice=6,MaxDamageAction=30,MaxDamageTurn=60,MaxHealingAction=12,MaxHealingTurn=18;
         public AqScenario Scenario {get;}
         public AqBoard Board=>Scenario.Board;
         public readonly List<AqUnit> Units=new List<AqUnit>();
@@ -73,7 +87,7 @@ namespace DungeonBDX.Arcadia
                     if(slots.Length==0)throw new ArgumentException("Guilda sem espaço inicial.");u.Cell=slots[0];Units.Add(u);
                 }
                 var first=Units.First(u=>u.Guild==g);first.Gear.Add(new AqGear{Id="sword."+g,Name="Espada de reserva",Dice=3});
-                Units.Last(u=>u.Guild==g).Gear.Add(new AqGear{Id="bow."+g,Name="Arco de reserva",Dice=2,Ranged=true});
+                Units.Last(u=>u.Guild==g).Gear.Add(new AqGear{Id="bow."+g,Name="Arco de reserva",Dice=2,Ranged=true,Icon="bow"});
             }
             firstMonster=Units.Count;
             foreach(var m in Scenario.Monsters)
@@ -121,7 +135,7 @@ namespace DungeonBDX.Arcadia
         {
             if(command==null)return Fail("Comando inválido.");
             if(Winner>=0)return Fail("Cenário concluído.");
-            if(Commands.Count>=4096)return Fail("Limite de comandos deste cenário atingido.");
+            if(Commands.Count>=MaxCommands)return Fail("Limite de comandos deste cenário atingido.");
             var r=Execute(command);
             if(r.Accepted)
             {
@@ -137,6 +151,7 @@ namespace DungeonBDX.Arcadia
         {
             if(Reaction!=null)return React(c);
             if(c.Kind=="tune")return Tune(c);
+            if(c.Kind=="purse"||c.Kind=="grant")return Carry(c);
             if(c.Kind=="buy")return Buy(c);
             if(c.Kind=="discard")return Discard(c);
             if(c.Kind=="end")return End();
@@ -160,7 +175,7 @@ namespace DungeonBDX.Arcadia
                 if(u.Ability!="arsenal"||Attacked)return Fail("A forma só pode mudar antes do ataque de Damian.");
                 var signature=u.Gear.FirstOrDefault(g=>g.Id=="signature."+u.HeroId);
                 if(signature==null)return Fail("O camaleão está com outro herói.");
-                Bind(u);signature.Ranged=!signature.Ranged;signature.Dice=signature.Ranged?2:3;signature.Clip=signature.Ranged?"pistol":"hammer";
+                Bind(u);signature.Ranged=!signature.Ranged;signature.Dice=signature.Ranged?2:3;signature.Clip=signature.Ranged?"pistol":"hammer";signature.Icon=signature.Ranged?"bow":"hammer";
                 return Ok(signature.Ranged?"Camaleão: pistola.":"Camaleão: martelo.");
             }
             return Fail("Ação desconhecida.");
@@ -474,6 +489,33 @@ namespace DungeonBDX.Arcadia
             MovesLeft=BaseMoves;
             return Ok($"Ajuste do host: {AqTuning.Labels[c.Card]} {(c.X>0?"+":"")}{c.X}.");
         }
+        // Campaign carry-over from the previous chapter, also recorded before the first move.
+        AqResult Carry(AqCommand c)
+        {
+            if(Commands.Any(v=>v.Kind!="tune"&&v.Kind!="purse"&&v.Kind!="grant")||ActiveId>=0||Resting||Turn!=1)return Fail("O que vem do capítulo anterior só entra antes da primeira jogada.");
+            if(c.Kind=="purse")
+            {
+                if(c.Actor<0||c.Actor>=Guilds.Count||c.X<0||c.X>999)return Fail("Bolsa inválida.");
+                Guilds[c.Actor].Coins=c.X;return Ok($"Guilda {c.Actor+1} traz {c.X} moedas.");
+            }
+            var u=Unit(c.Actor);
+            // A full hand gives up the guild's spare weapon (discarded last chapter) before refusing the card.
+            if(u!=null&&u.Gear.Count>=4)u.Gear.RemoveAll(g=>g.Id.StartsWith("sword.",StringComparison.Ordinal)||g.Id.StartsWith("bow.",StringComparison.Ordinal));
+            if(u==null||u.Monster||c.Card<0||c.Card>=AqShop.Items.Length||u.Gear.Count>=4)return Fail("Carta trazida inválida.");
+            var item=AqShop.Items[c.Card];u.Gear.Add(item.Create(item.Id+"."+u.Id+"."+Commands.Count));return Ok(u.Name+" traz "+item.Name+".");
+        }
+        // Commands that start the next chapter with the same host adjustments, the guild coins and the bought cards.
+        public IEnumerable<AqCommand> CarryCommands()
+        {
+            for(int i=0;i<Tuning.Length;i++)if(Tuning[i]!=0)yield return new AqCommand("tune",card:i,x:Tuning[i]);
+            foreach(var g in Guilds)yield return new AqCommand("purse",g.Index,x:Math.Min(999,g.Coins));
+            foreach(var u in Units.Where(u=>!u.Monster))
+                foreach(var gear in u.Gear)
+                {
+                    int item=Array.FindIndex(AqShop.Items,s=>gear.Id.StartsWith(s.Id+".",StringComparison.Ordinal));
+                    if(item>=0)yield return new AqCommand("grant",u.Id,card:item);
+                }
+        }
         AqSpawn SpawnOf(AqUnit m)
         {
             int i=m.Id-firstMonster;
@@ -516,6 +558,46 @@ namespace DungeonBDX.Arcadia
             if(Tuning.Any(v=>v!=0))s.Append("|tune:").Append(string.Join(",",Tuning));
             return s.ToString();
         }
+        // Full state at a turn boundary, so the command history can be cleared without breaking the replay.
+        public AqSnapshot Snapshot()
+        {
+            return new AqSnapshot{Rng=rng,CurrentGuild=CurrentGuild,Turn=Turn,ActiveId=ActiveId,MovesLeft=MovesLeft,Moved=Moved,Winner=Winner,RouteIndex=routeIndex,AttackTarget=attackTarget,AttackCard=attackCard,
+                Attacked=Attacked,MovementClosed=MovementClosed,MovementStarted=MovementStarted,Resting=Resting,MoveStepGuarded=moveStepGuarded,WaitingAttack=waitingAttack,
+                UsedPhase=usedPhase,UsedScout=usedScout,UsedPortal=usedPortal,UsedDoor=usedDoor,UsedResonance=usedResonance,
+                Tuning=Tuning.ToArray(),Damage=damage.ToArray(),Healing=healing.ToArray(),SpawnQueue=SpawnQueue.ToArray(),RestAllies=restAllies.OrderBy(v=>v).ToArray(),
+                RoyalReward=royalReward.OrderBy(v=>v).ToArray(),ResolvedDeaths=resolvedDeaths.OrderBy(v=>v).ToArray(),FirstQuests=firstQuests.OrderBy(v=>v,StringComparer.Ordinal).ToArray(),MoveRoute=moveRoute.ToArray(),
+                Units=Units.Select(u=>new AqSnapshot.UnitState{Id=u.Id,Cell=u.Cell,Health=u.Health,MaxHealth=u.MaxHealth,Defense=u.Defense,Deaths=u.Deaths,Movement=u.Movement,Dice=u.Dice,Overkill=u.Overkill,Reward=u.Reward,SpentLife=u.SpentLife,
+                    Gear=u.Gear.Select(Copy).ToArray(),Carry=u.Carry.ToArray()}).ToArray(),
+                Guilds=Guilds.Select(g=>new AqSnapshot.GuildState{Coins=g.Coins,Emblems=g.Emblems,Rituals=g.Rituals,Completed=g.Completed.OrderBy(v=>v,StringComparer.Ordinal).ToArray()}).ToArray(),
+                EdgesOpen=Board.Edges.Select(e=>e.Open).ToArray(),
+                Tokens=Scenario.Tokens.Select(k=>new AqSnapshot.TokenState{Cell=k.Cell,Owner=k.Owner,Taken=k.Taken}).ToArray(),
+                Reactions=reactions.Select(x=>new AqSnapshot.ReactionState{Monster=x.Monster,Hero=x.Hero,Movement=x.Movement,Vengeance=x.Vengeance,Dying=x.Dying}).ToArray()};
+        }
+        public void Restore(AqSnapshot s)
+        {
+            if(s==null||s.Units==null||s.Units.Length!=Units.Count||s.Guilds==null||s.Guilds.Length!=Guilds.Count||s.EdgesOpen==null||s.EdgesOpen.Length!=Board.Edges.Count||
+               s.Tokens==null||s.Tokens.Length!=Scenario.Tokens.Count||s.Tuning==null||s.Tuning.Length!=Tuning.Length||s.Damage==null||s.Damage.Length!=damage.Length||s.Healing==null||s.Healing.Length!=healing.Length||
+               s.Units.Any(u=>u==null||u.Gear==null||u.Gear.Length>4||u.Carry==null)||s.Guilds.Any(g=>g==null||g.Completed==null)||s.Tokens.Any(k=>k==null)||
+               s.Reactions==null||s.SpawnQueue==null||s.RestAllies==null||s.RoyalReward==null||s.ResolvedDeaths==null||s.FirstQuests==null||s.MoveRoute==null)throw new ArgumentException("Retrato AQ inválido.");
+            rng=s.Rng==0?19:s.Rng;CurrentGuild=s.CurrentGuild;Turn=s.Turn;ActiveId=s.ActiveId;MovesLeft=s.MovesLeft;Moved=s.Moved;Winner=s.Winner;routeIndex=s.RouteIndex;attackTarget=s.AttackTarget;attackCard=s.AttackCard;
+            Attacked=s.Attacked;MovementClosed=s.MovementClosed;MovementStarted=s.MovementStarted;Resting=s.Resting;moveStepGuarded=s.MoveStepGuarded;waitingAttack=s.WaitingAttack;
+            usedPhase=s.UsedPhase;usedScout=s.UsedScout;usedPortal=s.UsedPortal;usedDoor=s.UsedDoor;usedResonance=s.UsedResonance;
+            Array.Copy(s.Tuning,Tuning,Tuning.Length);Array.Copy(s.Damage,damage,damage.Length);Array.Copy(s.Healing,healing,healing.Length);
+            SpawnQueue.Clear();SpawnQueue.AddRange(s.SpawnQueue);restAllies.Clear();restAllies.UnionWith(s.RestAllies);royalReward.Clear();royalReward.UnionWith(s.RoyalReward);
+            resolvedDeaths.Clear();resolvedDeaths.UnionWith(s.ResolvedDeaths);firstQuests.Clear();firstQuests.UnionWith(s.FirstQuests);moveRoute.Clear();moveRoute.AddRange(s.MoveRoute);
+            for(int i=0;i<Units.Count;i++)
+            {
+                var u=Units[i];var v=s.Units[i];if(v.Id!=u.Id)throw new ArgumentException("Retrato AQ inválido.");
+                u.Cell=v.Cell;u.Health=v.Health;u.MaxHealth=v.MaxHealth;u.Defense=v.Defense;u.Deaths=v.Deaths;u.Movement=v.Movement;u.Dice=v.Dice;u.Overkill=v.Overkill;u.Reward=v.Reward;u.SpentLife=v.SpentLife;
+                u.Gear.Clear();u.Gear.AddRange(v.Gear.Select(Copy));u.Carry.Clear();u.Carry.AddRange(v.Carry);
+            }
+            for(int i=0;i<Guilds.Count;i++){var g=Guilds[i];var v=s.Guilds[i];g.Coins=v.Coins;g.Emblems=v.Emblems;g.Rituals=v.Rituals;g.Completed.Clear();g.Completed.UnionWith(v.Completed);}
+            for(int i=0;i<Board.Edges.Count;i++)Board.Edges[i].Open=s.EdgesOpen[i];
+            for(int i=0;i<Scenario.Tokens.Count;i++){var k=Scenario.Tokens[i];var v=s.Tokens[i];k.Cell=v.Cell;k.Owner=v.Owner;k.Taken=v.Taken;}
+            reactions.Clear();reactions.AddRange(s.Reactions.Select(x=>new AqReaction{Monster=x.Monster,Hero=x.Hero,Movement=x.Movement,Vengeance=x.Vengeance,Dying=x.Dying}));
+        }
+        public void ClearHistory()=>Commands.Clear();
+        static AqGear Copy(AqGear g)=>g==null?throw new ArgumentException("Retrato AQ inválido."):new AqGear{Id=g.Id,Name=g.Name,Clip=g.Clip,Icon=g.Icon,Dice=g.Dice,Defense=g.Defense,Ranged=g.Ranged,Exhausted=g.Exhausted,Sharp=g.Sharp,Reroll=g.Reroll};
         static AqResult Fail(string s)=>new AqResult(false,s);
         static string SpawnSymbol(int face)=>face<=3?"melee":face<=5?"ranged":"critical";
         static AqResult Ok(string s)=>new AqResult(true,s);

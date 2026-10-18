@@ -14,6 +14,12 @@ namespace DungeonBDX
     {
         [Serializable] sealed class Envelope
         {public int Version=1;public long Revision;public string Operation,Digest;public AqRecord Record;}
+        // Version 2: the compacted history keeps its state snapshot next to the remaining commands.
+        [Serializable] sealed class Envelope2
+        {public int Version=2;public long Revision;public string Operation,Digest;public AqRecord Record;public AqSnapshot Base;public int Compactions;}
+        [Serializable] sealed class VersionProbe{public int Version;}
+        // Common in-memory form of both file versions.
+        sealed class Slot{public long Revision;public string Operation;public AqRecord Record;public AqSnapshot Base;public int Compactions;}
         const int MaxBytes=2*1024*1024;
         readonly string scenario,directory,path,backup,lockPath,revisionPath;
         public long Revision {get;private set;}
@@ -31,7 +37,7 @@ namespace DungeonBDX
             {
                 RecoveredBackup=false;
                 if(!Exists){Revision=0;return null;}
-                var e=ReadRecover(out bool restored);Revision=e.Revision;RecoveredBackup=restored;return AqJournal.Restore(e.Record);
+                var e=ReadRecover(out bool restored);Revision=e.Revision;RecoveredBackup=restored;return AqJournal.Restore(e.Record,e.Base,e.Compactions);
             }
         }
         public void Save(AqJournal journal,string operation)
@@ -39,23 +45,24 @@ namespace DungeonBDX
             if(journal==null||!Guid.TryParseExact(operation,"N",out _))throw new ArgumentException("Operação inválida.");
             var record=journal.Export();
             if(record.Scenario!=scenario)throw new ArgumentException("A partida pertence a outro cenário.");
-            AqJournal.Restore(record); // Reject state changes that were not committed as replayable commands.
+            AqJournal.Restore(record,journal.Base,journal.Compactions); // Reject state changes that were not committed as replayable commands.
             Directory.CreateDirectory(directory);
             using(var guard=Lock())
             {
-                Envelope prior=null;if(Exists)prior=ReadRecover(out _);
+                Slot prior=null;if(Exists)prior=ReadRecover(out _);
                 if(prior!=null&&prior.Operation==operation)
                 {
-                    if(JsonUtility.ToJson(prior.Record)!=JsonUtility.ToJson(record))throw new IOException("Conflito na operação salva.");
+                    if(JsonUtility.ToJson(prior.Record)!=JsonUtility.ToJson(record)||Json(prior.Base)!=Json(journal.Base))throw new IOException("Conflito na operação salva.");
                     Revision=prior.Revision;RecoveredBackup=false;return;
                 }
                 if((prior?.Revision??0)!=Revision)throw new IOException("Outro processo alterou a partida. Reabra o cenário.");
-                var e=new Envelope{Revision=checked(Revision+1),Operation=operation,Record=record};
+                var e=new Slot{Revision=checked(Revision+1),Operation=operation,Record=record,Base=journal.Base,Compactions=journal.Compactions};
                 WriteSnapshot(e,true);Revision=e.Revision;RecoveredBackup=false;
             }
         }
         FileStream Lock()=>new FileStream(lockPath,FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.None);
-        Envelope ReadRecover(out bool restored)
+        static string Json(AqSnapshot s)=>s==null?"":JsonUtility.ToJson(s);
+        Slot ReadRecover(out bool restored)
         {
             long high=ReadRevision();var primary=Read(path);var secondary=Read(backup);
             var e=primary;
@@ -71,17 +78,30 @@ namespace DungeonBDX
             else if(ReadRevision()!=e.Revision)WriteRevision(e.Revision);
             return e;
         }
-        Envelope Read(string file)
+        Slot Read(string file)
         {
             if(!File.Exists(file))return null;
             try
             {
                 if(new FileInfo(file).Length>MaxBytes)return null;
-                string json=File.ReadAllText(file,new UTF8Encoding(false,true));var e=JsonUtility.FromJson<Envelope>(json);
-                if(e==null||e.Version!=1||e.Revision<1||e.Record==null||e.Record.Scenario!=scenario||
-                    !Guid.TryParseExact(e.Operation,"N",out _)||JsonUtility.ToJson(e)!=json)return null;
-                string digest=e.Digest;e.Digest="";if(Hash(JsonUtility.ToJson(e))!=digest)return null;e.Digest=digest;
-                AqJournal.Restore(e.Record);return e;
+                string json=File.ReadAllText(file,new UTF8Encoding(false,true));var probe=JsonUtility.FromJson<VersionProbe>(json);
+                Slot slot;
+                if(probe!=null&&probe.Version==2)
+                {
+                    var e=JsonUtility.FromJson<Envelope2>(json);
+                    if(e==null||e.Revision<1||e.Record==null||e.Base==null||e.Compactions<1||e.Record.Scenario!=scenario||!Guid.TryParseExact(e.Operation,"N",out _)||JsonUtility.ToJson(e)!=json)return null;
+                    string digest=e.Digest;e.Digest="";if(Hash(JsonUtility.ToJson(e))!=digest)return null;
+                    slot=new Slot{Revision=e.Revision,Operation=e.Operation,Record=e.Record,Base=e.Base,Compactions=e.Compactions};
+                }
+                else
+                {
+                    var e=JsonUtility.FromJson<Envelope>(json);
+                    if(e==null||e.Version!=1||e.Revision<1||e.Record==null||e.Record.Scenario!=scenario||
+                        !Guid.TryParseExact(e.Operation,"N",out _)||JsonUtility.ToJson(e)!=json)return null;
+                    string digest=e.Digest;e.Digest="";if(Hash(JsonUtility.ToJson(e))!=digest)return null;
+                    slot=new Slot{Revision=e.Revision,Operation=e.Operation,Record=e.Record};
+                }
+                AqJournal.Restore(slot.Record,slot.Base,slot.Compactions);return slot;
             }
             catch(Exception ex)when(ex is ArgumentException||ex is InvalidOperationException||ex is DecoderFallbackException){return null;}
         }
@@ -99,13 +119,16 @@ namespace DungeonBDX
             string number=value.ToString(CultureInfo.InvariantCulture);
             AtomicWrite(revisionPath,number+"\n"+Hash(number),null);
         }
-        void WriteSnapshot(Envelope e,bool preservePrevious)
+        void WriteSnapshot(Slot slot,bool preservePrevious)
         {
-            e.Digest="";e.Digest=Hash(JsonUtility.ToJson(e));string text=JsonUtility.ToJson(e);
+            // Uncompacted games keep writing version 1, byte-identical to older builds.
+            string text;
+            if(slot.Base==null){var e=new Envelope{Revision=slot.Revision,Operation=slot.Operation,Record=slot.Record,Digest=""};e.Digest=Hash(JsonUtility.ToJson(e));text=JsonUtility.ToJson(e);}
+            else{var e=new Envelope2{Revision=slot.Revision,Operation=slot.Operation,Record=slot.Record,Base=slot.Base,Compactions=slot.Compactions,Digest=""};e.Digest=Hash(JsonUtility.ToJson(e));text=JsonUtility.ToJson(e);}
             if(Encoding.UTF8.GetByteCount(text)>MaxBytes)throw new IOException("Save excedeu o limite.");
             AtomicWrite(path,text,preservePrevious?backup:null);
             // Commit the snapshot first. A crash before the watermark is repaired from its revision.
-            WriteRevision(e.Revision);
+            WriteRevision(slot.Revision);
             if(!File.Exists(backup))File.Copy(path,backup);
         }
         static void AtomicWrite(string destination,string text,string oldCopy)

@@ -33,6 +33,24 @@ namespace DungeonBDX.Tests
             Assert.That(reopened.Revision,Is.EqualTo(1));Assert.That(reopened.RecoveredBackup,Is.False);
         }
 
+        [Test] public void CompactedHistorySavesItsSnapshotAndReplaysTheRest()
+        {
+            var store=new AqLocalSave(root,Scenario);var journal=Journal();
+            while(journal.Session.Commands.Count<AqJournal.CompactAt)Advance(journal);
+            Assert.That(journal.Compact(),Is.True);Advance(journal);store.Save(journal,Operation());
+            Assert.That(File.ReadAllText(SavePath),Does.StartWith("{\"Version\":2"));
+            var restored=new AqLocalSave(root,Scenario).Load();
+            Assert.That(restored.Session.Fingerprint(),Is.EqualTo(journal.Session.Fingerprint()));
+            Assert.That(restored.Session.Commands.Count,Is.EqualTo(1));Assert.That(restored.Compactions,Is.EqualTo(1));
+            Advance(restored);store.Save(restored,Operation());Assert.That(store.Revision,Is.EqualTo(2));
+        }
+
+        [Test] public void UncompactedGamesKeepTheOldFileVersion()
+        {
+            var store=new AqLocalSave(root,Scenario);var journal=Journal();Advance(journal);store.Save(journal,Operation());
+            Assert.That(File.ReadAllText(SavePath),Does.StartWith("{\"Version\":1"));
+        }
+
         [Test] public void OperationRetryIsIdempotentEvenFromANewClient()
         {
             var journal=Journal();var op=Operation();new AqLocalSave(root,Scenario).Save(journal,op);

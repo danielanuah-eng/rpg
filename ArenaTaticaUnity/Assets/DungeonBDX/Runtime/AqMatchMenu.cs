@@ -75,6 +75,14 @@ namespace DungeonBDX
             icon.sprite=Sprite.Create(t,new Rect(0,0,t.width,t.height),new Vector2(.5f,.5f),100);icon.preserveAspect=true;
             if(label){var lr=label.rectTransform;lr.anchorMin=new Vector2(.28f,lr.anchorMin.y);lr.anchorMax=new Vector2(.97f,lr.anchorMax.y);}
         }
+        // Small card icon (PixelLab Iso/UI/Icons) on a hero sheet; exhausted cards are dimmed.
+        public static void GearIcon(Transform parent,AqGear gear,float x,float y,float w,float h)
+        {
+            var t=Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/"+gear.Icon);if(!t)return;
+            var tile=Box(parent,"Gear tile",x,y,w,h,new Color(.42f,.36f,.27f,gear.Exhausted?.35f:.85f));
+            var image=Box(tile,"Gear "+gear.Icon,.08f,.08f,.84f,.84f,gear.Exhausted?new Color(1,1,1,.35f):Color.white).GetComponent<UnityEngine.UI.Image>();
+            image.sprite=Sprite.Create(t,new Rect(0,0,t.width,t.height),new Vector2(.5f,.5f),100);image.preserveAspect=true;
+        }
         // Scoreboard marker: square PixelLab icon (height-driven) then the text; iconW is the caller's width estimate. No art: text only.
         public static TextMeshProUGUI Chip(Transform parent,string id,string text,float x,float y,float w,float h,float iconW,float size=14,Color? color=null)
         {
@@ -218,10 +226,23 @@ namespace DungeonBDX
         {
             if(!resume&&parties.Take(guildCount).Any(p=>p.Count!=3)){tab="heroes";message="Complete as guildas com três heróis cada.";Draw();return;}
             var match=gameObject.GetComponent<AqMatch>()??gameObject.AddComponent<AqMatch>();
-            if(!match.Open(this,scenario,parties.Take(guildCount).Select(p=>p.ToArray()).ToArray(),autoMonsters,resume,null,tuning)){message=match.Message;Draw();return;}
+            var chosen=parties.Take(guildCount).Select(p=>p.ToArray()).ToArray();
+            if(!match.Open(this,scenario,chosen,autoMonsters,resume,null,tuning,resume?null:PreviousChapter(chosen))){message=match.Message;Draw();return;}
             canvas.gameObject.SetActive(false);enabled=false;
         }
         public void Return(){canvas.gameObject.SetActive(true);enabled=true;Draw();}
         public void ShowTab(string key){tab=key;Draw();}
+        // Campaign: the previous chapter, won by the same guilds, hands over its coins, cards and host adjustments.
+        AqCommand[] PreviousChapter(string[][] chosen)
+        {
+            int index=Array.IndexOf(AqScenarios.Ids,scenario);if(index<1)return null;
+            try
+            {
+                var previous=new AqLocalSave(AqUi.Root,AqScenarios.Ids[index-1]).Load()?.Session;
+                if(previous==null||previous.Winner<0||!AqMatch.PartiesOf(previous).SelectMany(p=>p).SequenceEqual(chosen.SelectMany(p=>p)))return null;
+                return previous.CarryCommands().ToArray();
+            }
+            catch(Exception){return null;}
+        }
     }
 }

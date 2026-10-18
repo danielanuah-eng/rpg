@@ -37,7 +37,7 @@ namespace DungeonBDX
             public GameObject Base;
             public GameObject Ring;
             public Sprite Fallback;
-            public TextMeshPro Label;
+            public RectTransform Badge;
             public string LabelText = "";
             public float Height = 1.45f;
             public AqCell Logical;
@@ -561,9 +561,6 @@ namespace DungeonBDX
             // Foot anchor is handled inside DungeonActorAnimation; the root stays on the cell plane.
             animation.Initialize(SpriteFolderOf(unit), view.Fallback, view.Visual, viewCamera);
             animations[unit.Id] = animation;
-            view.Label = CreateLabel("Unit label", body.transform, view.Height*IsoStretch*HeadLine + .08f, .13f);
-            var labelRenderer = view.Label.GetComponent<Renderer>();
-            if (labelRenderer) labelRenderer.sortingOrder = 10;
             views[unit.Id] = view;
             RefreshLabel(view);
             return view;
@@ -620,19 +617,62 @@ namespace DungeonBDX
             return capsule.transform;
         }
 
+        // Life badges: screen overlay below the HUD, pinned in front of each figure's feet, so walls and heads never hide them.
+        Canvas lifeCanvas;
+        public Canvas LifeCanvas => lifeCanvas;
         void RefreshLabel(AqUnitView view)
         {
-            if (view == null || view.Label == null || view.Unit == null) return;
+            if (view == null || view.Unit == null) return;
             // Names live in the HUD cards; the table keeps only life, so crowded rooms stay readable.
-            string text = view.Unit.Monster
-                ? view.Unit.Health.ToString()
-                : view.Unit.Health + "/" + Mathf.Max(1, view.Unit.MaxHealth);
-            view.Label.gameObject.SetActive(ShowLife);
-            if (view.LabelText == text) return;
+            string text = view.Unit.Health + "/" + Mathf.Max(1, view.Unit.MaxHealth);
+            if (view.LabelText == text && view.Badge) return;
             view.LabelText = text;
-            view.Label.text = text;
-            view.Label.color = !view.Unit.Alive ? new Color(.6f,.6f,.6f) : view.Unit.Monster ? new Color(1f,.62f,.55f) : Color.white;
-            view.Label.ForceMeshUpdate();
+            if (!lifeCanvas) { lifeCanvas = AqUi.Canvas(transform, "Life badges"); lifeCanvas.sortingOrder = 20; }
+            if (view.Badge) { view.Badge.gameObject.SetActive(false); if (Application.isPlaying) Destroy(view.Badge.gameObject); else DestroyImmediate(view.Badge.gameObject); }
+            bool low = view.Unit.Health*3 <= Mathf.Max(1, view.Unit.MaxHealth);
+            var badge = AqUi.Box(lifeCanvas.transform, "Life " + view.Id, .5f, .5f, 0, 0, new Color(.05f,.05f,.06f,.82f));
+            badge.sizeDelta = new Vector2(IsWide(view.Unit) ? 86 : 74, 26);
+            var heart = Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/life");
+            if (heart)
+            {
+                var icon = AqUi.Box(badge, "Heart", .03f, .12f, .3f, .76f, Color.white).GetComponent<UnityEngine.UI.Image>();
+                icon.sprite = Sprite.Create(heart, new Rect(0,0,heart.width,heart.height), new Vector2(.5f,.5f), 100); icon.preserveAspect = true;
+            }
+            var color = !view.Unit.Alive ? new Color(.6f,.6f,.6f) : low ? new Color(1f,.45f,.38f) : view.Unit.Monster ? new Color(1f,.86f,.74f) : Color.white;
+            var label = AqUi.Text(badge, text, .33f, .2f, .65f, .78f, 17, color, TextAlignmentOptions.Center);
+            label.fontStyle = FontStyles.Bold; label.enableAutoSizing = false; label.textWrappingMode = TextWrappingModes.NoWrap;
+            // Thin bar along the bottom edge: the share of life left.
+            var bar = AqUi.Box(badge, "Bar", .04f, .06f, .92f*Mathf.Clamp01(view.Unit.Health/(float)Mathf.Max(1, view.Unit.MaxHealth)), .12f,
+                view.Unit.Monster ? new Color(.85f,.3f,.24f) : new Color(.3f,.82f,.42f));
+            view.Badge = badge;
+            PlaceBadge(view);
+        }
+
+        void LateUpdate()
+        {
+            if (!built || !lifeCanvas) return;
+            foreach (var view in views.Values) PlaceBadge(view);
+        }
+
+        void PlaceBadge(AqUnitView view)
+        {
+            if (!view.Badge) return;
+            bool shown = ShowLife && view.Unit.Alive && view.Root && view.Root.gameObject.activeInHierarchy && viewCamera;
+            if (shown)
+            {
+                var right = viewCamera.transform.right; right.y = 0; if (right.sqrMagnitude < .0001f) right = Vector3.right; right.Normalize();
+                var away = Vector3.Cross(right, Vector3.up);
+                var feet = view.Body.position - away*(IsWide(view.Unit) ? .5f : .26f);
+                var screen = viewCamera.WorldToScreenPoint(feet);
+                shown = screen.z > 0;
+                if (shown && RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)lifeCanvas.transform, screen, null, out var local))
+                {
+                    // Shared space: the second badge sits just below the first one.
+                    int stack = views.Values.Count(v => v.Id < view.Id && v.Unit != null && v.Unit.Alive && v.Unit.Cell.Equals(view.Unit.Cell));
+                    view.Badge.anchoredPosition = local - new Vector2(0, stack*28);
+                }
+            }
+            if (view.Badge.gameObject.activeSelf != shown) view.Badge.gameObject.SetActive(shown);
         }
 
         void UpdateDoors()
