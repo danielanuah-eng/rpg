@@ -127,7 +127,9 @@ namespace DungeonBDX
             foreach(var g in Session.Guilds)
                 AqUi.Chip(quests,"trophy",$"G{g.Index+1} {g.Completed.Count}/{goal}",.01f+g.Index*gw,.03f,gw,.94f,qi,15,AqUi.GuildColors[g.Index%AqUi.GuildColors.Length]);
             float qx=.015f+Session.Guilds.Count*gw;
-            AqUi.Chip(quests,"quest",Session.Scenario.Quests[0]+" / "+Session.Scenario.Quests[1],qx,.03f,.985f-qx,.94f,qi,15);
+            float qw=(.985f-qx)/Session.Scenario.Quests.Length;
+            for(int i=0;i<Session.Scenario.Quests.Length;i++)
+                AqUi.Chip(quests,AqScenarios.QuestIcon(Session.Scenario.Quests[i]),Session.Scenario.Quests[i],qx+i*qw,.03f,qw-.005f,.94f,qi,15);
             float footerHeight=FooterHeight;var foot=AqUi.Panelled(safe,"Bottom guild dashboard",0,0,1,footerHeight,AqUi.Panel);
             var party=Session.Units.Where(u=>!u.Monster&&u.Guild==Session.CurrentGuild).ToArray();
             // PC: three columns (heroes | cards | actions). Portrait keeps stacked rows.

@@ -134,6 +134,15 @@ namespace DungeonBDX.Arcadia
     public static class AqScenarios
     {
         public static readonly string[] Ids={"portais-em-ruinas","praca-dos-quatro-emblemas","resgate-nas-catacumbas"};
+        // Quest strip icon (Iso/UI/Icons) by what the quest asks for; the first match wins ("relíquia em um portal" is a relic).
+        static readonly string[][] questIcons={new[]{"pista","clue"},new[]{"relíquia","relic"},new[]{"cativo","captive"},new[]{"ritual","ritual"},
+            new[]{"emblema","emblem"},new[]{"tesouro","treasure"},new[]{"portal","portal"},new[]{"derrotar","death"}};
+        public static string QuestIcon(string quest)
+        {
+            string q=(quest??"").ToLowerInvariant();
+            foreach(var pair in questIcons)if(q.Contains(pair[0]))return pair[1];
+            return "quest";
+        }
         public static AqScenario Create(string id)
         {
             if(!Ids.Contains(id))throw new ArgumentException("Cenário desconhecido.");

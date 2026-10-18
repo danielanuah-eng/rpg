@@ -42,6 +42,18 @@ namespace DungeonBDX.Tests
                 Assert.That(Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/" + icon), Is.Not.Null, icon);
         }
 
+        [Test] public void EveryScenarioQuestShowsItsOwnIcon()
+        {
+            foreach (var id in AqScenarios.Ids)
+                foreach (var quest in AqScenarios.Create(id).Quests)
+                {
+                    var icon = AqScenarios.QuestIcon(quest);
+                    Assert.That(icon, Is.Not.EqualTo("quest"), quest);
+                    Assert.That(Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/" + icon), Is.Not.Null, quest);
+                }
+            Assert.That(AqScenarios.QuestIcon("Entregar 1 relíquia em um portal azul"), Is.EqualTo("relic"));
+        }
+
         [Test] public void EveryChapterMonsterHasSpriteArt()
         {
             foreach (var id in AqScenarios.Ids)
