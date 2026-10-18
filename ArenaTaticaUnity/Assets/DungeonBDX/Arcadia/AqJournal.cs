@@ -23,7 +23,7 @@ namespace DungeonBDX.Arcadia
         public AqSnapshot Base {get;private set;}
         public int Compactions {get;private set;}
         public float CommandLoad=>Session.Commands.Count/(float)AqSession.MaxCommands;
-        public bool ShouldCompact=>Session.Commands.Count>=CompactAt&&Session.ActiveId<0&&Session.Reaction==null&&!Session.Resting&&Session.Winner<0;
+        public bool ShouldCompact=>Session.Commands.Count>=CompactAt&&Session.ActiveId<0&&Session.Reaction==null&&!Session.Resting&&!Session.UpgradeOpen&&Session.Winner<0;
         public AqJournal(string scenario,string[][] parties,uint seed,bool autoMonsters)
         {Session=new AqSession(scenario,parties,seed,autoMonsters);heroes=parties.SelectMany(p=>p).ToArray();this.seed=seed;}
         public AqRecord Export()=>new AqRecord{Scenario=Session.Scenario.Id,Seed=seed,AutoMonsters=Session.AutoMonsters,Heroes=heroes.ToArray(),

@@ -18,16 +18,20 @@ namespace DungeonBDX.Arcadia
         public bool Ranged,Exhausted,Sharp,Reroll;
         public bool Passive=>Dice<=0;
     }
-    // Shop card in the style of the Arcadia upgrades: bought with guild coins while resting. Names are original.
+    // Upgrade card in the style of the Arcadia upgrades: drafted and bought with guild coins between chapters. Names are original.
     public sealed class AqShopItem
     {
         public string Id,Name,Text,Icon,Clip="attack";
-        public int Cost,Dice,Defense;
+        public int Cost,Dice,Defense,Level=1,Copies=5;
         public bool Ranged,Sharp,Reroll;
         public AqGear Create(string id)=>new AqGear{Id=id,Name=Name,Clip=Clip,Icon=Icon,Art=Id,Dice=Dice,Defense=Defense,Ranged=Ranged,Sharp=Sharp,Reroll=Reroll};
     }
     public static class AqShop
     {
+        // Arcadia Upgrade phase: deck of the chapter just played (level 1 after chapter I...), 6 cards per guild, 2 + 2 drafted and 2 passed,
+        // up to 3 bought, 1 coin kept. Five copies of each card: 25 per level, enough for four guilds.
+        public const int Hand=6,Picks=2,MaxBuys=3,KeptCoins=1;
+        public static int[] Deck(int level)=>Enumerable.Range(0,Items.Length).Where(i=>Items[i].Level==level).SelectMany(i=>Enumerable.Repeat(i,Items[i].Copies)).ToArray();
         public static readonly AqShopItem[] Items=
         {
             new AqShopItem{Id="iron-blade",Icon="sword",Name="Lâmina de ferro batido",Cost=3,Dice=4,Text="Ataque próximo, 4 dados."},
@@ -35,11 +39,11 @@ namespace DungeonBDX.Arcadia
             new AqShopItem{Id="leather-vest",Icon="helmet",Name="Elmo acolchoado",Cost=3,Dice=0,Defense=1,Text="Passiva: +1 dado de defesa."},
             new AqShopItem{Id="keen-dagger",Icon="dagger-poison",Name="Adaga afiada",Cost=4,Dice=3,Sharp=true,Text="Ataque próximo, 3 dados. Afiada: 5 também é crítico."},
             new AqShopItem{Id="echo-staff",Icon="wand",Name="Cajado do eco",Cost=4,Dice=3,Ranged=true,Reroll=true,Clip="cast",Text="Ataque à distância, 3 dados. Rerrola uma falha."},
-            new AqShopItem{Id="heavy-crossbow",Icon="bow",Name="Besta pesada",Cost=5,Dice=4,Ranged=true,Text="Ataque à distância, 4 dados."},
-            new AqShopItem{Id="rune-greatsword",Icon="axe",Name="Machado rúnico",Cost=6,Dice=5,Text="Ataque próximo, 5 dados."},
-            new AqShopItem{Id="glass-arrows",Icon="bow",Name="Flechas de vidro-dragão",Cost=6,Dice=3,Ranged=true,Sharp=true,Text="Ataque à distância, 3 dados. Afiada: 5 também é crítico."},
-            new AqShopItem{Id="scale-coat",Icon="shield-wood",Name="Escudo de escamas",Cost=6,Dice=0,Defense=2,Text="Passiva: +2 dados de defesa."},
-            new AqShopItem{Id="obsidian-spear",Icon="mace",Name="Maça de obsidiana",Cost=7,Dice=4,Sharp=true,Reroll=true,Text="Ataque próximo, 4 dados. Afiada e rerrola uma falha."},
+            new AqShopItem{Id="heavy-crossbow",Level=2,Icon="bow",Name="Besta pesada",Cost=5,Dice=4,Ranged=true,Text="Ataque à distância, 4 dados."},
+            new AqShopItem{Id="rune-greatsword",Level=2,Icon="axe",Name="Machado rúnico",Cost=6,Dice=5,Text="Ataque próximo, 5 dados."},
+            new AqShopItem{Id="glass-arrows",Level=2,Icon="bow",Name="Flechas de vidro-dragão",Cost=6,Dice=3,Ranged=true,Sharp=true,Text="Ataque à distância, 3 dados. Afiada: 5 também é crítico."},
+            new AqShopItem{Id="scale-coat",Level=2,Icon="shield-wood",Name="Escudo de escamas",Cost=6,Dice=0,Defense=2,Text="Passiva: +2 dados de defesa."},
+            new AqShopItem{Id="obsidian-spear",Level=2,Icon="mace",Name="Maça de obsidiana",Cost=7,Dice=4,Sharp=true,Reroll=true,Text="Ataque próximo, 4 dados. Afiada e rerrola uma falha."},
         };
     }
     // Host adjustments, applied as "tune" commands before the first move so save and replay stay seed + commands.

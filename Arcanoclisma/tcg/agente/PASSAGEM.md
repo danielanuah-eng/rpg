@@ -1,48 +1,80 @@
-# Passagem — estado atual (04/10/2026, 16h53)
+# Passagem — DungeonBDX: equipamentos e balanceamento pelo host (17/10/2026, 23:27)
 
-Versão enxuta. Histórico completo (o que foi feito em 03–04/10, decisões 15–26, detalhes de mesa, tutorial, editor, itens v2/v3, construtor de efeitos): `agente/passagens/PASSAGEM-2026-10-04_16-53.md`. Ler só se a tarefa exigir.
+Passagem anterior (Arena no celular): `agente/passagens/PASSAGEM-2026-10-17_23-27.md`.
+Transcript desta conversa: `C:/Users/Anuah/.claude/projects/C--Users-Anuah-OneDrive--rea-de-Trabalho-Rpg/f217df0e-076d-4caf-8549-37b9be638276.jsonl`.
+Contexto completo do DungeonBDX: `coordenacao/dungeonbdx/HANDOFF-CLAUDE-17-10-2026.md` (ler a última seção).
 
-## Objetivos do autor
-- Site online do TCG Arcanoclisma: https://arcanoclisma.arcanoclisma-online.workers.dev (código em `Arcanoclisma/online/`, motor em `Arcanoclisma/tcg/`). Jogar contra bot e pessoas, tutorial, construtor, Editor do autor, Lore, comentários/ideias.
-- O Claude: programação, regras, dados, backend, rede e integração. O GPT/Codex: arte, templates, ícones, animações e a gestão dos agentes visuais.
-- Regras de atualização: seguir as orientações novas do GPT; polir textos do autor sem mudar regra (mostrar antes/depois); todo efeito automatizado no motor com teste.
+## Objetivos do autor (palavras dele)
+1. "o host pode balancear status, etc dos personagens": quem cria a partida ajusta os números (vida, defesa, dados, movimento, moedas, overkill) dos heróis e inimigos antes de começar.
+2. "ajuste o dragão e o rei goblin (os equipamentos podem servir como forma de balancear e upar os personagens (priorize os valores base do arcadia quest))".
 
-## Equipe de subagentes (definida em 04/10)
-Ver `.claude/EQUIPE.md`: `triagem-feedback` (haiku), `motor-regras` (opus médio), `motor-regras-alto` (opus alto), `integrador-visual` (sonnet), `verificador` (haiku); DeepSeek para leitura grande e tela; equipe de balanceamento desligada até o autor pedir.
+## Feito e no GitHub (push autorizado)
+- `a9ac43a5`: um ícone PixelLab por missão na faixa (`AqScenarios.QuestIcon`).
+- `6c9838f7`: inimigos no padrão Arcadia Quest. `AqProfiles` (em `Arcadia/AqBoard.cs`) guarda as linhas de nível 1 da planilha `KrosArcano/Arcadia_Quest_-_Card_List_1.2.xlsx`. As habilidades estão no `AqSession`: undying, pack, pierce, mend, cleave, brutal, quake, prickly, might, breath, echo. EditMode 417/417, build e capturas ok.
+- O problema: o Rei Goblin (`dread`, Dread King: vida 3, só críticos acertam) e o dragão (`dragon`, Havok jovem: vida 10, def 2, `breath+might`) ficam quase imunes. Os heróis só têm armas de 2–3 dados (`AqContent.Signature` e as reservas no `AqSession`). Não há loja nem forma de gastar moedas.
 
-## Estado
-- Publicado e no GitHub em 04/10 à noite (commit ff1d1da, deploy b2a1eccb): Concessão + Reanimum (dec. 27), destruir não mira Conjurador (28), Editor dos Conjuradores visual (29), Protessência (30), pilha sem passe automático quando dá para responder, Ovo de Wyvern com Grau na mesa.
-- Testes: tcg 162, online 11, partida online 0 erros. Nada conferido na tela pelo Claude.
-- Mecânicas: agentes motor-regras (Opus médio) e motor-regras-alto (Opus alto), pedido do autor.
-- Limite mensal de gasto atingido em 04/10 (reinicia 19:10 para a sessão).
+## Próximo passo (concreto)
+1. **Equipamentos no estilo upgrades do Arcadia Quest** (as moedas compram cartas):
+   - Catálogo `AqGear` com custo em moedas: armas de 3–5 dados (corpo a corpo e à distância), +defesa, rerrolagem e uma propriedade "afiada" (face 5 também conta como crítico), que é a resposta ao `might`.
+   - Compra no descanso ou na área da guilda, gastando `AqGuild.Coins`.
+   - O comprador não pode passar de 4 cartas (`Gear.Count`, igual à transferência).
+   - Manter as linhas base do Arcadia nos inimigos. O equilíbrio vem dos itens, não de baixar o dragão e o rei.
+   - Ver na planilha as abas `Upgrades` e `Item Type by Set` e copiar os valores, com nomes originais.
+2. **Ajuste do dragão e do Rei Goblin:** só se, mesmo com os itens, continuarem impossíveis. Primeira opção: o crítico contra `might` vale 2 acertos (hoje já vale crit+min(3,crit)). Se precisar mais, ajustar a vida. Registrar a decisão.
+3. **Balanceamento pelo host:**
+   - Na configuração da partida (`AqMatchMenu.cs`), uma tela "Ajustes do host" para editar, por perfil ou herói, vida, defesa, dados, movimento, overkill e moedas.
+   - Os ajustes vão no save e no replay: precisam fazer parte da sessão determinística (`AqSession`, seed + comandos). Ver como o lobby online da Arena passa as configurações, se houver multijogador.
+   - Os valores padrão continuam sendo os do Arcadia.
+4. Testes novos (compra de item, item "afiado" contra `might`, override do host aplicado aos `Units`), EditMode, build e capturas. Commit local e **perguntar antes do push**.
 
-## Também publicado (04/10, noite, deploy 6f9bfab5)
-Protegido unificado (ex-proteção mágica; vários Protegidos cobrados juntos), efeitos secundários (dano no Conjurador, descartar, sacrificar Aliado, Grau ao cemitério), reanimar com pagamento (grátis/custo/custo+X, cartas da mão ao Arcano), gatilho cataclismaOponente, tirar da mão (descartar/banir; acaso/dono escolhe/olhando, com sigilo). Decisões 30–35. Testes tcg 181, online 13.
-
-## Também publicado (04/10, madrugada, deploy 9934d90b)
-Conjurador atacante sem revide (dec. 36), regra das cores no deckbuilding (dec. 37; itens com a mesma regra; baralhos das simulações e prontos migrados), equipamento do bot aleatório com peso pelo Valor ou escolhido (dec. 38), bot usa Extras. Testes tcg 193, online 14.
-Simulação depois da migração: Ricardo 68,7, Diástaros 68,6, Lyandra 62,8, Agnelo 59,2, Roh 46,3, Osmar 46,3, Carmal 44,8, Mitonho 41,1, **Ana 12,2** — o autor vai editar as cartas da Ana ele mesmo no Editor; equipe de balanceamento ainda não chamada.
-
-## Feito (05/10, madrugada) — publicado em 05/10 com as 46 artes aprovadas do GPT
-- 39 cartas provisórias (tcg/src/cartas-provisorias.ts, provisoria: true, arte aprovada fora da expansão, identidade.json) repõem as funções que saíram dos baralhos pela regra das cores; baralhos da simulação reescritos (sim/conjuradores-decks.ts); decisão 39. Simulação: Ricardo 69,7 · Diástaros 62,0 · Lyandra 60,6 · Agnelo 51,4 · Osmar 48,9 · Carmal 45,8 · Roh 38,0 · Ana 36,9 · Mitonho 36,7.
-- Editor: aba Provisórias, filtro por Valor (algum/exatamente), agrupar por Valor, atalho por Conjurador.
-- FEITO: +7 provisórias (5 Místicas, 2 Primitivum: cura da Lyandra e defensor do Carmal) = 46 cartas. Pedido ao GPT v2 em cartas/pedidos/cartas-provisorias-v1.claude.json com 46 artes e bloco `alinhamento`; o GPT deve confirmar em cartas/entregas/cartas-provisorias-v1.visual.json. O Codex já começou (arte/cartas-rapidas/prov-*). Testes NÃO rodados desde as 7 novas (ordem do autor): rodar uma vez antes de publicar (o limite do teste de provisórias subiu para 50).
-- Próximo: quando a entrega do GPT chegar aprovada, integrar (integrador-visual), rodar testes uma vez, publicar e comitar.
-- Ordens do autor: curas ele ajusta; prontos do site com mais provisórias ok; **parar testes/simulações nesta etapa — só design e efeitos**; **publicar só depois que o GPT entregar as artes aprovadas**; alinhar com o GPT quantas e quais artes.
-
-## Próximos passos
-1. (feito 04/10) Iconografia v19 ligada; Editor auditado: texto congelado, clique indo para "Gerar texto" e aviso de edição não salva corrigidos.
-2. Conferir na tela: Editor (Protegido, efeito secundário, reanimar, tirar da mão, Conjuradores) e mesa (sacrifício, reanimar com pagamento, olhar mão, ◈ Protessência, ⏳).
-3. Efeitos de magia v17: conferir pendências da integração.
-
-## Esperando o autor
-
-- Novos comentários marcados Yes / novos ENVIAR.
-- Liberação da expansão "A Mestra dos Dragões" (até lá, não tocar).
-- Push de mudanças que não sejam entregas do Codex: perguntar.
+## Antes de rodar o Unity
+- Às 23h a sessão da Arena (`local_03ac0235…`, "Arena Sprint 1") estava gerando o build Windows + Android 1.2.3 (cerca de 40 min, numa cópia em `%LOCALAPPDATA%\ArenaTaticaAndroid`). O script dela encerra o VBCSCompiler.
+- **Não rode testes nem build do Unity até ela avisar** ou até não haver `Unity.exe` dessa cópia: `powershell "Get-CimInstance Win32_Process -Filter \"name='Unity.exe'\" | select CommandLine"`. Enquanto isso, dá para escrever o código.
 
 ## Regras que valem
-CLAUDE.md do projeto, memória e `.claude/EQUIPE.md`. Sem penalidade em mecânica, sem cota de tipo por baralho, sem raridade automática, sem carta neutra, alvo nunca automático, imagem só com OK do GPT.
+- Respostas curtas. Sem partidas entre bots. Nunca dar push sem perguntar.
+- Commitar só os caminhos explícitos. Nunca `DungeonBDX.unity`, `ProjectSettings.asset` nem os `.meta` de `Sprites/Menu`. Preservar o CRLF (não use `sed -i`, ele troca o fim de linha; use Python binário).
+- Arte e nomes sempre originais; o Arcadia serve só de referência de mecânica e números.
+- O WT `tmp/dungeonbdx-step1-git` está desatualizado e o sync (`tmp/dungeonbdx-aq-sync.py`) copia o WT por cima do main. **Editar direto no main e, se rodar o sync, copiar antes os arquivos editados para o WT.** O `AqBoardView.cs` só existe no main.
+- O Python do Codex está com o PIL quebrado (CCleaner): `from PIL import Image` falha.
 
 ## Como verificar
-Agente `verificador`, ou: `cd Arcanoclisma/tcg && npm test`; `cd Arcanoclisma/online && node construir.ts && npm test && node test/online-local.mjs`. Publicar: `node construir.ts && node node_modules/wrangler/bin/wrangler.js deploy` (em `Arcanoclisma/online`; o npx é bloqueado no PowerShell).
+- Testes: em `ArenaTaticaUnity`, `unity test . --mode EditMode --output Artifacts/x.xml` (417 hoje).
+- Build: `unity build . --target StandaloneWindows64 --execute-method DungeonBuild.Windows`. Se o Burst falhar por falta de um `.pdb`, renomear `Library/BurstCache`.
+- Capturas: `powershell -NoProfile -ExecutionPolicy Bypass -File tmp/dungeonbdx-aq-captures.ps1` → `coordenacao/dungeonbdx/entregas/08-configuracao-arcadia/`.
+
+## Esperando o autor
+- Jogar e dizer se os lacaios e vilões do Arcadia ficaram fortes ou fracos demais.
+
+## Tarefa agendada pao-duro-2026-10-17-2330 (23:40)
+- Não alterou nada. A sessão `a42568c9` (handoff aberto pelo autor) já estava editando `AqContent.cs`/`AqSession.cs` com este mesmo passo (`AqShop`, `AqTuning`). Regra: um agente por arquivo. O build da Arena 1.2.3 ainda rodava (Unity.exe da cópia ativo), então não houve testes.
+- Valores úteis da planilha (aba `Upgrades`, set base): nível 1 = armas de 3 dados (Trusty Blade 3 + def 1 + rerrolagem; Bleeder 3 + crítico dá 1 acerto extra; Crescent Bow 3 à distância), Orc Pelt def +2 (1 armadura por herói), Sun Ring rerrola 1. Nível 2 = armas de 4 dados (Smashface, Decimator), Knight's Plate def 2 + 1 de vida. Nível 3 = Night Fury 4 + def 2 + 2 rerrolagens, Thorn 4 à distância, Lord's Plate def 4 + 1 de vida, Sun Ring II rerrola 3. A coluna `Price` (0–9) não segue o nível e não serve como custo em moedas.
+- Python com openpyxl: `C:/Users/Anuah/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe` (o `python` do PATH é o atalho da Store).
+
+## Loja e ajustes do host — feito (18/10, sessão a42568c9)
+- Commit local `85d1c1ef` (push feito com aprovação do autor). EditMode 422/422, build Windows ok, 4 capturas + `loja-descanso.png` e `ajustes-do-host.png` em `entregas/08-configuracao-arcadia/`.
+- Loja (`AqShop` em `AqContent.cs`): 10 cartas originais, 3 a 7 moedas, compradas no descanso (comando `buy`), limite de 4 cartas, `discard` (a arma própria fica). "Afiada": o 5 também é crítico, então passa pelo `might` do dragão/Rei Goblin.
+- Ajustes do host (`AqTuning`, aba nova no menu): 11 valores somados aos do Arcadia, gravados como comandos `tune` antes da 1ª jogada (save e replay sem mudar de formato; saves antigos com a mesma fingerprint).
+- Pendente: o autor jogar e dizer se dragão e Rei Goblin ficaram viáveis com os itens; ajustar preços e quantas moedas os inimigos dão se preciso.
+
+## Vida, ícones, campanha e medidor — feito (18/10, sessão a42568c9)
+- Commit `712dc2b6` (push feito com aprovação do autor). EditMode 428/428, build e capturas ok.
+- Vida: selo na tela (coração, número e barra) na frente dos pés, por cima das paredes e por baixo do HUD (`AqBoardView.PlaceBadge`).
+- Ícones: cartas, loja e ficha do herói usam os ícones do PixelLab já existentes (`AqGear.Icon`). A ficha mostra a defesa total.
+- Campanha: o botão "PRÓXIMO CAPÍTULO" na vitória, ou o menu (se as mesmas guildas venceram o capítulo anterior), leva as moedas, as cartas compradas e os ajustes (comandos `purse`/`grant`).
+- Medidor oculto: com 50% de 4096 comandos, compacta numa troca de turno (`AqJournal.Compact`, retrato `AqSnapshot`). Save v2 só quando compactado; v1 continua igual.
+
+## Artes da loja e ficha do herói — feito (18/10, sessão a42568c9)
+- Commit `d894822f` (push feito com aprovação do autor). EditMode 428/428, build Windows e capturas ok (`ficha-heroi.png`).
+- Android PARADO por ordem do autor (18/10): não gerar APK; só build Windows.
+- 8 artes PixelLab em `Iso/UI/Cards/<id>.png` (README e prompts em `coordenacao/dungeonbdx/entregas/10-cartas-loja/`). Faltam a `iron-blade` e a `heavy-crossbow` (o rascunho virou fuzil e foi rejeitado). O PixelLab ficou sem gerações até o bônus diário (+5/dia; o ciclo renova em 10/11).
+- Ficha do herói: segundo clique no herói selecionado, ou o botão HABILIDADE.
+
+## Fase de Melhorias do Arcadia e artes que faltavam — feito (18/10, sessão f65f6a45)
+- Pedido do autor: loja entre capítulos, baralho por nível, escolha de 6, até 3 compras e só 1 moeda guardada; desenhar as 2 artes no editor do PixelLab.
+- Regra (livro do Arcadia, p. 27): `CarryCommands` termina com o comando `upgrade`; o capítulo II usa o baralho de nível 1 e o III o de nível 2 (`AqShopItem.Level`, 5 cópias de cada = 25 cartas). Cada guilda recebe 6, escolhe 2 e passa 4 para a guilda seguinte, escolhe 2 e passa 2, fica com as 2 últimas (comando `draft`). Depois compra até 3 (`buy` com índice nas escolhas) e encerra (`ready`), guardando no máximo 1 moeda. Nada de jogar até todas encerrarem.
+- Saves antigos continuam abrindo: a compra no descanso ficou só no motor (sem botão) e capítulos sem `upgrade` mantêm a fingerprint. O sorteio usa um gerador separado, sem mexer nos dados. O retrato de compactação guarda `UpgradeLevel`.
+- Tela: painel FASE DE MELHORIAS em hot seat (mão da guilda da vez, heróis, descarte, ENCERRAR COMPRAS). Captura: `-dungeonbdx-aq-shop` abre o capítulo II com 8 moedas por guilda.
+- Artes: `iron-blade` e `heavy-crossbow` desenhadas à mão no `pixelart_workbench` (grátis); as 10 cartas têm arte. README em `entregas/10-cartas-loja/`.
+- EditMode 436/436 (testes novos em `Tests/Arcadia/AqUpgradeTests.cs`).
+- Canva conectado pelo autor em 18/10 (conector do claude.ai).

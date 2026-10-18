@@ -28,6 +28,10 @@ namespace DungeonBDX.Tests
             Assert.That(b.Unit(1).Gear.Any(g => g.Id.StartsWith("keen-dagger.") && g.Sharp), Is.True);
             Assert.That(b.Tuning, Is.EqualTo(a.Tuning));
             Assert.That(b.Unit(0).MaxHealth, Is.EqualTo(AqContent.Hero("teantha").Health + 1));
+            Assert.That(b.UpgradeOpen && b.UpgradeLevel == 1, Is.True, "The carried chapter opens the Upgrade phase.");
+            Assert.That(b.Apply(new AqCommand("end")).Accepted, Is.False, "No play during the Upgrade phase.");
+            while (b.UpgradeOpen) Ok(b, b.Drafting ? new AqCommand("draft", b.UpgradeGuild, card: 0) : new AqCommand("ready", b.UpgradeGuild));
+            Assert.That(b.Guilds.All(g => g.Coins <= AqShop.KeptCoins), Is.True, "Only one coin is kept.");
             Ok(b, new AqCommand("end"));
             Assert.That(b.Apply(new AqCommand("purse", 0, x: 99)).Accepted, Is.False, "Only before the first move.");
         }

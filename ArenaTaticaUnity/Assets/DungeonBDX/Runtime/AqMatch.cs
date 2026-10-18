@@ -16,7 +16,7 @@ namespace DungeonBDX
         AqMatchMenu menu;AqJournal journal;AqLocalSave store;GameObject world;AqBoardView view;Canvas canvas;RectTransform safe;
         readonly DungeonCameraInput input=new DungeonCameraInput();
         readonly List<RaycastResult> hits=new List<RaycastResult>();
-        int selected,card,lastW,lastH;string mode="move",pendingOperation;AqResult pendingResult;bool shop,sheet;string root;
+        int selected,card,lastW,lastH,upgradeHero=-1,upgradeCard;string mode="move",pendingOperation;AqResult pendingResult;bool sheet;string root;
         AudioSource music,sfx;bool muted;
         public AqSession Session=>journal?.Session;
         public AqBoardView View=>view;
@@ -74,7 +74,7 @@ namespace DungeonBDX
         }
         public void Tap(AqCell cell,int unitId=-1)
         {
-            if(SavePaused||Session.Winner>=0)return;
+            if(SavePaused||Session.Winner>=0||Session.UpgradeOpen)return;
             if(Session.Reaction!=null)
             {Do(new AqCommand(mode=="door"?"react-door":"react-move",x:cell.X,y:cell.Y));return;}
             var clicked=Session.Unit(unitId);var hero=Session.Unit(selected);
@@ -115,7 +115,7 @@ namespace DungeonBDX
         }
         // A second click on the selected hero opens the full hero sheet.
         void Select(int id)
-        {if(selected==id){sheet=!sheet;if(sheet)shop=false;}else sheet=false;selected=id;card=0;mode=Session.Resting&&!Session.Unit(id).Alive?"revive":"move";Draw();}
+        {if(selected==id)sheet=!sheet;else sheet=false;selected=id;card=0;mode=Session.Resting&&!Session.Unit(id).Alive?"revive":"move";Draw();}
         void Draw()
         {
             if(!canvas||Session==null)return;lastW=Screen.width;lastH=Screen.height;bool portrait=Screen.width<Screen.height;
@@ -193,9 +193,8 @@ namespace DungeonBDX
             {
                 int top=portrait?5:3,low=portrait?5:2;
                 Act(0,top,0,"MOVER",()=>{mode="move";Draw();},mode=="move",icon:"move");
-                if(Session.Resting)Act(1,top,0,"LOJA",()=>{shop=true;sheet=false;Draw();},shop,icon:"coin");
-                else Act(1,top,0,"PORTA",()=>{mode="door";Draw();},icon:"door");
-                Act(2,top,0,hero.Ability=="arsenal"?"FORMA":hero.Ability=="phase"?"PASSO SOMBRIO":"HABILIDADE",()=>{if(hero.Ability=="arsenal")Do(new AqCommand("stance",selected));else if(hero.Ability=="phase"){mode="phase";Draw();}else {sheet=true;shop=false;Draw();}},icon:"ability");
+                Act(1,top,0,"PORTA",()=>{mode="door";Draw();},icon:"door");
+                Act(2,top,0,hero.Ability=="arsenal"?"FORMA":hero.Ability=="phase"?"PASSO SOMBRIO":"HABILIDADE",()=>{if(hero.Ability=="arsenal")Do(new AqCommand("stance",selected));else if(hero.Ability=="phase"){mode="phase";Draw();}else {sheet=true;Draw();}},icon:"ability");
                 Act(portrait?3:0,low,portrait?0:1,Session.Resting?"DESCANSANDO":"DESCANSAR",()=>Do(new AqCommand("rest")),false,!Session.Resting&&Session.ActiveId<0,"rest");
                 Act(portrait?4:1,low,portrait?0:1,"ENCERRAR TURNO",()=>Do(new AqCommand("end")),icon:"endturn");
             }
@@ -209,8 +208,7 @@ namespace DungeonBDX
             AqUi.Text(hint,mode=="attack"?"DISTÂNCIA NAS CASAS · CLIQUE EM UM ALVO":mode=="door"?"CLIQUE NO ESPAÇO DO OUTRO LADO DA PORTA":"CLIQUE NO TABULEIRO PARA AGIR",0,0,1,1,13,AqUi.Muted,TextAlignmentOptions.Right);
             var notice=AqUi.Box(safe,"Action result",.02f,footerHeight+.005f,portrait?.47f:.34f,portrait?.05f:.06f,new Color(.055f,.06f,.065f,.92f));
             AqUi.Text(notice,Message,.01f,.03f,.98f,.94f,15,SavePaused?new Color(1,.48f,.35f):AqUi.Ink);
-            if(!Session.Resting)shop=false;
-            if(shop)Shop(hero,portrait,footerHeight);
+            if(Session.UpgradeOpen)Upgrade(portrait);
             else if(sheet&&Session.Reaction==null)Sheet(hero,portrait,footerHeight);
             if(Session.Winner>=0)
             {
@@ -219,7 +217,7 @@ namespace DungeonBDX
                 int chapter=Array.IndexOf(AqScenarios.Ids,Session.Scenario.Id);
                 if(chapter>=0&&chapter+1<AqScenarios.Ids.Length)
                 {
-                    AqUi.Button(win,"PRÓXIMO CAPÍTULO · LEVA MOEDAS E ITENS",.05f,.07f,.55f,.19f,NextChapter);
+                    AqUi.Button(win,"PRÓXIMO CAPÍTULO · FASE DE MELHORIAS",.05f,.07f,.55f,.19f,NextChapter);
                     AqUi.Button(win,"VOLTAR",.62f,.07f,.33f,.19f,Close);
                 }
                 else AqUi.Button(win,"VOLTAR ÀS AVENTURAS",.15f,.07f,.7f,.19f,Close);
@@ -256,24 +254,50 @@ namespace DungeonBDX
             AqUi.Text(panel,"CARREGA: "+(hero.Carry.Count==0?"nada":string.Join(", ",carried))+$" · QUEDAS {hero.Deaths}",.03f,.06f,.6f,.08f,15,AqUi.Muted);
             AqUi.Button(panel,"FECHAR FICHA",.64f,.02f,.34f,.11f,()=>{sheet=false;Draw();});
         }
-        // Rest shop: buy upgrade cards for the selected hero with the guild's coins (4-card limit).
-        void Shop(AqUnit hero,bool portrait,float bottom)
+        // Arcadia Upgrade phase between chapters (hot seat): each guild keeps 2 + 2 cards and passes the rest, keeps the last 2,
+        // buys up to 3 for its heroes and ends with at most 1 coin.
+        void Upgrade(bool portrait)
         {
-            var panel=AqUi.Panelled(safe,"Shop",.02f,bottom+.07f,portrait?.96f:.62f,.86f-bottom-.08f,AqUi.Panel);
-            panel.GetComponent<UnityEngine.UI.Image>().raycastTarget=true;
-            int coins=Session.Guilds[Session.CurrentGuild].Coins;
-            AqUi.Chip(panel,"coin",$"LOJA · {coins} MOEDAS · PARA {hero.Name.ToUpperInvariant()} ({hero.Gear.Count}/4 CARTAS)",.03f,.89f,.94f,.08f,portrait?.06f:.04f,18,AqUi.Gold);
-            var items=AqShop.Items;int rows=(items.Length+1)/2;float h=.74f/rows;
-            for(int i=0;i<items.Length;i++)
+            var s=Session;int g=s.UpgradeGuild;if(g<0)return;
+            var party=s.Units.Where(u=>!u.Monster&&u.Guild==g).ToArray();
+            if(party.All(u=>u.Id!=upgradeHero)){upgradeHero=party[0].Id;upgradeCard=0;}
+            var hero=s.Unit(upgradeHero);int coins=s.Guilds[g].Coins;bool draft=s.Drafting;var cards=draft?s.Hand(g):s.Picks(g);
+            var panel=AqUi.Panelled(safe,"Upgrade phase",0,0,1,.88f,AqUi.Panel);panel.GetComponent<UnityEngine.UI.Image>().raycastTarget=true;
+            AqUi.Text(panel,$"FASE DE MELHORIAS · NÍVEL {s.UpgradeLevel} · GUILDA {g+1}",.03f,.9f,.64f,.08f,portrait?20:26,AqUi.GuildColors[g%AqUi.GuildColors.Length]);
+            AqUi.Chip(panel,"coin",$"{coins} MOEDAS",.7f,.9f,.27f,.08f,portrait?.06f:.035f,18,AqUi.Gold);
+            AqUi.Text(panel,draft?$"Escolha {(s.PicksLeft(g)==1?"mais 1 carta":s.PicksLeft(g)+" cartas")} · rodada {s.DraftRound+1} de 2. As que sobrarem passam para a guilda {(g+1)%s.Guilds.Count+1}."
+                :$"Compre até {AqShop.MaxBuys} cartas ({s.Bought(g)}/{AqShop.MaxBuys}) para {hero.Name}. Ao encerrar, a guilda guarda só {AqShop.KeptCoins} moeda.",.03f,.82f,.94f,.07f,portrait?14:16,AqUi.Ink);
+            float top=.81f,bottom=draft?.15f:.41f;int cols=portrait?2:3,rows=(AqShop.Hand+cols-1)/cols;float w=.94f/cols,h=(top-bottom)/rows;
+            for(int i=0;i<cards.Count;i++)
             {
-                int index=i;var item=items[i];
-                var b=AqUi.Button(panel,$"{item.Name} · {item.Cost} MOEDAS\n<size=72%>{item.Text}</size>",.02f+i%2*.48f,.14f+(rows-1-i/2)*h,.48f,h,()=>Do(new AqCommand("buy",selected,card:index)));
+                int index=i;var item=AqShop.Items[cards[i]];
+                var b=AqUi.Button(panel,$"{item.Name} · {item.Cost} MOEDAS\n<size=72%>{item.Text}</size>",.03f+i%cols*w,top-(i/cols+1)*h,w-.01f,h-.01f,
+                    ()=>Do(draft?new AqCommand("draft",g,card:index):new AqCommand("buy",upgradeHero,card:index)));
                 AqUi.Icon(b,AqUi.GearTexture(item.Id,item.Icon),item.Icon);
-                b.interactable=coins>=item.Cost&&hero.Gear.Count<4&&!SavePaused;
+                b.interactable=!SavePaused&&(draft||coins>=item.Cost&&s.Bought(g)<AqShop.MaxBuys&&hero.Gear.Count<4);
             }
-            var chosen=card<hero.Gear.Count?hero.Gear[card]:null;bool signature=chosen!=null&&chosen.Id=="signature."+hero.HeroId;
-            AqUi.Button(panel,chosen==null?"DESCARTAR":"DESCARTAR "+chosen.Name.ToUpperInvariant(),.02f,.02f,.6f,.11f,()=>Do(new AqCommand("discard",selected,card:card))).interactable=chosen!=null&&!signature&&!SavePaused;
-            AqUi.Button(panel,"FECHAR LOJA",.64f,.02f,.34f,.11f,()=>{shop=false;Draw();});
+            if(draft)
+            {
+                var kept=s.Picks(g).Select(k=>AqShop.Items[k].Name).ToArray();
+                AqUi.Text(panel,"ESCOLHIDAS: "+(kept.Length==0?"nenhuma ainda":string.Join(" · ",kept)),.03f,.03f,.94f,.1f,15,AqUi.Muted);
+                return;
+            }
+            for(int i=0;i<party.Length;i++)
+            {
+                var u=party[i];int id=u.Id;
+                var b=AqUi.Button(panel,"",.03f+i*.315f,.22f,.305f,.17f,()=>{upgradeHero=id;upgradeCard=0;Draw();},id==upgradeHero);
+                AqUi.Portrait(b.transform,u.HeroId,.02f,.05f,.24f,.9f);
+                AqUi.Text(b.transform,$"{u.Name}\n<size=80%>{u.Gear.Count}/4 CARTAS · DEF {u.Defense+u.Gear.Sum(x=>x.Defense)}</size>",.28f,.05f,.7f,.9f,15,AqUi.Ink);
+            }
+            for(int k=0;k<4;k++)
+            {
+                int slot=k;var gear=k<hero.Gear.Count?hero.Gear[k]:null;
+                var b=AqUi.Button(panel,gear==null?"LIVRE":gear.Name,.03f+k*.14f,.115f,.135f,.09f,()=>{upgradeCard=slot;Draw();},gear!=null&&upgradeCard==k);
+                b.interactable=gear!=null;
+            }
+            var chosen=upgradeCard<hero.Gear.Count?hero.Gear[upgradeCard]:null;bool signature=chosen!=null&&chosen.Id=="signature."+hero.HeroId;
+            AqUi.Button(panel,chosen==null?"DESCARTAR":"DESCARTAR "+chosen.Name.ToUpperInvariant(),.6f,.115f,.37f,.09f,()=>Do(new AqCommand("discard",upgradeHero,card:upgradeCard))).interactable=chosen!=null&&!signature&&!SavePaused;
+            AqUi.Button(panel,coins>AqShop.KeptCoins?$"ENCERRAR COMPRAS · DEVOLVE {coins-AqShop.KeptCoins} MOEDA(S)":"ENCERRAR COMPRAS",.03f,.015f,.94f,.09f,()=>Do(new AqCommand("ready",g))).interactable=!SavePaused;
         }
         void Preview()
         {
@@ -289,7 +313,7 @@ namespace DungeonBDX
             else if(!Session.Resting)cells=Session.Range(selected,mode=="move",card);
             view.Select(selectedId);view.ShowCells(cells,mode!="attack");
         }
-        // Campaign: the same guilds start the next chapter with their coins, bought cards and host adjustments.
+        // Campaign: the same guilds start the next chapter with their coins, cards and host adjustments, then the Upgrade phase opens.
         void NextChapter()
         {
             if(SavePaused)return;
@@ -342,13 +366,13 @@ namespace DungeonBDX
             report.error=failure?.ToString();report.passed=failure==null&&report.sharedSpace&&report.colossusLarger&&report.uniqueAbilities&&report.saveReplay&&report.camera&&report.animation&&report.idleAnimated&&report.moved&&report.combat;
             File.WriteAllText(Path.ChangeExtension(path,".json"),JsonUtility.ToJson(report,true));Application.Quit(report.passed?0:1);
         }
-        // QA capture of the rest shop: the guild rests (coins come from the host adjustment) and the shop opens.
+        // QA capture of the Upgrade phase: chapter II opened with carried coins; guild 1 has made its first pick.
         public IEnumerator CaptureShop(string path)
         {
             for(int i=0;i<30;i++)yield return null;
-            var r=Do(new AqCommand("rest"));shop=true;Draw();
+            var r=Do(new AqCommand("draft",0,card:0));Draw();
             yield return new WaitForSecondsRealtime(.25f);
-            Capture(path,view.Camera,canvas,view.LifeCanvas);Application.Quit(r.Accepted&&Session.Resting?0:1);
+            Capture(path,view.Camera,canvas,view.LifeCanvas);Application.Quit(r.Accepted&&Session.Drafting?0:1);
         }
         // QA capture of the hero sheet after buying two cards (dagger and helmet) during a rest.
         public IEnumerator CaptureSheet(string path)
@@ -356,7 +380,7 @@ namespace DungeonBDX
             for(int i=0;i<30;i++)yield return null;
             bool ok=Do(new AqCommand("rest")).Accepted;
             foreach(var id in new[]{"keen-dagger","leather-vest"})ok&=Do(new AqCommand("buy",selected,card:Array.FindIndex(AqShop.Items,s=>s.Id==id))).Accepted;
-            shop=false;sheet=true;Draw();
+            sheet=true;Draw();
             yield return new WaitForSecondsRealtime(.25f);
             Capture(path,view.Camera,canvas,view.LifeCanvas);Application.Quit(ok?0:1);
         }

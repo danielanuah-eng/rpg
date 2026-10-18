@@ -391,7 +391,10 @@ namespace DungeonBDX
                 string probeRoot=capture>=0&&Array.IndexOf(args,"-dungeonbdx-qa")>=0?Path.Combine(Application.temporaryCachePath,"DungeonBDX-Probes",Guid.NewGuid().ToString("N")):null;
                 bool shopShot=Array.IndexOf(args,"-dungeonbdx-aq-shop")>=0,sheetShot=Array.IndexOf(args,"-dungeonbdx-aq-sheet")>=0;int[] tuning=null;
                 if(shopShot||sheetShot){tuning=new int[Arcadia.AqTuning.Count];tuning[Arcadia.AqTuning.StartCoins]=8;}
-                if(!match.Open(menu,scenario,AqHeroImport.DefaultParties(),false,false,probeRoot,tuning)){Debug.LogError(match.Message);Application.Quit(1);yield break;}
+                var parties=AqHeroImport.DefaultParties();Arcadia.AqCommand[] carry=null;
+                // Upgrade phase shot: chapter II starts with 8 carried coins per guild.
+                if(shopShot){scenario=Arcadia.AqScenarios.Ids[1];carry=Enumerable.Range(0,parties.Length).Select(g=>new Arcadia.AqCommand("purse",g,x:8)).Append(new Arcadia.AqCommand("upgrade")).ToArray();}
+                if(!match.Open(menu,scenario,parties,false,false,probeRoot,tuning,carry)){Debug.LogError(match.Message);Application.Quit(1);yield break;}
                 menu.HudCanvas.gameObject.SetActive(false);menu.enabled=false;
                 if(shopShot&&capture>=0&&capture+1<args.Length){yield return match.CaptureShop(args[capture+1]);yield break;}
                 if(sheetShot&&capture>=0&&capture+1<args.Length){yield return match.CaptureSheet(args[capture+1]);yield break;}

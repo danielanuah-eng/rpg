@@ -30,6 +30,7 @@ namespace DungeonBDX.Arcadia
         public int[] Tuning,Damage,Healing,SpawnQueue,RestAllies,RoyalReward,ResolvedDeaths;
         public string[] FirstQuests;
         public AqCell[] MoveRoute;
+        public int UpgradeLevel; // Snapshots are only taken after the Upgrade phase closed.
         public UnitState[] Units;public GuildState[] Guilds;public bool[] EdgesOpen;public TokenState[] Tokens;public ReactionState[] Reactions;
     }
     // Independent ruleset: old AP/cooldown saves remain readable by the old expedition.
@@ -69,6 +70,28 @@ namespace DungeonBDX.Arcadia
         public readonly int[] Tuning=new int[AqTuning.Count];
         public int BaseMoves=>Math.Max(1,3+Tuning[AqTuning.HeroMove]);
         public uint RandomState=>rng;
+        // Arcadia Upgrade phase, opened by the "upgrade" command that follows the coins and cards carried from the previous chapter.
+        public int UpgradeLevel {get;private set;}
+        public bool UpgradeOpen {get;private set;}
+        public int DraftRound {get;private set;}
+        public bool Drafting=>UpgradeOpen&&DraftRound<2;
+        List<int>[] hands=new List<int>[0],picks=new List<int>[0];
+        int[] roundPicks=new int[0],bought=new int[0];
+        bool[] ready=new bool[0];
+        public IReadOnlyList<int> Hand(int guild)=>guild>=0&&guild<hands.Length?hands[guild]:new List<int>();
+        public IReadOnlyList<int> Picks(int guild)=>guild>=0&&guild<picks.Length?picks[guild]:new List<int>();
+        public int Bought(int guild)=>guild>=0&&guild<bought.Length?bought[guild]:0;
+        public int PicksLeft(int guild)=>Drafting&&guild>=0&&guild<roundPicks.Length?AqShop.Picks-roundPicks[guild]:0;
+        // Hot seat: guilds draft in order, then each one buys and declares itself ready.
+        public int UpgradeGuild
+        {
+            get
+            {
+                if(!UpgradeOpen)return -1;
+                for(int g=0;g<Guilds.Count;g++)if(Drafting?roundPicks[g]<AqShop.Picks:!ready[g])return g;
+                return -1;
+            }
+        }
         public AqSession(string scenario,IEnumerable<IEnumerable<string>> parties,uint seed=19,bool autoMonsters=false)
         {
             Scenario=AqScenarios.Create(scenario);AutoMonsters=autoMonsters;rng=seed==0?19:seed;
@@ -150,6 +173,15 @@ namespace DungeonBDX.Arcadia
         AqResult Execute(AqCommand c)
         {
             if(Reaction!=null)return React(c);
+            if(c.Kind=="upgrade")return Upgrade();
+            if(UpgradeOpen)
+            {
+                if(c.Kind=="draft")return Draft(c);
+                if(c.Kind=="buy")return UpgradeBuy(c);
+                if(c.Kind=="discard")return Discard(c);
+                if(c.Kind=="ready")return Ready(c);
+                return Fail("Termine a Fase de Melhorias antes de jogar.");
+            }
             if(c.Kind=="tune")return Tune(c);
             if(c.Kind=="purse"||c.Kind=="grant")return Carry(c);
             if(c.Kind=="buy")return Buy(c);
@@ -450,6 +482,7 @@ namespace DungeonBDX.Arcadia
             if(!Resting||a==null||b==null||a==b||a.Monster||b.Monster||a.Guild!=CurrentGuild||b.Guild!=CurrentGuild||c.Card<0||c.Card>=a.Gear.Count||b.Gear.Count>=4)return Fail("Durante descanso, transfira uma carta para um aliado com espaço (máximo 4).");
             var gear=a.Gear[c.Card];a.Gear.RemoveAt(c.Card);b.Gear.Add(gear);return Ok(gear.Name+" transferida para "+b.Name+".");
         }
+        // Legacy rest shop: kept so saves from before the Upgrade phase still replay; the HUD no longer offers it.
         AqResult Buy(AqCommand c)
         {
             var u=Unit(c.Actor);
@@ -462,8 +495,8 @@ namespace DungeonBDX.Arcadia
         }
         AqResult Discard(AqCommand c)
         {
-            var u=Unit(c.Actor);
-            if(!Resting||u==null||u.Monster||u.Guild!=CurrentGuild||c.Card<0||c.Card>=u.Gear.Count)return Fail("Descarte cartas só durante o descanso.");
+            var u=Unit(c.Actor);bool shop=UpgradeOpen&&!Drafting&&u!=null&&u.Guild==UpgradeGuild;
+            if(!(shop||Resting&&u!=null&&u.Guild==CurrentGuild)||u.Monster||c.Card<0||c.Card>=u.Gear.Count)return Fail("Descarte cartas no descanso ou na Fase de Melhorias.");
             var gear=u.Gear[c.Card];if(gear.Id=="signature."+u.HeroId)return Fail("A arma própria do herói não pode ser descartada.");
             u.Gear.RemoveAt(c.Card);return Ok(gear.Name+" descartada.");
         }
@@ -504,7 +537,54 @@ namespace DungeonBDX.Arcadia
             if(u==null||u.Monster||c.Card<0||c.Card>=AqShop.Items.Length||u.Gear.Count>=4)return Fail("Carta trazida inválida.");
             var item=AqShop.Items[c.Card];u.Gear.Add(item.Create(item.Id+"."+u.Id+"."+Commands.Count));return Ok(u.Name+" traz "+item.Name+".");
         }
-        // Commands that start the next chapter with the same host adjustments, the guild coins and the bought cards.
+        // Upgrade phase (Arcadia rulebook, p. 27): the deck of the level just played is shuffled and each guild gets 6 cards.
+        // A separate generator keeps the dice sequence of the chapter unchanged.
+        AqResult Upgrade()
+        {
+            int level=Array.IndexOf(AqScenarios.Ids,Scenario.Id);
+            if(UpgradeLevel>0||level<1||Commands.Any(v=>v.Kind!="tune"&&v.Kind!="purse"&&v.Kind!="grant")||ActiveId>=0||Resting||Turn!=1)return Fail("A Fase de Melhorias só abre no início de um capítulo da campanha.");
+            var deck=AqShop.Deck(level).ToList();int n=Guilds.Count;uint d=rng^0x9E3779B9u;if(d==0)d=19;
+            if(deck.Count<n*AqShop.Hand)return Fail("Baralho de melhorias pequeno demais.");
+            for(int i=deck.Count-1;i>0;i--){d^=d<<13;d^=d>>17;d^=d<<5;int k=(int)(d%(uint)(i+1));int t=deck[i];deck[i]=deck[k];deck[k]=t;}
+            hands=new List<int>[n];picks=new List<int>[n];roundPicks=new int[n];bought=new int[n];ready=new bool[n];
+            for(int g=0;g<n;g++){hands[g]=deck.Skip(g*AqShop.Hand).Take(AqShop.Hand).ToList();picks[g]=new List<int>();}
+            UpgradeLevel=level;UpgradeOpen=true;DraftRound=0;
+            return Ok($"Fase de Melhorias · baralho de nível {level}: cada guilda recebe {AqShop.Hand} cartas.");
+        }
+        // Each guild keeps 2 cards and passes the rest to the next guild; after two rounds the last 2 cards are kept.
+        AqResult Draft(AqCommand c)
+        {
+            if(!Drafting||c.Actor!=UpgradeGuild||c.Card<0||c.Card>=hands[c.Actor].Count)return Fail("Escolha uma carta da mão da guilda da vez.");
+            int g=c.Actor,item=hands[g][c.Card];hands[g].RemoveAt(c.Card);picks[g].Add(item);roundPicks[g]++;
+            var r=Ok($"Guilda {g+1} escolheu {AqShop.Items[item].Name}.");
+            if(roundPicks.Any(v=>v<AqShop.Picks))return r;
+            int n=hands.Length;var passed=new List<int>[n];for(int i=0;i<n;i++)passed[(i+1)%n]=hands[i];
+            hands=passed;Array.Clear(roundPicks,0,n);DraftRound++;
+            if(DraftRound<2){r.Message+=" As mãos passam para a guilda seguinte.";return r;}
+            for(int i=0;i<n;i++){picks[i].AddRange(hands[i]);hands[i].Clear();}
+            r.Message+=$" Escolhas encerradas: cada guilda compra até {AqShop.MaxBuys} das suas {AqShop.Hand} cartas.";return r;
+        }
+        AqResult UpgradeBuy(AqCommand c)
+        {
+            var u=Unit(c.Actor);int g=UpgradeGuild;
+            if(Drafting||g<0||u==null||u.Monster||u.Guild!=g||c.Card<0||c.Card>=picks[g].Count)return Fail("Compre uma das cartas escolhidas, para um herói da guilda da vez.");
+            var item=AqShop.Items[picks[g][c.Card]];var guild=Guilds[g];
+            if(bought[g]>=AqShop.MaxBuys)return Fail($"Cada guilda compra até {AqShop.MaxBuys} cartas por Fase de Melhorias.");
+            if(u.Gear.Count>=4)return Fail(u.Name+" já carrega 4 cartas. Descarte uma antes.");
+            if(guild.Coins<item.Cost)return Fail($"{item.Name} custa {item.Cost} moedas; a guilda tem {guild.Coins}.");
+            guild.Coins-=item.Cost;bought[g]++;picks[g].RemoveAt(c.Card);u.Gear.Add(item.Create(item.Id+"."+u.Id+"."+Commands.Count));
+            return Ok($"{u.Name} comprou {item.Name} por {item.Cost} moedas.");
+        }
+        // Unspent coins go back to the bank except one, kept for the next Upgrade phase.
+        AqResult Ready(AqCommand c)
+        {
+            if(Drafting||c.Actor!=UpgradeGuild)return Fail("Só a guilda da vez encerra as compras, depois das escolhas.");
+            var guild=Guilds[c.Actor];int back=Math.Max(0,guild.Coins-AqShop.KeptCoins);guild.Coins-=back;ready[c.Actor]=true;
+            var r=Ok($"Guilda {c.Actor+1} encerrou as compras"+(back>0?$"; guarda {AqShop.KeptCoins} moeda e devolve {back}.":"."));
+            if(ready.All(v=>v)){UpgradeOpen=false;foreach(var p in picks)p.Clear();r.Message+=" O capítulo começa.";}
+            return r;
+        }
+        // Commands that start the next chapter with the same host adjustments, the guild coins and the bought cards, then its Upgrade phase.
         public IEnumerable<AqCommand> CarryCommands()
         {
             for(int i=0;i<Tuning.Length;i++)if(Tuning[i]!=0)yield return new AqCommand("tune",card:i,x:Tuning[i]);
@@ -515,6 +595,7 @@ namespace DungeonBDX.Arcadia
                     int item=Array.FindIndex(AqShop.Items,s=>gear.Id.StartsWith(s.Id+".",StringComparison.Ordinal));
                     if(item>=0)yield return new AqCommand("grant",u.Id,card:item);
                 }
+            yield return new AqCommand("upgrade");
         }
         AqSpawn SpawnOf(AqUnit m)
         {
@@ -556,6 +637,13 @@ namespace DungeonBDX.Arcadia
             s.Append('|').Append(string.Join(";",moveRoute)).Append(':').Append(routeIndex).Append(':').Append(moveStepGuarded).Append(':').Append(waitingAttack).Append(':').Append(attackTarget).Append(':').Append(attackCard).Append(':').Append(usedPhase).Append(':').Append(usedScout).Append(':').Append(usedPortal).Append(':').Append(usedDoor).Append(':').Append(usedResonance);
             // Old saves have no host adjustments; their fingerprint stays unchanged.
             if(Tuning.Any(v=>v!=0))s.Append("|tune:").Append(string.Join(",",Tuning));
+            // Chapters without an Upgrade phase keep the old fingerprint as well.
+            if(UpgradeLevel>0)
+            {
+                s.Append("|up:").Append(UpgradeLevel);
+                if(!UpgradeOpen)s.Append(":done");
+                else for(int g=0;g<hands.Length;g++)s.Append(';').Append(DraftRound).Append(':').Append(string.Join(",",hands[g])).Append(':').Append(string.Join(",",picks[g])).Append(':').Append(roundPicks[g]).Append(':').Append(bought[g]).Append(':').Append(ready[g]);
+            }
             return s.ToString();
         }
         // Full state at a turn boundary, so the command history can be cleared without breaking the replay.
@@ -565,7 +653,7 @@ namespace DungeonBDX.Arcadia
                 Attacked=Attacked,MovementClosed=MovementClosed,MovementStarted=MovementStarted,Resting=Resting,MoveStepGuarded=moveStepGuarded,WaitingAttack=waitingAttack,
                 UsedPhase=usedPhase,UsedScout=usedScout,UsedPortal=usedPortal,UsedDoor=usedDoor,UsedResonance=usedResonance,
                 Tuning=Tuning.ToArray(),Damage=damage.ToArray(),Healing=healing.ToArray(),SpawnQueue=SpawnQueue.ToArray(),RestAllies=restAllies.OrderBy(v=>v).ToArray(),
-                RoyalReward=royalReward.OrderBy(v=>v).ToArray(),ResolvedDeaths=resolvedDeaths.OrderBy(v=>v).ToArray(),FirstQuests=firstQuests.OrderBy(v=>v,StringComparer.Ordinal).ToArray(),MoveRoute=moveRoute.ToArray(),
+                RoyalReward=royalReward.OrderBy(v=>v).ToArray(),ResolvedDeaths=resolvedDeaths.OrderBy(v=>v).ToArray(),FirstQuests=firstQuests.OrderBy(v=>v,StringComparer.Ordinal).ToArray(),MoveRoute=moveRoute.ToArray(),UpgradeLevel=UpgradeLevel,
                 Units=Units.Select(u=>new AqSnapshot.UnitState{Id=u.Id,Cell=u.Cell,Health=u.Health,MaxHealth=u.MaxHealth,Defense=u.Defense,Deaths=u.Deaths,Movement=u.Movement,Dice=u.Dice,Overkill=u.Overkill,Reward=u.Reward,SpentLife=u.SpentLife,
                     Gear=u.Gear.Select(Copy).ToArray(),Carry=u.Carry.ToArray()}).ToArray(),
                 Guilds=Guilds.Select(g=>new AqSnapshot.GuildState{Coins=g.Coins,Emblems=g.Emblems,Rituals=g.Rituals,Completed=g.Completed.OrderBy(v=>v,StringComparer.Ordinal).ToArray()}).ToArray(),
@@ -582,6 +670,7 @@ namespace DungeonBDX.Arcadia
             rng=s.Rng==0?19:s.Rng;CurrentGuild=s.CurrentGuild;Turn=s.Turn;ActiveId=s.ActiveId;MovesLeft=s.MovesLeft;Moved=s.Moved;Winner=s.Winner;routeIndex=s.RouteIndex;attackTarget=s.AttackTarget;attackCard=s.AttackCard;
             Attacked=s.Attacked;MovementClosed=s.MovementClosed;MovementStarted=s.MovementStarted;Resting=s.Resting;moveStepGuarded=s.MoveStepGuarded;waitingAttack=s.WaitingAttack;
             usedPhase=s.UsedPhase;usedScout=s.UsedScout;usedPortal=s.UsedPortal;usedDoor=s.UsedDoor;usedResonance=s.UsedResonance;
+            UpgradeLevel=Math.Max(0,s.UpgradeLevel);UpgradeOpen=false;DraftRound=2;
             Array.Copy(s.Tuning,Tuning,Tuning.Length);Array.Copy(s.Damage,damage,damage.Length);Array.Copy(s.Healing,healing,healing.Length);
             SpawnQueue.Clear();SpawnQueue.AddRange(s.SpawnQueue);restAllies.Clear();restAllies.UnionWith(s.RestAllies);royalReward.Clear();royalReward.UnionWith(s.RoyalReward);
             resolvedDeaths.Clear();resolvedDeaths.UnionWith(s.ResolvedDeaths);firstQuests.Clear();firstQuests.UnionWith(s.FirstQuests);moveRoute.Clear();moveRoute.AddRange(s.MoveRoute);
