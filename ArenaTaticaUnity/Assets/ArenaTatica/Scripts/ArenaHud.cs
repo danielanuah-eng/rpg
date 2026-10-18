@@ -779,7 +779,7 @@ namespace ArenaTatica
             shopLabel.text=$"LOJA DE P{team} · {s.coins[team]} MOEDAS";
             shopTitle.text=$"Loja do Castor  ·  P{team}  ·  {s.coins[team]} moedas";
             // Só dá para abrir a loja numa casa ao lado dela; saindo dali, a janela fecha.
-            bool atShop=f!=null&&Board.NextToShop(s,f.cell);
+            bool atShop=f!=null&&Board.NextToShop(s,f);
             if(!atShop&&!PeekShop) shopWindow.gameObject.SetActive(false);
             openShop.interactable=atShop;
             SetLabel(openShop,!atShop?"Loja: fique ao lado dela":shopWindow.gameObject.activeSelf?"Fechar loja":"Abrir loja");

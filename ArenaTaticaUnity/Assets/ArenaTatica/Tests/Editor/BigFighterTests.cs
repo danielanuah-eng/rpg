@@ -27,6 +27,24 @@ namespace ArenaTatica.Core.Tests
             Assert.IsTrue(m.InRange(foe,crown,new Cell(6,6),out _),"corpo a corpo em qualquer casa dele");
         }
 
+        // Autor (18/10 noite): o Primal Beast entra e sai de portal, abre porta dupla, compra e acende a vela de qualquer casa.
+        [Test] public void BeastUsesPortalsDoubleDoorsShopAndCandle()
+        {
+            var m=Duel("colosso","rei-bobett"); var S=m.S; var beast=S.fighters.First(f=>f.def=="colosso"); var foe=S.fighters.First(f=>f!=beast);
+            S.active=S.timeline.IndexOf(beast.id); foe.cell=new Cell(0,11); beast.cell=new Cell(2,2); beast.pm=3;
+            var gate=new Cell(3,4); S.At(gate).Obj=TileObj.Portal; S.At(S.Mirror(gate)).Obj=TileObj.Portal; MapGen.Portals(S);
+            Assert.IsTrue(m.Apply(new Command{kind="mover",cell=new Cell(2,3),fighter=beast.id,revision=S.revision},beast.team,out var events,out var why),why);
+            Assert.IsTrue(events.Any(e=>e.kind=="portal"),"o pé dele pisou na entrada");
+            Assert.AreEqual(1,Board.Gap(beast,S.Mirror(gate)),"sai inteiro colado na saída"); Assert.IsTrue(Board.Fits(S,beast,beast.cell));
+            // Porta dupla: abrir uma folha abre a outra.
+            S.At(new Cell(9,9)).terrain=Terrain.Porta; S.At(new Cell(9,10)).terrain=Terrain.Porta; beast.cell=new Cell(7,9); beast.pm=3;
+            Assert.IsTrue(m.Apply(new Command{kind="abrir",cell=new Cell(9,10),fighter=beast.id,revision=S.revision},beast.team,out _,out why),why);
+            Assert.AreEqual(Terrain.Livre,S.At(new Cell(9,9)).terrain); Assert.AreEqual(Terrain.Livre,S.At(new Cell(9,10)).terrain);
+            // Loja: qualquer casa dele encostada na barraca.
+            var shop=MapGen.ShopCells(S)[0]; S.At(shop).terrain=Terrain.Loja; beast.cell=new Cell(shop.x-2,shop.z-1);
+            Assert.IsFalse(Board.NextToShop(S,beast.cell),"o canto não encosta"); Assert.IsTrue(Board.NextToShop(S,beast),"outra casa dele encosta");
+        }
+
         [Test] public void StompHitsAroundAllFourCells()
         {
             var m=Duel("colosso","rei-bobett"); var S=m.S; var beast=S.fighters.First(f=>f.def=="colosso"); var foe=S.fighters.First(f=>f!=beast);

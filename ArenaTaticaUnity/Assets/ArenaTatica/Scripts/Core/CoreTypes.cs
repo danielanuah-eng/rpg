@@ -227,11 +227,44 @@ namespace ArenaTatica.Core
         public uint rng;
         // Só visual: paleta e enfeites do cenário (MapGen.Themes).
         public int theme;
-        // Labirinto (cenário fechado): névoa (cada time só vê os inimigos na linha de visão de um aliado) até a vela ser acesa;
+        // Labirinto (cenário fechado): névoa (cada time só vê as casas coladas nos seus lutadores, Fog) até a vela ser acesa;
         // boss: o evento do boss já saiu nesta partida (sai uma vez só).
         public bool fog, revealed, boss;
-        // Mapa com paredes: salto e teleporte com metade do alcance e +1 PA (autor, 18/10).
+        // Névoa (Fog): casas que cada time (alliance) já viu, em hexadecimal (4 casas por letra); índice = time.
+        public string[] explored=new string[0];
+        // Espetos do labirinto que já saíram do chão (Board.Index): só eles aparecem (autor, 18/10: ocultos até pisar).
+        public List<int> sprung=new List<int>();
+        // Sala de início de cada grupo de spawn no labirinto: x0,z0,x1,z1 por slot (vazio = casas fixas de MapGen.Spawns).
+        public int[] rooms=new int[0];
+        // Casas compactadas só para a rede (Pack): o snapshot de 42×42 não cabia nos 64 KB do WebSocket.
+        public string packed;
+        // Mapa com paredes (labirinto).
         public bool Walled() { foreach(var t in tiles) if(t.terrain==Terrain.Parede) return true; return false; }
+        // Mesmo estado com outras casas (o que um jogador conhece na névoa); listas e lutadores são os mesmos.
+        public MatchState With(Tile[] other) { var c=(MatchState)MemberwiseClone(); c.tiles=other; return c; }
+        // Casa por casa: terreno.relevo.objeto.marcas.moedas.armadilha.dano.pa.gelo, sem os zeros do fim; casa vazia = "".
+        public static string Pack(Tile[] tiles)
+        {
+            var sb=new System.Text.StringBuilder(); var v=new int[9];
+            for(int i=0;i<tiles.Length;i++) {
+                var t=tiles[i]; if(i>0) sb.Append(',');
+                v[0]=(int)t.terrain; v[1]=t.height; v[2]=t.obj; v[3]=(t.zone?1:0)|(t.lava?2:0)|(t.mark?4:0); v[4]=t.coins; v[5]=t.trap; v[6]=t.trapDamage; v[7]=t.trapPa; v[8]=t.frozenBy;
+                int n=v.Length; while(n>0&&v[n-1]==0) n--;
+                for(int k=0;k<n;k++) { if(k>0) sb.Append('.'); sb.Append(v[k]); }
+            }
+            return sb.ToString();
+        }
+        public static Tile[] Unpack(string packed,int count)
+        {
+            var parts=(packed??"").Split(','); if(parts.Length!=count) return null;
+            var tiles=new Tile[count];
+            for(int i=0;i<count;i++) {
+                var v=new int[9]; var p=parts[i].Length==0?new string[0]:parts[i].Split('.');
+                for(int k=0;k<p.Length&&k<v.Length;k++) if(!int.TryParse(p[k],out v[k])) return null;
+                tiles[i]=new Tile{ terrain=(Terrain)v[0], height=v[1], obj=v[2], zone=(v[3]&1)!=0, lava=(v[3]&2)!=0, mark=(v[3]&4)!=0, coins=v[4], trap=v[5], trapDamage=v[6], trapPa=v[7], frozenBy=v[8] };
+            }
+            return tiles;
+        }
         public bool over;
         // Fase de posicionamento (Sprint 1.3): assento que está arrumando os heróis nas casas de início; 0 = partida em curso.
         public int placing;

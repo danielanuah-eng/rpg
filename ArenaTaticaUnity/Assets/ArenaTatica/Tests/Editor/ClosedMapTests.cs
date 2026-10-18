@@ -23,7 +23,45 @@ namespace ArenaTatica.Core.Tests
                 var dist=Board.Costs(s,s.fighters[0],true,true);
                 Assert.IsTrue(s.fighters.All(f=>dist[Board.Index(s,f.cell)]!=int.MaxValue),"todos se alcançam (abrindo portas): "+where);
                 foreach(var f in s.fighters) Assert.AreEqual(Terrain.Livre,s.At(f.cell).terrain,"início livre: "+where);
-                Assert.AreEqual(2,s.portals.Count(p=>p.by==0),"um par de portais: "+where);
+                int gates=s.portals.Count(p=>p.by==0);
+                Assert.GreaterOrEqual(gates,4,"pares de portais pelo mapa: "+where); Assert.AreEqual(0,gates%2,"portais em pares: "+where);
+            }
+        }
+        // Labirinto (autor, 18/10 noite): mapa todo labirinto com corredores de 2 casas, área ×2 por jogador, salas de início
+        // fechadas por portas em lados opostos, monstros de farm e espetos escondidos.
+        [Test] public void LabyrinthFillsTheMapWithWideCorridorsRoomsAndMonsters()
+        {
+            foreach(int players in new[]{2,3,4,6}) for(uint seed=1;seed<=4;seed++)
+            {
+                var team=new PlayerSetup{fighters=new[]{"colosso","ciantia"}};
+                var m=Match.New(new MatchSetup{ seed=seed, theme=MapGen.OpenThemes+(int)(seed%3), players=Enumerable.Range(0,players).Select(_=>team).ToArray() });
+                var s=m.S; string where=$"{players}j seed {seed}";
+                Assert.AreEqual(Board.LabyrinthSize(players),s.width,where);
+                // Todo chão e porta é alcançável pelo Primal Beast (2×2) abrindo portas.
+                var beast=s.fighters.First(f=>f.def=="colosso"); var dist=Board.Costs(s,beast,true,true);
+                var cover=new bool[s.tiles.Length];
+                for(int i=0;i<s.tiles.Length;i++) if(dist[i]!=int.MaxValue) { var c=new Cell(i%s.width,i/s.width); foreach(var p in Board.Footprint(beast,c)) if(Board.Contains(s,p)) cover[Board.Index(s,p)]=true; }
+                for(int i=0;i<s.tiles.Length;i++) if(s.tiles[i].terrain==Terrain.Livre) Assert.IsTrue(cover[i],$"o Primal Beast chega em ({i%s.width},{i/s.width}): "+where);
+                // Salas de início: cada slot na sua, o par em lados opostos, fechadas por portas.
+                for(int slot=0;slot<players;slot++) {
+                    var r=MapGen.Room(s,slot); Assert.IsNotNull(r,"sala do slot "+slot+": "+where);
+                    bool bottom=r[1]<s.height/2; Assert.AreEqual(slot%2==0,bottom,"lado da sala "+slot+": "+where);
+                    for(int x=r[0]-1;x<=r[2]+1;x++) for(int z=r[1]-1;z<=r[3]+1;z++) {
+                        if(x>=r[0]&&x<=r[2]&&z>=r[1]&&z<=r[3]) continue; var t=s.At(new Cell(x,z)).terrain;
+                        Assert.IsTrue(t==Terrain.Parede||t==Terrain.Porta,"sala fechada por parede e portas: "+where);
+                    }
+                }
+                foreach(var f in s.fighters.Where(f=>MatchState.Player(f.team)))
+                    Assert.IsTrue(Enumerable.Range(0,players).Select(sl=>MapGen.Room(s,sl)).Any(r=>Board.Footprint(f).All(c=>c.x>=r[0]&&c.x<=r[2]&&c.z>=r[1]&&c.z<=r[3])),"herói começa na sala: "+where);
+                Assert.GreaterOrEqual(s.fighters.Count(Match.Monster),4,"monstros de farm: "+where);
+                Assert.IsTrue(s.fighters.Where(Match.Monster).All(f=>f.team==MatchState.Neutral),where);
+                // Espetos poucos e escondidos de todos até alguém pisar.
+                int spikes=s.tiles.Count(t=>t.Obj==TileObj.Espetos);
+                Assert.Greater(spikes,0,where); Assert.LessOrEqual(spikes,s.width*s.height/100,"poucos espetos: "+where);
+                Assert.AreEqual(0,Match.ViewFor(s,1).tiles.Count(t=>t.Obj==TileObj.Espetos),"espetos ocultos: "+where);
+                // O estado de 6 jogadores cabe na mensagem da rede.
+                var json=ArenaGame.Wire(new WireMessage{kind="snapshot",state=Match.ViewFor(s,1)});
+                Assert.LessOrEqual(System.Text.Encoding.UTF8.GetByteCount(json),65536,"cabe no WebSocket: "+where);
             }
         }
         [Test] public void OpenThemesDoNotGetWalls()
@@ -51,8 +89,11 @@ namespace ArenaTatica.Core.Tests
         {
             var m=Closed(MapGen.OpenThemes,6,8);
             int budget=(int)typeof(ArenaTransport).GetField("RelayPayload",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic).GetValue(null);
-            var view=Match.ViewFor(m.S,2); var packet=JsonUtility.ToJson(new WireMessage{kind="snapshot",state=view});
+            var view=Match.ViewFor(m.S,2); var packet=ArenaGame.Wire(new WireMessage{kind="snapshot",state=view});
             Assert.LessOrEqual(System.Text.Encoding.UTF8.GetByteCount(packet),budget); Assert.IsTrue(ArenaGame.ValidState(view,2));
+            // Do outro lado: as casas voltam iguais.
+            var back=JsonUtility.FromJson<WireMessage>(packet).state; var tiles=MatchState.Unpack(back.packed,back.width*back.height);
+            Assert.AreEqual(JsonUtility.ToJson(new MapDef{tiles=view.tiles}),JsonUtility.ToJson(new MapDef{tiles=tiles}));
         }
 
         // ── Regras dos objetos, num mapa plano ──
@@ -119,12 +160,65 @@ namespace ArenaTatica.Core.Tests
             Assert.IsTrue(S.revealed); Assert.AreEqual(coins+Match.VelaMoedas,S.coins[a.team]);
             Assert.IsTrue(Match.Sees(S,a.team,e)); Assert.IsFalse(Act("acender",candle),"acende uma vez só");
         }
-        [Test] public void WalledMapHalvesJumpAndTeleportAndCostsOneMore()
+        // Autor (18/10 noite): salto e teleporte por cima do muro custam +2 PA; sem muro no caminho, custo e alcance normais.
+        [Test] public void JumpOrTeleportOverWallCostsTwoMore()
         {
             var tp=Content.Fighters["teantha"].skills.First(x=>x.kind==SkillKind.Teleporte); var a=A;
-            int full=m.Range(a,tp,a.cell); int cost=Match.Cost(a,tp,S);
-            S.At(new Cell(11,11)).terrain=Terrain.Parede;
-            Assert.AreEqual(full/2,m.Range(a,tp,a.cell)); Assert.AreEqual(cost+1,Match.Cost(a,tp,S));
+            Clear(); a.cell=new Cell(3,3); Enemy.cell=new Cell(11,11);
+            int full=m.Range(a,tp,a.cell), cost=Match.Cost(a,tp,S);
+            for(int z=0;z<12;z++) S.At(new Cell(5,z)).terrain=Terrain.Parede;
+            Assert.AreEqual(full,m.Range(a,tp,a.cell),"o alcance não cai mais pela metade");
+            Assert.AreEqual(cost,Match.Cost(a,tp,S,new Cell(3,5),null),"sem muro no caminho");
+            Assert.AreEqual(cost+Match.WallJump,Match.Cost(a,tp,S,new Cell(6,3),null),"por cima do muro");
+            a.pa=cost+1; Assert.IsFalse(m.CanTarget(a,tp,new Cell(6,3),out _),"sem PA para o muro");
+            a.pa=cost+Match.WallJump; Assert.IsTrue(m.CanTarget(a,tp,new Cell(6,3),out string why),"passa por cima pagando: "+why);
+        }
+        // Autor (18/10 noite): dano à distância nunca acerta atrás do muro, nem a skill que ignora a visão, nem a explosão.
+        [Test] public void RangedDamageCannotTargetBehindWalls()
+        {
+            Clear(); var a=A; a.cell=new Cell(3,3); Enemy.cell=new Cell(3,6);
+            S.At(new Cell(3,5)).terrain=Terrain.Parede;
+            var blind=new SkillDef{ id="teste-sem-visao", name="t", kind=SkillKind.Dano, pa=1, minRange=1, maxRange=6, damage=2, sight=false };
+            Assert.IsFalse(m.InRange(a,blind,Enemy.cell,out string why)); Assert.AreEqual("Atrás do muro.",why);
+            S.At(new Cell(3,5)).terrain=Terrain.Livre;
+            Assert.IsTrue(m.InRange(a,blind,Enemy.cell,out _));
+        }
+        // Névoa (autor, 18/10 noite): só as 8 casas em volta; memória de paredes/chão; andar no escuro para no obstáculo
+        // escondido; espetos ocultos saem ao pisar; monstro de farm dá moedas.
+        [Test] public void FogShowsOnlyAdjacentRemembersAndStopsBlindWalks()
+        {
+            Clear(); var a=A; var e=Enemy; a.cell=new Cell(2,2); e.cell=new Cell(2,4); S.fog=true; a.pm=6;
+            Assert.IsFalse(Match.Sees(S,a.team,e),"a 2 casas já some"); e.cell=new Cell(3,3); Assert.IsTrue(Match.Sees(S,a.team,e),"diagonal colada aparece"); e.cell=new Cell(11,11);
+            var box=new Cell(2,6); S.At(box).terrain=Terrain.Caixa; S.At(new Cell(8,8)).Obj=TileObj.Bau; Fog.Explore(S);
+            var view=Match.ViewFor(S,a.team);
+            Assert.AreEqual(Terrain.Livre,view.At(box).terrain,"caixa longe não aparece"); Assert.AreEqual(TileObj.Nada,view.At(new Cell(8,8)).Obj,"baú longe não aparece");
+            Assert.IsTrue(ArenaGame.ValidState(view,a.team));
+            // Manda andar até (2,8): o caminho conhecido passa pela caixa escondida e para colado nela, sem evento dela.
+            Assert.IsTrue(Move(2,8));
+            Assert.AreEqual(new Cell(2,5),a.cell,"parou no limite do obstáculo");
+            Assert.AreEqual(Terrain.Caixa,Match.ViewFor(S,a.team).At(box).terrain,"agora colada, aparece");
+            // Memória: depois de sair, a caixa continua lembrada (estrutura).
+            a.cell=new Cell(9,2); Fog.Explore(S);
+            Assert.IsTrue(Fog.Explored(S,a.team,Board.Index(S,box))); Assert.AreEqual(Terrain.Caixa,Match.ViewFor(S,a.team).At(box).terrain);
+            // Vela acesa: o mapa todo para todos.
+            var candle=new Cell(9,3); S.At(candle).terrain=Terrain.Caixa; S.At(candle).Obj=TileObj.Vela;
+            Assert.IsTrue(Act("acender",candle)); Assert.AreEqual(TileObj.Bau,Match.ViewFor(S,e.team).At(new Cell(8,8)).Obj);
+        }
+        [Test] public void HiddenSpikesRiseWhenSteppedAndMonsterPaysGold()
+        {
+            Clear(); var a=A; a.cell=new Cell(3,3); Enemy.cell=new Cell(10,10); a.pm=3; S.fog=true; S.revealed=true;
+            var spike=new Cell(3,4); S.At(spike).Obj=TileObj.Espetos;
+            Assert.AreEqual(TileObj.Nada,Match.ViewFor(S,a.team).At(spike).Obj,"escondidos até pisar");
+            Assert.IsTrue(m.Apply(new Command{kind="mover",cell=new Cell(3,5),fighter=a.id,revision=S.revision},a.team,out var events,out _));
+            Assert.IsTrue(events.Any(x=>x.kind=="espetos"&&x.cell==spike),"saem do chão na casa pisada");
+            Assert.AreEqual(TileObj.Espetos,Match.ViewFor(S,Enemy.team).At(spike).Obj,"depois ficam à vista");
+            // Monstro de farm: quem derruba ganha MonsterGold.
+            var spawn=typeof(Match).GetMethod("Spawn",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance);
+            var mob=(Fighter)spawn.Invoke(m,new object[]{"monstro-esqueleto",MatchState.Neutral,new Cell(3,6),0}); mob.hp=1;
+            int coins=S.coins[a.team];
+            var hit=Match.Skills(a).First(x=>x.kind==SkillKind.Dano&&x.damage>0&&x.minRange<=1&&!x.selfArea);
+            for(int i=0;i<6&&mob.Alive;i++) { a.pa=9; a.used.Clear(); a.cooldowns.Clear(); m.Forced.Enqueue(Face.Trava); m.Forced.Enqueue(Face.Trava); m.Apply(new Command{kind="skill",skill=hit.id,cell=mob.cell,fighter=a.id,revision=S.revision},a.team,out _,out _); }
+            Assert.IsFalse(mob.Alive,"derrubou"); Assert.AreEqual(coins+Match.MonsterGold,S.coins[a.team]);
         }
         [Test] public void BossOnlyInLabyrinthWalksOpensDoorsAndHits()
         {

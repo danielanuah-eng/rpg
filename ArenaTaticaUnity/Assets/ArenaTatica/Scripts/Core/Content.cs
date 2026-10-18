@@ -165,6 +165,14 @@ namespace ArenaTatica.Core
             ["brutamontes-errante"]=new FighterDef { id="brutamontes-errante", name="Brutamontes Errante", sprites="BrutamontesErrante", hp=20, pa=6, pm=3, level=0, picker=false, neutral=true, armor=1, immovable=true, skills=new[] {
                 new SkillDef { id="pancada-do-errante", name="Pancada do Errante", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3 },
                 new SkillDef { id="rugido", name="Rugido", kind=SkillKind.Dano, pa=0, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=0, pmLoss=2, anim="roar" } } },
+            // Monstros de farm do labirinto (autor, 18/10 noite): neutros que guardam o lugar, caçam quem chega a 3 casas e
+            // dão Match.MonsterGold moedas a quem derruba.
+            ["monstro-esqueleto"]=new FighterDef { id="monstro-esqueleto", name="Esqueleto Lanceiro", sprites="EsqueletoLanceiro", hp=6, pa=6, pm=2, level=0, picker=false, neutral=true, skills=new[] {
+                new SkillDef { id="lancada-do-esqueleto", name="Lançada", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=2 } } },
+            ["monstro-cultista"]=new FighterDef { id="monstro-cultista", name="Cultista Encapuzado", sprites="CultistaEncapuzado", hp=5, pa=6, pm=2, level=0, picker=false, neutral=true, skills=new[] {
+                new SkillDef { id="adaga-ritual", name="Adaga ritual", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=2, paLoss=1 } } },
+            ["monstro-troll"]=new FighterDef { id="monstro-troll", name="Troll do Esgoto", sprites="TrollEsgoto", hp=8, pa=6, pm=2, level=0, picker=false, neutral=true, armor=1, skills=new[] {
+                new SkillDef { id="porrada-do-esgoto", name="Porrada do esgoto", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3 } } },
             // Bosses do labirinto (evento "chefe", 18/10): neutros; skills[0] = golpe colado, skills[1] = especial em volta a cada 2 rodadas.
             ["chefe-dragao"]=new FighterDef { id="chefe-dragao", name="Dragão Espectral Ancião", sprites="DragaoEspectral", hp=22, pa=6, pm=4, level=0, picker=false, neutral=true, flying=true, armor=1, immovable=true, skills=new[] {
                 new SkillDef { id="garra-espectral", name="Garra espectral", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3 },

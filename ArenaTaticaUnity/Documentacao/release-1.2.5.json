@@ -1,0 +1,12 @@
+{
+    "version": "1.2.5",
+    "state": "publicado-itch-windows",
+    "protocol": 8,
+    "editMode": { "total": 459, "passed": 459, "failed": 0, "skipped": 0 },
+    "notes": "Labirinto novo (mapa todo em corredores de 2 casas, area x2 por jogador, salas de inicio fechadas em lados opostos, portais, monstros de farm, espetos ocultos), nevoa por casas vizinhas com memoria e vela, salto/teleporte sobre muro +2 PA, tiro e explosao nao passam por muro, Primal Beast em portais/portas/loja. Protocolo 8: online so com a 1.2.5.",
+    "previousRelease": "release-1.2.4.json",
+    "platforms": {
+        "windows": { "channel": "eiediboy/bdx-master:windows", "userVersion": "2026.10.18-1.2.5", "state": "enviado" },
+        "android": { "state": "nao publicado", "reason": "Android parado pelo autor em 18/10" }
+    }
+}

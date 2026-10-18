@@ -19,6 +19,7 @@ namespace ArenaTatica.Core
         // Gera pelo cenário de s.theme (já escolhido): aberto ou fechado.
         public static void Generate(MatchState s,bool flat)
         {
+            s.rooms=new int[0];
             if(!flat&&Closed(s.theme)) { GenerateClosed(s); return; }
             float k=s.width*s.height/144f; var best=new Best();
             for(int attempt=0;attempt<30;attempt++)
@@ -293,6 +294,13 @@ namespace ArenaTatica.Core
         // ímpares do lado oposto (giro de 180°): os times começam em lados opostos mesmo com o cenário aleatório.
         public static Cell[] Spawns(MatchState s,int slot,int count=4)
         {
+            // Labirinto: dentro da sala de início sorteada (embaixo a partir do canto de baixo, em cima girado 180°).
+            if(Room(s,slot) is int[] r) {
+                var rel=new[]{ new Cell(0,0), new Cell(2,0), new Cell(4,0), new Cell(0,2), new Cell(2,2), new Cell(4,2) };
+                bool top=r[1]>=s.height/2;
+                var cells=rel.Select(d=>top?new Cell(r[2]-d.x,r[3]-d.z):new Cell(r[0]+d.x,r[1]+d.z)).Where(x=>x.x>=r[0]&&x.x<=r[2]&&x.z>=r[1]&&x.z<=r[3]).ToArray();
+                return cells.Take(Math.Max(4,Math.Min(count,cells.Length))).ToArray();
+            }
             Cell[] c;
             if(s.width==Board.Size) c=new[]{ new Cell(2,1), new Cell(4,1), new Cell(7,1), new Cell(9,1), new Cell(3,2), new Cell(8,2) };
             else
@@ -305,6 +313,32 @@ namespace ArenaTatica.Core
             if(slot%2==1) for(int i=0;i<c.Length;i++) c[i]=s.Mirror(c[i]);
             return c;
         }
+        // Sala de início do slot no labirinto: x0,z0,x1,z1 (casas, inclusive); null = mapa sem salas.
+        public static int[] Room(MatchState s,int slot)
+        {
+            if(s.rooms==null||slot<0||s.rooms.Length<4*(slot+1)) return null;
+            var r=new[]{ s.rooms[4*slot], s.rooms[4*slot+1], s.rooms[4*slot+2], s.rooms[4*slot+3] };
+            return r[2]>r[0]&&r[3]>r[1]?r:null;
+        }
+        static bool InRoom(MatchState s,Cell c)
+        {
+            for(int i=0;i+3<(s.rooms?.Length??0);i+=4) if(c.x>=s.rooms[i]&&c.x<=s.rooms[i+2]&&c.z>=s.rooms[i+1]&&c.z<=s.rooms[i+3]) return true;
+            return false;
+        }
+        // Casas dos monstros de farm (Match.SpawnMonsters): pares de lados opostos, longe das salas de início e um do outro.
+        public static List<Cell> MonsterSpots(MatchState s,int pairs)
+        {
+            var list=new List<Cell>();
+            int Far(Cell a,Cell b) => Math.Max(Math.Abs(a.x-b.x),Math.Abs(a.z-b.z));
+            for(int tries=0;tries<pairs*80&&list.Count<pairs*2;tries++) {
+                var c=RandomAll(s); var m=s.Mirror(c);
+                if(c==m||!Free(s,c)||!Free(s,m)||InRoom(s,c)||InRoom(s,m)||!Away(s,c,5)||!Away(s,m,5)||HasPortalNear(s,c)||HasPortalNear(s,m)) continue;
+                if(list.Any(o=>Far(o,c)<4||Far(o,m)<4)||Far(c,m)<4) continue;
+                list.Add(c); list.Add(m);
+            }
+            return list;
+        }
+        static bool HasPortalNear(MatchState s,Cell c) => Board.Dirs.Any(d=>Board.Contains(s,c+d)&&s.At(c+d).Obj==TileObj.Portal);
         // Lados justos: em cada par de lados opostos (0↔1, 2↔3, 4↔5), a distância a pé (abrindo portas) até a zona,
         // até a vela e até o baú mais perto quase igual.
         public static bool Fair(MatchState s) => Unfairness(s)==0;
@@ -340,6 +374,7 @@ namespace ArenaTatica.Core
         // Copia relevo, peças e zona; as casas de início de todos os grupos ficam livres.
         public static void Load(MatchState s,MapDef m)
         {
+            s.rooms=new int[0];
             for(int i=0;i<s.tiles.Length;i++) { var t=m.tiles[i]; s.tiles[i]=new Tile{ height=UnityEngine.Mathf.Clamp(t.height,0,Board.MaxHeight), terrain=t.terrain==Terrain.Loja?Terrain.Livre:t.terrain, zone=t.zone, obj=t.obj }; }
             Center(s);
             for(int slot=0;slot<PlayersFor(s.width);slot++) foreach(var c in Spawns(s,slot)) { s.At(c).terrain=Terrain.Livre; s.At(c).obj=0; }
@@ -409,18 +444,184 @@ namespace ArenaTatica.Core
             var gates=Enumerable.Range(0,s.tiles.Length).Where(i=>s.tiles[i].Obj==TileObj.Portal).ToList();
             if(gates.Count%2==1) s.tiles[gates.Last()].obj=0;
         }
-        // Portais fixos (by=0, nunca fecham), em pares pela ordem das casas: 1º↔2º, 3º↔4º…
+        // Portais fixos (by=0, nunca fecham): cada um com o da casa espelhada, se houver (labirinto: vários pares pelo mapa);
+        // os que sobram em pares pela ordem das casas: 1º↔2º, 3º↔4º…
         public static void Portals(MatchState s)
         {
             s.portals??=new List<Portal>(); s.portals.RemoveAll(p=>p.by==0);
             var gates=Enumerable.Range(0,s.tiles.Length).Where(i=>s.tiles[i].Obj==TileObj.Portal).ToList();
-            for(int i=0;i+1<gates.Count;i+=2) { s.portals.Add(new Portal{ a=gates[i], b=gates[i+1] }); s.portals.Add(new Portal{ a=gates[i+1], b=gates[i] }); }
+            void Link(int a,int b) { s.portals.Add(new Portal{ a=a, b=b }); s.portals.Add(new Portal{ a=b, b=a }); }
+            var rest=new List<int>();
+            foreach(int g in gates) { int m=s.tiles.Length-1-g; if(m>g&&gates.Contains(m)) Link(g,m); else if(m<g&&gates.Contains(m)) continue; else rest.Add(g); }
+            for(int i=0;i+1<rest.Count;i+=2) Link(rest[i],rest[i+1]);
         }
 
-        // ── Labirintos (18/10): tudo começa parede; abre o salão do meio, a sala de início de cada time, salas sorteadas e
-        // corredores (1 ou 2 casas) até o meio. Bolsões sem caminho voltam a ser parede. Depois blocos temáticos nas salas,
-        // caixas, braseiros, baús, espetos, um par de portais, portas e a vela, sem cortar o caminho entre os inícios.
+        // ── Labirintos (autor, 18/10 noite): o mapa todo é labirinto, sem sobras ──
+        // Grade de células 2×2 separadas por paredes de 1 casa (todo corredor tem 2 casas: o Primal Beast passa em todos),
+        // cavada como árvore e com laços extras (mais corredores), sempre com o giro de 180° (o lado oposto é igual). Salão de
+        // 3×3 células no meio com a loja; cada grupo de spawn começa numa sala de 2×2 células sorteada no seu lado, fechada por
+        // portas duplas; salas extras espelhadas. Objetos em pares espelhados: caixas e braseiro só no miolo das salas, baús,
+        // poucos espetos (ocultos até pisar), portais por todo o mapa, portas nos corredores e a vela. Cada obstáculo é desfeito
+        // se o Primal Beast deixar de alcançar alguma casa de chão.
+        const int Pitch=3;
+        static int MazeCells(int size) { int n=(size-1)/Pitch; if(n%2==0) n--; return n; }
+        static int MazeMargin(int size) => (size-(Pitch*MazeCells(size)+1))/2;
+        // Canto (menor x e z) das 2×2 casas da célula (i,j).
+        static Cell Corner(MatchState s,int i,int j) { int m=MazeMargin(s.width); return new Cell(m+Pitch*i+1,m+Pitch*j+1); }
+        static void OpenRect(MatchState s,Cell lo,Cell hi) { for(int x=lo.x;x<=hi.x;x++) for(int z=lo.z;z<=hi.z;z++) Open(s,new Cell(x,z)); }
+        // Passagem entre a célula (i,j) e a da direita (up=false) ou a de cima (up=true): as 2 casas da parede entre elas.
+        static Cell[] EdgeCells(MatchState s,(int i,int j,bool up) e)
+        {
+            var c=Corner(s,e.i,e.j);
+            return e.up?new[]{ new Cell(c.x,c.z+2), new Cell(c.x+1,c.z+2) }:new[]{ new Cell(c.x+2,c.z), new Cell(c.x+2,c.z+1) };
+        }
+        static (int i,int j,bool up) MirrorEdge(int n,(int i,int j,bool up) e) => e.up?(n-1-e.i,n-2-e.j,true):(n-2-e.i,n-1-e.j,false);
         static void GenerateClosed(MatchState s)
+        {
+            int N=MazeCells(s.width);
+            if(N<7) { GenerateRooms(s); return; }
+            float k=s.width*s.height/144f; var best=new Best(); int hub=(N-1)/2;
+            for(int attempt=0;attempt<40;attempt++)
+            {
+                Clear(s); s.decor=new List<Decor>(); s.rooms=new int[0]; foreach(var t in s.tiles) t.terrain=Terrain.Parede;
+                for(int i=0;i<N;i++) for(int j=0;j<N;j++) { var c=Corner(s,i,j); OpenRect(s,c,c+new Cell(1,1)); }
+                // Árvore (Kruskal) com o par espelhado de cada passagem: liga tudo e já cria alguns laços.
+                var edges=new List<(int i,int j,bool up)>();
+                for(int i=0;i<N;i++) for(int j=0;j<N;j++) { if(i+1<N) edges.Add((i,j,false)); if(j+1<N) edges.Add((i,j,true)); }
+                for(int i=edges.Count-1;i>0;i--) { int r=Dice.Range(s,i+1); (edges[i],edges[r])=(edges[r],edges[i]); }
+                var root=Enumerable.Range(0,N*N).ToArray(); var carved=new HashSet<(int,int,bool)>();
+                int Find(int x) { while(root[x]!=x) { root[x]=root[root[x]]; x=root[x]; } return x; }
+                int Id(int i,int j) => j*N+i;
+                void Carve((int i,int j,bool up) e)
+                {
+                    if(!carved.Add(e)) return;
+                    int a=Id(e.i,e.j), b=e.up?Id(e.i,e.j+1):Id(e.i+1,e.j); root[Find(a)]=Find(b);
+                    foreach(var c in EdgeCells(s,e)) Open(s,c);
+                }
+                foreach(var e in edges) { int b=e.up?Id(e.i,e.j+1):Id(e.i+1,e.j); if(Find(Id(e.i,e.j))!=Find(b)) { Carve(e); Carve(MirrorEdge(N,e)); } }
+                // Laços extras: mais corredores e caminhos alternativos.
+                foreach(var e in edges) if(!carved.Contains(e)&&Dice.Range(s,100)<20) { Carve(e); Carve(MirrorEdge(N,e)); }
+                // Salão do meio (3×3 células) com a loja e a zona.
+                OpenRect(s,Corner(s,hub-1,hub-1),Corner(s,hub+1,hub+1)+new Cell(1,1));
+                // Salas de início: uma por slot de baixo (2×2 células na 1ª fileira), espelhada em cima para o slot ímpar.
+                var taken=new bool[N];
+                var rooms=new int[4*s.players]; bool ok=true;
+                for(int slot=0;slot<s.players;slot+=2) {
+                    var options=Enumerable.Range(0,N-1).Where(i=>!taken[i]&&!taken[i+1]&&(i==0||!taken[i-1])&&(i+2>=N||!taken[i+2])).ToList();
+                    if(options.Count==0) { ok=false; break; }
+                    int pick=options[Dice.Range(s,options.Count)]; taken[pick]=taken[pick+1]=true;
+                    var lo=Corner(s,pick,0); var hi=Corner(s,pick+1,1)+new Cell(1,1);
+                    rooms[4*slot]=lo.x; rooms[4*slot+1]=lo.z; rooms[4*slot+2]=hi.x; rooms[4*slot+3]=hi.z;
+                    var mlo=s.Mirror(hi); var mhi=s.Mirror(lo);
+                    if(slot+1<s.players) { rooms[4*slot+4]=mlo.x; rooms[4*slot+5]=mlo.z; rooms[4*slot+6]=mhi.x; rooms[4*slot+7]=mhi.z; }
+                    Isolate(s,lo,hi,true); Isolate(s,mlo,mhi,false);
+                }
+                if(!ok) continue;
+                s.rooms=rooms;
+                // Salas extras (2×2 células), espelhadas, fora do salão e das fileiras das salas de início.
+                for(int r=0,tries=0;r<Math.Max(1,(int)Math.Round(k/3))&&tries<40;tries++) {
+                    int i=Dice.Range(s,N-1), j=2+Dice.Range(s,Math.Max(1,N-5));
+                    if(i+1>=hub-1&&i<=hub+1&&j+1>=hub-1&&j<=hub+1) continue;
+                    var lo=Corner(s,i,j); var hi=Corner(s,i+1,j+1)+new Cell(1,1);
+                    OpenRect(s,lo,hi); OpenRect(s,s.Mirror(hi),s.Mirror(lo)); r++;
+                }
+                foreach(var c in ShopCells(s)) s.At(c).height=1;
+                foreach(var c in ZoneRing(s)) s.At(c).height=1;
+                Center(s,true);
+                // Casa de chão aonde o Primal Beast não chega vira parede (nada de sobra).
+                var cover=BigCover(s); if(cover==null) continue;
+                for(int i=0;i<s.tiles.Length;i++) if(s.tiles[i].terrain==Terrain.Livre&&!cover[i]) s.tiles[i].terrain=Terrain.Parede;
+                if(!BigOk(s)) continue;
+                var used=new bool[s.tiles.Length];
+                for(int i=Dice.Range(s,2)+(k>3?1:0);i>0;i--) Motif(s,used,true);
+                // Obstáculos só no miolo das salas (as 8 vizinhas livres) e espelhados.
+                Place(s,(int)Math.Round(1.5f*k),c=>Interior(s,c)&&!InRoom(s,c)&&Away(s,c,3),t=>t.terrain=Terrain.Caixa,true);
+                Place(s,1,c=>Interior(s,c)&&!InRoom(s,c)&&Away(s,c,4),t=>{ t.terrain=Terrain.Caixa; t.Obj=TileObj.Braseiro; },true);
+                Place(s,Math.Max(1,(int)Math.Round(k/2)),c=>!InRoom(s,c)&&Away(s,c,4),t=>t.Obj=TileObj.Bau,true);
+                // Espetos (autor: menos por sala): poucos pares, longe uns dos outros.
+                Place(s,Math.Max(1,(int)Math.Round(k/2)),c=>!InRoom(s,c)&&Away(s,c,3)&&!Near(s,c,TileObj.Espetos,5)&&!NextToDoor(s,c),t=>t.Obj=TileObj.Espetos,true);
+                // Portais por todo o mapa, cada um ligado ao espelhado; o Primal Beast precisa caber colado na saída.
+                Place(s,Math.Max(2,(int)Math.Round(k/2)),c=>!InRoom(s,c)&&Away(s,c,4)&&!Near(s,c,TileObj.Portal,6)&&BigExit(s,c)&&BigExit(s,s.Mirror(c)),t=>t.Obj=TileObj.Portal,true);
+                FixObjects(s);
+                // Portas duplas nas passagens dos corredores (fora do salão e das salas).
+                var halls=edges.Where(e=>carved.Contains(e)&&EdgeCells(s,e).All(c=>s.At(c).terrain==Terrain.Livre&&s.At(c).obj==0&&!InRoom(s,c)&&Away(s,c,2))
+                    &&!Hub(e.i,e.j,hub)&&!Hub(e.up?e.i:e.i+1,e.up?e.j+1:e.j,hub)).ToList();
+                for(int d=0;d<(int)Math.Round(1.5f*k)&&halls.Count>0;d++) {
+                    int pick=Dice.Range(s,halls.Count); var e=halls[pick]; halls.RemoveAt(pick);
+                    foreach(var c in EdgeCells(s,e).Concat(EdgeCells(s,MirrorEdge(N,e)))) if(s.At(c).terrain==Terrain.Livre&&s.At(c).obj==0) s.At(c).terrain=Terrain.Porta;
+                }
+                Candle(s);
+                if(!BigOk(s)) continue;
+                if(Keep(s,best)) return;
+            }
+            if(Restore(s,best)) return;
+            s.rooms=new int[0]; GenerateRooms(s);
+        }
+        static bool Hub(int i,int j,int hub) => Math.Abs(i-hub)<=1&&Math.Abs(j-hub)<=1;
+        // Sala de início fechada: as passagens dela para o labirinto viram portas duplas; sem nenhuma, abre uma para o meio.
+        static void Isolate(MatchState s,Cell lo,Cell hi,bool bottom)
+        {
+            OpenRect(s,lo,hi); int doors=0;
+            for(int x=lo.x-1;x<=hi.x+1;x++) for(int z=lo.z-1;z<=hi.z+1;z++) {
+                var c=new Cell(x,z); if(x>=lo.x&&x<=hi.x&&z>=lo.z&&z<=hi.z||!Board.Contains(s,c)) continue;
+                if(s.At(c).terrain==Terrain.Livre) { s.At(c).terrain=Terrain.Porta; doors++; }
+            }
+            if(doors>0) return;
+            int dz=bottom?hi.z+1:lo.z-1, x0=bottom?lo.x:hi.x-1;
+            for(int x=x0;x<=x0+1;x++) { var d=new Cell(x,dz); if(Board.Contains(s,d)) s.At(d).terrain=Terrain.Porta; }
+        }
+        // Miolo de sala: a casa e as 8 em volta são chão livre.
+        static bool Interior(MatchState s,Cell c)
+        {
+            for(int x=-1;x<=1;x++) for(int z=-1;z<=1;z++) { var n=c+new Cell(x,z); if(!Board.Contains(s,n)||s.At(n).terrain!=Terrain.Livre||s.At(n).obj!=0) return false; }
+            return true;
+        }
+        static bool Near(MatchState s,Cell c,TileObj obj,int dist)
+        {
+            for(int x=-dist;x<=dist;x++) for(int z=-dist;z<=dist;z++) { var n=c+new Cell(x,z); if(Board.Contains(s,n)&&s.At(n).Obj==obj) return true; }
+            return false;
+        }
+        static bool NextToDoor(MatchState s,Cell c) => Board.Dirs.Any(d=>Board.Contains(s,c+d)&&s.At(c+d).terrain==Terrain.Porta);
+        // O Primal Beast (2×2) cabe colado na casa c sem ocupá-la (saída de portal).
+        static bool BigExit(MatchState s,Cell c)
+        {
+            for(int x=c.x-2;x<=c.x+1;x++) for(int z=c.z-2;z<=c.z+1;z++) {
+                var at=new Cell(x,z); bool inside=c.x>=x&&c.x<=x+1&&c.z>=z&&c.z<=z+1; if(inside) continue;
+                int gx=Math.Max(0,Math.Max(x-c.x,c.x-(x+1))), gz=Math.Max(0,Math.Max(z-c.z,c.z-(z+1))); if(gx+gz!=1) continue;
+                if(BigFits(s,at,false)) return true;
+            }
+            return false;
+        }
+        static bool BigFits(MatchState s,Cell at,bool doors)
+        {
+            for(int x=0;x<2;x++) for(int z=0;z<2;z++) { var c=at+new Cell(x,z); if(!Board.Contains(s,c)) return false; var t=s.At(c).terrain; if(t!=Terrain.Livre&&!(doors&&t==Terrain.Porta)) return false; }
+            return true;
+        }
+        // Casas que o Primal Beast cobre andando (portas contam como passagem), a partir da 1ª sala de início.
+        static bool[] BigCover(MatchState s)
+        {
+            var room=Room(s,0); if(room==null) return null;
+            var start=new Cell(room[0],room[1]); if(!BigFits(s,start,true)) return null;
+            var seen=new bool[s.tiles.Length]; var cover=new bool[s.tiles.Length]; var queue=new Queue<Cell>(); queue.Enqueue(start); seen[Board.Index(s,start)]=true;
+            while(queue.Count>0) {
+                var c=queue.Dequeue();
+                for(int x=0;x<2;x++) for(int z=0;z<2;z++) cover[Board.Index(s,c+new Cell(x,z))]=true;
+                foreach(var d in Board.Dirs) { var n=c+d; if(!Board.Contains(s,n)||seen[Board.Index(s,n)]||!BigFits(s,n,true)) continue; seen[Board.Index(s,n)]=true; queue.Enqueue(n); }
+            }
+            return cover;
+        }
+        // Labirinto pronto para o Primal Beast: ele cobre todo o chão (e portas), todas as salas, a zona, e encosta na vela.
+        static bool BigOk(MatchState s)
+        {
+            var cover=BigCover(s); if(cover==null) return false;
+            for(int i=0;i<s.tiles.Length;i++) { var t=s.tiles[i]; if((t.terrain==Terrain.Livre||t.terrain==Terrain.Porta)&&!cover[i]) return false; }
+            for(int i=0;i<s.tiles.Length;i++) if(s.tiles[i].Obj==TileObj.Vela) { var c=new Cell(i%s.width,i/s.width); if(!Board.Dirs.Any(d=>Board.Contains(s,c+d)&&cover[Board.Index(s,c+d)])) return false; }
+            return true;
+        }
+        // Caminho de quem anda: no labirinto com salas vale o do Primal Beast; nos outros, o das casas de início.
+        static bool Passable(MatchState s) => Room(s,0)!=null?BigOk(s):SpawnsConnected(s);
+        // Labirinto pequeno (mapas do editor, até 20×20): salas e corredores de 1 ou 2 casas (versão de 18/10).
+        static void GenerateRooms(MatchState s)
         {
             float k=s.width*s.height/144f; int theme=(s.theme-OpenThemes)%ClosedBlocks.Length; var best=new Best();
             for(int attempt=0;attempt<80;attempt++)
@@ -488,7 +689,7 @@ namespace ArenaTatica.Core
                 while(list.Count>0) {
                     var c=list[Dice.Range(s,list.Count)]; list.Remove(c);
                     s.At(c).terrain=Terrain.Caixa; s.At(c).Obj=TileObj.Vela;
-                    if(SpawnsConnected(s)) return;
+                    if(Passable(s)) return;
                     s.At(c).terrain=Terrain.Livre; s.At(c).obj=0;
                 }
             }
@@ -521,9 +722,10 @@ namespace ArenaTatica.Core
             for(int placed=0,tries=0;placed<count&&tries<Math.Max(120,count*40);tries++) {
                 var c=RandomAll(s); var cells=pair?new[]{c,s.Mirror(c)}:new[]{c};
                 if(!Free(s,c)||!ok(c)) continue;
+                if(pair&&(s.Mirror(c)==c||!Free(s,s.Mirror(c))||!ok(s.Mirror(c)))) continue;
                 var before=cells.Select(x=>(s.At(x).terrain,s.At(x).obj)).ToArray();
                 foreach(var x in cells) set(s.At(x));
-                if(SpawnsConnected(s)) { placed++; continue; }
+                if(Passable(s)) { placed++; continue; }
                 for(int i=0;i<cells.Length;i++) { s.At(cells[i]).terrain=before[i].terrain; s.At(cells[i]).obj=before[i].obj; }
             }
         }

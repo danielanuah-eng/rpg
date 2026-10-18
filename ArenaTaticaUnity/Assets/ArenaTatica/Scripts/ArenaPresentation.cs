@@ -473,6 +473,14 @@ namespace ArenaTatica
         // Prop do DungeonBDX no chão de uma casa (at = topo da casa): modelo 3D (cores do FBX no material da Arena) ou sprite em pé.
         readonly Dictionary<string,Sprite> propSprites=new Dictionary<string,Sprite>();
         readonly Dictionary<Color,Material> modelMaterials=new Dictionary<Color,Material>();
+        // Espetos ocultos do labirinto saem do chão quando alguém pisa (depois ficam no tabuleiro, MatchState.sprung).
+        IEnumerator RiseSpikes(Vector3 top)
+        {
+            var go=DungeonProp("espetos",top,0,1,world); if(!go) yield break;
+            markers.Add(go); var up=go.transform.position; var down=up+Vector3.down*.35f;
+            for(float t=0;t<.16f&&go;t+=Time.deltaTime) { go.transform.position=Vector3.Lerp(down,up,t/.16f); yield return null; }
+            if(go) go.transform.position=up;
+        }
         GameObject DungeonProp(string id,Vector3 at,float yaw,float scale,Transform parent)
         {
             var (side,tall)=PropSize(id); side*=scale; tall*=scale;
@@ -609,8 +617,9 @@ namespace ArenaTatica
                 if(t.mark) markers.Add(Overlay("fogos",p,markMaterial,.5f));
             }
             // Portais (sprint 1): o brilho da invocação dos gatos da Asamyh em laço, deitado na entrada e na saída.
+            // Na névoa, só a ponta que o time de quem olha já conhece.
             foreach(var g in s.portals??new List<Portal>()) foreach(int i in new[]{g.a,g.b})
-                markers.Add(PortalMark(Position(s,new Cell(i%s.width,i/s.width)),i==g.a));
+                if(!Fog.On(s)||Game.LocalTeam<=0||Fog.Explored(s,Game.LocalTeam,i)) markers.Add(PortalMark(Position(s,new Cell(i%s.width,i/s.width)),i==g.a));
             // Minas terrestres do time: placa menor que a armadilha.
             foreach(int i in s.mines??new List<int>()) if(i>=0&&i<s.tiles.Length&&s.tiles[i].trap!=0&&(viewer==0||s.Ally(s.tiles[i].trap,viewer)))
                 markers.Add(Cube("Mina",Position(s,new Cell(i%s.width,i/s.width))+Vector3.up*.05f,new Vector3(.3f,.06f,.3f),markMaterial,world));
@@ -691,9 +700,20 @@ namespace ArenaTatica
             screenWidth=Screen.width; screenHeight=Screen.height;
         }
 
+        // Labirinto (névoa) no Host ou jogo local: a tela desenha o que o time de quem joga aqui conhece (Match.ViewFor), igual
+        // ao que o cliente recebe. O cliente e as vistas (rng 0) já chegam filtrados.
+        MatchState seenFrom, seenView; int seenRevision=-1, seenTeam=-1;
+        public MatchState Seen(MatchState s)
+        {
+            if(s==null||!s.fog||s.rng==0||Game.Client||Game.EditingMap) return s;
+            int team=Game.LocalTeam; if(team<=0) return s;
+            if(seenFrom==s&&seenRevision==s.revision&&seenTeam==team&&seenView!=null) return seenView;
+            seenFrom=s; seenRevision=s.revision; seenTeam=team; return seenView=Match.ViewFor(s,team);
+        }
         // Estado final aplicado sem animação (snapshot, reset, fim da fila).
         public void Sync(MatchState state,bool immediate)
         {
+            state=Seen(state);
             if(!Ready||state==null) return;
             if(immediate) CancelAnimations();
             BuildBoard(state); RefreshMarkers(state);
@@ -715,7 +735,7 @@ namespace ArenaTatica
         public void Play(List<GameEvent> events,MatchState state)
         {
             if(Ready&&queue.Count>=QueueCapacity/2) { Sync(state,true); return; }
-            queue.Enqueue((events,state));
+            queue.Enqueue((events,Seen(state)));
             if(!running) StartCoroutine(RunQueue());
         }
         IEnumerator RunQueue()
@@ -1096,7 +1116,8 @@ namespace ArenaTatica
                     }
                     Game.Hud?.Log($"{Name(s,e.actor)} ganhou {e.value} moedas{(e.info!=null?" e "+Shop.Def(e.info)?.name:"")}"); break;
                 case "lava": if(target) { Hit(target,target.position+Vector3.down,e.value,C(1,.45f,.1f)); Float(target.position,$"−{e.value} lava",Red); PlayClip(target,"hit"); } yield return Wait(.3f); break;
-                case "espetos": if(target) { Hit(target,target.position+Vector3.down,e.value,C(.8f,.8f,.85f)); Float(target.position,$"−{e.value} espetos",Red); PlayClip(target,"hit"); } yield return Wait(.25f); break;
+                case "espetos": if(Board.Contains(s,e.cell)) StartCoroutine(RiseSpikes(Position(s,e.cell)));
+                    if(target) { Hit(target,target.position+Vector3.down,e.value,C(.8f,.8f,.85f)); Float(target.position,$"−{e.value} espetos",Red); PlayClip(target,"hit"); } yield return Wait(.25f); break;
                 case "bau":
                 {
                     string name=ChestName(e.cell); for(int i=markers.Count-1;i>=0;i--) if(markers[i]&&markers[i].name==name) { Destroy(markers[i]); markers.RemoveAt(i); }
@@ -1232,20 +1253,21 @@ namespace ArenaTatica
         // Clipes que terminam fora de cena (morte, gato que some no zap) seguram o último quadro em vez de voltar ao idle.
         static bool Holds(string clip) => clip=="death"||clip=="zap";
         // Escondido: some para os inimigos de quem olha; para os aliados fica translúcido.
-        // Névoa do labirinto: escurece as casas fora da visão do time de quem olha (até a vela ser acesa).
+        // Névoa do labirinto (Fog): casa nunca vista fica preta (a vista já chega sem nada nela); a lembrada, escurecida; só as
+        // coladas nos lutadores do time de quem olha ficam claras. Some quando a vela é acesa.
         GameObject fogObject; Mesh fogMesh;
         void RefreshFog(MatchState s)
         {
             if(fogObject) Destroy(fogObject); if(fogMesh) Destroy(fogMesh); fogObject=null; fogMesh=null;
-            int team=Game.LocalTeam; if(!s.fog||s.revealed||team<=0||!spriteMaterial) return;
-            var seen=new bool[s.tiles.Length]; var eyes=s.fighters.Where(f=>f.Alive&&s.Ally(f.team,team)&&Board.Contains(s,f.cell)).Select(f=>f.cell).ToList();
-            for(int i=0;i<s.tiles.Length;i++) { var c=new Cell(i%s.width,i/s.width); seen[i]=eyes.Any(e=>e.Distance(c)<=1||Board.LineOfSight(s,e,c)); }
+            int team=Game.LocalTeam; if(!Fog.On(s)||team<=0||!spriteMaterial) return;
+            var seen=Fog.Vision(s,team); var mem=Fog.Memory(s,team);
             var v=new List<Vector3>(); var tri=new List<int>(); var col=new List<Color>();
             for(int i=0;i<s.tiles.Length;i++) {
-                var t=s.tiles[i]; if(seen[i]||t.terrain==Terrain.Parede||t.terrain==Terrain.Porta) continue;
-                var p=Position(s,new Cell(i%s.width,i/s.width))+Vector3.up*.04f; int k=v.Count;
+                var t=s.tiles[i]; if(seen[i]) continue;
+                bool known=mem[i]; if(known&&(t.terrain==Terrain.Parede||t.terrain==Terrain.Porta)) continue;
+                var p=Position(s,new Cell(i%s.width,i/s.width))+Vector3.up*(known?.04f:.06f); int k=v.Count;
                 v.AddRange(new[]{p+new Vector3(-.5f,0,-.5f),p+new Vector3(-.5f,0,.5f),p+new Vector3(.5f,0,.5f),p+new Vector3(.5f,0,-.5f)});
-                for(int j=0;j<4;j++) col.Add(new Color(0,0,.02f,.62f)); tri.AddRange(new[]{k,k+1,k+2,k,k+2,k+3});
+                for(int j=0;j<4;j++) col.Add(known?new Color(0,0,.02f,.62f):new Color(0,0,0,1)); tri.AddRange(new[]{k,k+1,k+2,k,k+2,k+3});
             }
             if(v.Count==0) return;
             fogMesh=new Mesh{name="Nevoa",indexFormat=UnityEngine.Rendering.IndexFormat.UInt32}; fogMesh.SetVertices(v); fogMesh.SetColors(col); fogMesh.SetTriangles(tri,0); fogMesh.RecalculateBounds();
@@ -1647,7 +1669,7 @@ namespace ArenaTatica
         public bool Pick(Vector2 screenPoint,out Cell cell,out int unitId)
         {
             cell=default; unitId=0;
-            var s=Game.State; if(s==null) return false;
+            var s=Seen(Game.State); if(s==null) return false;
             var ray=BoardCamera.ScreenPointToRay(screenPoint);
             if(Physics.Raycast(ray,out var hit,200,1<<8,QueryTriggerInteraction.Collide)) {
                 var unit=hit.collider.GetComponent<ArenaUnitPick>(); var f=unit?s.F(unit.Id):null;
@@ -1713,7 +1735,7 @@ namespace ArenaTatica
         }
         void Update()
         {
-            var s=Game.State;
+            var s=Seen(Game.State);
             if(!Ready||s==null) return;
             if(Screen.width!=screenWidth||Screen.height!=screenHeight) FitCamera();
             SlideYaw();
@@ -1852,7 +1874,7 @@ namespace ArenaTatica
         {
             shownKey=key;
             foreach(var go in highlights) Destroy(go); highlights.Clear();
-            var f=Game.Active; var s=Game.State;
+            var f=Game.Active; var s=Seen(Game.State);
             void Mark(Cell c,Material m) => highlights.Add(Cube("Alcance",Position(s,c)+Vector3.up*.012f,new Vector3(.8f,.012f,.8f),m,world));
             // Editor de mapas: casas de início (sempre livres) e a peça escolhida para mover.
             if(Game.EditingMap) { foreach(var c in Game.MapEditor.SpawnCells) Mark(c,moveMaterial); if(Game.MapEditor.Picked is Cell p) Mark(p,targetMaterial); return; }

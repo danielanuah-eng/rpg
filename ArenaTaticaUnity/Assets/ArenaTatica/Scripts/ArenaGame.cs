@@ -13,7 +13,7 @@ namespace ArenaTatica
     [Serializable] public class WireMessage
     {
         // 7 (18/10): as fichas editadas vão numa mensagem "edits" antes de cada snapshot, fora dos estados.
-        public int protocol=7;
+        public int protocol=8;
         public string kind, text, token;
         public string[] fighters; // hello: time escolhido no aparelho do jogador
         public string[] pool;     // hello/escolha: pool do torneio
@@ -353,15 +353,19 @@ namespace ArenaTatica
             botWait+=Time.deltaTime; if(botWait<.35f) return; botWait=0;
             var cmd=botActions++>=16?new Command{kind="passar"}:Bot.Decide(Match);
             cmd.fighter=f.id; cmd.revision=State.revision; botRevision=State.revision;
+            var hiddenBefore=State.fighters.Where(x=>x.hidden).Select(x=>x.id).ToArray();
             if(!Match.Apply(cmd,f.team,out var events,out var reason)) {
                 Debug.LogWarning($"Bot P{f.team} ({f.def}) {cmd.kind} {cmd.skill} recusado: {reason}");
                 cmd=new Command{kind="passar",fighter=f.id,revision=State.revision};
                 if(!Match.Apply(cmd,f.team,out events,out reason)) return;
             }
             State=Match.S; Mode="";
-            View.Play(events,State); ArenaStats.Record(events,State);
+            View.Play(Shown(events,hiddenBefore),State); ArenaStats.Record(events,State);
             if(f!=Active) botFighter=-1;
         }
+        // Labirinto com névoa neste aparelho (Host ou jogo local): a tela mostra só o que o time de quem joga aqui vê, como o
+        // cliente recebe (a apresentação também desenha o mapa por Match.ViewFor).
+        List<GameEvent> Shown(List<GameEvent> events,int[] hiddenBefore) => !Client&&State!=null&&State.fog&&LocalTeam>0?FromWire(Match.EventsFor(events,State,LocalTeam,hiddenBefore).ToArray()):events;
         void RecordProbe(bool lost) { probes.Enqueue(lost); if(lost) expired++; if(probes.Count>60&&probes.Dequeue()) expired--; }
         void ResetMetrics() { Rtt=0; Filtered=0; expired=0; probes.Clear(); pingWaiting=false; lastPing=Time.unscaledTime; }
         void ResetRoom() { roomTurnTime=0; tokenPick.Clear(); tokenPool.Clear(); tokenSeat.Clear(); seatPeer.Clear(); peerSeat.Clear(); Lobby=false; Seat=0; }
@@ -726,7 +730,7 @@ namespace ArenaTatica
                 State=Match.S; Mode=""; FirstFor="";
                 Status=cmd.kind=="passar"?"Turno encerrado.":cmd.kind=="comprar"?"Compra feita.":cmd.kind=="posicionar"?"Herói posicionado.":"Ação confirmada.";
                 if(Placing) Status+=$" Posicionamento: vez de P{State.placing}.";
-                View.Play(events,State); ArenaStats.Record(events,State);
+                View.Play(Shown(events,hiddenBefore),State); ArenaStats.Record(events,State);
                 if(Network.IsHost) foreach(var kv in seatPeer) { int t=MatchTeam(kv.Key); if(t==0) continue;
                     Send(kv.Value,new WireMessage{kind="state",state=Match.ViewFor(State,t),events=Match.EventsFor(events,State,t,hiddenBefore).ToArray()}); }
                 if(Network.IsHost&&State.over) RecordTournament();
@@ -779,8 +783,17 @@ namespace ArenaTatica
             // Agora vão em partes, sozinhas, só quando mudam para aquele jogador (SendEdits); as outras mensagens vão sem elas.
             if(message.kind=="lobby"||message.kind=="draft") { SendEdits(peer,RoomEdits); message.edits=null; message.teamLevel=TeamLevel; message.teamSize=TeamSize; message.turnTime=TurnTime; }
             if(message.state!=null) { SendEdits(peer,message.state.edits); message.state.edits=null; }
+            string json=Wire(message);
             Sent?.Invoke(peer,message);
-            Network.Send(peer,JsonUtility.ToJson(message));
+            Network.Send(peer,json);
+        }
+        // Texto que vai pela rede: casas compactadas (MatchState.Pack), para o labirinto de até 42×42 caber no limite da mensagem.
+        public static string Wire(WireMessage message)
+        {
+            var st=message.state; var tiles=st?.tiles;
+            if(tiles!=null) { st.packed=MatchState.Pack(tiles); st.tiles=null; }
+            try { return JsonUtility.ToJson(message); }
+            finally { if(tiles!=null) { st.tiles=tiles; st.packed=null; } }
         }
         // JsonUtility não guarda null: dados/trajeto vazios e info "" chegam no lugar de null. Sem isso o cliente rolava
         // dados vazios e repetia o golpe em cada alvo extra da área (no Host os eventos não passam pelo JSON).
@@ -815,7 +828,8 @@ namespace ArenaTatica
             WireMessage m;
             try { m=JsonUtility.FromJson<WireMessage>(text); } catch(Exception) { return; }
             if(m==null) return;
-            if(m.protocol!=7) {
+            if(m.state!=null&&!string.IsNullOrEmpty(m.state.packed)) { m.state.tiles=MatchState.Unpack(m.state.packed,m.state.width*m.state.height); m.state.packed=null; }
+            if(m.protocol!=8) {
                 const string update="Versões diferentes. Atualize a Arena Tática nos dois aparelhos.";
                 if(Network.IsHost&&m.kind=="hello") Send(peer,new WireMessage{protocol=m.protocol,kind="full",text=update});
                 else if(Client) { Network.Close(); Recovery=true; Synced=false; Status=update; }

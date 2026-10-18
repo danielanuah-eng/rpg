@@ -32,7 +32,7 @@ namespace ArenaTatica.Core
         // Loja: o produto mais caro que der para pagar, só numa casa ao lado da loja (invocações não compram).
         static Command Buy(MatchState s,Fighter me)
         {
-            if(!Board.NextToShop(s,me.cell)||!WantsShop(s,me)) return null;
+            if(!Board.NextToShop(s,me)||!WantsShop(s,me)) return null;
             var slots=s.shops[me.team].slots; int pick=-1, price=0;
             for(int i=0;i<slots.Length;i++)
             {
