@@ -389,11 +389,12 @@ namespace DungeonBDX
                 var menu=OpenArcadia();var match=GetComponent<AqMatch>()??gameObject.AddComponent<AqMatch>();
                 string scenario=aq+1<args.Length&&!args[aq+1].StartsWith("-")?args[aq+1]:Arcadia.AqScenarios.Ids[0];
                 string probeRoot=capture>=0&&Array.IndexOf(args,"-dungeonbdx-qa")>=0?Path.Combine(Application.temporaryCachePath,"DungeonBDX-Probes",Guid.NewGuid().ToString("N")):null;
-                bool shopShot=Array.IndexOf(args,"-dungeonbdx-aq-shop")>=0;int[] tuning=null;
-                if(shopShot){tuning=new int[Arcadia.AqTuning.Count];tuning[Arcadia.AqTuning.StartCoins]=8;}
+                bool shopShot=Array.IndexOf(args,"-dungeonbdx-aq-shop")>=0,sheetShot=Array.IndexOf(args,"-dungeonbdx-aq-sheet")>=0;int[] tuning=null;
+                if(shopShot||sheetShot){tuning=new int[Arcadia.AqTuning.Count];tuning[Arcadia.AqTuning.StartCoins]=8;}
                 if(!match.Open(menu,scenario,AqHeroImport.DefaultParties(),false,false,probeRoot,tuning)){Debug.LogError(match.Message);Application.Quit(1);yield break;}
                 menu.HudCanvas.gameObject.SetActive(false);menu.enabled=false;
                 if(shopShot&&capture>=0&&capture+1<args.Length){yield return match.CaptureShop(args[capture+1]);yield break;}
+                if(sheetShot&&capture>=0&&capture+1<args.Length){yield return match.CaptureSheet(args[capture+1]);yield break;}
                 if(capture>=0&&capture+1<args.Length)yield return match.CaptureProbe(args[capture+1]);
                 yield break;
             }

@@ -67,9 +67,16 @@ namespace DungeonBDX
             return r;
         }
         // PixelLab action icon (Iso/UI/Icons/<id>) on the left of a button; the label moves right. No art: unchanged.
-        public static void Icon(UnityEngine.UI.Button button,string id)
+        public static void Icon(UnityEngine.UI.Button button,string id)=>Icon(button,Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/"+id),id);
+        // Card art (PixelLab, Iso/UI/Cards/<shop id>) when it exists; otherwise the generic icon.
+        public static Texture2D GearTexture(string art,string icon)
         {
-            var t=Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/"+id);if(!t||!button)return;
+            var t=string.IsNullOrEmpty(art)?null:Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Cards/"+art);
+            return t?t:Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/"+icon);
+        }
+        public static void Icon(UnityEngine.UI.Button button,Texture2D t,string id)
+        {
+            if(!t||!button)return;
             var face=button.transform.Find("Face");var label=face.GetComponentInChildren<TextMeshProUGUI>();
             var icon=Box(face,"Icon "+id,.04f,.14f,.24f,.72f,Color.white).GetComponent<UnityEngine.UI.Image>();
             icon.sprite=Sprite.Create(t,new Rect(0,0,t.width,t.height),new Vector2(.5f,.5f),100);icon.preserveAspect=true;
@@ -78,7 +85,7 @@ namespace DungeonBDX
         // Small card icon (PixelLab Iso/UI/Icons) on a hero sheet; exhausted cards are dimmed.
         public static void GearIcon(Transform parent,AqGear gear,float x,float y,float w,float h)
         {
-            var t=Resources.Load<Texture2D>("DungeonBDX/Iso/UI/Icons/"+gear.Icon);if(!t)return;
+            var t=GearTexture(gear.Art,gear.Icon);if(!t)return;
             var tile=Box(parent,"Gear tile",x,y,w,h,new Color(.42f,.36f,.27f,gear.Exhausted?.35f:.85f));
             var image=Box(tile,"Gear "+gear.Icon,.08f,.08f,.84f,.84f,gear.Exhausted?new Color(1,1,1,.35f):Color.white).GetComponent<UnityEngine.UI.Image>();
             image.sprite=Sprite.Create(t,new Rect(0,0,t.width,t.height),new Vector2(.5f,.5f),100);image.preserveAspect=true;

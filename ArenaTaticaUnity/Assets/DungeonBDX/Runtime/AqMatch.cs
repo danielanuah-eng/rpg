@@ -16,7 +16,7 @@ namespace DungeonBDX
         AqMatchMenu menu;AqJournal journal;AqLocalSave store;GameObject world;AqBoardView view;Canvas canvas;RectTransform safe;
         readonly DungeonCameraInput input=new DungeonCameraInput();
         readonly List<RaycastResult> hits=new List<RaycastResult>();
-        int selected,card,lastW,lastH;string mode="move",pendingOperation;AqResult pendingResult;bool shop;string root;
+        int selected,card,lastW,lastH;string mode="move",pendingOperation;AqResult pendingResult;bool shop,sheet;string root;
         AudioSource music,sfx;bool muted;
         public AqSession Session=>journal?.Session;
         public AqBoardView View=>view;
@@ -113,8 +113,9 @@ namespace DungeonBDX
             catch(Exception ex){Message="SALVAMENTO PENDENTE: "+ex.Message;}
             Draw();
         }
+        // A second click on the selected hero opens the full hero sheet.
         void Select(int id)
-        {selected=id;card=0;mode=Session.Resting&&!Session.Unit(id).Alive?"revive":"move";Draw();}
+        {if(selected==id){sheet=!sheet;if(sheet)shop=false;}else sheet=false;selected=id;card=0;mode=Session.Resting&&!Session.Unit(id).Alive?"revive":"move";Draw();}
         void Draw()
         {
             if(!canvas||Session==null)return;lastW=Screen.width;lastH=Screen.height;bool portrait=Screen.width<Screen.height;
@@ -171,7 +172,7 @@ namespace DungeonBDX
                 var b=AqUi.Button(foot,g==null?"":g.Name+"\n<size=80%>"+detail+"</size>",cardArea.x+i*cardArea.width/4,cardArea.y,cardArea.width/4-.004f,cardArea.height,
                     ()=>{card=index;mode=Session.Resting?"transfer":"attack";Draw();},(mode=="attack"||Session.Resting&&mode=="transfer")&&card==i);
                 b.interactable=g!=null&&Session.Reaction==null&&(Session.Resting||!g.Exhausted&&!g.Passive);
-                if(g!=null)AqUi.Icon(b,g.Icon);
+                if(g!=null)AqUi.Icon(b,AqUi.GearTexture(g.Art,g.Icon),g.Icon);
             }
             // Actions: one row in portrait; a 3 + 2 grid on PC.
             void Act(int slot,int count,int row,string text,Action click,bool on=false,bool enabled=true,string icon=null)
@@ -192,9 +193,9 @@ namespace DungeonBDX
             {
                 int top=portrait?5:3,low=portrait?5:2;
                 Act(0,top,0,"MOVER",()=>{mode="move";Draw();},mode=="move",icon:"move");
-                if(Session.Resting)Act(1,top,0,"LOJA",()=>{shop=true;Draw();},shop,icon:"coin");
+                if(Session.Resting)Act(1,top,0,"LOJA",()=>{shop=true;sheet=false;Draw();},shop,icon:"coin");
                 else Act(1,top,0,"PORTA",()=>{mode="door";Draw();},icon:"door");
-                Act(2,top,0,hero.Ability=="arsenal"?"FORMA":hero.Ability=="phase"?"PASSO SOMBRIO":"HABILIDADE",()=>{if(hero.Ability=="arsenal")Do(new AqCommand("stance",selected));else if(hero.Ability=="phase"){mode="phase";Draw();}else {Message=hero.AbilityText;Draw();}},icon:"ability");
+                Act(2,top,0,hero.Ability=="arsenal"?"FORMA":hero.Ability=="phase"?"PASSO SOMBRIO":"HABILIDADE",()=>{if(hero.Ability=="arsenal")Do(new AqCommand("stance",selected));else if(hero.Ability=="phase"){mode="phase";Draw();}else {sheet=true;shop=false;Draw();}},icon:"ability");
                 Act(portrait?3:0,low,portrait?0:1,Session.Resting?"DESCANSANDO":"DESCANSAR",()=>Do(new AqCommand("rest")),false,!Session.Resting&&Session.ActiveId<0,"rest");
                 Act(portrait?4:1,low,portrait?0:1,"ENCERRAR TURNO",()=>Do(new AqCommand("end")),icon:"endturn");
             }
@@ -210,6 +211,7 @@ namespace DungeonBDX
             AqUi.Text(notice,Message,.01f,.03f,.98f,.94f,15,SavePaused?new Color(1,.48f,.35f):AqUi.Ink);
             if(!Session.Resting)shop=false;
             if(shop)Shop(hero,portrait,footerHeight);
+            else if(sheet&&Session.Reaction==null)Sheet(hero,portrait,footerHeight);
             if(Session.Winner>=0)
             {
                 var win=AqUi.Box(safe,"Victory",.18f,.43f,.64f,.32f,AqUi.Panel);
@@ -224,6 +226,36 @@ namespace DungeonBDX
             }
             Preview();
         }
+        // Full hero sheet: portrait, life, total defense, movement, ability, the four cards with their art, carried tokens.
+        void Sheet(AqUnit hero,bool portrait,float bottom)
+        {
+            var panel=AqUi.Panelled(safe,"Hero sheet",.02f,bottom+.07f,portrait?.96f:.62f,.86f-bottom-.08f,AqUi.Panel);
+            panel.GetComponent<UnityEngine.UI.Image>().raycastTarget=true;
+            int armor=hero.Gear.Sum(g=>g.Defense),def=hero.Defense+armor;
+            AqUi.Portrait(panel,hero.HeroId,.02f,.6f,.17f,.36f);
+            AqUi.Text(panel,hero.Name.ToUpperInvariant(),.21f,.86f,.55f,.1f,24,AqUi.GuildColors[hero.Guild%AqUi.GuildColors.Length]);
+            AqUi.Text(panel,hero.Alive?$"VIDA {hero.Health}/{hero.MaxHealth}":"CAÍDO · ressuscita no descanso",.21f,.77f,.3f,.08f,18,hero.Alive?AqUi.Ink:AqUi.Muted);
+            if(hero.Alive)AqUi.LifeBar(panel,.21f,.73f,.28f,.04f,hero.Health,hero.MaxHealth);
+            AqUi.Chip(panel,"defense",$"DEFESA {def}"+(armor>0?$" ({hero.Defense} + {armor} de armadura)":""),.52f,.77f,.46f,.08f,portrait?.05f:.035f,17);
+            AqUi.Chip(panel,"move",$"MOVIMENTO {Session.BaseMoves}",.52f,.69f,.22f,.07f,portrait?.05f:.035f,16,AqUi.Muted);
+            AqUi.Chip(panel,"coin",$"{Session.Guilds[hero.Guild].Coins} MOEDAS DA GUILDA",.74f,.69f,.25f,.07f,portrait?.05f:.035f,16,AqUi.Gold);
+            AqUi.Text(panel,hero.AbilityText,.21f,.6f,.77f,.09f,16,AqUi.Ink);
+            for(int i=0;i<4;i++)
+            {
+                var g=i<hero.Gear.Count?hero.Gear[i]:null;float x=.02f+i*.245f;
+                var slot=AqUi.Box(panel,"Card slot",x,.17f,.235f,.41f,new Color(.17f,.15f,.13f,.95f));
+                if(g==null){AqUi.Text(slot,"ESPAÇO LIVRE",.05f,.4f,.9f,.2f,14,AqUi.Muted,TextAlignmentOptions.Center);continue;}
+                var art=AqUi.GearTexture(g.Art,g.Icon);
+                if(art){var image=AqUi.Box(slot,"Art",.2f,.44f,.6f,.52f,g.Exhausted?new Color(1,1,1,.4f):Color.white).GetComponent<UnityEngine.UI.Image>();
+                    image.sprite=Sprite.Create(art,new Rect(0,0,art.width,art.height),new Vector2(.5f,.5f),100);image.preserveAspect=true;}
+                string stats=g.Passive?$"PASSIVA · +{g.Defense} DEFESA":$"{g.Dice} DADOS · {(g.Ranged?"DISTÂNCIA":"PRÓXIMO")}";
+                string tags=(g.Sharp?"AFIADA ":"")+(g.Reroll?"RERROLA ":"")+(g.Id=="signature."+hero.HeroId?"PRÓPRIA ":"")+(g.Exhausted?"EXAUSTA":"");
+                AqUi.Text(slot,$"{g.Name}\n<size=82%>{stats}</size>"+(tags==""?"":$"\n<size=72%><color=#D4A65A>{tags.Trim()}</color></size>"),.04f,.02f,.92f,.42f,15,AqUi.Ink,TextAlignmentOptions.Center);
+            }
+            var carried=hero.Carry.Select(id=>Session.Scenario.Tokens.First(k=>k.Id==id).Kind).GroupBy(k=>k).Select(k=>$"{k.Count()} {k.Key}");
+            AqUi.Text(panel,"CARREGA: "+(hero.Carry.Count==0?"nada":string.Join(", ",carried))+$" · QUEDAS {hero.Deaths}",.03f,.06f,.6f,.08f,15,AqUi.Muted);
+            AqUi.Button(panel,"FECHAR FICHA",.64f,.02f,.34f,.11f,()=>{sheet=false;Draw();});
+        }
         // Rest shop: buy upgrade cards for the selected hero with the guild's coins (4-card limit).
         void Shop(AqUnit hero,bool portrait,float bottom)
         {
@@ -236,7 +268,7 @@ namespace DungeonBDX
             {
                 int index=i;var item=items[i];
                 var b=AqUi.Button(panel,$"{item.Name} · {item.Cost} MOEDAS\n<size=72%>{item.Text}</size>",.02f+i%2*.48f,.14f+(rows-1-i/2)*h,.48f,h,()=>Do(new AqCommand("buy",selected,card:index)));
-                AqUi.Icon(b,item.Icon);
+                AqUi.Icon(b,AqUi.GearTexture(item.Id,item.Icon),item.Icon);
                 b.interactable=coins>=item.Cost&&hero.Gear.Count<4&&!SavePaused;
             }
             var chosen=card<hero.Gear.Count?hero.Gear[card]:null;bool signature=chosen!=null&&chosen.Id=="signature."+hero.HeroId;
@@ -317,6 +349,16 @@ namespace DungeonBDX
             var r=Do(new AqCommand("rest"));shop=true;Draw();
             yield return new WaitForSecondsRealtime(.25f);
             Capture(path,view.Camera,canvas,view.LifeCanvas);Application.Quit(r.Accepted&&Session.Resting?0:1);
+        }
+        // QA capture of the hero sheet after buying two cards (dagger and helmet) during a rest.
+        public IEnumerator CaptureSheet(string path)
+        {
+            for(int i=0;i<30;i++)yield return null;
+            bool ok=Do(new AqCommand("rest")).Accepted;
+            foreach(var id in new[]{"keen-dagger","leather-vest"})ok&=Do(new AqCommand("buy",selected,card:Array.FindIndex(AqShop.Items,s=>s.Id==id))).Accepted;
+            shop=false;sheet=true;Draw();
+            yield return new WaitForSecondsRealtime(.25f);
+            Capture(path,view.Camera,canvas,view.LifeCanvas);Application.Quit(ok?0:1);
         }
         void ProbeCommands(Probe report)
         {

@@ -597,7 +597,7 @@ namespace DungeonBDX.Arcadia
             reactions.Clear();reactions.AddRange(s.Reactions.Select(x=>new AqReaction{Monster=x.Monster,Hero=x.Hero,Movement=x.Movement,Vengeance=x.Vengeance,Dying=x.Dying}));
         }
         public void ClearHistory()=>Commands.Clear();
-        static AqGear Copy(AqGear g)=>g==null?throw new ArgumentException("Retrato AQ inválido."):new AqGear{Id=g.Id,Name=g.Name,Clip=g.Clip,Icon=g.Icon,Dice=g.Dice,Defense=g.Defense,Ranged=g.Ranged,Exhausted=g.Exhausted,Sharp=g.Sharp,Reroll=g.Reroll};
+        static AqGear Copy(AqGear g)=>g==null?throw new ArgumentException("Retrato AQ inválido."):new AqGear{Id=g.Id,Name=g.Name,Clip=g.Clip,Icon=g.Icon,Art=g.Art,Dice=g.Dice,Defense=g.Defense,Ranged=g.Ranged,Exhausted=g.Exhausted,Sharp=g.Sharp,Reroll=g.Reroll};
         static AqResult Fail(string s)=>new AqResult(false,s);
         static string SpawnSymbol(int face)=>face<=3?"melee":face<=5?"ranged":"critical";
         static AqResult Ok(string s)=>new AqResult(true,s);

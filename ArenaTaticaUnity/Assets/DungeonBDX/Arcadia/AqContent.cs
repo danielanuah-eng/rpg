@@ -12,7 +12,7 @@ namespace DungeonBDX.Arcadia
     }
     [Serializable] public sealed class AqGear
     {
-        public string Id,Name,Clip="attack",Icon="sword";
+        public string Id,Name,Clip="attack",Icon="sword",Art;
         public int Dice=3,Defense;
         // Sharp: a 5 also counts as critical (gets through "might"). Reroll: one failed attack die is rolled again.
         public bool Ranged,Exhausted,Sharp,Reroll;
@@ -24,7 +24,7 @@ namespace DungeonBDX.Arcadia
         public string Id,Name,Text,Icon,Clip="attack";
         public int Cost,Dice,Defense;
         public bool Ranged,Sharp,Reroll;
-        public AqGear Create(string id)=>new AqGear{Id=id,Name=Name,Clip=Clip,Icon=Icon,Dice=Dice,Defense=Defense,Ranged=Ranged,Sharp=Sharp,Reroll=Reroll};
+        public AqGear Create(string id)=>new AqGear{Id=id,Name=Name,Clip=Clip,Icon=Icon,Art=Id,Dice=Dice,Defense=Defense,Ranged=Ranged,Sharp=Sharp,Reroll=Reroll};
     }
     public static class AqShop
     {
