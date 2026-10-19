@@ -1875,7 +1875,9 @@ namespace ArenaTatica
             shownKey=key;
             foreach(var go in highlights) Destroy(go); highlights.Clear();
             var f=Game.Active; var s=Seen(Game.State);
-            void Mark(Cell c,Material m) => highlights.Add(Cube("Alcance",Position(s,c)+Vector3.up*.012f,new Vector3(.8f,.012f,.8f),m,world));
+            // Na névoa, acima dela (RefreshFog fica a .04–.06): dá para ver aonde andar mesmo no escuro.
+            float lift=s!=null&&Fog.On(s)?.08f:.012f;
+            void Mark(Cell c,Material m) => highlights.Add(Cube("Alcance",Position(s,c)+Vector3.up*lift,new Vector3(.8f,.012f,.8f),m,world));
             // Editor de mapas: casas de início (sempre livres) e a peça escolhida para mover.
             if(Game.EditingMap) { foreach(var c in Game.MapEditor.SpawnCells) Mark(c,moveMaterial); if(Game.MapEditor.Picked is Cell p) Mark(p,targetMaterial); return; }
             // Posicionamento: casas da borda que o herói escolhido (ou qualquer um, sem escolha) pode ocupar (verde) e ele (forte).

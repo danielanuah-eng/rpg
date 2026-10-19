@@ -24,8 +24,8 @@ public static class ArenaBuild
         Directory.CreateDirectory("Assets/ArenaTatica/Scenes");
         EditorSceneManager.SaveScene(scene,"Assets/ArenaTatica/Scenes/Arena.unity");
         EditorBuildSettings.scenes=new[]{new EditorBuildSettingsScene("Assets/ArenaTatica/Scenes/Arena.unity",true)};
-        PlayerSettings.companyName="Arcanoclisma"; PlayerSettings.productName="Arena Tática"; PlayerSettings.bundleVersion="1.2.5";
-        PlayerSettings.Android.bundleVersionCode=8;
+        PlayerSettings.companyName="Arcanoclisma"; PlayerSettings.productName="Arena Tática"; PlayerSettings.bundleVersion="1.2.6";
+        PlayerSettings.Android.bundleVersionCode=9;
         PlayerSettings.defaultScreenWidth=1280; PlayerSettings.defaultScreenHeight=720; PlayerSettings.fullScreenMode=FullScreenMode.Windowed; PlayerSettings.resizableWindow=true; PlayerSettings.runInBackground=true;
         PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.Android,"org.arcanoclisma.arenatatica");
         PlayerSettings.WebGL.compressionFormat=WebGLCompressionFormat.Disabled;
@@ -129,10 +129,21 @@ public static class ArenaBuild
         EditorUserBuildSettings.buildAppBundle=false;
         Build(BuildTarget.Android,"Builds/Android/ArenaTatica.apk");
     }
+    // Arquivos do URP somem do PackageCache e da instalação do Unity (17–19/10, suspeita do CCleaner). Sem o ruído azul do SSAO
+    // o render quebra em todo quadro e a tela pisca: o build para e diz o que falta, em vez de sair quebrado.
+    static void CheckPackages()
+    {
+        foreach(var (pkg,dir) in new[]{("com.unity.render-pipelines.universal","Textures"),("com.unity.render-pipelines.universal","Runtime"),("com.unity.render-pipelines.core","Runtime")}) {
+            var info=UnityEditor.PackageManager.PackageInfo.FindForAssetPath("Packages/"+pkg); if(info==null) continue;
+            string root=Path.Combine(info.resolvedPath,dir); if(!Directory.Exists(root)) continue;
+            var missing=Directory.GetFiles(root,"*.meta",SearchOption.AllDirectories).Select(m=>m.Substring(0,m.Length-5)).Where(f=>!File.Exists(f)&&!Directory.Exists(f)).ToList();
+            if(missing.Count>0) throw new Exception($"Pacote {pkg} incompleto ({missing.Count} arquivos apagados): "+string.Join(", ",missing.Take(5).Select(Path.GetFileName)));
+        }
+    }
     static void Build(BuildTarget target,string destination)
     {
-        PlayerSettings.companyName="Arcanoclisma"; PlayerSettings.productName="Arena Tática"; PlayerSettings.bundleVersion="1.2.5"; PlayerSettings.Android.bundleVersionCode=8;
-        EnsureMaterials();
+        PlayerSettings.companyName="Arcanoclisma"; PlayerSettings.productName="Arena Tática"; PlayerSettings.bundleVersion="1.2.6"; PlayerSettings.Android.bundleVersionCode=9;
+        EnsureMaterials(); CheckPackages();
         if(!BuildPipeline.IsBuildTargetSupported(BuildPipeline.GetBuildTargetGroup(target),target)) throw new Exception("Módulo não instalado: "+target);
         Directory.CreateDirectory(Path.GetDirectoryName(destination));
         var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions { scenes=EditorBuildSettings.scenes.Where(s=>s.enabled).Select(s=>s.path).ToArray(), locationPathName=destination, target=target, options=BuildOptions.None });

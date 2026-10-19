@@ -19,7 +19,7 @@ namespace ArenaTatica.Core
         // Gera pelo cenário de s.theme (já escolhido): aberto ou fechado.
         public static void Generate(MatchState s,bool flat)
         {
-            s.rooms=new int[0];
+            s.rooms=new int[0]; s.areas=new int[0];
             if(!flat&&Closed(s.theme)) { GenerateClosed(s); return; }
             float k=s.width*s.height/144f; var best=new Best();
             for(int attempt=0;attempt<30;attempt++)
@@ -360,21 +360,21 @@ namespace ArenaTatica.Core
             return over;
         }
         // Melhor tentativa até agora (menos injusta), para não cair no mapa vazio.
-        sealed class Best { public int score=int.MaxValue; public Tile[] tiles; public List<Decor> decor; }
+        sealed class Best { public int score=int.MaxValue; public Tile[] tiles; public List<Decor> decor; public int[] rooms, areas; }
         static bool Keep(MatchState s,Best best)
         {
             int u=Unfairness(s); if(u==0) return true;
-            if(u<best.score) { best.score=u; best.tiles=s.tiles.Select(Copy).ToArray(); best.decor=s.decor.Select(d=>new Decor{piece=d.piece,x=d.x,z=d.z,rot=d.rot,scale=d.scale}).ToList(); }
+            if(u<best.score) { best.score=u; best.tiles=s.tiles.Select(Copy).ToArray(); best.decor=s.decor.Select(d=>new Decor{piece=d.piece,x=d.x,z=d.z,rot=d.rot,scale=d.scale}).ToList(); best.rooms=s.rooms?.ToArray(); best.areas=s.areas?.ToArray(); }
             return false;
         }
-        static bool Restore(MatchState s,Best best) { if(best.tiles==null) return false; s.tiles=best.tiles; s.decor=best.decor; return true; }
+        static bool Restore(MatchState s,Best best) { if(best.tiles==null) return false; s.tiles=best.tiles; s.decor=best.decor; s.rooms=best.rooms??new int[0]; s.areas=best.areas??new int[0]; return true; }
         // ── Mapas do editor ──
         public static int PlayersFor(int size) => size<=Board.Size?2:size<=16?4:6;
         public static bool Fits(MapDef m,int size) => m?.tiles!=null&&m.width==size&&m.tiles.Length==size*size;
         // Copia relevo, peças e zona; as casas de início de todos os grupos ficam livres.
         public static void Load(MatchState s,MapDef m)
         {
-            s.rooms=new int[0];
+            s.rooms=new int[0]; s.areas=new int[0];
             for(int i=0;i<s.tiles.Length;i++) { var t=m.tiles[i]; s.tiles[i]=new Tile{ height=UnityEngine.Mathf.Clamp(t.height,0,Board.MaxHeight), terrain=t.terrain==Terrain.Loja?Terrain.Livre:t.terrain, zone=t.zone, obj=t.obj }; }
             Center(s);
             for(int slot=0;slot<PlayersFor(s.width);slot++) foreach(var c in Spawns(s,slot)) { s.At(c).terrain=Terrain.Livre; s.At(c).obj=0; }
@@ -483,7 +483,8 @@ namespace ArenaTatica.Core
             float k=s.width*s.height/144f; var best=new Best(); int hub=(N-1)/2;
             for(int attempt=0;attempt<40;attempt++)
             {
-                Clear(s); s.decor=new List<Decor>(); s.rooms=new int[0]; foreach(var t in s.tiles) t.terrain=Terrain.Parede;
+                Clear(s); s.decor=new List<Decor>(); s.rooms=new int[0]; s.areas=new int[0]; foreach(var t in s.tiles) t.terrain=Terrain.Parede;
+                var areas=new List<int>(); void Area(Cell lo,Cell hi) => areas.AddRange(new[]{Math.Min(lo.x,hi.x),Math.Min(lo.z,hi.z),Math.Max(lo.x,hi.x),Math.Max(lo.z,hi.z)});
                 for(int i=0;i<N;i++) for(int j=0;j<N;j++) { var c=Corner(s,i,j); OpenRect(s,c,c+new Cell(1,1)); }
                 // Árvore (Kruskal) com o par espelhado de cada passagem: liga tudo e já cria alguns laços.
                 var edges=new List<(int i,int j,bool up)>();
@@ -502,7 +503,7 @@ namespace ArenaTatica.Core
                 // Laços extras: mais corredores e caminhos alternativos.
                 foreach(var e in edges) if(!carved.Contains(e)&&Dice.Range(s,100)<20) { Carve(e); Carve(MirrorEdge(N,e)); }
                 // Salão do meio (3×3 células) com a loja e a zona.
-                OpenRect(s,Corner(s,hub-1,hub-1),Corner(s,hub+1,hub+1)+new Cell(1,1));
+                OpenRect(s,Corner(s,hub-1,hub-1),Corner(s,hub+1,hub+1)+new Cell(1,1)); Area(Corner(s,hub-1,hub-1),Corner(s,hub+1,hub+1)+new Cell(1,1));
                 // Salas de início: uma por slot de baixo (2×2 células na 1ª fileira), espelhada em cima para o slot ímpar.
                 var taken=new bool[N];
                 var rooms=new int[4*s.players]; bool ok=true;
@@ -517,14 +518,15 @@ namespace ArenaTatica.Core
                     Isolate(s,lo,hi,true); Isolate(s,mlo,mhi,false);
                 }
                 if(!ok) continue;
-                s.rooms=rooms;
+                s.rooms=rooms; areas.AddRange(rooms);
                 // Salas extras (2×2 células), espelhadas, fora do salão e das fileiras das salas de início.
                 for(int r=0,tries=0;r<Math.Max(1,(int)Math.Round(k/3))&&tries<40;tries++) {
                     int i=Dice.Range(s,N-1), j=2+Dice.Range(s,Math.Max(1,N-5));
                     if(i+1>=hub-1&&i<=hub+1&&j+1>=hub-1&&j<=hub+1) continue;
                     var lo=Corner(s,i,j); var hi=Corner(s,i+1,j+1)+new Cell(1,1);
-                    OpenRect(s,lo,hi); OpenRect(s,s.Mirror(hi),s.Mirror(lo)); r++;
+                    OpenRect(s,lo,hi); OpenRect(s,s.Mirror(hi),s.Mirror(lo)); Area(lo,hi); Area(s.Mirror(hi),s.Mirror(lo)); r++;
                 }
+                s.areas=areas.ToArray();
                 foreach(var c in ShopCells(s)) s.At(c).height=1;
                 foreach(var c in ZoneRing(s)) s.At(c).height=1;
                 Center(s,true);
@@ -636,6 +638,7 @@ namespace ArenaTatica.Core
                     rooms.Add((x0,z0,x0+w-1,z0+d-1));
                 }
                 foreach(var r in rooms) for(int x=r.x0;x<=r.x1;x++) for(int z=r.z0;z<=r.z1;z++) Open(s,new Cell(x,z));
+                s.areas=rooms.SelectMany(r=>new[]{Math.Max(0,r.x0),Math.Max(0,r.z0),Math.Min(s.width-1,r.x1),Math.Min(s.height-1,r.z1)}).ToArray();
                 // Corredores em L do centro de cada sala ao salão do meio; às vezes também até a sala anterior (dá voltas).
                 var hall=new Cell(cx+Dice.Range(s,2),cz+Dice.Range(s,2));
                 for(int i=1;i<rooms.Count;i++) {

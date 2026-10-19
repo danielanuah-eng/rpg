@@ -3,8 +3,8 @@ using System.Linq;
 
 namespace ArenaTatica.Core
 {
-    // Névoa do labirinto (autor, 18/10 noite): cada time vê só as casas coladas (as 8 em volta, diagonal incluída) nos seus
-    // lutadores vivos. O que o time já viu fica na memória (paredes, chão, portas, portais, braseiro, vela), escurecido e sem
+    // Névoa do labirinto (autor, 18/10 noite): cada time vê as casas coladas (as 8 em volta, diagonal incluída) nos seus
+    // lutadores vivos e a sala inteira onde cada um está (MatchState.areas, 19/10). O que o time já viu fica na memória (paredes, chão, portas, portais, braseiro, vela), escurecido e sem
     // lutadores, armadilhas, moedas nem baús. Acender a vela tira a névoa do mapa todo para todos. O Host guarda a memória
     // (MatchState.explored) e cada jogador recebe só o que conhece (Match.ViewFor); andar no escuro segue o que ele conhece.
     public static class Fog
@@ -16,7 +16,12 @@ namespace ArenaTatica.Core
             var seen=new bool[s.tiles.Length];
             foreach(var f in s.fighters) {
                 if(!f.Alive||!s.Ally(f.team,player)||!Board.Contains(s,f.cell)) continue;
-                foreach(var c in Board.Footprint(f)) for(int x=-1;x<=1;x++) for(int z=-1;z<=1;z++) { var n=c+new Cell(x,z); if(Board.Contains(s,n)) seen[Board.Index(s,n)]=true; }
+                foreach(var c in Board.Footprint(f)) {
+                    for(int x=-1;x<=1;x++) for(int z=-1;z<=1;z++) { var n=c+new Cell(x,z); if(Board.Contains(s,n)) seen[Board.Index(s,n)]=true; }
+                    // Dentro de uma sala vê a sala inteira, com as paredes e portas em volta (autor, 19/10).
+                    var a=s.areas; for(int i=0;a!=null&&i+3<a.Length;i+=4) if(c.x>=a[i]&&c.x<=a[i+2]&&c.z>=a[i+1]&&c.z<=a[i+3])
+                        for(int x=a[i]-1;x<=a[i+2]+1;x++) for(int z=a[i+1]-1;z<=a[i+3]+1;z++) { var n=new Cell(x,z); if(Board.Contains(s,n)) seen[Board.Index(s,n)]=true; }
+                }
             }
             return seen;
         }

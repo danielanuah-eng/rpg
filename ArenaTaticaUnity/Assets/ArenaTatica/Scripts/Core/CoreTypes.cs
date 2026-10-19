@@ -236,6 +236,8 @@ namespace ArenaTatica.Core
         public List<int> sprung=new List<int>();
         // Sala de início de cada grupo de spawn no labirinto: x0,z0,x1,z1 por slot (vazio = casas fixas de MapGen.Spawns).
         public int[] rooms=new int[0];
+        // Salas do labirinto (início, salão do meio e extras): x0,z0,x1,z1 cada; na névoa, quem está numa vê a sala inteira.
+        public int[] areas=new int[0];
         // Casas compactadas só para a rede (Pack): o snapshot de 42×42 não cabia nos 64 KB do WebSocket.
         public string packed;
         // Mapa com paredes (labirinto).

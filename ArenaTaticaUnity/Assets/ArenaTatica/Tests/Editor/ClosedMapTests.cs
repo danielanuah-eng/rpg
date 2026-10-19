@@ -204,6 +204,41 @@ namespace ArenaTatica.Core.Tests
             var candle=new Cell(9,3); S.At(candle).terrain=Terrain.Caixa; S.At(candle).Obj=TileObj.Vela;
             Assert.IsTrue(Act("acender",candle)); Assert.AreEqual(TileObj.Bau,Match.ViewFor(S,e.team).At(new Cell(8,8)).Obj);
         }
+        // Sala (autor, 19/10): quem está numa sala vê a sala inteira, com paredes e portas em volta, e quem estiver nela.
+        [Test] public void FogShowsTheWholeRoomAroundTheFighter()
+        {
+            Clear(); var a=A; var e=Enemy; a.cell=new Cell(2,2); e.cell=new Cell(5,5); S.fog=true; S.areas=new[]{1,1,5,5};
+            var door=new Cell(3,6); S.At(door).terrain=Terrain.Porta; var far=new Cell(3,7); S.At(far).terrain=Terrain.Caixa; Fog.Explore(S);
+            Assert.IsTrue(Match.Sees(S,a.team,e),"inimigo na mesma sala aparece");
+            var view=Match.ViewFor(S,a.team);
+            Assert.AreEqual(Terrain.Porta,view.At(door).terrain,"porta da sala aparece"); Assert.AreEqual(Terrain.Livre,view.At(far).terrain,"fora da sala não");
+            a.cell=new Cell(8,8); Assert.IsFalse(Match.Sees(S,a.team,e),"fora da sala só as coladas");
+        }
+        // Labirinto de verdade: o herói vê a própria sala de início (com as portas) e sai dela abrindo uma porta.
+        [Test] public void HeroSeesStartRoomDoorsAndWalksOut()
+        {
+            foreach(uint seed in new uint[]{1,2,3,4,5,6}) {
+                var team=new PlayerSetup{fighters=new[]{"ciantia"}};
+                var m=Match.New(new MatchSetup{ seed=seed, theme=MapGen.OpenThemes, players=new[]{team,team} });
+                var s=m.S; var f=s.Active; string where="seed "+seed;
+                var mine=Enumerable.Range(0,s.players).Select(sl=>MapGen.Room(s,sl)).First(r=>f.cell.x>=r[0]&&f.cell.x<=r[2]&&f.cell.z>=r[1]&&f.cell.z<=r[3]);
+                Assert.Greater(s.areas.Length,8,"salas guardadas: "+where);
+                var view=Match.ViewFor(s,f.team);
+                var doors=Enumerable.Range(0,s.tiles.Length).Select(i=>new Cell(i%s.width,i/s.width)).Where(c=>s.At(c).terrain==Terrain.Porta&&c.x>=mine[0]-1&&c.x<=mine[2]+1&&c.z>=mine[1]-1&&c.z<=mine[3]+1).ToList();
+                Assert.Greater(doors.Count,0,"sala com porta: "+where);
+                Assert.IsTrue(doors.All(d=>view.At(d).terrain==Terrain.Porta),"portas da sala à vista: "+where);
+                // Anda até colar numa porta, abre e passa.
+                for(int turn=0;turn<6&&!doors.Any(d=>Board.Gap(f,d)==1);turn++) {
+                    f.pm=3; var costs=Board.Costs(Match.ViewFor(s,f.team),f); var door=doors.OrderBy(d=>d.Distance(f.cell)).First();
+                    var to=Enumerable.Range(0,s.tiles.Length).Where(i=>costs[i]>0&&costs[i]<=f.pm).Select(i=>new Cell(i%s.width,i/s.width)).OrderBy(c=>c.Distance(door)).First();
+                    Assert.IsTrue(m.Apply(new Command{kind="mover",fighter=f.id,cell=to,revision=s.revision},f.team,out _,out var why),why);
+                }
+                var next=doors.First(d=>Board.Gap(f,d)==1);
+                f.pm=System.Math.Max(f.pm,1);
+                Assert.IsTrue(m.Apply(new Command{kind="abrir",fighter=f.id,cell=next,revision=s.revision},f.team,out _,out var reason),reason+" "+where);
+                Assert.AreEqual(Terrain.Livre,s.At(next).terrain,where);
+            }
+        }
         [Test] public void HiddenSpikesRiseWhenSteppedAndMonsterPaysGold()
         {
             Clear(); var a=A; a.cell=new Cell(3,3); Enemy.cell=new Cell(10,10); a.pm=3; S.fog=true; S.revealed=true;

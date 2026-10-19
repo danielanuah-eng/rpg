@@ -473,13 +473,13 @@ namespace ArenaTatica.Core
             if(MatchState.Player(f.team)) { S.coins[f.team]+=VelaMoedas; S.collected[S.Team(f.team)]+=VelaMoedas; }
             Emit(new GameEvent{kind="vela",actor=f.id,cell=c,value=VelaMoedas}); return true;
         }
-        // Névoa: o time vê quem é aliado e quem está nas casas coladas (8 em volta) de um aliado vivo (Fog).
+        // Névoa: o time vê quem é aliado e quem está nas casas que ele vê (coladas num aliado vivo ou na sala dele, Fog.Vision).
         public static bool Sees(MatchState s,int team,Fighter f)
         {
             if(!s.fog||s.revealed||team<=0||s.Ally(f.team,team)) return true;
             if(!Board.Contains(s,f.cell)) return false;
-            foreach(var a in s.fighters) if(a.Alive&&s.Ally(a.team,team)&&Board.Contains(s,a.cell)&&Board.Touch(a,f)) return true;
-            return false;
+            var seen=Fog.Vision(s,team);
+            return Board.Footprint(f).Any(c=>Board.Contains(s,c)&&seen[Board.Index(s,c)]);
         }
         // Escondido de quem olha: invisível (Esconder) ou na névoa.
         public static bool Concealed(MatchState s,int team,Fighter f) => !s.Ally(f.team,team)&&(f.hidden||!Sees(s,team,f));

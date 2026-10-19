@@ -1,0 +1,12 @@
+{
+    "version": "1.2.6",
+    "state": "publicado-itch-windows",
+    "protocol": 9,
+    "editMode": { "total": 461, "passed": 461, "failed": 0, "skipped": 0 },
+    "notes": "Tela piscando: faltavam texturas do URP (ruido azul do SSAO e grao de filme) apagadas do PackageCache e da instalacao do Unity; o render quebrava em todo quadro. Texturas restauradas do repositorio da Unity e o build agora para se o pacote estiver incompleto. 60 sprites/arquivos do jogo apagados no disco foram restaurados do git. Nevoa: quem esta numa sala ve a sala inteira (paredes e portas); o alcance de movimento aparece acima da nevoa. Protocolo 9: online so com a 1.2.6.",
+    "previousRelease": "release-1.2.5.json",
+    "platforms": {
+        "windows": { "channel": "eiediboy/bdx-master:windows", "userVersion": "2026.10.19-1.2.6", "state": "enviado" },
+        "android": { "state": "nao publicado", "reason": "Android parado pelo autor em 18/10" }
+    }
+}

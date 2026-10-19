@@ -13,7 +13,8 @@ namespace ArenaTatica
     [Serializable] public class WireMessage
     {
         // 7 (18/10): as fichas editadas vão numa mensagem "edits" antes de cada snapshot, fora dos estados.
-        public int protocol=8;
+        // 9 (19/10): salas do labirinto no estado (MatchState.areas) para a visão da névoa.
+        public int protocol=9;
         public string kind, text, token;
         public string[] fighters; // hello: time escolhido no aparelho do jogador
         public string[] pool;     // hello/escolha: pool do torneio
@@ -829,7 +830,7 @@ namespace ArenaTatica
             try { m=JsonUtility.FromJson<WireMessage>(text); } catch(Exception) { return; }
             if(m==null) return;
             if(m.state!=null&&!string.IsNullOrEmpty(m.state.packed)) { m.state.tiles=MatchState.Unpack(m.state.packed,m.state.width*m.state.height); m.state.packed=null; }
-            if(m.protocol!=8) {
+            if(m.protocol!=9) {
                 const string update="Versões diferentes. Atualize a Arena Tática nos dois aparelhos.";
                 if(Network.IsHost&&m.kind=="hello") Send(peer,new WireMessage{protocol=m.protocol,kind="full",text=update});
                 else if(Client) { Network.Close(); Recovery=true; Synced=false; Status=update; }
