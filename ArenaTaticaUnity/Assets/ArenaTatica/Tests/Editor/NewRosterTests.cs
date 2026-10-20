@@ -366,5 +366,28 @@ namespace ArenaTatica.Core.Tests
             }
             Assert.IsNull(ArenaTatica.ArenaGame.Unzip("Znão-é-base64"));
         }
+
+        [Test] public void TeaExplosionKillsButlerRightAway()
+        {
+            New(new[]{"pilis"},new[]{"rei-bobett"});
+            var pilis=Get("pilis"); var rei=Get("rei-bobett"); Put(pilis,2,2); Put(rei,2,5);
+            Turn(pilis); Assert.IsTrue(Skill(pilis,"explosao-do-cha",rei.cell));
+            Assert.IsFalse(pilis.Alive,"o mordomo cai junto"); Assert.IsTrue(pilis.deathProcessed);
+            Assert.IsTrue(rei.buffs.Exists(b=>b.taken==2),"o alvo fica vulnerável mesmo assim");
+        }
+
+        [Test] public void EllieTakesFullRangedDamageAndControl()
+        {
+            New(new[]{"pistoleira"},new[]{"ellie","talyssa"});
+            var pist=Get("pistoleira"); var ellie=Get("ellie"); var tal=Get("talyssa"); Put(pist,2,2); Put(ellie,2,5); Put(tal,5,2);
+            // Escudo no dado de defesa: bloqueia 1 na Talyssa, não na Ellie.
+            m.Forced.Clear(); m.Forced.Enqueue(Face.Trava); m.Forced.Enqueue(Face.Escudo); for(int i=0;i<50;i++) m.Forced.Enqueue(Face.Trava);
+            Turn(pist); int hp=ellie.hp; Assert.IsTrue(Skill(pist,"bala-de-impacto",ellie.cell)); Assert.AreEqual(hp-1,ellie.hp,"de longe não bloqueia");
+            m.Forced.Clear(); m.Forced.Enqueue(Face.Trava); m.Forced.Enqueue(Face.Escudo); for(int i=0;i<50;i++) m.Forced.Enqueue(Face.Trava);
+            pist.pa=6; pist.used.Clear(); hp=tal.hp; Assert.IsTrue(Skill(pist,"bala-de-impacto",tal.cell)); Assert.AreEqual(hp,tal.hp,"os outros bloqueiam");
+            // Imunidade (Chá protetor) não segura o atordoamento nela.
+            Put(ellie,2,5); ellie.buffs.Add(new Buff{id="cha-protetor",turns=2,immune=1});
+            pist.pa=6; pist.used.Clear(); Assert.IsTrue(Skill(pist,"agarrao-espectral",ellie.cell)); Assert.AreEqual(1,ellie.stunned);
+        }
     }
 }

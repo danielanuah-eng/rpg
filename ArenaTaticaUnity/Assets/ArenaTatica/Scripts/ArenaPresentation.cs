@@ -149,7 +149,34 @@ namespace ArenaTatica
             ["bola-de-fogo"]=(ShotKind.Bomba,C(1,.45f,.15f)), ["faisca-laranja"]=(ShotKind.Orbe,C(1,.6f,.2f)), ["faisca-branca"]=(ShotKind.Orbe,C(.95f,.95f,1)),
             ["faisca-malhada"]=(ShotKind.Orbe,C(.75f,.75f,.8f)), ["faisca-manchada"]=(ShotKind.Orbe,C(.6f,.4f,.25f)), ["canhao-de-peito"]=(ShotKind.Bomba,C(.35f,.3f,.3f)),
             ["corrente"]=(ShotKind.Lamina,C(.7f,.72f,.75f)), ["corrente-de-ferro"]=(ShotKind.Lamina,C(.7f,.72f,.75f)), ["agulha"]=(ShotKind.Bala,C(.8f,.95f,.9f)),
-            ["prisao-dos-pesadelos"]=(ShotKind.Orbe,C(.5f,.2f,.7f)), ["raizes"]=(ShotKind.Orbe,C(.4f,.7f,.3f)), ["arremessar-pedra"]=(ShotKind.Bomba,C(.55f,.45f,.35f)) };
+            ["prisao-dos-pesadelos"]=(ShotKind.Orbe,C(.5f,.2f,.7f)), ["raizes"]=(ShotKind.Orbe,C(.4f,.7f,.3f)), ["arremessar-pedra"]=(ShotKind.Bomba,C(.55f,.45f,.35f)),
+            // Elenco de 21/10.
+            ["pistolas-espectrais"]=(ShotKind.Bala,C(.45f,.95f,1)), ["bala-de-impacto"]=(ShotKind.Bala,C(.7f,.5f,1)), ["agarrao-espectral"]=(ShotKind.Orbe,C(.45f,.95f,1)),
+            ["estilhaco"]=(ShotKind.Lamina,C(.75f,.95f,1)), ["selar-ultimate"]=(ShotKind.Raio,C(.85f,.8f,1)), ["espelho-purificador"]=(ShotKind.Orbe,C(.8f,1,1)),
+            ["xicara-voadora"]=(ShotKind.Lamina,C(.95f,.85f,.7f)), ["explosao-do-cha"]=(ShotKind.Bomba,C(1,.65f,.25f)), ["kunai-corrente"]=(ShotKind.Lamina,C(.9f,.15f,.2f)),
+            ["lanca-de-sangue"]=(ShotKind.Raio,C(.8f,.05f,.1f)), ["corte-cosmico"]=(ShotKind.Raio,C(.65f,.4f,1)), ["troca-de-vida"]=(ShotKind.Raio,C(1,.1f,.15f)),
+            ["black-hole"]=(ShotKind.Orbe,C(.35f,.1f,.55f)), ["missil-lela"]=(ShotKind.Bomba,C(1,.2f,.3f)) };
+        // Tamanho do projétil por skill (Dragão Dourado da Ciantia maior, autor 21/10).
+        static readonly Dictionary<string,float> ShotScale=new Dictionary<string,float>{ ["dragao-dourado"]=2.2f };
+        // Toda skill sem entrada em Shots ganha um estilo próprio: tipo pelo que ela faz/nome e cor fixa sorteada pelo id.
+        static readonly Dictionary<string,(ShotKind kind,Color color)> autoShots=new Dictionary<string,(ShotKind,Color)>();
+        static (ShotKind kind,Color color) Style(string skill)
+        {
+            if(string.IsNullOrEmpty(skill)) return (ShotKind.Orbe,Gold);
+            if(Shots.TryGetValue(skill,out var st)||autoShots.TryGetValue(skill,out st)) return st;
+            var sk=Content.AnySkill(skill); string n=((sk?.name??"")+" "+skill).ToLowerInvariant();
+            bool Has(params string[] w) => w.Any(n.Contains);
+            var kind=sk!=null&&(sk.beam||sk.line&&sk.damage>0)?ShotKind.Raio
+                :Has("tiro","bala","pistol","disparo")?ShotKind.Bala
+                :Has("flecha","arco","lança","lanca","dardo")?ShotKind.Flecha
+                :Has("sopro","bafo","cone","baforada")?ShotKind.Sopro
+                :Has("kunai","lâmina","lamina","faca","adaga","estilha","xícara","corte","shuriken")?ShotKind.Lamina
+                :sk!=null&&sk.area>0||Has("bomba","pedra","explos","míssil","missil")?ShotKind.Bomba:ShotKind.Orbe;
+            uint h=2166136261; foreach(char ch in skill) h=(h^ch)*16777619;
+            return autoShots[skill]=(kind,Color.HSVToRGB(h%360/360f,.7f,1));
+        }
+        static bool MirrorSkill(string skill) => skill=="estilhaco"||skill=="espelho-purificador"||skill=="selar-ultimate"||skill=="olhar-do-espelho"||skill=="espelho-de-retorno";
+        static readonly Color MirrorColor=C(.75f,.95f,1);
         public static Vector3 Position(MatchState s,Cell c,int height) => new Vector3(c.x-(s.width-1)*.5f,height*HStep,c.z-(s.height-1)*.5f);
         public static Vector3 Position(MatchState s,Cell c) => Board.Contains(s,c)?Position(s,c,s.At(c).height):Vector3.zero;
         // Onde fica o lutador com o canto em c: o grande (Primal Beast, 2×2) no meio das casas dele, na mais alta.
@@ -202,7 +229,7 @@ namespace ArenaTatica
             baseMaterial=Material(new Color(.16f,.2f,.27f));
             boardBase=Cube("BaseDoTabuleiro",new Vector3(0,-.4f,0),new Vector3(Board.Size+.4f,.3f,Board.Size+.4f),baseMaterial,world);
             voices=new AudioSource[12]; for(int i=0;i<voices.Length;i++) { voices[i]=gameObject.AddComponent<AudioSource>(); voices[i].playOnAwake=false; voices[i].volume=.25f; }
-            foreach(string sound in new[]{"attack","breath","death","turn"}) sounds[sound]=Resources.Load<AudioClip>("Audio/"+sound);
+            foreach(string sound in new[]{"attack","breath","death","turn","lela-pulse"}) sounds[sound]=Resources.Load<AudioClip>("Audio/"+sound);
             Ready=true; FitCamera();
         }
         Material Material(Color color,Texture texture=null)
@@ -611,8 +638,9 @@ namespace ArenaTatica
                     if(coin) coin.name=CoinName(c);
                     markers.Add(coin?coin:Cube(CoinName(c),p+Vector3.up*(.06f+.07f*i),new Vector3(.32f,.05f,.32f),coinMaterial,world));
                 }
-                // Só quem é aliado do dono vê a armadilha (ownerOnly); a mina de gelo usa a tira de objeto em laço.
-                if(t.trap!=0&&(viewer==0||s.Ally(t.trap,viewer))) markers.Add((t.trapPa>0?ObjectLoop("mina-de-gelo-armada",p):null)??Cube("Armadilha",p+Vector3.up*.02f,new Vector3(.55f,.03f,.55f),t.trapPa>0?iceMaterial:trapMaterial,world));
+                // Só quem é aliado do dono vê a armadilha (ownerOnly); a mina de gelo usa a tira de objeto em laço. Bomba invisível
+                // (dono neutro) nunca aparece, nem para quem vê tudo: só surge na explosão.
+                if(t.trap!=0&&t.trap!=MatchState.Neutral&&(viewer==0||s.Ally(t.trap,viewer))) markers.Add((t.trapPa>0?ObjectLoop("mina-de-gelo-armada",p):null)??Cube("Armadilha",p+Vector3.up*.02f,new Vector3(.55f,.03f,.55f),t.trapPa>0?iceMaterial:trapMaterial,world));
                 if(t.Obj==TileObj.Bau&&DungeonProp("chest",p,0,1,world) is GameObject chest) { chest.name=ChestName(c); markers.Add(chest); }
                 if(t.lava) markers.Add(Overlay("lava",p,lavaMaterial,.94f));
                 if(t.frozenBy!=0) markers.Add(Overlay("gelo",p,iceMaterial,.9f));
@@ -625,7 +653,7 @@ namespace ArenaTatica
             foreach(var g in s.portals??new List<Portal>()) foreach(int i in new[]{g.a,g.b})
                 if(!Fog.On(s)||Game.LocalTeam<=0||Fog.Explored(s,Game.LocalTeam,i)) markers.Add(PortalMark(Position(s,new Cell(i%s.width,i/s.width)),i==g.a));
             // Minas terrestres do time: placa menor que a armadilha.
-            foreach(int i in s.mines??new List<int>()) if(i>=0&&i<s.tiles.Length&&s.tiles[i].trap!=0&&(viewer==0||s.Ally(s.tiles[i].trap,viewer)))
+            foreach(int i in s.mines??new List<int>()) if(i>=0&&i<s.tiles.Length&&s.tiles[i].trap!=0&&s.tiles[i].trap!=MatchState.Neutral&&(viewer==0||s.Ally(s.tiles[i].trap,viewer)))
                 markers.Add(Cube("Mina",Position(s,new Cell(i%s.width,i/s.width))+Vector3.up*.05f,new Vector3(.3f,.06f,.3f),markMaterial,world));
             foreach(var f in s.fighters.Where(f=>f.Alive&&f.prisoned>0&&Board.Contains(s,f.cell))) {
                 var p=Spot(s,f,f.cell); float h=Heights.TryGetValue(f.def,out float hh)?hh:.75f;
@@ -862,7 +890,7 @@ namespace ArenaTatica
                         }
                         Sound("attack");
                         if(e.value<0) { Float(target.position,"Errou!",Blue); React(target,0); }
-                        else if(e.value>0||(dealt?.damage??1)>0) { Hit(target,actor.position,e.value,Shots.TryGetValue(look??"",out var hue)?hue.color:C(1,.85f,.6f)); Float(target.position,"−"+e.value,Gold); Turn(target,actor.position-target.position); React(target,e.value); }
+                        else if(e.value>0||(dealt?.damage??1)>0) { Hit(target,actor.position,e.value,Style(look).color); Float(target.position,"−"+e.value,Gold); Turn(target,actor.position-target.position); React(target,e.value); }
                         if(swing>0) yield return Wait(swing*.4f); else if(main) yield return Pulse(actor);
                     }
                     else if(actor&&e.target==0&&Board.Contains(s,e.cell)) {
@@ -997,6 +1025,7 @@ namespace ArenaTatica
                     else if(Board.Contains(s,e.cell)) { if(actor) PlayClip(actor,"heal"); PhaseFx(Content.BaseSkill(e.info)+"/impacto",Position(s,e.cell)+Vector3.up*.3f); Flash(Position(s,e.cell)+Vector3.up*.3f,Green); }
                     yield return Wait(.4f); break;
                 case "armadilha":
+                    if(e.info=="mina") Explode(Position(s,e.cell)+Vector3.up*.3f,C(1,.5f,.15f));
                     if(target) { Hit(target,target.position+Vector3.back,e.value,Red); Float(target.position,"−"+e.value,Red); PlayClip(target,"hit"); }
                     Game.Hud?.Log($"{Name(s,e.target)} pisou numa armadilha: {e.value} de dano");
                     yield return Wait(.45f); break;
@@ -1011,6 +1040,9 @@ namespace ArenaTatica
                         if(actor&&by!=null) { PhaseFx(by+"/conjuracao",actor.position+Vector3.up*.9f); if(EffectFrames(by+"/impacto")!=null) { PhaseFx(by+"/impacto",Position(s,f.cell)+Vector3.up*.4f); call=ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+by+"/impacto"); } }
                         cast=Mathf.Max(cast*.6f,call); if(cast>0) yield return Wait(cast);
                         var u=units[f.id]=CreateUnit(f); u.position=Spot(s,f,f.cell); if(actor) Turn(u,u.position-actor.position);
+                        // Vampiros chegam por um portal de sangue que abre, solta a criatura e fecha.
+                        if(f.def=="chefe-cria-vampirica"||f.def=="cria-vampirica") { yield return BloodPortal(u.position,u,f.def=="chefe-cria-vampirica"?1.3f:.9f); Game.Hud?.Log(e.actor==0?$"Surgiu {Name(s,e.target)}":$"{Name(s,e.actor)} invocou {Name(s,e.target)}"); break; }
+                        if(f.def=="replica-vampirica") Flash(u.position+Vector3.up*.6f,C(.85f,.05f,.12f),20);
                         float rise=PlayClip(u,"spawn"); // quem tem arte de surgimento usa a arte; os outros pulsam
                         if(rise>0) yield return Wait(rise); else yield return Pulse(u);
                     }
@@ -1046,7 +1078,7 @@ namespace ArenaTatica
                     if(actor) {
                         if(e.dice!=null) { Game.Hud?.RollDice(e.dice,new[]{"Ataque","Defesa"}); yield return Wait(ArenaHud.DiceLand); }
                         var sk=Content.AnySkill(e.info); float sw=PlayClip(actor,sk?.anim??"attack"); if(sw==0) sw=PlayClip(actor,"attack");
-                        StartCoroutine(Ring(actor.position+Vector3.up*.05f,e.value,Shots.TryGetValue(Content.BaseSkill(e.info),out var ring)?ring.color:Gold));
+                        AreaBlast(actor.position,e.value,Style(Content.BaseSkill(e.info)).color); if(MirrorSkill(Content.BaseSkill(e.info))) MirrorShatter(actor.position+Vector3.up*.6f,e.value);
                         StartCoroutine(Fx(Content.BaseSkill(e.info),actor.position+Vector3.up*.6f,Gold,.3f,"conjuracao")); Sound("attack");
                         yield return Wait(sw>0?sw*.55f:.35f);
                     }
@@ -1055,6 +1087,9 @@ namespace ArenaTatica
                 case "zona":
                     if(actor) { Turn(actor,Position(s,e.cell)-actor.position); PlayClip(actor,Content.AnySkill(e.info)?.anim??"attack"); PhaseFx(ArenaEfeitos.SkillPhase(e.info,"conjuracao"),actor.position+Vector3.up*.9f); }
                     if(e.path!=null) foreach(var c in e.path) StartCoroutine(Fx(e.info,Position(s,c)+Vector3.up*.1f,C(.7f,.9f,1),.1f));
+                    // Zona com arte própria ou não: partículas no chão da área toda; o Olhar do espelho chove estilhaços.
+                    if(Board.Contains(s,e.cell)&&Content.AnySkill(e.info) is SkillDef zone&&zone.area>0) AreaBlast(Position(s,e.cell),zone.area,MirrorSkill(e.info)?MirrorColor:Style(e.info).color);
+                    if(MirrorSkill(e.info)&&e.path!=null) { foreach(var c in e.path) Burst(Position(s,c)+Vector3.up*1.6f,Spark,5,(.5f,1.5f),(.05f,.1f),(.4f,.7f),4f,MirrorColor,stretch:true); if(Board.Contains(s,e.cell)) StartCoroutine(Hexagon(Position(s,e.cell),Content.AnySkill(e.info)?.area??3,MirrorColor,.9f)); }
                     RefreshMarkers(s); yield return Wait(.45f);
                     Game.Hud?.Log($"{Name(s,e.actor)}: {Content.AnySkill(e.info)?.name}");
                     break;
@@ -1093,6 +1128,7 @@ namespace ArenaTatica
                 case "anulacao-fim": if(target) Float(target.position,$"+{e.value} PA de volta",Green); yield return Wait(.2f); break;
                 case "anular": if(target) { Flash(target.position+Vector3.up,Violet,16); Float(target.position,"Anulado!",Violet); } Game.Hud?.Log($"{Name(s,e.actor)} anulou {Name(s,e.target)}"); yield return Wait(.25f); break;
                 case "pulso":
+                    Sound("lela-pulse");
                     if(actor) { PlayClip(actor,"pulse"); Flash(actor.position+Vector3.up,DomeColor(s.F(e.actor)),20); StartCoroutine(Ring(actor.position+Vector3.up*.05f,3,DomeColor(s.F(e.actor)))); }
                     Game.Hud?.Log($"{Name(s,e.actor)} disparou o L.E.L.A Pulse"); yield return Wait(.45f); break;
                 case "marca":
@@ -1111,8 +1147,14 @@ namespace ArenaTatica
                     if(target) { Float(target.position,$"Refletido −{e.value}",Red); PlayClip(target,"hit"); }
                     Game.Hud?.Log($"{Name(s,e.actor)} refletiu {e.value} de dano em {Name(s,e.target)}"); yield return Wait(.3f); break;
                 case "troca-vida":
+                    // Raio vermelho entre os dois enquanto as vidas trocam.
+                    if(actor&&target) { Turn(actor,target.position-actor.position); yield return Lightning(actor.position+Vector3.up*.8f,target.position+Vector3.up*.8f,C(1,.08f,.12f),.75f); }
                     if(actor) Flash(actor.position+Vector3.up,Red,16); if(target) { Flash(target.position+Vector3.up,Red,16); Float(target.position,"Vidas trocadas!",Red); }
                     Game.Hud?.Log($"{Name(s,e.actor)} trocou de vida com {Name(s,e.target)}"); yield return Wait(.35f); break;
+                case "autodestruir":
+                    // Explosão do chá: o mordomo explode junto (o nocaute vem logo depois).
+                    if(actor) { Flash(actor.position+Vector3.up,C(1,.8f,.4f),30); yield return Wait(.15f); Explode(actor.position+Vector3.up*.7f,C(1,.6f,.2f),1.4f); Float(actor.position,"Explodiu!",Red); }
+                    Game.Hud?.Log($"{Name(s,e.actor)} explodiu junto"); yield return Wait(.35f); break;
                 case "vulneravel": if(target) { Flash(target.position+Vector3.up,C(1,.6f,.25f),20); Float(target.position,$"Dano dobrado ({e.value})",C(1,.6f,.25f)); } Game.Hud?.Log($"{Name(s,e.target)} leva o dobro dos golpes por {e.value} turnos"); yield return Wait(.3f); break;
                 case "sem-cura": if(target) Float(target.position,"Sem cura neste turno",Red); yield return Wait(.2f); break;
                 case "sede": if(actor) Float(actor.position,$"Sede de sangue +{e.value} PM",Red); yield return Wait(.2f); break;
@@ -1123,7 +1165,9 @@ namespace ArenaTatica
                     yield return Wait(.3f); break;
                 case "suporte":
                     if(actor) {
-                        float sp=PlayClip(actor,Content.AnySkill(e.info)?.anim??"summon"); if(e.value>0) StartCoroutine(Ring(Position(s,e.cell)+Vector3.up*.05f,e.value,Green));
+                        float sp=PlayClip(actor,Content.AnySkill(e.info)?.anim??"summon"); if(e.value>0) AreaBlast(Position(s,e.cell),e.value,Green);
+                        // Espelho de retorno: hexágonos de espelho em volta de quem usa.
+                        if(MirrorSkill(e.info)) { StartCoroutine(Hexagon(actor.position,.7f,MirrorColor,1.2f)); StartCoroutine(Hexagon(actor.position+Vector3.up*.8f,.55f,MirrorColor,1.2f)); MirrorShatter(actor.position+Vector3.up*.8f,.4f); }
                         // Noite dos Gatos e outros suportes com arte: conjuração em si, impacto no centro da área.
                         PhaseFx(e.info+"/conjuracao",actor.position+Vector3.up*.9f);
                         float land=PhaseFx(e.info+"/impacto",Position(s,e.cell)+Vector3.up*.3f)>0?ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+e.info+"/impacto"):0;
@@ -1653,7 +1697,7 @@ namespace ArenaTatica
         GameObject Effect(string name) { var go=new GameObject(name); go.transform.SetParent(effectRoot); transient.Add(go); return go; }
         IEnumerator Shot(string skill,Vector3 from,Vector3 to,int area)
         {
-            (ShotKind kind,Color color) style=skill!=null&&Shots.TryGetValue(skill,out var st)?st:(ShotKind.Orbe,Gold);
+            var style=Style(skill); float big=skill!=null&&ShotScale.TryGetValue(skill,out var z)?z:1;
             from+=Vector3.up*.9f; var hit=to+Vector3.up*.8f;
             // Fases do disparo: conjuração no lançador, projétil (tira animada ou imagem estática) pela trajetória, impacto no destino.
             var cast=EffectFrames(skill+"/conjuracao"); var frames=ImpactPhase(skill,out var impactRes); var image=ProjectileImage(skill);
@@ -1661,27 +1705,35 @@ namespace ArenaTatica
             if(cast!=null) StartCoroutine(PlayEffect(cast,from,ArenaEfeitos.Fps("Sprites/Efeitos/"+skill+"/conjuracao",12)));
             // Projeteis/<skill>.png do Codex: imagem larga (128 px) estica como raio; as menores voam como projétil.
             bool beam=style.kind==ShotKind.Raio||style.kind==ShotKind.Sopro; if(image&&image.rect.width<128) beam=false;
-            if(beam) yield return Beam(from,hit,style.color,style.kind==ShotKind.Sopro,image);
-            else yield return Missile(from,hit,style.kind,style.color,flight,image);
+            if(beam) yield return Beam(from,hit,style.color,style.kind==ShotKind.Sopro,image,big);
+            else yield return Missile(from,hit,style.kind,style.color,flight,image,big);
             // O dano (depois do Shot) entra no quadro de colisão da fase de impacto, não no fim do voo.
             if(frames!=null) { StartCoroutine(PlayEffect(frames,hit,ArenaEfeitos.Fps(impactRes,14))); float lag=ArenaEfeitos.ImpactTime(impactRes,14); if(lag>0) yield return Wait(lag); }
             Flash(hit,style.color,area>0?40:20);
-            if(area>0) StartCoroutine(Ring(to+Vector3.up*.05f,area,style.color));
+            // Todo golpe de longe termina num estouro de partículas da cor dele; o de área explode no chão até o raio.
+            Burst(hit,Spark,(int)(16*big),(2f,4.5f*big),(.05f,.11f*big),(.25f,.5f),1f,style.color,stretch:true);
+            if(MirrorSkill(skill)) MirrorShatter(hit,Mathf.Max(.5f,area));
+            if(area>0) AreaBlast(to,area,style.color);
         }
-        IEnumerator Missile(Vector3 from,Vector3 to,ShotKind kind,Color color,Sprite[] frames,Sprite image)
+        IEnumerator Missile(Vector3 from,Vector3 to,ShotKind kind,Color color,Sprite[] frames,Sprite image,float big=1)
         {
             var go=Effect("Projetil"); go.transform.position=from;
             float dist=Vector3.Distance(from,to), speed=kind==ShotKind.Bala?18:kind==ShotKind.Flecha?14:kind==ShotKind.Bomba?7:9;
             float dur=Mathf.Clamp(dist/speed,.12f,.6f), arc=kind==ShotKind.Bomba?.6f+.25f*dist:kind==ShotKind.Flecha?.08f*dist:0;
             float width=kind==ShotKind.Bala?.07f:kind==ShotKind.Flecha?.05f:kind==ShotKind.Bomba?.24f:.17f;
             float length=kind==ShotKind.Flecha?.45f:kind==ShotKind.Bala?.22f:kind==ShotKind.Lamina?.4f:.01f;
+            width*=big; length*=big;
             var trail=go.AddComponent<TrailRenderer>(); trail.sharedMaterial=glowMaterial; trail.time=kind==ShotKind.Bomba?.25f:.16f;
             trail.widthMultiplier=width*(kind==ShotKind.Bala||kind==ShotKind.Flecha?.8f:.7f); trail.widthCurve=AnimationCurve.Linear(0,1,1,0);
             trail.startColor=color; trail.endColor=new Color(color.r,color.g,color.b,0); trail.numCapVertices=2; trail.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;
             LineRenderer head=null; SpriteRenderer sprite=null;
-            if(frames!=null) { sprite=new GameObject("Imagem",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); sprite.transform.SetParent(go.transform,false); sprite.sharedMaterial=spriteMaterial; sprite.sprite=frames[0]; sprite.transform.rotation=BoardCamera.transform.rotation; sprite.transform.localScale=Vector3.one; }
-            else if(image) { sprite=new GameObject("Imagem",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); sprite.transform.SetParent(go.transform,false); sprite.sharedMaterial=spriteMaterial; sprite.sprite=image; }
+            if(frames!=null) { sprite=new GameObject("Imagem",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); sprite.transform.SetParent(go.transform,false); sprite.sharedMaterial=spriteMaterial; sprite.sprite=frames[0]; sprite.transform.rotation=BoardCamera.transform.rotation; sprite.transform.localScale=Vector3.one*big; }
+            else if(image) { sprite=new GameObject("Imagem",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); sprite.transform.SetParent(go.transform,false); sprite.sharedMaterial=spriteMaterial; sprite.sprite=image; sprite.transform.localScale=Vector3.one*big; }
             else head=Line(go.transform,Color.Lerp(color,Color.white,.35f),width);
+            // Rastro de partículas em todo projétil (some junto com o rastro).
+            var dust=Particles("Rastro",go.transform,from,Color.Lerp(color,Color.white,.3f),90);
+            { var m=dust.main; m.loop=true; m.startLifetime=new ParticleSystem.MinMaxCurve(.2f,.45f); m.startSpeed=new ParticleSystem.MinMaxCurve(.1f,.6f); m.startSize=new ParticleSystem.MinMaxCurve(width*.5f,width*1.3f);
+              var em=dust.emission; em.rateOverDistance=kind==ShotKind.Bala?14:24; var sh=dust.shape; sh.shapeType=ParticleSystemShapeType.Sphere; sh.radius=width*.6f; dust.Play(); }
             var prev=from;
             for(float t=0;t<dur;t+=Time.deltaTime) {
                 float k=t/dur; var p=Vector3.Lerp(from,to,k)+Vector3.up*Mathf.Sin(k*Mathf.PI)*arc;
@@ -1691,20 +1743,21 @@ namespace ArenaTatica
                 if(sprite&&frames!=null) sprite.sprite=frames[(int)(t*12)%frames.Length]; if(sprite) Orient(sprite.transform,d);
                 yield return null;
             }
-            go.transform.position=to; if(head) head.enabled=false; if(sprite) sprite.enabled=false;
-            StartCoroutine(DisposeEffect(go,trail.time));
+            go.transform.position=to; if(head) head.enabled=false; if(sprite) sprite.enabled=false; dust.Stop(true,ParticleSystemStopBehavior.StopEmitting);
+            StartCoroutine(DisposeEffect(go,Mathf.Max(trail.time,.5f)));
         }
-        IEnumerator Beam(Vector3 from,Vector3 to,Color color,bool breath,Sprite image=null)
+        IEnumerator Beam(Vector3 from,Vector3 to,Color color,bool breath,Sprite image=null,float big=1)
         {
             var go=Effect("Raio");
-            float width=breath?.5f:.13f;
+            float width=(breath?.5f:.13f)*big;
             SpriteRenderer art=null; if(image) { art=new GameObject("Imagem",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); art.transform.SetParent(go.transform,false); art.sharedMaterial=spriteMaterial; art.sprite=image; width*=.5f; }
-            void Stretch(Vector3 tip,float alpha) { if(!art) return; art.transform.position=(from+tip)*.5f; Orient(art.transform,tip-from); float len=Vector3.ProjectOnPlane(tip-from,BoardCamera.transform.forward).magnitude; art.transform.localScale=new Vector3(len/image.bounds.size.x,breath?2:1.3f,1); art.color=new Color(1,1,1,alpha); }
+            void Stretch(Vector3 tip,float alpha) { if(!art) return; art.transform.position=(from+tip)*.5f; Orient(art.transform,tip-from); float len=Vector3.ProjectOnPlane(tip-from,BoardCamera.transform.forward).magnitude; art.transform.localScale=new Vector3(len/image.bounds.size.x,(breath?2:1.3f)*big,1); art.color=new Color(1,1,1,alpha); }
             var glow=Line(go.transform,new Color(color.r,color.g,color.b,.35f),width*2.2f); var core=Line(go.transform,Color.Lerp(color,Color.white,.4f),width);
             if(breath) glow.widthCurve=core.widthCurve=AnimationCurve.Linear(0,.2f,1,1);
             Flash(from,color,10);
             for(float t=0;t<.14f;t+=Time.deltaTime) { var tip=Vector3.Lerp(from,to,t/.14f); foreach(var l in new[]{glow,core}) { l.SetPosition(0,from); l.SetPosition(1,tip); } Stretch(tip,1); yield return null; }
             foreach(var l in new[]{glow,core}) { l.SetPosition(0,from); l.SetPosition(1,to); }
+            for(int i=1;i<=4;i++) Burst(Vector3.Lerp(from,to,i/4f),Spark,(int)(6*big),(1f,2.5f),(.04f*big,.09f*big),(.2f,.35f),0,color,stretch:true);
             for(float t=0;t<.3f;t+=Time.deltaTime) {
                 float fade=t<.12f?1:1-(t-.12f)/.18f, flicker=1+.15f*Mathf.Sin(t*80);
                 core.widthMultiplier=width*flicker*fade; glow.widthMultiplier=width*2.2f*flicker;
@@ -1764,6 +1817,119 @@ namespace ArenaTatica
                 r.color=new Color(1,1,1,t<.6f?1:1-(t-.6f)/.3f); yield return null;
             }
             transient.Remove(go); Destroy(go);
+        }
+        // ── VFX procedurais do pedido de 21/10 (sem arte própria) ──
+        ParticleSystem Particles(string name,Transform parent,Vector3 at,Color color,int max)
+        {
+            var go=new GameObject(name); go.transform.SetParent(parent??effectRoot); go.transform.position=at;
+            var ps=go.AddComponent<ParticleSystem>(); ps.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
+            var m=ps.main; m.loop=false; m.duration=.4f; m.maxParticles=max; m.startColor=color; m.simulationSpace=ParticleSystemSimulationSpace.World;
+            var em=ps.emission; em.rateOverTime=0;
+            var fade=ps.colorOverLifetime; fade.enabled=true; var g=new Gradient();
+            g.SetKeys(new[]{new GradientColorKey(Color.white,0),new GradientColorKey(color,.25f),new GradientColorKey(color,1)},new[]{new GradientAlphaKey(1,0),new GradientAlphaKey(1,.5f),new GradientAlphaKey(0,1)});
+            fade.color=g; ps.GetComponent<ParticleSystemRenderer>().sharedMaterial=Spark; return ps;
+        }
+        // Área: anel que abre e um chão de faíscas que sobe na área inteira.
+        void AreaBlast(Vector3 center,int area,Color color)
+        {
+            StartCoroutine(Ring(center+Vector3.up*.05f,area,color)); Flash(center+Vector3.up*.3f,color,30);
+            if(area<=0||transient.Count>=64) return;
+            var ps=Particles("AreaVfx",effectRoot,center+Vector3.up*.08f,color,220); transient.Add(ps.gameObject);
+            var m=ps.main; m.startLifetime=new ParticleSystem.MinMaxCurve(.35f,.75f); m.startSpeed=new ParticleSystem.MinMaxCurve(.3f,1.2f); m.startSize=new ParticleSystem.MinMaxCurve(.06f,.14f); m.gravityModifier=.5f;
+            var em=ps.emission; em.SetBursts(new[]{new ParticleSystem.Burst(0,(short)Mathf.Clamp(30+area*28,30,220))});
+            var sh=ps.shape; sh.shapeType=ParticleSystemShapeType.Circle; sh.radius=area+.4f; sh.radiusThickness=1; sh.rotation=new Vector3(-90,0,0);
+            var vel=ps.velocityOverLifetime; vel.enabled=true; vel.space=ParticleSystemSimulationSpace.World;
+            vel.x=new ParticleSystem.MinMaxCurve(0,0); vel.y=new ParticleSystem.MinMaxCurve(1.5f,3.2f); vel.z=new ParticleSystem.MinMaxCurve(0,0);
+            var r=ps.GetComponent<ParticleSystemRenderer>(); r.renderMode=ParticleSystemRenderMode.Stretch; r.velocityScale=.06f; r.lengthScale=1.5f;
+            ps.Play(); StartCoroutine(DisposeEffect(ps.gameObject,1.5f));
+        }
+        void Explode(Vector3 at,Color color,float size=1)
+        {
+            Burst(at,Spark,(int)(28*size),(3f*size,6.5f*size),(.07f,.16f),(.25f,.5f),.6f,color,stretch:true);
+            Burst(at,Spark,(int)(14*size),(.4f,1.4f),(.22f*size,.45f*size),(.5f,.9f),-.25f,Color.Lerp(color,Color.black,.55f));
+            Burst(at,FxMaterial(ref ringMaterial,ringTexture??=Radial(r=>1-Mathf.Abs(r-.8f)/.18f)),1,(0,0),(.4f,.4f),(.3f,.3f),0,Color.Lerp(color,Color.white,.5f),grow:3f*size);
+            Flash(at,Color.Lerp(color,Color.white,.4f),30); StartCoroutine(Shake(.12f*size,.3f));
+        }
+        // Raio quebrado que treme entre dois pontos (Troca de vida do Death Crimson).
+        IEnumerator Lightning(Vector3 a,Vector3 b,Color color,float time)
+        {
+            var go=Effect("RaioDeVida"); const int n=16;
+            var glow=Line(go.transform,new Color(color.r,color.g,color.b,.45f),.26f); var core=Line(go.transform,Color.Lerp(color,Color.white,.55f),.07f);
+            glow.positionCount=core.positionCount=n; float next=0;
+            Flash(a,color,14); Flash(b,color,14);
+            for(float t=0;t<time;t+=Time.deltaTime) {
+                if(t>=next) {
+                    next=t+.045f; var side=Vector3.Cross((b-a).normalized,BoardCamera.transform.forward).normalized;
+                    for(int i=0;i<n;i++) { float k=i/(n-1f); var p=Vector3.Lerp(a,b,k); if(i>0&&i<n-1) p+=(side*UnityEngine.Random.Range(-.3f,.3f)+Vector3.up*UnityEngine.Random.Range(-.12f,.12f))*Mathf.Sin(k*Mathf.PI); core.SetPosition(i,p); glow.SetPosition(i,p); }
+                    if(UnityEngine.Random.value<.35f) Burst(Vector3.Lerp(a,b,UnityEngine.Random.value),Spark,6,(1f,2.5f),(.04f,.08f),(.15f,.3f),0,color,stretch:true);
+                }
+                float fade=t>time-.2f?(time-t)/.2f:1;
+                core.widthMultiplier=.07f*fade*(1+.5f*UnityEngine.Random.value); glow.startColor=glow.endColor=new Color(color.r,color.g,color.b,.45f*fade);
+                yield return null;
+            }
+            transient.Remove(go); Destroy(go);
+        }
+        // Homem dos Espelhos: estilhaços prateados e hexágono de espelho girando.
+        void MirrorShatter(Vector3 at,float radius)
+        {
+            Burst(at,Spark,40,(2f+radius*2,5f+radius*3),(.05f,.12f),(.3f,.6f),1.2f,MirrorColor,stretch:true);
+            Burst(at,Spark,16,(.5f,1.5f),(.1f,.18f),(.4f,.8f),.3f,C(.6f,.7f,1));
+            StartCoroutine(Hexagon(at+Vector3.down*.5f,Mathf.Max(.5f,radius),MirrorColor,.6f));
+        }
+        IEnumerator Hexagon(Vector3 center,float radius,Color color,float time)
+        {
+            var go=Effect("Espelho"); var edge=Line(go.transform,color,.05f); var halo=Line(go.transform,new Color(color.r,color.g,color.b,.4f),.14f);
+            edge.loop=halo.loop=true; edge.positionCount=halo.positionCount=6;
+            for(float t=0;t<time;t+=Time.deltaTime) {
+                float r=radius*Mathf.Sin(Mathf.Min(1,t/.2f)*Mathf.PI*.5f), spin=t*90, alpha=t>time-.25f?(time-t)/.25f:1;
+                for(int i=0;i<6;i++) { float ang=(spin+i*60)*Mathf.Deg2Rad; var p=new Vector3(Mathf.Cos(ang),0,Mathf.Sin(ang))*r; edge.SetPosition(i,center+Vector3.up*.05f+p); halo.SetPosition(i,center+Vector3.up*.05f+p*.88f); }
+                edge.startColor=edge.endColor=new Color(color.r,color.g,color.b,alpha); halo.startColor=halo.endColor=new Color(color.r,color.g,color.b,.4f*alpha);
+                yield return null;
+            }
+            transient.Remove(go); Destroy(go);
+        }
+        // Portal de sangue (vampiros): dois anéis abrem girando, a criatura sobe de dentro e o portal fecha.
+        IEnumerator BloodPortal(Vector3 at,Transform unit,float size)
+        {
+            Color blood=C(.85f,.05f,.12f), dark=C(.25f,0,.05f);
+            var go=Effect("PortalDeSangue"); const int n=36;
+            var outer=Line(go.transform,blood,.07f); var inner=Line(go.transform,dark,.16f); outer.loop=inner.loop=true; outer.positionCount=inner.positionCount=n;
+            var swirl=Particles("Redemoinho",go.transform,at+Vector3.up*.05f,blood,160);
+            { var m=swirl.main; m.loop=true; m.duration=1; m.startLifetime=new ParticleSystem.MinMaxCurve(.5f,.9f); m.startSpeed=0; m.startSize=new ParticleSystem.MinMaxCurve(.05f,.12f);
+              var em=swirl.emission; em.rateOverTime=90; var sh=swirl.shape; sh.shapeType=ParticleSystemShapeType.Circle; sh.radius=.6f*size; sh.rotation=new Vector3(-90,0,0);
+              var vel=swirl.velocityOverLifetime; vel.enabled=true; vel.space=ParticleSystemSimulationSpace.Local;
+              vel.x=new ParticleSystem.MinMaxCurve(0); vel.y=new ParticleSystem.MinMaxCurve(1.2f); vel.z=new ParticleSystem.MinMaxCurve(0); vel.orbitalY=new ParticleSystem.MinMaxCurve(4f);
+              swirl.Play(); }
+            var rest=unit.position; unit.gameObject.SetActive(false);
+            void Rings(float r,float spin,float alpha) {
+                for(int i=0;i<n;i++) { float ang=i/(float)n*Mathf.PI*2; var o=new Vector3(Mathf.Cos(ang+spin),0,Mathf.Sin(ang+spin)); var w=new Vector3(Mathf.Cos(ang-spin*1.4f),0,Mathf.Sin(ang-spin*1.4f));
+                    outer.SetPosition(i,at+Vector3.up*.06f+o*r*(1+.06f*Mathf.Sin(ang*6+spin*4))); inner.SetPosition(i,at+Vector3.up*.05f+w*r*.7f); }
+                outer.startColor=outer.endColor=new Color(blood.r,blood.g,blood.b,alpha); inner.startColor=inner.endColor=new Color(dark.r,dark.g,dark.b,.8f*alpha);
+            }
+            Flash(at+Vector3.up*.2f,blood,20);
+            for(float t=0;t<.45f;t+=Time.deltaTime) { Rings(.8f*size*Mathf.Sin(Mathf.Min(1,t/.45f)*Mathf.PI*.5f),t*6,1); yield return null; }
+            // A criatura sobe de dentro do portal.
+            unit.gameObject.SetActive(true); Burst(at+Vector3.up*.3f,Spark,24,(1.5f,3.5f),(.06f,.12f),(.3f,.6f),-.4f,blood,stretch:true);
+            for(float t=0;t<.6f;t+=Time.deltaTime) { float k=t/.6f, e=1-(1-k)*(1-k); unit.position=rest+Vector3.down*1.1f*(1-e); Rings(.8f*size,2.7f+t*6,1); yield return null; }
+            unit.position=rest; PlayClip(unit,"idle");
+            swirl.Stop(true,ParticleSystemStopBehavior.StopEmitting); Burst(at+Vector3.up*.8f,Spark,16,(1f,2.5f),(.08f,.16f),(.4f,.8f),-.6f,dark);
+            for(float t=0;t<.35f;t+=Time.deltaTime) { float k=t/.35f; Rings(.8f*size*(1-k),6.3f+t*6,1-k); yield return null; }
+            transient.Remove(go); Destroy(go);
+        }
+        // Mãos de energia em quem está atordoado (ArenaVfx.GripHands).
+        readonly Dictionary<int,GripHands> stunHands=new Dictionary<int,GripHands>();
+        void UpdateStunHands(MatchState s)
+        {
+            foreach(var id in stunHands.Keys.ToList()) {
+                var f=s.F(id); bool keep=f!=null&&f.Alive&&f.stunned>0&&stunHands[id]&&units.TryGetValue(id,out var u)&&u&&u.gameObject.activeSelf&&!Match.Concealed(s,Game.LocalTeam,f);
+                if(!keep) { if(stunHands[id]) Destroy(stunHands[id].gameObject); stunHands.Remove(id); }
+            }
+            foreach(var f in s.fighters) {
+                if(!f.Alive||f.stunned<=0||stunHands.ContainsKey(f.id)||Match.Concealed(s,Game.LocalTeam,f)||!units.TryGetValue(f.id,out var unit)||!unit||!unit.gameObject.activeSelf) continue;
+                var grip=new GameObject("MaosEspectrais").AddComponent<GripHands>(); grip.transform.SetParent(effectRoot,false);
+                grip.Build(spriteMaterial,Spark,C(.45f,.95f,1)); grip.target=unit; grip.height=Heights.TryGetValue(f.def,out float h)?h:.75f;
+                stunHands[f.id]=grip;
+            }
         }
         IEnumerator DisposeEffect(GameObject effect,float duration) { yield return new WaitForSeconds(duration); transient.Remove(effect); Destroy(effect); }
         public void Sound(string name) { if(!sounds.TryGetValue(name,out var clip)||!clip) return; foreach(var source in voices) if(!source.isPlaying) { source.clip=clip; source.Play(); break; } }
@@ -1868,7 +2034,7 @@ namespace ArenaTatica
             if(Screen.width!=screenWidth||Screen.height!=screenHeight) FitCamera();
             SlideYaw();
             FitSky();
-            AdvanceRigs(); SyncGhosts(); UpdateBars(s); UpdateCompanions(s); UpdateStates(s); UpdateDomes(s);
+            AdvanceRigs(); SyncGhosts(); UpdateBars(s); UpdateCompanions(s); UpdateStates(s); UpdateStunHands(s); UpdateDomes(s);
             for(int i=wings.Count-1;i>=0;i--) { var wing=wings[i]; if(!wing) { wings.RemoveAt(i); continue; } wing.localRotation=wingRest[wing]*Quaternion.Euler(0,0,Mathf.Sin(Time.time*1.8f)*3.15f); }
             string key=s.revision+"|"+Game.Mode+"|"+Game.CanAct+"|"+Game.CanPlace+"|"+Game.Hud?.HasPendingConfirmation;
             if(key!=shownKey) UpdateHighlights(key);

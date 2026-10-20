@@ -207,7 +207,7 @@ namespace ArenaTatica.Core
             ["cria-vampirica"]=new FighterDef { id="cria-vampirica", name="Cria Vampírica", sprites="CriaVampirica", hp=6, pa=6, pm=3, level=0, picker=false, lifesteal=1, skills=new[] {
                 new SkillDef { id="garras-da-cria", name="Garras da cria", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2 } } },
             // Ellie, a Sangrenta (21/10): sombras sorteadas a cada turno dela; salta entre elas e emerge colada no inimigo.
-            ["ellie"]=new FighterDef { id="ellie", name="Ellie, a Sangrenta", sprites="Ellie", hp=9, pa=6, pm=4, initiative=7, level=4, shadowMin=4, shadowMax=10, shadowBonus=3, shadowDodge=50, skills=new[] {
+            ["ellie"]=new FighterDef { id="ellie", name="Ellie, a Sangrenta", sprites="Ellie", hp=9, pa=6, pm=4, initiative=7, level=4, shadowMin=4, shadowMax=10, shadowBonus=3, shadowDodge=50, exposed=true, skills=new[] {
                 new SkillDef { id="kunai-corrente", name="Kunai com corrente", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=4, damage=1, anim="kunai" },
                 new SkillDef { id="passo-das-sombras", name="Teleporte entre sombras", kind=SkillKind.Teleporte, pa=3, minRange=0, maxRange=1, global=true, shadowStep=true, gainPm=5, sight=false, perTurn=1, anim="teleport" } } },
             // ── Extras de 21/10 (fotos do autor). Nomes que o autor não deu e todos os números são provisórios. ──
@@ -219,17 +219,17 @@ namespace ArenaTatica.Core
                 new SkillDef { id="bala-de-impacto", name="Bala de impacto", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=1, push=2, anim="attack" } } },
             // Homem dos Espelhos: tira buffs de inimigos e males de aliados, sela ultimates, devolve um golpe e revela escondidos de longe.
             ["espelhos"]=new FighterDef { id="espelhos", name="Homem dos Espelhos", sprites="Espelhos", hp=11, pa=6, pm=3, initiative=5, level=5, skills=new[] {
-                new SkillDef { id="estilhaco", name="Estilhaço", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=2, anim="attack" },
-                new SkillDef { id="espelho-purificador", name="Espelho purificador", kind=SkillKind.Dano, pa=2, minRange=0, maxRange=4, damage=0, purge=true, cleanse=true, cooldown=1, hits=(int)(Hit.Si|Hit.Inimigo|Hit.Aliado), anim="cast" },
+                new SkillDef { id="estilhaco", name="Estilhaço", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=2, anim="shatter" },
+                new SkillDef { id="espelho-purificador", name="Espelho purificador", kind=SkillKind.Dano, pa=2, minRange=0, maxRange=4, damage=0, purge=true, cleanse=true, cooldown=1, hits=(int)(Hit.Si|Hit.Inimigo|Hit.Aliado), anim="reflect" },
                 new SkillDef { id="selar-ultimate", name="Selar ultimate", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=5, damage=0, sealUlt=3, cooldown=3, anim="cast" },
-                new SkillDef { id="espelho-de-retorno", name="Espelho de retorno", kind=SkillKind.Suporte, pa=2, minRange=0, maxRange=0, sight=false, selfArea=true, buffReflect=true, turns=2, cooldown=3, anim="cast" },
-                new SkillDef { id="olhar-do-espelho", name="Olhar do espelho", kind=SkillKind.Zona, pa=2, minRange=0, maxRange=1, global=true, sight=false, area=6, reveal=true, cooldown=2, anim="cast" } } },
+                new SkillDef { id="espelho-de-retorno", name="Espelho de retorno", kind=SkillKind.Suporte, pa=2, minRange=0, maxRange=0, sight=false, selfArea=true, buffReflect=true, turns=2, cooldown=3, anim="reflect" },
+                new SkillDef { id="olhar-do-espelho", name="Olhar do espelho", kind=SkillKind.Zona, pa=2, minRange=0, maxRange=1, global=true, sight=false, area=6, reveal=true, cooldown=2, anim="storm" } } },
             // Mordomo Pilis: portais só para aliados, chá que protege de efeitos ruins e a explosão que dobra o dano no alvo.
             ["pilis"]=new FighterDef { id="pilis", name="Mordomo Pilis", sprites="Pilis", hp=12, pa=6, pm=3, initiative=3, level=5, skills=new[] {
                 new SkillDef { id="xicara-voadora", name="Xícara voadora", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=2, anim="attack" },
                 new SkillDef { id="portal-do-mordomo", name="Portal do mordomo", kind=SkillKind.Portal, pa=3, minRange=1, maxRange=6, sight=false, turns=2, alliesOnly=true, cooldown=2, anim="cast" },
                 new SkillDef { id="cha-protetor", name="Chá protetor", kind=SkillKind.Suporte, pa=3, minRange=0, maxRange=0, sight=false, selfArea=true, area=2, buffImmune=true, turns=1, cooldown=3, anim="cast" },
-                new SkillDef { id="explosao-do-cha", name="Explosão do chá", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=5, damage=0, doubleDamage=2, perMatch=1, ultimate=true, anim="ult" } } },
+                new SkillDef { id="explosao-do-cha", name="Explosão do chá", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=5, damage=0, doubleDamage=2, selfKill=true, perMatch=1, ultimate=true, anim="ult" } } },
             // Homem Ganso Macho: só bate forte e aguenta; o bando inteiro anda +2.
             ["ganso"]=new FighterDef { id="ganso", name="Homem Ganso Macho", sprites="Ganso", hp=18, pa=6, pm=3, initiative=1, level=5, armor=1,
                 passives=new[] { new PassiveDef { name="Bando unido", stat=PassiveStat.PM, who=PassiveWho.AliadosESi, amount=2, range=0 } }, skills=new[] {
@@ -283,7 +283,7 @@ namespace ArenaTatica.Core
             // Cria Vampírica chefe (21/10): ao cair, se divide em réplicas menores.
             ["chefe-cria-vampirica"]=new FighterDef { id="chefe-cria-vampirica", name="Cria Vampírica Ancestral", sprites="CriaVampirica", hp=18, pa=6, pm=3, level=0, picker=false, neutral=true, immovable=true, lifesteal=2, split="replica-vampirica", splitCount=3, skills=new[] {
                 new SkillDef { id="garras-ancestrais", name="Garras ancestrais", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=3 },
-                new SkillDef { id="revoada-de-morcegos", name="Revoada de morcegos", kind=SkillKind.Dano, pa=0, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=1, drain=2, anim="summon" } } },
+                new SkillDef { id="revoada-de-morcegos", name="Revoada de morcegos", kind=SkillKind.Dano, pa=0, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=1, drain=2, anim="blood" } } },
             ["replica-vampirica"]=new FighterDef { id="replica-vampirica", name="Réplica vampírica", sprites="CriaVampirica", hp=5, pa=6, pm=3, level=0, picker=false, neutral=true, skills=new[] {
                 new SkillDef { id="garras-da-replica", name="Garras da réplica", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=2 } } },
         };
@@ -458,7 +458,7 @@ namespace ArenaTatica.Core
             if(sk.gainPm>0) e.Add($"+{sk.gainPm} PM para quem usa"); if(sk.stun>0) e.Add($"atordoa {sk.stun} turno");
             if(sk.purge) e.Add("tira os buffs dos inimigos"); if(sk.cleanse) e.Add("tira condições ruins dos aliados");
             if(sk.sealUlt>0) e.Add($"sela as ultimates do inimigo por {sk.sealUlt} turnos e desfaz a transformação"); if(sk.buffReflect) e.Add("o próximo golpe que não o derrubar volta em quem bateu");
-            if(sk.buffImmune) e.Add("imunes a efeitos negativos"); if(sk.doubleDamage>0) e.Add($"o alvo leva o dobro dos golpes por {sk.doubleDamage} turnos");
+            if(sk.buffImmune) e.Add("imunes a efeitos negativos"); if(sk.doubleDamage>0) e.Add($"o alvo leva o dobro dos golpes por {sk.doubleDamage} turnos"); if(sk.selfKill) e.Add("quem usa cai logo depois");
             if(sk.beam) e.Add("para no 1º lutador, em obstáculo ou chão mais alto"); if(sk.swapHp) e.Add("troca os PV com o alvo"); if(sk.noRefresh) e.Add("o Eco ancestral não devolve"); if(sk.perForm>0) e.Add($"{sk.perForm}× por transformação");
             if(sk.kind==SkillKind.Aura) return $"{sk.name}: {string.Join(", ",e)}.";
             if(sk.heal>0&&sk.kind==SkillKind.Suporte) e.Add($"cura {sk.heal}");
@@ -505,7 +505,7 @@ namespace ArenaTatica.Core
             if(d.meleeWeak>0) t.Add($"Yami-yami: leva +{d.meleeWeak} de golpes colados");
             if(d.bloodScent) t.Add("Cheiro de Sangue: andar até um inimigo com PV ≤ 50% custa metade dos PM");
             if(d.shadowMax>0) t.Add($"Sombras: no começo do turno surgem {d.shadowMin}–{d.shadowMax} casas de sombra (as anteriores somem)");
-            if(d.shadowBonus>0) t.Add($"+{d.shadowBonus} de dano em alvo numa sombra"); if(d.shadowDodge>0) t.Add($"numa sombra, golpes colados nele têm {d.shadowDodge}% de errar");
+            if(d.shadowBonus>0) t.Add($"+{d.shadowBonus} de dano em alvo numa sombra"); if(d.shadowDodge>0) t.Add($"numa sombra, golpes colados nele têm {d.shadowDodge}% de errar"); if(d.exposed) t.Add("golpes de longe, males e atordoamento sempre entram nele");
             if(d.duelBonus>0) t.Add($"Duelo: +{d.duelBonus} de dano se ninguém mais está até {d.duelRange} casas dele ou do alvo"); if(d.farImmune>0) t.Add($"imune a golpes de {d.farImmune}+ casas");
             if(d.fullHitHeal>0) t.Add($"cura {d.fullHitHeal} ao acertar sem o Escudo do defensor"); if(!string.IsNullOrEmpty(d.split)&&d.splitCount>0) t.Add($"ao cair, se divide em {d.splitCount} réplicas");
             if(d.noReveal) t.Add("não revela escondidos");

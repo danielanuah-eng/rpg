@@ -113,8 +113,9 @@ namespace ArenaTatica.Core
         // leva o dobro dos golpes por N turnos. beam: o golpe para no 1º lutador da linha, em obstáculo ou chão mais alto.
         // swapHp: troca os PV de quem usa com os do alvo. props (Troca): troca também caixas, árvores, arbustos, baús e braseiros.
         // halfMapIn: o halfMap só vale nessa forma (fora dela, maxRange). noRefresh: o Eco ancestral não devolve o uso.
+        // selfKill: quem usa cai logo depois de resolver o golpe (Explosão do chá, autor 21/10).
         public int gainPm, stun, sealUlt, doubleDamage;
-        public bool shadowStep, purge, cleanse, buffReflect, buffImmune, reveal, alliesOnly, beam, swapHp, props, noRefresh;
+        public bool shadowStep, purge, cleanse, buffReflect, buffImmune, reveal, alliesOnly, beam, swapHp, props, noRefresh, selfKill;
         public string halfMapIn;
         public bool CanHitSelf => (hits&(int)Hit.Si)!=0;
         public bool CanHitEnemy => (hits&(int)Hit.Inimigo)!=0;
@@ -158,9 +159,10 @@ namespace ArenaTatica.Core
         // shadowDodge: % de errar golpe colado nele quando está numa sombra. duelBonus: dano a mais se ninguém além do alvo está até
         // duelRange casas dele ou do alvo. farImmune: imune a golpes de N+ casas. fullHitHeal: cura ao acertar sem o Escudo do
         // defensor. split/splitCount: ao cair, surgem essas réplicas. noReveal: não revela escondidos ao encostar (ilusão).
+        // exposed: golpe de longe (2+ casas) não erra nem é bloqueado nele, e efeitos ruins e atordoamento sempre entram (Ellie).
         public int shadowMin, shadowMax, shadowBonus, shadowDodge, duelBonus, duelRange, farImmune, fullHitHeal, splitCount;
         public string split;
-        public bool noReveal;
+        public bool noReveal, exposed;
         public string startForm;
         public FormDef[] forms;
         // Passivas do editor: valem enquanto o dono está vivo (ver PassiveDef).

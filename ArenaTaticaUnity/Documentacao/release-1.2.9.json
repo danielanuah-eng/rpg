@@ -1,0 +1,7 @@
+{
+    "version": "1.2.9",
+    "state": "build-local",
+    "protocol": 11,
+    "editMode": { "total": 489, "passed": 489, "failed": 0, "skipped": 0 },
+    "notes": "Pedido do autor (21/10). Pilis: a Explosão do chá derruba o mordomo logo depois de resolver (campo genérico selfKill, 'Quem usa cai depois' no editor). Bombas invisíveis: as minas do evento não aparecem para ninguém até explodirem. Ellie: exposta (campo exposed) — golpe de longe não erra nem é bloqueado nela, e males, prisão e atordoamento entram mesmo com imunidade. L.E.L.A Pulse: voz robótica 'Lelaaaa Puuulse' e a trilha sobe de tom e andamento enquanto o Pulso dura. VFX: partículas e estouro em todo golpe de longe e em área (cor por skill, estilo automático para skills sem estilo), pacote do Homem dos Espelhos (estilhaços, hexágonos, animações reflect/shatter/storm), Dragão Dourado da Ciantia maior, mãos de energia segurando quem está atordoado, portal de sangue dos vampiros e raio vermelho na Troca de vida do Death Crimson."
+}

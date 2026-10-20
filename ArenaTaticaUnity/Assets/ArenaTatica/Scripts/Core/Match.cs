@@ -1155,9 +1155,11 @@ namespace ArenaTatica.Core
             {
                 // Imune a golpes de longe (Espadachim) e esquiva na sombra (Ellie: golpe colado erra com shadowDodge %).
                 var vd=Content.Def(v); int gap=Board.Gap(f,v);
+                // Exposta (Ellie): de longe não erra nem bloqueia; males e atordoamento entram mesmo com imunidade ou imparável.
+                bool bare=vd.exposed&&f!=v, far=bare&&gap>1, miss=missed&&!far;
                 bool ghost=Ghost(v)||vd.farImmune>0&&gap>=vd.farImmune&&f!=v
                     ||vd.shadowDodge>0&&gap<=1&&f!=v&&Board.Footprint(v).Any(xc=>S.At(xc).shadow!=0)&&Dice.Range(S,100)<vd.shadowDodge;
-                bool shield=Dice.Armor(d)&&!sk.precise&&!sk.pierce;
+                bool shield=Dice.Armor(d)&&!sk.precise&&!sk.pierce&&!far;
                 int alone=sk.isolatedBonus>0&&Isolated(S,v)?sk.isolatedBonus:0;
                 // Cat-a-Clisma: +2 a cada 2 marcas do alvo principal. Yami-yami: +meleeWeak de golpe colado.
                 int curse=sk.consumeMarks&&v==main?v.marks/2*2:0, weak=Board.Gap(f,v)<=1?Content.Def(v).meleeWeak:0;
@@ -1165,14 +1167,14 @@ namespace ArenaTatica.Core
                 // Sombra (Ellie): alvo numa casa de sombra. Duelo (Espadachim): ninguém mais perto dele nem do alvo.
                 int shade=fd.shadowBonus>0&&Board.Footprint(v).Any(xc=>S.At(xc).shadow!=0)?fd.shadowBonus:0;
                 int duel=fd.duelBonus>0&&v!=f&&!S.fighters.Any(x=>x.Alive&&x!=f&&x!=v&&(Board.Gap(x,f)<=fd.duelRange||Board.Gap(x,v)<=fd.duelRange))?fd.duelBonus:0;
-                int dmg=missed||ghost||power<=0?0:Math.Max(0,power+bonus+alone+weak+shade+duel-(shield?1:0)-(sk.pierce?0:Armor(v)));
+                int dmg=miss||ghost||power<=0?0:Math.Max(0,power+bonus+alone+weak+shade+duel-(shield?1:0)-(sk.pierce?0:Armor(v)));
                 // Explosão do chá: o alvo leva o dobro (multiplicadores somam por buff).
                 foreach(var b in v.buffs) if(b.taken>1) dmg*=b.taken;
                 bool wounded=!S.Ally(v.team,f.team)&&v.hp*2<=Content.MaxHp(v);
-                Emit(new GameEvent{kind="ataque",actor=f.id,target=v.id,value=missed||ghost?-1:dmg,info=sk.id,cell=v.cell,aim=aim??c,dice=v==first&&!sk.selfArea?new[]{a,d}:null});
+                Emit(new GameEvent{kind="ataque",actor=f.id,target=v.id,value=miss||ghost?-1:dmg,info=sk.id,cell=v.cell,aim=aim??c,dice=v==first&&!sk.selfArea?new[]{a,d}:null});
                 Hurt(v,dmg,log); dealt+=dmg;
-                bool hit=!missed&&!ghost&&(dmg>0||power<=0);
-                bool foe=!S.Ally(v.team,f.team), guarded=Immune(v)&&foe;
+                bool hit=!miss&&!ghost&&(dmg>0||power<=0);
+                bool foe=!S.Ally(v.team,f.team), guarded=Immune(v)&&foe&&!bare;
                 // Death Crimson: golpe cheio (sem o Escudo do defensor) cura.
                 if(hit&&dmg>0&&fd.fullHitHeal>0&&!shield) heals+=fd.fullHitHeal;
                 // Espelho de retorno: o golpe que não derrubou volta em quem bateu.
@@ -1187,14 +1189,14 @@ namespace ArenaTatica.Core
                 if(hit&&sk.cleanse&&!foe) Cleanse(f,v);
                 if(hit&&sk.sealUlt>0&&foe&&!guarded) Seal(f,v,sk.sealUlt);
                 if(hit&&sk.doubleDamage>0&&foe&&!guarded) { v.buffs.Add(new Buff{id="vulneravel",from=sk.id,turns=sk.doubleDamage,taken=2}); log.Add(new GameEvent{kind="vulneravel",actor=f.id,target=v.id,value=sk.doubleDamage,cell=v.cell}); }
-                if(hit&&sk.stun>0&&foe&&!guarded&&!Unstoppable(v)) { v.stunned=Math.Max(v.stunned,sk.stun); log.Add(new GameEvent{kind="atordoar",actor=f.id,target=v.id,value=sk.stun,cell=v.cell}); }
+                if(hit&&sk.stun>0&&foe&&!guarded&&(bare||!Unstoppable(v))) { v.stunned=Math.Max(v.stunned,sk.stun); log.Add(new GameEvent{kind="atordoar",actor=f.id,target=v.id,value=sk.stun,cell=v.cell}); }
                 if(hit&&sk.consumeMarks&&v==main&&v.marks>0) { log.Add(new GameEvent{kind="marca",actor=f.id,target=v.id,value=-v.marks,cell=v.cell}); v.marks=0; }
                 if(hit&&sk.mark>0&&foe&&!guarded) { v.marks+=sk.mark; log.Add(new GameEvent{kind="marca",actor=f.id,target=v.id,value=v.marks,cell=v.cell}); }
                 if(hit&&sk.noHeal&&foe&&!guarded&&!NoHeal(v)) { v.buffs.Add(new Buff{id=NoHealBuff,from=f.id.ToString(),turns=99}); log.Add(new GameEvent{kind="sem-cura",actor=f.id,target=v.id,cell=v.cell}); }
                 // Bloodlust (Daemion): acertar inimigo que já estava com PV ≤ 50% dá PM.
                 if(dmg>0&&wounded&&Content.Def(f).bloodlust>0&&f.Alive) { f.pm+=Content.Def(f).bloodlust; log.Add(new GameEvent{kind="sede",actor=f.id,target=v.id,value=Content.Def(f).bloodlust,cell=f.cell}); }
-                if(hit&&sk.pmLoss>0&&!(guarded||Immune(v))) v.buffs.Add(new Buff{id="confusao",from=sk.id,turns=2,pm=-sk.pmLoss});
-                if(hit&&sk.paLoss>0&&!(guarded||Immune(v))) v.buffs.Add(new Buff{id="atordoado",from=sk.id,turns=2,pa=-sk.paLoss});
+                if(hit&&sk.pmLoss>0&&!(guarded||Immune(v)&&!bare)) v.buffs.Add(new Buff{id="confusao",from=sk.id,turns=2,pm=-sk.pmLoss});
+                if(hit&&sk.paLoss>0&&!(guarded||Immune(v)&&!bare)) v.buffs.Add(new Buff{id="atordoado",from=sk.id,turns=2,pa=-sk.paLoss});
                 if(dmg>0&&v==main&&!S.Ally(v.team,f.team)&&Content.Def(f).steal>0&&MatchState.Player(v.team)&&MatchState.Player(f.team)&&S.coins[v.team]>0&&Dice.Range(S,100)<Content.Def(f).steal*(ambush?2:1))
                 {
                     S.coins[v.team]--; S.coins[f.team]++;
@@ -1203,18 +1205,20 @@ namespace ArenaTatica.Core
                 // Manto de espinhos: quem acerta colado leva o troco.
                 if(dmg>0&&v.thorns>0&&f.Alive&&Board.Gap(f,v)==1) { log.Add(new GameEvent{kind="espinhos",actor=v.id,target=f.id,value=v.thorns,cell=f.cell}); Hurt(f,v.thorns,log); }
                 // Prisão: o alvo escapa com Esquiva (ou coringa) no dado de defesa.
-                if(hit&&v==main&&sk.prison>0&&!(Immune(v)||Unstoppable(v)))
+                if(hit&&v==main&&sk.prison>0&&(bare||!(Immune(v)||Unstoppable(v))))
                 {
                     // Black Hole: some no buraco negro (sem Esquiva); o inimigo leva returnDamage ao voltar, o aliado volta ileso.
                     if(sk.banish) { v.prisoned=sk.prison; v.banished=true; v.banishDamage=S.Ally(v.team,f.team)?0:sk.returnDamage; v.channeling=null; v.hidden=false;
                         log.Add(new GameEvent{kind="prisao",actor=f.id,target=v.id,value=sk.prison,cell=v.cell,info=sk.id}); }
-                    else if(Dice.Dodge(d)) log.Add(new GameEvent{kind="escapou",target=v.id,cell=v.cell,info=sk.id});
+                    else if(Dice.Dodge(d)&&!bare) log.Add(new GameEvent{kind="escapou",target=v.id,cell=v.cell,info=sk.id});
                     else { v.prisoned=sk.prison; v.channeling=null; log.Add(new GameEvent{kind="prisao",actor=f.id,target=v.id,value=sk.prison,cell=v.cell,info=sk.id}); }
                 }
             }
             // Dreno da skill e roubo de vida da ficha (Daemion: todo ataque que fere cura).
             int drain=sk.drain+(dealt>0?Content.Def(f).lifesteal:0)+heals;
             if(drain>0&&dealt>0&&f.Alive&&!NoHeal(f)) { int heal=Math.Min(drain,Content.MaxHp(f)-f.hp); if(heal>0) { f.hp+=heal; log.Add(new GameEvent{kind="cura",actor=f.id,target=f.id,value=heal,info=sk.id,cell=f.cell}); } }
+            // Explosão do chá: quem usa cai assim que o golpe resolve, antes de qualquer outro efeito.
+            if(sk.selfKill&&f.Alive) { log.Add(new GameEvent{kind="autodestruir",actor=f.id,target=f.id,value=f.hp,info=sk.id,cell=f.cell}); f.hp=0; }
             events.AddRange(log);
             foreach(var v in targets) if(!v.Alive) KO(v);
             if(!f.Alive) KO(f);

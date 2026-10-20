@@ -11,7 +11,7 @@ namespace ArenaTatica
     public class ArenaMusica : MonoBehaviour
     {
         const int Rate=22050;
-        public const float Volume=.22f;
+        public const float Volume=.22f, PulsePitch=1.15f;
         AudioSource a, b; string playing="";
         static readonly Dictionary<string,AudioClip> cache=new Dictionary<string,AudioClip>();
 
@@ -43,6 +43,9 @@ namespace ArenaTatica
                 playing=want; (a,b)=(b,a);
                 if(want!="") { a.clip=Clip(want); a.time=0; a.Play(); }
             }
+            // L.E.L.A Pulse: enquanto algum buff do Pulso dura, a trilha sobe de tom e de andamento juntos (pitch).
+            bool pulse=s!=null&&!s.over&&s.fighters.Any(f=>f.Alive&&f.buffs!=null&&f.buffs.Exists(x=>x!=null&&x.turns>0&&x.from!=null&&x.from.StartsWith(Match.PulseTag)));
+            a.pitch=b.pitch=Mathf.MoveTowards(a.pitch,pulse?PulsePitch:1,Time.unscaledDeltaTime*.3f);
             float step=Time.unscaledDeltaTime/.8f;
             a.volume=Mathf.MoveTowards(a.volume,playing==""?0:Volume,step*Volume);
             b.volume=Mathf.MoveTowards(b.volume,0,step*Volume);

@@ -728,7 +728,7 @@ namespace ArenaTatica
             Flag(grid,"Canalizada (próximo turno)",()=>s.channeled,x=>s.channeled=x); Flag(grid,"Mina (não para o movimento)",()=>s.mine,x=>s.mine=x); Flag(grid,"Grátis sem usar arma",()=>s.freeSwap,x=>s.freeSwap=x);
             Flag(grid,"Anula formas e buffs",()=>s.dispel,x=>s.dispel=x); Flag(grid,"Tira buffs de inimigos",()=>s.purge,x=>s.purge=x); Flag(grid,"Limpa males de aliados",()=>s.cleanse,x=>s.cleanse=x);
             Flag(grid,"Reflete o próximo golpe (suporte)",()=>s.buffReflect,x=>s.buffReflect=x); Flag(grid,"Imune a efeitos ruins (suporte)",()=>s.buffImmune,x=>s.buffImmune=x); Flag(grid,"Revela escondidos (zona)",()=>s.reveal,x=>s.reveal=x);
-            Flag(grid,"Raio que para no 1º",()=>s.beam,x=>s.beam=x); Flag(grid,"Troca de vida",()=>s.swapHp,x=>s.swapHp=x); Flag(grid,"Troca peças do mapa",()=>s.props,x=>s.props=x);
+            Flag(grid,"Raio que para no 1º",()=>s.beam,x=>s.beam=x); Flag(grid,"Troca de vida",()=>s.swapHp,x=>s.swapHp=x); Flag(grid,"Troca peças do mapa",()=>s.props,x=>s.props=x); Flag(grid,"Quem usa cai depois",()=>s.selfKill,x=>s.selfKill=x);
             Flag(grid,"Portal só de aliados",()=>s.alliesOnly,x=>s.alliesOnly=x); Flag(grid,"Alcance no mapa todo",()=>s.global,x=>s.global=x); Flag(grid,"Corta a cura do alvo",()=>s.noHeal,x=>s.noHeal=x);
             Targets(box,s);
         }
