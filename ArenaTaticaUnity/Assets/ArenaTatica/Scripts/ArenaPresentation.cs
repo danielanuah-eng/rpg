@@ -54,7 +54,8 @@ namespace ArenaTatica
             ["rei-bobett"]=1.5f, ["principe-kellen"]=1f, ["vespa-cinzenta"]=.8f, ["viuva-da-agulha"]=1.55f, ["guardiao-de-musgo"]=1.8f, ["domador-de-correntes"]=1.65f,
             ["ogro-de-pedra"]=2f, ["baltazar"]=1.8f, ["totem-de-cura"]=.9f, ["papa-moedas"]=.6f, ["brutamontes-errante"]=2.5f,
             ["chefe-dragao"]=2.6f, ["chefe-necromante"]=2.1f, ["chefe-rei-goblin"]=2.3f,
-            ["pele-negra"]=1.75f, ["lela"]=1.75f, ["gumbald"]=1.25f, ["daemion"]=1.75f, ["ikaito"]=1.65f };
+            ["pele-negra"]=1.75f, ["lela"]=1.75f, ["gumbald"]=1.25f, ["daemion"]=1.75f, ["ikaito"]=1.65f,
+            ["ellie"]=1.6f, ["cria-vampirica"]=1.5f, ["chefe-cria-vampirica"]=2.2f, ["replica-vampirica"]=1.2f, ["pistoleira"]=1.7f, ["espelhos"]=1.8f, ["pilis"]=1.75f, ["ganso"]=1.9f, ["espadachim"]=1.7f, ["death-crimson"]=1.8f };
         // Clone/ilusão (Fighter.disguise, preenchido pelo núcleo): o modelo, o sprite e o nome saem da identidade
         // de quem conjurou, nunca da etiqueta da ilusão. Sem disfarce, é o próprio lutador.
         static string ShownId(Fighter f) => f!=null&&!string.IsNullOrEmpty(f.disguise)&&Content.Fighters.ContainsKey(f.disguise)?f.disguise:f?.def;
@@ -120,7 +121,7 @@ namespace ArenaTatica
         public static string EventName(string id) => id switch {
             "chuva-de-moedas"=>"Chuva de moedas", "queda-de-pedras"=>"Queda de pedras", "terremoto"=>"Terremoto", "mare-de-lava"=>"Maré de lava",
             "portal-caotico"=>"Portal caótico", "eco-ancestral"=>"Eco ancestral (ultimates de volta)", "mare-de-energia"=>"Maré de energia (+1 PA e +1 PM)",
-            "festival-de-fogos"=>"Festival de fogos", "nevoeiro"=>"Nevoeiro (alcance −2)", "vendaval"=>"Vendaval", "papa-moedas"=>"Papa-moedas", "errante"=>"Brutamontes Errante",
+            "festival-de-fogos"=>"Festival de fogos", "nevoeiro"=>"Nevoeiro (alcance −2)", "vendaval"=>"Vendaval", "papa-moedas"=>"Papa-moedas", "errante"=>"Brutamontes Errante", "bombas-invisiveis"=>"Bombas invisíveis", "vampiro"=>"Cria Vampírica Ancestral",
             _=>id?.Replace('-',' ') };
         SpriteRenderer sky; string shownSky;
         // Cenários (MapGen.Themes): piso xadrez a/b, zona, arbusto, tronco, copa, caixa, base, céu, luz ambiente e enfeites fora do tabuleiro.
@@ -980,6 +981,10 @@ namespace ArenaTatica
                 case "cura":
                     if(actor&&e.info=="totem-de-cura"&&!Playing(actor,"heal")) PlayClip(actor,"heal"); // um pulso do totem cura vários aliados
                     // Aura de gatinho e curas com arte: conjuração em quem cura, impacto no alvo; o número entra na colisão.
+                    // Cura de skill em outro (Injection Shot do Ikaito): quem usa toca o clipe da skill antes do número.
+                    if(target&&actor&&actor!=target&&Content.AnySkill(e.info) is SkillDef healSkill&&healSkill.kind==SkillKind.Cura&&!string.IsNullOrEmpty(healSkill.anim)) {
+                        Turn(actor,target.position-actor.position); float shot=PlayClip(actor,healSkill.anim); if(shot>0) yield return Wait(shot*.6f);
+                    }
                     if(target) {
                         PhaseFx(ArenaEfeitos.UsePhase(e.kind,e.info),target.position+Vector3.up*.6f);
                         // Dreno (cura vinda de golpe) não repete a arte do golpe.

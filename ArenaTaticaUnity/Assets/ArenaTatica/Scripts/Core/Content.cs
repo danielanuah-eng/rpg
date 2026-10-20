@@ -161,7 +161,7 @@ namespace ArenaTatica.Core
                 new SkillDef { id="esporos", name="Esporos", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=1, paLoss=1, perTurn=1 } } },
             // ── Elenco de 20/10 (pedido do autor). PV, Iniciativa, Nível e números que o autor não deu são provisórios. ──
             // Pirata das trevas: anula tudo no alvo, tira PA de quem fica perto, engole alguém no buraco negro e corta o mapa em linha.
-            ["pele-negra"]=new FighterDef { id="pele-negra", name="Pele D. Negra", sprites="PeleNegra", hp=14, pa=6, pm=2, initiative=2, level=5, fieldPa=3, fieldRange=1, meleeWeak=1, skills=new[] {
+            ["pele-negra"]=new FighterDef { id="pele-negra", name="Pele D. N", sprites="PeleNegra", hp=14, pa=6, pm=2, initiative=2, level=5, fieldPa=3, fieldRange=1, meleeWeak=1, skills=new[] {
                 new SkillDef { id="nulification", name="Nulification", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, dispel=true, anim="attack" },
                 new SkillDef { id="black-hole", name="Black Hole", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=0, prison=1, banish=true, returnDamage=3, cooldown=3, hits=(int)(Hit.Inimigo|Hit.Aliado), anim="cast" },
                 new SkillDef { id="light-speed", name="Light Speed", kind=SkillKind.Teleporte, pa=3, minRange=1, maxRange=3, line=true, sight=false, pmRange=true, perTurn=1, anim="teleport" } } },

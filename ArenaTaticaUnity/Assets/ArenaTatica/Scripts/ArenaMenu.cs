@@ -528,7 +528,9 @@ namespace ArenaTatica
             ["nevoeiro"]="Por 1 rodada, o alcance máximo de todas as skills cai 2 (mínimo 1).",
             ["vendaval"]="Empurra todos 1 casa numa direção. Quem bate em algo leva 1.",
             ["papa-moedas"]="2 Papa-moedas neutros comem moedas e fogem de quem chega perto. Quem derruba um ganha o que ele comeu + 2.",
-            ["errante"]="O chefe Brutamontes Errante (20 PV, armadura 1) caça o mais próximo por 5 rodadas e ruge a cada 2. Derrotá-lo dá 5 moedas e um item." };
+            ["errante"]="O chefe Brutamontes Errante (20 PV, armadura 1) caça o mais próximo por 5 rodadas e ruge a cada 2. Derrotá-lo dá 5 moedas e um item.",
+            ["bombas-invisiveis"]="Minas que ninguém vê surgem no mapa, o mesmo número em cada quadrante; quem pisa leva 3 de dano e segue andando.",
+            ["vampiro"]="A Cria Vampírica Ancestral surge no meio do mapa por 5 rodadas; ao cair, se divide em 3 réplicas. O evento acaba quando todas caem." };
         void ShopAndEvents()
         {
             var c=Scroll(body);
