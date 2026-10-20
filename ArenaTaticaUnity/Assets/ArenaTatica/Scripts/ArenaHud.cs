@@ -288,7 +288,8 @@ namespace ArenaTatica
             if(form!=null&&f.form!=d.startForm) state.Add($"forma {form.name}{(form.intangible?" (imune a dano)":"")}{(f.formTurns>0?$", {f.formTurns} turno(s)":"")}");
             if(f.hidden) state.Add($"escondido (anda até {Match.HiddenPm})"); if(f.prisoned>0) state.Add($"preso {f.prisoned} turno(s)"); if(f.channel>0) state.Add("canalizando o Desejo");
             if(f.auraOn) state.Add("aura ligada");
-            foreach(var b in f.buffs) state.Add($"{b.id}{(b.pa!=0?$" {b.pa:+0;-0} PA":"")}{(b.pm!=0?$" {b.pm:+0;-0} PM":"")}{(b.armor!=0?$" {b.armor:+0;-0} armadura":"")} ({b.turns})");
+            if(f.banished) state.Add("no buraco negro"); if(f.marks>0) state.Add($"Marcas da Maldição: {f.marks}"); if(f.drained>0) state.Add($"anulado −{f.drained} PA");
+            foreach(var b in f.buffs) state.Add(b.id==Match.NoHealBuff?"não pode se curar neste turno":$"{b.id}{(b.pa!=0?$" {b.pa:+0;-0} PA":"")}{(b.pm!=0?$" {b.pm:+0;-0} PM":"")}{(b.armor!=0?$" {b.armor:+0;-0} armadura":"")}{(b.dmg!=0?$" {b.dmg:+0;-0} dano":"")}{(b.regen!=0?$" cura {b.regen}/turno":"")} ({b.turns})");
             int armor=f.armor+d.armor+f.buffs.Sum(b=>b.armor)+(form?.armor??0);
             if(armor!=0) state.Add($"armadura {armor}");
             var text=new List<string>();
@@ -570,7 +571,7 @@ namespace ArenaTatica
             if(!PressAction(ArenaActionConfirmation.Pass,f)) { Game.Mode=""; Game.Notify("Toque novamente para passar."); return; }
             Game.Mode=""; Game.Submit("passar");
         }
-        public static bool SelfOnly(SkillDef sk) => sk.kind==SkillKind.Forma||sk.kind==SkillKind.Esconder||sk.kind==SkillKind.Aura||(sk.kind==SkillKind.Desejo&&string.IsNullOrEmpty(sk.wish));
+        public static bool SelfOnly(SkillDef sk) => sk.kind==SkillKind.Forma||sk.kind==SkillKind.Pulso||sk.kind==SkillKind.Esconder||sk.kind==SkillKind.Aura||(sk.kind==SkillKind.Desejo&&string.IsNullOrEmpty(sk.wish));
         // Aviso do Cataclisma (entrega do Sol, 11/10): tira Sprites/Avisos/<id>, 12 quadros de 160 ms, um ciclo no centro do tabuleiro.
         public void ShowWarning(string id)
         {

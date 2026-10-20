@@ -53,7 +53,8 @@ namespace ArenaTatica
             ["asamyh"]=1.5f, ["gato-laranja"]=.55f, ["gato-branco"]=.55f, ["gato-malhado"]=.55f, ["gato-manchado"]=.55f, ["colosso"]=3.1f, ["cheiro-pneu"]=2.1f, ["edgar"]=1.65f, ["navio-fantasma"]=2.1f,
             ["rei-bobett"]=1.5f, ["principe-kellen"]=1f, ["vespa-cinzenta"]=.8f, ["viuva-da-agulha"]=1.55f, ["guardiao-de-musgo"]=1.8f, ["domador-de-correntes"]=1.65f,
             ["ogro-de-pedra"]=2f, ["baltazar"]=1.8f, ["totem-de-cura"]=.9f, ["papa-moedas"]=.6f, ["brutamontes-errante"]=2.5f,
-            ["chefe-dragao"]=2.6f, ["chefe-necromante"]=2.1f, ["chefe-rei-goblin"]=2.3f };
+            ["chefe-dragao"]=2.6f, ["chefe-necromante"]=2.1f, ["chefe-rei-goblin"]=2.3f,
+            ["pele-negra"]=1.75f, ["lela"]=1.75f, ["gumbald"]=1.25f, ["daemion"]=1.75f, ["ikaito"]=1.65f };
         // Clone/ilusão (Fighter.disguise, preenchido pelo núcleo): o modelo, o sprite e o nome saem da identidade
         // de quem conjurou, nunca da etiqueta da ilusão. Sem disfarce, é o próprio lutador.
         static string ShownId(Fighter f) => f!=null&&!string.IsNullOrEmpty(f.disguise)&&Content.Fighters.ContainsKey(f.disguise)?f.disguise:f?.def;
@@ -625,6 +626,9 @@ namespace ArenaTatica
                 markers.Add(Cube("Mina",Position(s,new Cell(i%s.width,i/s.width))+Vector3.up*.05f,new Vector3(.3f,.06f,.3f),markMaterial,world));
             foreach(var f in s.fighters.Where(f=>f.Alive&&f.prisoned>0&&Board.Contains(s,f.cell))) {
                 var p=Spot(s,f,f.cell); float h=Heights.TryGetValue(f.def,out float hh)?hh:.75f;
+                // Black Hole: esfera escura no lugar do lutador (o sprite some até voltar, RefreshHidden).
+                if(f.banished) { var hole=GameObject.CreatePrimitive(PrimitiveType.Sphere); hole.name="BuracoNegro"; hole.transform.SetParent(world); hole.transform.localPosition=p+Vector3.up*.45f;
+                    hole.transform.localScale=new Vector3(.85f,.85f,.85f); Destroy(hole.GetComponent<Collider>()); hole.GetComponent<Renderer>().sharedMaterial=holeMaterial??=Material(new Color(.08f,.02f,.12f)); markers.Add(hole); continue; }
                 foreach(var corner in new[]{new Vector3(-.4f,0,-.4f),new Vector3(.4f,0,-.4f),new Vector3(-.4f,0,.4f),new Vector3(.4f,0,.4f)})
                     markers.Add(Cube("Prisao",p+corner+Vector3.up*h*.5f,new Vector3(.08f,h,.08f),cageMaterial,world));
                 markers.Add(Cube("Prisao",p+Vector3.up*h,new Vector3(.9f,.06f,.9f),cageMaterial,world));
@@ -1064,9 +1068,25 @@ namespace ArenaTatica
                 case "colisao": if(target) { Float(target.position,"−1 batida",Red); PlayClip(target,"hit"); } yield return Shake(.12f,.25f); break;
                 case "firme": if(target) Float(target.position,"Firme!",Blue); yield return Wait(.25f); break;
                 case "prisao":
-                    if(target) { yield return Fx(e.info,target.position+Vector3.up*.7f,Violet); Float(target.position,"Preso!",Violet); }
-                    RefreshMarkers(s); Game.Hud?.Log($"{Name(s,e.target)} ficou preso por {e.value} turno"); break;
-                case "preso": if(target) Float(target.position,"Preso: perde o turno",Violet); Game.Hud?.Log($"{Name(s,e.target)} perdeu o turno na prisão"); yield return Wait(.4f); break;
+                    if(target) { yield return Fx(e.info,target.position+Vector3.up*.7f,Violet); Float(target.position,e.info=="black-hole"?"Buraco negro!":"Preso!",Violet); }
+                    RefreshMarkers(s); RefreshHidden(s); Game.Hud?.Log(e.info=="black-hole"?$"{Name(s,e.target)} foi engolido pelo buraco negro":$"{Name(s,e.target)} ficou preso por {e.value} turno"); break;
+                case "preso": if(target) Float(target.position,e.info=="black-hole"?"No buraco negro":"Preso: perde o turno",Violet); Game.Hud?.Log(e.info=="black-hole"?$"{Name(s,e.target)} segue no buraco negro":$"{Name(s,e.target)} perdeu o turno na prisão"); yield return Wait(.4f); break;
+                // Elenco de 20/10: Pele D. Negra, L.E.L.A, Gumbald, Daemion e Ikaito.
+                case "retorno":
+                    RefreshMarkers(s); RefreshHidden(s);
+                    if(target) { Flash(target.position+Vector3.up,Violet,18); Float(target.position,e.value>0?$"Voltou: −{e.value}":"Voltou do buraco negro",e.value>0?Red:Green); if(e.value>0) PlayClip(target,"hit"); }
+                    Game.Hud?.Log($"{Name(s,e.target)} voltou do buraco negro{(e.value>0?$" (−{e.value})":"")}"); yield return Wait(.4f); break;
+                case "anulacao": if(target) Float(target.position,$"Nulification Field −{e.value} PA",Violet); Game.Hud?.Log($"{Name(s,e.target)} perdeu {e.value} PA no Nulification Field"); yield return Wait(.25f); break;
+                case "anulacao-fim": if(target) Float(target.position,$"+{e.value} PA de volta",Green); yield return Wait(.2f); break;
+                case "anular": if(target) { Flash(target.position+Vector3.up,Violet,16); Float(target.position,"Anulado!",Violet); } Game.Hud?.Log($"{Name(s,e.actor)} anulou {Name(s,e.target)}"); yield return Wait(.25f); break;
+                case "pulso":
+                    if(actor) { PlayClip(actor,"pulse"); Flash(actor.position+Vector3.up,DomeColor(s.F(e.actor)),20); StartCoroutine(Ring(actor.position+Vector3.up*.05f,3,DomeColor(s.F(e.actor)))); }
+                    Game.Hud?.Log($"{Name(s,e.actor)} disparou o L.E.L.A Pulse"); yield return Wait(.45f); break;
+                case "marca":
+                    if(target) Float(target.position,e.value>0?$"Marca da Maldição ×{e.value}":$"{-e.value} marcas consumidas",Violet);
+                    yield return Wait(.2f); break;
+                case "sem-cura": if(target) Float(target.position,"Sem cura neste turno",Red); yield return Wait(.2f); break;
+                case "sede": if(actor) Float(actor.position,$"Sede de sangue +{e.value} PM",Red); yield return Wait(.2f); break;
                 case "escapou": if(target) Float(target.position,"Escapou!",Green); yield return Wait(.3f); break;
                 case "buff":
                     // Efeito de uso sobre o alvo acompanha a visibilidade dele: unidade escondida do inimigo não é revelada pela sobreposição.
@@ -1281,7 +1301,7 @@ namespace ArenaTatica
                 if(!units.TryGetValue(f.id,out var unit)||!unit) continue;
                 bool hidden=f.Alive&&Match.Concealed(s,Game.LocalTeam,f), mine=s.Ally(f.team,Game.LocalTeam);
                 foreach(var r in unit.GetComponentsInChildren<Renderer>(true)) {
-                    r.enabled=!hidden||mine;
+                    r.enabled=(!hidden||mine)&&!(f.Alive&&f.banished);
                     if(r is SpriteRenderer sr&&r.name!="Silhueta") sr.color=new Color(1,1,1,hidden?.45f:1);
                 }
                 var pick=unit.GetComponent<Collider>(); if(pick) pick.enabled=!hidden||mine;
@@ -1313,6 +1333,28 @@ namespace ArenaTatica
             if(clip=="hit"&&!Loops(rig.clip)&&rig.clip!="hit"&&rig.clip!="death"&&ClipFrames(rig,out _) is Sprite[] busy&&rig.time*Fps(rig.clip)<busy.Length) return 0;
             rig.clip=clip; rig.time=0; rig.reverse=reverse; var frames=ClipFrames(rig,out _); ShowFrame(rig);
             return frames==null?0:frames.Length/Fps(clip);
+        }
+        // Domos das formas (FormDef.dome/color): contorno neon das casas que a aura pega (Modos da L.E.L.A, Room do Ikaito).
+        // Refeito só quando muda quem tem domo, a casa ou a forma.
+        Material holeMaterial; string domeKey; readonly List<GameObject> domes=new List<GameObject>(); readonly Dictionary<string,Material> domeMaterials=new Dictionary<string,Material>();
+        static Color DomeColor(Fighter f) => f!=null&&Content.Form(f)?.color is string hex&&ColorUtility.TryParseHtmlString(hex,out var c)?c:Violet;
+        void UpdateDomes(MatchState s)
+        {
+            var list=s.fighters.Where(f=>f.Alive&&!f.banished&&Board.Contains(s,f.cell)&&Content.Form(f) is FormDef fm&&fm.dome!=0&&!string.IsNullOrEmpty(fm.color)&&!Match.Concealed(s,Game.LocalTeam,f)).ToList();
+            string key=s.width+"|"+string.Join(";",list.Select(f=>$"{f.id}:{f.cell.x},{f.cell.z}:{f.form}"));
+            if(key==domeKey) return;
+            domeKey=key; foreach(var g in domes) if(g) Destroy(g); domes.Clear();
+            foreach(var f in list)
+            {
+                var fm=Content.Form(f); int r=fm.dome<0?Mathf.Max(s.width,s.height)/2:fm.dome;
+                if(!domeMaterials.TryGetValue(fm.color,out var mat)) domeMaterials[fm.color]=mat=Material(DomeColor(f));
+                bool In(Cell c) => Board.Contains(s,c)&&Board.Gap(f,c)<=r;
+                for(int x=0;x<s.width;x++) for(int z=0;z<s.height;z++) {
+                    var c=new Cell(x,z); if(!In(c)) continue; var p=Position(s,c)+Vector3.up*.07f;
+                    foreach(var d in Board.Dirs) if(!In(c+d))
+                        domes.Add(Cube("Domo",p+new Vector3(d.x,0,d.z)*.47f,d.x!=0?new Vector3(.06f,.06f,.96f):new Vector3(.96f,.06f,.06f),mat,world));
+                }
+            }
         }
         // Anjo e demônio do Baltazar: só enquanto a aura está ligada e ele de pé. Órbita defasada 180°, tiras de 5 quadros em
         // vaivém (0,1,2,3,4,3,2,1) a 6 FPS. Puro visual: a regra é resolvida no motor (AuraPulse), não pelo contato da órbita.
@@ -1740,7 +1782,7 @@ namespace ArenaTatica
             if(Screen.width!=screenWidth||Screen.height!=screenHeight) FitCamera();
             SlideYaw();
             FitSky();
-            AdvanceRigs(); SyncGhosts(); UpdateBars(s); UpdateCompanions(s); UpdateStates(s);
+            AdvanceRigs(); SyncGhosts(); UpdateBars(s); UpdateCompanions(s); UpdateStates(s); UpdateDomes(s);
             for(int i=wings.Count-1;i>=0;i--) { var wing=wings[i]; if(!wing) { wings.RemoveAt(i); continue; } wing.localRotation=wingRest[wing]*Quaternion.Euler(0,0,Mathf.Sin(Time.time*1.8f)*3.15f); }
             string key=s.revision+"|"+Game.Mode+"|"+Game.CanAct+"|"+Game.CanPlace+"|"+Game.Hud?.HasPendingConfirmation;
             if(key!=shownKey) UpdateHighlights(key);
@@ -1885,7 +1927,8 @@ namespace ArenaTatica
             if(!Game.CanAct||f==null||Game.Hud?.HasPendingConfirmation==true) return;
             if(Game.Mode=="") {
                 var costs=Board.Costs(s,f);
-                for(int i=0;i<costs.Length;i++) if(costs[i]>0&&costs[i]<=f.pm) Mark(new Cell(i%s.width,i/s.width),moveMaterial);
+                // Cheiro de Sangue (Daemion): rumo a inimigo ferido, o dobro de casas.
+                for(int i=0;i<costs.Length;i++) if(costs[i]>0&&(costs[i]<=f.pm||costs[i]<=f.pm*2&&Match.Scent(s,f,new Cell(i%s.width,i/s.width)))) Mark(new Cell(i%s.width,i/s.width),moveMaterial);
                 return;
             }
             var sk=Match.Skills(f).FirstOrDefault(x=>x.id==Game.Mode); if(sk==null) { Game.Mode=""; return; }

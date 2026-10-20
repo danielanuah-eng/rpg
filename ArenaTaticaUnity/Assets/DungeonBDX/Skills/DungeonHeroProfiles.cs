@@ -87,9 +87,9 @@ namespace DungeonBDX.Skills
             Add(map, HeroArchetype.DragonBinder, "ciantia", "ossyro");
             Add(map, HeroArchetype.Gunslinger, "damian", "cheiro-pneu");
             Add(map, HeroArchetype.Ranger, "arqueiro-jack", "nixira");
-            Add(map, HeroArchetype.Arcanist, "ezequiela", "principe-kellen", "domador-de-correntes", "edgar");
-            Add(map, HeroArchetype.Support, "asamyh", "baltazar", "alvyr");
-            Add(map, HeroArchetype.Skirmisher, "teantha", "diantus", "perry", "vespa-cinzenta", "viuva-da-agulha", "gryvro");
+            Add(map, HeroArchetype.Arcanist, "ezequiela", "principe-kellen", "domador-de-correntes", "edgar", "pele-negra", "ikaito");
+            Add(map, HeroArchetype.Support, "asamyh", "baltazar", "alvyr", "lela");
+            Add(map, HeroArchetype.Skirmisher, "teantha", "diantus", "perry", "vespa-cinzenta", "viuva-da-agulha", "gryvro", "gumbald", "daemion");
             Add(map, HeroArchetype.Vanguard, "talyssa", "devon", "tchu-tcha", "colosso", "rei-bobett", "guardiao-de-musgo", "ogro-de-pedra", "raizor", "brumak");
             return new ReadOnlyDictionary<string, HeroArchetype>(map);
         }

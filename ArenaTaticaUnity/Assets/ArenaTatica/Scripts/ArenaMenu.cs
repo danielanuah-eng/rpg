@@ -661,7 +661,7 @@ namespace ArenaTatica
         void PassiveTemplate(Transform row,string label,PassiveDef model)
         {
             Btn(row,label,()=>{
-                if(editing.passives.Length>=6) { editorStatus.text="<color=#ef6f7a>Limite de 6 passivas.</color>"; return; }
+                if(editing.passives.Length>=8) { editorStatus.text="<color=#ef6f7a>Limite de 8 passivas.</color>"; return; }
                 editing.passives=editing.passives.Append(model.Clone()).ToArray(); dirty=true; Show("editor");
             },0,40,14);
         }

@@ -1,0 +1,12 @@
+{
+    "version": "1.2.7",
+    "state": "publicado-itch-windows",
+    "protocol": 10,
+    "editMode": { "total": 473, "passed": 473, "failed": 0, "skipped": 0 },
+    "notes": "Elenco novo (pedido do autor, 20/10): Pele D. Negra (Nulification, Nulification Field, Yami-yami, Black Hole, Light Speed), L.E.L.A - 0 (Lendária: Modos Ira/Alegria/Calma/Ansiedade como auras com domo neon, L.E.L.A Pulse, Modo Guerra com missil global e guitarra), Gumbald (Marcas da Maldicao salvas no estado, Pulo do Gato por PM, Cat-a-Clisma), Daemion (Cheiro de Sangue, roubo de vida, Bloodlust) e Capitao Ikaito D. Razer (Lendario: Room, Shambles, Corte negro que fura armadura e corta cura, Injection Shot). Sprites de todos no PixelLab (morte da Pele com as artes do autor). Mecanicas em campos genericos das fichas; estado novo do lutador compactado em Fighter.ext para o snapshot de 6 jogadores caber no Relay. Protocolo 10: online so com a 1.2.7.",
+    "previousRelease": "release-1.2.6.json",
+    "platforms": {
+        "windows": { "channel": "eiediboy/bdx-master:windows", "userVersion": "2026.10.20-1.2.7", "state": "enviado" },
+        "android": { "state": "nao publicado", "reason": "Android parado pelo autor em 18/10" }
+    }
+}

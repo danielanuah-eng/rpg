@@ -47,7 +47,9 @@ namespace ArenaTatica.Core
     // inimigos até area casas, 1 vez por alvo por turno do dono. Sem PA para manter, desliga. Novos tipos sempre no fim (as edições guardam o número).
     // Troca (Shambles): dois alvos (Command.cell e cell2) trocam de casa. Portal: entrada em cell, saída em cell2; quem entra sai numa casa
     // livre vizinha da saída.
-    public enum SkillKind { Dano, Invocacao, Cura, Armadilha, Teleporte, Salto, Forma, Esconder, Espelho, Suporte, Zona, Comando, Reviver, Desejo, Aura, Troca, Portal }
+    // Pulso (L.E.L.A, 20/10): dispara agora o efeito das passivas da forma atual nos aliados que elas pegam, multiplicado por
+    // amplify, e o mesmo efeito volta no começo do próximo turno de cada aliado.
+    public enum SkillKind { Dano, Invocacao, Cura, Armadilha, Teleporte, Salto, Forma, Esconder, Espelho, Suporte, Zona, Comando, Reviver, Desejo, Aura, Troca, Portal, Pulso }
     // As 3 bolinhas do editor (sprint 1): 🔵 si, 🔴 inimigos, 🟢 aliados. SkillDef.hits 0 = regra antiga de cada tipo.
     [Flags] public enum Hit { Padrao=0, Si=1, Inimigo=2, Aliado=4 }
     public enum ShopKind { Item, Magia, Pet, Armadilha, Buff }
@@ -90,6 +92,17 @@ namespace ArenaTatica.Core
         // turns também é a duração do Portal (turnos do dono; 0 = 2).
         public int hits;
         public bool channeled, mine, freeSwap;
+        // Elenco de 20/10. dispel: o golpe anula formas, buffs bons, canalização e aura do alvo antes do dano (Pele D. Negra).
+        // banish: a prisão vira buraco negro (sem Esquiva, pega aliado também); no retorno o inimigo leva returnDamage.
+        // pmRange: +1 de alcance por PM, e só gasta PM no que passar de maxRange (Light Speed). pmCost: custa PM em vez de PA.
+        // mark: Marcas da Maldição no alvo ao acertar; markRange: +1 de alcance por marca do alvo; consumeMarks: +2 de dano a
+        // cada 2 marcas e zera as marcas (Gumbald). global: alcance no mapa todo, sem linha de visão nem muro (míssil da L.E.L.A).
+        // perForm: usos por transformação. notForm: some nessa forma. amplify: multiplicador do Pulso. halfMap: alcance = metade
+        // do mapa (Room do Ikaito). noHeal: o alvo não se cura até o fim do turno de quem acertou.
+        // Cura com drain: quem usa também cura drain (Injection Shot).
+        public bool dispel, banish, pmRange, markRange, consumeMarks, global, halfMap, noHeal;
+        public int returnDamage, pmCost, mark, perForm, amplify;
+        public string notForm;
         public bool CanHitSelf => (hits&(int)Hit.Si)!=0;
         public bool CanHitEnemy => (hits&(int)Hit.Inimigo)!=0;
         public bool CanHitAlly => (hits&(int)Hit.Aliado)!=0;
@@ -101,7 +114,8 @@ namespace ArenaTatica.Core
     // Forma do lutador (arma do Damian, Berserk do Tchu tcha): bônus enquanto dura e a pasta de sprites dela.
     // pose: clipe cujo último quadro vira a pose parada nessa forma (Damian segurando o canhão ou o martelo), enquanto não há idle próprio.
     // intangible: golpes inimigos não o acertam nessa forma (forma fantasma do Edgar).
-    [Serializable] public class FormDef { public string id, name, sprites, pose; public int pa, pm, armor; public bool noGuard, intangible; }
+    // dome/color (só visual): contorno neon das casas até dome casas do lutador nessa forma (−1 = metade do mapa), na cor hex.
+    [Serializable] public class FormDef { public string id, name, sprites, pose, color; public int pa, pm, armor, dome; public bool noGuard, intangible; }
     [Serializable] public class FighterDef
     {
         public string id, name, sprites;
@@ -118,6 +132,12 @@ namespace ArenaTatica.Core
         // size: lado em casas (Primal Beast 2 = ocupa 2×2; cell é o canto de menor x e z). 0 ou 1 = uma casa.
         public int armor, healAura, size;
         public bool legendary, immovable, devour, noTurn, noLock, neutral;
+        // Elenco de 20/10. fieldPa/fieldRange: inimigos até fieldRange casas (diagonal incluída) perdem fieldPa PA (mín. 0) ao
+        // começar o turno ou entrar; saindo no mesmo turno, recuperam (Nulification Field). meleeWeak: leva esse dano a mais de
+        // golpes colados (Yami-yami). bloodScent: andar em direção a um inimigo com PV ≤ 50% custa metade dos PM. lifesteal: cura
+        // ao acertar. bloodlust: PM a mais por acerto em inimigo com PV ≤ 50% (Daemion).
+        public int fieldPa, fieldRange, meleeWeak, lifesteal, bloodlust;
+        public bool bloodScent;
         public string startForm;
         public FormDef[] forms;
         // Passivas do editor: valem enquanto o dono está vivo (ver PassiveDef).
@@ -144,12 +164,13 @@ namespace ArenaTatica.Core
     }
     // extra: +1 uso de cada skill por turno (Desejo C).
     // from: skill que causou (perda de PA/PM), só para a apresentação escolher o laço do estado.
-    [Serializable] public class Buff { public string id, from; public int turns, pa, pm, armor, range, extra; }
+    // dmg: dano a mais nos golpes; regen: cura no começo do turno (Pulso). id "sem-cura": não se cura até o fim do turno de from.
+    [Serializable] public class Buff { public string id, from; public int turns, pa, pm, armor, range, extra, dmg, regen; }
     [Serializable] public class Charge { public string skill; public int uses; }
     [Serializable] public class TeamShop { public string[] slots=new string[0]; }
     // Fichas editadas pelo autor (Content.ApplyEdits).
     [Serializable] public class GameEdits { public List<FighterDef> fighters=new List<FighterDef>(); }
-    [Serializable] public class Fighter
+    [Serializable] public class Fighter : UnityEngine.ISerializationCallbackReceiver
     {
         public NumericRoll roll;
         public bool deathProcessed;
@@ -169,6 +190,23 @@ namespace ArenaTatica.Core
         public bool auraOn, auraPaid;
         // Skill canalizada (SkillDef.channeled): "skill;x;z;x2;z2;slot", resolve no começo do próximo turno (vazio = nenhuma).
         public string channeling;
+        // marks: Marcas da Maldição (Gumbald), ficam até a Cat-a-Clisma. drained: PA tirados pelo Nulification Field neste turno.
+        // banished/banishDamage: no buraco negro (prisoned conta os turnos); dano ao voltar. usedForm: skills usadas nesta transformação.
+        // Na rede viajam juntos em ext ("marcas.anulados.dano.banido.skill|skill"; vazio = tudo zerado) para o snapshot de 6
+        // jogadores caber no Relay.
+        [NonSerialized] public int marks, drained, banishDamage;
+        [NonSerialized] public bool banished;
+        [NonSerialized] public List<string> usedForm=new List<string>();
+        public string ext;
+        public void OnBeforeSerialize() => ext=marks==0&&drained==0&&banishDamage==0&&!banished&&(usedForm==null||usedForm.Count==0)?""
+            :$"{marks}.{drained}.{banishDamage}.{(banished?1:0)}.{string.Join("|",usedForm??new List<string>())}";
+        public void OnAfterDeserialize()
+        {
+            marks=drained=banishDamage=0; banished=false; usedForm=new List<string>();
+            var p=(ext??"").Split('.'); if(p.Length<5) return;
+            int.TryParse(p[0],out marks); int.TryParse(p[1],out drained); int.TryParse(p[2],out banishDamage); banished=p[3]=="1";
+            usedForm.AddRange(p[4].Split(new[]{'|'},StringSplitOptions.RemoveEmptyEntries));
+        }
         // stolen: skills devoradas (Colosso, +1 PA). learned: skills copiadas pelo Desejo.
         public List<string> stolen=new List<string>();
         public List<SkillRoll> stolenPowers=new List<SkillRoll>();

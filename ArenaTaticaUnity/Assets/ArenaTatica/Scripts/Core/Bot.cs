@@ -130,7 +130,7 @@ namespace ArenaTatica.Core
         static List<Fighter> Foes(MatchState s,Fighter me) => s.fighters.Where(x=>x.Alive&&!s.Ally(x.team,me.team)&&!x.hidden).ToList();
         // Maior alcance entre as skills de dano que ele tem agora.
         static int Reach(Fighter me) => Match.Skills(me).Where(k=>k.kind==SkillKind.Dano&&!k.selfArea).Select(k=>k.maxRange).DefaultIfEmpty(1).Max();
-        static bool SelfCast(SkillDef sk) => sk.selfArea||sk.kind==SkillKind.Forma||sk.kind==SkillKind.Esconder||sk.kind==SkillKind.Aura||sk.kind==SkillKind.Desejo&&(string.IsNullOrEmpty(sk.wish)||sk.wish=="f");
+        static bool SelfCast(SkillDef sk) => sk.selfArea||sk.kind==SkillKind.Forma||sk.kind==SkillKind.Pulso||sk.kind==SkillKind.Esconder||sk.kind==SkillKind.Aura||sk.kind==SkillKind.Desejo&&(string.IsNullOrEmpty(sk.wish)||sk.wish=="f");
 
         // Casas que vale testar para cada tipo de skill (o CanTarget confirma alcance, visão e regras).
         static IEnumerable<Cell> Targets(MatchState s,Fighter me,SkillDef sk,List<Fighter> foes)
@@ -198,6 +198,9 @@ namespace ArenaTatica.Core
                     if(v==null) return 0;
                     return s.Ally(v.team,me.team)?Math.Min(2,Content.MaxHp(v)-v.hp)*.8:2;
                 case SkillKind.Reviver: return 6;
+                // Pulso: vale pelos aliados que a aura da forma atual pega agora.
+                case SkillKind.Pulso: return Content.Def(me).passives.Where(p=>p!=null&&(string.IsNullOrEmpty(p.form)||p.form==me.form)&&p.who!=PassiveWho.Si&&p.who!=PassiveWho.Inimigos)
+                    .Sum(p=>s.fighters.Count(x=>x.Alive&&x!=me&&s.Ally(x.team,me.team)&&(p.range<=0||Board.Gap(x,me)<=p.range)))*1.5;
                 case SkillKind.Aura:
                 {
                     // Nunca desliga sozinho; liga quando há gente para curar ou ferir no alcance.

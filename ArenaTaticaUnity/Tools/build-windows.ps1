@@ -40,6 +40,16 @@ $destination = Join-Path $arenaRoot 'Builds/Windows'
 Assert-ArenaChild $arenaRoot $destination
 & robocopy $out $destination /MIR /MT:8 /NFL /NDL /NJH /NJS /NP /R:2 /W:2 | Out-Null
 if ($LASTEXITCODE -lt 0 -or $LASTEXITCODE -ge 8) { throw "Falha ao copiar o build (robocopy $LASTEXITCODE)." }
+# A instalação do Unity perdeu o "unity default resources" do player sem desenvolvimento (17/10); sem ele o .exe fecha na
+# abertura (Internal-ErrorShader). O da variação de desenvolvimento é o mesmo arquivo da mesma versão.
+$defaults = Join-Path $destination 'ArenaTatica_Data/Resources/unity default resources'
+if (-not (Test-Path -LiteralPath $defaults)) {
+    $variations = 'C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/Variations'
+    $source = @('win64_player_nondevelopment_mono','win64_player_development_mono') | ForEach-Object { Join-Path $variations "$_/Data/Resources/unity default resources" } | Where-Object { Test-Path -LiteralPath $_ } | Select-Object -First 1
+    if (-not $source) { throw 'Falta "unity default resources" na instalação do Unity; reinstalar o módulo Windows.' }
+    Copy-Item -LiteralPath $source -Destination $defaults
+    Write-Output "unity default resources reposto de $source"
+}
 Save-ArenaBuildReceipt $arenaRoot $StagePath 'Windows' $arenaSourceCommit
 & (Join-Path $PSScriptRoot 'package.ps1') -Platforms Windows -SkipSource -SkipAndroid
 Write-Output "Versão de PC pronta: $(Join-Path $arenaRoot 'Builds/ArenaTatica-Windows.zip')"
