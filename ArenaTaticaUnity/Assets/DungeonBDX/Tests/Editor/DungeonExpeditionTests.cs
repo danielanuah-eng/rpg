@@ -37,7 +37,7 @@ namespace DungeonBDX.Tests
         public void AllNativeProfilesAndImportedProfilesResolveToRealLoadouts()
         {
             var all=DungeonHeroCatalog.ImportAll();
-            Assert.That(all.Count,Is.EqualTo(36));
+            Assert.That(all.Count,Is.EqualTo(43));
             foreach(var hero in all)
             {
                 var profile=DungeonProfiles.Resolve(hero.Id);

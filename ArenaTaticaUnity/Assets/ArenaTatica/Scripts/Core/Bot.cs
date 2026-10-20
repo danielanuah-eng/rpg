@@ -145,6 +145,8 @@ namespace ArenaTatica.Core
                 case SkillKind.Cura: case SkillKind.Suporte: return allies;
                 case SkillKind.Armadilha: return foes.SelectMany(f=>Board.Dirs.Select(d=>f.cell+d)).Where(c=>Board.Contains(s,c)&&Board.At(s,c)==null).Distinct();
                 case SkillKind.Invocacao: case SkillKind.Reviver: return Free(Math.Min(sk.maxRange,6));
+                // Teleporte entre sombras: emerge colado num inimigo.
+                case SkillKind.Teleporte: return sk.shadowStep?foes.SelectMany(f=>Board.Dirs.Select(d=>f.cell+d)).Where(c=>Board.Contains(s,c)&&Board.At(s,c)==null).Distinct():Enumerable.Empty<Cell>();
                 case SkillKind.Desejo:
                     if(sk.wish=="a") return Free(1);
                     if(sk.wish=="d") return s.fighters.Where(x=>x.Alive&&x!=me&&!x.hidden).Select(x=>x.cell);
@@ -198,6 +200,7 @@ namespace ArenaTatica.Core
                     if(v==null) return 0;
                     return s.Ally(v.team,me.team)?Math.Min(2,Content.MaxHp(v)-v.hp)*.8:2;
                 case SkillKind.Reviver: return 6;
+                case SkillKind.Teleporte: { int left=me.pa-sk.pa; return Match.Skills(me).Any(k=>k.kind==SkillKind.Dano&&k.damage>0&&k.pa<=left)?1.5:0; }
                 // Pulso: vale pelos aliados que a aura da forma atual pega agora.
                 case SkillKind.Pulso: return Content.Def(me).passives.Where(p=>p!=null&&(string.IsNullOrEmpty(p.form)||p.form==me.form)&&p.who!=PassiveWho.Si&&p.who!=PassiveWho.Inimigos)
                     .Sum(p=>s.fighters.Count(x=>x.Alive&&x!=me&&s.Ally(x.team,me.team)&&(p.range<=0||Board.Gap(x,me)<=p.range)))*1.5;

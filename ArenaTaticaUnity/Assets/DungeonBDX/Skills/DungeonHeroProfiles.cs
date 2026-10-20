@@ -85,12 +85,12 @@ namespace DungeonBDX.Skills
         {
             var map = new Dictionary<string, HeroArchetype>(StringComparer.Ordinal);
             Add(map, HeroArchetype.DragonBinder, "ciantia", "ossyro");
-            Add(map, HeroArchetype.Gunslinger, "damian", "cheiro-pneu");
+            Add(map, HeroArchetype.Gunslinger, "damian", "cheiro-pneu", "pistoleira");
             Add(map, HeroArchetype.Ranger, "arqueiro-jack", "nixira");
-            Add(map, HeroArchetype.Arcanist, "ezequiela", "principe-kellen", "domador-de-correntes", "edgar", "pele-negra", "ikaito");
-            Add(map, HeroArchetype.Support, "asamyh", "baltazar", "alvyr", "lela");
-            Add(map, HeroArchetype.Skirmisher, "teantha", "diantus", "perry", "vespa-cinzenta", "viuva-da-agulha", "gryvro", "gumbald", "daemion");
-            Add(map, HeroArchetype.Vanguard, "talyssa", "devon", "tchu-tcha", "colosso", "rei-bobett", "guardiao-de-musgo", "ogro-de-pedra", "raizor", "brumak");
+            Add(map, HeroArchetype.Arcanist, "ezequiela", "principe-kellen", "domador-de-correntes", "edgar", "pele-negra", "ikaito", "espelhos");
+            Add(map, HeroArchetype.Support, "asamyh", "baltazar", "alvyr", "lela", "pilis");
+            Add(map, HeroArchetype.Skirmisher, "teantha", "diantus", "perry", "vespa-cinzenta", "viuva-da-agulha", "gryvro", "gumbald", "daemion", "ellie", "espadachim");
+            Add(map, HeroArchetype.Vanguard, "talyssa", "devon", "tchu-tcha", "colosso", "rei-bobett", "guardiao-de-musgo", "ogro-de-pedra", "raizor", "brumak", "ganso", "death-crimson");
             return new ReadOnlyDictionary<string, HeroArchetype>(map);
         }
         static void Add(Dictionary<string, HeroArchetype> map, HeroArchetype archetype, params string[] ids)

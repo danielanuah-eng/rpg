@@ -56,11 +56,13 @@ namespace ArenaTatica.Core
 
     // lava/mark: eventos (maré de lava, fogos). frozenBy: lutador que congelou a casa (+1 PM para entrar). trapPa: mina de gelo.
     // obj: TileObj num único int (o snapshot de 18×18 precisa caber no Relay).
-    [Serializable] public class Tile { public int height, coins, trap, trapDamage, trapPa, frozenBy, obj; public Terrain terrain; public bool zone, lava, mark;
+    // shadow: casa de sombra da Ellie (id dela; 0 = nenhuma), refeita no começo de cada turno dela.
+    [Serializable] public class Tile { public int height, coins, trap, trapDamage, trapPa, frozenBy, obj, shadow; public Terrain terrain; public bool zone, lava, mark;
         public TileObj Obj { get => (TileObj)obj; set => obj=(int)value; } }
     // Portal (sprint 1): casas de entrada e saída (Board.Index), quem abriu e turnos do dono que faltam. Fica numa lista do estado,
     // não em cada casa, para o snapshot de 6 jogadores caber no Relay.
-    [Serializable] public class Portal { public int a, b, by, turns; }
+    // allies: só aliados de quem abriu passam (portal do Mordomo Pilis).
+    [Serializable] public class Portal { public int a, b, by, turns; public bool allies; }
 
     [Serializable] public class SkillDef
     {
@@ -103,6 +105,17 @@ namespace ArenaTatica.Core
         public bool dispel, banish, pmRange, markRange, consumeMarks, global, halfMap, noHeal;
         public int returnDamage, pmCost, mark, perForm, amplify;
         public string notForm;
+        // Elenco de 21/10. gainPm: quem usa ganha PM. shadowStep (Teleporte): destino numa sombra própria ou colado num inimigo.
+        // stun: o alvo perde os próximos N turnos (atordoado; pode ser alvo). purge: tira os buffs bons dos inimigos atingidos;
+        // cleanse: tira condições ruins dos aliados atingidos. sealUlt: as ultimates do inimigo entram em recarga N turnos e a forma
+        // de ultimate cai. buffReflect/buffImmune (Suporte): o próximo golpe que não mata volta em quem bateu / imune a efeitos
+        // negativos. reveal (Zona): revela escondidos inimigos na área. alliesOnly (Portal): só aliados passam. doubleDamage: o alvo
+        // leva o dobro dos golpes por N turnos. beam: o golpe para no 1º lutador da linha, em obstáculo ou chão mais alto.
+        // swapHp: troca os PV de quem usa com os do alvo. props (Troca): troca também caixas, árvores, arbustos, baús e braseiros.
+        // halfMapIn: o halfMap só vale nessa forma (fora dela, maxRange). noRefresh: o Eco ancestral não devolve o uso.
+        public int gainPm, stun, sealUlt, doubleDamage;
+        public bool shadowStep, purge, cleanse, buffReflect, buffImmune, reveal, alliesOnly, beam, swapHp, props, noRefresh;
+        public string halfMapIn;
         public bool CanHitSelf => (hits&(int)Hit.Si)!=0;
         public bool CanHitEnemy => (hits&(int)Hit.Inimigo)!=0;
         public bool CanHitAlly => (hits&(int)Hit.Aliado)!=0;
@@ -115,7 +128,10 @@ namespace ArenaTatica.Core
     // pose: clipe cujo último quadro vira a pose parada nessa forma (Damian segurando o canhão ou o martelo), enquanto não há idle próprio.
     // intangible: golpes inimigos não o acertam nessa forma (forma fantasma do Edgar).
     // dome/color (só visual): contorno neon das casas até dome casas do lutador nessa forma (−1 = metade do mapa), na cor hex.
-    [Serializable] public class FormDef { public string id, name, sprites, pose, color; public int pa, pm, armor, dome; public bool noGuard, intangible; }
+    // extra: +usos por turno de cada skill (Fúria do Death Crimson). endBlast: no fim do turno, dano fixo nas 8 casas em volta e nele.
+    // locked: nada tira a forma (Nulification, selar ultimate). unstoppable: não é atordoado nem preso.
+    // music: estilo da trilha eletrônica que toca enquanto alguém está nessa forma (ArenaMusica; Modos da L.E.L.A).
+    [Serializable] public class FormDef { public string id, name, sprites, pose, color, music; public int pa, pm, armor, dome, extra, endBlast; public bool noGuard, intangible, locked, unstoppable; }
     [Serializable] public class FighterDef
     {
         public string id, name, sprites;
@@ -138,6 +154,13 @@ namespace ArenaTatica.Core
         // ao acertar. bloodlust: PM a mais por acerto em inimigo com PV ≤ 50% (Daemion).
         public int fieldPa, fieldRange, meleeWeak, lifesteal, bloodlust;
         public bool bloodScent;
+        // Elenco de 21/10. shadowMin/Max: sombras sorteadas no começo do turno (Ellie); shadowBonus: dano a mais em alvo numa sombra;
+        // shadowDodge: % de errar golpe colado nele quando está numa sombra. duelBonus: dano a mais se ninguém além do alvo está até
+        // duelRange casas dele ou do alvo. farImmune: imune a golpes de N+ casas. fullHitHeal: cura ao acertar sem o Escudo do
+        // defensor. split/splitCount: ao cair, surgem essas réplicas. noReveal: não revela escondidos ao encostar (ilusão).
+        public int shadowMin, shadowMax, shadowBonus, shadowDodge, duelBonus, duelRange, farImmune, fullHitHeal, splitCount;
+        public string split;
+        public bool noReveal;
         public string startForm;
         public FormDef[] forms;
         // Passivas do editor: valem enquanto o dono está vivo (ver PassiveDef).
@@ -165,7 +188,8 @@ namespace ArenaTatica.Core
     // extra: +1 uso de cada skill por turno (Desejo C).
     // from: skill que causou (perda de PA/PM), só para a apresentação escolher o laço do estado.
     // dmg: dano a mais nos golpes; regen: cura no começo do turno (Pulso). id "sem-cura": não se cura até o fim do turno de from.
-    [Serializable] public class Buff { public string id, from; public int turns, pa, pm, armor, range, extra, dmg, regen; }
+    // reflect: o próximo golpe que não mata volta em quem bateu. immune: imune a efeitos negativos. taken: multiplicador do dano dos golpes recebidos.
+    [Serializable] public class Buff { public string id, from; public int turns, pa, pm, armor, range, extra, dmg, regen, reflect, immune, taken; }
     [Serializable] public class Charge { public string skill; public int uses; }
     [Serializable] public class TeamShop { public string[] slots=new string[0]; }
     // Fichas editadas pelo autor (Content.ApplyEdits).
@@ -194,18 +218,20 @@ namespace ArenaTatica.Core
         // banished/banishDamage: no buraco negro (prisoned conta os turnos); dano ao voltar. usedForm: skills usadas nesta transformação.
         // Na rede viajam juntos em ext ("marcas.anulados.dano.banido.skill|skill"; vazio = tudo zerado) para o snapshot de 6
         // jogadores caber no Relay.
-        [NonSerialized] public int marks, drained, banishDamage;
+        // stunned: turnos atordoado (perde o turno, mas pode ser alvo).
+        [NonSerialized] public int marks, drained, banishDamage, stunned;
         [NonSerialized] public bool banished;
         [NonSerialized] public List<string> usedForm=new List<string>();
         public string ext;
-        public void OnBeforeSerialize() => ext=marks==0&&drained==0&&banishDamage==0&&!banished&&(usedForm==null||usedForm.Count==0)?""
-            :$"{marks}.{drained}.{banishDamage}.{(banished?1:0)}.{string.Join("|",usedForm??new List<string>())}";
+        public void OnBeforeSerialize() => ext=marks==0&&drained==0&&banishDamage==0&&!banished&&stunned==0&&(usedForm==null||usedForm.Count==0)?""
+            :$"{marks}.{drained}.{banishDamage}.{(banished?1:0)}.{string.Join("|",usedForm??new List<string>())}.{stunned}";
         public void OnAfterDeserialize()
         {
-            marks=drained=banishDamage=0; banished=false; usedForm=new List<string>();
+            marks=drained=banishDamage=stunned=0; banished=false; usedForm=new List<string>();
             var p=(ext??"").Split('.'); if(p.Length<5) return;
             int.TryParse(p[0],out marks); int.TryParse(p[1],out drained); int.TryParse(p[2],out banishDamage); banished=p[3]=="1";
             usedForm.AddRange(p[4].Split(new[]{'|'},StringSplitOptions.RemoveEmptyEntries));
+            if(p.Length>5) int.TryParse(p[5],out stunned);
         }
         // stolen: skills devoradas (Colosso, +1 PA). learned: skills copiadas pelo Desejo.
         public List<string> stolen=new List<string>();
@@ -248,6 +274,8 @@ namespace ArenaTatica.Core
         public TurnMode turns=TurnMode.Completo;
         // Itens que podem sair na loja desta sala (ids de Shop.Catalog); vazio = todos.
         public string[] shopItems;
+        // Ilusão bloqueia casas (colisão); desligado, dá para atravessar a ilusão (sem parar nela).
+        public bool solidIllusions=true;
         public string[] team1={"ciantia"}, team2={"ciantia"};
     }
     // Mapa do editor: relevo, peças (árvore, arbusto, caixa) e zona central de cada casa. width = Board.SizeFor(jogadores).
@@ -268,6 +296,8 @@ namespace ArenaTatica.Core
         // Labirinto (cenário fechado): névoa (cada time só vê as casas coladas nos seus lutadores, Fog) até a vela ser acesa;
         // boss: o evento do boss já saiu nesta partida (sai uma vez só).
         public bool fog, revealed, boss;
+        // Ilusões ocupam a casa para o movimento (MatchSetup.solidIllusions).
+        public bool solidIllusions=true;
         // Névoa (Fog): casas que cada time (alliance) já viu, em hexadecimal (4 casas por letra); índice = time.
         public string[] explored=new string[0];
         // Espetos do labirinto que já saíram do chão (Board.Index): só eles aparecem (autor, 18/10: ocultos até pisar).
@@ -282,13 +312,13 @@ namespace ArenaTatica.Core
         public bool Walled() { foreach(var t in tiles) if(t.terrain==Terrain.Parede) return true; return false; }
         // Mesmo estado com outras casas (o que um jogador conhece na névoa); listas e lutadores são os mesmos.
         public MatchState With(Tile[] other) { var c=(MatchState)MemberwiseClone(); c.tiles=other; return c; }
-        // Casa por casa: terreno.relevo.objeto.marcas.moedas.armadilha.dano.pa.gelo, sem os zeros do fim; casa vazia = "".
+        // Casa por casa: terreno.relevo.objeto.marcas.moedas.armadilha.dano.pa.gelo.sombra, sem os zeros do fim; casa vazia = "".
         public static string Pack(Tile[] tiles)
         {
-            var sb=new System.Text.StringBuilder(); var v=new int[9];
+            var sb=new System.Text.StringBuilder(); var v=new int[10];
             for(int i=0;i<tiles.Length;i++) {
                 var t=tiles[i]; if(i>0) sb.Append(',');
-                v[0]=(int)t.terrain; v[1]=t.height; v[2]=t.obj; v[3]=(t.zone?1:0)|(t.lava?2:0)|(t.mark?4:0); v[4]=t.coins; v[5]=t.trap; v[6]=t.trapDamage; v[7]=t.trapPa; v[8]=t.frozenBy;
+                v[0]=(int)t.terrain; v[1]=t.height; v[2]=t.obj; v[3]=(t.zone?1:0)|(t.lava?2:0)|(t.mark?4:0); v[4]=t.coins; v[5]=t.trap; v[6]=t.trapDamage; v[7]=t.trapPa; v[8]=t.frozenBy; v[9]=t.shadow;
                 int n=v.Length; while(n>0&&v[n-1]==0) n--;
                 for(int k=0;k<n;k++) { if(k>0) sb.Append('.'); sb.Append(v[k]); }
             }
@@ -299,9 +329,9 @@ namespace ArenaTatica.Core
             var parts=(packed??"").Split(','); if(parts.Length!=count) return null;
             var tiles=new Tile[count];
             for(int i=0;i<count;i++) {
-                var v=new int[9]; var p=parts[i].Length==0?new string[0]:parts[i].Split('.');
+                var v=new int[10]; var p=parts[i].Length==0?new string[0]:parts[i].Split('.');
                 for(int k=0;k<p.Length&&k<v.Length;k++) if(!int.TryParse(p[k],out v[k])) return null;
-                tiles[i]=new Tile{ terrain=(Terrain)v[0], height=v[1], obj=v[2], zone=(v[3]&1)!=0, lava=(v[3]&2)!=0, mark=(v[3]&4)!=0, coins=v[4], trap=v[5], trapDamage=v[6], trapPa=v[7], frozenBy=v[8] };
+                tiles[i]=new Tile{ terrain=(Terrain)v[0], height=v[1], obj=v[2], zone=(v[3]&1)!=0, lava=(v[3]&2)!=0, mark=(v[3]&4)!=0, coins=v[4], trap=v[5], trapDamage=v[6], trapPa=v[7], frozenBy=v[8], shadow=v[9] };
             }
             return tiles;
         }

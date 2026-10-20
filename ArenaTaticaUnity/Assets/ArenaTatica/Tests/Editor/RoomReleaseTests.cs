@@ -221,7 +221,8 @@ namespace ArenaTatica.Tests
             for(uint seed=1;seed<=5;seed++) {
                 var match=Match.New(new MatchSetup{seed=seed,map=ArenaMaps.Pick(Board.SizeFor(players),seed),players=Enumerable.Range(0,players).Select(_=>new PlayerSetup{fighters=team}).ToArray()});
                 for(int viewer=1;viewer<=players;viewer++) {
-                    var packet=JsonUtility.ToJson(new WireMessage{kind="snapshot",state=Match.ViewFor(match.S,viewer)});
+                    // O que vai pela rede (protocolo 11): casas compactadas e o JSON comprimido.
+                    var packet=ArenaGame.Zip(ArenaGame.Wire(new WireMessage{kind="snapshot",state=Match.ViewFor(match.S,viewer)}));
                     largest=System.Math.Max(largest,System.Text.Encoding.UTF8.GetByteCount(packet));
                 }
             }

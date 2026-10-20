@@ -62,9 +62,11 @@ namespace ArenaTatica.Core
         // Outro lutador conhecido em alguma casa que f ocuparia com o canto em at.
         static bool Crowded(MatchState s,Fighter f,Cell at)
         {
-            foreach(var c in Footprint(f,at)) { var o=KnownAt(s,c,f); if(o!=null&&o!=f) return true; }
+            foreach(var c in Footprint(f,at)) { var o=KnownAt(s,c,f); if(o!=null&&o!=f&&!PassThrough(s,o)) return true; }
             return false;
         }
+        // Ilusão atravessável (MatchState.solidIllusions desligado): não bloqueia o caminho, mas ninguém para em cima dela.
+        public static bool PassThrough(MatchState s,Fighter o) => !s.solidIllusions&&!string.IsNullOrEmpty(o.disguise);
         // Planejamento usa apenas ocupantes conhecidos por quem está andando (escondidos e os da névoa não contam).
         public static Fighter KnownAt(MatchState s,Cell c,Fighter viewer)
         {
@@ -133,6 +135,7 @@ namespace ArenaTatica.Core
         public static List<Cell> Path(MatchState s,Fighter f,Cell to,int budget)
         {
             if(!Contains(s,to)||to==f.cell||budget<=0) return null;
+            foreach(var c in Footprint(f,to)) if(At(s,c) is Fighter g&&g!=f&&PassThrough(s,g)) return null;
             bool flying=Content.Def(f).flying; int n=s.width*s.height, b=budget+1, start=Index(s,f.cell), goal=Index(s,to);
             var risk=new int[n*b]; var prev=new int[n*b];
             for(int i=0;i<risk.Length;i++) { risk[i]=int.MaxValue; prev[i]=-1; }

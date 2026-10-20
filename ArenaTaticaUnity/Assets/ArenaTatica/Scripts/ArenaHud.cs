@@ -286,10 +286,11 @@ namespace ArenaTatica
             inspectTitle.text=$"{d.name}{(d.legendary?" ★":"")}  {team}\n<size=13><color=#{ArenaTema.Html(ArenaTema.Hp)}>{f.hp}/{Content.MaxHp(f)} PV</color> · <color=#{ArenaTema.Html(ArenaTema.Pm)}>{f.pa} PA · {f.pm} PM</color> · Iniciativa {d.initiative} · Nível {d.level}</size>";
             var state=new List<string>();
             if(form!=null&&f.form!=d.startForm) state.Add($"forma {form.name}{(form.intangible?" (imune a dano)":"")}{(f.formTurns>0?$", {f.formTurns} turno(s)":"")}");
-            if(f.hidden) state.Add($"escondido (anda até {Match.HiddenPm})"); if(f.prisoned>0) state.Add($"preso {f.prisoned} turno(s)"); if(f.channel>0) state.Add("canalizando o Desejo");
+            if(f.hidden) state.Add($"escondido (anda até {Match.HiddenPm} + bônus de PM)"); if(f.prisoned>0) state.Add($"preso {f.prisoned} turno(s)"); if(f.channel>0) state.Add("canalizando o Desejo");
             if(f.auraOn) state.Add("aura ligada");
+            if(f.stunned>0) state.Add($"atordoado {f.stunned} turno(s)");
             if(f.banished) state.Add("no buraco negro"); if(f.marks>0) state.Add($"Marcas da Maldição: {f.marks}"); if(f.drained>0) state.Add($"anulado −{f.drained} PA");
-            foreach(var b in f.buffs) state.Add(b.id==Match.NoHealBuff?"não pode se curar neste turno":$"{b.id}{(b.pa!=0?$" {b.pa:+0;-0} PA":"")}{(b.pm!=0?$" {b.pm:+0;-0} PM":"")}{(b.armor!=0?$" {b.armor:+0;-0} armadura":"")}{(b.dmg!=0?$" {b.dmg:+0;-0} dano":"")}{(b.regen!=0?$" cura {b.regen}/turno":"")} ({b.turns})");
+            foreach(var b in f.buffs) state.Add(b.id==Match.NoHealBuff?"não pode se curar neste turno":$"{b.id}{(b.pa!=0?$" {b.pa:+0;-0} PA":"")}{(b.pm!=0?$" {b.pm:+0;-0} PM":"")}{(b.armor!=0?$" {b.armor:+0;-0} armadura":"")}{(b.dmg!=0?$" {b.dmg:+0;-0} dano":"")}{(b.regen!=0?$" cura {b.regen}/turno":"")}{(b.reflect>0?" reflete o próximo golpe":"")}{(b.immune>0?" imune a efeitos negativos":"")}{(b.taken>1?$" leva ×{b.taken} de dano":"")} ({b.turns})");
             int armor=f.armor+d.armor+f.buffs.Sum(b=>b.armor)+(form?.armor??0);
             if(armor!=0) state.Add($"armadura {armor}");
             var text=new List<string>();

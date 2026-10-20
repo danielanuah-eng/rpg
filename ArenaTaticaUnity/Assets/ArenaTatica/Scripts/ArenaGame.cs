@@ -14,7 +14,9 @@ namespace ArenaTatica
     {
         // 7 (18/10): as fichas editadas vão numa mensagem "edits" antes de cada snapshot, fora dos estados.
         // 9 (19/10): salas do labirinto no estado (MatchState.areas) para a visão da névoa.
-        public int protocol=10;
+        // 11 (21/10): mensagem acima de ZipFrom caracteres vai comprimida ("Z"+base64 do gzip): fichas com muitas skills/edições
+        // e times grandes passavam do limite do Relay (80 KB) e derrubavam os clientes.
+        public int protocol=11;
         public string kind, text, token;
         public string[] fighters; // hello: time escolhido no aparelho do jogador
         public string[] pool;     // hello/escolha: pool do torneio
@@ -74,6 +76,17 @@ namespace ArenaTatica
         // Vale na próxima partida local e na sala; o Host escolhe antes do draft e Nível/custo dos times seguem o preset.
         public string Preset { get; private set; }="";
         string RoomEdits => SmokeFixture?"":ArenaEdits.PresetJson(Preset);
+        // Editor durante a partida (autor 21/10): a ficha salva já vale na partida local ou hospedada; os jogadores remotos
+        // recebem as fichas novas na próxima mensagem (SendEdits). PV acima do novo máximo baixam para ele.
+        public bool ApplyLiveEdits()
+        {
+            if(Client||Lobby||State==null||Match==null||State.over) return false;
+            Content.ApplyEdits(RoomEdits); State.edits=Content.EditsJson;
+            foreach(var f in State.fighters) if(f.hp>Content.MaxHp(f)) f.hp=Content.MaxHp(f);
+            State.revision++; View.ResetView(State);
+            if(Network.IsHost) foreach(var kv in seatPeer) { int t=MatchTeam(kv.Key); if(t>0) SendSnapshot(kv.Value,t); }
+            return true;
+        }
         public void SetPreset(string name)
         {
             if(Client||(Network.IsHost&&(!Lobby||Torneio!=null))) { Status="O balanceamento só muda na sala, antes do draft."; return; }
@@ -157,6 +170,9 @@ namespace ArenaTatica
         public bool Placement { get; set; } = true;
         // Opção do menu (autor, 18/10): liga/desliga a escolha das casas iniciais em todos os mapas; vale na próxima partida ou sala.
         public void SetPlacement(bool on) { Placement=on; if(!SmokeFixture) { PlayerPrefs.SetInt("arena-posicionar",on?1:0); PlayerPrefs.Save(); } Changed(); }
+        // Opção do menu (autor, 21/10): ilusão bloqueia a casa (colisão) ou dá para atravessá-la.
+        public bool SolidIllusions { get; set; } = true;
+        public void SetSolidIllusions(bool on) { SolidIllusions=on; if(!SmokeFixture) { PlayerPrefs.SetInt("arena-ilusao-solida",on?1:0); PlayerPrefs.Save(); } Changed(); }
         public bool Placing => State!=null&&!State.over&&State.placing>0;
         public bool CanPlace => !InMenu&&Menu?.IsOpen!=true&&Synced&&!Recovery&&!Lobby&&Placing&&State.placing==LocalTeam&&!IsBot(State.placing)&&View.Ready&&!View.Busy;
         // Herói escolhido no 1º toque do posicionamento (Mode "pos:<id>"); 0 = nenhum.
@@ -226,6 +242,7 @@ namespace ArenaTatica
             Application.targetFrameRate=60; Application.runInBackground=true; ArenaMaps.Reset();
             Turns=SmokeFixture?TurnMode.Completo:(TurnMode)Mathf.Clamp(PlayerPrefs.GetInt("arena-turnos",0),0,1);
             if(!SmokeFixture) Placement=PlayerPrefs.GetInt("arena-posicionar",1)==1;
+            if(!SmokeFixture) SolidIllusions=PlayerPrefs.GetInt("arena-ilusao-solida",1)==1;
             ShopItems.Clear(); if(!SmokeFixture) foreach(var id in PlayerPrefs.GetString("arena-loja","").Split(',')) if(Shop.Def(id)!=null) ShopItems.Add(id);
             for(int i=0;i<CustomTeams.Length;i++) CustomTeams[i]=SmokeFixture?i%2+1:Mathf.Clamp(PlayerPrefs.GetInt("arena-equipe-"+i,i%2+1),1,3);
             ApplyTeamLimits(SmokeFixture?DefaultTeamLevel:PlayerPrefs.GetInt("arena-time-custo",DefaultTeamLevel),SmokeFixture?DefaultTeamSize:PlayerPrefs.GetInt("arena-time-tamanho",DefaultTeamSize));
@@ -280,7 +297,7 @@ namespace ArenaTatica
             // Cenário fechado escolhido sem mapa salvo: salas e corredores do gerador (os mapas do Codex são abertos).
             var map=flat||MapName==""||MapName==ArenaMaps.Generated?null:MapName==ArenaMaps.Codex?(MapGen.Closed(Theme)?null:ArenaMaps.Pick(size,seed)):ArenaMaps.Find(MapName);
             if(map!=null&&!MapGen.Fits(map,size)) { Debug.LogWarning($"Mapa {MapName} é para {MapGen.PlayersFor(map.width)} jogadores; usando um gerado na hora."); map=null; }
-            var setup=new MatchSetup{ seed=seed, flatMap=flat, placement=Placement&&!SmokeFixture, theme=Theme, mode=Victory, galeoes=Galeoes, map=map, turns=Turns, shopItems=ShopItems.ToArray(),
+            var setup=new MatchSetup{ seed=seed, flatMap=flat, placement=Placement&&!SmokeFixture, solidIllusions=SolidIllusions, theme=Theme, mode=Victory, galeoes=Galeoes, map=map, turns=Turns, shopItems=ShopItems.ToArray(),
                 randomSkills=RandomSkills,randomStats=RandomStats,randomBots=RandomBots,randomPlayers=RandomPlayers,
                 botSeats=BotsPlaying?Enumerable.Range(2,players-1).ToArray():Array.Empty<int>(),
                 players=Enumerable.Range(0,players).Select(i=>new PlayerSetup{team=teams?[i]??0,fighters=ValidTeam(pick(i+1))}).ToArray() };
@@ -786,7 +803,28 @@ namespace ArenaTatica
             if(message.state!=null) { SendEdits(peer,message.state.edits); message.state.edits=null; }
             string json=Wire(message);
             Sent?.Invoke(peer,message);
-            Network.Send(peer,json);
+            Network.Send(peer,Zip(json));
+        }
+        public const int ZipFrom=4096, UnzipMax=4*1024*1024;
+        public static string Zip(string json)
+        {
+            if(json==null||json.Length<ZipFrom) return json;
+            var raw=System.Text.Encoding.UTF8.GetBytes(json);
+            using var mem=new System.IO.MemoryStream();
+            using(var gz=new System.IO.Compression.GZipStream(mem,System.IO.Compression.CompressionLevel.Fastest,true)) gz.Write(raw,0,raw.Length);
+            return "Z"+Convert.ToBase64String(mem.ToArray());
+        }
+        // Volta ao JSON; null se não for um pacote válido ou passar de UnzipMax (proteção contra pacote-bomba).
+        public static string Unzip(string text)
+        {
+            if(string.IsNullOrEmpty(text)||text[0]!='Z') return text;
+            try {
+                using var src=new System.IO.MemoryStream(Convert.FromBase64String(text.Substring(1)));
+                using var gz=new System.IO.Compression.GZipStream(src,System.IO.Compression.CompressionMode.Decompress);
+                using var dst=new System.IO.MemoryStream(); var buf=new byte[16384]; int n;
+                while((n=gz.Read(buf,0,buf.Length))>0) { dst.Write(buf,0,n); if(dst.Length>UnzipMax) return null; }
+                return System.Text.Encoding.UTF8.GetString(dst.ToArray());
+            } catch(Exception) { return null; }
         }
         // Texto que vai pela rede: casas compactadas (MatchState.Pack), para o labirinto de até 42×42 caber no limite da mensagem.
         public static string Wire(WireMessage message)
@@ -827,10 +865,11 @@ namespace ArenaTatica
         void Receive(int peer,string text)
         {
             WireMessage m;
+            text=Unzip(text); if(text==null) return;
             try { m=JsonUtility.FromJson<WireMessage>(text); } catch(Exception) { return; }
             if(m==null) return;
             if(m.state!=null&&!string.IsNullOrEmpty(m.state.packed)) { m.state.tiles=MatchState.Unpack(m.state.packed,m.state.width*m.state.height); m.state.packed=null; }
-            if(m.protocol!=10) {
+            if(m.protocol!=11) {
                 const string update="Versões diferentes. Atualize a Arena Tática nos dois aparelhos.";
                 if(Network.IsHost&&m.kind=="hello") Send(peer,new WireMessage{protocol=m.protocol,kind="full",text=update});
                 else if(Client) { Network.Close(); Recovery=true; Synced=false; Status=update; }

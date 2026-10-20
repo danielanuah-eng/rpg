@@ -69,7 +69,7 @@ namespace ArenaTatica.Core
             }
             return tiles;
         }
-        public static Tile Copy(Tile t) => new Tile{height=t.height,coins=t.coins,trap=t.trap,trapDamage=t.trapDamage,trapPa=t.trapPa,frozenBy=t.frozenBy,obj=t.obj,terrain=t.terrain,zone=t.zone,lava=t.lava,mark=t.mark};
+        public static Tile Copy(Tile t) => new Tile{height=t.height,coins=t.coins,trap=t.trap,trapDamage=t.trapDamage,trapPa=t.trapPa,frozenBy=t.frozenBy,obj=t.obj,terrain=t.terrain,zone=t.zone,lava=t.lava,mark=t.mark,shadow=t.shadow};
         static int Nibble(char c) => c>='0'&&c<='9'?c-'0':c>='a'&&c<='f'?c-'a'+10:0;
         static bool[] Decode(string hex,int n)
         {
