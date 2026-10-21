@@ -17,8 +17,10 @@ namespace ArenaTatica.Core
         {
             var players=setup.players!=null&&setup.players.Length>=2?setup.players:new[]{ new PlayerSetup{fighters=setup.team1}, new PlayerSetup{fighters=setup.team2} };
             int n=Math.Min(players.Length,MatchState.MaxPlayers), size=Board.SizeFor(n);
-            // Labirinto sorteado: um tamanho acima do comum (mapa salvo do tamanho comum continua valendo).
-            if(MapGen.Closed(MapGen.Theme(setup))&&!MapGen.Fits(setup.map,size)) size=Board.LabyrinthSize(n);
+            // Labirinto (autor 22/10): sempre procedural, um tamanho acima do comum; mapa salvo de cenário fechado (legado) é ignorado.
+            int theme=MapGen.Fits(setup.map,size)&&setup.map.theme>=0?setup.map.theme%MapGen.Themes.Length:MapGen.Theme(setup);
+            bool maze=MapGen.Closed(theme);
+            if(maze) size=Board.LabyrinthSize(n);
             var m=new Match(); var s=m.S=new MatchState { rng=setup.seed==0?1:setup.seed, mode=setup.mode, players=n, width=size, height=size, edits=Content.EditsJson,
                 turnMode=setup.turns, solidIllusions=setup.solidIllusions, shopPool=(setup.shopItems??new string[0]).Where(id=>Shop.Def(id)!=null).Distinct().ToArray() };
             s.target=setup.target>0?setup.target:setup.mode==VictoryMode.Tesouro?15:5;
@@ -27,10 +29,10 @@ namespace ArenaTatica.Core
             for(int p=1;p<=n;p++) { string key=players[p-1].team>0?"t"+players[p-1].team:"p"+p; if(!keys.Contains(key)) keys.Add(key); s.alliance[p]=keys.IndexOf(key)+1; }
             foreach(int t in s.Teams()) s.galeoes[t]=setup.galeoes;
             // O cenário vem antes: os fechados geram salas e corredores (o sorteio do cenário não gasta o rng).
-            s.theme=MapGen.Theme(setup);
+            s.theme=theme;
             MapGen.Generate(s,setup.flatMap);
             if(!setup.flatMap) MapGen.Decorate(s,setup.seed);
-            if(MapGen.Fits(setup.map,size)) { MapGen.Load(s,setup.map); if(setup.map.theme>=0) s.theme=setup.map.theme%MapGen.Themes.Length; }
+            if(!maze&&MapGen.Fits(setup.map,size)) { MapGen.Load(s,setup.map); if(setup.map.theme>=0) s.theme=setup.map.theme%MapGen.Themes.Length; }
             MapGen.Portals(s);
             s.fog=MapGen.Closed(s.theme);
             var slot=SlotOrder(s);
@@ -451,7 +453,7 @@ namespace ArenaTatica.Core
         {
             if(sk.global) return S.width+S.height;
             bool half=sk.halfMap&&(string.IsNullOrEmpty(sk.halfMapIn)||f.form==sk.halfMapIn);
-            int r=(half?Math.Max(S.width,S.height)/2:sk.maxRange)+(sk.modifiable?(S.At(f.cell).height>S.At(target).height?1:0)+f.bonusRange+f.buffs.Sum(b=>b.range):0);
+            int r=(half?Content.MapReach(S.width,S.height,sk.mapPct):sk.maxRange)+(sk.modifiable?(S.At(f.cell).height>S.At(target).height?1:0)+f.bonusRange+f.buffs.Sum(b=>b.range):0);
             if(sk.pmRange) r+=f.pm;
             if(sk.markRange&&Board.At(S,target) is Fighter marked&&!S.Ally(marked.team,f.team)) r+=marked.marks;
             if(S.ev=="nevoeiro"&&sk.maxRange>1) r=Math.Max(Math.Max(1,sk.minRange),r-2);
@@ -516,7 +518,7 @@ namespace ArenaTatica.Core
             if(!Board.Contains(S,c)) { reason="Fora do mapa."; return false; }
             int dist=Board.Gap(f,c);
             if(dist<sk.minRange||dist>Range(f,sk,c)) { reason="Fora de alcance."; return false; }
-            if(sk.global) return true;
+            if(sk.global||Free(f,sk)) return true;
             if(sk.line&&!Board.Footprint(f).Any(o=>o.x==c.x||o.z==c.z)) { reason="Só em linha reta."; return false; }
             if(sk.sight&&!Board.Occupies(f,c)&&!Board.Footprint(f).Any(o=>Board.LineOfSight(S,o,c,Mobility(sk)))) { reason="Sem linha de visão."; return false; }
             // Dano à distância nunca passa por muro, mesmo a skill que ignora a visão (autor, 18/10 noite).
@@ -606,7 +608,11 @@ namespace ArenaTatica.Core
         public bool CanTarget(Fighter f,SkillDef sk,Cell c,out string reason) => Check(f,sk,c,false,out reason);
         public bool CanTarget(Fighter f,SkillDef sk,Cell c,Cell c2,out string reason) => Check(f,sk,c,false,out reason,c2);
         // Bolinhas (3.1): v é alvo válido para quem usa a skill? Padrão (hits 0) fica com a regra de cada tipo.
-        public bool Hits(Fighter f,SkillDef sk,Fighter v) => v!=null&&(v==f?sk.CanHitSelf:S.Ally(v.team,f.team)?sk.CanHitAlly:sk.CanHitEnemy);
+        public bool Hits(Fighter f,SkillDef sk,Fighter v) => v!=null&&(Mask(f,sk)&(int)(v==f?Hit.Si:S.Ally(v.team,f.team)?Hit.Aliado:Hit.Inimigo))!=0;
+        // Fora da forma halfMapIn, hitsOut (se houver) troca os alvos (Shambles fora da Room: só o próprio time).
+        public static int Mask(Fighter f,SkillDef sk) => sk.hitsOut!=0&&!string.IsNullOrEmpty(sk.halfMapIn)&&f.form!=sk.halfMapIn?sk.hitsOut:sk.hits;
+        // Na forma halfMapIn, freeIn ignora visão e muro (Shambles dentro da Room).
+        public static bool Free(Fighter f,SkillDef sk) => sk.freeIn&&!string.IsNullOrEmpty(sk.halfMapIn)&&f.form==sk.halfMapIn;
         // Isolado (4.2): nenhum aliado nas 8 casas em volta (3×3 centrado nele).
         public static bool Isolated(MatchState s,Fighter v) => !s.fighters.Any(x=>x.Alive&&x!=v&&s.Ally(x.team,v.team)&&Math.Max(Math.Abs(x.cell.x-v.cell.x),Math.Abs(x.cell.z-v.cell.z))<=1);
         // Pode ser trocado de casa ou teleportado por outro: não imóvel, ancorado nem preso.

@@ -42,10 +42,10 @@ namespace ArenaTatica.Core.Tests
                 var cover=new bool[s.tiles.Length];
                 for(int i=0;i<s.tiles.Length;i++) if(dist[i]!=int.MaxValue) { var c=new Cell(i%s.width,i/s.width); foreach(var p in Board.Footprint(beast,c)) if(Board.Contains(s,p)) cover[Board.Index(s,p)]=true; }
                 for(int i=0;i<s.tiles.Length;i++) if(s.tiles[i].terrain==Terrain.Livre) Assert.IsTrue(cover[i],$"o Primal Beast chega em ({i%s.width},{i/s.width}): "+where);
-                // Salas de início: cada slot na sua, o par em lados opostos, fechadas por portas.
+                // Salas de início: cada slot na sua, o par em lados opostos (qual lado é sorteado), fechadas por portas.
                 for(int slot=0;slot<players;slot++) {
                     var r=MapGen.Room(s,slot); Assert.IsNotNull(r,"sala do slot "+slot+": "+where);
-                    bool bottom=r[1]<s.height/2; Assert.AreEqual(slot%2==0,bottom,"lado da sala "+slot+": "+where);
+                    bool bottom=r[1]<s.height/2, firstBottom=MapGen.Room(s,0)[1]<s.height/2; Assert.AreEqual(slot%2==0?firstBottom:!firstBottom,bottom,"lado da sala "+slot+": "+where);
                     for(int x=r[0]-1;x<=r[2]+1;x++) for(int z=r[1]-1;z<=r[3]+1;z++) {
                         if(x>=r[0]&&x<=r[2]&&z>=r[1]&&z<=r[3]) continue; var t=s.At(new Cell(x,z)).terrain;
                         Assert.IsTrue(t==Terrain.Parede||t==Terrain.Porta,"sala fechada por parede e portas: "+where);
@@ -136,6 +136,16 @@ namespace ArenaTatica.Core.Tests
             Assert.AreEqual(1,s.tiles.Count(t=>t.Obj==TileObj.Vela));
             Assert.Greater(s.tiles.Count(t=>t.terrain==Terrain.Porta),0);
             Assert.AreEqual(Board.SizeFor(2),Closed(0,2,3).S.width,"aberto continua do tamanho comum");
+        }
+        [Test] public void LabyrinthSpawnRoomsAreShuffledAndSavedMazesIgnored()
+        {
+            var firsts=new System.Collections.Generic.HashSet<int>();
+            for(uint seed=1;seed<=12;seed++) { var r=MapGen.Room(Closed(MapGen.OpenThemes,2,seed).S,0); Assert.IsNotNull(r); firsts.Add(r[1]); }
+            Assert.AreEqual(2,firsts.Count(),"o time 1 nasce às vezes embaixo, às vezes em cima");
+            int size=Board.SizeFor(2); var saved=new MapDef{ width=size, theme=MapGen.OpenThemes, tiles=new Tile[size*size] };
+            for(int i=0;i<saved.tiles.Length;i++) saved.tiles[i]=new Tile();
+            var s=Match.New(new MatchSetup{ seed=5, map=saved, players=new[]{ new PlayerSetup{fighters=new[]{"talyssa"}}, new PlayerSetup{fighters=new[]{"talyssa"}} } }).S;
+            Assert.AreEqual(Board.LabyrinthSize(2),s.width,"labirinto salvo vira procedural"); Assert.IsTrue(s.tiles.Any(t=>t.terrain==Terrain.Parede));
         }
         bool Act(string kind,Cell c) => m.Apply(new Command{kind=kind,cell=c,fighter=A.id,revision=S.revision},A.team,out _,out _);
         [Test] public void DoorBlocksUntilOpenedForOnePm()

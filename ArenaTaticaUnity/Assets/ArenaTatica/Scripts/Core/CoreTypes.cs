@@ -117,6 +117,10 @@ namespace ArenaTatica.Core
         public int gainPm, stun, sealUlt, doubleDamage;
         public bool shadowStep, purge, cleanse, buffReflect, buffImmune, reveal, alliesOnly, beam, swapHp, props, noRefresh, selfKill;
         public string halfMapIn;
+        // mapPct: % do maior lado do mapa que o halfMap alcança (0 = 50%; Room do Ikaito maior, autor 22/10). Com halfMapIn:
+        // freeIn = nessa forma ignora visão e muro; hitsOut = alvos fora dessa forma (0 = os mesmos de hits; Shambles só aliados).
+        public int mapPct, hitsOut;
+        public bool freeIn;
         public bool CanHitSelf => (hits&(int)Hit.Si)!=0;
         public bool CanHitEnemy => (hits&(int)Hit.Inimigo)!=0;
         public bool CanHitAlly => (hits&(int)Hit.Aliado)!=0;
@@ -128,11 +132,11 @@ namespace ArenaTatica.Core
     // Forma do lutador (arma do Damian, Berserk do Tchu tcha): bônus enquanto dura e a pasta de sprites dela.
     // pose: clipe cujo último quadro vira a pose parada nessa forma (Damian segurando o canhão ou o martelo), enquanto não há idle próprio.
     // intangible: golpes inimigos não o acertam nessa forma (forma fantasma do Edgar).
-    // dome/color (só visual): contorno neon das casas até dome casas do lutador nessa forma (−1 = metade do mapa), na cor hex.
+    // dome/color (só visual): contorno neon das casas até dome casas do lutador nessa forma (−1 = domePct% do maior lado, 0 = 50%), na cor hex.
     // extra: +usos por turno de cada skill (Fúria do Death Crimson). endBlast: no fim do turno, dano fixo nas 8 casas em volta e nele.
     // locked: nada tira a forma (Nulification, selar ultimate). unstoppable: não é atordoado nem preso.
     // music: estilo da trilha eletrônica que toca enquanto alguém está nessa forma (ArenaMusica; Modos da L.E.L.A).
-    [Serializable] public class FormDef { public string id, name, sprites, pose, color, music; public int pa, pm, armor, dome, extra, endBlast; public bool noGuard, intangible, locked, unstoppable; }
+    [Serializable] public class FormDef { public string id, name, sprites, pose, color, music; public int pa, pm, armor, dome, domePct, extra, endBlast; public bool noGuard, intangible, locked, unstoppable; }
     [Serializable] public class FighterDef
     {
         public string id, name, sprites;

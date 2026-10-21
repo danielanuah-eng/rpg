@@ -55,6 +55,8 @@ namespace ArenaTatica
         public static AudioClip Clip(string style)
         {
             if(cache.TryGetValue(style,out var c)&&c) return c;
+            // Trilha gravada do estilo (Resources/Audio/Musica/<estilo>, autor 22/10) no lugar da sintetizada.
+            var file=Resources.Load<AudioClip>("Audio/Musica/"+style); if(file) return cache[style]=file;
             if(!Styles.TryGetValue(style,out var st)) st=Styles["alegria"];
             float beat=60f/st.bpm; int bars=4, n=(int)(beat*4*bars*Rate);
             var data=new float[n]; var rng=new System.Random(style.GetHashCode());

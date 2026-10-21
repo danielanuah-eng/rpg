@@ -506,19 +506,18 @@ namespace ArenaTatica.Core
                 OpenRect(s,Corner(s,hub-1,hub-1),Corner(s,hub+1,hub+1)+new Cell(1,1)); Area(Corner(s,hub-1,hub-1),Corner(s,hub+1,hub+1)+new Cell(1,1));
                 // Salas de início: uma por slot de baixo (2×2 células na 1ª fileira), espelhada em cima para o slot ímpar.
                 var taken=new bool[N];
-                var rooms=new int[4*s.players]; bool ok=true;
+                var pairs=new List<(int[] bottom,int[] top)>(); bool ok=true;
                 for(int slot=0;slot<s.players;slot+=2) {
                     var options=Enumerable.Range(0,N-1).Where(i=>!taken[i]&&!taken[i+1]&&(i==0||!taken[i-1])&&(i+2>=N||!taken[i+2])).ToList();
                     if(options.Count==0) { ok=false; break; }
                     int pick=options[Dice.Range(s,options.Count)]; taken[pick]=taken[pick+1]=true;
                     var lo=Corner(s,pick,0); var hi=Corner(s,pick+1,1)+new Cell(1,1);
-                    rooms[4*slot]=lo.x; rooms[4*slot+1]=lo.z; rooms[4*slot+2]=hi.x; rooms[4*slot+3]=hi.z;
                     var mlo=s.Mirror(hi); var mhi=s.Mirror(lo);
-                    if(slot+1<s.players) { rooms[4*slot+4]=mlo.x; rooms[4*slot+5]=mlo.z; rooms[4*slot+6]=mhi.x; rooms[4*slot+7]=mhi.z; }
+                    pairs.Add((new[]{lo.x,lo.z,hi.x,hi.z},new[]{mlo.x,mlo.z,mhi.x,mhi.z}));
                     Isolate(s,lo,hi,true); Isolate(s,mlo,mhi,false);
                 }
                 if(!ok) continue;
-                s.rooms=rooms; areas.AddRange(rooms);
+                var rooms=BlindSpawn(s,pairs); s.rooms=rooms; areas.AddRange(pairs.SelectMany(p=>p.bottom.Concat(p.top)));
                 // Salas extras (2×2 células), espelhadas, fora do salão e das fileiras das salas de início.
                 for(int r=0,tries=0;r<Math.Max(1,(int)Math.Round(k/3))&&tries<40;tries++) {
                     int i=Dice.Range(s,N-1), j=2+Dice.Range(s,Math.Max(1,N-5));
@@ -558,6 +557,16 @@ namespace ArenaTatica.Core
             }
             if(Restore(s,best)) return;
             s.rooms=new int[0]; GenerateRooms(s);
+        }
+        // Spawn cego (autor 22/10): as salas de início são sorteadas entre os pares e o lado (baixo/cima) também, igual para
+        // todos os pares, assim cada time continua do mesmo lado que os aliados.
+        static int[] BlindSpawn(MatchState s,List<(int[] bottom,int[] top)> pairs)
+        {
+            var order=Enumerable.Range(0,pairs.Count).ToList();
+            for(int i=order.Count-1;i>0;i--) { int r=Dice.Range(s,i+1); (order[i],order[r])=(order[r],order[i]); }
+            bool flip=Dice.Range(s,2)==1; var rooms=new int[4*s.players];
+            for(int slot=0;slot<s.players;slot++) { var p=pairs[order[slot/2]]; Array.Copy((slot%2==1)!=flip?p.top:p.bottom,0,rooms,4*slot,4); }
+            return rooms;
         }
         static bool Hub(int i,int j,int hub) => Math.Abs(i-hub)<=1&&Math.Abs(j-hub)<=1;
         // Sala de início fechada: as passagens dela para o labirinto viram portas duplas; sem nenhuma, abre uma para o meio.

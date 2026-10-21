@@ -778,6 +778,8 @@ namespace ArenaTatica
             running=true;
             while(queue.Count>0) {
                 var (events,state)=queue.Dequeue();
+                var cast=events.FirstOrDefault(x=>x.actor!=0&&x.info!=null&&Content.AnySkill(Content.BaseSkill(x.info))!=null);
+                if(cast!=null) SkillVoice(Content.BaseSkill(cast.info));
                 foreach(var e in events) yield return Animate(e,state);
                 Sync(state,false);
             }
@@ -1399,11 +1401,12 @@ namespace ArenaTatica
         bool Playing(Transform unit,string clip) =>
             unit&&unit.childCount>0&&rigs.TryGetValue(unit.GetChild(0),out var rig)&&rig.clip==clip&&ClipFrames(rig,out _) is Sprite[] fr&&rig.time*Fps(clip)<fr.Length;
         // Começa um clipe e devolve sua duração (0 se o lutador não tem sprite ou não tem esse clipe).
+        static bool Reaction(string clip) => clip=="hit"||clip=="absorb"||clip=="laugh";
         float PlayClip(Transform unit,string clip,bool reverse=false)
         {
             if(!unit||unit.childCount==0||!rigs.TryGetValue(unit.GetChild(0),out var rig)) return 0;
-            // A reação de dano não corta um golpe/skill no meio; a morte sempre entra.
-            if(clip=="hit"&&!Loops(rig.clip)&&rig.clip!="hit"&&rig.clip!="death"&&ClipFrames(rig,out _) is Sprite[] busy&&rig.time*Fps(rig.clip)<busy.Length) return 0;
+            // A reação (hit, absorb e laugh da Pele) não corta um golpe/skill no meio nem a caminhada; a morte sempre entra.
+            if(Reaction(clip)&&(rig.clip=="walk"||!Loops(rig.clip)&&!Reaction(rig.clip)&&rig.clip!="death"&&ClipFrames(rig,out _) is Sprite[] busy&&rig.time*Fps(rig.clip)<busy.Length)) return 0;
             rig.clip=clip; rig.time=0; rig.reverse=reverse; var frames=ClipFrames(rig,out _); ShowFrame(rig);
             return frames==null?0:frames.Length/Fps(clip);
         }
@@ -1446,7 +1449,7 @@ namespace ArenaTatica
             var fields=s.fighters.Where(f=>f.Alive&&f.prisoned==0&&Board.Contains(s,f.cell)&&Content.Def(f).fieldPa>0&&!Match.Concealed(s,Game.LocalTeam,f)).ToList();
             if(Time.time>=nextWave) { nextWave=Time.time+AuraWave;
                 foreach(var f in list.Where(f=>(Content.Def(f).passives??new PassiveDef[0]).Any(p=>p!=null&&p.form==f.form)&&units.TryGetValue(f.id,out var u)&&u))
-                    StartCoroutine(Ring(units[f.id].position+Vector3.up*.06f,Content.Form(f).dome<0?Mathf.Max(s.width,s.height)/2:Content.Form(f).dome,DomeColor(f))); }
+                    StartCoroutine(Ring(units[f.id].position+Vector3.up*.06f,Content.Form(f).dome<0?Content.MapReach(s.width,s.height,Content.Form(f).domePct):Content.Form(f).dome,DomeColor(f))); }
             string key=s.width+"|"+string.Join(";",list.Select(f=>$"{f.id}:{f.cell.x},{f.cell.z}:{f.form}"))+"|"+string.Join(";",fields.Select(f=>$"{f.id}:{f.cell.x},{f.cell.z}"));
             if(key==domeKey) return;
             domeKey=key; foreach(var g in domes) if(g) Destroy(g); domes.Clear();
@@ -1461,7 +1464,7 @@ namespace ArenaTatica
             }
             foreach(var f in list)
             {
-                var fm=Content.Form(f); int r=fm.dome<0?Mathf.Max(s.width,s.height)/2:fm.dome;
+                var fm=Content.Form(f); int r=fm.dome<0?Content.MapReach(s.width,s.height,fm.domePct):fm.dome;
                 if(!domeMaterials.TryGetValue(fm.color,out var mat)) domeMaterials[fm.color]=mat=Material(DomeColor(f));
                 bool In(Cell c) => Board.Contains(s,c)&&Board.Gap(f,c)<=r;
                 for(int x=0;x<s.width;x++) for(int z=0;z<s.height;z++) {
@@ -1932,6 +1935,13 @@ namespace ArenaTatica
             }
         }
         IEnumerator DisposeEffect(GameObject effect,float duration) { yield return new WaitForSeconds(duration); transient.Remove(effect); Destroy(effect); }
+        // Fala/efeito da skill (autor 22/10): Resources/Audio/Skills/<id da skill>, tocado uma vez quando a skill é usada.
+        static readonly Dictionary<string,AudioClip> skillVoices=new Dictionary<string,AudioClip>();
+        void SkillVoice(string skill)
+        {
+            if(!skillVoices.TryGetValue(skill,out var clip)) skillVoices[skill]=clip=Resources.Load<AudioClip>("Audio/Skills/"+skill);
+            if(clip) AudioSource.PlayClipAtPoint(clip,BoardCamera?BoardCamera.transform.position:Vector3.zero,1);
+        }
         public void Sound(string name) { if(!sounds.TryGetValue(name,out var clip)||!clip) return; foreach(var source in voices) if(!source.isPlaying) { source.clip=clip; source.Play(); break; } }
         public void CancelAnimations()
         {

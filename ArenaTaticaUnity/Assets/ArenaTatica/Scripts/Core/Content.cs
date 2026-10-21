@@ -250,10 +250,10 @@ namespace ArenaTatica.Core
                     new SkillDef { id="troca-de-vida", name="Troca de vida", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=2, damage=0, swapHp=true, perMatch=1, ultimate=true, notForm="furia", hits=(int)(Hit.Inimigo|Hit.Aliado), anim="cast" } } },
             // Capitão Lendário: a Room (domo azul até metade do mapa, 3 turnos) leva o Shambles (lutadores e peças do mapa) a metade do mapa; espada negra fura armadura e corta a cura.
             ["ikaito"]=new FighterDef { id="ikaito", name="Capitão Ikaito D. Razer", sprites="Ikaito", hp=11, pa=6, pm=3, initiative=6, level=5, legendary=true, startForm="normal",
-                forms=new[] { new FormDef { id="normal", name="Normal" }, new FormDef { id="room", name="Room", color="#3aa0ff", dome=-1 } },
+                forms=new[] { new FormDef { id="normal", name="Normal" }, new FormDef { id="room", name="Room", color="#3aa0ff", dome=-1, domePct=75 } },
                 skills=new[] {
                     new SkillDef { id="room", name="Room", kind=SkillKind.Forma, pa=3, minRange=0, maxRange=0, sight=false, toForm="room", turns=3, cooldown=5, anim="room" },
-                    new SkillDef { id="shambles-ikaito", name="Shambles", kind=SkillKind.Troca, pa=2, minRange=0, maxRange=4, halfMap=true, halfMapIn="room", props=true, sight=true, perTurn=2, hits=(int)(Hit.Si|Hit.Inimigo|Hit.Aliado), anim="shambles" },
+                    new SkillDef { id="shambles-ikaito", name="Shambles", kind=SkillKind.Troca, pa=2, minRange=0, maxRange=4, halfMap=true, halfMapIn="room", mapPct=75, freeIn=true, hitsOut=(int)(Hit.Si|Hit.Aliado), props=true, sight=true, perTurn=2, hits=(int)(Hit.Si|Hit.Inimigo|Hit.Aliado), anim="shambles" },
                     new SkillDef { id="corte-negro", name="Corte negro", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=3, pierce=true, noHeal=true, anim="attack" },
                     new SkillDef { id="injection-shot", name="Injection Shot", kind=SkillKind.Cura, pa=5, minRange=1, maxRange=1, damage=2, drain=2, perTurn=1, hits=(int)Hit.Aliado, anim="injection" } } },
             // Loja e eventos.
@@ -392,6 +392,9 @@ namespace ArenaTatica.Core
         }
         static int Clamp(int v,int min,int max) => v<min?min:v>max?max:v;
         // Limites do editor: nada de números que quebrem o tabuleiro ou a rede.
+        // Alcance do halfMap e raio do domo −1: pct% do maior lado do mapa (0 = metade).
+        public static int MapReach(int w,int h,int pct) => System.Math.Max(1,System.Math.Max(w,h)*(pct<=0?50:pct)/100);
+        static string Reach(SkillDef sk) => sk.mapPct<=0||sk.mapPct==50?"metade":sk.mapPct+"%";
         public static FighterDef Sanitize(FighterDef d)
         {
             d.hp=Clamp(d.hp,1,40); d.pa=Clamp(d.pa,0,12); d.pm=Clamp(d.pm,0,10); d.initiative=Clamp(d.initiative,0,20); d.level=Clamp(d.level,0,12); d.armor=Clamp(d.armor,0,5);
@@ -401,7 +404,7 @@ namespace ArenaTatica.Core
                 s.pa=Clamp(s.pa,0,12); s.damage=Clamp(s.damage,0,20); s.heal=Clamp(s.heal,0,20); s.minRange=Clamp(s.minRange,0,12); s.maxRange=Clamp(s.maxRange,s.minRange,s.kind==SkillKind.Comando||s.kind==SkillKind.Desejo?99:12);
                 s.area=Clamp(s.area,0,6); s.perTurn=Clamp(s.perTurn,0,5); s.cooldown=Clamp(s.cooldown,0,9); s.push=Clamp(s.push,0,6); s.prison=Clamp(s.prison,0,2);
                 s.pmLoss=Clamp(s.pmLoss,0,10); s.paLoss=Clamp(s.paLoss,0,6); s.buffPa=Clamp(s.buffPa,-6,6); s.buffPm=Clamp(s.buffPm,-6,6); s.buffArmor=Clamp(s.buffArmor,-3,4); s.turns=Clamp(s.turns,0,5); s.hits&=7;
-                s.amplify=Clamp(s.amplify,0,4); s.gainPm=Clamp(s.gainPm,0,10); s.stun=Clamp(s.stun,0,2); s.sealUlt=Clamp(s.sealUlt,0,5); s.doubleDamage=Clamp(s.doubleDamage,0,3); s.mark=Clamp(s.mark,0,5); s.pmCost=Clamp(s.pmCost,0,10); s.returnDamage=Clamp(s.returnDamage,0,20); s.perForm=Clamp(s.perForm,0,5);
+                s.amplify=Clamp(s.amplify,0,4); s.gainPm=Clamp(s.gainPm,0,10); s.stun=Clamp(s.stun,0,2); s.sealUlt=Clamp(s.sealUlt,0,5); s.doubleDamage=Clamp(s.doubleDamage,0,3); s.mark=Clamp(s.mark,0,5); s.pmCost=Clamp(s.pmCost,0,10); s.returnDamage=Clamp(s.returnDamage,0,20); s.perForm=Clamp(s.perForm,0,5); s.mapPct=Clamp(s.mapPct,0,100); s.hitsOut&=7;
                 if(s.ultimate&&s.perTurn==0&&s.perMatch==0&&s.cooldown==0) s.perMatch=1;
                 if(s.kind==SkillKind.Invocacao&&(string.IsNullOrEmpty(s.summon)||!s.summon.Split('|').All(Fighters.ContainsKey))) s.kind=SkillKind.Dano;
             }
@@ -419,7 +422,7 @@ namespace ArenaTatica.Core
         public static string Describe(SkillDef sk)
         {
             if(sk==null) return "";
-            string area=sk.selfArea?"em volta de si":sk.kind==SkillKind.Comando?"ordem a um gato":sk.global?"mapa todo":sk.halfMap&&!string.IsNullOrEmpty(sk.halfMapIn)?$"alcance {sk.minRange}–{sk.maxRange} (metade do mapa na forma {sk.halfMapIn})":sk.halfMap?"metade do mapa":sk.minRange==sk.maxRange?$"alcance {sk.maxRange}":$"alcance {sk.minRange}–{sk.maxRange}";
+            string area=sk.selfArea?"em volta de si":sk.kind==SkillKind.Comando?"ordem a um gato":sk.global?"mapa todo":sk.halfMap&&!string.IsNullOrEmpty(sk.halfMapIn)?$"alcance {sk.minRange}–{sk.maxRange} ({Reach(sk)} do mapa na forma {sk.halfMapIn})":sk.halfMap?Reach(sk)+" do mapa":sk.minRange==sk.maxRange?$"alcance {sk.maxRange}":$"alcance {sk.minRange}–{sk.maxRange}";
             var e=new List<string>();
             switch(sk.kind)
             {
@@ -472,6 +475,8 @@ namespace ArenaTatica.Core
             if(sk.pmLoss>=10) e.Add("prende no lugar (0 PM)"); else if(sk.pmLoss>0) e.Add($"−{sk.pmLoss} PM"); if(sk.paLoss>0) e.Add($"−{sk.paLoss} PA");
             if(sk.prison>0&&!sk.banish) e.Add($"aprisiona {sk.prison} turno (Esquiva escapa)");
             if(sk.drain>0&&sk.kind!=SkillKind.Cura) e.Add($"cura {sk.drain} ao acertar"); if(sk.wild) e.Add("pode errar");
+            if(sk.freeIn&&!string.IsNullOrEmpty(sk.halfMapIn)) e.Add($"na forma {sk.halfMapIn} ignora visão e muro");
+            if(sk.hitsOut!=0&&!string.IsNullOrEmpty(sk.halfMapIn)) e.Add($"fora da forma {sk.halfMapIn} só pega "+string.Join("/",new[]{(sk.hitsOut&(int)Hit.Si)!=0?"si":null,(sk.hitsOut&(int)Hit.Inimigo)!=0?"inimigos":null,(sk.hitsOut&(int)Hit.Aliado)!=0?"aliados":null}.Where(x=>x!=null)));
             if(sk.Custom) e.Add("pega "+string.Join("/",new[]{sk.CanHitSelf?"si":null,sk.CanHitEnemy?"inimigos":null,sk.CanHitAlly?"aliados":null}.Where(x=>x!=null)));
             if(sk.channeled) e.Add("canalizada (resolve no próximo turno)"); if(sk.freeSwap) e.Add("grátis se ainda não usou arma no turno");
             if(sk.summonCount>0&&sk.kind!=SkillKind.Invocacao) e.Add($"invoca até {sk.summonCount}");

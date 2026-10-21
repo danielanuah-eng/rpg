@@ -721,6 +721,7 @@ namespace ArenaTatica
             Stepper(grid,"Multiplicador (Pulso)",()=>s.amplify,x=>s.amplify=x); Stepper(grid,"Custa PM",()=>s.pmCost,x=>s.pmCost=x); Stepper(grid,"Ganha PM ao usar",()=>s.gainPm,x=>s.gainPm=x);
             Stepper(grid,"Marcas da Maldição",()=>s.mark,x=>s.mark=x); Stepper(grid,"Dano ao voltar (buraco negro)",()=>s.returnDamage,x=>s.returnDamage=x); Stepper(grid,"Usos por transformação",()=>s.perForm,x=>s.perForm=x);
             Stepper(grid,"Atordoa (turnos)",()=>s.stun,x=>s.stun=x); Stepper(grid,"Sela ultimate (turnos)",()=>s.sealUlt,x=>s.sealUlt=x); Stepper(grid,"Dano dobrado (turnos)",()=>s.doubleDamage,x=>s.doubleDamage=x);
+            Stepper(grid,"% do mapa (metade do mapa)",()=>s.mapPct,x=>s.mapPct=x);
             Flag(grid,"Linha reta",()=>s.line,x=>s.line=x); Flag(grid,"Precisa de visão",()=>s.sight,x=>s.sight=x); Flag(grid,"+alcance no alto",()=>s.modifiable,x=>s.modifiable=x);
             Flag(grid,"Em volta de si",()=>s.selfArea,x=>{ s.selfArea=x; if(x) { s.minRange=0; s.maxRange=0; } }); Flag(grid,"Área nas 8 casas",()=>s.square,x=>s.square=x); Flag(grid,"Área só inimigos",()=>s.foes,x=>s.foes=x);
             Flag(grid,"Puxa até colar",()=>s.pull,x=>s.pull=x); Flag(grid,"Ignora armadura",()=>s.pierce,x=>s.pierce=x); Flag(grid,"Ignora Escudo",()=>s.precise,x=>s.precise=x);
@@ -730,6 +731,7 @@ namespace ArenaTatica
             Flag(grid,"Reflete o próximo golpe (suporte)",()=>s.buffReflect,x=>s.buffReflect=x); Flag(grid,"Imune a efeitos ruins (suporte)",()=>s.buffImmune,x=>s.buffImmune=x); Flag(grid,"Revela escondidos (zona)",()=>s.reveal,x=>s.reveal=x);
             Flag(grid,"Raio que para no 1º",()=>s.beam,x=>s.beam=x); Flag(grid,"Troca de vida",()=>s.swapHp,x=>s.swapHp=x); Flag(grid,"Troca peças do mapa",()=>s.props,x=>s.props=x); Flag(grid,"Quem usa cai depois",()=>s.selfKill,x=>s.selfKill=x);
             Flag(grid,"Portal só de aliados",()=>s.alliesOnly,x=>s.alliesOnly=x); Flag(grid,"Alcance no mapa todo",()=>s.global,x=>s.global=x); Flag(grid,"Corta a cura do alvo",()=>s.noHeal,x=>s.noHeal=x);
+            Flag(grid,"Na forma: sem visão nem muro",()=>s.freeIn,x=>s.freeIn=x); Flag(grid,"Fora da forma: só o próprio time",()=>s.hitsOut!=0,x=>s.hitsOut=x?(int)(Hit.Si|Hit.Aliado):0);
             Targets(box,s);
         }
         // As 3 bolinhas (3.1): quem a skill pega. Desligadas todas = regra padrão do tipo.

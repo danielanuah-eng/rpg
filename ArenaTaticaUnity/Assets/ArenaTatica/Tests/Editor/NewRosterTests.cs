@@ -131,8 +131,10 @@ namespace ArenaTatica.Core.Tests
             Assert.IsTrue(king.buffs.Any(b=>b.id==Match.NoHealBuff));
             Assert.IsTrue(Pass(cap)); Assert.IsFalse(king.buffs.Any(b=>b.id==Match.NoHealBuff),"acaba com o turno dele");
             Turn(cap); Put(king,8,2); Assert.IsFalse(Skill(cap,"shambles-ikaito",cap.cell,king.cell),"fora da Room: alcance 4");
+            Put(king,4,2); Assert.IsFalse(Skill(cap,"shambles-ikaito",cap.cell,king.cell),"fora da Room: só o próprio time"); Put(king,8,2);
             Assert.IsTrue(Skill(cap,"room",cap.cell));
-            Assert.IsTrue(Skill(cap,"shambles-ikaito",cap.cell,king.cell),"metade do mapa (6)");
+            for(int z=0;z<S.height;z++) S.At(new Cell(5,z)).terrain=Terrain.Parede;
+            Assert.IsTrue(Skill(cap,"shambles-ikaito",cap.cell,king.cell),"na Room: 75% do mapa, por cima do muro e sem visão");
             Assert.AreEqual(new Cell(8,2),cap.cell);
             Turn(cap); Put(tal,9,2); cap.hp=5; tal.hp=5;
             Assert.IsTrue(Skill(cap,"injection-shot",tal.cell)); Assert.AreEqual(7,tal.hp); Assert.AreEqual(7,cap.hp);
@@ -334,11 +336,11 @@ namespace ArenaTatica.Core.Tests
 
         [Test] public void ShamblesSwapsPropsOutsideRoom()
         {
-            New(new[]{"ikaito"},new[]{"rei-bobett"});
-            var cap=Get("ikaito"); var king=Get("rei-bobett"); Put(cap,2,2); Put(king,4,2);
+            New(new[]{"ikaito","talyssa"},new[]{"rei-bobett"});
+            var cap=Get("ikaito"); var tal=Get("talyssa"); var king=Get("rei-bobett"); Put(cap,2,2); Put(tal,4,2); Put(king,10,10);
             S.At(new Cell(2,4)).terrain=Terrain.Caixa;
-            Turn(cap); Assert.IsTrue(Skill(cap,"shambles-ikaito",king.cell,new Cell(2,4)));
-            Assert.AreEqual(new Cell(2,4),king.cell); Assert.AreEqual(Terrain.Caixa,S.At(new Cell(4,2)).terrain); Assert.AreEqual(Terrain.Livre,S.At(new Cell(2,4)).terrain);
+            Turn(cap); Assert.IsTrue(Skill(cap,"shambles-ikaito",tal.cell,new Cell(2,4)));
+            Assert.AreEqual(new Cell(2,4),tal.cell); Assert.AreEqual(Terrain.Caixa,S.At(new Cell(4,2)).terrain); Assert.AreEqual(Terrain.Livre,S.At(new Cell(2,4)).terrain);
         }
 
         [Test] public void IllusionCanBeWalkedThroughAndNeverReveals()
