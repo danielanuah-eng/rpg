@@ -247,7 +247,8 @@ namespace ArenaTatica
             for(int i=0;i<CustomTeams.Length;i++) CustomTeams[i]=SmokeFixture?i%2+1:Mathf.Clamp(PlayerPrefs.GetInt("arena-equipe-"+i,i%2+1),1,3);
             ApplyTeamLimits(SmokeFixture?DefaultTeamLevel:PlayerPrefs.GetInt("arena-time-custo",DefaultTeamLevel),SmokeFixture?DefaultTeamSize:PlayerPrefs.GetInt("arena-time-tamanho",DefaultTeamSize));
             if(!SmokeFixture) { TurnTime=Mathf.Clamp(PlayerPrefs.GetInt("arena-tempo-turno",0),0,600); Preset=PlayerPrefs.GetString("arena-preset",""); if(Preset!=""&&Preset!=ArenaEdits.Default&&!ArenaEdits.PresetNames.Contains(Preset)) Preset=""; }
-            NewMatch(Seats);
+            // Partida de fundo estacionada (autor 22/10): não roda sozinha, sem bots, relógio nem música até alguém começar uma.
+            NewMatch(Seats); InMenu=!SmokeFixture;
             Network=gameObject.AddComponent<ArenaTransport>();
             View=gameObject.AddComponent<ArenaPresentation>(); View.Game=this;
             Hud=gameObject.AddComponent<ArenaHud>(); Hud.Game=this;
@@ -447,7 +448,28 @@ namespace ArenaTatica
             else { Network.Host(); if(!Network.IsHost) { Status="Não foi possível iniciar Host."; return; } room="LAN"; }
             Content.ApplyEdits(RoomEdits); Setup=false; Lobby=true; Seat=1; LobbyStatus(); Changed();
         }
-        public void CloseLobby() { Network.Close(); ResetRoom(); Setup=false; Torneio=null; LobbyVersion++; Status="Sala fechada."; }
+        public void CloseLobby() => CloseRoom();
+        // Fechar a sala (autor 22/10): o anfitrião avisa todos e limpa tudo dela (rede, partida, torneio, placar). Quem recebe o
+        // aviso também limpa e volta ao menu. Sem sala, só estaciona a partida local.
+        public void CloseRoom()
+        {
+            bool tell=Network.IsHost&&seatPeer.Count>0;
+            if(tell) foreach(var kv in seatPeer) Send(kv.Value,new WireMessage{kind="fechada",text="O anfitrião fechou a sala."});
+            // O aviso precisa sair antes de a conexão cair: limpa já e fecha a rede um instante depois.
+            Park("Sala fechada.",!tell);
+            if(tell) StartCoroutine(CloseNetworkSoon());
+        }
+        System.Collections.IEnumerator CloseNetworkSoon() { yield return new WaitForSecondsRealtime(.4f); if(InMenu&&!Lobby&&!Setup) Network.Close(); }
+        // Sem partida em andamento: rede fechada, sala e torneio zerados, e uma partida local nova estacionada atrás do menu.
+        public void Park(string status) => Park(status,true);
+        void Park(string status,bool closeNetwork)
+        {
+            if(EditingMap) MapEditor.Close(false);
+            StopAllCoroutines(); if(closeNetwork) Network.Close(); ResetRoom(); ResetMetrics(); throttle.Clear();
+            Setup=false; Torneio=null; Recovery=false; Synced=true; Mode=""; botWait=0; LobbyText="";
+            NewMatch(Seats); InMenu=true; View.CancelAnimations(); View.ResetView(State);
+            LobbyVersion++; Status=status; Changed();
+        }
         // Linha de comando e testes de rede: liberam direto e começam ao encher.
         public void Host() { AutoStart=true; Release(false); }
         public void HostRoom() { AutoStart=true; Release(true); }
@@ -615,8 +637,7 @@ namespace ArenaTatica
         {
             StopAllCoroutines(); Mode=""; botWait=0; InMenu=true;
             if(Network.IsHost) { BackToLobby(); Status="Partida fechada. Todos voltaram à sala."; return; }
-            Network.Close(); ResetRoom(); Setup=false; Torneio=null; Recovery=false; Synced=true;
-            throttle.Clear(); ResetMetrics(); LobbyVersion++; Status="Partida fechada."; Menu?.Open("jogar");
+            Park("Partida fechada."); Menu?.Open("jogar");
         }
 
         // ── Torneio ──
@@ -890,6 +911,7 @@ namespace ArenaTatica
                 if(!Lobby&&peerSeat.TryGetValue(peer,out int seat)&&MatchTeam(seat)>0&&m.kind=="command"&&m.command!=null&&new[]{"mover","skill","comprar","passar","posicionar","abrir","acender"}.Contains(m.command.kind)&&Allow("remote:"+seat+":"+m.command.kind)) Execute(m.command,MatchTeam(seat),peer);
                 return;
             }
+            if(m.kind=="fechada") { Park(m.text??"O anfitrião fechou a sala."); Menu?.Open("sala"); return; }
             if(m.kind=="full") { Network.Close(); Recovery=true; Synced=false; Status=m.text??"A sala está cheia."; return; }
             if(m.seats>=2&&m.seats<=MatchState.MaxPlayers) Seats=m.seats;
             // Torneio: o cliente pode ser o time 1 da partida.

@@ -269,7 +269,7 @@ namespace ArenaTatica.Tests
         {
             game.NewLocal(); var old=game.State; game.CloseMatch();
             Assert.IsTrue(game.InMenu); Assert.IsFalse(game.CanAct); Assert.AreEqual("Local",game.Network.Role);
-            Assert.AreSame(old,game.State,"preserva só o fundo visual sem inventar vencedor");
+            Assert.AreNotSame(old,game.State,"fechar limpa a partida (autor 22/10): fica uma nova estacionada"); Assert.IsFalse(game.State.over);
             game.NewLocal(); Assert.IsFalse(game.InMenu); Assert.AreNotSame(old,game.State);
         }
         [Test] public void HostCloseMatchReturnsEveryoneToExistingLobby()
@@ -277,6 +277,13 @@ namespace ArenaTatica.Tests
             Host(3); game.StartRoom(); Assert.IsFalse(game.Lobby); int filled=game.Filled;
             game.CloseMatch(); Assert.IsTrue(game.Lobby); Assert.AreEqual(filled,game.Filled); Assert.IsTrue(game.Network.IsHost);
             game.StartRoom(); Assert.IsFalse(game.Lobby); Assert.IsFalse(game.InMenu);
+        }
+        [Test] public void HostClosingRoomMidMatchClearsEverything()
+        {
+            Host(3); game.StartRoom(); var old=game.State; Assert.IsFalse(game.InMenu);
+            game.CloseRoom();
+            Assert.IsTrue(game.InMenu); Assert.IsFalse(game.Lobby); Assert.IsFalse(game.Setup); Assert.IsNull(game.Torneio); Assert.IsFalse(game.CanAct);
+            Assert.AreNotSame(old,game.State,"a partida da sala some"); Assert.IsFalse(game.State.over);
         }
         [Test] public void HumanScopeRandomizerReachesNetworkMatch()
         {

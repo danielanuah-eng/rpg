@@ -147,7 +147,7 @@ namespace ArenaTatica
             bar.childControlWidth=bar.childControlHeight=true; bar.childForceExpandWidth=false; bar.childForceExpandHeight=true;
             title=Label(top,"ARENA TÁTICA",22,Gold,TextAnchor.MiddleLeft); Layout(title.gameObject,190,0);
             foreach(var t in Tabs) { var id=t.id; var b=Btn(top,t.name,()=>Show(id),0,44,14); tabButtons[id]=b; b.GetComponent<LayoutElement>().minWidth=58; }
-            Accent(Btn(top,"Voltar ao jogo",Close,130,44,14),Chosen);
+            Accent(Btn(top,"Voltar ao jogo",Back,130,44,14),Chosen);
             body=New("Conteudo",root); body.anchorMin=Vector2.zero; body.anchorMax=Vector2.one; body.offsetMin=Vector2.zero; body.offsetMax=new Vector2(0,-64);
             var args=Environment.GetCommandLineArgs();
             int shot=Array.IndexOf(args,"--arena-menu-shot");
@@ -157,6 +157,8 @@ namespace ArenaTatica
         }
         public void Open(string t=null) { root.gameObject.SetActive(true); Show(t??tab); }
         public void Close() { root.gameObject.SetActive(false); }
+        // Sem partida rodando (partida estacionada, sem sala), voltar ao jogo leva à escolha de partida.
+        void Back() { if(Game.InMenu&&!Game.Lobby&&!Game.Setup&&Game.Network.Role=="Local") Show("jogar"); else Close(); }
         void Update()
         {
             if(IsOpen&&UnityEngine.InputSystem.Keyboard.current?.escapeKey.wasPressedThisFrame==true) Close();
@@ -200,31 +202,36 @@ namespace ArenaTatica
                 case "estatisticas": Stats(); break;
                 case "regras": Rules(); break;
                 case "opcoes": Options(); break;
+                case "novidades": News(); break;
                 default: Home(); break;
             }
         }
 
         // ── Início ──
+        // Tela inicial (autor 22/10): a arte do BDX Master ocupa a tela toda e os botões ficam numa faixa por cima, embaixo.
+        static Sprite homeArt;
         void Home()
         {
+            if(!homeArt) { var tex=Resources.Load<Texture2D>("Sprites/Menu/fundo-inicio"); if(tex) homeArt=Sprite.Create(tex,new Rect(0,0,tex.width,tex.height),new Vector2(.5f,.5f),100); }
+            var art=New("Fundo",body,typeof(Image)).GetComponent<Image>(); Fill(art.rectTransform); art.raycastTarget=false;
+            if(homeArt) { art.sprite=homeArt; var fit=art.gameObject.AddComponent<AspectRatioFitter>(); fit.aspectMode=AspectRatioFitter.AspectMode.EnvelopeParent; fit.aspectRatio=homeArt.rect.width/homeArt.rect.height; }
+            else art.color=Bg;
+            if(!body.GetComponent<RectMask2D>()) body.gameObject.AddComponent<RectMask2D>();
+            // Faixa escura embaixo para os botões lerem bem sobre a arte.
+            var band=New("Faixa",body,typeof(Image)).GetComponent<RectTransform>(); band.GetComponent<Image>().color=new Color(0,0,0,.55f);
+            band.anchorMin=Vector2.zero; band.anchorMax=new Vector2(1,0); band.pivot=new Vector2(.5f,0); band.offsetMin=Vector2.zero; band.offsetMax=new Vector2(0,Portrait?300:92);
+            HorizontalOrVerticalLayoutGroup bar=Portrait?band.gameObject.AddComponent<VerticalLayoutGroup>():band.gameObject.AddComponent<HorizontalLayoutGroup>();
+            bar.padding=Portrait?new RectOffset(24,24,12,12):new RectOffset(24,24,16,16); bar.spacing=Portrait?8:12; bar.childAlignment=TextAnchor.MiddleCenter;
+            bar.childControlWidth=bar.childControlHeight=true; bar.childForceExpandWidth=Portrait; bar.childForceExpandHeight=false;
+            var cta=Btn(band,"Jogar",()=>Show("jogar"),220,60,22); Accent(cta,Gold); if(!cta.GetComponent<ArenaBotaoPele>()) cta.GetComponentInChildren<Text>().color=Bg; cta.GetComponentInChildren<Text>().fontStyle=FontStyle.Bold;
+            Btn(band,"Personagens",()=>Show("personagens"),170,48,16);
+            Btn(band,"Editor de fichas e skills",()=>Show("editor"),230,48,15);
+            Btn(band,"Novidades",()=>Show("novidades"),140,48,16);
+            Btn(band,"Voltar à partida",Back,170,48,16);
+        }
+        void News()
+        {
             var c=Scroll(body);
-            // Modelo 017: texto e CTA à esquerda (~45%), tabuleiro transparente inteiro à direita. Retrato: texto em cima, tabuleiro embaixo.
-            RectTransform cols;
-            if(Portrait) { cols=Column(c); cols.GetComponent<VerticalLayoutGroup>().spacing=16; cols.GetComponent<VerticalLayoutGroup>().childForceExpandWidth=true; }
-            else { cols=Row(c,430); cols.GetComponent<HorizontalLayoutGroup>().spacing=24; cols.GetComponent<HorizontalLayoutGroup>().childAlignment=TextAnchor.UpperLeft; }
-            var left=Column(cols); Layout(left.gameObject,0,0,45); var lle=left.GetComponent<LayoutElement>(); lle.preferredWidth=0; lle.minWidth=0; left.GetComponent<VerticalLayoutGroup>().spacing=12; left.GetComponent<VerticalLayoutGroup>().childAlignment=TextAnchor.MiddleLeft;
-            var kicker=Label(left,"MINIATURAS TÁTICAS",13,Gold); kicker.fontStyle=FontStyle.Bold;
-            var big=Label(left,"ARENA TÁTICA",52,Ink); big.fontStyle=FontStyle.Bold; Layout(big.gameObject,0,70);
-            Label(left,"Miniaturas táticas no estilo Krosmaster · de 2 a 6 jogadores · no mesmo aparelho ou pela internet",17,Muted);
-            var cta=Btn(left,"Jogar",()=>Show("jogar"),0,60,22); Accent(cta,Gold); if(!cta.GetComponent<ArenaBotaoPele>()) cta.GetComponentInChildren<Text>().color=Bg; cta.GetComponentInChildren<Text>().fontStyle=FontStyle.Bold;
-            // Retrato: os atalhos empilham para não espremer os rótulos.
-            var row=Portrait?left:Row(left,48);
-            Btn(row,"Personagens",()=>Show("personagens"),0,44,16);
-            Btn(row,"Editor de fichas e skills",()=>Show("editor"),0,44,15);
-            Btn(row,"Voltar à partida",Close,0,44,16);
-            var art=New("Arena",cols,typeof(Image)).GetComponent<Image>(); art.preserveAspect=true; art.raycastTarget=false;
-            art.sprite=Resources.Load<Sprite>("Sprites/Menu/mapa-bosque"); if(!art.sprite) art.color=Color.clear;
-            Layout(art.gameObject,0,Portrait?360:420,55); var ale=art.GetComponent<LayoutElement>(); ale.preferredWidth=0; ale.minWidth=0;
             Section(c,"Novidades");
             var card=Card(c);
             Para(card,"• <b>12 eventos de mapa</b> saem da face Cataclisma do dado: maré de lava, portal caótico, eco ancestral, maré de energia, festival de fogos, nevoeiro, vendaval, papa-moedas, o chefe Brutamontes Errante e mais.");
@@ -357,7 +364,7 @@ namespace ArenaTatica
                 var r=Row(c,48);
                 Btn(r,"Meu time",()=>Game.Hud.OpenPicker(),0,44,15);
                 Btn(r,"Minha pool (torneio)",()=>Game.Hud.OpenPool(),0,44,15);
-                Btn(r,"Sair da sala",()=>{ Game.NewLocal(); Show("sala"); },0,44,15);
+                Btn(r,"Sair da sala",()=>{ Game.Park("Você saiu da sala."); Show("sala"); },0,44,15);
                 Para(c,"<color=#a7b4c2>O anfitrião escolhe o modo e toca em Iniciar. Seu time e sua pool vão para a sala na hora.</color>");
                 return;
             }
@@ -373,7 +380,8 @@ namespace ArenaTatica
                 if(Game.Torneio!=null&&Game.Torneio.recorded) Accent(Btn(r,"Próxima partida do torneio",()=>{ Game.NextTournamentMatch(); Show("sala"); },0,44,15),Chosen);
                 Btn(r,"Reiniciar partida",()=>{ Game.RestartRoom(); Close(); },0,44,15);
                 Btn(r,"Voltar todos à sala",()=>{ Game.BackToLobby(); Show("sala"); },0,44,15);
-                Btn(r,"Voltar ao jogo",Close,0,44,15);
+                Btn(r,"Fechar sala",()=>{ Game.CloseRoom(); Show("sala"); },0,44,15);
+                Btn(r,"Voltar ao jogo",Back,0,44,15);
                 return;
             }
             bool editable=Game.Torneio==null;
@@ -818,7 +826,7 @@ namespace ArenaTatica
             foreach(var (name,vol) in new[]{("Mudo",0f),("Baixo",.35f),("Médio",.7f),("Alto",1f)}) { float k=vol; Pick(Btn(row,name,()=>{ AudioListener.volume=k; PlayerPrefs.SetFloat("arena-volume",k); Show("opcoes"); },0,44),Mathf.Approximately(AudioListener.volume,k)); }
             Section(c,"Jogo");
             row=Row(c,48);
-            Btn(row,"Voltar à partida",Close,0,44);
+            Btn(row,"Voltar à partida",Back,0,44);
             Btn(row,"Fechar a Partida",Game.CloseMatch,0,44);
             Accent(Btn(row,"Sair do jogo",Application.Quit,0,44),Hex(0x4a2030));
             Para(c,$"<color=#a7b4c2>Edições salvas em {Application.persistentDataPath}</color>");

@@ -111,7 +111,8 @@ namespace ArenaTatica
         Material silhouetteMaterial;
         public static Color Gold=new Color(.93f,.72f,.35f), Blue=new Color(.3f,.73f,.95f), Violet=new Color(.64f,.5f,.98f), Red=new Color(.9f,.32f,.28f), Green=new Color(.45f,.85f,.5f);
         // Cor de cada jogador (P1..P6); invocações puxam para o violeta.
-        static readonly Color[] PlayerColors={ Gold, Blue, Red, Green, new Color(.95f,.5f,.8f), new Color(.88f,.9f,.95f) };
+        // Uma cor viva e distinta por jogador (autor 22/10): ouro, azul, vermelho, verde, rosa e roxo; neutro é cinza.
+        static readonly Color[] PlayerColors={ new Color(1,.78f,.2f), new Color(.25f,.66f,1), new Color(1,.3f,.36f), new Color(.3f,.88f,.45f), new Color(1,.47f,.85f), new Color(.66f,.48f,1) };
         public static Color TeamColor(int player) => player==MatchState.Neutral?new Color(.55f,.55f,.5f):PlayerColors[Mathf.Clamp(player-1,0,PlayerColors.Length-1)];
         // Céu (tarefa 015 do Codex): Sprites/Ceus/<id>/fundo.png atrás do tabuleiro; o evento ativo troca o do cenário.
         static readonly string[] ThemeSkies={"ceu-aberto","ceu-aberto","deserto-poente","nuvens-densas","cinzas-vulcanicas","masmorra","masmorra","ceu-aberto"};
@@ -779,7 +780,10 @@ namespace ArenaTatica
             while(queue.Count>0) {
                 var (events,state)=queue.Dequeue();
                 var cast=events.FirstOrDefault(x=>x.actor!=0&&x.info!=null&&Content.AnySkill(Content.BaseSkill(x.info))!=null);
-                if(cast!=null) SkillVoice(Content.BaseSkill(cast.info));
+                // Invocação: o evento traz o id do invocado; a skill é a última de quem invocou.
+                var called=cast==null?events.FirstOrDefault(x=>x.kind=="invocar"&&x.actor!=0):null;
+                string voice=cast!=null?Content.BaseSkill(cast.info):called!=null?state?.F(called.actor)?.lastSkill:null;
+                if(!string.IsNullOrEmpty(voice)) SkillVoice(voice);
                 foreach(var e in events) yield return Animate(e,state);
                 Sync(state,false);
             }
@@ -891,7 +895,7 @@ namespace ArenaTatica
                             if(burstStart&&ArenaEfeitos.ImpactTime(blowRes) is float lag&&lag>0) yield return Wait(lag);
                         }
                         Sound("attack");
-                        if(e.value<0) { Float(target.position,"Errou!",Blue); React(target,0); }
+                        if(e.value<0) { Float(target.position,"Errou!",Blue); React(target,-1); }
                         else if(e.value>0||(dealt?.damage??1)>0) { Hit(target,actor.position,e.value,Style(look).color); Float(target.position,"−"+e.value,Gold); Turn(target,actor.position-target.position); React(target,e.value); }
                         if(swing>0) yield return Wait(swing*.4f); else if(main) yield return Pulse(actor);
                     }
@@ -1130,7 +1134,7 @@ namespace ArenaTatica
                 case "anulacao-fim": if(target) Float(target.position,$"+{e.value} PA de volta",Green); yield return Wait(.2f); break;
                 case "anular": if(target) { Flash(target.position+Vector3.up,Violet,16); Float(target.position,"Anulado!",Violet); } Game.Hud?.Log($"{Name(s,e.actor)} anulou {Name(s,e.target)}"); yield return Wait(.25f); break;
                 case "pulso":
-                    Sound("lela-pulse");
+                    if(ArenaSom.On) Sound("lela-pulse");
                     if(actor) { PlayClip(actor,"pulse"); Flash(actor.position+Vector3.up,DomeColor(s.F(e.actor)),20); StartCoroutine(Ring(actor.position+Vector3.up*.05f,3,DomeColor(s.F(e.actor)))); }
                     Game.Hud?.Log($"{Name(s,e.actor)} disparou o L.E.L.A Pulse"); yield return Wait(.45f); break;
                 case "marca":
@@ -1410,8 +1414,8 @@ namespace ArenaTatica
             rig.clip=clip; rig.time=0; rig.reverse=reverse; var frames=ClipFrames(rig,out _); ShowFrame(rig);
             return frames==null?0:frames.Length/Fps(clip);
         }
-        // Reação do alvo a um golpe: sem dano (errou ou 0), gargalha se tiver o clipe (Pele D. Negra); com dano, tanka com
-        // "absorb" se tiver (a Forma Preta da Pele) e senão leva o "hit".
+        // Reação do alvo a um golpe (autor 22/10): com dano, sempre o "hit"; bloqueado (0 de dano), tanka com "absorb" se tiver
+        // (a Forma Preta da Pele); errou ou esquivou (−1), gargalha se tiver o "laugh".
         bool HasClip(Transform unit,string clip)
         {
             if(!unit||unit.childCount==0||!rigs.TryGetValue(unit.GetChild(0),out var rig)) return false;
@@ -1419,8 +1423,9 @@ namespace ArenaTatica
         }
         void React(Transform target,int dmg)
         {
-            if(dmg<=0) { if(HasClip(target,"laugh")) PlayClip(target,"laugh"); return; }
-            PlayClip(target,HasClip(target,"absorb")?"absorb":"hit");
+            if(dmg<0) { if(HasClip(target,"laugh")) PlayClip(target,"laugh"); return; }
+            if(dmg==0) { if(HasClip(target,"absorb")) PlayClip(target,"absorb"); else if(HasClip(target,"laugh")) PlayClip(target,"laugh"); return; }
+            PlayClip(target,"hit");
         }
         // Estacas de luz dourada (volta do Black Hole): sobem do chão em volta do alvo e somem.
         IEnumerator GoldStakes(Vector3 at)
@@ -1940,7 +1945,7 @@ namespace ArenaTatica
         void SkillVoice(string skill)
         {
             if(!skillVoices.TryGetValue(skill,out var clip)) skillVoices[skill]=clip=Resources.Load<AudioClip>("Audio/Skills/"+skill);
-            if(clip) AudioSource.PlayClipAtPoint(clip,BoardCamera?BoardCamera.transform.position:Vector3.zero,1);
+            if(clip&&ArenaSom.Recorded) AudioSource.PlayClipAtPoint(clip,BoardCamera?BoardCamera.transform.position:Vector3.zero,1);
         }
         public void Sound(string name) { if(!sounds.TryGetValue(name,out var clip)||!clip) return; foreach(var source in voices) if(!source.isPlaying) { source.clip=clip; source.Play(); break; } }
         public void CancelAnimations()
@@ -1981,7 +1986,9 @@ namespace ArenaTatica
         }
         // Barras de vida sobre cada lutador (Canvas próprio, abaixo do HUD). Chefes neutros: barra larga com nome e PV.
         Canvas barCanvas; Font barFont;
-        readonly Dictionary<int,(RectTransform root,RectTransform fill,Text label)> bars=new Dictionary<int,(RectTransform,RectTransform,Text)>();
+        ArenaSom som;
+        class HpBar { public RectTransform root, fill, chip; public Text label, hpText; public float trail; }
+        readonly Dictionary<int,HpBar> bars=new Dictionary<int,HpBar>();
         readonly Dictionary<int,Text> markIcons=new Dictionary<int,Text>();
         ArenaMusica music;
         static bool Boss(Fighter f) => f.team==MatchState.Neutral&&Content.MaxHp(f)>=12;
@@ -1999,13 +2006,24 @@ namespace ArenaTatica
                 bool shown=f!=null&&f.Alive&&unit&&unit.gameObject.activeInHierarchy&&unit.GetComponentsInChildren<Renderer>().Any(r=>r.enabled&&r.name!="Silhueta");
                 if(!bars.TryGetValue(kv.Key,out var bar)) {
                     if(!shown) continue;
-                    bool boss=Boss(f); float w=boss?120:46, h=boss?11:6;
+                    bool boss=Boss(f); float w=boss?140:58, h=boss?14:10;
+                    // Barra de vida (autor 22/10): moldura na cor do time, rastro do dano, divisões por PV e o número.
                     var root=new GameObject("Barra_"+kv.Key,typeof(RectTransform),typeof(Image)).GetComponent<RectTransform>(); root.SetParent(barCanvas.transform,false);
                     root.anchorMin=root.anchorMax=Vector2.zero; root.pivot=new Vector2(.5f,0); root.sizeDelta=new Vector2(w,h);
-                    var back=root.GetComponent<Image>(); back.color=new Color(.05f,.05f,.08f,.85f); back.raycastTarget=false;
-                    var fill=new GameObject("Vida",typeof(RectTransform),typeof(Image)).GetComponent<RectTransform>(); fill.SetParent(root,false);
-                    fill.anchorMin=Vector2.zero; fill.anchorMax=Vector2.one; fill.offsetMin=new Vector2(1,1); fill.offsetMax=new Vector2(-1,-1);
-                    var img=fill.GetComponent<Image>(); img.color=f.team==MatchState.Neutral?Red:TeamColor(f.team); img.raycastTarget=false;
+                    var frame=root.GetComponent<Image>(); frame.color=Color.Lerp(f.team==MatchState.Neutral?Red:TeamColor(f.team),Color.black,.25f); frame.raycastTarget=false;
+                    root.gameObject.AddComponent<Outline>().effectColor=new Color(0,0,0,.85f);
+                    RectTransform Layer(string name,Color color) { var r=new GameObject(name,typeof(RectTransform),typeof(Image)).GetComponent<RectTransform>(); r.SetParent(root,false);
+                        r.anchorMin=Vector2.zero; r.anchorMax=Vector2.one; r.offsetMin=new Vector2(2,2); r.offsetMax=new Vector2(-2,-2); var i=r.GetComponent<Image>(); i.color=color; i.raycastTarget=false; return r; }
+                    Layer("Fundo",new Color(.06f,.05f,.09f,.95f));
+                    var chip=Layer("Rastro",new Color(1,.92f,.75f,.95f));
+                    var fill=Layer("Vida",f.team==MatchState.Neutral?Red:TeamColor(f.team));
+                    var shine=Layer("Brilho",new Color(1,1,1,.22f)); shine.SetParent(fill,false); shine.anchorMin=new Vector2(0,.55f); shine.offsetMin=shine.offsetMax=Vector2.zero;
+                    int max=Mathf.Max(1,Content.MaxHp(f)), step=max<=20?1:5;
+                    for(int t=step;t<max;t+=step) { var tick=Layer("Divisao",new Color(0,0,0,t%5==0?.55f:.3f)); tick.anchorMin=new Vector2(t/(float)max,0); tick.anchorMax=new Vector2(t/(float)max,1); tick.offsetMin=new Vector2(-.5f,2); tick.offsetMax=new Vector2(.5f,-2); }
+                    var hpText=new GameObject("PV",typeof(RectTransform),typeof(Text)).GetComponent<Text>(); hpText.transform.SetParent(root,false);
+                    hpText.font=barFont; hpText.fontSize=boss?12:10; hpText.fontStyle=FontStyle.Bold; hpText.alignment=TextAnchor.MiddleCenter; hpText.color=Color.white; hpText.raycastTarget=false;
+                    hpText.horizontalOverflow=HorizontalWrapMode.Overflow; hpText.verticalOverflow=VerticalWrapMode.Overflow; var hr=hpText.rectTransform; hr.anchorMin=Vector2.zero; hr.anchorMax=Vector2.one; hr.offsetMin=hr.offsetMax=Vector2.zero;
+                    hpText.gameObject.AddComponent<Outline>().effectColor=new Color(0,0,0,1);
                     Text label=null;
                     if(boss) {
                         label=new GameObject("Nome",typeof(RectTransform),typeof(Text)).GetComponent<Text>(); label.transform.SetParent(root,false);
@@ -2013,15 +2031,30 @@ namespace ArenaTatica
                         label.horizontalOverflow=HorizontalWrapMode.Overflow; var lr=label.rectTransform; lr.anchorMin=new Vector2(0,1); lr.anchorMax=new Vector2(1,1); lr.pivot=new Vector2(.5f,0); lr.sizeDelta=new Vector2(0,18); lr.anchoredPosition=new Vector2(0,1);
                         label.gameObject.AddComponent<Outline>().effectColor=new Color(0,0,0,.9f);
                     }
-                    bar=bars[kv.Key]=(root,fill,label);
+                    // Selo do jogador à esquerda da barra (P1, P2...), na cor dele.
+                    if(MatchState.Player(f.team)) {
+                        var tag=new GameObject("Jogador",typeof(RectTransform),typeof(Image)).GetComponent<RectTransform>(); tag.SetParent(root,false);
+                        tag.anchorMin=tag.anchorMax=new Vector2(0,.5f); tag.pivot=new Vector2(1,.5f); tag.sizeDelta=new Vector2(h+4,h+4); tag.anchoredPosition=new Vector2(-1,0);
+                        var ti=tag.GetComponent<Image>(); ti.color=TeamColor(f.team); ti.raycastTarget=false; tag.gameObject.AddComponent<Outline>().effectColor=new Color(0,0,0,.9f);
+                        var tn=new GameObject("N",typeof(RectTransform),typeof(Text)).GetComponent<Text>(); tn.transform.SetParent(tag,false); tn.font=barFont; tn.fontSize=boss?12:10; tn.fontStyle=FontStyle.Bold;
+                        tn.alignment=TextAnchor.MiddleCenter; tn.color=new Color(.08f,.06f,.1f); tn.raycastTarget=false; tn.horizontalOverflow=HorizontalWrapMode.Overflow; var nr=tn.rectTransform; nr.anchorMin=Vector2.zero; nr.anchorMax=Vector2.one; nr.offsetMin=nr.offsetMax=Vector2.zero; tn.text=f.team.ToString();
+                    }
+                    bar=bars[kv.Key]=new HpBar{ root=root, fill=fill, chip=chip, label=label, hpText=hpText, trail=f.hp/(float)max };
                 }
                 bar.root.gameObject.SetActive(shown); if(!shown) continue;
                 float height=(Heights.TryGetValue(ShownId(f),out float hh)?hh:.75f)+(Shown(f).flying?.35f:0)+.18f;
                 var p=BoardCamera.WorldToScreenPoint(unit.position+Vector3.up*height);
                 if(p.z<0) { bar.root.gameObject.SetActive(false); continue; }
                 bar.root.anchoredPosition=new Vector2(p.x,p.y)/k;
-                bar.fill.anchorMax=new Vector2(Mathf.Clamp01(f.hp/(float)Mathf.Max(1,Content.MaxHp(f))),1);
-                if(bar.label) bar.label.text=$"{Shown(f).name}  {f.hp}/{Content.MaxHp(f)}";
+                float frac=Mathf.Clamp01(f.hp/(float)Mathf.Max(1,Content.MaxHp(f)));
+                // O rastro claro desce devagar até a vida nova (cura sobe na hora).
+                bar.trail=frac>=bar.trail?frac:Mathf.MoveTowards(bar.trail,frac,Time.deltaTime*.6f);
+                bar.fill.anchorMax=new Vector2(frac,1); bar.chip.anchorMax=new Vector2(bar.trail,1);
+                // Vida baixa (≤ 30%): pisca para o vermelho.
+                var fillImg=bar.fill.GetComponent<Image>(); var baseColor=f.team==MatchState.Neutral?Red:TeamColor(f.team);
+                fillImg.color=frac<=.3f?Color.Lerp(baseColor,new Color(1,.15f,.15f),.5f+.5f*Mathf.Sin(Time.time*8)):baseColor;
+                bar.hpText.text=$"{f.hp}/{Content.MaxHp(f)}";
+                if(bar.label) bar.label.text=Shown(f).name;
                 // Marcas da Maldição (Gumbald): losango roxo com o número sobre a barra.
                 if(f.marks>0||markIcons.ContainsKey(kv.Key)) {
                     if(!markIcons.TryGetValue(kv.Key,out var icon)||!icon) {
@@ -2039,7 +2072,7 @@ namespace ArenaTatica
         void Update()
         {
             var s=Seen(Game.State);
-            music??=gameObject.AddComponent<ArenaMusica>(); music.Follow(Ready?s:null,Game.ViewerTeam);
+            music??=gameObject.AddComponent<ArenaMusica>(); if(!som) som=gameObject.AddComponent<ArenaSom>(); music.Follow(Ready&&!Game.InMenu?s:null,Game.ViewerTeam);
             if(!Ready||s==null) return;
             if(Screen.width!=screenWidth||Screen.height!=screenHeight) FitCamera();
             SlideYaw();
