@@ -42,6 +42,9 @@ namespace ArenaTatica.Core
             new ShopDef { id="manto-de-espinhos", name="Manto de espinhos", kind=ShopKind.Item, price=4, weight=2, thorns=1 },
             new ShopDef { id="ancora", name="Âncora", kind=ShopKind.Item, price=3, weight=2, anchor=true },
             new ShopDef { id="bencao-de-pedra", name="Bênção de pedra", kind=ShopKind.Buff, price=3, weight=2, armor=2, turns=2 },
+            // Blink Dagger (autor 22/10): teleporte até 6 casas por 2 PA, recarga 1; fica para sempre com quem comprou.
+            new ShopDef { id="blink-dagger", name="Blink Dagger", kind=ShopKind.Magia, price=6, weight=2, uses=ShopDef.Permanent,
+                skill=new SkillDef { id="blink-dagger", name="Blink Dagger", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=6, sight=false, cooldown=1, anim="teleport" } },
         };
         public static ShopDef Def(string id) => Array.Find(Catalog,d=>d.id==id);
         public static ShopDef BySkill(string skill) => Array.Find(Catalog,d=>d.skill!=null&&d.skill.id==skill);

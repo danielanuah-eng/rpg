@@ -299,7 +299,7 @@ namespace ArenaTatica
             text.Add($"<color=#{mu}>SKILLS</color>");
             foreach(var sk in Match.Skills(f)) {
                 var wait=f.cooldowns.Find(x=>x.skill==sk.id); var charge=f.charges.Find(x=>x.skill==sk.id);
-                text.Add("• "+Content.Describe(sk)+(wait!=null?$" <color=#{mu}>(recarga: {wait.uses})</color>":"")+(charge!=null?$" <color=#{mu}>(×{charge.uses})</color>":""));
+                text.Add("• "+Content.Describe(sk)+(wait!=null?$" <color=#{mu}>(recarga: {wait.uses})</color>":"")+(charge!=null&&charge.uses>0?$" <color=#{mu}>(×{charge.uses})</color>":""));
             }
             if(d.forms!=null&&d.forms.Length>1) text.Add($"<color=#{mu}>Formas:</color> {string.Join(", ",d.forms.Select(x=>x.name))}");
             inspectBody.text=string.Join("\n",text);
@@ -490,7 +490,7 @@ namespace ArenaTatica
             if(picking.Contains(id)) picking.Remove(id);
             else if(pickMode==PickMode.Pool||pickMode==PickMode.Ban) { if(picking.Count<pickLimit) picking.Add(id); else Game.Notify(pickMode==PickMode.Ban?$"Até {pickLimit} ban{(pickLimit==1?"":"s")}.":$"Pool de até {pickLimit} lutadores."); }
             else if(ArenaGame.ValidTeam(picking.Append(id)).Contains(id)) picking.Add(id);
-            else Game.Notify(picking.Count>=ArenaGame.TeamSize?$"No máximo {ArenaGame.TeamSize} lutadores.":Content.Fighters[id].legendary&&picking.Any(x=>Content.Fighters[x].legendary)?"Só 1 Lendária por time.":$"Passa do limite de Nível {ArenaGame.TeamLevel}.");
+            else Game.Notify(picking.Count>=ArenaGame.TeamSize?$"No máximo {ArenaGame.TeamSize} lutadores.":ArenaGame.LegendaryLimit&&Content.Fighters[id].legendary&&picking.Any(x=>Content.Fighters[x].legendary)?"Só 1 Lendária por time.":$"Passa do limite de Nível {ArenaGame.TeamLevel}.");
             RefreshPicker();
         }
         void RandomPick()
@@ -572,7 +572,8 @@ namespace ArenaTatica
             if(!PressAction(ArenaActionConfirmation.Pass,f)) { Game.Mode=""; Game.Notify("Toque novamente para passar."); return; }
             Game.Mode=""; Game.Submit("passar");
         }
-        public static bool SelfOnly(SkillDef sk) => sk.kind==SkillKind.Forma||sk.kind==SkillKind.Pulso||sk.kind==SkillKind.Esconder||sk.kind==SkillKind.Aura||(sk.kind==SkillKind.Desejo&&string.IsNullOrEmpty(sk.wish));
+        public void OpenRemoteShop(int actor) { if(Game.CanAct&&Game.Active?.id==actor&&Game.Active.remoteShop) shopWindow.gameObject.SetActive(true); }
+        public static bool SelfOnly(SkillDef sk) => new[]{"comando-blip","matriz-protecao","dominio-xadrez","agarrao-negro","loucura-negra","explosao-antimateria"}.Contains(sk.effect)|| sk.kind==SkillKind.Forma||sk.kind==SkillKind.Pulso||sk.kind==SkillKind.Esconder||sk.kind==SkillKind.Aura||(sk.kind==SkillKind.Desejo&&string.IsNullOrEmpty(sk.wish));
         // Aviso do Cataclisma (entrega do Sol, 11/10): tira Sprites/Avisos/<id>, 12 quadros de 160 ms, um ciclo no centro do tabuleiro.
         public void ShowWarning(string id)
         {
@@ -767,7 +768,7 @@ namespace ArenaTatica
                 var wait=f.cooldowns.Find(x=>x.skill==sk.id);
                 bool spent=sk.perMatch>0&&f.usedMatch.Count(u=>u==sk.id)>=sk.perMatch, early=sk.minRound>s.round;
                 string cost=sk.kind==SkillKind.Aura?(f.auraOn?"ligada · desligar":f.auraPaid?"religar":$"{sk.pa} PA/turno"):$"{sk.pa} PA";
-                SetLabel(b,$"{sk.name} · {(spent?"usada":early?$"rodada {sk.minRound}":wait!=null?$"recarga {wait.uses}":cost)}{(charge!=null?$" ×{charge.uses}":"")}");
+                SetLabel(b,$"{sk.name} · {(spent?"usada":early?$"rodada {sk.minRound}":wait!=null?$"recarga {wait.uses}":cost)}{(charge!=null&&charge.uses>0?$" ×{charge.uses}":"")}");
                 b.interactable=Game.CanAct&&f.pa>=Match.Cost(f,sk,Game.State)&&wait==null&&!spent&&!early&&f.channel==0;
                 // Destaque do 1º toque (mira armada) e do modo de mira: o mesmo tom escolhido de sempre.
                 ArenaTema.Paint(b,Game.Mode==sk.id||Confirming(ArenaActionConfirmation.Skill(sk.id)),chosen,idle);
@@ -781,7 +782,7 @@ namespace ArenaTatica
             shopLabel.text=$"LOJA DE P{team} · {s.coins[team]} MOEDAS";
             shopTitle.text=$"Loja do Castor  ·  P{team}  ·  {s.coins[team]} moedas";
             // Só dá para abrir a loja numa casa ao lado dela; saindo dali, a janela fecha.
-            bool atShop=f!=null&&Board.NextToShop(s,f);
+            bool atShop=f!=null&&(Board.NextToShop(s,f)||f.remoteShop);
             if(!atShop&&!PeekShop) shopWindow.gameObject.SetActive(false);
             openShop.interactable=atShop;
             SetLabel(openShop,!atShop?"Loja: fique ao lado dela":shopWindow.gameObject.activeSelf?"Fechar loja":"Abrir loja");

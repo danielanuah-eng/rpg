@@ -25,7 +25,8 @@ namespace ArenaTatica.Core
     // Loja: as 4 casas do meio são a barraca do mascate (decisão do autor, 11/10): ninguém entra e ela tapa a visão.
     // Parede (mapas fechados, 18/10): ninguém entra, nem voador, e tapa a visão. Porta: fechada é igual à parede; quem está
     // colado gasta 1 PM para abrir (comando "abrir") e ela vira casa livre com TileObj.PortaAberta.
-    public enum Terrain { Livre, Arbusto, Arvore, Caixa, Loja, Parede, Porta }
+    // Agua (expansão de 22/10, Docas inundadas): sempre no FIM do enum, caminhável, custa o dobro do passo normal (Board.StepCost).
+    public enum Terrain { Livre, Arbusto, Arvore, Caixa, Loja, Parede, Porta, Agua }
     // Objeto fixo da casa (Tile.obj), trazido do DungeonBDX (18/10). Baú: quem entra ganha BauMoedas e ele some.
     // Espetos: quem entra andando ou empurrado (sem voar) leva 1 de dano e segue. Braseiro: obstáculo; quem começa o turno
     // colado ganha +1 PA e, no Domínio, o único time colado nele no fim da rodada marca 1 ponto. Portal: liga à casa espelhada.
@@ -57,7 +58,7 @@ namespace ArenaTatica.Core
     // lava/mark: eventos (maré de lava, fogos). frozenBy: lutador que congelou a casa (+1 PM para entrar). trapPa: mina de gelo.
     // obj: TileObj num único int (o snapshot de 18×18 precisa caber no Relay).
     // shadow: casa de sombra da Ellie (id dela; 0 = nenhuma), refeita no começo de cada turno dela.
-    [Serializable] public class Tile { public int height, coins, trap, trapDamage, trapPa, frozenBy, obj, shadow; public Terrain terrain; public bool zone, lava, mark;
+    [Serializable] public class Tile { public int height, coins, trap, trapDamage, trapPa, trapBy, frozenBy, obj, shadow; public Terrain terrain; public bool zone, lava, mark;
         public TileObj Obj { get => (TileObj)obj; set => obj=(int)value; } }
     // Portal (sprint 1): casas de entrada e saída (Board.Index), quem abriu e turnos do dono que faltam. Fica numa lista do estado,
     // não em cada casa, para o snapshot de 6 jogadores caber no Relay.
@@ -92,7 +93,7 @@ namespace ArenaTatica.Core
         // hits: bolinhas (Hit); 0 = padrão do tipo. channeled: resolve no começo do próximo turno de quem usa, que encerra o turno ao canalizar.
         // mine (Armadilha): vira mina terrestre. freeSwap (Forma): custa 0 se não usou skill de arma neste turno (Damian).
         // turns também é a duração do Portal (turnos do dono; 0 = 2).
-        public int hits;
+        public int hits, invertTurns;
         public bool channeled, mine, freeSwap;
         // Elenco de 20/10. dispel: o golpe anula formas, buffs bons, canalização e aura do alvo antes do dano (Pele D. Negra).
         // banish: a prisão vira buraco negro (sem Esquiva, pega aliado também); no retorno o inimigo leva returnDamage.
@@ -117,6 +118,15 @@ namespace ArenaTatica.Core
         public int gainPm, stun, sealUlt, doubleDamage;
         public bool shadowStep, purge, cleanse, buffReflect, buffImmune, reveal, alliesOnly, beam, swapHp, props, noRefresh, selfKill;
         public string halfMapIn;
+        // Chefe (Rei Thaagarys, 22/10). weight: peso na IA do chefe (0 = fora do pool). walls (Zona): ergue até N paredes nas casas
+        // livres da área por turns rodadas (0 = 2). resetUlts: reinicia as ultimates e recargas da partida (de todos). cataclysm:
+        // dispara um evento aleatório (do pool do chefe, BossDef.events, se quem usa tiver um).
+        public int weight, walls;
+        public bool resetUlts, cataclysm;
+        // Expansão de 22/10 (inventores e luna). effect: etiqueta de comportamento resolvido por Match.InventoresLuna
+        // (vazio = skill comum, que segue o kind). twoCells: pede duas casas (Command.cell e cell2), como Troca/Portal/Teleporte.
+        public string effect;
+        public bool twoCells;
         // mapPct: % do maior lado do mapa que o halfMap alcança (0 = 50%; Room do Ikaito maior, autor 22/10). Com halfMapIn:
         // freeIn = nessa forma ignora visão e muro; hitsOut = alvos fora dessa forma (0 = os mesmos de hits; Shambles só aliados).
         public int mapPct, hitsOut;
@@ -126,7 +136,9 @@ namespace ArenaTatica.Core
         public bool CanHitAlly => (hits&(int)Hit.Aliado)!=0;
         public bool Custom => hits!=0;
         // Troca, Portal e Teleporte de aliado pedem uma 2ª casa (Command.cell2).
-        public bool TwoCells => kind==SkillKind.Troca||kind==SkillKind.Portal||(kind==SkillKind.Teleporte&&Custom&&(CanHitAlly||CanHitEnemy));
+        public bool TwoCells => twoCells||kind==SkillKind.Troca||kind==SkillKind.Portal||(kind==SkillKind.Teleporte&&Custom&&(CanHitAlly||CanHitEnemy));
+        // Skill da expansão: o comportamento é do núcleo novo, não do kind (Match.InventoresLuna.cs).
+        public bool Custom2 => !string.IsNullOrEmpty(effect);
         public SkillDef Clone() => (SkillDef)MemberwiseClone();
     }
     // Forma do lutador (arma do Damian, Berserk do Tchu tcha): bônus enquanto dura e a pasta de sprites dela.
@@ -136,7 +148,28 @@ namespace ArenaTatica.Core
     // extra: +usos por turno de cada skill (Fúria do Death Crimson). endBlast: no fim do turno, dano fixo nas 8 casas em volta e nele.
     // locked: nada tira a forma (Nulification, selar ultimate). unstoppable: não é atordoado nem preso.
     // music: estilo da trilha eletrônica que toca enquanto alguém está nessa forma (ArenaMusica; Modos da L.E.L.A).
-    [Serializable] public class FormDef { public string id, name, sprites, pose, color, music; public int pa, pm, armor, dome, domePct, extra, endBlast; public bool noGuard, intangible, locked, unstoppable; }
+    [Serializable] public class FormDef { public string id, name, sprites, pose, color, music; public int pa, pm, armor, dome, domePct, extra, endBlast, reflectDamage; public bool noGuard, intangible, locked, unstoppable, effectImmune; }
+    // Expansão de 22/10 (Nikola/Blip/Celinos, Bifia, Desland, Nepturius, tubarões): números das mecânicas novas, todos
+    // editáveis pela ficha. Zero = "não configurado" (o núcleo usa o padrão do desenho técnico, ver Match.InventoresLuna).
+    // family: grupo de autômatos (nikola, desland, nepturius, tubarao). techProtect: proteção tecnológica do Nikola e robôs.
+    // invulnerable: não recebe dano nem habilidade de ninguém (esfera). waterOnly: só anda em água (tubarão).
+    // survivesOwner: continua em campo quando o dono cai (robôs e esfera).
+    // Engrenagens: gearStep (bônus a cada N), gearDamage/gearRange/gearPm/gearReveal (bônus por passo), gearDrops (por turno),
+    // gearSpecial (% de drop especial), gearMorph (engrenagens da transformação), gearHits (marcadores do drop).
+    // Bifia: vivaTurns/vivaRadius/vivaInit/vivaPm. Desland: ecoCooldown/cloneTurns/chessTurns/pieceDamage.
+    // Nepturius: auraRange/auraPa/auraPm, grabCount/grabRange, blastRadius/blastDamage, cubeDamage/cubeHeal, armorBuff/armorTurns.
+    // Robôs: healTurn (cura no começo do turno controlável), revealBase/shotRange/chainRange (Celinos), gearPmBase (PM do Blip).
+    [Serializable] public class LunaDef
+    {
+        public string family;
+        public bool techProtect, invulnerable, waterOnly, survivesOwner;
+        public int gearStep=2, gearDamage=1, gearRange=1, gearPm, gearReveal, gearDrops=2, gearSpecial=20, gearMorph, gearHits=3, gearValue=1;
+        public int vivaTurns=2, vivaRadius=6, vivaInit=1, vivaPm=2;
+        public int ecoCooldown=2, cloneTurns=1, chessTurns=2, pieceDamage=1;
+        public int auraRange=4, auraPa=2, auraPm=1, grabCount=4, grabRange=4, blastRadius=3, blastDamage=2, cubeDamage=2, cubeHeal=2, armorBuff=1, armorTurns=1;
+        public int healTurn, revealBase=4, shotRange=3, chainRange=2, gearPmBase=4;
+        public LunaDef Clone() => (LunaDef)MemberwiseClone();
+    }
     [Serializable] public class FighterDef
     {
         public string id, name, sprites;
@@ -147,6 +180,7 @@ namespace ArenaTatica.Core
         // guard = aliados até 2 casas levam 1 a menos e ele leva esse 1; steal = % de roubar 1 moeda ao acertar; illusion = começa com uma cópia ilusória.
         public int allyBonus, auraRange, revive, steal;
         public bool guard, illusion, picker=true;
+        public int illusionCount=1;
         // armor: armadura fixa (Rei Bobett). legendary: 1 por time. immovable: não é empurrado, puxado nem trocado. devour: rouba a
         // skill de quem nocauteia (Colosso). noTurn: invocação sem turno (gatos, totem). noLock: não trava. neutral: time neutro.
         // healAura: no turno do dono, cura aliados até 2 casas.
@@ -167,10 +201,22 @@ namespace ArenaTatica.Core
         public int shadowMin, shadowMax, shadowBonus, shadowDodge, duelBonus, duelRange, farImmune, fullHitHeal, splitCount;
         public string split;
         public bool noReveal, exposed;
+        // IA de neutro (21/10, mobs de evento): aggro = só caça quem está até N casas (0 = qualquer distância); roam = sem alvo,
+        // anda para uma casa sorteada ao alcance.
+        public int aggro;
+        public bool roam;
+        // 22/10. summonSlayer: qualquer dano dele numa invocação inimiga mata na hora (Pistoleira). hpByPlayers: PV máximo ao
+        // surgir pelo número de jogadores da partida ([0] = 2 jogadores, [1] = 3...; o último vale para mais; vazio = hp).
+        public bool summonSlayer;
+        public int[] hpByPlayers;
         public string startForm;
         public FormDef[] forms;
         // Passivas do editor: valem enquanto o dono está vivo (ver PassiveDef).
         public PassiveDef[] passives=new PassiveDef[0];
+        // Chefe com IA (Rei Thaagarys): null ou on=false = lutador comum.
+        public BossDef boss;
+        // Expansão de 22/10: mecânicas novas (família de autômatos, proteção tecnológica, esfera, tubarão).
+        public LunaDef luna;
         public FighterDef Clone() => (FighterDef)MemberwiseClone();
     }
     // Passiva genérica (editor de fichas): muda um atributo de quem ela pega. who: Si, Aliados (sem ele), AliadosESi, Inimigos
@@ -182,7 +228,8 @@ namespace ArenaTatica.Core
     [Serializable] public class PassiveDef { public string name; public PassiveStat stat; public PassiveWho who; public int amount=1, range;
         // lonely (Lobo solitário): só vale se o dono não tem aliado até N casas; form: só nessa forma do dono (vazio = sempre).
         public int lonely; public string form; public PassiveDef Clone() => (PassiveDef)MemberwiseClone(); }
-    // Loja: Item e Buff valem na hora; Magia, Pet e Armadilha dão skills de uso limitado (cargas).
+    // Loja: Item e Buff valem na hora; Magia, Pet e Armadilha dão skills de uso limitado (cargas). uses negativo (Permanent): a skill
+    // fica para sempre e só a recarga dela limita (Blink Dagger).
     [Serializable] public class ShopDef
     {
         public string id, name;
@@ -190,12 +237,13 @@ namespace ArenaTatica.Core
         public int price, weight=1, pa, pm, hp, armor, range, turns, uses=1, thorns;
         public bool anchor, climb, focus;
         public SkillDef skill;
+        public const int Permanent=-1;
     }
     // extra: +1 uso de cada skill por turno (Desejo C).
     // from: skill que causou (perda de PA/PM), só para a apresentação escolher o laço do estado.
     // dmg: dano a mais nos golpes; regen: cura no começo do turno (Pulso). id "sem-cura": não se cura até o fim do turno de from.
     // reflect: o próximo golpe que não mata volta em quem bateu. immune: imune a efeitos negativos. taken: multiplicador do dano dos golpes recebidos.
-    [Serializable] public class Buff { public string id, from; public int turns, pa, pm, armor, range, extra, dmg, regen, reflect, immune, taken; }
+    [Serializable] public class Buff { public string id, from; public int turns, pa, pm, armor, range, extra, dmg, regen, reflect, immune, taken, takenDivisor; public bool inverted; }
     [Serializable] public class Charge { public string skill; public int uses; }
     [Serializable] public class TeamShop { public string[] slots=new string[0]; }
     // Fichas editadas pelo autor (Content.ApplyEdits).
@@ -220,6 +268,9 @@ namespace ArenaTatica.Core
         public bool auraOn, auraPaid;
         // Skill canalizada (SkillDef.channeled): "skill;x;z;x2;z2;slot", resolve no começo do próximo turno (vazio = nenhuma).
         public string channeling;
+        public int lastDamageBy, inversionTurns, moveBudget;
+        public bool recruitedBoss, noLock, noReveal;
+        public int banishBy; // Fonte do dano adiado, preservada no snapshot.
         // marks: Marcas da Maldição (Gumbald), ficam até a Cat-a-Clisma. drained: PA tirados pelo Nulification Field neste turno.
         // banished/banishDamage: no buraco negro (prisoned conta os turnos); dano ao voltar. usedForm: skills usadas nesta transformação.
         // Na rede viajam juntos em ext ("marcas.anulados.dano.banido.skill|skill"; vazio = tudo zerado) para o snapshot de 6
@@ -243,6 +294,11 @@ namespace ArenaTatica.Core
         public List<string> stolen=new List<string>();
         public List<SkillRoll> stolenPowers=new List<SkillRoll>();
         public List<string> learned=new List<string>();
+        // Expansão de 22/10: remoteShop (loja remota do comando-blip neste turno), initBonus (iniciativa efetiva do Viva Luna,
+        // sem mexer na ficha; sobrevive ao snapshot) e endedTurn (skill que encerra o turno na hora, só no comando em curso).
+        public bool remoteShop;
+        public int initBonus;
+        [NonSerialized] public bool endedTurn;
         public List<string> usedMatch=new List<string>();
         public List<string> used=new List<string>();
         public List<Charge> charges=new List<Charge>();
@@ -250,6 +306,14 @@ namespace ArenaTatica.Core
         public List<Charge> cooldowns=new List<Charge>();
         public List<Buff> buffs=new List<Buff>();
         public bool Alive => hp>0;
+    }
+    // Ciclo de jogadores-alvo de cada chefe automático (Boss.cs): assento = Fighter.team. order: a ordem sorteada do ciclo
+    // em andamento (a anterior até o próximo sorteio); pending: assentos ainda não atacados nele (oculto/preso espera a vez).
+    // Fica no MatchState para sobreviver a save/reconnect.
+    [Serializable] public class BossCycle
+    {
+        public int boss;
+        public List<int> order=new List<int>(), pending=new List<int>();
     }
     // Jogador (assento 1..6): controla lutadores, tem moedas e loja próprias. Time: divide Galeões e vitória (0 = time próprio).
     [Serializable] public class PlayerSetup { public string[] fighters={"ciantia"}; public int team; }
@@ -283,6 +347,8 @@ namespace ArenaTatica.Core
         // Ilusão bloqueia casas (colisão); desligado, dá para atravessar a ilusão (sem parar nela).
         public bool solidIllusions=true;
         public string[] team1={"ciantia"}, team2={"ciantia"};
+        // Batalha contra o chefe (Boss.cs): id da ficha do chefe; vazio = partida comum.
+        public string boss="";
     }
     // Mapa do editor: relevo, peças (árvore, arbusto, caixa) e zona central de cada casa. width = Board.SizeFor(jogadores).
     // theme -1 = cenário sorteado. As casas de início ficam sempre livres (MapGen.Load).
@@ -291,6 +357,44 @@ namespace ArenaTatica.Core
     // Só visual. Numa casa com árvore/arbusto/caixa, a peça do mesmo tipo (MapGen.SkinTerrain) troca o modelo padrão;
     // as demais (enfeite_*, relicario_solar...) são enfeites por cima do piso.
     [Serializable] public class Decor { public string piece=""; public float x, z, rot, scale=1; }
+    // Expansão de 22/10: estado visível das engrenagens, da caixa da matriz, das marcas do Celinos, dos clones do Desland,
+    // do domínio de xadrez, do Viva Luna, da esfera do Nepturius e dos tubarões. Fica no MatchState para sobreviver ao
+    // snapshot/reconnect; não guarda RNG nem destino de invisível.
+    // Gear: engrenagem no chão (cell = Board.Index, owner = Fighter.id do dono da família, value = 1 ou 2, hits = marcadores).
+    [Serializable] public class Gear { public int cell, owner, value, hits; }
+    // família: contador de engrenagens compartilhado (owner = Fighter.id do Nikola; os robôs leem mesmo com ele morto).
+    [Serializable] public class LunaFamily { public int owner, gears; }
+    // Marca do Celinos: casa em que o alvo foi marcado (trocar de casa ou morrer desfaz a marca).
+    [Serializable] public class LunaMark { public int by, id, x, z; }
+    // Clone do eco-de-aliado: turns = turnos do Desland que faltam para o clone sumir.
+    [Serializable] public class LunaClone { public int id, by, turns; }
+    [Serializable] public class LunaSeen { public int team, id; }
+    // Caixa da matriz: by = Nikola, hp = PV da caixa, cell = Board.Index, turns = turnos do Nikola que faltam para expirar.
+    [Serializable] public class LunaBox { public int by, hp, cell, turns; }
+    // Viva Luna: centro e raio do efeito, turnos da Bifia que faltam, quem foi pego e o bônus de iniciativa aplicado.
+    [Serializable] public class LunaField { public int by, center, radius, turns, init; public List<int> affected=new List<int>(); public List<int> enemies=new List<int>(); }
+    [Serializable] public class LunaMachine { public int by, chessBy, chessTurns, sphere, sphereBy; public bool sphereUsed,sphereCrazy,sphereMad,chessFoe; public LunaBox box=new LunaBox(); public List<int> chess=new List<int>(); }
+    [Serializable] public class LunaState
+    {
+        public List<LunaMachine> machines=new List<LunaMachine>();
+        public List<Gear> gears=new List<Gear>();
+        public List<LunaFamily> families=new List<LunaFamily>();
+        public List<LunaMark> marks=new List<LunaMark>();
+        public List<LunaClone> clones=new List<LunaClone>();
+        public List<LunaField> fields=new List<LunaField>();
+        public LunaBox box=new LunaBox();
+        // Domínio de xadrez: dono, turnos que faltam e as peças invocadas (Fighter.id).
+        public int chessBy, chessTurns;
+        public List<int> chess=new List<int>();
+        // Esfera do Nepturius: id, dono, habilidade de esfera usada neste turno, loucura negra neste turno e esfera órfã.
+        public int sphere, sphereBy;
+        public bool sphereUsed, sphereCrazy, sphereMad;
+        // Direito de escolha do eco-de-aliado (ids do Desland que mataram um inimigo) e clones por id.
+        public List<int> rights=new List<int>();
+        // Radar do Celinos (autor, 23/10): escondido no raio fica visível só para o time do robô (team = assento do robô).
+        public List<LunaSeen> radar=new List<LunaSeen>();
+        public LunaState Clone() => (LunaState)MemberwiseClone();
+    }
     [Serializable] public class MatchState
     {
         // Neutral: time dos neutros dos eventos (papa-moedas, Brutamontes Errante); não tem moedas, loja nem Galeões.
@@ -321,10 +425,10 @@ namespace ArenaTatica.Core
         // Casa por casa: terreno.relevo.objeto.marcas.moedas.armadilha.dano.pa.gelo.sombra, sem os zeros do fim; casa vazia = "".
         public static string Pack(Tile[] tiles)
         {
-            var sb=new System.Text.StringBuilder(); var v=new int[10];
+            var sb=new System.Text.StringBuilder(); var v=new int[11];
             for(int i=0;i<tiles.Length;i++) {
                 var t=tiles[i]; if(i>0) sb.Append(',');
-                v[0]=(int)t.terrain; v[1]=t.height; v[2]=t.obj; v[3]=(t.zone?1:0)|(t.lava?2:0)|(t.mark?4:0); v[4]=t.coins; v[5]=t.trap; v[6]=t.trapDamage; v[7]=t.trapPa; v[8]=t.frozenBy; v[9]=t.shadow;
+                v[0]=(int)t.terrain; v[1]=t.height; v[2]=t.obj; v[3]=(t.zone?1:0)|(t.lava?2:0)|(t.mark?4:0); v[4]=t.coins; v[5]=t.trap; v[6]=t.trapDamage; v[7]=t.trapPa; v[8]=t.frozenBy; v[9]=t.shadow; v[10]=t.trapBy;
                 int n=v.Length; while(n>0&&v[n-1]==0) n--;
                 for(int k=0;k<n;k++) { if(k>0) sb.Append('.'); sb.Append(v[k]); }
             }
@@ -335,9 +439,9 @@ namespace ArenaTatica.Core
             var parts=(packed??"").Split(','); if(parts.Length!=count) return null;
             var tiles=new Tile[count];
             for(int i=0;i<count;i++) {
-                var v=new int[10]; var p=parts[i].Length==0?new string[0]:parts[i].Split('.');
+                var v=new int[11]; var p=parts[i].Length==0?new string[0]:parts[i].Split('.');
                 for(int k=0;k<p.Length&&k<v.Length;k++) if(!int.TryParse(p[k],out v[k])) return null;
-                tiles[i]=new Tile{ terrain=(Terrain)v[0], height=v[1], obj=v[2], zone=(v[3]&1)!=0, lava=(v[3]&2)!=0, mark=(v[3]&4)!=0, coins=v[4], trap=v[5], trapDamage=v[6], trapPa=v[7], frozenBy=v[8], shadow=v[9] };
+                tiles[i]=new Tile{ terrain=(Terrain)v[0], height=v[1], obj=v[2], zone=(v[3]&1)!=0, lava=(v[3]&2)!=0, mark=(v[3]&4)!=0, coins=v[4], trap=v[5], trapDamage=v[6], trapPa=v[7], frozenBy=v[8], shadow=v[9], trapBy=v[10] };
             }
             return tiles;
         }
@@ -359,6 +463,16 @@ namespace ArenaTatica.Core
         // Minas terrestres (Board.Index das casas com trap que não param o movimento) e portais abertos.
         public List<int> mines=new List<int>();
         public List<Portal> portals=new List<Portal>();
+        // Paredes erguidas por skill (SkillDef.walls): Board.Index*16 + rodadas que faltam; no fim voltam a ser chão livre.
+        public List<int> walls=new List<int>();
+        // Batalha contra o chefe: id da ficha (MatchSetup.boss); vazio = partida comum.
+        public string bossFight="";
+        public int[] bossAllyHp=new int[MaxPlayers+1];
+        // Um ciclo de jogadores-alvo por chefe automático (BossCycle, Boss.cs); serializado junto do resto do estado.
+        public List<BossCycle> bossCycles=new List<BossCycle>();
+        // Expansão de 22/10 (Match.InventoresLuna.cs): engrenagens, caixa da matriz, marcas, clones, xadrez, Viva Luna, esfera.
+        public LunaState luna=new LunaState();
+        public LunaState Luna => luna??=new LunaState();
         public List<Fighter> fighters=new List<Fighter>();
         public List<int> timeline=new List<int>();
         // Índice 0 sem uso. Fighter.team, coins e shops são por jogador; galeoes, collected, domain e eliminated por time (alliance[jogador]).

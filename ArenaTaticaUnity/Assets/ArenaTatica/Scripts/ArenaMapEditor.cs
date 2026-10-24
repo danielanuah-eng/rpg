@@ -67,7 +67,7 @@ namespace ArenaTatica
         Font font;
         static readonly Color Bg=new Color(.065f,.085f,.13f,1), Idle=new Color(.14f,.19f,.27f), Chosen=new Color(.45f,.29f,.16f), Ink=new Color(.91f,.93f,.98f), Muted=new Color(.65f,.7f,.8f);
         static readonly (string id,string label)[] Tools={("subir","Subir relevo"),("descer","Descer relevo"),("arvore","Árvore"),("arbusto","Arbusto"),
-            ("caixa","Caixa"),("parede","Parede"),("objeto","Objeto"),("modelo","Trocar modelo da peça"),("enfeite","Enfeite"),("limpar","Limpar casa"),("zona","Zona central"),("mover","Mover peça")};
+            ("caixa","Caixa"),("agua","Água corrente"),("parede","Parede"),("objeto","Objeto"),("modelo","Trocar modelo da peça"),("enfeite","Enfeite"),("limpar","Limpar casa"),("zona","Zona central"),("mover","Mover peça")};
         // Objetos fixos do DungeonBDX (18/10). Portais ligam em pares pela ordem das casas (1º↔2º, 3º↔4º…).
         static readonly (TileObj obj,string label)[] Objects={(TileObj.Bau,"Baú (+"+MapGen.BauMoedas+" moedas)"),(TileObj.Espetos,"Espetos (1 de dano)"),(TileObj.Braseiro,"Braseiro (+1 PA)"),(TileObj.Portal,"Portal (em pares, pela ordem)")};
         int objectIndex; Button objectButton;
@@ -109,6 +109,7 @@ namespace ArenaTatica
             {
                 case "subir": Edit(c,x=>x.height=Math.Min(Board.MaxHeight,x.height+1)); break;
                 case "descer": Edit(c,x=>x.height=Math.Max(0,x.height-1)); break;
+                case "agua": Edit(c,x=>{x.terrain=x.terrain==Terrain.Agua?Terrain.Livre:Terrain.Agua;x.zone=false;x.obj=0;},true);break;
                 case "arvore": case "arbusto": case "caixa": case "parede":
                     if(spawn) { Refresh("Casa de início: fica sempre livre."); return; }
                     var piece=tool=="arvore"?Terrain.Arvore:tool=="arbusto"?Terrain.Arbusto:tool=="parede"?Terrain.Parede:Terrain.Caixa;

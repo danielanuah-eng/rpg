@@ -14,19 +14,19 @@ function open() {
   return new Promise((resolve,reject)=>{
     const candidate=new WebSocket('ws://127.0.0.1:9080');
     candidate.addEventListener('error',()=>reject(Error('Host ainda indisponível')),{once:true});
-    candidate.addEventListener('open',()=>{ws=candidate;candidate.send(JSON.stringify({protocol:11,kind:'hello',token:'contrato'}));resolve();},{once:true});
+    candidate.addEventListener('open',()=>{ws=candidate;candidate.send(JSON.stringify({protocol:14,kind:'hello',token:'contrato'}));resolve();},{once:true});
     candidate.addEventListener('message',event=>{
       const raw=String(event.data); const m=JSON.parse(raw[0]==='Z'?gunzipSync(Buffer.from(raw.slice(1),'base64')).toString('utf8'):raw); messages.push(m);
       // Casas chegam compactadas (MatchState.Pack): terreno.relevo.objeto.marcas.moedas.armadilha.dano.pa.gelo.
       if(m.state&&m.state.packed) { m.state.tiles=m.state.packed.split(',').map(t=>{const v=t?t.split('.').map(Number):[];const g=i=>v[i]||0;return {terrain:g(0),height:g(1),obj:g(2),zone:!!(g(3)&1),lava:!!(g(3)&2),mark:!!(g(3)&4),coins:g(4),trap:g(5),trapDamage:g(6),trapPa:g(7),frozenBy:g(8)};}); }
       if(m.kind==='state'||m.kind==='snapshot') state=m.state;
       if(m.kind==='snapshot') snapshot=m;
-      if(m.kind==='ping') candidate.send(JSON.stringify({protocol:11,kind:'pong',ping:m.ping}));
+      if(m.kind==='ping') candidate.send(JSON.stringify({protocol:14,kind:'pong',ping:m.ping}));
     });
   });
 }
 async function waitFor(test,label,timeout=20000) { const end=Date.now()+timeout; while(!test()) {if(Date.now()>end) throw Error('Timeout: '+label); await delay(30);} }
-function send(m) { ws.send(JSON.stringify({protocol:11,...m})); }
+function send(m) { ws.send(JSON.stringify({protocol:14,...m})); }
 const active=()=>state.fighters.find(f=>f.id===state.timeline[state.active]);
 const tile=c=>state.tiles[c.z*state.width+c.x];
 // Casa vizinha livre, sem lutador e sem subida de 2+ níveis.

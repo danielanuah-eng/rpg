@@ -14,6 +14,8 @@ namespace ArenaTatica.Tests
         ArenaGame game;
         string savedTeam,savedPool,savedEdits,savedStats,savedPreset;
         int savedTurnTime,savedTeamLevel,savedTeamSize;
+        bool savedLegendaryLimit;
+        static void LegendaryLimit(bool on) => typeof(ArenaGame).GetProperty("LegendaryLimit").SetValue(null,on);
         static void TeamLimits(int level,int size) => typeof(ArenaGame).GetMethod("ApplyTeamLimits",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,new object[]{level,size});
         int[] savedTeams;
         UnityEngine.Random.State random;
@@ -23,6 +25,7 @@ namespace ArenaTatica.Tests
 
         [SetUp] public void Setup()
         {
+            savedLegendaryLimit=ArenaGame.LegendaryLimit;
             savedTeam=PlayerPrefs.GetString("arena-time",""); savedPool=PlayerPrefs.GetString("arena-pool",""); savedTeams=ArenaGame.CustomTeams.ToArray();
             savedEdits=Content.EditsJson; savedStats=PlayerPrefs.GetString("arena-estatisticas",""); savedPreset=PlayerPrefs.GetString("arena-preset",""); savedTurnTime=PlayerPrefs.GetInt("arena-tempo-turno",0);
             // Limites do time: o aparelho do autor pode ter outros; os testes começam no padrão (12 / 4).
@@ -48,8 +51,66 @@ namespace ArenaTatica.Tests
             PlayerPrefs.SetString("arena-estatisticas",savedStats); typeof(ArenaStats).GetField("data",BindingFlags.Static|BindingFlags.NonPublic).SetValue(null,null);
             ArenaEdits.Folder=null; Content.ApplyEdits(savedEdits);
             for(int i=0;i<savedTeams.Length;i++) ArenaGame.CustomTeams[i]=savedTeams[i];
+            LegendaryLimit(savedLegendaryLimit);
             UnityEngine.Random.state=random;
         }
+
+        [Test] public void LegendaryRestrictionCanBeChosenPerMatchWithoutRemovingOtherLimits()
+        {
+            game.SetTeamLimits(24,4);
+            var legends=new[]{"asamyh","lela","ikaito"};
+            game.SetLegendaryLimit(false);
+            CollectionAssert.AreEqual(legends,ArenaGame.ValidTeam(legends));
+            Assert.AreEqual(3,ArenaGame.ValidTeam(legends.Concat(legends)).Length,"sem repetir personagens");
+            game.SetTeamLimits(24,2);
+            Assert.AreEqual(2,ArenaGame.ValidTeam(legends).Length,"quantidade continua valendo");
+            game.SetTeamLimits(6,4);
+            Assert.AreEqual(1,ArenaGame.ValidTeam(legends).Length,"custo continua valendo");
+            game.SetTeamLimits(24,4); game.SetLegendaryLimit(true);
+            Assert.AreEqual(1,ArenaGame.ValidTeam(legends).Length);
+        }
+
+        [Test] public void LegendaryRestrictionTravelsWithTheRoomAndOnlyHostCanChangeIt()
+        {
+            Wire(); Host(2);
+            game.SetLegendaryLimit(false);
+            var lobby=toClient.Last(m=>m.kind=="lobby");
+            Assert.IsTrue(lobby.unlimitedLegendary);
+            LegendaryLimit(true);
+            typeof(ArenaGame).GetMethod("Receive",Private).Invoke(client,new object[]{0,JsonUtility.ToJson(lobby)});
+            Assert.IsFalse(ArenaGame.LegendaryLimit);
+            client.SetLegendaryLimit(true);
+            Assert.IsFalse(ArenaGame.LegendaryLimit,"cliente não sobrescreve a regra do anfitrião");
+            game.SetLegendaryLimit(true);
+            Assert.IsFalse(toClient.Last(m=>m.kind=="lobby").unlimitedLegendary);
+        }
+
+        [TestCase(true)] [TestCase(false)]
+        public void LeavingTheRoomRestoresTheLocalLegendaryChoice(bool restricted)
+        {
+            Wire();
+            typeof(ArenaTransport).GetProperty("Role").SetValue(client.Network,"Local");
+            client.SetLegendaryLimit(restricted);
+            typeof(ArenaTransport).GetProperty("Role").SetValue(client.Network,"Client");
+            var lobby=new WireMessage{kind="lobby",teamLevel=24,teamSize=4,unlimitedLegendary=restricted,seat=2};
+            typeof(ArenaGame).GetMethod("Receive",Private).Invoke(client,new object[]{0,JsonUtility.ToJson(lobby)});
+            Assert.AreEqual(!restricted,ArenaGame.LegendaryLimit,"a sala aplica a regra oposta do anfitrião");
+            client.CloseRoom();
+            Assert.AreEqual(restricted,ArenaGame.LegendaryLimit,"sair restaura a escolha local anterior");
+            client.NewLocal();
+            Assert.AreEqual(restricted,ArenaGame.LegendaryLimit,"a partida local mantém a escolha local");
+        }
+
+        [Test] public void LocalRestartAndLobbySetupKeepTheChosenLegendaryOption()
+        {
+            game.SetLegendaryLimit(false);
+            game.NewLocal();
+            Assert.IsFalse(ArenaGame.LegendaryLimit);
+            game.OpenLobby();
+            Assert.IsTrue(game.Setup);
+            Assert.IsFalse(ArenaGame.LegendaryLimit,"preparar uma sala mantém a opção configurada");
+        }
+
         // ── Sprint 1: 1.1 desync de turno e 1.2 presets ──
         GameObject clientRoot;
         ArenaGame client;

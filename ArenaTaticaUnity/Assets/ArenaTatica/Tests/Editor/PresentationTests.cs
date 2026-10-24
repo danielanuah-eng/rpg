@@ -89,6 +89,62 @@ namespace ArenaTatica.Tests
             }
         }
 
+        [TestCase("Lela")] [TestCase("LelaGuerra")] [TestCase("Gumbald")]
+        [TestCase("Daemion")] [TestCase("Ikaito")] [TestCase("PeleNegra")]
+        [TestCase("Ellie")] [TestCase("CriaVampirica")] [TestCase("DeathCrimson")]
+        [TestCase("Espadachim")] [TestCase("Espelhos")] [TestCase("Ganso")]
+        [TestCase("Pilis")] [TestCase("Pistoleira")]
+        public void CharacterArtLoadsAsARigWithEveryStripFrame(string folder)
+        {
+            var read=typeof(ArenaPresentation).GetMethod("ReadRig",BindingFlags.NonPublic|BindingFlags.Static);
+            Assert.IsNotNull(read.Invoke(null,new object[]{folder}),folder+" precisa das oito direções para não virar cápsula");
+            string root="Assets/ArenaTatica/Resources/Sprites/"+folder;
+            foreach(var guid in UnityEditor.AssetDatabase.FindAssets("t:Texture2D",new[]{root})) {
+                string path=UnityEditor.AssetDatabase.GUIDToAssetPath(guid),name=System.IO.Path.GetFileNameWithoutExtension(path);
+                var tex=UnityEditor.AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+                var frames=Resources.LoadAll<Sprite>("Sprites/"+folder+"/"+name).OrderBy(s=>s.rect.x).ToArray();
+                Assert.AreEqual(tex.width/tex.height,frames.Length,path);
+                for(int i=0;i<frames.Length;i++) {
+                    Assert.AreEqual(frames.Length==1?name:name+"_"+i,frames[i].name,path);
+                    Assert.AreEqual(tex.height,frames[i].rect.height,path);
+                    Assert.AreEqual(tex.height,frames[i].rect.width,path);
+                    Assert.AreEqual(128,frames[i].pixelsPerUnit,path);
+                }
+            }
+        }
+
+        [TestCase("ReiThaagarys","summon")] [TestCase("ReiThaagarys","cast")]
+        [TestCase("ReiThaagarysFase2","summon")] [TestCase("ReiThaagarysFase2","cast")]
+        public void KingUsesHisInvocationArtForRealSkillClipNames(string folder,string clip)
+        {
+            var root=new GameObject("TesteClipeRei");
+            try {
+                var view=root.AddComponent<ArenaPresentation>();
+                var actor=new GameObject("Rei").transform; actor.SetParent(root.transform);
+                var renderer=new GameObject("Modelo",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); renderer.transform.SetParent(actor);
+                var rig=typeof(ArenaPresentation).GetMethod("ReadRig",BindingFlags.NonPublic|BindingFlags.Static).Invoke(null,new object[]{folder});
+                Assert.IsNotNull(rig,folder); rig.GetType().GetField("renderer").SetValue(rig,renderer);
+                var rigs=(System.Collections.IDictionary)typeof(ArenaPresentation).GetField("rigs",BindingFlags.NonPublic|BindingFlags.Instance).GetValue(view);
+                rigs.Add(renderer.transform,rig);
+                var play=typeof(ArenaPresentation).GetMethod("PlayClip",BindingFlags.NonPublic|BindingFlags.Instance);
+                float duration=(float)play.Invoke(view,new object[]{actor,clip,false});
+                Assert.Greater(duration,0,"O evento da skill precisa iniciar a animação disponível");
+                Assert.AreEqual("event-cast",rig.GetType().GetField("clip").GetValue(rig));
+                Assert.IsTrue(renderer.sprite.name.StartsWith("event-cast_"));
+            } finally { Object.DestroyImmediate(root); }
+        }
+
+        [Test] public void LegacyIkaitoNameLoadsWithTheCorrectSurname()
+        {
+            string before=Content.EditsJson;
+            try {
+                var fighter=Content.Copy(Content.Default("ikaito")); fighter.name="Capitão Ikaito D. Razer";
+                Content.ApplyEdits(JsonUtility.ToJson(new GameEdits{fighters=new System.Collections.Generic.List<FighterDef>{fighter}}));
+                Assert.AreEqual("Capitão Ikaito D. Race",Content.Fighters["ikaito"].name);
+                Assert.AreEqual("Ikaito",Content.Fighters["ikaito"].sprites);
+            } finally { Content.ApplyEdits(before); }
+        }
+
         [Test] public void MenuKeepsTheTabsPlusRoom()
         {
             var tabs=(System.Array)typeof(ArenaMenu).GetField("Tabs",BindingFlags.NonPublic|BindingFlags.Static).GetValue(null);

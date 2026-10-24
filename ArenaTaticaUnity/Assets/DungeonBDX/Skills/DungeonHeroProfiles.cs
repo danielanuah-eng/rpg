@@ -84,10 +84,10 @@ namespace DungeonBDX.Skills
         static ReadOnlyDictionary<string, HeroArchetype> BuildSources()
         {
             var map = new Dictionary<string, HeroArchetype>(StringComparer.Ordinal);
-            Add(map, HeroArchetype.DragonBinder, "ciantia", "ossyro");
+            Add(map, HeroArchetype.DragonBinder, "ciantia", "ossyro", "nikola");
             Add(map, HeroArchetype.Gunslinger, "damian", "cheiro-pneu", "pistoleira");
-            Add(map, HeroArchetype.Ranger, "arqueiro-jack", "nixira");
-            Add(map, HeroArchetype.Arcanist, "ezequiela", "principe-kellen", "domador-de-correntes", "edgar", "pele-negra", "ikaito", "espelhos");
+            Add(map, HeroArchetype.Ranger, "arqueiro-jack", "nixira", "bifia");
+            Add(map, HeroArchetype.Arcanist, "ezequiela", "principe-kellen", "domador-de-correntes", "edgar", "pele-negra", "ikaito", "espelhos", "desland", "nepturius");
             Add(map, HeroArchetype.Support, "asamyh", "baltazar", "alvyr", "lela", "pilis");
             Add(map, HeroArchetype.Skirmisher, "teantha", "diantus", "perry", "vespa-cinzenta", "viuva-da-agulha", "gryvro", "gumbald", "daemion", "ellie", "espadachim");
             Add(map, HeroArchetype.Vanguard, "talyssa", "devon", "tchu-tcha", "colosso", "rei-bobett", "guardiao-de-musgo", "ogro-de-pedra", "raizor", "brumak", "ganso", "death-crimson");

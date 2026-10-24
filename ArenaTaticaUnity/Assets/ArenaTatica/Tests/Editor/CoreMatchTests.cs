@@ -285,18 +285,18 @@ namespace ArenaTatica.Core.Tests
             }
             Assert.Greater(hitWay,0); Assert.Greater(hitTarget,0);
         }
-        [Test] public void MirrorReflectsTheLastAttackAndHasCooldown()
+        [Test] public void MirrorInvertsActiveEffectsAndHasTwoTurnCooldown()
         {
-            m=Match.New(new MatchSetup{ flatMap=true, team1=new[]{"ezequiela"}, team2=new[]{"devon"} });
+            m=Match.New(new MatchSetup{flatMap=true,team1=new[]{"ezequiela"},team2=new[]{"devon"}});
             var e=Solo("ezequiela"); var foe=S.fighters.First(f=>f.def=="devon");
             Put(e,5,5); Put(foe,5,8);
-            Assert.IsTrue(m.CanTarget(e,Content.Skill(e,"espelho-primordial"),foe.cell,out _),"conjuração permitida mesmo antes de existir ataque para refletir");
-            foe.lastAttack="golpe-necrotico"; int hp=foe.hp;
-            m.Forced.Enqueue(Face.Trava); m.Forced.Enqueue(Face.Esquiva);
+            foe.buffs.Add(new Buff{id="teste",turns=4,pm=2,armor=-1});
+            int hp=foe.hp;
             Assert.IsTrue(Use(e,"espelho-primordial",foe.cell));
-            Assert.AreEqual(hp-4,foe.hp,"golpe necrótico (4) refletido");
+            Assert.AreEqual(hp,foe.hp); Assert.AreEqual(2,foe.inversionTurns);
+            Assert.AreEqual(-2,foe.buffs[0].pm); Assert.AreEqual(1,foe.buffs[0].armor);
             e.pa=6; Assert.IsFalse(Use(e,"espelho-primordial",foe.cell),"recarga");
-            Assert.AreEqual(3,S.fighters.First(f=>f.def=="ezequiela").cooldowns[0].uses);
+            Assert.AreEqual(2,e.cooldowns.First(x=>x.skill=="espelho-primordial").uses);
         }
         [Test] public void EveryUltimateHasALimit()
         {
@@ -940,8 +940,8 @@ namespace ArenaTatica.Core.Tests
             m=Match.New(new MatchSetup{ flatMap=true, placement=true, team1=new[]{"ezequiela"}, team2=new[]{"ciantia"} });
             Assert.IsFalse(S.fighters.Any(f=>f.def=="ilusao"),"a cópia não existe enquanto posicionam");
             while(S.placing>0) Assert.IsTrue(Do(new Command{kind="passar"},S.placing));
-            var copy=S.fighters.Single(f=>f.def=="ilusao"); var eze=S.fighters.Single(f=>f.def=="ezequiela");
-            Assert.AreEqual(1,copy.cell.Distance(eze.cell),"colada na Ezequiela já posicionada"); Assert.Contains(copy.id,S.timeline);
+            var copies=S.fighters.Where(f=>f.def=="ilusao").ToList(); var eze=S.fighters.Single(f=>f.def=="ezequiela");
+            Assert.AreEqual(2,copies.Count); foreach(var copy in copies) { Assert.AreEqual(1,copy.cell.Distance(eze.cell)); Assert.AreEqual(1,copy.hp); Assert.Contains(copy.id,S.timeline); }
         }
         [Test] public void MirrorMatchTieIsBrokenBySeedDraw()
         {

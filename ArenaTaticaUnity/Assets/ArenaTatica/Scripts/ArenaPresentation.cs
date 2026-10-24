@@ -13,7 +13,7 @@ namespace ArenaTatica
 {
     public sealed class ArenaUnitPick : MonoBehaviour { public int Id; }
     // Só desenha o estado e anima os eventos do núcleo; nenhuma regra mora aqui.
-    public sealed class ArenaPresentation : MonoBehaviour
+    public sealed partial class ArenaPresentation : MonoBehaviour
     {
         public ArenaGame Game;
         public Camera BoardCamera { get; private set; }
@@ -48,8 +48,8 @@ namespace ArenaTatica
         static float Fps(string clip) => clip!=null&&ClipFps.TryGetValue(clip,out float f)?f:DefaultFps;
         // Altura em casas de cada lutador no tabuleiro (os sprites têm o mesmo quadro de 128 px).
         static readonly Dictionary<string,float> Heights=new Dictionary<string,float>{
-            ["ciantia"]=1.6f, ["talyssa"]=1.6f, ["teantha"]=1.65f, ["devon"]=1.7f, ["diantus"]=1.6f, ["damian"]=1.6f,
-            ["ezequiela"]=1.3f, ["ilusao"]=1.3f, ["tchu-tcha"]=1.85f, ["arqueiro-jack"]=1.6f, ["perry"]=1.2f, ["dragao-espectral"]=2f, ["lobo-de-cinzas"]=.8f,
+            ["rei-thaagarys"]=3.7f, ["guarda-do-trono"]=1.8f, ["ciantia"]=1.6f, ["talyssa"]=1.6f, ["teantha"]=1.65f, ["devon"]=1.7f, ["diantus"]=1.6f, ["damian"]=1.6f,
+            ["ezequiela"]=1.3f, ["ilusao"]=1.3f, ["tchu-tcha"]=1.85f, ["arqueiro-jack"]=1.6f, ["perry"]=1.2f, ["dragao-espectral"]=2f, ["lobo-de-cinzas"]=.8f, ["ossyro"]=1.8f,
             ["asamyh"]=1.5f, ["gato-laranja"]=.55f, ["gato-branco"]=.55f, ["gato-malhado"]=.55f, ["gato-manchado"]=.55f, ["colosso"]=3.1f, ["cheiro-pneu"]=2.1f, ["edgar"]=1.65f, ["navio-fantasma"]=2.1f,
             ["rei-bobett"]=1.5f, ["principe-kellen"]=1f, ["vespa-cinzenta"]=.8f, ["viuva-da-agulha"]=1.55f, ["guardiao-de-musgo"]=1.8f, ["domador-de-correntes"]=1.65f,
             ["ogro-de-pedra"]=2f, ["baltazar"]=1.8f, ["totem-de-cura"]=.9f, ["papa-moedas"]=.6f, ["brutamontes-errante"]=2.5f,
@@ -115,7 +115,7 @@ namespace ArenaTatica
         static readonly Color[] PlayerColors={ new Color(1,.78f,.2f), new Color(.25f,.66f,1), new Color(1,.3f,.36f), new Color(.3f,.88f,.45f), new Color(1,.47f,.85f), new Color(.66f,.48f,1) };
         public static Color TeamColor(int player) => player==MatchState.Neutral?new Color(.55f,.55f,.5f):PlayerColors[Mathf.Clamp(player-1,0,PlayerColors.Length-1)];
         // Céu (tarefa 015 do Codex): Sprites/Ceus/<id>/fundo.png atrás do tabuleiro; o evento ativo troca o do cenário.
-        static readonly string[] ThemeSkies={"ceu-aberto","ceu-aberto","deserto-poente","nuvens-densas","cinzas-vulcanicas","masmorra","masmorra","ceu-aberto"};
+        static readonly string[] ThemeSkies={"ceu-aberto","ceu-aberto","deserto-poente","nuvens-densas","cinzas-vulcanicas","masmorra","masmorra","ceu-aberto","nuvens-densas"};
         static readonly Dictionary<string,(string sky,Color tint)> EventSkies=new Dictionary<string,(string,Color)>{
             ["chuva-de-moedas"]=("ceu-dourado",new Color(.2f,.15f,.05f)), ["nevoeiro"]=("nuvens-densas",new Color(.16f,.17f,.2f)), ["mare-de-lava"]=("cinzas-vulcanicas",new Color(.16f,.05f,.03f)),
             ["errante"]=("tempestade",new Color(.06f,.06f,.1f)), ["festival-de-fogos"]=("noite-festiva",new Color(.05f,.03f,.1f)) };
@@ -123,12 +123,19 @@ namespace ArenaTatica
             "chuva-de-moedas"=>"Chuva de moedas", "queda-de-pedras"=>"Queda de pedras", "terremoto"=>"Terremoto", "mare-de-lava"=>"Maré de lava",
             "portal-caotico"=>"Portal caótico", "eco-ancestral"=>"Eco ancestral (ultimates de volta)", "mare-de-energia"=>"Maré de energia (+1 PA e +1 PM)",
             "festival-de-fogos"=>"Festival de fogos", "nevoeiro"=>"Nevoeiro (alcance −2)", "vendaval"=>"Vendaval", "papa-moedas"=>"Papa-moedas", "errante"=>"Brutamontes Errante", "bombas-invisiveis"=>"Bombas invisíveis", "vampiro"=>"Cria Vampírica Ancestral",
-            _=>id?.Replace('-',' ') };
+            _=>MapEvents.Get(id)?.name??id?.Replace('-',' ') };
+        // Céu do evento ativo: o da tabela ou, nos eventos de dados com cor (MapEvents), um degradê escuro da cor.
+        static bool EventSky(string ev,out (string sky,Color tint) v)
+        {
+            if(!string.IsNullOrEmpty(ev)&&EventSkies.TryGetValue(ev,out v)) return true;
+            if(MapEvents.Get(ev)?.tint is string hex&&ColorUtility.TryParseHtmlString(hex,out var c)) { c*=.25f; c.a=1; v=(ev,c); return true; }
+            v=default; return false;
+        }
         SpriteRenderer sky; string shownSky;
         // Cenários (MapGen.Themes): piso xadrez a/b, zona, arbusto, tronco, copa, caixa, base, céu, luz ambiente e enfeites fora do tabuleiro.
         sealed class Palette { public Color a,b,zone,bush,trunk,crown,box,ground,sky,ambient; public string props; }
         // Piso de cada cenário (Textures/tile_<nome>, tarefa 007); "pedra" é o piso cinza antigo, só tingido.
-        static readonly string[] Tiles={"pedreira","grama","ruinas","cristal","pedra","pedra","pedra","grama"};
+        static readonly string[] Tiles={"pedreira","grama","ruinas","cristal","pedra","pedra","pedra","grama","docas"};
         static Color C(float r,float g,float b) => new Color(r,g,b);
         static readonly Palette[] Palettes={
             new Palette{ a=C(.67f,.7f,.77f), b=C(.36f,.41f,.49f), zone=C(.78f,.66f,.42f), bush=C(.32f,.58f,.3f), trunk=C(.42f,.3f,.2f), crown=C(.18f,.42f,.24f), box=C(.6f,.43f,.25f), ground=C(.16f,.2f,.27f), sky=C(.045f,.06f,.095f), ambient=C(.55f,.6f,.72f), props="pedras" },
@@ -139,7 +146,8 @@ namespace ArenaTatica
             // Fechados (18/10): Cripta, Biblioteca e Jardim; o piso e as paredes vêm do DungeonBDX (BuildDungeon).
             new Palette{ a=C(.6f,.64f,.7f), b=C(.45f,.5f,.56f), zone=C(.8f,.75f,.62f), bush=C(.3f,.45f,.3f), trunk=C(.3f,.28f,.27f), crown=C(.25f,.35f,.3f), box=C(.4f,.4f,.42f), ground=C(.08f,.09f,.12f), sky=C(.03f,.04f,.06f), ambient=C(.5f,.56f,.7f), props="pedras" },
             new Palette{ a=C(.7f,.55f,.4f), b=C(.55f,.42f,.3f), zone=C(.85f,.7f,.45f), bush=C(.35f,.45f,.3f), trunk=C(.35f,.25f,.18f), crown=C(.3f,.4f,.28f), box=C(.5f,.36f,.22f), ground=C(.12f,.08f,.06f), sky=C(.05f,.03f,.03f), ambient=C(.72f,.62f,.52f), props="pedras" },
-            new Palette{ a=C(.5f,.66f,.4f), b=C(.38f,.54f,.32f), zone=C(.82f,.68f,.48f), bush=C(.26f,.5f,.24f), trunk=C(.4f,.28f,.18f), crown=C(.16f,.4f,.2f), box=C(.55f,.42f,.3f), ground=C(.16f,.2f,.12f), sky=C(.04f,.08f,.06f), ambient=C(.6f,.68f,.58f), props="arvores" } };
+            new Palette{ a=C(.5f,.66f,.4f), b=C(.38f,.54f,.32f), zone=C(.82f,.68f,.48f), bush=C(.26f,.5f,.24f), trunk=C(.4f,.28f,.18f), crown=C(.16f,.4f,.2f), box=C(.55f,.42f,.3f), ground=C(.16f,.2f,.12f), sky=C(.04f,.08f,.06f), ambient=C(.6f,.68f,.58f), props="arvores" },
+            new Palette{ a=C(.62f,.46f,.31f), b=C(.48f,.35f,.24f), zone=C(.75f,.65f,.4f), bush=C(.22f,.5f,.51f), trunk=C(.25f,.31f,.36f), crown=C(.3f,.4f,.44f), box=C(.55f,.38f,.22f), ground=C(.06f,.17f,.24f), sky=C(.035f,.1f,.16f), ambient=C(.58f,.73f,.8f), props="docas" } };
         // Disparo à distância (tarefa 006): nasce em quem ataca e o impacto coincide com o dano. Efeitos/<skill>.png do Codex, se existir,
         // vira a cabeça do projétil (Bala, Flecha, Orbe, Lamina, Bomba) ou a animação de impacto (Raio, Sopro).
         enum ShotKind { Bala, Flecha, Orbe, Lamina, Bomba, Raio, Sopro }
@@ -164,6 +172,12 @@ namespace ArenaTatica
         static (ShotKind kind,Color color) Style(string skill)
         {
             if(string.IsNullOrEmpty(skill)) return (ShotKind.Orbe,Gold);
+            switch(skill) {
+                case "medo-ezequiela": return (ShotKind.Sopro,C(.65f,.12f,.95f));
+                case "copia-ezequiela": return (ShotKind.Orbe,C(.28f,.95f,.85f));
+                case "portal-ezequiela": return (ShotKind.Raio,C(.4f,.3f,1f));
+                case "espelho-primordial": return (ShotKind.Lamina,C(1f,.35f,.75f));
+            }
             if(Shots.TryGetValue(skill,out var st)||autoShots.TryGetValue(skill,out st)) return st;
             var sk=Content.AnySkill(skill); string n=((sk?.name??"")+" "+skill).ToLowerInvariant();
             bool Has(params string[] w) => w.Any(n.Contains);
@@ -206,10 +220,8 @@ namespace ArenaTatica
             backdrop.cullingMask=0; backdrop.clearFlags=CameraClearFlags.SolidColor;
             backdrop.backgroundColor=BoardCamera.backgroundColor;
             BoardCamera.transform.position=CameraHome; BoardCamera.transform.LookAt(Vector3.zero);
-            if(FindObjectsByType<Light>().Length==0) {
-                var light=new GameObject("LuzPrincipal",typeof(Light)).GetComponent<Light>(); light.type=LightType.Directional; light.intensity=1.25f; light.shadows=LightShadows.Soft; light.transform.rotation=Quaternion.Euler(55,-35,0);
-            }
-            RenderSettings.ambientMode=UnityEngine.Rendering.AmbientMode.Flat; RenderSettings.ambientLight=new Color(.55f,.6f,.72f);
+            // Luzes, sombras e tom global do mapa: ArenaLuz (calibragem e gancho da Lua de Sangue lá).
+            ArenaLuz.Montar(); ArenaLuz.Ambiente(new Color(.55f,.6f,.72f));
             var prototype=GameObject.CreatePrimitive(PrimitiveType.Cube); cubeMesh=prototype.GetComponent<MeshFilter>().sharedMesh; Destroy(prototype);
             var stone=Resources.Load<Texture2D>("Textures/tile_pedra");
             // 0/1 piso xadrez, 2 zona central, 3 arbusto, 4 tronco, 5 copa, 6 caixa
@@ -249,6 +261,7 @@ namespace ArenaTatica
         // Malha combinada por material; refeita só quando relevo ou terreno mudam (Cataclisma).
         void BuildBoard(MatchState s)
         {
+            EnsureLunaStyle();
             ApplyTheme(s);
             string key=s.theme+":"+string.Join(",",s.tiles.Select(t=>t.height*10+(int)t.terrain+(t.zone?100:0)+(t.Obj==TileObj.Bau?0:t.obj*1000)))+"|"+string.Join(";",s.decor.Select(d=>d.piece+d.x+","+d.z+","+d.rot));
             if(key==boardKey) return;
@@ -258,6 +271,7 @@ namespace ArenaTatica
             foreach(Transform child in boardRoot) Destroy(child.gameObject);
             foreach(var m in generatedMeshes) Destroy(m); generatedMeshes.Clear();
             BuildHeights(s);
+            if(s.theme==MapGen.DocksTheme) { BuildDocksBoard(s); return; }
             if(MapGen.Closed(s.theme)) { boardBase.SetActive(!HasKit(s.theme)); BuildDungeon(s); return; }
             int kitTheme=Mathf.Clamp(s.theme,0,KitFolders.Length-1);
             boardBase.SetActive(!HasKit(kitTheme));
@@ -384,7 +398,7 @@ namespace ArenaTatica
             var shop=MapGen.ShopCells(s);
             if(shop.All(c=>s.At(c).terrain==Terrain.Loja)) {
                 var center=shop.Aggregate(Vector3.zero,(a,c)=>a+Position(s,c))/shop.Length; center.y=shop.Max(c=>s.At(c).height)*HStep;
-                PlaceKit(theme,"loja_mascate",center,180,boardRoot);
+                if(!Throne(s,center)) PlaceKit(theme,"loja_mascate",center,180,boardRoot);
             }
             foreach(var d in s.decor) {
                 if(MapGen.SkinTerrain(d.piece)!=Terrain.Livre) continue;
@@ -440,7 +454,7 @@ namespace ArenaTatica
             var shop=MapGen.ShopCells(s);
             if(shop.All(c=>s.At(c).terrain==Terrain.Loja)) {
                 var center=shop.Aggregate(Vector3.zero,(a,c)=>a+Position(s,c))/shop.Length; center.y=shop.Max(c=>s.At(c).height)*HStep;
-                PlaceKit(0,"loja_mascate",center,180,boardRoot);
+                if(!Throne(s,center)) PlaceKit(0,"loja_mascate",center,180,boardRoot);
             }
             foreach(var d in s.decor) {
                 if(MapGen.SkinTerrain(d.piece)!=Terrain.Livre) continue;
@@ -535,7 +549,7 @@ namespace ArenaTatica
             if(!sprite) return null;
             var spriteObject=new GameObject("Prop_"+id,typeof(SpriteRenderer)); spriteObject.transform.SetParent(parent,false);
             spriteObject.transform.localPosition=at+Vector3.up*.01f; spriteObject.transform.localScale=Vector3.one*scale;
-            var sr=spriteObject.GetComponent<SpriteRenderer>(); sr.sprite=sprite; if(spriteMaterial) sr.sharedMaterial=spriteMaterial;
+            var sr=spriteObject.GetComponent<SpriteRenderer>(); sr.sprite=sprite; if(spriteMaterial) sr.sharedMaterial=spriteMaterial; ArenaLuz.Sombra(sr);
             var loop=spriteObject.AddComponent<SpriteLoop>(); loop.frames=new[]{sprite}; loop.billboard=true;
             return spriteObject;
         }
@@ -550,7 +564,7 @@ namespace ArenaTatica
             var colors=new[]{p.a,p.b,p.zone,p.bush,p.trunk,p.crown,p.box};
             var tile=Resources.Load<Texture2D>("Textures/tile_"+Tiles[theme]); bool art=tile&&Tiles[theme]!="pedra";
             for(int i=0;i<floorMaterials.Length;i++) { floorMaterials[i].color=art&&i<3?Color.Lerp(Color.white,colors[i],.4f):colors[i]; if(i<3&&tile) floorMaterials[i].mainTexture=tile; }
-            baseMaterial.color=p.ground; shownSky=null; ApplySky(s); RenderSettings.ambientLight=p.ambient;
+            baseMaterial.color=p.ground; shownSky=null; ApplySky(s); ArenaLuz.Ambiente(p.ambient,s.width);
             foreach(Transform child in sceneryRoot) Destroy(child.gameObject);
             if(HasKit(theme)) return; // o entorno do kit já faz o chão e a borda
             var rng=new System.Random(theme*977+s.width);
@@ -585,13 +599,15 @@ namespace ArenaTatica
         void ApplySky(MatchState s)
         {
             int theme=Mathf.Clamp(s.theme,0,Palettes.Length-1);
-            bool ev=!string.IsNullOrEmpty(s.ev)&&EventSkies.ContainsKey(s.ev);
-            string id=ev?EventSkies[s.ev].sky:ThemeSkies[theme];
-            BoardCamera.backgroundColor=backdrop.backgroundColor=ev?EventSkies[s.ev].tint:Palettes[theme].sky;
+            bool ev=EventSky(s.ev,out var evSky);
+            if(sceneryRoot)sceneryRoot.gameObject.SetActive(s.theme!=MapGen.DocksTheme);
+            if(s.theme==MapGen.DocksTheme){BoardCamera.backgroundColor=backdrop.backgroundColor=ev?evSky.tint:C(.025f,.04f,.065f);sky.enabled=false;shownSky="@docas";return;}
+            string id=ev?evSky.sky:ThemeSkies[theme];
+            BoardCamera.backgroundColor=backdrop.backgroundColor=ev?evSky.tint:Palettes[theme].sky;
             if(id==shownSky) return; shownSky=id;
             var art=Resources.Load<Sprite>("Sprites/Ceus/"+id+"/fundo");
             // Sem arte do céu: degradê do tema (antes era a cor lisa do fundo, marrom no deserto).
-            skyGradient=!art; if(!art) art=GradientSky(ev?EventSkies[s.ev].tint*3.2f:SkyTops[theme],ev?EventSkies[s.ev].tint:SkyBottoms[theme]);
+            skyGradient=!art; if(!art) art=GradientSky(ev?evSky.tint*3.2f:SkyTops[theme],ev?evSky.tint:SkyBottoms[theme]);
             sky.sprite=art; sky.enabled=art; if(art&&spriteMaterial) sky.sharedMaterial=spriteMaterial; FitSky();
         }
         // Céu de dia por tema (topo → horizonte): montanha, bosque, deserto ao poente, neve e cinzas do vulcão.
@@ -629,7 +645,7 @@ namespace ArenaTatica
         }
         void RefreshMarkers(MatchState s)
         {
-            SyncEventLoop(s.ev);
+            SyncEventLoop(s.ev); ArenaEventTint.Sync(s.ev);
             foreach(var m in markers) Destroy(m); markers.Clear();
             int viewer=Game.ViewerTeam;
             for(int x=0;x<s.width;x++) for(int z=0;z<s.height;z++) {
@@ -702,7 +718,7 @@ namespace ArenaTatica
             Sprite[] frames=null; string res=null;
             foreach(var p in new[]{id,id+"/"+phase,id+"/uso"}) { frames=EffectFrames(p); if(frames!=null) { res="Sprites/Efeitos/"+p; break; } }
             if(frames!=null) yield return PlayEffect(frames,at,ArenaEfeitos.Fps(res,10));
-            else { Flash(at,fallback); yield return Wait(wait); }
+            else { if(phase=="conjuracao") StartCoroutine(SkillGlyph(Content.BaseSkill(id),at)); Flash(at,fallback); yield return Wait(wait); }
         }
         IEnumerator Slide(Transform unit,MatchState s,Cell[] path)
         {
@@ -764,7 +780,7 @@ namespace ArenaTatica
                 else if(root.childCount>0&&rigs.TryGetValue(root.GetChild(0),out var rig)) rig.pose=Content.Form(f)?.pose;
             }
             foreach(var id in units.Keys.Where(id=>state.F(id)==null).ToList()) { if(units[id].childCount>0) rigs.Remove(units[id].GetChild(0)); Destroy(units[id].gameObject); units.Remove(id); }
-            RefreshHidden(state); shownKey=null;
+            RefreshHidden(state); SyncLuna(state); shownKey=null;
         }
         // Fila de animações a 50% (muitas ações seguidas chegando): pula as que faltam e mostra direto o estado mais novo.
         public const int QueueCapacity=8;
@@ -803,13 +819,13 @@ namespace ArenaTatica
             Transform visual;
             if(sprite) {
                 var renderer=rig.renderer=new GameObject("Sprite",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
-                renderer.sprite=rig.still[0]; if(spriteMaterial) renderer.sharedMaterial=spriteMaterial; visual=renderer.transform; visual.SetParent(root,false);
+                renderer.sprite=rig.still[0]; if(spriteMaterial) renderer.sharedMaterial=spriteMaterial; ArenaLuz.Sombra(renderer); visual=renderer.transform; visual.SetParent(root,false);
                 rig.pose=Content.Form(f)?.pose; rigs[visual]=rig;
                 if(silhouetteMaterial) { rig.ghost=new GameObject("Silhueta",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); rig.ghost.sharedMaterial=silhouetteMaterial; rig.ghost.color=new Color(TeamColor(f.team).r,TeamColor(f.team).g,TeamColor(f.team).b,.75f); rig.ghost.transform.SetParent(visual,false); }
             }
             else if(!prefab&&Game.Hud?.ShopIcon(shown) is Sprite icon) {
                 // Invocação sem sprites próprios (lobo): a figura da loja, sempre de frente.
-                var renderer=new GameObject("Sprite",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); renderer.sprite=icon; if(spriteMaterial) renderer.sharedMaterial=spriteMaterial;
+                var renderer=new GameObject("Sprite",typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); renderer.sprite=icon; if(spriteMaterial) renderer.sharedMaterial=spriteMaterial; ArenaLuz.Sombra(renderer);
                 visual=renderer.transform; visual.SetParent(root,false); sprite=true;
                 rigs[visual]=new SpriteRig{ renderer=renderer, still=Enumerable.Repeat(icon,8).ToArray() };
             }
@@ -845,11 +861,12 @@ namespace ArenaTatica
         }
         string Name(MatchState s,int id) { var f=s.F(id); return f==null?"?":Shown(f).name+(f.team==MatchState.Neutral?" (neutro)":" (P"+f.team+")"); }
         // Nome do time: em todos contra todos é o próprio jogador.
-        public static string TeamName(MatchState s,int team) => s.TeamPlay?"Time "+team:"P"+team;
+        public static string TeamName(MatchState s,int team) => team==MatchState.Neutral&&!string.IsNullOrEmpty(s.bossFight)?"o Chefe":s.TeamPlay?"Time "+team:"P"+team;
         static string Dice(Face[] dice) => dice==null?"":string.Join(" ",dice.Select(d=>d==Face.CoringaEsquivaTrava?"Coringa(E/T)":d.ToString()));
 
         IEnumerator Animate(GameEvent e,MatchState s)
         {
+            if(HandlesLuna(e)) { yield return AnimateLuna(e,s); yield break; }
             units.TryGetValue(e.actor,out var actor);
             units.TryGetValue(e.target,out var target);
             switch(e.kind)
@@ -914,7 +931,9 @@ namespace ArenaTatica
                 case "salto":
                     if(actor&&e.path!=null&&e.path.Length==2) {
                         var from=Position(s,e.path[0]); var to=Position(s,e.path[1]); Turn(actor,to-from);
-                        string clip=e.kind=="salto"?"leap":"teleport"; float t0=PlayClip(actor,clip);
+                        string clip=e.kind=="salto"?"leap":"teleport";
+                        if(e.kind=="teleporte"&&!HasClip(actor,clip)) clip=Content.AnySkill(e.info)?.anim??clip;
+                        float t0=PlayClip(actor,clip);
                         if(e.kind=="teleporte") {
                             // Some girando a foice e reaparece do outro lado (o mesmo clipe ao contrário).
                             Flash(from+Vector3.up,Green); yield return Wait(Mathf.Max(.25f,t0));
@@ -947,7 +966,7 @@ namespace ArenaTatica
                 }
                 case "portal-aberto":
                     if(actor) PlayClip(actor,Content.AnySkill(e.info)?.anim??"attack");
-                    if(e.path!=null) foreach(var c in e.path) PhaseFx("chamar-gato/conjuracao",Position(s,c)+Vector3.up*.3f);
+                    if(e.path!=null) foreach(var c in e.path) { PhaseFx(e.info+"/conjuracao",Position(s,c)+Vector3.up*.3f); StartCoroutine(SkillGlyph(e.info,Position(s,c)+Vector3.up*.05f)); }
                     Game.Hud?.Log($"{Name(s,e.actor)}: portal aberto por {e.value} turnos"); yield return Wait(.35f);
                     break;
                 case "portal":
@@ -1043,7 +1062,7 @@ namespace ArenaTatica
                         // Skill que invocou (Chamar gato, Noite dos Gatos): conjuração no lançador e impacto na casa, antes de surgir.
                         string by=s.F(e.actor)?.lastSkill; float call=0;
                         PhaseFx(ArenaEfeitos.UsePhase(e.kind,by),Position(s,f.cell)+Vector3.up*.4f);
-                        if(actor&&by!=null) { PhaseFx(by+"/conjuracao",actor.position+Vector3.up*.9f); if(EffectFrames(by+"/impacto")!=null) { PhaseFx(by+"/impacto",Position(s,f.cell)+Vector3.up*.4f); call=ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+by+"/impacto"); } }
+                        if(actor&&by!=null) { if(EffectFrames(by+"/conjuracao")==null) StartCoroutine(SkillGlyph(by,actor.position)); PhaseFx(by+"/conjuracao",actor.position+Vector3.up*.9f); if(EffectFrames(by+"/impacto")!=null) { PhaseFx(by+"/impacto",Position(s,f.cell)+Vector3.up*.4f); call=ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+by+"/impacto"); } }
                         cast=Mathf.Max(cast*.6f,call); if(cast>0) yield return Wait(cast);
                         var u=units[f.id]=CreateUnit(f); u.position=Spot(s,f,f.cell); if(actor) Turn(u,u.position-actor.position);
                         // Vampiros chegam por um portal de sangue que abre, solta a criatura e fecha.
@@ -1175,7 +1194,7 @@ namespace ArenaTatica
                         // Espelho de retorno: hexágonos de espelho em volta de quem usa.
                         if(MirrorSkill(e.info)) { StartCoroutine(Hexagon(actor.position,.7f,MirrorColor,1.2f)); StartCoroutine(Hexagon(actor.position+Vector3.up*.8f,.55f,MirrorColor,1.2f)); MirrorShatter(actor.position+Vector3.up*.8f,.4f); }
                         // Noite dos Gatos e outros suportes com arte: conjuração em si, impacto no centro da área.
-                        PhaseFx(e.info+"/conjuracao",actor.position+Vector3.up*.9f);
+                        PhaseFx(e.info+"/conjuracao",actor.position+Vector3.up*.9f); if(EffectFrames(e.info+"/conjuracao")==null) StartCoroutine(SkillGlyph(e.info,actor.position));
                         float land=PhaseFx(e.info+"/impacto",Position(s,e.cell)+Vector3.up*.3f)>0?ArenaEfeitos.ImpactTime("Sprites/Efeitos/"+e.info+"/impacto"):0;
                         yield return Wait(Mathf.Max(sp>0?sp*.5f:.3f,land));
                     }
@@ -1249,6 +1268,7 @@ namespace ArenaTatica
                 case "rodada": Game.Hud?.Log("Rodada "+e.value); break;
                 case "dominio": Game.Hud?.Log($"{TeamName(s,e.actor)} domina {(e.info=="braseiro"?"um braseiro":"o centro")} ({e.value})"); break;
                 case "eliminado": Game.Hud?.Log($"{TeamName(s,e.actor)} está fora da partida"); break;
+                case "chefe-evento": case "chefe-aliado": case "espelho-inversao": case "chefe-trono": case "chefe-levanta": case "chefe-fase": case "muralha": case "muralha-fim": case "reinicio": yield return BossEvent(e,s,actor); break;
                 case "vitoria": Game.Hud?.Log(e.actor==0?"EMPATE":$"VITÓRIA de {TeamName(s,e.actor)} ({e.info})"); break;
             }
         }
@@ -1411,8 +1431,13 @@ namespace ArenaTatica
             if(!unit||unit.childCount==0||!rigs.TryGetValue(unit.GetChild(0),out var rig)) return 0;
             // A reação (hit, absorb e laugh da Pele) não corta um golpe/skill no meio nem a caminhada; a morte sempre entra.
             if(Reaction(clip)&&(rig.clip=="walk"||!Loops(rig.clip)&&!Reaction(rig.clip)&&rig.clip!="death"&&ClipFrames(rig,out _) is Sprite[] busy&&rig.time*Fps(rig.clip)<busy.Length)) return 0;
-            rig.clip=clip; rig.time=0; rig.reverse=reverse; var frames=ClipFrames(rig,out _); ShowFrame(rig);
-            return frames==null?0:frames.Length/Fps(clip);
+            rig.clip=clip; rig.time=0; rig.reverse=reverse; var frames=ClipFrames(rig,out _);
+            // O Rei usa a mesma conjuração para suas skills e invocações.
+            if(frames==null&&(clip=="cast"||clip=="summon")&&rig.clips.ContainsKey("event-cast")) {
+                rig.clip="event-cast"; frames=ClipFrames(rig,out _);
+            }
+            ShowFrame(rig);
+            return frames==null?0:frames.Length/Fps(rig.clip);
         }
         // Reação do alvo a um golpe (autor 22/10): com dano, sempre o "hit"; bloqueado (0 de dano), tanka com "absorb" se tiver
         // (a Forma Preta da Pele); errou ou esquivou (−1), gargalha se tiver o "laugh".
@@ -1669,7 +1694,9 @@ namespace ArenaTatica
             id=Content.BaseSkill(id);
             if(!effectCache.TryGetValue(id,out var frames)) {
                 // Uma fase = um arquivo (<id>/inicio, <id>/impacto…): só os quadros dele, nunca os de outras fases da mesma pasta.
-                effectCache[id]=frames=ArenaEfeitos.Frames("Sprites/Efeitos/"+id);
+                frames=ArenaEfeitos.Frames("Sprites/Efeitos/"+id);
+                if(frames==null||frames.Length==0)frames=LunaEffectFrames(id);
+                effectCache[id]=frames;
             }
             return frames;
         }
@@ -1679,7 +1706,11 @@ namespace ArenaTatica
         {
             if(string.IsNullOrEmpty(id)) return null;
             id=Content.BaseSkill(id);
-            if(!flightCache.TryGetValue(id,out var frames)) flightCache[id]=frames=ArenaEfeitos.Frames("Sprites/ProjeteisAnimados/"+id);
+            if(!flightCache.TryGetValue(id,out var frames)) {
+                frames=ArenaEfeitos.Frames("Sprites/ProjeteisAnimados/"+id);
+                if((frames==null||frames.Length==0)&&(id=="eletaser"||id=="flecha-lunar"||id=="tiro-celinos"))frames=LunaEffectFrames(id);
+                flightCache[id]=frames;
+            }
             return frames;
         }
         static readonly Dictionary<string,Sprite> projectileCache=new Dictionary<string,Sprite>();
@@ -1711,6 +1742,7 @@ namespace ArenaTatica
             var cast=EffectFrames(skill+"/conjuracao"); var frames=ImpactPhase(skill,out var impactRes); var image=ProjectileImage(skill);
             var flight=ProjectileFrames(skill);
             if(cast!=null) StartCoroutine(PlayEffect(cast,from,ArenaEfeitos.Fps("Sprites/Efeitos/"+skill+"/conjuracao",12)));
+            else StartCoroutine(SkillGlyph(skill,from));
             // Projeteis/<skill>.png do Codex: imagem larga (128 px) estica como raio; as menores voam como projétil.
             bool beam=style.kind==ShotKind.Raio||style.kind==ShotKind.Sopro; if(image&&image.rect.width<128) beam=false;
             if(beam) yield return Beam(from,hit,style.color,style.kind==ShotKind.Sopro,image,big);
@@ -1967,7 +1999,7 @@ namespace ArenaTatica
             var ray=BoardCamera.ScreenPointToRay(screenPoint);
             if(Physics.Raycast(ray,out var hit,200,1<<8,QueryTriggerInteraction.Collide)) {
                 var unit=hit.collider.GetComponent<ArenaUnitPick>(); var f=unit?s.F(unit.Id):null;
-                if(f?.Alive==true) { unitId=f.id; cell=f.cell; return true; }
+                if(f?.Alive==true&&!GroundPickForMove(Game.Active,f,Game.CanAct,Game.Mode)) { unitId=f.id; cell=f.cell; return true; }
             }
             for(int h=Board.MaxHeight;h>=0;h--) {
                 if(!new Plane(Vector3.up,Vector3.up*h*HStep).Raycast(ray,out float distance)) continue;
@@ -1992,6 +2024,23 @@ namespace ArenaTatica
         readonly Dictionary<int,Text> markIcons=new Dictionary<int,Text>();
         ArenaMusica music;
         static bool Boss(Fighter f) => f.team==MatchState.Neutral&&Content.MaxHp(f)>=12;
+        // Barra acima da cabeça (autor 22/10): topo do desenho do quadro atual (vértice mais alto da malha justa, sem a folga
+        // transparente) e BarGap pontos de UI acima dele, em vez de uma altura fixa por lutador. Modelo 3D: topo dos renderers.
+        const float BarGap=4;
+        readonly Dictionary<Sprite,float> spriteTops=new Dictionary<Sprite,float>();
+        Vector3 HeadTop(Transform unit)
+        {
+            var visual=unit.childCount>0?unit.GetChild(0):null;
+            if(visual&&rigs.TryGetValue(visual,out var rig)&&rig.renderer&&rig.renderer.sprite) {
+                var sp=rig.renderer.sprite;
+                if(!spriteTops.TryGetValue(sp,out float top)) { var v=sp.vertices; spriteTops[sp]=top=v!=null&&v.Length>0?v.Max(x=>x.y):sp.bounds.max.y; }
+                return rig.renderer.transform.TransformPoint(new Vector3(sp.bounds.center.x,top,0));
+            }
+            var rs=visual?visual.GetComponentsInChildren<Renderer>().Where(r=>r.enabled&&r.name!="Silhueta"&&!(r is ParticleSystemRenderer)&&!(r is LineRenderer)).ToArray():new Renderer[0];
+            if(rs.Length==0) return unit.position+Vector3.up*.9f;
+            var b=rs[0].bounds; foreach(var r in rs) b.Encapsulate(r.bounds);
+            return new Vector3(unit.position.x,b.max.y,unit.position.z);
+        }
         void UpdateBars(MatchState s)
         {
             if(!barCanvas) {
@@ -2042,10 +2091,9 @@ namespace ArenaTatica
                     bar=bars[kv.Key]=new HpBar{ root=root, fill=fill, chip=chip, label=label, hpText=hpText, trail=f.hp/(float)max };
                 }
                 bar.root.gameObject.SetActive(shown); if(!shown) continue;
-                float height=(Heights.TryGetValue(ShownId(f),out float hh)?hh:.75f)+(Shown(f).flying?.35f:0)+.18f;
-                var p=BoardCamera.WorldToScreenPoint(unit.position+Vector3.up*height);
+                var p=BoardCamera.WorldToScreenPoint(HeadTop(unit));
                 if(p.z<0) { bar.root.gameObject.SetActive(false); continue; }
-                bar.root.anchoredPosition=new Vector2(p.x,p.y)/k;
+                bar.root.anchoredPosition=new Vector2(p.x,p.y)/k+Vector2.up*BarGap;
                 float frac=Mathf.Clamp01(f.hp/(float)Mathf.Max(1,Content.MaxHp(f)));
                 // O rastro claro desce devagar até a vida nova (cura sobe na hora).
                 bar.trail=frac>=bar.trail?frac:Mathf.MoveTowards(bar.trail,frac,Time.deltaTime*.6f);
@@ -2137,7 +2185,7 @@ namespace ArenaTatica
                 else if(valid&&tap&&Game.Hud?.HasPendingConfirmation!=true) {
                     // Mover numa casa com lutador visível: abre a ficha dele (skills e o que fazem) em vez de tentar andar.
                     var who=Board.At(s,c); bool seen=who!=null&&!Match.Concealed(s,Game.LocalTeam,who);
-                    if(Game.Mode==""&&seen) Game.Hud?.Inspect(who);
+                    if(Game.Mode==""&&seen&&InspectOnMoveTap(Game.Active,who,c,Game.CanAct)) Game.Hud?.Inspect(who);
                     else if(Game.Mode=="") Game.Submit(Match.Interaction(s,c)??"mover",c); else if(Game.Mode=="desejo-d") Game.Hud?.ChooseCopy(c); else if(Game.Hud?.ChooseRevive(c)!=true&&Game.Hud?.ChooseCat(c)!=true) SkillTap(c);
                 }
             } else hover.SetActive(false);
@@ -2193,6 +2241,9 @@ namespace ArenaTatica
         // O tabuleiro nunca sai de vista; afastado de todo, a câmera volta ao centro.
         void ClampCamera() { var cam=BoardCamera.transform; cam.position=Home+Vector3.ClampMagnitude(cam.position-Home,(fitSize-BoardCamera.orthographicSize)*1.5f); }
         // Toque com skill armada. Skill de 2 casas: o 1º toque guarda a casa (quem vai / entrada / 1º alvo) e o 2º envia.
+        // Casas do próprio corpo 2x2 também podem ser o canto de um novo destino.
+        public static bool GroundPickForMove(Fighter active,Fighter hit,bool canAct,string mode) => canAct&&mode==""&&hit!=null&&hit==active&&Board.SizeOf(hit)>1;
+        public static bool InspectOnMoveTap(Fighter active,Fighter target,Cell cell,bool canAct) => target!=null&&(!canAct||target!=active||cell==active.cell);
         void SkillTap(Cell c)
         {
             var f=Game.Active; var sk=f==null?null:Match.Skills(f).FirstOrDefault(x=>x.id==Game.Mode);
@@ -2221,9 +2272,10 @@ namespace ArenaTatica
             if(Game.Placing) { if(!Game.CanPlace) return; foreach(var c in Game.Preview.PlaceCells(s.placing,s.F(Game.PlacePick))) Mark(c,moveMaterial); if(s.F(Game.PlacePick) is Fighter pick) Mark(pick.cell,targetMaterial); return; }
             if(!Game.CanAct||f==null||Game.Hud?.HasPendingConfirmation==true) return;
             if(Game.Mode=="") {
+                if(s.Luna.machines.Any(machine=>machine.box.by==f.id&&machine.box.hp>0))return;
                 var costs=Board.Costs(s,f);
                 // Cheiro de Sangue (Daemion): rumo a inimigo ferido, o dobro de casas.
-                for(int i=0;i<costs.Length;i++) if(costs[i]>0&&(costs[i]<=f.pm||costs[i]<=f.pm*2&&Match.Scent(s,f,new Cell(i%s.width,i/s.width)))) Mark(new Cell(i%s.width,i/s.width),moveMaterial);
+                for(int i=0;i<costs.Length;i++) if(costs[i]>0&&(costs[i]<=f.pm||f.pm==1&&Board.Gap(f,new Cell(i%s.width,i/s.width))==1&&Board.Path(s,f,new Cell(i%s.width,i/s.width),1)!=null||costs[i]<=f.pm*2&&Match.Scent(s,f,new Cell(i%s.width,i/s.width)))) Mark(new Cell(i%s.width,i/s.width),moveMaterial);
                 return;
             }
             var sk=Match.Skills(f).FirstOrDefault(x=>x.id==Game.Mode); if(sk==null) { Game.Mode=""; return; }

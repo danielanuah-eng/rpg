@@ -16,7 +16,8 @@ namespace ArenaTatica
         // 9 (19/10): salas do labirinto no estado (MatchState.areas) para a visão da névoa.
         // 11 (21/10): mensagem acima de ZipFrom caracteres vai comprimida ("Z"+base64 do gzip): fichas com muitas skills/edições
         // e times grandes passavam do limite do Relay (80 KB) e derrubavam os clientes.
-        public int protocol=11;
+        // 14: inventores/lua, estado das máquinas e terreno de água.
+        public int protocol=14;
         public string kind, text, token;
         public string[] fighters; // hello: time escolhido no aparelho do jogador
         public string[] pool;     // hello/escolha: pool do torneio
@@ -30,13 +31,14 @@ namespace ArenaTatica
         public string edits;
         // lobby/draft: limites do time da sala (Sprint 3.6); 0 = mensagem antiga, mantém os do aparelho.
         public int teamLevel, teamSize;
+        public bool unlimitedLegendary; // false mantém o limite padrão de uma lendária.
         // lobby/draft: tempo de turno da sala (s, 0 = sem limite); vale junto com teamLevel>0. O cliente só mostra a contagem.
         public int turnTime;
     }
     public sealed class ArenaGame : MonoBehaviour
     {
         // O runner usa uma partida limpa em memória; nunca altera as preferências do jogador.
-        static bool SmokeFixture => !Application.isEditor&&Array.IndexOf(Environment.GetCommandLineArgs(),"--arena-smoke")>=0&&(Application.isBatchMode||Array.IndexOf(Environment.GetCommandLineArgs(),"--arena-qa-render")>=0);
+        internal static bool SmokeFixture => !Application.isEditor&&Array.IndexOf(Environment.GetCommandLineArgs(),"--arena-smoke")>=0&&(Application.isBatchMode||Array.IndexOf(Environment.GetCommandLineArgs(),"--arena-qa-render")>=0);
         static string[] smokeTeam={"ciantia"}, smokePool={"ciantia","perry","ezequiela","damian","baltazar"};
         public Match Match { get; private set; }
         public MatchState State { get; private set; }
@@ -179,6 +181,9 @@ namespace ArenaTatica
         public int PlacePick => Mode.StartsWith("pos:")&&int.TryParse(Mode.Substring(4),out int id)?id:0;
         // Partida local contra bots (menu Jogar): P1 é a pessoa; P2 em diante, bots (Core.Bot). Em rede ainda não há bots.
         public bool VsBots;
+        // Batalha contra o chefe (menu Jogar ou sala): id da ficha do chefe (Core/Boss.cs); vazio = partida comum. Vale na próxima partida.
+        public string Boss="";
+        public void SetBoss(string id) { Boss=id!=null&&Content.Fighters.TryGetValue(id,out var d)&&d.boss!=null&&d.boss.on?id:""; Changed(); }
         bool BotsPlaying => VsBots&&Network!=null&&Network.Role=="Local";
         public bool IsBot(int seat) => BotsPlaying&&seat>=2&&seat<=MatchState.MaxPlayers;
         float botWait; int botActions, botFighter=-1, botRevision=-1;
@@ -208,13 +213,20 @@ namespace ArenaTatica
             if(!SmokeFixture) { PlayerPrefs.SetInt("arena-time-custo",TeamLevel); PlayerPrefs.SetInt("arena-time-tamanho",TeamSize); PlayerPrefs.Save(); }
             Changed();
         }
-        public static string TeamRule => $"Nível {TeamLevel}, até {TeamSize}, 1 Lendária";
+        public static bool LegendaryLimit { get; private set; }=true;
+        bool localLegendaryLimit=true;
+        public void SetLegendaryLimit(bool restricted)
+        {
+            if(Client) return;
+            localLegendaryLimit=LegendaryLimit=restricted; Changed();
+        }
+        public static string TeamRule => $"Nível {TeamLevel}, até {TeamSize}, {(LegendaryLimit?"1 Lendária":"lendárias sem restrição")}";
         public static string[] ValidTeam(IEnumerable<string> ids)
         {
             var team=new List<string>(); int level=0;
             foreach(string id in ids??Array.Empty<string>()) {
                 if(team.Count>=TeamSize||team.Contains(id)||!Content.Roster.Contains(id)) continue;
-                if(Content.Fighters[id].legendary&&team.Any(x=>Content.Fighters[x].legendary)) continue;
+                if(LegendaryLimit&&Content.Fighters[id].legendary&&team.Any(x=>Content.Fighters[x].legendary)) continue;
                 int l=Content.Fighters[id].level; if(level+l>TeamLevel) continue;
                 team.Add(id); level+=l;
             }
@@ -240,6 +252,7 @@ namespace ArenaTatica
         void Awake()
         {
             Application.targetFrameRate=60; Application.runInBackground=true; ArenaMaps.Reset();
+            LegendaryLimit=true; // Escolha por partida/sala, sem gravar restrição global nas preferências.
             Turns=SmokeFixture?TurnMode.Completo:(TurnMode)Mathf.Clamp(PlayerPrefs.GetInt("arena-turnos",0),0,1);
             if(!SmokeFixture) Placement=PlayerPrefs.GetInt("arena-posicionar",1)==1;
             if(!SmokeFixture) SolidIllusions=PlayerPrefs.GetInt("arena-ilusao-solida",1)==1;
@@ -299,7 +312,7 @@ namespace ArenaTatica
             var map=flat||MapName==""||MapName==ArenaMaps.Generated?null:MapName==ArenaMaps.Codex?(MapGen.Closed(Theme)?null:ArenaMaps.Pick(size,seed)):ArenaMaps.Find(MapName);
             if(map!=null&&!MapGen.Fits(map,size)) { Debug.LogWarning($"Mapa {MapName} é para {MapGen.PlayersFor(map.width)} jogadores; usando um gerado na hora."); map=null; }
             var setup=new MatchSetup{ seed=seed, flatMap=flat, placement=Placement&&!SmokeFixture, solidIllusions=SolidIllusions, theme=Theme, mode=Victory, galeoes=Galeoes, map=map, turns=Turns, shopItems=ShopItems.ToArray(),
-                randomSkills=RandomSkills,randomStats=RandomStats,randomBots=RandomBots,randomPlayers=RandomPlayers,
+                boss=Boss, randomSkills=RandomSkills,randomStats=RandomStats,randomBots=RandomBots,randomPlayers=RandomPlayers,
                 botSeats=BotsPlaying?Enumerable.Range(2,players-1).ToArray():Array.Empty<int>(),
                 players=Enumerable.Range(0,players).Select(i=>new PlayerSetup{team=teams?[i]??0,fighters=ValidTeam(pick(i+1))}).ToArray() };
             Match=Match.New(setup);
@@ -387,7 +400,7 @@ namespace ArenaTatica
         List<GameEvent> Shown(List<GameEvent> events,int[] hiddenBefore) => !Client&&State!=null&&State.fog&&LocalTeam>0?FromWire(Match.EventsFor(events,State,LocalTeam,hiddenBefore).ToArray()):events;
         void RecordProbe(bool lost) { probes.Enqueue(lost); if(lost) expired++; if(probes.Count>60&&probes.Dequeue()) expired--; }
         void ResetMetrics() { Rtt=0; Filtered=0; expired=0; probes.Clear(); pingWaiting=false; lastPing=Time.unscaledTime; }
-        void ResetRoom() { roomTurnTime=0; tokenPick.Clear(); tokenPool.Clear(); tokenSeat.Clear(); seatPeer.Clear(); peerSeat.Clear(); Lobby=false; Seat=0; }
+        void ResetRoom() { LegendaryLimit=localLegendaryLimit; roomTurnTime=0; tokenPick.Clear(); tokenPool.Clear(); tokenSeat.Clear(); seatPeer.Clear(); peerSeat.Clear(); Lobby=false; Seat=0; }
         public void Notify(string text) { Status=text; }
         // Editor de mapas: o tabuleiro mostra o mapa sendo editado, sem lutadores nem partida.
         public void BeginMapEdit(MatchState board)
@@ -531,7 +544,7 @@ namespace ArenaTatica
             lines.Add(Tournament?$"Modo: <b>Torneio</b> (mata-mata 1 contra 1, até {Bans} ban{(Bans==1?"":"s")} por jogador)":$"Formato: <b>{FormatName(Format)}</b>");
             lines.Add($"Turnos: <b>{(Turns==TurnMode.Alternada?"Iniciativa alternada":"Jogador completo")}</b> · Vitória: <b>{Victory}</b> · {ThemeName(Theme)}");
             lines.Add($"Balanceamento: <b>{ArenaEdits.PresetLabel(Preset)}</b> · Tempo de turno: <b>{(TurnTime>0?TurnTime+" s":"sem limite")}</b>");
-            lines.Add($"Times: <b>custo {TeamLevel}</b> · <b>até {TeamSize} herói{(TeamSize==1?"":"s")}</b>");
+            lines.Add($"Times: <b>custo {TeamLevel}</b> · <b>até {TeamSize} herói{(TeamSize==1?"":"s")}</b> · <b>{(LegendaryLimit?"1 Lendária":"lendárias sem restrição")}</b>");
             lines.Add($"Loja: {(ShopItems.Count==0?"todos os itens":$"{ShopItems.Count} itens ({string.Join(", ",ShopItems.Select(id=>Shop.Def(id).name))})")}");
             if(Torneio!=null) { lines.Add(""); lines.Add("<b>TORNEIO</b>"); lines.AddRange(Torneio.log); }
             if(RandomSkills||RandomStats) lines.Add($"Aleatorizador: {(RandomSkills?"Skills ":"")}{(RandomStats?"Atributos limitados ":"")}· {(RandomBots&&RandomPlayers?"todos":RandomBots?"bots":RandomPlayers?"jogadores":"nenhum participante")}");
@@ -820,7 +833,7 @@ namespace ArenaTatica
             // Fichas editadas (dezenas de KB) iam dentro de toda mensagem de sala, draft e estado: passavam do limite (WS 64K,
             // Relay 80 KB) e eram descartadas, ou enchiam a fila, que era limpa e reenviada em laço (bugs do autor, 18/10).
             // Agora vão em partes, sozinhas, só quando mudam para aquele jogador (SendEdits); as outras mensagens vão sem elas.
-            if(message.kind=="lobby"||message.kind=="draft") { SendEdits(peer,RoomEdits); message.edits=null; message.teamLevel=TeamLevel; message.teamSize=TeamSize; message.turnTime=TurnTime; }
+            if(message.kind=="lobby"||message.kind=="draft") { SendEdits(peer,RoomEdits); message.edits=null; message.teamLevel=TeamLevel; message.teamSize=TeamSize; message.unlimitedLegendary=!LegendaryLimit; message.turnTime=TurnTime; }
             if(message.state!=null) { SendEdits(peer,message.state.edits); message.state.edits=null; }
             string json=Wire(message);
             Sent?.Invoke(peer,message);
@@ -889,8 +902,10 @@ namespace ArenaTatica
             text=Unzip(text); if(text==null) return;
             try { m=JsonUtility.FromJson<WireMessage>(text); } catch(Exception) { return; }
             if(m==null) return;
+            // Sem o campo protocol o JsonUtility deixaria o valor padrão (o atual): mensagem sem versão é incompatível.
+            if(!text.Contains("\"protocol\":")) m.protocol=0;
             if(m.state!=null&&!string.IsNullOrEmpty(m.state.packed)) { m.state.tiles=MatchState.Unpack(m.state.packed,m.state.width*m.state.height); m.state.packed=null; }
-            if(m.protocol!=11) {
+            if(m.protocol!=14) {
                 const string update="Versões diferentes. Atualize a Arena Tática nos dois aparelhos.";
                 if(Network.IsHost&&m.kind=="hello") Send(peer,new WireMessage{protocol=m.protocol,kind="full",text=update});
                 else if(Client) { Network.Close(); Recovery=true; Synced=false; Status=update; }
@@ -916,7 +931,7 @@ namespace ArenaTatica
             if(m.seats>=2&&m.seats<=MatchState.MaxPlayers) Seats=m.seats;
             // Torneio: o cliente pode ser o time 1 da partida.
             if(m.kind=="welcome") { InMenu=false; if(m.seat>=1&&m.seat<=MatchState.MaxPlayers) Seat=m.seat; return; }
-            if((m.kind=="lobby"||m.kind=="draft")&&m.teamLevel>0&&m.teamSize>0) { ApplyTeamLimits(m.teamLevel,m.teamSize); roomTurnTime=Mathf.Clamp(m.turnTime,0,600); }
+            if((m.kind=="lobby"||m.kind=="draft")&&m.teamLevel>0&&m.teamSize>0) { ApplyTeamLimits(m.teamLevel,m.teamSize); LegendaryLimit=!m.unlimitedLegendary; roomTurnTime=Mathf.Clamp(m.turnTime,0,600); }
             if(m.kind=="lobby") { if(m.seat>=2&&m.seat<=MatchState.MaxPlayers) Seat=m.seat; Lobby=true; LobbyText=m.text??""; LobbyVersion++; Status=$"Na sala como P{Seat}. Aguardando o anfitrião iniciar."; if(Hud==null||!Hud.PickerOpen) Menu?.Open("sala"); return; }
             if(m.kind=="draft") { var phase=m.text; Hud?.OpenDraft(phase,m.fighters,m.seats,ids=>Send(0,new WireMessage{kind="draft",text=phase,fighters=ids})); Status=phase=="ban"?"Torneio: escolha quem banir.":"Torneio: monte seu time."; return; }
             if(m.kind=="reject") { Status=m.text??"Ação recusada."; return; }

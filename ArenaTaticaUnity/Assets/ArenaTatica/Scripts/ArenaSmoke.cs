@@ -7,7 +7,7 @@ using ArenaTatica.Core;
 namespace ArenaTatica
 {
     // Execução automática opcional num player compilado. Nunca roda no jogo normal.
-    public sealed class ArenaSmoke : MonoBehaviour
+    public sealed partial class ArenaSmoke : MonoBehaviour
     {
         ArenaGame game;
         // Casa vizinha alcançável com 1 PM (o mapa é sorteado, então não dá para fixar a casa).
@@ -37,11 +37,14 @@ namespace ArenaTatica
             yield return new WaitForSeconds(2);
             if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-qa-render")>=0) {
                 Screen.SetResolution(1280,720,false);
+                // O runner deste lote pode terminar o splash para capturar com a janela oculta.
+                if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-luna-qa")>=0)UnityEngine.Rendering.SplashScreen.Stop(UnityEngine.Rendering.SplashScreen.StopBehavior.StopImmediate);
                 float splashDeadline=Time.realtimeSinceStartup+20;
                 while(!UnityEngine.Rendering.SplashScreen.isFinished&&Time.realtimeSinceStartup<splashDeadline) yield return null;
                 if(!UnityEngine.Rendering.SplashScreen.isFinished) { Finish(false,"Splash não terminou para a captura de interface"); yield break; }
                 yield return new WaitForSeconds(.5f);
             }
+            if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-luna-qa")>=0){yield return InventoresLunaQa();yield break;}
             Debug.Log($"ARENA_SMOKE_FIXTURE: {game.Network.Role}, {game.Turns}, ativo {game.Active?.def}, time salvo isolado");
             if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-ux-qa")>=0) { yield return InteractionQa(); yield break; }
             if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-effects-qa")>=0) { yield return EffectsQa(); yield break; }

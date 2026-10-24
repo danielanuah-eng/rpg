@@ -37,6 +37,7 @@ public static class ArenaBuild
         EnsureMaterial("Assets/ArenaTatica/Resources/Materials/ArenaLit.mat","Universal Render Pipeline/Lit");
         EnsureMaterial("Assets/ArenaTatica/Resources/Materials/ArenaSprite.mat","Universal Render Pipeline/2D/Sprite-Unlit-Default");
         EnsureMaterial("Assets/ArenaTatica/Resources/Materials/ArenaSilhueta.mat","Arena/Silhueta");
+        EnsureMaterial("Assets/ArenaTatica/Resources/Materials/ArenaSpriteLuz.mat","Arena/SpriteLuz");
         EnsureSprites(); EnsureTiles();
     }
     static void EnsureMaterial(string path,string shaderName)
@@ -54,9 +55,10 @@ public static class ArenaBuild
     static void EnsureSprites()
     {
         if(!Directory.Exists("Assets/ArenaTatica/Resources/Sprites")) return;
+        ArenaInventoresLunaImport.Apply();
         var factory=new SpriteDataProviderFactories(); factory.Init();
         foreach(string file in Directory.GetFiles("Assets/ArenaTatica/Resources/Sprites","*.png",SearchOption.AllDirectories)) {
-            string path=file.Replace('\\','/'); if(ArenaEfeitosImport.IsManaged(path)) continue;
+            string path=file.Replace('\\','/'); if(ArenaEfeitosImport.IsManaged(path)||ArenaInventoresLunaImport.IsManaged(path)) continue;
             var importer=(TextureImporter)AssetImporter.GetAtPath(path); if(importer==null) continue;
             var pixels=new Texture2D(2,2); pixels.LoadImage(File.ReadAllBytes(path));
             // Projeteis/<skill>.png é uma imagem única (pode ser larga); o resto, tira de quadros quadrados.

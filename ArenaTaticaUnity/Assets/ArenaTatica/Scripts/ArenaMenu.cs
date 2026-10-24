@@ -87,7 +87,8 @@ namespace ArenaTatica
         {
             try { string json=PlayerPrefs.GetString(Key,""); return json==""?new StatsData():JsonUtility.FromJson<StatsData>(json)??new StatsData(); } catch(Exception) { return new StatsData(); }
         }
-        static void Save() { PlayerPrefs.SetString(Key,JsonUtility.ToJson(Data)); PlayerPrefs.Save(); }
+        // A conferência automatizada mantém as estatísticas do jogador fora do fixture.
+        static void Save() { if(ArenaGame.SmokeFixture) return; PlayerPrefs.SetString(Key,JsonUtility.ToJson(Data)); PlayerPrefs.Save(); }
         // A partida só conta depois da primeira ação (o jogo abre com uma partida pronta que pode nem ser jogada).
         public static void Begin() { pending=true; lastHit.Clear(); }
         public static FighterStat Of(string id) { var f=Data.fighters.Find(x=>x.id==id); if(f==null) Data.fighters.Add(f=new FighterStat{id=id}); return f; }
@@ -271,6 +272,11 @@ namespace ArenaTatica
         void MatchSettings(Transform c,string again,bool seats)
         {
             Transform row;
+            Section(c,"Batalha contra o chefe");
+            row=Row(c,44);
+            Pick(Btn(row,"Partida comum",()=>{ Game.SetBoss(""); Show(again); },0,40),Game.Boss=="");
+            foreach(var bd in Content.Fighters.Values.Where(x=>x.boss!=null&&x.boss.on)) { var k=bd.id; Pick(Btn(row,"Chefe: "+bd.name,()=>{ Game.SetBoss(k); Show(again); },0,40),Game.Boss==k); }
+            if(Game.Boss!="") Para(c,"<color=#e8c278>Todos os jogadores (e bots) juntos contra o chefe. Só o Trono no centro: compre colado nele. O chefe joga a cada 2 turnos de jogadores, levanta do trono no fim da rodada 1 e, com metade da vida, saca a segunda espada (fase 2). Tudo ajustável no Editor, na ficha do chefe.</color>");
             Section(c,"Aleatorizador");
             row=Row(c,44);
             Pick(Btn(row,"Skills",()=>{ Game.SetRandomizer(!Game.RandomSkills,Game.RandomStats,Game.RandomBots,Game.RandomPlayers); Show(again); },0,40),Game.RandomSkills);
@@ -288,7 +294,10 @@ namespace ArenaTatica
             foreach(int l in ArenaGame.TeamLevels) { int k=l; Pick(Btn(row,"Custo "+k,()=>{ Game.SetTeamLimits(k,ArenaGame.TeamSize); Show(again); },0,40,14),ArenaGame.TeamLevel==k); }
             row=Row(c,44);
             for(int n=1;n<=ArenaGame.MaxTeamSize;n++) { int k=n; Pick(Btn(row,n+(n==1?" herói":" heróis"),()=>{ Game.SetTeamLimits(ArenaGame.TeamLevel,k); Show(again); },0,40,14),ArenaGame.TeamSize==k); }
-            Para(c,"<color=#a7b4c2>Soma de Nível e quantidade de heróis por time; na sala vale o que o anfitrião escolher.</color>");
+            row=Row(c,44);
+            Pick(Btn(row,"Limitar a 1 Lendária",()=>{ Game.SetLegendaryLimit(true); Show(again); },0,40,14),ArenaGame.LegendaryLimit);
+            Pick(Btn(row,"Lendárias sem restrição",()=>{ Game.SetLegendaryLimit(false); Show(again); },0,40,14),!ArenaGame.LegendaryLimit);
+            Para(c,"<color=#a7b4c2>Limite de lendárias por partida; custo, quantidade e personagens sem repetição continuam valendo. Na sala, o anfitrião escolhe.</color>");
             if(again=="sala") {
                 Section(c,"Tempo de turno");
                 row=Row(c,44);
@@ -553,7 +562,7 @@ namespace ArenaTatica
             Section(c,"Eventos de mapa (Cataclisma)");
             Para(c,"<color=#a7b4c2>Saem quando o dado de ataque mostra Cataclisma. Só 1 evento com duração fica ativo por vez.</color>");
             foreach(var e in Match.Cataclysms)
-                Para(c,$"• <b>{ArenaPresentation.EventName(e.id)}</b> <color=#a7b4c2>({(e.rounds>0?$"{e.rounds} rodada{(e.rounds>1?"s":"")}":"na hora")} · peso {e.weight})</color>: {(EventHelp.TryGetValue(e.id,out var h)?h:"")}");
+                Para(c,$"• <b>{ArenaPresentation.EventName(e.id)}</b> <color=#a7b4c2>({(e.rounds>0?$"{e.rounds} rodada{(e.rounds>1?"s":"")}":"na hora")} · peso {e.weight})</color>: {(EventHelp.TryGetValue(e.id,out var h)?h:MapEvents.Get(e.id)?.help??"")}");
         }
         static string KindName(ShopKind k) => k==ShopKind.Item?"item permanente":k==ShopKind.Magia?"magia":k==ShopKind.Pet?"pet":k==ShopKind.Armadilha?"armadilha":"buff";
 
@@ -597,6 +606,11 @@ namespace ArenaTatica
             Stepper(grid,"Iniciativa",()=>e.initiative,v=>e.initiative=v); Stepper(grid,"Nível",()=>e.level,v=>e.level=v); Stepper(grid,"Armadura fixa",()=>e.armor,v=>e.armor=v);
             Flag(grid,"Voa",()=>e.flying,v=>e.flying=v); Flag(grid,"Lendária",()=>e.legendary,v=>e.legendary=v); Flag(grid,"Imóvel",()=>e.immovable,v=>e.immovable=v);
             Flag(grid,"Devora skills",()=>e.devour,v=>e.devour=v);
+            Flag(grid,"Dano elimina invocações inimigas",()=>e.summonSlayer,v=>e.summonSlayer=v);
+            if(e.hpByPlayers!=null&&e.hpByPlayers.Length>0) {
+                Section(c,"PV por número de jogadores"); var hpGrid=Grid(c);
+                for(int i=0;i<e.hpByPlayers.Length;i++) { int index=i; Stepper(hpGrid,(i+2)+" jogadores"+(i==e.hpByPlayers.Length-1?" ou mais":""),()=>e.hpByPlayers[index],v=>e.hpByPlayers[index]=Mathf.Clamp(v,1,999)); }
+            }
             // Formas (3.3): bônus de cada forma ficam à vista e editáveis; passivas podem valer só numa forma (abaixo).
             if(e.forms!=null&&e.forms.Length>1)
             {
@@ -607,11 +621,15 @@ namespace ArenaTatica
                     var f=fm; Label(c,f.name+(f.id==e.startForm?" (inicial)":""),15,Gold);
                     var fg=Grid(c);
                     Stepper(fg,"PA a mais",()=>f.pa,x=>f.pa=Mathf.Clamp(x,-6,6)); Stepper(fg,"PM a mais",()=>f.pm,x=>f.pm=Mathf.Clamp(x,-6,6)); Stepper(fg,"Armadura a mais",()=>f.armor,x=>f.armor=Mathf.Clamp(x,-3,4));
+                    Flag(fg,"Imune a efeitos negativos",()=>f.effectImmune,x=>f.effectImmune=x); Stepper(fg,"Retorno de dano",()=>f.reflectDamage,x=>f.reflectDamage=Mathf.Max(0,x));
                     Flag(fg,"Sem guarda",()=>f.noGuard,x=>f.noGuard=x); Flag(fg,"Intangível",()=>f.intangible,x=>f.intangible=x);
+                    TextSetting(c,"Sprites da forma",f.sprites,x=>f.sprites=x);
+                    TextSetting(c,"Música da forma",f.music,x=>f.music=x);
                     var skills=e.skills.Where(x=>x.form==f.id).Select(x=>x.name).ToArray();
                     if(skills.Length>0) Para(c,"<color=#a7b4c2>Skills desta forma: "+string.Join(", ",skills)+"</color>");
                 }
             }
+            if(e.boss!=null&&e.boss.on) BossEditor(c,e.boss);
             Section(c,"Skills");
             Para(c,"<color=#a7b4c2>Em cada skill: PA = custo; Alcance mínimo/máximo = distância do ataque em casas.</color>");
             for(int i=0;i<e.skills.Length;i++) SkillEditor(c,e.skills[i],i);
@@ -651,6 +669,31 @@ namespace ArenaTatica
                 foreach(var (_,model) in g) { if(n++%4==0) r=Row(c,44); var m=model; var b=Btn(r,m.name,()=>AddGeneric(m),0,40,13); Hint(b,Content.Describe(m)); }
             }
             Refresh();
+        }
+        // Chefe (Core/Boss.cs): ritmo, fases e pool. As skills entram no pool pelo "Peso na IA do chefe" de cada uma; fase 1 = sem
+        // forma marcada, fase 2 = forma da fase 2 marcada na skill.
+        void BossEditor(Transform c,BossDef b)
+        {
+            Section(c,"Chefe (IA)");
+            Para(c,"<color=#a7b4c2>Turno do chefe a cada N turnos de jogadores; fase 2 abaixo da % da vida; ações por turno em cada fase; rodada em que levanta do trono (0 = já de pé); peso do movimento normal no pool; PV a mais por jogador além do 1º.</color>");
+            var g=Grid(c);
+            Stepper(g,"Turno a cada N turnos",()=>b.every,x=>b.every=Mathf.Clamp(x,1,6)); Stepper(g,"Fase 2 com vida ≤ %",()=>b.phase2,x=>b.phase2=Mathf.Clamp(x,0,99));
+            Stepper(g,"Ações por turno (fase 1)",()=>b.actions1,x=>b.actions1=Mathf.Clamp(x,1,4)); Stepper(g,"Ações por turno (fase 2)",()=>b.actions2,x=>b.actions2=Mathf.Clamp(x,1,4));
+            Stepper(g,"Levanta no fim da rodada",()=>b.wake,x=>b.wake=Mathf.Clamp(x,0,9)); Stepper(g,"Peso do movimento",()=>b.moveWeight,x=>b.moveWeight=Mathf.Clamp(x,0,20));
+            Stepper(g,"PV a mais por jogador",()=>b.hpPlayer,x=>b.hpPlayer=Mathf.Clamp(x,0,60));
+            TextSetting(c,"Forma no trono",b.seatForm,x=>b.seatForm=x);
+            TextSetting(c,"Forma da fase 1",b.standForm,x=>b.standForm=x);
+            TextSetting(c,"Forma da fase 2",b.phase2Form,x=>b.phase2Form=x);
+            Flag(g,"Vira aliado do vencedor",()=>b.rewardAlly,x=>b.rewardAlly=x);
+            TextSetting(c,"Forma como aliado",b.allyForm,x=>b.allyForm=x);
+            TextSetting(c,"Fator de PV do aliado",b.allyHpFactor.ToString(System.Globalization.CultureInfo.InvariantCulture),x=>{ if(float.TryParse(x,System.Globalization.NumberStyles.Float,System.Globalization.CultureInfo.InvariantCulture,out var factor)) b.allyHpFactor=Mathf.Clamp(factor,.1f,5f); });
+            Para(c,"<color=#a7b4c2>Pool do evento aleatório (skill com \"Dispara evento aleatório\"). Nenhum ligado = o sorteio normal dos eventos.</color>");
+            var on=(b.events??"").Split(new[]{','},StringSplitOptions.RemoveEmptyEntries).Select(x=>x.Trim()).ToList();
+            Transform r=null; int n=0;
+            foreach(var ev in Match.Cataclysms.Where(x=>x.id!="chefe")) {
+                if(n++%4==0) r=Row(c,40); var id=ev.id; var t=Btn(r,"",()=>{ if(!on.Remove(id)) on.Add(id); b.events=string.Join(",",on); Changed(); },0,36,13).GetComponentInChildren<Text>();
+                refreshers.Add(()=>t.text=(on.Contains(id)?"✓ ":"   ")+ArenaPresentation.EventName(id));
+            }
         }
         // Skill da biblioteca: cópia com id próprio da ficha (o nome fica igual; repetido ganha número).
         void AddGeneric(SkillDef model)
@@ -724,12 +767,15 @@ namespace ArenaTatica
             Stepper(grid,"Empurra (casas)",()=>s.push,x=>s.push=x); Stepper(grid,"Tira PM",()=>s.pmLoss,x=>s.pmLoss=x); Stepper(grid,"Tira PA",()=>s.paLoss,x=>s.paLoss=x);
             Stepper(grid,"Prisão (turnos)",()=>s.prison,x=>s.prison=x); Stepper(grid,"Bônus se isolado",()=>s.isolatedBonus,x=>s.isolatedBonus=x); Stepper(grid,"Buff armadura",()=>s.buffArmor,x=>s.buffArmor=x);
             Stepper(grid,"Buff PA",()=>s.buffPa,x=>s.buffPa=x); Stepper(grid,"Buff PM",()=>s.buffPm,x=>s.buffPm=x); Stepper(grid,"Duração do buff",()=>s.turns,x=>s.turns=x);
+            Stepper(grid,"Inversão (turnos)",()=>s.invertTurns,x=>s.invertTurns=Mathf.Max(0,x));
             Stepper(grid,"Rodada mínima",()=>s.minRound,x=>s.minRound=x); Stepper(grid,"Cura ao acertar",()=>s.drain,x=>s.drain=x);
             // Multiplicadores e efeitos novos (20–21/10).
             Stepper(grid,"Multiplicador (Pulso)",()=>s.amplify,x=>s.amplify=x); Stepper(grid,"Custa PM",()=>s.pmCost,x=>s.pmCost=x); Stepper(grid,"Ganha PM ao usar",()=>s.gainPm,x=>s.gainPm=x);
             Stepper(grid,"Marcas da Maldição",()=>s.mark,x=>s.mark=x); Stepper(grid,"Dano ao voltar (buraco negro)",()=>s.returnDamage,x=>s.returnDamage=x); Stepper(grid,"Usos por transformação",()=>s.perForm,x=>s.perForm=x);
             Stepper(grid,"Atordoa (turnos)",()=>s.stun,x=>s.stun=x); Stepper(grid,"Sela ultimate (turnos)",()=>s.sealUlt,x=>s.sealUlt=x); Stepper(grid,"Dano dobrado (turnos)",()=>s.doubleDamage,x=>s.doubleDamage=x);
             Stepper(grid,"% do mapa (metade do mapa)",()=>s.mapPct,x=>s.mapPct=x);
+            Stepper(grid,"Peso na IA do chefe",()=>s.weight,x=>s.weight=Mathf.Clamp(x,0,20)); Stepper(grid,"Ergue paredes (zona)",()=>s.walls,x=>s.walls=Mathf.Clamp(x,0,12));
+            Flag(grid,"Reinicia ultimates de todos",()=>s.resetUlts,x=>s.resetUlts=x); Flag(grid,"Dispara evento aleatório",()=>s.cataclysm,x=>s.cataclysm=x);
             Flag(grid,"Linha reta",()=>s.line,x=>s.line=x); Flag(grid,"Precisa de visão",()=>s.sight,x=>s.sight=x); Flag(grid,"+alcance no alto",()=>s.modifiable,x=>s.modifiable=x);
             Flag(grid,"Em volta de si",()=>s.selfArea,x=>{ s.selfArea=x; if(x) { s.minRange=0; s.maxRange=0; } }); Flag(grid,"Área nas 8 casas",()=>s.square,x=>s.square=x); Flag(grid,"Área só inimigos",()=>s.foes,x=>s.foes=x);
             Flag(grid,"Puxa até colar",()=>s.pull,x=>s.pull=x); Flag(grid,"Ignora armadura",()=>s.pierce,x=>s.pierce=x); Flag(grid,"Ignora Escudo",()=>s.precise,x=>s.precise=x);
@@ -758,6 +804,11 @@ namespace ArenaTatica
             }
             Dot("Si",Hit.Si,0x2f5f9e); Dot("Inimigos",Hit.Inimigo,0x8e2f3a); Dot("Aliados",Hit.Aliado,0x2f7a46);
             Btn(row,"Padrão",()=>{ s.hits=0; Changed(); },90,34,13);
+        }
+        void TextSetting(Transform parent,string label,string value,Action<string> set)
+        {
+            var row=Row(parent,40); var title=Label(row,label,13,Muted,TextAnchor.MiddleLeft); Layout(title.gameObject,150,34);
+            Input(row,value??"",label).onEndEdit.AddListener(v=>{ set(v.Trim()); Changed(); });
         }
         void Stepper(Transform grid,string label,Func<int> get,Action<int> set)
         {
@@ -803,7 +854,7 @@ namespace ArenaTatica
             Section(c,"Dados");
             Para(c,"Faces: Cataclisma, Escudo, Trava, Esquiva, Coringa (Esquiva/Trava) e Coringa. No ataque rolam 2 dados: o de quem ataca e o de quem defende. Escudo do defensor tira 1 de dano. Cataclisma no dado de ataque dispara um evento de mapa.");
             Section(c,"Times");
-            Para(c,"Soma de Nível até 12, até 4 lutadores, sem repetir e só 1 Lendária. Os times jogam em rodízio pela Iniciativa.");
+            Para(c,"Custo, quantidade de lutadores e limite de lendárias são escolhidos nas configurações da partida. Sem repetir personagens; os times jogam em rodízio pela Iniciativa.");
             Section(c,"Altura e visão");
             Para(c,"Mais alto que o alvo: +1 de alcance nas skills marcadas. Relevo 2 níveis acima do mais baixo dos dois bloqueia a visão; árvores e caixas também. Lutadores não bloqueiam, mas um tiro pode acertar quem está no caminho.");
             Section(c,"Controle e suporte");

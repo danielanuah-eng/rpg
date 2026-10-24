@@ -270,8 +270,9 @@ namespace ArenaTatica.Core.Tests
             tchu.buffs.Add(new Buff{id="b",turns=2,armor=2}); tal.buffs.Add(new Buff{id="confusao",turns=2,pm=-2}); tal.marks=3;
             Turn(mir); Assert.IsTrue(Skill(mir,"espelho-purificador",tchu.cell)); Assert.IsFalse(tchu.buffs.Any(b=>b.id=="b"),"tira buff do inimigo");
             mir.cooldowns.Clear(); Assert.IsTrue(Skill(mir,"espelho-purificador",tal.cell)); Assert.IsFalse(tal.buffs.Any(b=>b.pm<0)); Assert.AreEqual(0,tal.marks,"limpa o aliado");
-            tchu.form="berserk"; Turn(mir); Assert.IsTrue(Skill(mir,"selar-ultimate",tchu.cell)); Assert.AreEqual("normal",tchu.form);
-            Assert.IsFalse(m.CanTarget(tchu,Content.AnySkill("olho-abissal"),tchu.cell,out _),"ultimate selada");
+            tchu.form="berserk"; Turn(mir); Assert.IsTrue(Skill(mir,"selar-ultimate",tchu.cell)); Assert.AreEqual("berserk",tchu.form,"transformado é imune ao selo");
+            Assert.IsFalse(tchu.cooldowns.Any(x=>x.skill=="olho-abissal"),"não recebeu recarga hostil");
+            tchu.form="normal";
             Turn(mir); Assert.IsTrue(Skill(mir,"espelho-de-retorno",mir.cell));
             Turn(tchu); Put(tchu,2,3); int before=tchu.hp; Assert.IsTrue(Skill(tchu,"escudada",mir.cell));
             Assert.Less(tchu.hp,before,"o golpe voltou"); Assert.IsFalse(mir.buffs.Any(b=>b.reflect>0));

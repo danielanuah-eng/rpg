@@ -46,7 +46,7 @@ namespace ArenaTatica.Tests
             var m=Match.New(new MatchSetup{seed=8,randomSkills=true,randomStats=true,randomPlayers=true,
                 players=Enumerable.Range(0,6).Select(_=>new PlayerSetup{fighters=team}).ToArray()});
             int budget=(int)typeof(ArenaTransport).GetField("RelayPayload",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic).GetValue(null);
-            var view=Match.ViewFor(m.S,2); var packet=JsonUtility.ToJson(new WireMessage{kind="snapshot",state=view});
+            var view=Match.ViewFor(m.S,2); var packet=ArenaGame.Zip(ArenaGame.Wire(new WireMessage{kind="snapshot",state=view}));
             Assert.LessOrEqual(System.Text.Encoding.UTF8.GetByteCount(packet),budget); Assert.IsTrue(ArenaGame.ValidState(view,2));
         }
         [Test] public void RandomizedCloneHasValidDisguisedSnapshot()

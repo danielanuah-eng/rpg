@@ -11,9 +11,12 @@ namespace ArenaTatica.Core
     {
         // Cenários só mudam o visual; o sorteio usa a seed sem consumir o rng.
         // Os 3 últimos são fechados (labirintos, 18/10): salas e corredores com paredes, portas, névoa, vela e boss.
-        public static readonly string[] Themes={"Pedreira","Bosque","Deserto","Neve","Vulcão","Cripta","Biblioteca","Jardim"};
-        public const int OpenThemes=5, BauMoedas=3;
-        public static bool Closed(int theme) => theme>=OpenThemes&&theme<Themes.Length;
+        // Docas inundadas (expansão de 22/10): tema novo NO FIM da lista (índice 8), aberto, com canal de água no meio.
+        // Os índices antigos não mudam.
+        public static readonly string[] Themes={"Pedreira","Bosque","Deserto","Neve","Vulcão","Cripta","Biblioteca","Jardim","Docas inundadas"};
+        public const int OpenThemes=5, BauMoedas=3, ClosedThemes=3, DocksTheme=8;
+        // Os 3 cenários fechados continuam sendo os índices 5, 6 e 7 (o tema das docas entrou no fim e é aberto).
+        public static bool Closed(int theme) => theme>=OpenThemes&&theme<OpenThemes+ClosedThemes;
         // Sorteado (-1): só os abertos; o labirinto é escolhido no menu (Cripta, Biblioteca, Jardim).
         public static int Theme(MatchSetup setup) => setup.theme>=0?setup.theme%Themes.Length:(int)((setup.seed*2654435761u)>>16)%OpenThemes;
         // Gera pelo cenário de s.theme (já escolhido): aberto ou fechado.
@@ -42,6 +45,7 @@ namespace ArenaTatica.Core
                 foreach(var c in ZoneRing(s)) s.At(c).height=1;
                 Center(s,true);
                 for(int slot=0;slot<s.players;slot++) foreach(var c in Spawns(s,slot)) ClearAround(s,c);
+                if(s.theme==DocksTheme) Docks(s);
                 if(SpawnsConnected(s)&&Keep(s,best)) return;
             }
             if(Restore(s,best)) return;
@@ -409,6 +413,42 @@ namespace ArenaTatica.Core
         static void ClearAround(MatchState s,Cell c)
         {
             for(int x=-1;x<=1;x++) for(int z=-1;z<=1;z++) { var n=c+new Cell(x,z); if(Board.Contains(s,n)) { var t=s.At(n); t.terrain=Terrain.Livre; t.height=0; t.obj=0; } }
+        }
+        // ── Docas inundadas (expansão de 22/10): canal de água ligando as duas entradas, passarelas secas em cima e embaixo,
+        // travessias secas e caixotes/pilares nas margens. Nunca alaga a loja (nem a volta dela), a zona, as casas de início
+        // (nem a volta delas) nem casa com objeto: assim nenhum spawn e nenhuma barraca ficam presos. ──
+        static bool DocksDry(MatchState s,Cell c)
+        {
+            var t=s.At(c);
+            if(t.terrain!=Terrain.Livre||t.obj!=0||t.zone||t.lava||t.coins>0) return true;
+            foreach(var sc in ShopCells(s)) if(Math.Abs(c.x-sc.x)+Math.Abs(c.z-sc.z)<=1) return true;
+            foreach(var zc in ZoneRing(s)) if(c==zc) return true;
+            for(int slot=0;slot<s.players;slot++) foreach(var sc in Spawns(s,slot)) if(Math.Abs(c.x-sc.x)+Math.Abs(c.z-sc.z)<=1) return true;
+            return false;
+        }
+        static void Docks(MatchState s)
+        {
+            int mid=s.height/2,half=Math.Max(2,s.height/3);
+            var canal=new List<Cell>();
+            for(int x=0;x<s.width;x++) for(int dz=-half;dz<=half;dz++)
+            {
+                var c=new Cell(x,mid+dz);
+                if(Board.Contains(s,c)&&!DocksDry(s,c)) canal.Add(c);
+            }
+            foreach(var c in canal) { var t=s.At(c); t.terrain=Terrain.Agua; t.height=0; t.obj=0; }
+            // Duas travessias secas sobre o canal: dão a volta a pé sem gastar o dobro o tempo todo.
+            foreach(int x in new[]{1,s.width-2}) for(int dz=-half;dz<=half;dz++)
+            {
+                var c=new Cell(x,mid+dz); if(Board.Contains(s,c)) { var t=s.At(c); t.terrain=Terrain.Livre; t.height=0; }
+            }
+            // Caixotes e pilares nas margens secas.
+            int crates=Math.Max(2,s.width/4);
+            for(int i=0;i<crates;i++)
+            {
+                var c=new Cell(Dice.Range(s,s.width),Dice.Range(s,s.height));
+                if(!Board.Contains(s,c)||DocksDry(s,c)||Math.Abs(c.z-mid)<=half) continue;
+                var t=s.At(c); t.terrain=Terrain.Caixa; t.height=0;
+            }
         }
         static bool SpawnsConnected(MatchState s)
         {

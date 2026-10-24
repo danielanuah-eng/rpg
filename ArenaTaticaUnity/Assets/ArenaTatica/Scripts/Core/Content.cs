@@ -4,7 +4,7 @@ using System.Linq;
 namespace ArenaTatica.Core
 {
     // Números iniciais; o balanceamento vem depois. Kits do elenco descritos pelo autor em 10/10 (DESIGN-KROSMASTER.md, passo 7).
-    public static class Content
+    public static partial class Content
     {
         public static readonly Dictionary<string,FighterDef> Fighters=new Dictionary<string,FighterDef>
         {
@@ -39,16 +39,19 @@ namespace ArenaTatica.Core
                     new SkillDef { id="camaleao-pistola", name="Camaleão: pistola", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="pistola", anim="morph", freeSwap=true },
                     new SkillDef { id="camaleao-canhao", name="Camaleão: canhão", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="canhao", anim="morph", freeSwap=true },
                     new SkillDef { id="camaleao-martelo", name="Camaleão: martelo", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="martelo", anim="morph", freeSwap=true } } },
-            // Ilusionista: começa com uma cópia ilusória (4 PV); ilusões tiram PM; Espelho primordial reflete no inimigo o último ataque dele.
-            ["ezequiela"]=new FighterDef { id="ezequiela", name="Ezequiela", sprites="Ezequiela", hp=9, pa=6, pm=3, initiative=4, level=3, illusion=true, skills=new[] {
-                new SkillDef { id="ilusao-confusa", name="Ilusão confusa", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=2, pmLoss=1, modifiable=true },
-                new SkillDef { id="espelho-primordial", name="Espelho primordial", kind=SkillKind.Espelho, pa=3, minRange=1, maxRange=6, cooldown=3, ultimate=true, sight=false, anim="mirror" } } },
+            // Ezequiela: duas ilusões iniciais de 1 PV; espelho inverte efeitos ativos e novos.
+            ["ezequiela"]=new FighterDef { id="ezequiela", name="Ezequiela", sprites="Ezequiela", hp=6, pa=6, pm=3, initiative=4, level=3, illusion=true, illusionCount=2, skills=new[] {
+                new SkillDef { id="ilusao-confusa", name="Ilusão confusa", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=2, pmLoss=2, modifiable=true },
+                new SkillDef { id="espelho-primordial", name="Espelho primordial", kind=SkillKind.Suporte, pa=3, minRange=1, maxRange=6, cooldown=2, invertTurns=2, hits=(int)(Hit.Aliado|Hit.Inimigo), sight=false, anim="mirror" },
+                new SkillDef { id="copia-ezequiela", name="Cópia", kind=SkillKind.Invocacao, summon="ilusao", pa=2, minRange=1, maxRange=2, maxActive=2, perMatch=3, perTurn=1, anim="summon" },
+                new SkillDef { id="medo-ezequiela", name="Fear", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=2, damage=0, push=4, perMatch=1, anim="fear" },
+                new SkillDef { id="portal-ezequiela", name="Portal", kind=SkillKind.Portal, pa=2, minRange=0, maxRange=6, sight=false, minRound=2, perMatch=1, ultimate=true, turns=2, anim="portal" } } },
             ["ilusao"]=new FighterDef { id="ilusao", name="Ilusão", sprites="Ezequiela", hp=4, pa=0, pm=3, level=0, picker=false, noReveal=true, skills=new SkillDef[0] },
             // Viking tanque: protege aliados perto; o Olho abissal o transforma por 3 turnos numa máquina de combate sem proteção, que pode errar.
             ["tchu-tcha"]=new FighterDef { id="tchu-tcha", name="Tchu tcha", sprites="TchuTcha", hp=15, pa=6, pm=2, initiative=1, level=5, guard=true, startForm="normal",
                 forms=new[] {
                     new FormDef { id="normal", name="Normal", armor=1 },
-                    new FormDef { id="berserk", name="Berserk", sprites="TchuTchaBerserk", pa=2, pm=2, armor=0, noGuard=true } },
+                    new FormDef { id="berserk", name="Berserk", sprites="TchuTchaBerserk", pa=2, pm=2, armor=0, noGuard=true, effectImmune=true, reflectDamage=1 } },
                 skills=new[] {
                     new SkillDef { id="escudada", name="Escudada", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, pmLoss=1, form="normal" },
                     new SkillDef { id="olho-abissal", name="Olho abissal", kind=SkillKind.Forma, pa=2, minRange=0, maxRange=0, sight=false, toForm="berserk", turns=3, perMatch=1, ultimate=true, form="normal", anim="transform" },
@@ -161,7 +164,7 @@ namespace ArenaTatica.Core
                 new SkillDef { id="esporos", name="Esporos", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=1, paLoss=1, perTurn=1 } } },
             // ── Elenco de 20/10 (pedido do autor). PV, Iniciativa, Nível e números que o autor não deu são provisórios. ──
             // Pirata das trevas: anula tudo no alvo, tira PA de quem fica perto, engole alguém no buraco negro e corta o mapa em linha.
-            ["pele-negra"]=new FighterDef { id="pele-negra", name="Pele D. N", sprites="PeleNegra", hp=14, pa=6, pm=2, initiative=2, level=5, fieldPa=3, fieldRange=1, meleeWeak=1, skills=new[] {
+            ["pele-negra"]=new FighterDef { id="pele-negra", name="Pele D. Ark", sprites="PeleNegra", hp=14, pa=6, pm=2, initiative=2, level=5, fieldPa=3, fieldRange=1, meleeWeak=1, skills=new[] {
                 new SkillDef { id="nulification", name="Nulification", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, dispel=true, anim="attack" },
                 new SkillDef { id="black-hole", name="Black Hole", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=0, prison=1, banish=true, returnDamage=3, cooldown=3, hits=(int)(Hit.Inimigo|Hit.Aliado), anim="cast" },
                 new SkillDef { id="light-speed", name="Light Speed", kind=SkillKind.Teleporte, pa=3, minRange=1, maxRange=3, line=true, sight=false, pmRange=true, perTurn=1, anim="teleport" } } },
@@ -200,11 +203,13 @@ namespace ArenaTatica.Core
                 new SkillDef { id="cat-a-clisma", name="Cat-a-Clisma", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=0, consumeMarks=true, perMatch=1, ultimate=true, anim="ult" } } },
             // Vampiro moderno (21/10: visual de motoqueiro): fareja sangue (anda o dobro até quem está ferido), todo golpe cura, acertar
             // ferido dá PM e Transformar em Vampiro levanta uma Cria Vampírica (o visual antigo de Drácula).
-            ["daemion"]=new FighterDef { id="daemion", name="Daemion", sprites="Daemion", hp=12, pa=6, pm=3, initiative=5, level=5, bloodScent=true, lifesteal=3, bloodlust=2, skills=new[] {
+            // Nome exibido Damon (autor 22/10); o id "daemion" fica (DungeonBDX, rede e saves usam o id).
+            ["daemion"]=new FighterDef { id="daemion", name="Damon", sprites="Daemion", hp=12, pa=6, pm=3, initiative=5, level=5, bloodScent=true, lifesteal=3, bloodlust=2, skills=new[] {
                 new SkillDef { id="mordida-vampirica", name="Mordida vampírica", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, anim="attack" },
                 new SkillDef { id="lanca-de-sangue", name="Lança de sangue", kind=SkillKind.Dano, pa=4, minRange=2, maxRange=4, damage=2, perTurn=1, anim="blood" },
                 new SkillDef { id="transformar-em-vampiro", name="Transformar em Vampiro", kind=SkillKind.Invocacao, pa=4, minRange=1, maxRange=2, sight=false, summon="cria-vampirica", maxActive=2, cooldown=3, anim="summon" } } },
-            ["cria-vampirica"]=new FighterDef { id="cria-vampirica", name="Cria Vampírica", sprites="CriaVampirica", hp=6, pa=6, pm=3, level=0, picker=false, lifesteal=1, skills=new[] {
+            // O zumbi do Damon: PV máximo pelo número de jogadores (2=2, 3=4, 4=6, 5+=6; autor 22/10).
+            ["cria-vampirica"]=new FighterDef { id="cria-vampirica", name="Cria Vampírica", sprites="CriaVampirica", hp=6, hpByPlayers=new[]{2,4,6,6}, pa=6, pm=3, level=0, picker=false, lifesteal=1, skills=new[] {
                 new SkillDef { id="garras-da-cria", name="Garras da cria", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2 } } },
             // Ellie, a Sangrenta (21/10): sombras sorteadas a cada turno dela; salta entre elas e emerge colada no inimigo.
             ["ellie"]=new FighterDef { id="ellie", name="Ellie, a Sangrenta", sprites="Ellie", hp=9, pa=6, pm=4, initiative=7, level=4, shadowMin=4, shadowMax=10, shadowBonus=3, shadowDodge=50, exposed=true, skills=new[] {
@@ -212,13 +217,15 @@ namespace ArenaTatica.Core
                 new SkillDef { id="passo-das-sombras", name="Teleporte entre sombras", kind=SkillKind.Teleporte, pa=3, minRange=0, maxRange=1, global=true, shadowStep=true, gainPm=5, sight=false, perTurn=1, anim="teleport" } } },
             // ── Extras de 21/10 (fotos do autor). Nomes que o autor não deu e todos os números são provisórios. ──
             // Pistoleira: duas pistolas fantasmas, braços espectrais gigantes que socam e atordoam, e a bala que empurra.
-            ["pistoleira"]=new FighterDef { id="pistoleira", name="Pistoleira Fantasma", sprites="Pistoleira", hp=10, pa=6, pm=3, initiative=6, level=4, skills=new[] {
+            // Qualquer dano dela numa invocação inimiga mata na hora (autor 22/10).
+            ["pistoleira"]=new FighterDef { id="pistoleira", name="Pistoleira Fantasma", sprites="Pistoleira", hp=10, pa=6, pm=3, initiative=6, level=4, summonSlayer=true, skills=new[] {
                 new SkillDef { id="pistolas-espectrais", name="Pistolas espectrais", kind=SkillKind.Dano, pa=3, minRange=2, maxRange=5, damage=2, precise=true, perTurn=2, anim="attack" },
                 new SkillDef { id="bracos-fantasmas", name="Braços fantasmas", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=4, anim="punch" },
                 new SkillDef { id="agarrao-espectral", name="Agarrão espectral", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=3, damage=1, stun=1, cooldown=3, anim="punch" },
                 new SkillDef { id="bala-de-impacto", name="Bala de impacto", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=1, push=2, anim="attack" } } },
-            // Homem dos Espelhos: tira buffs de inimigos e males de aliados, sela ultimates, devolve um golpe e revela escondidos de longe.
-            ["espelhos"]=new FighterDef { id="espelhos", name="Homem dos Espelhos", sprites="Espelhos", hp=11, pa=6, pm=3, initiative=5, level=5, skills=new[] {
+            // Reflectius (antes Homem dos Espelhos; id "espelhos" mantido): tira buffs de inimigos e males de aliados, sela ultimates,
+            // devolve um golpe e revela escondidos de longe.
+            ["espelhos"]=new FighterDef { id="espelhos", name="Mirhor", sprites="Espelhos", hp=11, pa=6, pm=3, initiative=5, level=5, skills=new[] {
                 new SkillDef { id="estilhaco", name="Estilhaço", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=2, anim="shatter" },
                 new SkillDef { id="espelho-purificador", name="Espelho purificador", kind=SkillKind.Dano, pa=2, minRange=0, maxRange=4, damage=0, purge=true, cleanse=true, cooldown=1, hits=(int)(Hit.Si|Hit.Inimigo|Hit.Aliado), anim="reflect" },
                 new SkillDef { id="selar-ultimate", name="Selar ultimate", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=5, damage=0, sealUlt=3, cooldown=3, anim="cast" },
@@ -230,8 +237,8 @@ namespace ArenaTatica.Core
                 new SkillDef { id="portal-do-mordomo", name="Portal do mordomo", kind=SkillKind.Portal, pa=3, minRange=1, maxRange=6, sight=false, turns=2, alliesOnly=true, cooldown=2, anim="cast" },
                 new SkillDef { id="cha-protetor", name="Chá protetor", kind=SkillKind.Suporte, pa=3, minRange=0, maxRange=0, sight=false, selfArea=true, area=2, buffImmune=true, turns=1, cooldown=3, anim="cast" },
                 new SkillDef { id="explosao-do-cha", name="Explosão do chá", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=5, damage=0, doubleDamage=2, selfKill=true, perMatch=1, ultimate=true, anim="ult" } } },
-            // Homem Ganso Macho: só bate forte e aguenta; o bando inteiro anda +2.
-            ["ganso"]=new FighterDef { id="ganso", name="Homem Ganso Macho", sprites="Ganso", hp=18, pa=6, pm=3, initiative=1, level=5, armor=1,
+            // PatoMacho (antes Homem Ganso Macho; id "ganso" mantido): só bate forte e aguenta; o bando inteiro anda +2.
+            ["ganso"]=new FighterDef { id="ganso", name="PatoMacho", sprites="Ganso", hp=18, pa=6, pm=3, initiative=1, level=5, armor=1,
                 passives=new[] { new PassiveDef { name="Bando unido", stat=PassiveStat.PM, who=PassiveWho.AliadosESi, amount=2, range=0 } }, skills=new[] {
                 new SkillDef { id="socao-do-ganso", name="Socão", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=3, anim="attack" },
                 new SkillDef { id="pancada-do-ganso", name="Pancada do ganso", kind=SkillKind.Dano, pa=5, minRange=1, maxRange=1, damage=6, perTurn=1, anim="smash" } } },
@@ -249,7 +256,7 @@ namespace ArenaTatica.Core
                     new SkillDef { id="furia-crimson", name="Fúria", kind=SkillKind.Forma, pa=1, minRange=0, maxRange=0, sight=false, toForm="furia", turns=1, cooldown=2, form="normal", anim="rage" },
                     new SkillDef { id="troca-de-vida", name="Troca de vida", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=2, damage=0, swapHp=true, perMatch=1, ultimate=true, notForm="furia", hits=(int)(Hit.Inimigo|Hit.Aliado), anim="cast" } } },
             // Capitão Lendário: a Room (domo azul até metade do mapa, 3 turnos) leva o Shambles (lutadores e peças do mapa) a metade do mapa; espada negra fura armadura e corta a cura.
-            ["ikaito"]=new FighterDef { id="ikaito", name="Capitão Ikaito D. Razer", sprites="Ikaito", hp=11, pa=6, pm=3, initiative=6, level=5, legendary=true, startForm="normal",
+            ["ikaito"]=new FighterDef { id="ikaito", name="Capitão Ikaito D. Race", sprites="Ikaito", hp=11, pa=6, pm=3, initiative=6, level=5, legendary=true, startForm="normal",
                 forms=new[] { new FormDef { id="normal", name="Normal" }, new FormDef { id="room", name="Room", color="#3aa0ff", dome=-1, domePct=75 } },
                 skills=new[] {
                     new SkillDef { id="room", name="Room", kind=SkillKind.Forma, pa=3, minRange=0, maxRange=0, sight=false, toForm="room", turns=3, cooldown=5, anim="room" },
@@ -286,7 +293,34 @@ namespace ArenaTatica.Core
                 new SkillDef { id="revoada-de-morcegos", name="Revoada de morcegos", kind=SkillKind.Dano, pa=0, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=2, damage=1, drain=2, anim="blood" } } },
             ["replica-vampirica"]=new FighterDef { id="replica-vampirica", name="Réplica vampírica", sprites="CriaVampirica", hp=5, pa=6, pm=3, level=0, picker=false, neutral=true, skills=new[] {
                 new SkillDef { id="garras-da-replica", name="Garras da réplica", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=2 } } },
+            // Rei Thaagarys (batalha contra o chefe, autor 22/10; Boss.cs): 2×2, começa sentado no Trono e levanta no fim da rodada 1.
+            // Pool da IA = skills com weight (fase 1 = notForm duas-espadas, fase 2 = form duas-espadas) + movimento (boss.moveWeight).
+            // Fase 2 (≤ 50%): saca a segunda espada, 2 ações por turno e +1 uso de cada skill por turno. Números provisórios do Claude.
+            ["rei-thaagarys"]=new FighterDef { id="rei-thaagarys", name="Rei Thaagarys", sprites="ReiThaagarys", hp=50, pa=6, pm=3, level=0, picker=false, size=2, armor=1, immovable=true, startForm="espada",
+                boss=new BossDef { on=true, every=2, phase2=50, actions1=1, actions2=2, wake=1, moveWeight=3, hpPlayer=15 },
+                forms=new[] {
+                    new FormDef { id="trono", name="No trono", sprites="ReiThaagarysTrono", music="ansiedade", locked=true, unstoppable=true },
+                    new FormDef { id="espada", name="Espada real", sprites="ReiThaagarys", music="ira", locked=true, unstoppable=true },
+                    new FormDef { id="duas-espadas", name="Duas espadas", sprites="ReiThaagarysFase2", music="guerra", pa=4, pm=1, extra=1, locked=true, unstoppable=true } },
+                skills=new[] {
+                    new SkillDef { id="lamina-real", name="Lâmina real", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=4, perTurn=1, weight=6, anim="attack" },
+                    new SkillDef { id="passo-do-trono", name="Passo do trono", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=6, sight=false, cooldown=3, weight=2, anim="cast" },
+                    new SkillDef { id="chamado-da-guarda", name="Chamado da guarda", kind=SkillKind.Invocacao, pa=2, minRange=1, maxRange=2, sight=false, summon="guarda-do-trono", maxActive=2, cooldown=3, weight=2, anim="cast" },
+                    new SkillDef { id="decreto-do-caos", name="Decreto do caos", kind=SkillKind.Zona, pa=2, minRange=0, maxRange=0, sight=false, cataclysm=true, cooldown=4, weight=1, anim="cast" },
+                    new SkillDef { id="troca-da-coroa", name="Troca da coroa", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=4, sight=false, damage=0, swapHp=true, cooldown=5, weight=3, hits=(int)Hit.Inimigo, anim="cast" },
+                    new SkillDef { id="muralhas-do-labirinto", name="Muralhas do labirinto", kind=SkillKind.Zona, pa=2, minRange=1, maxRange=6, sight=false, area=2, walls=6, turns=2, cooldown=3, weight=2, anim="cast" },
+                    new SkillDef { id="olhar-do-rei", name="Olhar do rei", kind=SkillKind.Zona, pa=1, minRange=0, maxRange=0, sight=false, global=true, reveal=true, cooldown=2, weight=3, anim="cast" },
+                    new SkillDef { id="coroacao-renovada", name="Coroação renovada", kind=SkillKind.Zona, pa=2, minRange=0, maxRange=0, sight=false, resetUlts=true, cooldown=6, weight=1, anim="cast" },
+                    new SkillDef { id="vortice-real", name="Vórtice real", kind=SkillKind.Dano, pa=3, minRange=0, maxRange=0, sight=false, selfArea=true, foes=true, area=3, damage=2, pull=true, cooldown=2, weight=4, form="duas-espadas", anim="attack" } } },
+            ["guarda-do-trono"]=new FighterDef { id="guarda-do-trono", name="Guarda do Trono", sprites="EsqueletoLanceiro", hp=5, pa=6, pm=3, level=0, picker=false, skills=new[] {
+                new SkillDef { id="lanca-do-guarda", name="Lança do guarda", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=2 } } },
+            // Mob da Lua de Sangue (MapEvents): 1 PV, caça quem está até 4 casas e vaga sem alvo.
+            ["lobo-lua-de-sangue"]=new FighterDef { id="lobo-lua-de-sangue", name="Lobo da Lua de Sangue", sprites="LoboCinzas", hp=1, pa=6, pm=3, level=0, picker=false, neutral=true, noLock=true, aggro=4, roam=true, skills=new[] {
+                new SkillDef { id="mordida-sangrenta", name="Mordida sangrenta", kind=SkillKind.Dano, pa=4, minRange=1, maxRange=1, damage=2 } } },
         };
+        // Expansão de 22/10: registra as fichas novas (Content.InventoresLuna.cs) no dicionário acima. Fica como inicializador
+        // para rodar depois de Fighters (os inicializadores estáticos rodam na ordem de declaração).
+        static readonly bool lunaRegistered=RegisterLuna();
         public static readonly string[] Bosses={"chefe-dragao","chefe-necromante","chefe-rei-goblin","chefe-cria-vampirica"};
         // Biblioteca de skills genéricas (autor, 13/10): modelos prontos inspirados em D&D, Krosmaster e golpes de anime, montados
         // só com efeitos que o motor já tem. O editor copia a escolhida para a ficha (id novo) e o autor ajusta os números.
@@ -386,7 +420,7 @@ namespace ArenaTatica.Core
             defaults??=new Dictionary<string,FighterDef>(Fighters);
             foreach(var kv in defaults) Fighters[kv.Key]=kv.Value;
             if(json!="")
-                try { var e=UnityEngine.JsonUtility.FromJson<GameEdits>(json); foreach(var d in e?.fighters??new List<FighterDef>()) if(d!=null&&defaults.ContainsKey(d.id)) { d.size=defaults[d.id].size; Fighters[d.id]=Sanitize(d); } }
+                try { var e=UnityEngine.JsonUtility.FromJson<GameEdits>(json); foreach(var d in e?.fighters??new List<FighterDef>()) if(d!=null&&defaults.ContainsKey(d.id)) { d.size=defaults[d.id].size; if(d.id=="pele-negra"&&new[]{"Pele D. N","Pele D. Negra","Pele de Negra","Pele Negra"}.Contains(d.name)||d.id=="espelhos"&&new[]{"Reflectius","Homem dos Espelhos","Homem ods espelhos"}.Contains(d.name)) d.name=defaults[d.id].name; if(d.id=="ikaito"&&d.name=="Capitão Ikaito D. Razer") d.name=defaults[d.id].name; Fighters[d.id]=Sanitize(d); } }
                 catch(System.Exception) { json=""; }
             EditsJson=json; ClearCaches();
         }
@@ -397,14 +431,15 @@ namespace ArenaTatica.Core
         static string Reach(SkillDef sk) => sk.mapPct<=0||sk.mapPct==50?"metade":sk.mapPct+"%";
         public static FighterDef Sanitize(FighterDef d)
         {
-            d.hp=Clamp(d.hp,1,40); d.pa=Clamp(d.pa,0,12); d.pm=Clamp(d.pm,0,10); d.initiative=Clamp(d.initiative,0,20); d.level=Clamp(d.level,0,12); d.armor=Clamp(d.armor,0,5);
-            d.skills=(d.skills??new SkillDef[0]).Where(s=>s!=null&&!string.IsNullOrEmpty(s.id)).Take(8).ToArray();
+            bool boss=d.boss!=null&&d.boss.on; d.hp=Clamp(d.hp,1,boss?300:40); d.pa=Clamp(d.pa,0,12); d.pm=Clamp(d.pm,0,10); d.initiative=Clamp(d.initiative,0,20); d.level=Clamp(d.level,0,12); d.armor=Clamp(d.armor,0,5);
+            // 16 skills: a ficha do Desland tem 9 (5 de movimento do domínio de xadrez). O resto do limite continua igual.
+            d.skills=(d.skills??new SkillDef[0]).Where(s=>s!=null&&!string.IsNullOrEmpty(s.id)).Take(boss?12:16).ToArray();
             foreach(var s in d.skills)
             {
                 s.pa=Clamp(s.pa,0,12); s.damage=Clamp(s.damage,0,20); s.heal=Clamp(s.heal,0,20); s.minRange=Clamp(s.minRange,0,12); s.maxRange=Clamp(s.maxRange,s.minRange,s.kind==SkillKind.Comando||s.kind==SkillKind.Desejo?99:12);
                 s.area=Clamp(s.area,0,6); s.perTurn=Clamp(s.perTurn,0,5); s.cooldown=Clamp(s.cooldown,0,9); s.push=Clamp(s.push,0,6); s.prison=Clamp(s.prison,0,2);
                 s.pmLoss=Clamp(s.pmLoss,0,10); s.paLoss=Clamp(s.paLoss,0,6); s.buffPa=Clamp(s.buffPa,-6,6); s.buffPm=Clamp(s.buffPm,-6,6); s.buffArmor=Clamp(s.buffArmor,-3,4); s.turns=Clamp(s.turns,0,5); s.hits&=7;
-                s.amplify=Clamp(s.amplify,0,4); s.gainPm=Clamp(s.gainPm,0,10); s.stun=Clamp(s.stun,0,2); s.sealUlt=Clamp(s.sealUlt,0,5); s.doubleDamage=Clamp(s.doubleDamage,0,3); s.mark=Clamp(s.mark,0,5); s.pmCost=Clamp(s.pmCost,0,10); s.returnDamage=Clamp(s.returnDamage,0,20); s.perForm=Clamp(s.perForm,0,5); s.mapPct=Clamp(s.mapPct,0,100); s.hitsOut&=7;
+                s.amplify=Clamp(s.amplify,0,4); s.gainPm=Clamp(s.gainPm,0,10); s.stun=Clamp(s.stun,0,2); s.sealUlt=Clamp(s.sealUlt,0,5); s.doubleDamage=Clamp(s.doubleDamage,0,3); s.mark=Clamp(s.mark,0,5); s.pmCost=Clamp(s.pmCost,0,10); s.returnDamage=Clamp(s.returnDamage,0,20); s.perForm=Clamp(s.perForm,0,5); s.mapPct=Clamp(s.mapPct,0,100); s.hitsOut&=7; s.weight=Clamp(s.weight,0,20); s.walls=Clamp(s.walls,0,12);
                 if(s.ultimate&&s.perTurn==0&&s.perMatch==0&&s.cooldown==0) s.perMatch=1;
                 if(s.kind==SkillKind.Invocacao&&(string.IsNullOrEmpty(s.summon)||!s.summon.Split('|').All(Fighters.ContainsKey))) s.kind=SkillKind.Dano;
             }
@@ -413,6 +448,7 @@ namespace ArenaTatica.Core
             d.duelBonus=Clamp(d.duelBonus,0,6); d.duelRange=Clamp(d.duelRange,0,6); d.farImmune=Clamp(d.farImmune,0,12); d.fullHitHeal=Clamp(d.fullHitHeal,0,10); d.splitCount=Clamp(d.splitCount,0,4);
             if(!string.IsNullOrEmpty(d.split)&&(!Fighters.ContainsKey(d.split)||d.split==d.id)) d.split=null;
             d.fieldPa=Clamp(d.fieldPa,0,6); d.fieldRange=Clamp(d.fieldRange,0,4); d.meleeWeak=Clamp(d.meleeWeak,0,5); d.lifesteal=Clamp(d.lifesteal,0,10); d.bloodlust=Clamp(d.bloodlust,0,6);
+            if(boss) { var b=d.boss; b.every=Clamp(b.every,1,6); b.phase2=Clamp(b.phase2,0,99); b.actions1=Clamp(b.actions1,1,4); b.actions2=Clamp(b.actions2,1,4); b.wake=Clamp(b.wake,0,9); b.moveWeight=Clamp(b.moveWeight,0,20); b.hpPlayer=Clamp(b.hpPlayer,0,60); }
             d.passives=(d.passives??new PassiveDef[0]).Where(x=>x!=null).Take(8).ToArray();
             foreach(var x in d.passives) { x.amount=Clamp(x.amount,-5,5); x.range=Clamp(x.range,0,12); x.lonely=Clamp(x.lonely,0,12); }
             return d;
@@ -422,6 +458,7 @@ namespace ArenaTatica.Core
         public static string Describe(SkillDef sk)
         {
             if(sk==null) return "";
+            string luna=DescribeLuna(sk);if(luna!=null)return luna;
             string area=sk.selfArea?"em volta de si":sk.kind==SkillKind.Comando?"ordem a um gato":sk.global?"mapa todo":sk.halfMap&&!string.IsNullOrEmpty(sk.halfMapIn)?$"alcance {sk.minRange}–{sk.maxRange} ({Reach(sk)} do mapa na forma {sk.halfMapIn})":sk.halfMap?Reach(sk)+" do mapa":sk.minRange==sk.maxRange?$"alcance {sk.maxRange}":$"alcance {sk.minRange}–{sk.maxRange}";
             var e=new List<string>();
             switch(sk.kind)
@@ -461,8 +498,9 @@ namespace ArenaTatica.Core
             if(sk.gainPm>0) e.Add($"+{sk.gainPm} PM para quem usa"); if(sk.stun>0) e.Add($"atordoa {sk.stun} turno");
             if(sk.purge) e.Add("tira os buffs dos inimigos"); if(sk.cleanse) e.Add("tira condições ruins dos aliados");
             if(sk.sealUlt>0) e.Add($"sela as ultimates do inimigo por {sk.sealUlt} turnos e desfaz a transformação"); if(sk.buffReflect) e.Add("o próximo golpe que não o derrubar volta em quem bateu");
+            if(sk.invertTurns>0) e.Add($"inverte buffs e debuffs ativos e novos por {sk.invertTurns} turnos");
             if(sk.buffImmune) e.Add("imunes a efeitos negativos"); if(sk.doubleDamage>0) e.Add($"o alvo leva o dobro dos golpes por {sk.doubleDamage} turnos"); if(sk.selfKill) e.Add("quem usa cai logo depois");
-            if(sk.beam) e.Add("para no 1º lutador, em obstáculo ou chão mais alto"); if(sk.swapHp) e.Add("troca os PV com o alvo"); if(sk.noRefresh) e.Add("o Eco ancestral não devolve"); if(sk.perForm>0) e.Add($"{sk.perForm}× por transformação");
+            if(sk.beam) e.Add("para no 1º lutador, em obstáculo ou chão mais alto"); if(sk.swapHp) e.Add("troca os PV com o alvo"); if(sk.walls>0) e.Add($"ergue até {sk.walls} paredes por {(sk.turns>0?sk.turns:2)} rodadas"); if(sk.resetUlts) e.Add("reinicia as ultimates e recargas de todos"); if(sk.cataclysm) e.Add("dispara um evento aleatório"); if(sk.weight>0) e.Add($"peso {sk.weight} na IA do chefe"); if(sk.noRefresh) e.Add("o Eco ancestral não devolve"); if(sk.perForm>0) e.Add($"{sk.perForm}× por transformação");
             if(sk.kind==SkillKind.Aura) return $"{sk.name}: {string.Join(", ",e)}.";
             if(sk.heal>0&&sk.kind==SkillKind.Suporte) e.Add($"cura {sk.heal}");
             if(sk.buffArmor!=0) e.Add($"{Sign(sk.buffArmor)} armadura"); if(sk.buffPa!=0) e.Add($"{Sign(sk.buffPa)} PA"); if(sk.buffPm!=0) e.Add($"{Sign(sk.buffPm)} PM");
@@ -488,7 +526,7 @@ namespace ArenaTatica.Core
         static string Sign(int v) => v>0?"+"+v:v.ToString();
         public static string Describe(ShopDef d)
         {
-            if(d.skill!=null) return Describe(d.skill)+(d.uses>1?$" {d.uses} usos.":" 1 uso.");
+            if(d.skill!=null) return Describe(d.skill)+(d.uses<0?" Permanente.":d.uses>1?$" {d.uses} usos.":" 1 uso.");
             var parts=new List<string>();
             if(d.pa!=0) parts.Add($"+{d.pa} PA"); if(d.pm!=0) parts.Add($"+{d.pm} PM"); if(d.hp!=0) parts.Add($"+{d.hp} PV");
             if(d.armor!=0) parts.Add($"+{d.armor} armadura"); if(d.range!=0) parts.Add($"+{d.range} alcance");
@@ -500,12 +538,14 @@ namespace ArenaTatica.Core
         public static string Traits(FighterDef d)
         {
             var t=new List<string>();
-            if(d.legendary) t.Add("Lendária (1 por time)"); if(d.flying) t.Add("voa"); if(d.armor>0) t.Add($"ignora {d.armor} de dano de qualquer fonte");
+            string luna=LunaTraits(d);if(luna!=null)t.Add(luna);
+            if(d.legendary) t.Add("Lendária (limite configurável na partida)"); if(d.flying) t.Add("voa"); if(d.armor>0) t.Add($"ignora {d.armor} de dano de qualquer fonte");
             if(d.immovable) t.Add("imóvel (não é empurrado nem trocado)"); if(d.devour) t.Add("absorve a primeira skill de dano de qualquer entidade que morra no mapa (+1 PA no custo, guarda 2)");
             if(d.allyBonus>0) t.Add($"aliados até {d.auraRange} casas causam +{d.allyBonus}"); if(d.guard) t.Add("protege aliados até 2 casas (leva 1 do dano deles)");
             if(d.revive>0) t.Add($"renasce com {d.revive} PV no 1º nocaute"); if(d.steal>0) t.Add($"{d.steal}% de roubar 1 moeda ao acertar");
-            if(d.illusion) t.Add("começa com uma ilusão de 4 PV"); if(d.noTurn) t.Add("sem turno próprio"); if(d.noLock) t.Add("não trava");
+            if(d.illusion) t.Add($"começa com {d.illusionCount} ilusões de {(d.id=="ezequiela"?1:4)} PV"); if(d.noTurn) t.Add("sem turno próprio"); if(d.noLock) t.Add("não trava");
             if(d.healAura>0) t.Add($"cura {d.healAura} aliados até 2 casas no turno do dono"); if(d.neutral) t.Add("neutro (evento)");
+            if(d.aggro>0) t.Add($"caça quem está até {d.aggro} casas"); if(d.roam) t.Add("vaga sem rumo quando não há alvo");
             if(d.fieldPa>0) t.Add($"Nulification Field: inimigos até {d.fieldRange} casa{(d.fieldRange>1?"s":"")} (diagonal incluída) perdem {d.fieldPa} PA; saindo no mesmo turno, recuperam");
             if(d.meleeWeak>0) t.Add($"Yami-yami: leva +{d.meleeWeak} de golpes colados");
             if(d.bloodScent) t.Add("Cheiro de Sangue: andar até um inimigo com PV ≤ 50% custa metade dos PM");
@@ -540,6 +580,13 @@ namespace ArenaTatica.Core
             return d;
         }
         public static int MaxHp(Fighter f) => Def(f).hp+f.bonusHp;
+        // Cópias mantêm o orçamento da original, mas gastam seu próprio movimento.
+        public static int MaxPm(Fighter f,MatchState s)
+        {
+            var owner=f.def=="ilusao"&&f.summoner!=0?s.F(f.summoner):null;
+            var basis=owner!=null&&owner.def=="ezequiela"?owner:f;
+            return System.Math.Max(0,Def(basis).pm+basis.bonusPm+basis.buffs.Sum(b=>b.pm)+(Form(basis)?.pm??0)+Match.FromState(s).Passive(basis,PassiveStat.PM));
+        }
         public static FormDef Form(Fighter f) => Def(f).forms?.FirstOrDefault(x=>x.id==f.form);
         // Qualquer skill do jogo pelo id: de um lutador ou da loja (Espelho primordial e cargas).
         public static SkillDef AnySkill(string id) =>
@@ -560,7 +607,7 @@ namespace ArenaTatica.Core
             if(id.StartsWith(Stolen)) { var baseId=id.Substring(Stolen.Length); return f.stolen.Contains(baseId)?StolenSkill(f,baseId):null; }
             if(f.learned.Contains(id)) return AnySkill(id);
             if(f.wishReady&&System.Array.Exists(Wishes,w=>w.id==id)) return AnySkill(id);
-            return f.charges.Exists(c=>c.skill==id&&c.uses>0)?AnySkill(id):null;
+            return f.charges.Exists(c=>c.skill==id&&c.uses!=0)?AnySkill(id):null;
         }
     }
 }

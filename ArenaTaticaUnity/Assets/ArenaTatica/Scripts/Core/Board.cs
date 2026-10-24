@@ -72,7 +72,10 @@ namespace ArenaTatica.Core
         {
             var f=At(s,c); return f!=null&&!s.Ally(f.team,viewer.team)&&(f.hidden||!Match.Sees(s,viewer.team,f))?null:f;
         }
-        public static bool Walkable(MatchState s,Cell c,bool flying) { var t=s.At(c).terrain; return t==Terrain.Livre||(flying&&t==Terrain.Arbusto); }
+        // Água (Docas inundadas, expansão de 22/10) é caminhável para todos; o custo é que muda (StepCost).
+        public static bool Walkable(MatchState s,Cell c,bool flying) { var t=s.At(c).terrain; return t==Terrain.Livre||t==Terrain.Agua||(flying&&t==Terrain.Arbusto); }
+        // Água custa o dobro de um passo normal: metade do deslocamento.
+        public const int WaterCost=2;
         // Gancho de escalada (climber): subir 2 custa 1 e dá para subir 3 (2 PM). Casa congelada: +1 PM (voador não sente).
         // doors: conta a porta fechada como passagem (+1 PM de abrir); só para medir caminhos (gerador, bot, boss), nunca para andar.
         public static int StepCost(MatchState s,Cell a,Cell b,bool flying,bool climber=false,bool doors=false)
@@ -80,10 +83,21 @@ namespace ArenaTatica.Core
             if(!Contains(s,b)) return -1;
             int door=doors&&s.At(b).terrain==Terrain.Porta?1:0;
             if(door==0&&!Walkable(s,b,flying)) return -1;
-            if(flying) return 1+door;
+            if(flying) return 1+door+(s.At(b).terrain==Terrain.Agua?WaterCost-1:0);
+            int water=s.At(b).terrain==Terrain.Agua?WaterCost-1:0;
             int up=s.At(b).height-s.At(a).height, ice=s.At(b).frozenBy!=0?1:0;
-            if(climber) return up>=4?-1:(up==3?2:1)+ice+door;
-            return up>=3?-1:(up==2?2:1)+ice+door;
+            if(climber) return up>=4?-1:(up==3?2:1)+ice+door+water;
+            return up>=3?-1:(up==2?2:1)+ice+door+water;
+        }
+        // Passo com o orçamento que sobra (autor, 22/10): a água custa 2, mas quem tem só 1 unidade ainda faz UMA primeira
+        // casa de água. A unidade é consumida inteira: nunca sobra passo seco de graça. -1 = não dá.
+        public static int BudgetStep(MatchState s,Fighter f,Cell a,Cell b,int remaining,bool flying)
+        {
+            int cost=Step(s,f,a,b,flying,f.climber);
+            if(cost<=0) return -1;
+            if(cost<=remaining) return cost;
+            if(remaining==1&&cost==WaterCost&&s.At(b).terrain==Terrain.Agua&&a==f.cell) return 1;
+            return -1;
         }
         // Custo mínimo em PM até cada casa (Dijkstra com fila de prioridade: o labirinto de 42×42 tem 1764 casas);
         // int.MaxValue = inalcançável. Lutadores são obstáculos.
@@ -126,7 +140,7 @@ namespace ArenaTatica.Core
         public static int LockRisk(MatchState s,Fighter f,Cell c)
         {
             int n=0;
-            foreach(var e in s.fighters) if(e.Alive&&e!=f&&!s.Ally(e.team,f.team)&&!(e.hidden)&&e.prisoned==0&&!Content.Def(e).noLock&&Gap(e.cell,SizeOf(e),c,SizeOf(f))==1) n++;
+            foreach(var e in s.fighters) if(e.Alive&&e!=f&&!s.Ally(e.team,f.team)&&!(e.hidden)&&e.prisoned==0&&e.summoner==0&&!e.noLock&&!Content.Def(e).noLock&&Gap(e.cell,SizeOf(e),c,SizeOf(f))==1) n++;
             return n;
         }
         // Caminho (sprint 1, 2.1): dentro dos PM, primeiro o que passa por menos casas de Trava (cada inimigo colado conta 1;
@@ -149,8 +163,8 @@ namespace ArenaTatica.Core
                 var c=new Cell(i%s.width,i/s.width); int leave=i==start?0:Lock(i);
                 foreach(var d in Dirs)
                 {
-                    var nb=c+d; int cost=Step(s,f,c,nb,flying,f.climber);
-                    if(cost<=0||k+cost>budget||Crowded(s,f,nb)) continue;
+                    var nb=c+d; int cost=BudgetStep(s,f,c,nb,budget-k,flying);
+                    if(cost<=0||Crowded(s,f,nb)) continue;
                     int j=Index(s,nb)*b+k+cost;
                     if(r+leave<risk[j]) { risk[j]=r+leave; prev[j]=i*b+k; }
                 }

@@ -17,6 +17,7 @@ namespace ArenaTatica.Core.Tests
         {
             foreach(int players in new[]{2,4,6}) for(int theme=MapGen.OpenThemes;theme<MapGen.Themes.Length;theme++) for(uint seed=1;seed<=12;seed++)
             {
+                if(!MapGen.Closed(theme)) continue; // Docas inundadas vêm depois dos fechados e são abertas.
                 var s=Closed(theme,players,seed).S; string where=$"{MapGen.Themes[theme]} {s.width}×{s.width} seed {seed}";
                 Assert.Greater(s.tiles.Count(t=>t.terrain==Terrain.Parede),s.tiles.Length/12,"tem paredes: "+where);
                 Assert.LessOrEqual(MapGen.Unfairness(s),2,"lados quase justos: "+where);

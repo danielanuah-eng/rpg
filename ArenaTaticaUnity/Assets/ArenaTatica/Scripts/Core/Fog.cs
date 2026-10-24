@@ -16,6 +16,8 @@ namespace ArenaTatica.Core
             var seen=new bool[s.tiles.Length];
             foreach(var f in s.fighters) {
                 if(!f.Alive||!s.Ally(f.team,player)||!Board.Contains(s,f.cell)) continue;
+                int radar=Match.CelinosRadarRadius(s,f);
+                if(radar>0)for(int i=0;i<s.tiles.Length;i++){var n=new Cell(i%s.width,i/s.width);if(Board.Gap(f,n)<=radar)seen[i]=true;}
                 foreach(var c in Board.Footprint(f)) {
                     for(int x=-1;x<=1;x++) for(int z=-1;z<=1;z++) { var n=c+new Cell(x,z); if(Board.Contains(s,n)) seen[Board.Index(s,n)]=true; }
                     // Dentro de uma sala vê a sala inteira, com as paredes e portas em volta (autor, 19/10).
