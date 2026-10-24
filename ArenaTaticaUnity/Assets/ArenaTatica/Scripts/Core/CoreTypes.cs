@@ -50,7 +50,7 @@ namespace ArenaTatica.Core
     // livre vizinha da saída.
     // Pulso (L.E.L.A, 20/10): dispara agora o efeito das passivas da forma atual nos aliados que elas pegam, multiplicado por
     // amplify, e o mesmo efeito volta no começo do próximo turno de cada aliado.
-    public enum SkillKind { Dano, Invocacao, Cura, Armadilha, Teleporte, Salto, Forma, Esconder, Espelho, Suporte, Zona, Comando, Reviver, Desejo, Aura, Troca, Portal, Pulso }
+    public enum SkillKind { Dano, Invocacao, Cura, Armadilha, Teleporte, Salto, Forma, Esconder, Espelho, Suporte, Zona, Comando, Reviver, Desejo, Aura, Troca, Portal, Pulso, GuardaDirecional, DoceSalgado }
     // As 3 bolinhas do editor (sprint 1): 🔵 si, 🔴 inimigos, 🟢 aliados. SkillDef.hits 0 = regra antiga de cada tipo.
     [Flags] public enum Hit { Padrao=0, Si=1, Inimigo=2, Aliado=4 }
     public enum ShopKind { Item, Magia, Pet, Armadilha, Buff }
@@ -81,6 +81,9 @@ namespace ArenaTatica.Core
         public bool ultimate;
         public string form, toForm, anim;
         public bool endsForm, precise, wild;
+        // Somnax: máximo explícito do dano-base (sorteado somente pelo Host); ignoreArmor conserva o dado Escudo.
+        public int maxDamage;
+        public bool ignoreArmor;
         // Efeitos genéricos (editor de skills): pierce ignora armadura e Escudo; push empurra N casas; pull puxa até colar;
         // paLoss: alvo perde PA no próximo turno; prison: preso N turnos (não age nem é alvo; escapa com Esquiva);
         // selfArea: área em volta de quem usa (square = as 8 casas); foes: a área só pega inimigos; isolatedBonus: dano a mais
@@ -154,7 +157,7 @@ namespace ArenaTatica.Core
     // family: grupo de autômatos (nikola, desland, nepturius, tubarao). techProtect: proteção tecnológica do Nikola e robôs.
     // invulnerable: não recebe dano nem habilidade de ninguém (esfera). waterOnly: só anda em água (tubarão).
     // survivesOwner: continua em campo quando o dono cai (robôs e esfera).
-    // Engrenagens: gearStep (bônus a cada N), gearDamage/gearRange/gearPm/gearReveal (bônus por passo), gearDrops (por turno),
+    // Engrenagens: gearStep (bônus a cada N), gearDamage/gearRange/gearPm/gearReveal (bônus por passo), gearDrops (por vez), gearEvery (a cada N rodadas; 1 = toda rodada),
     // gearSpecial (% de drop especial), gearMorph (engrenagens da transformação), gearHits (marcadores do drop).
     // Bifia: vivaTurns/vivaRadius/vivaInit/vivaPm. Desland: ecoCooldown/cloneTurns/chessTurns/pieceDamage.
     // Nepturius: auraRange/auraPa/auraPm, grabCount/grabRange, blastRadius/blastDamage, cubeDamage/cubeHeal, armorBuff/armorTurns.
@@ -163,7 +166,7 @@ namespace ArenaTatica.Core
     {
         public string family;
         public bool techProtect, invulnerable, waterOnly, survivesOwner;
-        public int gearStep=2, gearDamage=1, gearRange=1, gearPm, gearReveal, gearDrops=2, gearSpecial=20, gearMorph, gearHits=3, gearValue=1;
+        public int gearStep=2, gearDamage=1, gearRange=1, gearPm, gearReveal, gearDrops=2, gearEvery=1, gearSpecial=20, gearMorph, gearHits=3, gearValue=1;
         public int vivaTurns=2, vivaRadius=6, vivaInit=1, vivaPm=2;
         public int ecoCooldown=2, cloneTurns=1, chessTurns=2, pieceDamage=1;
         public int auraRange=4, auraPa=2, auraPm=1, grabCount=4, grabRange=4, blastRadius=3, blastDamage=2, cubeDamage=2, cubeHeal=2, armorBuff=1, armorTurns=1;
@@ -266,6 +269,11 @@ namespace ArenaTatica.Core
         public bool wishReady, anchored, climber, focused, focusUsed;
         // Aura do Baltazar: ligada e já paga neste turno (desligar e religar no mesmo turno não cobra nem aplica de novo).
         public bool auraOn, auraPaid;
+        // Guarda e Elo são estado de partida, serializado em snapshots e reconexão.
+        public bool directionalGuard, twinBondUsed;
+        public Cell guardDirection;
+        public string guardSkill;
+        public List<int> pactTargets=new List<int>(), renounceTargets=new List<int>();
         // Skill canalizada (SkillDef.channeled): "skill;x;z;x2;z2;slot", resolve no começo do próximo turno (vazio = nenhuma).
         public string channeling;
         public int lastDamageBy, inversionTurns, moveBudget;

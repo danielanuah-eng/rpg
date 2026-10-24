@@ -26,3 +26,8 @@ Revalide os hashes destes arquivos antes de integrar. Na integração, mesclar c
 
 ## Conflito com a integração do principal
 No principal, alterei `Core/Match.cs` (fim de `ViewFor`), `Core/Match.InventoresLuna.cs` (`RebuildTimelineKeepingSummons`, `LunaDeath`, `SharkSwim`) e `Tools/network-contract.mjs`, além de criar `Tests/Editor/Revisao020Tests.cs`. Revalide esses hashes antes de integrar o Somnax. Detalhes em `respostas/020-claude-revisao-inventores-lua-multiplayer.md`.
+
+## Integrado no principal (23/10, 1.2.13)
+- Mescla por hash contra `integracao/baseline-main.json`: 10 arquivos só da cópia + 203 novos copiados; `Match.cs`, `CoreTypes.cs`, `ArenaGame.cs`, `ClosedMapTests.cs` e `network-contract.mjs` mesclados à mão (Somnax + radar/engrenagens/marcas da revisão 020). `.meta` em conflito: ficou o do principal. Protocolo **15**.
+- Pedidos do autor na mesma versão: contador de engrenagens (ícone + ×N ao lado da vida) para Nikola/Blip/Blipware/Celinos; esfera do Nepturius flutua (só no desenho); radar do Celinos menor e translúcido; funilaria 3 engrenagens rodada sim, rodada não (`gearEvery`, editável); matriz fechada bloqueia qualquer skill/ataque e a saída só vale a partir do próximo turno; Roque em quaisquer dois aliados, sem limite de distância do Desland; rede de segurança que remove peças do xadrez se o domínio acabou.
+- EditMode no principal: **733/733**. Build Windows: Success, 0 erros.

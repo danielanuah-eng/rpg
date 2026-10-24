@@ -43,8 +43,8 @@ public class Revisao020Tests {
   Assert.IsEmpty(Match.EventsFor(ev,m.S,3)); Assert.IsNotEmpty(Match.EventsFor(ev,m.S,1));
   hid.cell=new Cell(m.S.width-2,m.S.height-2); Call(m,"RevealCelinos"); Assert.IsFalse(Match.OnRadar(m.S,1,hid),"saiu do raio, sai do radar");
  }
- // Autor (23/10): sem o tabuleiro, o Roque só alcança aliados no alcance da skill; com o domínio ligado, qualquer distância.
- [Test] public void RoqueNeedsRangeUnlessChessBoardIsOn(){
+ // Autor (23/10, 2ª decisão): o Roque vale para quaisquer duas unidades aliadas, a qualquer distância do Desland.
+ [Test] public void RoqueWorksOnAlliesAnywhere(){
   var m=Match.New(new MatchSetup{flatMap=true,seed=71,mode=VictoryMode.Eliminacao,players=new[]{new PlayerSetup{fighters=new[]{"desland","ciantia","talyssa"}},new PlayerSetup{fighters=new[]{"ciantia"}}}});
   foreach(var t in m.S.tiles){t.terrain=Terrain.Livre;t.obj=0;t.height=0;t.lava=false;}
   var d=m.S.fighters.First(x=>x.def=="desland"); var a=m.S.fighters.First(x=>x.team==1&&x!=d&&x.summoner==0); var b=m.S.fighters.Last(x=>x.team==1&&x!=d&&x.summoner==0);
@@ -53,8 +53,7 @@ public class Revisao020Tests {
   var sk=Content.Def(d).skills.First(s=>s.id=="roque"); object[] args={d,sk,a.cell,b.cell,null};
   var check=typeof(Match).GetMethod("RoqueCheck",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance);
   Assume.That(Board.Gap(d,a)>sk.maxRange);
-  Assert.IsFalse((bool)check.Invoke(m,args),"longe sem tabuleiro");
-  d.form="dominio"; Assert.IsTrue((bool)check.Invoke(m,args),(string)args[4]);
+  Assert.IsTrue((bool)check.Invoke(m,args),(string)args[4]);
  }
  // Autor (23/10): no domínio, mover um inimigo só uma vez por ultimate; aliados e peças, à vontade.
  [Test] public void ChessDomainMovesAnEnemyOnlyOncePerUltimate(){

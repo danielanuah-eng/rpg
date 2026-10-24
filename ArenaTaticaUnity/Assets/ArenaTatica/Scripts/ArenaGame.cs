@@ -17,7 +17,7 @@ namespace ArenaTatica
         // 11 (21/10): mensagem acima de ZipFrom caracteres vai comprimida ("Z"+base64 do gzip): fichas com muitas skills/edições
         // e times grandes passavam do limite do Relay (80 KB) e derrubavam os clientes.
         // 14: inventores/lua, estado das máquinas e terreno de água.
-        public int protocol=14;
+        public int protocol=15;
         public string kind, text, token;
         public string[] fighters; // hello: time escolhido no aparelho do jogador
         public string[] pool;     // hello/escolha: pool do torneio
@@ -905,7 +905,7 @@ namespace ArenaTatica
             // Sem o campo protocol o JsonUtility deixaria o valor padrão (o atual): mensagem sem versão é incompatível.
             if(!text.Contains("\"protocol\":")) m.protocol=0;
             if(m.state!=null&&!string.IsNullOrEmpty(m.state.packed)) { m.state.tiles=MatchState.Unpack(m.state.packed,m.state.width*m.state.height); m.state.packed=null; }
-            if(m.protocol!=14) {
+            if(m.protocol!=15) {
                 const string update="Versões diferentes. Atualize a Arena Tática nos dois aparelhos.";
                 if(Network.IsHost&&m.kind=="hello") Send(peer,new WireMessage{protocol=m.protocol,kind="full",text=update});
                 else if(Client) { Network.Close(); Recovery=true; Synced=false; Status=update; }

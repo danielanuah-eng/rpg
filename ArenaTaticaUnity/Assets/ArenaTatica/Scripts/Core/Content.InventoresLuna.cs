@@ -12,7 +12,7 @@ namespace ArenaTatica.Core
         {
             // ── NIKOLA (inventor): comanda dois autômatos e vive de engrenagens. ──
             Fighters["nikola"]=new FighterDef { id="nikola", name="Nikola", sprites="Nikola", hp=11, pa=6, pm=3, initiative=5, level=4,
-                luna=new LunaDef { family="nikola", techProtect=true, gearStep=2, gearDamage=1, gearRange=1, gearDrops=2, gearSpecial=20, gearHits=3 },
+                luna=new LunaDef { family="nikola", techProtect=true, gearStep=2, gearDamage=1, gearRange=1, gearDrops=3, gearEvery=2, gearSpecial=20, gearHits=3 },
                 skills=new[] {
                     new SkillDef { id="comando-blip", name="Comando: Blip", kind=SkillKind.Invocacao, effect="comando-blip", pa=3, minRange=0, maxRange=1, sight=false, anim="summon" },
                     new SkillDef { id="comando-celinos", name="Comando: Celinos", kind=SkillKind.Invocacao, effect="comando-celinos", pa=3, minRange=0, maxRange=99, sight=false, global=true, anim="cast" },

@@ -38,12 +38,13 @@ namespace ArenaTatica
             if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-qa-render")>=0) {
                 Screen.SetResolution(1280,720,false);
                 // O runner deste lote pode terminar o splash para capturar com a janela oculta.
-                if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-luna-qa")>=0)UnityEngine.Rendering.SplashScreen.Stop(UnityEngine.Rendering.SplashScreen.StopBehavior.StopImmediate);
+                if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-luna-qa")>=0||System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-somnax-qa")>=0)UnityEngine.Rendering.SplashScreen.Stop(UnityEngine.Rendering.SplashScreen.StopBehavior.StopImmediate);
                 float splashDeadline=Time.realtimeSinceStartup+20;
                 while(!UnityEngine.Rendering.SplashScreen.isFinished&&Time.realtimeSinceStartup<splashDeadline) yield return null;
                 if(!UnityEngine.Rendering.SplashScreen.isFinished) { Finish(false,"Splash não terminou para a captura de interface"); yield break; }
                 yield return new WaitForSeconds(.5f);
             }
+            if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-somnax-qa")>=0){yield return SomnaxGuardaQa();yield break;}
             if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-luna-qa")>=0){yield return InventoresLunaQa();yield break;}
             Debug.Log($"ARENA_SMOKE_FIXTURE: {game.Network.Role}, {game.Turns}, ativo {game.Active?.def}, time salvo isolado");
             if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"--arena-ux-qa")>=0) { yield return InteractionQa(); yield break; }

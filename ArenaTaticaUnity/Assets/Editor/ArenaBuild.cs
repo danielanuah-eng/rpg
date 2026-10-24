@@ -56,9 +56,10 @@ public static class ArenaBuild
     {
         if(!Directory.Exists("Assets/ArenaTatica/Resources/Sprites")) return;
         ArenaInventoresLunaImport.Apply();
+        ArenaSomnaxGuardaImport.Apply();
         var factory=new SpriteDataProviderFactories(); factory.Init();
         foreach(string file in Directory.GetFiles("Assets/ArenaTatica/Resources/Sprites","*.png",SearchOption.AllDirectories)) {
-            string path=file.Replace('\\','/'); if(ArenaEfeitosImport.IsManaged(path)||ArenaInventoresLunaImport.IsManaged(path)) continue;
+            string path=file.Replace('\\','/'); if(ArenaEfeitosImport.IsManaged(path)||ArenaInventoresLunaImport.IsManaged(path)||ArenaSomnaxGuardaImport.IsManaged(path)) continue;
             var importer=(TextureImporter)AssetImporter.GetAtPath(path); if(importer==null) continue;
             var pixels=new Texture2D(2,2); pixels.LoadImage(File.ReadAllBytes(path));
             // Projeteis/<skill>.png é uma imagem única (pode ser larga); o resto, tira de quadros quadrados.

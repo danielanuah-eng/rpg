@@ -36,7 +36,7 @@ namespace ArenaTatica
             public string folder;
             public Sprite[] still=new Sprite[8];
             public Dictionary<string,Sprite[][]> clips=new Dictionary<string,Sprite[][]>();
-            public int dir; public string clip="idle"; public float time; public bool reverse;
+            public int dir; public string clip="idle"; public float time; public float rate=1; public bool reverse,guardLocked;
             // Para onde o lutador olha no mundo; a câmera girada escolhe de novo o quadro (dir) a partir daqui.
             public Vector3 facing;
             // Pose da forma (FormDef.pose): parado, mostra o último quadro desse clipe no lugar do idle.
@@ -48,7 +48,7 @@ namespace ArenaTatica
         static float Fps(string clip) => clip!=null&&ClipFps.TryGetValue(clip,out float f)?f:DefaultFps;
         // Altura em casas de cada lutador no tabuleiro (os sprites têm o mesmo quadro de 128 px).
         static readonly Dictionary<string,float> Heights=new Dictionary<string,float>{
-            ["rei-thaagarys"]=3.7f, ["guarda-do-trono"]=1.8f, ["ciantia"]=1.6f, ["talyssa"]=1.6f, ["teantha"]=1.65f, ["devon"]=1.7f, ["diantus"]=1.6f, ["damian"]=1.6f,
+            ["rei-thaagarys"]=3.7f, ["guarda-do-trono"]=1.8f, ["somnax"]=1.6f, ["ciantia"]=1.6f, ["talyssa"]=1.6f, ["teantha"]=1.65f, ["devon"]=1.7f, ["diantus"]=1.6f, ["damian"]=1.6f,
             ["ezequiela"]=1.3f, ["ilusao"]=1.3f, ["tchu-tcha"]=1.85f, ["arqueiro-jack"]=1.6f, ["perry"]=1.2f, ["dragao-espectral"]=2f, ["lobo-de-cinzas"]=.8f, ["ossyro"]=1.8f,
             ["asamyh"]=1.5f, ["gato-laranja"]=.55f, ["gato-branco"]=.55f, ["gato-malhado"]=.55f, ["gato-manchado"]=.55f, ["colosso"]=3.1f, ["cheiro-pneu"]=2.1f, ["edgar"]=1.65f, ["navio-fantasma"]=2.1f,
             ["rei-bobett"]=1.5f, ["principe-kellen"]=1f, ["vespa-cinzenta"]=.8f, ["viuva-da-agulha"]=1.55f, ["guardiao-de-musgo"]=1.8f, ["domador-de-correntes"]=1.65f,
@@ -66,6 +66,7 @@ namespace ArenaTatica
         public static string SpriteFolder(Fighter f)
         {
             var d=Content.Def(f);
+            if(ShownId(f)=="tchu-tcha"&&Match.GuardActive(f)&&HasRig("TchuTchaGuarda")) return "TchuTchaGuarda";
             foreach(var form in new[]{Content.Form(f),d.forms?.FirstOrDefault(x=>x.id==d.startForm)}) if(HasRig(form?.sprites)) return form.sprites;
             return Shown(f).sprites;
         }
@@ -780,12 +781,13 @@ namespace ArenaTatica
                 else if(root.childCount>0&&rigs.TryGetValue(root.GetChild(0),out var rig)) rig.pose=Content.Form(f)?.pose;
             }
             foreach(var id in units.Keys.Where(id=>state.F(id)==null).ToList()) { if(units[id].childCount>0) rigs.Remove(units[id].GetChild(0)); Destroy(units[id].gameObject); units.Remove(id); }
-            RefreshHidden(state); SyncLuna(state); shownKey=null;
+            RefreshHidden(state); SyncLuna(state); SyncDirectionalGuards(state); shownKey=null;
         }
         // Fila de animações a 50% (muitas ações seguidas chegando): pula as que faltam e mostra direto o estado mais novo.
         public const int QueueCapacity=8;
         public void Play(List<GameEvent> events,MatchState state)
         {
+            QueueGlobalVoices(events,state);
             if(Ready&&queue.Count>=QueueCapacity/2) { Sync(state,true); return; }
             queue.Enqueue((events,Seen(state)));
             if(!running) StartCoroutine(RunQueue());
@@ -799,6 +801,7 @@ namespace ArenaTatica
                 // Invocação: o evento traz o id do invocado; a skill é a última de quem invocou.
                 var called=cast==null?events.FirstOrDefault(x=>x.kind=="invocar"&&x.actor!=0):null;
                 string voice=cast!=null?Content.BaseSkill(cast.info):called!=null?state?.F(called.actor)?.lastSkill:null;
+                BeginVoiceBatch(cast?.actor??called?.actor??0);
                 if(!string.IsNullOrEmpty(voice)) SkillVoice(voice);
                 foreach(var e in events) yield return Animate(e,state);
                 Sync(state,false);
@@ -845,8 +848,10 @@ namespace ArenaTatica
             }
             // Sprite: encara a câmera de frente (inclinado com ela: não achata nem atravessa blocos atrás); a direção do lutador escolhe o quadro.
             visual.localRotation=sprite?BoardCamera.transform.rotation:Quaternion.Euler(0,14.3f,0);
-            if(Shown(f).flying) visual.localPosition+=Vector3.up*.35f;
-            if(sprite) { lifts[visual]=Shown(f).flying?.35f:0; Plant(visual); }
+            // Esfera do Nepturius (autor 23/10): flutua acima da casa só no desenho; nas regras ela continua no chão.
+            float lift=f.def=="esfera-nepturius"?.6f:Shown(f).flying?.35f:0;
+            if(lift>0) visual.localPosition+=Vector3.up*lift;
+            if(sprite) { lifts[visual]=lift; Plant(visual); }
             foreach(var t in visual.GetComponentsInChildren<Transform>()) if(t.name.StartsWith("Wing")||t.name.StartsWith("Asa")) { wings.Add(t); wingRest[t]=t.localRotation; }
             // Indicador do pé: cor exata da facção. O clone ilusório não se tinge de violeta (isso o denunciaria);
             // só as demais invocações continuam puxando para o violeta.
@@ -866,6 +871,8 @@ namespace ArenaTatica
 
         IEnumerator Animate(GameEvent e,MatchState s)
         {
+            if(HandlesSomnaxVoiceEvent(e)) { yield return AnimateSomnaxVoiceEvent(e,s); yield break; }
+            EventVoice(e,s);
             if(HandlesLuna(e)) { yield return AnimateLuna(e,s); yield break; }
             units.TryGetValue(e.actor,out var actor);
             units.TryGetValue(e.target,out var target);
@@ -899,19 +906,21 @@ namespace ArenaTatica
                         bool main=e.dice!=null; float swing=0;
                         if(main) { Game.Hud?.RollDice(e.dice,new[]{"Ataque","Defesa"}); yield return Wait(ArenaHud.DiceLand); }
                         if(main) { Turn(actor,target.position-actor.position); swing=PlayClip(actor,Content.AnySkill(e.info)?.anim??"attack"); if(swing==0) swing=PlayClip(actor,"attack"); }
-                        if(swing>0) yield return Wait(swing*.5f);
+                        if(main&&Content.BaseSkill(e.info)=="ruptura-das-memorias") yield return RupturaGrid(e,s,swing);
+                        else if(swing>0) { float draw=StretchJackDraw(actor,Content.BaseSkill(e.info),swing); yield return Wait(draw); RestoreClipRate(actor); }
                         // À distância: o projétil/raio sai no quadro do disparo e o dano aparece quando ele chega.
                         var dealt=Content.AnySkill(e.info);
                         // Skill devorada pelo Colosso usa o projétil e as partículas da original.
                         string look=Content.BaseSkill(e.info);
                         bool burstStart=main||burst!=(e.actor,e.info); burst=(e.actor,e.info);
-                        if(main&&Vector3.Distance(Flat(actor.position),Flat(target.position))>1.5f) yield return Shot(look,actor.position,target.position,dealt?.area??0);
+                        if(main&&look!="ruptura-das-memorias"&&Vector3.Distance(Flat(actor.position),Flat(target.position))>1.5f) yield return Shot(look,actor.position,target.position,dealt?.area??0);
                         // Corpo a corpo e área: a fase de impacto toca no alvo e o dano entra no quadro da colisão (impactFrame0).
                         else if(e.value>=0&&ImpactPhase(look,out var blowRes) is Sprite[] blow) {
                             StartCoroutine(PlayEffect(blow,target.position+Vector3.up*.7f,ArenaEfeitos.Fps(blowRes,12)));
                             if(burstStart&&ArenaEfeitos.ImpactTime(blowRes) is float lag&&lag>0) yield return Wait(lag);
                         }
                         Sound("attack");
+                        if(e.value>0&&s.F(e.actor)?.def=="damian") PlayLine("damian_acerto",e.actor,true);
                         if(e.value<0) { Float(target.position,"Errou!",Blue); React(target,-1); }
                         else if(e.value>0||(dealt?.damage??1)>0) { Hit(target,actor.position,e.value,Style(look).color); Float(target.position,"−"+e.value,Gold); Turn(target,actor.position-target.position); React(target,e.value); }
                         if(swing>0) yield return Wait(swing*.4f); else if(main) yield return Pulse(actor);
@@ -920,8 +929,10 @@ namespace ArenaTatica
                         var ground=Position(s,e.cell); var miss=Content.AnySkill(e.info);
                         if(e.dice!=null) { Game.Hud?.RollDice(e.dice,new[]{"Ataque","Defesa"}); yield return Wait(ArenaHud.DiceLand); }
                         Turn(actor,ground-actor.position); float cast=PlayClip(actor,miss?.anim??"attack");
-                        if(cast==0) cast=PlayClip(actor,"attack"); if(cast>0) yield return Wait(cast*.5f);
-                        if(Vector3.Distance(Flat(actor.position),Flat(ground))>1.5f) yield return Shot(Content.BaseSkill(e.info),actor.position,ground,miss?.area??0);
+                        if(cast==0) cast=PlayClip(actor,"attack");
+                        if(Content.BaseSkill(e.info)=="ruptura-das-memorias") yield return RupturaGrid(e,s,cast);
+                        else if(cast>0) { yield return Wait(StretchJackDraw(actor,Content.BaseSkill(e.info),cast)); RestoreClipRate(actor); }
+                        if(Content.BaseSkill(e.info)!="ruptura-das-memorias"&&Vector3.Distance(Flat(actor.position),Flat(ground))>1.5f) yield return Shot(Content.BaseSkill(e.info),actor.position,ground,miss?.area??0);
                         else { PhaseFx(Content.BaseSkill(e.info)+"/impacto",ground+Vector3.up*.3f); Flash(ground+Vector3.up*.3f,Blue); }
                         Sound("attack"); Float(ground,miss?.kind==SkillKind.Dano?(miss.maxRange>1?"Disparo":"Golpe"):"Conjuração",Blue); if(cast>0) yield return Wait(cast*.4f);
                     }
@@ -936,8 +947,14 @@ namespace ArenaTatica
                         float t0=PlayClip(actor,clip);
                         if(e.kind=="teleporte") {
                             // Some girando a foice e reaparece do outro lado (o mesmo clipe ao contrário).
-                            Flash(from+Vector3.up,Green); yield return Wait(Mathf.Max(.25f,t0));
-                            actor.position=to; Flash(to+Vector3.up,Green); PlayClip(actor,clip,true); yield return Wait(Mathf.Max(.25f,t0));
+                            if(Content.BaseSkill(e.info)=="passo-do-crepusculo") {
+                                PhaseFx("passo-do-crepusculo/saida",from+Vector3.up*.5f); yield return Wait(Mathf.Max(.25f,t0));
+                                actor.gameObject.SetActive(false); actor.position=to; yield return Wait(.06f); actor.gameObject.SetActive(true);
+                                float arrival=PlayClip(actor,"blinkin"); PhaseFx("passo-do-crepusculo/chegada",to+Vector3.up*.5f); yield return Wait(Mathf.Max(.25f,arrival));
+                            } else {
+                                Flash(from+Vector3.up,Green); yield return Wait(Mathf.Max(.25f,t0));
+                                actor.position=to; Flash(to+Vector3.up,Green); PlayClip(actor,clip,true); yield return Wait(Mathf.Max(.25f,t0));
+                            }
                         } else {
                             float dur=Mathf.Max(.45f,t0);
                             for(float t=0;t<dur;t+=Time.deltaTime) { float k=t/dur; actor.position=Vector3.Lerp(from,to,k)+Vector3.up*Mathf.Sin(k*Mathf.PI)*.9f; yield return null; }
@@ -1032,6 +1049,10 @@ namespace ArenaTatica
                     Game.Hud?.Log($"{Name(s,e.actor)}: Dualidade guardiã {(e.info=="ativar"?"ligada":e.info=="manter"?"mantida (1 PA)":"desligada")}");
                     break;
                 case "cura":
+                    if(target&&Content.BaseSkill(e.info)=="doce-e-salgado") {
+                        PhaseFx("doce-e-salgado/cura",target.position+Vector3.up*.6f);Float(target.position,"+"+e.value,Green);
+                        yield return Wait(.35f);break;
+                    }
                     if(actor&&e.info=="totem-de-cura"&&!Playing(actor,"heal")) PlayClip(actor,"heal"); // um pulso do totem cura vários aliados
                     // Aura de gatinho e curas com arte: conjuração em quem cura, impacto no alvo; o número entra na colisão.
                     // Cura de skill em outro (Injection Shot do Ikaito): quem usa toca o clipe da skill antes do número.
@@ -1277,6 +1298,7 @@ namespace ArenaTatica
             direction.y=0; if(!unit||unit.childCount==0||direction==Vector3.zero) return;
             var model=unit.GetChild(0);
             if(!rigs.TryGetValue(model,out var rig)) { model.rotation=Quaternion.LookRotation(direction); return; }
+            if(rig.guardLocked) direction=rig.facing;
             var toCamera=-BoardCamera.transform.forward; toCamera.y=0; var right=BoardCamera.transform.right; right.y=0;
             float angle=Mathf.Atan2(Vector3.Dot(direction,right.normalized),Vector3.Dot(direction,toCamera.normalized))*Mathf.Rad2Deg;
             rig.facing=direction; rig.dir=((Mathf.RoundToInt(angle/45f)%8)+8)%8; ShowFrame(rig);
@@ -1419,25 +1441,25 @@ namespace ArenaTatica
             }
             var frames=ClipFrames(rig,out bool flip);
             if(frames==null) { rig.renderer.sprite=rig.still[rig.dir]; rig.renderer.flipX=false; return; }
-            int i=(int)(rig.time*Fps(rig.clip)); i=Loops(rig.clip)?i%frames.Length:Mathf.Min(i,frames.Length-1); if(rig.reverse) i=frames.Length-1-i;
+            int i=(int)(rig.time*RigFps(rig)); i=Loops(rig.clip)?i%frames.Length:Mathf.Min(i,frames.Length-1); if(rig.reverse) i=frames.Length-1-i;
             rig.renderer.sprite=frames[i]??rig.still[rig.dir]; rig.renderer.flipX=flip&&frames[i];
         }
         bool Playing(Transform unit,string clip) =>
-            unit&&unit.childCount>0&&rigs.TryGetValue(unit.GetChild(0),out var rig)&&rig.clip==clip&&ClipFrames(rig,out _) is Sprite[] fr&&rig.time*Fps(clip)<fr.Length;
+            unit&&unit.childCount>0&&rigs.TryGetValue(unit.GetChild(0),out var rig)&&rig.clip==clip&&ClipFrames(rig,out _) is Sprite[] fr&&rig.time*RigFps(rig)<fr.Length;
         // Começa um clipe e devolve sua duração (0 se o lutador não tem sprite ou não tem esse clipe).
         static bool Reaction(string clip) => clip=="hit"||clip=="absorb"||clip=="laugh";
         float PlayClip(Transform unit,string clip,bool reverse=false)
         {
             if(!unit||unit.childCount==0||!rigs.TryGetValue(unit.GetChild(0),out var rig)) return 0;
             // A reação (hit, absorb e laugh da Pele) não corta um golpe/skill no meio nem a caminhada; a morte sempre entra.
-            if(Reaction(clip)&&(rig.clip=="walk"||!Loops(rig.clip)&&!Reaction(rig.clip)&&rig.clip!="death"&&ClipFrames(rig,out _) is Sprite[] busy&&rig.time*Fps(rig.clip)<busy.Length)) return 0;
-            rig.clip=clip; rig.time=0; rig.reverse=reverse; var frames=ClipFrames(rig,out _);
+            if(Reaction(clip)&&(rig.clip=="walk"||!Loops(rig.clip)&&!Reaction(rig.clip)&&rig.clip!="death"&&ClipFrames(rig,out _) is Sprite[] busy&&rig.time*RigFps(rig)<busy.Length)) return 0;
+            rig.clip=clip; rig.time=0; rig.rate=1; rig.reverse=reverse; var frames=ClipFrames(rig,out _);
             // O Rei usa a mesma conjuração para suas skills e invocações.
             if(frames==null&&(clip=="cast"||clip=="summon")&&rig.clips.ContainsKey("event-cast")) {
                 rig.clip="event-cast"; frames=ClipFrames(rig,out _);
             }
             ShowFrame(rig);
-            return frames==null?0:frames.Length/Fps(rig.clip);
+            return frames==null?0:frames.Length/RigFps(rig);
         }
         // Reação do alvo a um golpe (autor 22/10): com dano, sempre o "hit"; bloqueado (0 de dano), tanka com "absorb" se tiver
         // (a Forma Preta da Pele); errou ou esquivou (−1), gargalha se tiver o "laugh".
@@ -1583,9 +1605,9 @@ namespace ArenaTatica
         {
             foreach(var rig in rigs.Values) {
                 if(!rig.renderer) continue;
-                rig.time+=Time.deltaTime;
+                rig.time+=Time.deltaTime*rig.rate;
                 var frames=ClipFrames(rig,out _);
-                if(frames!=null&&!Loops(rig.clip)&&!Holds(rig.clip)&&rig.time*Fps(rig.clip)>=frames.Length) { rig.clip="idle"; rig.time=0; }
+                if(frames!=null&&!Loops(rig.clip)&&!Holds(rig.clip)&&rig.time*RigFps(rig)>=frames.Length) { rig.clip="idle"; rig.time=0; }
                 ShowFrame(rig);
             }
         }
@@ -1976,17 +1998,21 @@ namespace ArenaTatica
         static readonly Dictionary<string,AudioClip> skillVoices=new Dictionary<string,AudioClip>();
         void SkillVoice(string skill)
         {
+            var generated=ArenaVoiceCatalog.ForSkill(skill);
+            if(generated!=null) { float end=PlayLine(generated,batchVoiceActor); if(generated=="jack_flecha_abissal") jackVoiceUntil=end; return; }
             if(!skillVoices.TryGetValue(skill,out var clip)) skillVoices[skill]=clip=Resources.Load<AudioClip>("Audio/Skills/"+skill);
             if(clip&&ArenaSom.Recorded) AudioSource.PlayClipAtPoint(clip,BoardCamera?BoardCamera.transform.position:Vector3.zero,1);
         }
         public void Sound(string name) { if(!sounds.TryGetValue(name,out var clip)||!clip) return; foreach(var source in voices) if(!source.isPlaying) { source.clip=clip; source.Play(); break; } }
         public void CancelAnimations()
         {
+            StopVoiceLines();
             StopAllCoroutines(); queue.Clear(); running=false; foreach(var item in transient) if(item) Destroy(item); transient.Clear();
             if(voices!=null) foreach(var source in voices) source.Stop();
         }
         public void ResetView(MatchState state)
         {
+            ResetGlobalVoices();
             CancelAnimations(); foreach(var u in units.Values) if(u) Destroy(u.gameObject); units.Clear(); wings.Clear(); wingRest.Clear(); rigs.Clear(); boardKey=null;
             if(Game.ViewerTeam>0&&state!=null) AutoView(state);
             Sync(state,true); FitCamera(); // partida nova começa com o tabuleiro inteiro na tela
@@ -2022,6 +2048,8 @@ namespace ArenaTatica
         class HpBar { public RectTransform root, fill, chip; public Text label, hpText; public float trail; }
         readonly Dictionary<int,HpBar> bars=new Dictionary<int,HpBar>();
         readonly Dictionary<int,Text> markIcons=new Dictionary<int,Text>();
+        readonly Dictionary<int,Text> gearIcons=new Dictionary<int,Text>();
+        Sprite gearSprite;
         ArenaMusica music;
         static bool Boss(Fighter f) => f.team==MatchState.Neutral&&Content.MaxHp(f)>=12;
         // Barra acima da cabeça (autor 22/10): topo do desenho do quadro atual (vértice mais alto da malha justa, sem a folga
@@ -2114,6 +2142,23 @@ namespace ArenaTatica
                         icon.horizontalOverflow=HorizontalWrapMode.Overflow; icon.rectTransform.sizeDelta=new Vector2(17,17); markIcons[kv.Key]=icon;
                     }
                     icon.transform.parent.gameObject.SetActive(f.marks>0); icon.text=f.marks.ToString();
+                }
+                // Engrenagens da família do Nikola (autor 23/10): engrenagem pequena à direita da barra com a quantidade (começa em 0).
+                int gearOwner=f.def=="nikola"?f.id:(f.def=="blip"||f.def=="blipware"||f.def=="celinos")?f.summoner:0;
+                if(gearOwner>0) {
+                    if(!gearIcons.TryGetValue(kv.Key,out var count)||!count) {
+                        float size=bar.root.sizeDelta.y+6;
+                        var gear=new GameObject("Engrenagens",typeof(RectTransform),typeof(Image)).GetComponent<RectTransform>(); gear.SetParent(bar.root,false);
+                        gear.anchorMin=gear.anchorMax=new Vector2(1,.5f); gear.pivot=new Vector2(0,.5f); gear.sizeDelta=new Vector2(size,size); gear.anchoredPosition=new Vector2(2,0);
+                        if(!gearSprite) gearSprite=Resources.LoadAll<Sprite>("Sprites/Efeitos/InventoresLuna/funilaria-engrenagem").OrderBy(x=>x.name,System.StringComparer.Ordinal).FirstOrDefault();
+                        var gi=gear.GetComponent<Image>(); gi.sprite=gearSprite; gi.preserveAspect=true; gi.raycastTarget=false; if(!gearSprite) gi.color=new Color(.98f,.78f,.2f);
+                        count=new GameObject("Quantidade",typeof(RectTransform),typeof(Text)).GetComponent<Text>(); count.transform.SetParent(gear,false);
+                        count.font=barFont; count.fontSize=12; count.fontStyle=FontStyle.Bold; count.alignment=TextAnchor.MiddleLeft; count.color=new Color(1,.85f,.3f); count.raycastTarget=false;
+                        count.horizontalOverflow=HorizontalWrapMode.Overflow; var cr=count.rectTransform; cr.anchorMin=cr.anchorMax=new Vector2(1,.5f); cr.pivot=new Vector2(0,.5f); cr.sizeDelta=new Vector2(30,size); cr.anchoredPosition=new Vector2(1,0);
+                        count.gameObject.AddComponent<Outline>().effectColor=new Color(0,0,0,1);
+                        gearIcons[kv.Key]=count;
+                    }
+                    count.text="×"+(s.Luna.families.FirstOrDefault(x=>x.owner==gearOwner)?.gears??0);
                 }
             }
         }
@@ -2251,7 +2296,7 @@ namespace ArenaTatica
             if(!Game.HasFirst) {
                 if(!Game.Preview.CanTarget(f,sk,c,out string reason)) { Game.Notify(reason); return; }
                 Game.FirstCell=c; Game.FirstFor=Game.Mode; shownKey=null;
-                Game.Notify(sk.kind==SkillKind.Portal?"Agora escolha a saída do portal.":sk.kind==SkillKind.Troca?"Agora escolha o segundo lutador.":"Agora escolha o destino.");
+                Game.Notify(sk.kind==SkillKind.DoceSalgado?"Escolha outro aliado ou Somnax para concluir.":sk.kind==SkillKind.Portal?"Agora escolha a saída do portal.":sk.kind==SkillKind.Troca?"Agora escolha o segundo lutador.":"Agora escolha o destino.");
                 return;
             }
             if(c==Game.FirstCell) { Game.FirstFor=""; shownKey=null; return; }
@@ -2271,6 +2316,7 @@ namespace ArenaTatica
             // Posicionamento: casas da borda que o herói escolhido (ou qualquer um, sem escolha) pode ocupar (verde) e ele (forte).
             if(Game.Placing) { if(!Game.CanPlace) return; foreach(var c in Game.Preview.PlaceCells(s.placing,s.F(Game.PlacePick))) Mark(c,moveMaterial); if(s.F(Game.PlacePick) is Fighter pick) Mark(pick.cell,targetMaterial); return; }
             if(!Game.CanAct||f==null||Game.Hud?.HasPendingConfirmation==true) return;
+            if(Game.Mode==""&&Match.GuardActive(f)) return;
             if(Game.Mode=="") {
                 if(s.Luna.machines.Any(machine=>machine.box.by==f.id&&machine.box.hp>0))return;
                 var costs=Board.Costs(s,f);

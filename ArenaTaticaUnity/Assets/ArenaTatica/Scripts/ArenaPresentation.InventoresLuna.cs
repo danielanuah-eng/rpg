@@ -55,9 +55,9 @@ public sealed partial class ArenaPresentation {
   }
   foreach(var f in s.fighters.Where(x=>x.Alive)) {
    if(!units.TryGetValue(f.id,out var actor)||!actor.gameObject.activeInHierarchy)continue;
-   int owner=f.def=="nikola"?f.id:(f.def=="blip"||f.def=="blipware"||f.def=="celinos")?f.summoner:0;
-   if(owner>0){int count=s.Luna.families.FirstOrDefault(x=>x.owner==owner)?.gears??0;float h=Heights.TryGetValue(f.def,out var height)?height:1.6f;LunaLabel("Engr. "+count,actor.position+Vector3.up*(h+.25f),new Color(.98f,.78f,.2f),lunaRoot,actor,.03f);}
-   if(f.def=="celinos") {var radar=LunaSprite("celinos-radar",actor.position+Vector3.up*.04f,2.3f,lunaRoot,true);if(radar){var a=radar.AddComponent<LunaAnchor>();a.target=actor;a.offset=Vector3.up*.04f;}}
+   // Contador de engrenagens: fica ao lado da barra de vida (ArenaPresentation.UpdateBars).
+   if(f.def=="celinos") {var radar=LunaSprite("celinos-radar",actor.position+Vector3.up*.04f,1.3f,lunaRoot,true);if(radar){radar.GetComponent<SpriteRenderer>().color=new Color(1,1,1,.4f);// autor 23/10: menor e discreto
+    var a=radar.AddComponent<LunaAnchor>();a.target=actor;a.offset=Vector3.up*.04f;}}
   }
   foreach(var mark in s.Luna.marks)if(units.TryGetValue(mark.id,out var marked)&&marked.gameObject.activeInHierarchy&&s.F(mark.id)?.Alive==true)LunaLabel("ALVO",marked.position+Vector3.up*2,Red,lunaRoot,marked);
   foreach(var machine in s.Luna.machines){var box=machine.box;if(box.hp<=0||!units.TryGetValue(box.by,out var actor))continue;var go=LunaSprite("matriz-protecao",actor.position+Vector3.up*.8f,1.9f,lunaRoot);if(go){var a=go.AddComponent<LunaAnchor>();a.target=actor;a.offset=Vector3.up*.8f;}LunaLabel("Matriz "+box.hp,actor.position+Vector3.up*2.45f,Blue,lunaRoot,actor);}

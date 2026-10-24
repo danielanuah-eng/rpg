@@ -557,6 +557,7 @@ namespace ArenaTatica
             if(!Game.CanAct) { confirm.Reset(); return; }
             if(!PressAction(ArenaActionConfirmation.Skill(sk.id),f)) { Game.Mode=""; return; } // 1º toque: só destaca
             if(Game.Mode==sk.id) { Game.Mode=""; return; }                                     // tocar de novo enquanto mira cancela a mira
+            if(sk.kind==SkillKind.GuardaDirecional&&Match.GuardActive(f)) { Game.Mode=""; Game.Submit("skill",f.cell,sk.id); return; }
             if(SelfOnly(sk)) { Game.Mode=""; Game.Submit("skill",f.cell,sk.id); return; }       // skill só em si mesma: executa agora
             Game.Mode=sk.id;                                                                    // skill com alvo: entra no modo de mira
         }
@@ -767,13 +768,13 @@ namespace ArenaTatica
                 var sk=skills[i]; var charge=f.charges.Find(c=>c.skill==sk.id);
                 var wait=f.cooldowns.Find(x=>x.skill==sk.id);
                 bool spent=sk.perMatch>0&&f.usedMatch.Count(u=>u==sk.id)>=sk.perMatch, early=sk.minRound>s.round;
-                string cost=sk.kind==SkillKind.Aura?(f.auraOn?"ligada · desligar":f.auraPaid?"religar":$"{sk.pa} PA/turno"):$"{sk.pa} PA";
+                string cost=sk.kind==SkillKind.GuardaDirecional?(Match.GuardActive(f)?"ativa · desligar":"escolher direção"):sk.kind==SkillKind.Aura?(f.auraOn?"ligada · desligar":f.auraPaid?"religar":$"{sk.pa} PA/turno"):$"{sk.pa} PA";
                 SetLabel(b,$"{sk.name} · {(spent?"usada":early?$"rodada {sk.minRound}":wait!=null?$"recarga {wait.uses}":cost)}{(charge!=null&&charge.uses>0?$" ×{charge.uses}":"")}");
-                b.interactable=Game.CanAct&&f.pa>=Match.Cost(f,sk,Game.State)&&wait==null&&!spent&&!early&&f.channel==0;
+                b.interactable=Game.CanAct&&f.pa>=Match.Cost(f,sk,Game.State)&&wait==null&&!spent&&!early&&f.channel==0&&Match.GuardAllowsSkill(f,sk,out _);
                 // Destaque do 1º toque (mira armada) e do modo de mira: o mesmo tom escolhido de sempre.
                 ArenaTema.Paint(b,Game.Mode==sk.id||Confirming(ArenaActionConfirmation.Skill(sk.id)),chosen,idle);
             }
-            move.interactable=Game.CanAct; pass.interactable=Game.CanAct||Game.CanPlace;
+            move.interactable=Game.CanAct&&!Match.GuardActive(f); pass.interactable=Game.CanAct||Game.CanPlace;
             ArenaTema.Paint(move,Game.Mode==""&&!confirm.Armed,new Color(.21f,.36f,.43f),idle);
             SetLabel(pass,Game.Placing?"Pronto  [Espaço]":Confirming(ArenaActionConfirmation.Pass)?"Toque novamente para passar":"Passar  [Espaço]");
             ArenaTema.Paint(pass,Confirming(ArenaActionConfirmation.Pass),chosen,idle);

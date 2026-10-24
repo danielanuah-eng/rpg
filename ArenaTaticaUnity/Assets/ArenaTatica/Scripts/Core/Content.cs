@@ -8,6 +8,13 @@ namespace ArenaTatica.Core
     {
         public static readonly Dictionary<string,FighterDef> Fighters=new Dictionary<string,FighterDef>
         {
+            // Somnax: ficha do autor, escala regular 1x1 e uma lendária por time.
+            ["somnax"]=new FighterDef { id="somnax", name="Somnax", sprites="Somnax", hp=11, pa=6, pm=4, initiative=6, level=5, armor=0, size=1, legendary=true, skills=new[] {
+                new SkillDef { id="pacto", name="Pacto", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=1, maxDamage=2, precise=true, perTurn=2, anim="pacto" },
+                new SkillDef { id="renuncia", name="Renúncia", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=1, maxDamage=2, ignoreArmor=true, perTurn=1, anim="renuncia" },
+                new SkillDef { id="passo-do-crepusculo", name="Passo do Crepúsculo", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=3, cooldown=2, sight=true, anim="blinkout" },
+                new SkillDef { id="doce-e-salgado", name="Doce e Salgado", kind=SkillKind.DoceSalgado, pa=5, minRange=0, maxRange=2, heal=2, perMatch=1, twoCells=true, hits=(int)(Hit.Si|Hit.Aliado), anim="support" },
+                new SkillDef { id="ruptura-das-memorias", name="Ruptura das Memórias", kind=SkillKind.Dano, pa=5, minRange=1, maxRange=3, area=1, square=true, foes=true, damage=5, perMatch=1, ultimate=true, anim="ult" } } },
             ["ciantia"]=new FighterDef { id="ciantia", name="Ciantia", sprites="Ciantia", hp=11, pa=6, pm=3, initiative=5, level=4, skills=new[] {
                 new SkillDef { id="dragao-dourado", name="Dragão Dourado", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=4, damage=2, line=true, modifiable=true },
                 new SkillDef { id="invocacao-dragao", name="Invocação de dragão", kind=SkillKind.Invocacao, pa=4, minRange=1, maxRange=2, perTurn=1, sight=false, summon="dragao-espectral", anim="summon" } } },
@@ -53,6 +60,7 @@ namespace ArenaTatica.Core
                     new FormDef { id="normal", name="Normal", armor=1 },
                     new FormDef { id="berserk", name="Berserk", sprites="TchuTchaBerserk", pa=2, pm=2, armor=0, noGuard=true, effectImmune=true, reflectDamage=1 } },
                 skills=new[] {
+                    new SkillDef { id="guarda-direcional", name="Guarda direcional", kind=SkillKind.GuardaDirecional, pa=0, minRange=0, maxRange=1, sight=false, area=2, buffArmor=1, anim="idle", form="normal" },
                     new SkillDef { id="escudada", name="Escudada", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, pmLoss=1, form="normal" },
                     new SkillDef { id="olho-abissal", name="Olho abissal", kind=SkillKind.Forma, pa=2, minRange=0, maxRange=0, sight=false, toForm="berserk", turns=3, perMatch=1, ultimate=true, form="normal", anim="transform" },
                     new SkillDef { id="furia-negra", name="Fúria negra", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=5, wild=true, form="berserk" } } },
@@ -436,7 +444,7 @@ namespace ArenaTatica.Core
             d.skills=(d.skills??new SkillDef[0]).Where(s=>s!=null&&!string.IsNullOrEmpty(s.id)).Take(boss?12:16).ToArray();
             foreach(var s in d.skills)
             {
-                s.pa=Clamp(s.pa,0,12); s.damage=Clamp(s.damage,0,20); s.heal=Clamp(s.heal,0,20); s.minRange=Clamp(s.minRange,0,12); s.maxRange=Clamp(s.maxRange,s.minRange,s.kind==SkillKind.Comando||s.kind==SkillKind.Desejo?99:12);
+                s.pa=Clamp(s.pa,0,12); s.damage=Clamp(s.damage,0,20); s.maxDamage=s.maxDamage>0?Clamp(s.maxDamage,s.damage,20):0; s.heal=Clamp(s.heal,0,20); s.minRange=Clamp(s.minRange,0,12); s.maxRange=Clamp(s.maxRange,s.minRange,s.kind==SkillKind.Comando||s.kind==SkillKind.Desejo?99:12);
                 s.area=Clamp(s.area,0,6); s.perTurn=Clamp(s.perTurn,0,5); s.cooldown=Clamp(s.cooldown,0,9); s.push=Clamp(s.push,0,6); s.prison=Clamp(s.prison,0,2);
                 s.pmLoss=Clamp(s.pmLoss,0,10); s.paLoss=Clamp(s.paLoss,0,6); s.buffPa=Clamp(s.buffPa,-6,6); s.buffPm=Clamp(s.buffPm,-6,6); s.buffArmor=Clamp(s.buffArmor,-3,4); s.turns=Clamp(s.turns,0,5); s.hits&=7;
                 s.amplify=Clamp(s.amplify,0,4); s.gainPm=Clamp(s.gainPm,0,10); s.stun=Clamp(s.stun,0,2); s.sealUlt=Clamp(s.sealUlt,0,5); s.doubleDamage=Clamp(s.doubleDamage,0,3); s.mark=Clamp(s.mark,0,5); s.pmCost=Clamp(s.pmCost,0,10); s.returnDamage=Clamp(s.returnDamage,0,20); s.perForm=Clamp(s.perForm,0,5); s.mapPct=Clamp(s.mapPct,0,100); s.hitsOut&=7; s.weight=Clamp(s.weight,0,20); s.walls=Clamp(s.walls,0,12);
@@ -463,7 +471,7 @@ namespace ArenaTatica.Core
             var e=new List<string>();
             switch(sk.kind)
             {
-                case SkillKind.Dano: if(sk.damage>0) e.Add($"{sk.damage} de dano"); break;
+                case SkillKind.Dano: if(sk.damage>0) e.Add(sk.maxDamage>sk.damage?$"{sk.damage}–{sk.maxDamage} de dano":$"{sk.damage} de dano"); break;
                 case SkillKind.Cura: e.Add($"cura {sk.damage}"); break;
                 case SkillKind.Armadilha: e.Add((sk.mine?"mina":"armadilha")+(sk.damage>0?$" de {sk.damage}":"")+(sk.mine?" (não para o movimento)":"")); break;
                 case SkillKind.Invocacao: e.Add("invoca "+string.Join(" ou ",(sk.summon??"").Split('|').Where(Fighters.ContainsKey).Select(x=>Fighters[x].name))); break;
@@ -486,9 +494,12 @@ namespace ArenaTatica.Core
                     if(sk.heal>0) e.Add($"cura {sk.heal} nos aliados"); if(sk.damage>0) e.Add($"{sk.damage} de dano nos inimigos");
                     e.Add($"até {sk.area} casas, 1 vez por turno");
                     break;
+                case SkillKind.GuardaDirecional: e.Add($"liga/desliga o escudo; aliados até {sk.area} casas ganham +{sk.buffArmor} armadura contra golpes vindos do lado defendido; não anda nem ataca; desligue antes de mudar direção"); break;
+                case SkillKind.DoceSalgado: e.Add($"cura {sk.heal} PV em Somnax e até dois aliados vivos; escolha um aliado e depois outro aliado ou Somnax para concluir"); break;
                 case SkillKind.Pulso: e.Add($"dispara o Modo atual ×{System.Math.Max(1,sk.amplify)} nos aliados da aura agora e de novo no começo do turno deles"); break;
             }
             if(sk.kind==SkillKind.Cura&&sk.drain>0) e.Add($"quem usa cura {sk.drain}");
+            if(sk.ignoreArmor) e.Add("ignora somente armadura; o dado Escudo funciona");
             if(sk.dispel) e.Add("anula formas, buffs, canalização e aura do alvo");
             if(sk.banish) e.Add($"buraco negro: o alvo some por {System.Math.Max(1,sk.prison)} turno (sem Esquiva){(sk.returnDamage>0?$"; inimigo leva {sk.returnDamage} ao voltar":"")}");
             if(sk.pmRange) e.Add("+1 alcance por PM; só gasta PM além do alcance base");
@@ -541,6 +552,7 @@ namespace ArenaTatica.Core
             string luna=LunaTraits(d);if(luna!=null)t.Add(luna);
             if(d.legendary) t.Add("Lendária (limite configurável na partida)"); if(d.flying) t.Add("voa"); if(d.armor>0) t.Add($"ignora {d.armor} de dano de qualquer fonte");
             if(d.immovable) t.Add("imóvel (não é empurrado nem trocado)"); if(d.devour) t.Add("absorve a primeira skill de dano de qualquer entidade que morra no mapa (+1 PA no custo, guarda 2)");
+            if(d.id=="somnax") t.Add("Elo das Duas Lâminas: Pacto e Renúncia no mesmo inimigo no seu turno dão +1 de dano no segundo golpe, antes das defesas, uma vez por turno");
             if(d.allyBonus>0) t.Add($"aliados até {d.auraRange} casas causam +{d.allyBonus}"); if(d.guard) t.Add("protege aliados até 2 casas (leva 1 do dano deles)");
             if(d.revive>0) t.Add($"renasce com {d.revive} PV no 1º nocaute"); if(d.steal>0) t.Add($"{d.steal}% de roubar 1 moeda ao acertar");
             if(d.illusion) t.Add($"começa com {d.illusionCount} ilusões de {(d.id=="ezequiela"?1:4)} PV"); if(d.noTurn) t.Add("sem turno próprio"); if(d.noLock) t.Add("não trava");

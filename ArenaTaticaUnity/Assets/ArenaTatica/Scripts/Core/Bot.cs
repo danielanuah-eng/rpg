@@ -17,12 +17,28 @@ namespace ArenaTatica.Core
             var active=real.S.Active; if(active==null) return Pass();
             var sim=Match.FromState(Match.ViewFor(real.S,active.team)); var s=sim.S; var me=s.F(active.id);
             if(me==null||!me.Alive||me.channel>0) return Pass();
+            // Guarda ligada (revisão Claude, 23/10): mantém enquanto protege aliado com inimigo perto; senão desliga para agir.
+            if(Match.GuardActive(me)) return GuardWorth(s,me)?Pass():new Command{kind="skill",skill=me.guardSkill??"guarda-direcional",cell=me.cell};
             var buy=Buy(s,me); if(buy!=null) return buy;
             // Labirinto: vela apagada colada acende na hora (tira a névoa e dá moedas).
             foreach(var d in Board.Dirs) if(Match.Interaction(s,me.cell+d)=="acender") return new Command{kind="acender",cell=me.cell+d};
             var plan=Search(sim,me,true);
             if(plan.cmd!=null&&plan.score>Worth) return plan.cmd;
-            return Approach(s,me)??Pass();
+            return Approach(s,me)??RaiseGuard(sim,me)??Pass();
+        }
+        // Guarda direcional vale quando há aliado no raio 2 e inimigo a até 6 casas.
+        static bool GuardWorth(MatchState s,Fighter me) =>
+            s.fighters.Any(x=>x.Alive&&x!=me&&s.Ally(x.team,me.team)&&Board.Gap(x,me)<=2)
+            &&s.fighters.Any(x=>x.Alive&&!x.hidden&&!s.Ally(x.team,me.team)&&Board.Gap(x,me)<=6);
+        // Sem nada melhor no fim do turno: liga a guarda virada para o inimigo mais perto.
+        static Command RaiseGuard(Match sim,Fighter me)
+        {
+            var s=sim.S; if(!GuardWorth(s,me)) return null;
+            var sk=Content.Def(me).skills.FirstOrDefault(x=>x.kind==SkillKind.GuardaDirecional&&(string.IsNullOrEmpty(x.form)||x.form==(string.IsNullOrEmpty(me.form)?Content.Def(me).startForm:me.form))); if(sk==null) return null;
+            var foe=s.fighters.Where(x=>x.Alive&&!x.hidden&&!s.Ally(x.team,me.team)).OrderBy(x=>Board.Gap(x,me)).ThenBy(x=>x.id).FirstOrDefault(); if(foe==null) return null;
+            foreach(var d in Board.Dirs.OrderBy(d=>(me.cell+d).Distance(foe.cell)))
+                if(sim.CanTarget(me,sk,me.cell+d,out _)) return new Command{kind="skill",skill=sk.id,cell=me.cell+d};
+            return null;
         }
         static Command Pass() => new Command{kind="passar"};
 
@@ -67,6 +83,15 @@ namespace ArenaTatica.Core
                 {
                     if(me.pa<Match.Cost(me,sk,s)) continue;
                     if(sk.kind==SkillKind.Forma&&(!allowForm||c!=origin)) continue;
+                    if(sk.kind==SkillKind.DoceSalgado&&c==origin) {
+                        var friends=s.fighters.Where(x=>x.Alive&&x!=me&&x.prisoned==0&&s.Ally(x.team,me.team)).ToList();
+                        foreach(var first in friends) foreach(var second in friends.Where(x=>x!=first).Concat(new[]{me})) {
+                            if(!sim.CanTarget(me,sk,first.cell,second.cell,out _)) continue;
+                            double value=new[]{me,first,second}.Distinct().Sum(x=>Math.Min(sk.heal,Math.Max(0,Content.MaxHp(x)-x.hp)))*1.1;
+                            if(value>best) { best=value;cmd=new Command{kind="skill",skill=sk.id,cell=first.cell,cell2=second.cell}; }
+                        }
+                        continue;
+                    }
                     foreach(var t in Targets(s,me,sk,foes))
                     {
                         if(sk.TwoCells||sk.channeled||!sim.CanTarget(me,sk,t,out _)) continue;
@@ -257,7 +282,8 @@ namespace ArenaTatica.Core
             if(v==null) return 0;
             bool alone=sk.isolatedBonus>0&&Match.Isolated(s,v);
             // Escudo ou Coringa no dado de defesa: 2 em 6.
-            double dmg=sk.damage<=0?0:Math.Max(0,sk.damage+(alone?sk.isolatedBonus:0)-(sk.pierce?0:Armor(v))-(sk.pierce||sk.precise?0:1/3.0));
+            double average=sk.maxDamage>sk.damage?((double)sk.damage+sk.maxDamage)*.5:sk.damage;
+            double dmg=average<=0?0:Math.Max(0,average+(alone?sk.isolatedBonus:0)-(sk.pierce||sk.ignoreArmor?0:Armor(v))-(sk.pierce||sk.precise?0:1/3.0));
             if(s.Ally(v.team,me.team)) return -(dmg*1.5+(dmg>=v.hp?5:0));
             double val=dmg+(dmg>=v.hp-.01&&dmg>0?4+Content.Def(v).level:(Content.MaxHp(v)-v.hp)*.05);
             val+=Math.Min(sk.pmLoss,4)*.3+sk.paLoss*.5+(main?sk.prison*2:0)+sk.push*.2+(sk.pull&&main?.3:0);

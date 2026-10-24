@@ -15,9 +15,8 @@ namespace ArenaTatica.Core.Tests
 
         [Test] public void ClosedMapsAreFairWalledAndPlayable()
         {
-            foreach(int players in new[]{2,4,6}) for(int theme=MapGen.OpenThemes;theme<MapGen.Themes.Length;theme++) for(uint seed=1;seed<=12;seed++)
+            foreach(int players in new[]{2,4,6}) foreach(int theme in Enumerable.Range(0,MapGen.Themes.Length).Where(MapGen.Closed)) for(uint seed=1;seed<=12;seed++)
             {
-                if(!MapGen.Closed(theme)) continue; // Docas inundadas vêm depois dos fechados e são abertas.
                 var s=Closed(theme,players,seed).S; string where=$"{MapGen.Themes[theme]} {s.width}×{s.width} seed {seed}";
                 Assert.Greater(s.tiles.Count(t=>t.terrain==Terrain.Parede),s.tiles.Length/12,"tem paredes: "+where);
                 Assert.LessOrEqual(MapGen.Unfairness(s),2,"lados quase justos: "+where);
@@ -27,6 +26,11 @@ namespace ArenaTatica.Core.Tests
                 int gates=s.portals.Count(p=>p.by==0);
                 Assert.GreaterOrEqual(gates,4,"pares de portais pelo mapa: "+where); Assert.AreEqual(0,gates%2,"portais em pares: "+where);
             }
+        }
+        [Test] public void AppendedDocksStayOpenAndAllClosedThemesRemainCovered()
+        {
+            Assert.IsFalse(MapGen.Closed(MapGen.DocksTheme));
+            Assert.AreEqual(MapGen.ClosedThemes,Enumerable.Range(0,MapGen.Themes.Length).Count(MapGen.Closed));
         }
         // Labirinto (autor, 18/10 noite): mapa todo labirinto com corredores de 2 casas, área ×2 por jogador, salas de início
         // fechadas por portas em lados opostos, monstros de farm e espetos escondidos.

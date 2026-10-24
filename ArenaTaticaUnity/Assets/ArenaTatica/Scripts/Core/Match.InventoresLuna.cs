@@ -134,11 +134,18 @@ namespace ArenaTatica.Core
             var mechanism=Mechanism(f);
             if(f==null||!f.Alive) return;
             var l=Luna(f);
+            // Rede de segurança (autor 23/10): domínio acabado (forma ou contagem) não deixa peça no tabuleiro.
+            if(f.def=="desland"&&(f.form!="dominio"||mechanism.chessBy!=f.id||mechanism.chessTurns<=0)&&S.fighters.Any(x=>x.Alive&&x.summoner==f.id&&x.def.StartsWith("peca-")))
+            {
+                StoreMechanism(f); var held=Mechanism(f);
+                foreach(var p in S.fighters.Where(x=>x.Alive&&x.summoner==f.id&&x.def.StartsWith("peca-")).ToList()) if(!held.chess.Contains(p.id)) held.chess.Add(p.id);
+                EndChess(f);
+            }
             // Blipware: recupera PV no começo do turno controlável.
             if(Cfg(l?.healTurn,0)>0) Heal(f,Cfg(l.healTurn,0),f,"blipware");
             // Blip/Celinos acertam o PM pelo contador compartilhado do dono.
             RobotTurn(f);
-            // Nikola vivo: funilaria (2 engrenagens por turno) e respawn do robô ausente.
+            // Nikola vivo: funilaria (3 engrenagens, rodada sim, rodada não; autor 23/10) e respawn do robô ausente.
             if(f.def=="nikola")
             {
                 Funilaria(f);
@@ -196,7 +203,8 @@ namespace ArenaTatica.Core
         // ── Nikola: funilaria (engrenagens) ──
         void Funilaria(Fighter owner)
         {
-            var l=Luna(owner); int drops=Cfg(l?.gearDrops,2), special=Cfg(l?.gearSpecial,20);
+            var l=Luna(owner); int drops=Cfg(l?.gearDrops,2), special=Cfg(l?.gearSpecial,20), every=Math.Max(1,Cfg(l?.gearEvery,1));
+            if((S.round-1)%every!=0) return;
             for(int i=0;i<drops;i++)
             {
                 var cells=new List<Cell>();
@@ -453,6 +461,8 @@ namespace ArenaTatica.Core
                 case "saida-matriz":
                 {
                     if(!(mechanism.box.by==f.id&&mechanism.box.hp>0)) { reason="A matriz não está fechada."; return false; }
+                    // Autor 23/10: não sai no mesmo turno em que fechou (turns só cai no fim do turno; 2 = turno em que fechou).
+                    if(mechanism.box.turns>=2) { reason="A matriz acabou de fechar: só dá para sair a partir do próximo turno."; return false; }
                     var gear=S.Luna.gears.FirstOrDefault(g=>g.cell==Board.Index(S,c));
                     if(gear==null) { reason="Escolha uma engrenagem no chão, em qualquer ponto do mapa."; return false; }
                     if(LunaSpot(new Cell(gear.cell%S.width,gear.cell/S.width),3,true)==Cell.Unknown) { reason="Sem casa livre perto dessa engrenagem."; return false; }
@@ -751,12 +761,7 @@ namespace ArenaTatica.Core
         bool RoqueCheck(Fighter f,SkillDef sk,Cell c,Cell c2,out string reason)
         {
             reason="";
-            // Autor (23/10): longe do Desland só com o tabuleiro (domínio de xadrez) ligado; sem ele, os dois ficam no alcance da skill.
-            bool far=f.form=="dominio";
-            bool Near(Fighter a) => far||a==null||Board.Gap(f,a)<=Math.Max(1,sk.maxRange);
-            string tooFar=$"Sem o tabuleiro ligado, o aliado fica a até {sk.maxRange} casas do Desland.";
-            if(!Near(Board.At(S,c))) { reason=tooFar; return false; }
-            if(c2!=Cell.Unknown&&!Near(Board.At(S,c2))) { reason=tooFar; return false; }
+            // Autor (23/10, 2ª decisão): quaisquer duas unidades aliadas, a qualquer distância do Desland.
             var king=Board.At(S,c); if(c2==Cell.Unknown) { reason=king!=null&&S.Ally(king.team,f.team)&&!Fixed(king)?"":"Escolha um aliado que possa se mover."; return reason==""; } var rook=Board.At(S,c2);
             if(king==null||rook==null||king==rook) { reason="Escolha dois aliados."; return false; }
             if(!S.Ally(king.team,f.team)||!S.Ally(rook.team,f.team)) { reason="Os dois têm de ser seus aliados."; return false; }

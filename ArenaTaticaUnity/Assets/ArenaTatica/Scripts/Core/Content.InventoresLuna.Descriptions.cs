@@ -6,12 +6,12 @@ public static partial class Content {
    case "comando-blip":detail="Se Blip estiver vivo, abre a loja de qualquer lugar. Se estiver caído, invoca somente Blip perto de Nikola.";break;
    case "comando-celinos":detail="Se Celinos estiver vivo, marca um inimigo em qualquer lugar do mapa para ele priorizar. Se estiver caído, invoca somente Celinos.";break;
    case "eletaser":detail=$"{sk.damage} de dano, alcance {sk.maxRange}. Reduz os PA restantes do alvo pela metade (mínimo 1, sem criar PA). A cada 2 engrenagens: +1 dano e +1 alcance.";break;
-   case "matriz-protecao":detail="Fecha Nikola numa caixa de 3 PV, +1 PV por 2 engrenagens. Todo dano vai para a caixa, sem excedente no corpo. Sai no fim do próximo turno ou usando Saída da matriz.";break;
+   case "matriz-protecao":detail="Fecha Nikola numa caixa de 3 PV, +1 PV por 2 engrenagens. Todo dano vai para a caixa, sem excedente no corpo. Dentro dela não ataca nem usa skills. Sai no fim do próximo turno ou usando Saída da matriz a partir do próximo turno.";break;
    case "saida-matriz":detail="Consome uma engrenagem do campo e faz a caixa voar até aquela casa para Nikola sair.";break;
    case "flecha-lunar":detail=$"Flecha azul: {sk.damage} de dano, alcance {sk.maxRange}. Ao acertar um inimigo, rouba 1 PM dele.";break;
    case "tiro-sonus":detail=$"Alcance {sk.maxRange}. Zera os PM do aliado e cura metade dos PM restantes da Bifia, arredondada para baixo. Bifia conserva seus PM. Recarrega durante o próximo turno.";break;
    case "viva-luna":detail="Uma vez por partida; consome o turno inteiro. Escolha um centro em qualquer lugar: raio 6. Aliados recebem +1 iniciativa e +2 PM; inimigos recebem -1 iniciativa e -2 PM.";break;
-   case "roque":detail="Escolha dois aliados em linha ou coluna, separados por 3 a 8 casas, com caminho livre. Sem o tabuleiro de xadrez ligado, os dois ficam no alcance do Desland; com ele, em qualquer ponto do mapa. O primeiro é o rei: avança 2 casas. O segundo vai para a casa ao lado da origem do primeiro.";break;
+   case "roque":detail="Escolha dois aliados em linha ou coluna, separados por 3 a 8 casas, com caminho livre. Vale para quaisquer duas unidades aliadas, em qualquer ponto do mapa. O primeiro é o rei: avança 2 casas. O segundo vai para a casa ao lado da origem do primeiro.";break;
    case "xeque-mate":detail=$"Alcance {sk.maxRange}; {sk.damage} de dano +2 por aliado do Desland adjacente ao alvo. Desland não entra nessa contagem.";break;
    case "eco-de-aliado":detail="Após eliminar um inimigo, escolha um aliado para criar seu eco por um turno, com suas habilidades. A passiva tem recarga de 2 turnos.";break;
    case "dominio-xadrez":detail="Durante 2 turnos, o chão vira tabuleiro. Invoca peão, torre, cavalo, bispo e rainha com 1 PV cada. Agem em sequência após Desland conforme o xadrez; libera movimentos de peças para personagens dos dois lados.";break;
@@ -26,7 +26,7 @@ public static partial class Content {
  }
  static string LunaTraits(FighterDef d){
   switch(d.id){
-   case "nikola":return "Funilaria: começa com Blip e Celinos; surgem 2 engrenagens por turno, às vezes especiais que valem 2. O contador é compartilhado com seus robôs. Outro aliado coleta +2 PM e +1 PA por valor até acabar o turno. Cada engrenagem exige 3 golpes para ser destruída. Proteção tecnológica: Nikola e seus robôs recebem dano, mas ignoram efeitos e controle externos. Os robôs sobrevivem à morte dele.";
+   case "nikola":return "Funilaria: começa com Blip e Celinos; surgem 3 engrenagens rodada sim, rodada não (na 1ª rodada já surgem), às vezes especiais que valem 2. O contador é compartilhado com seus robôs. Outro aliado coleta +2 PM e +1 PA por valor até acabar o turno. Cada engrenagem exige 3 golpes para ser destruída. Proteção tecnológica: Nikola e seus robôs recebem dano, mas ignoram efeitos e controle externos. Os robôs sobrevivem à morte dele.";
    case "blip":return "Autômato coletor: alterna entre engrenagens e ouro, procurando o mais próximo. Tudo vai para Nikola, mesmo se Blip cair. Tem +1 PM por engrenagem. Com 10, transforma-se em Blipware.";
    case "blipware":return "Modo armado de Blip, controlável como invocação. Recupera 2 PV por turno. Mantém a proteção tecnológica.";
    case "celinos":return "Autômato: revela ao time do dono os invisíveis até 4 casas (para os outros times continuam escondidos); tiro até 3, atingindo até 2 inimigos a até 2 casas entre si. A cada 3 engrenagens: +1 dano, +1 PM e +1 detecção. Prioriza marca de Nikola, depois proximidade e menor PV no empate. Proteção tecnológica.";

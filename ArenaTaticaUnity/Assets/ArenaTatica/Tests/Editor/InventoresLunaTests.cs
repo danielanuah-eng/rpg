@@ -12,7 +12,8 @@ public class InventoresLunaTests {
  static bool Skill(Match m,Fighter f,string id,Cell c,out string why,Cell? c2=null){m.S.active=m.S.timeline.IndexOf(f.id);return m.Apply(new Command{kind="skill",fighter=f.id,skill=id,cell=c,cell2=c2??Cell.Unknown,revision=m.S.revision},f.team,out _,out why);}
  [TestCase("nikola")][TestCase("bifia")][TestCase("desland")][TestCase("nepturius")] public void HeroDefaultsAreEditableAndPickable(string id){var d=Content.Fighters[id];Assert.IsTrue(d.picker);Assert.AreEqual(11,d.hp);Assert.AreEqual(6,d.pa);Assert.AreEqual(3,d.pm);Assert.NotNull(d.luna);Assert.IsTrue(d.skills.All(s=>s.pa>=0));}
  [Test] public void NikolaStartsWithExactlyTwoAutomaticRobots(){var m=New("nikola");var n=Hero(m);var robots=m.S.fighters.Where(f=>f.summoner==n.id).ToArray();Assert.AreEqual(2,robots.Length);CollectionAssert.AreEquivalent(new[]{"blip","celinos"},robots.Select(x=>x.def));Assert.IsTrue(robots.All(x=>x.hp==3&&!m.S.timeline.Contains(x.id)));Assert.AreEqual(3,m.S.fighters.Where(x=>x.team==1).Select(x=>x.cell).Distinct().Count());}
- [Test] public void NikolaDropsTwoGearsWithThreeHitMarkers(){var m=New("nikola");Call(m,"LunaBeginTurn",Hero(m));Assert.AreEqual(2,m.S.Luna.gears.Count);Assert.IsTrue(m.S.Luna.gears.All(x=>x.hits==3&&(x.value==1||x.value==2)));}
+ [Test] public void NikolaDropsThreeGearsEveryOtherRound(){var m=New("nikola");m.S.round=2;Call(m,"LunaBeginTurn",Hero(m));Assert.AreEqual(0,m.S.Luna.gears.Count,"rodada par: nada");m.S.round=3;Call(m,"LunaBeginTurn",Hero(m));Assert.AreEqual(3,m.S.Luna.gears.Count);}
+ [Test] public void NikolaDropsGearsWithThreeHitMarkers(){var m=New("nikola");Call(m,"LunaBeginTurn",Hero(m));Assert.AreEqual(3,m.S.Luna.gears.Count);Assert.IsTrue(m.S.Luna.gears.All(x=>x.hits==3&&(x.value==1||x.value==2)));}
  [Test] public void OwnGearCollectionIncreasesSharedCounter(){var m=New("nikola");var n=Hero(m);m.S.Luna.gears.Add(new Gear{owner=n.id,cell=Board.Index(m.S,n.cell),value=2,hits=3});Call(m,"Collect",n);Assert.AreEqual(2,m.FamilyGears(n.id));Assert.IsEmpty(m.S.Luna.gears);}
  [Test] public void OtherAllyGetsOnlyCurrentTurnPaAndPm(){var m=New("nikola");var n=Hero(m);var ally=Hero(m,2);m.S.alliance[2]=m.S.alliance[1];int pa=ally.pa,pm=ally.pm;m.S.Luna.gears.Add(new Gear{owner=n.id,cell=Board.Index(m.S,ally.cell),value=2,hits=3});Call(m,"Collect",ally);Assert.AreEqual(pa+2,ally.pa);Assert.AreEqual(pm+4,ally.pm);Assert.AreEqual(0,m.FamilyGears(n.id));Assert.IsEmpty(ally.buffs);}
  [Test] public void EnemyCannotCollectGears(){var m=New("nikola");var n=Hero(m);var e=Hero(m,2);m.S.Luna.gears.Add(new Gear{owner=n.id,cell=Board.Index(m.S,e.cell),value=1,hits=3});Call(m,"Collect",e);Assert.AreEqual(1,m.S.Luna.gears.Count);}
@@ -57,5 +58,17 @@ public class InventoresLunaTests {
  [Test] public void ChessDomainExposesAllFiveMovesAndRemovesThemAtEnd(){var m=New("desland");var f=Hero(m);Assert.IsTrue(Skill(m,f,"dominio-xadrez",f.cell,out var why),why);Assert.AreEqual(5,Match.Skills(f).Count(x=>x.effect!=null&&x.effect.StartsWith("mover-")));Call(m,"EndChess",f);Assert.AreEqual(0,Match.Skills(f).Count(x=>x.effect!=null&&x.effect.StartsWith("mover-")));}
  [Test] public void ChessDomainKnightMoveCanMoveAnAlliedCharacter(){var m=New("desland");var f=Hero(m);var ally=(Fighter)Call(m,"Spawn","ciantia",f.team,new Cell(1,1),f.id);Assert.IsTrue(Skill(m,f,"dominio-xadrez",f.cell,out var why),why);var target=new[]{new Cell(3,2),new Cell(2,3),new Cell(0,3),new Cell(3,0)}.First(c=>Board.At(m.S,c)==null&&Board.Walkable(m.S,c,false));Assert.IsTrue(Skill(m,f,"mover-cavalo",ally.cell,out why,target),why);Assert.AreEqual(target,ally.cell);}
 
+ // Autor 23/10: na matriz não ataca, e a saída só vale a partir do próximo turno.
+ [Test] public void MatrixBlocksAttacksAndSameTurnExit(){var m=New("nikola");var n=Hero(m);var e=Hero(m,2);n.cell=new Cell(4,4);e.cell=new Cell(6,4);n.pa=20;
+  Assert.IsTrue(Skill(m,n,"matriz-protecao",n.cell,out var why),why);
+  Assert.IsFalse(Skill(m,n,"eletaser",e.cell,out _),"não ataca dentro da matriz");
+  var g=new Cell(9,9);m.S.Luna.gears.Add(new Gear{owner=n.id,cell=Board.Index(m.S,g),value=1,hits=3});
+  Assert.IsFalse(Skill(m,n,"saida-matriz",g,out _),"não sai no mesmo turno");
+  Call(m,"LunaEndTurn",n);n.pa=20;
+  Assert.IsTrue(Skill(m,n,"saida-matriz",g,out why),why);}
+ // Autor 23/10: depois da ultimate as peças somem (fluxo real de turnos, só passando).
+ [Test] public void ChessPiecesVanishAfterTheDomainInRealTurns(){var m=New("desland");var f=Hero(m);Assert.IsTrue(Skill(m,f,"dominio-xadrez",f.cell,out var why),why);
+  int deslandTurns=1;for(int k=0;k<40&&m.S.fighters.Any(x=>x.Alive&&x.def.StartsWith("peca-"));k++){var a=m.S.Active;if(a==null)break;if(a==f&&k>0)deslandTurns++;Assert.IsTrue(m.Apply(new Command{kind="passar",fighter=a.id,revision=m.S.revision},a.team,out _,out why),why);}
+  Assert.IsFalse(m.S.fighters.Any(x=>x.Alive&&x.def.StartsWith("peca-")),"peças continuam vivas");Assert.LessOrEqual(deslandTurns,2);Assert.AreNotEqual("dominio",f.form);}
 }
 }

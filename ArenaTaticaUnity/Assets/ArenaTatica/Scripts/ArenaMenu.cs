@@ -570,7 +570,7 @@ namespace ArenaTatica
         readonly List<Action> refreshers=new List<Action>();
         FighterDef editing; bool dirty; Text editorStatus;
         static readonly SkillKind[] EditableKinds={SkillKind.Dano,SkillKind.Cura,SkillKind.Suporte,SkillKind.Zona,SkillKind.Armadilha,SkillKind.Teleporte,SkillKind.Esconder,SkillKind.Reviver,SkillKind.Invocacao,SkillKind.Troca,SkillKind.Portal};
-        static string KindName(SkillKind k) => k switch { SkillKind.Dano=>"Dano / controle", SkillKind.Cura=>"Cura", SkillKind.Suporte=>"Suporte (buff/cura em área)", SkillKind.Zona=>"Zona (gelo)",
+        static string KindName(SkillKind k) => k switch { SkillKind.GuardaDirecional=>"Guarda direcional", SkillKind.DoceSalgado=>"Doce e Salgado", SkillKind.Dano=>"Dano / controle", SkillKind.Cura=>"Cura", SkillKind.Suporte=>"Suporte (buff/cura em área)", SkillKind.Zona=>"Zona (gelo)",
             SkillKind.Armadilha=>"Armadilha", SkillKind.Teleporte=>"Teleporte", SkillKind.Esconder=>"Esconder", SkillKind.Reviver=>"Reviver", SkillKind.Invocacao=>"Invocação", SkillKind.Troca=>"Troca (Shambles)", SkillKind.Portal=>"Portal", _=>k.ToString() };
         void Editor()
         {
@@ -761,7 +761,7 @@ namespace ArenaTatica
             Accent(Btn(head,"Remover",()=>{ editing.skills=editing.skills.Where(x=>x!=s).ToArray(); dirty=true; Show("editor"); },100,36,13),Hex(0x4a2030));
             var desc=Label(box,"",13,Ink); refreshers.Add(()=>desc.text=Content.Describe(s));
             var grid=Grid(box);
-            Stepper(grid,"PA",()=>s.pa,x=>s.pa=x); Stepper(grid,"Dano",()=>s.damage,x=>s.damage=x); Stepper(grid,"Cura (suporte)",()=>s.heal,x=>s.heal=x);
+            Stepper(grid,"PA",()=>s.pa,x=>s.pa=x); Stepper(grid,"Dano",()=>s.damage,x=>s.damage=x); Stepper(grid,"Dano máximo (0 = fixo)",()=>s.maxDamage,x=>s.maxDamage=x); Stepper(grid,"Cura (suporte)",()=>s.heal,x=>s.heal=x);
             Stepper(grid,"Alcance mínimo",()=>s.minRange,x=>s.minRange=x); Stepper(grid,"Alcance máximo",()=>s.maxRange,x=>s.maxRange=x); Stepper(grid,"Área",()=>s.area,x=>s.area=x);
             Stepper(grid,"Usos por turno",()=>s.perTurn,x=>s.perTurn=x); Stepper(grid,"Usos por partida",()=>s.perMatch,x=>s.perMatch=x); Stepper(grid,"Recarga (turnos)",()=>s.cooldown,x=>s.cooldown=x);
             Stepper(grid,"Empurra (casas)",()=>s.push,x=>s.push=x); Stepper(grid,"Tira PM",()=>s.pmLoss,x=>s.pmLoss=x); Stepper(grid,"Tira PA",()=>s.paLoss,x=>s.paLoss=x);
@@ -778,7 +778,7 @@ namespace ArenaTatica
             Flag(grid,"Reinicia ultimates de todos",()=>s.resetUlts,x=>s.resetUlts=x); Flag(grid,"Dispara evento aleatório",()=>s.cataclysm,x=>s.cataclysm=x);
             Flag(grid,"Linha reta",()=>s.line,x=>s.line=x); Flag(grid,"Precisa de visão",()=>s.sight,x=>s.sight=x); Flag(grid,"+alcance no alto",()=>s.modifiable,x=>s.modifiable=x);
             Flag(grid,"Em volta de si",()=>s.selfArea,x=>{ s.selfArea=x; if(x) { s.minRange=0; s.maxRange=0; } }); Flag(grid,"Área nas 8 casas",()=>s.square,x=>s.square=x); Flag(grid,"Área só inimigos",()=>s.foes,x=>s.foes=x);
-            Flag(grid,"Puxa até colar",()=>s.pull,x=>s.pull=x); Flag(grid,"Ignora armadura",()=>s.pierce,x=>s.pierce=x); Flag(grid,"Ignora Escudo",()=>s.precise,x=>s.precise=x);
+            Flag(grid,"Puxa até colar",()=>s.pull,x=>s.pull=x); Flag(grid,"Ignora armadura e Escudo",()=>s.pierce,x=>s.pierce=x); Flag(grid,"Ignora só armadura",()=>s.ignoreArmor,x=>s.ignoreArmor=x); Flag(grid,"Ignora Escudo",()=>s.precise,x=>s.precise=x);
             Flag(grid,"Congela casas (zona)",()=>s.freeze,x=>s.freeze=x); Flag(grid,"Pode errar",()=>s.wild,x=>s.wild=x); Flag(grid,"Ultimate",()=>s.ultimate,x=>{ s.ultimate=x; if(x&&s.perTurn==0&&s.perMatch==0&&s.cooldown==0) s.perMatch=1; });
             Flag(grid,"Canalizada (próximo turno)",()=>s.channeled,x=>s.channeled=x); Flag(grid,"Mina (não para o movimento)",()=>s.mine,x=>s.mine=x); Flag(grid,"Grátis sem usar arma",()=>s.freeSwap,x=>s.freeSwap=x);
             Flag(grid,"Anula formas e buffs",()=>s.dispel,x=>s.dispel=x); Flag(grid,"Tira buffs de inimigos",()=>s.purge,x=>s.purge=x); Flag(grid,"Limpa males de aliados",()=>s.cleanse,x=>s.cleanse=x);

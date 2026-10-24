@@ -1,0 +1,1853 @@
+{
+  "entries": [
+    {
+      "resource": "Sprites/Somnax/south",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/south.png"
+      ],
+      "sha256": "b6768719280d0bd551d65a469e155b49ee65ecf02ee9700e1cf8f2f84d78bc60",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/south-east",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/south-east.png"
+      ],
+      "sha256": "8f77f0895af0f0e1d9222fcb063425e752dc163daea51a470d1e1878d563b879",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/east",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/east.png"
+      ],
+      "sha256": "89cacfa90237ba068205e65303a47fd4577f80bbd632818e53caa0d275b062f6",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/north-east",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/north-east.png"
+      ],
+      "sha256": "ef6fa18a66aa2a85ea18c65a7c8c40e90c18a59e2d7bb8eeef36343768d875c5",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/north",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/north.png"
+      ],
+      "sha256": "b16f1976bc2b1347ff7960a6906a92af2a2526ce70be4346e1c4a7cc559e5d26",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/north-west",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/north-west.png"
+      ],
+      "sha256": "c05422dc848504e0104c39a8bda34e58b803d478f900eff4b3e817aa00390284",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/west",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/west.png"
+      ],
+      "sha256": "3527ec84025621e76b2854ed3f36940a4632b948c2679a85d488ac8f5fc5fac9",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/south-west",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/south-west.png"
+      ],
+      "sha256": "3b9a254e7a5bcc64b9930a096d38351b712385d706e9b3d1c344b58379ece94a",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/south",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/south.png"
+      ],
+      "sha256": "ec1e2f9fd4f7b5c3e9c9c6b919e1965af0ed80c1b1a9c0330fdb99e1c2a14a44",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/south-east",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/south-east.png"
+      ],
+      "sha256": "d8537a06327a2c1e518ceb060a4a7f7f0a0da4b5359fc6bce4b9bba709e2949e",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/east",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/east.png"
+      ],
+      "sha256": "772f8276be89c9d91092b239bb9388c00ff923d13664e050d7fa215e6dbdb812",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/north-east",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/north-east.png"
+      ],
+      "sha256": "4b0c13427f993f04ce84da4a09be2933d419d4061820357882dfb24099085b53",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/north",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/north.png"
+      ],
+      "sha256": "7cfe712c83ed3bb8cf374c45edbc15b49853b6cfa27f0a5d238c0c86b8f8cb01",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/north-west",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/north-west.png"
+      ],
+      "sha256": "24be556054816c2e1da2eaaf8409f723f090de3559b893d4805af9549c4f3490",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/west",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/west.png"
+      ],
+      "sha256": "4b3b098e286f08e9e2a5c24dc32d44e639008908326ab5867051fcfdc7032614",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/south-west",
+      "frames": 1,
+      "frameSize": 128,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 0,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/south-west.png"
+      ],
+      "sha256": "cee044fa04b4ca98686d576a45f2f4113965af325018949eb562b0d0ad09d94d",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/idle_south-east",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 8,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_idle/south-east/000.png",
+        "native/Somnax/animacoes/somnax_idle/south-east/001.png",
+        "native/Somnax/animacoes/somnax_idle/south-east/002.png",
+        "native/Somnax/animacoes/somnax_idle/south-east/003.png",
+        "native/Somnax/animacoes/somnax_idle/south-east/004.png",
+        "native/Somnax/animacoes/somnax_idle/south-east/005.png",
+        "native/Somnax/animacoes/somnax_idle/south-east/006.png",
+        "native/Somnax/animacoes/somnax_idle/south-east/007.png"
+      ],
+      "sha256": "2d93fb7b77b8ad0a9595ecded0efadd4b0132ab9dd3a2a2f0bfa4913662fbe6c",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/idle_north-east",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 8,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_idle/north-east/000.png",
+        "native/Somnax/animacoes/somnax_idle/north-east/001.png",
+        "native/Somnax/animacoes/somnax_idle/north-east/002.png",
+        "native/Somnax/animacoes/somnax_idle/north-east/003.png",
+        "native/Somnax/animacoes/somnax_idle/north-east/004.png",
+        "native/Somnax/animacoes/somnax_idle/north-east/005.png",
+        "native/Somnax/animacoes/somnax_idle/north-east/006.png",
+        "native/Somnax/animacoes/somnax_idle/north-east/007.png"
+      ],
+      "sha256": "3188de88dacbc176ecb9d1a36504f014d768a4532da05b4ce9ec7d22542e87a8",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/idle_north-west",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 8,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_idle/north-west/000.png",
+        "native/Somnax/animacoes/somnax_idle/north-west/001.png",
+        "native/Somnax/animacoes/somnax_idle/north-west/002.png",
+        "native/Somnax/animacoes/somnax_idle/north-west/003.png",
+        "native/Somnax/animacoes/somnax_idle/north-west/004.png",
+        "native/Somnax/animacoes/somnax_idle/north-west/005.png",
+        "native/Somnax/animacoes/somnax_idle/north-west/006.png",
+        "native/Somnax/animacoes/somnax_idle/north-west/007.png"
+      ],
+      "sha256": "5a7a9541f6bd95c9fbfd1441724028deae228a549a1d724f1ca698edef6018d0",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/idle_south-west",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 8,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_idle/south-west/000.png",
+        "native/Somnax/animacoes/somnax_idle/south-west/001.png",
+        "native/Somnax/animacoes/somnax_idle/south-west/002.png",
+        "native/Somnax/animacoes/somnax_idle/south-west/003.png",
+        "native/Somnax/animacoes/somnax_idle/south-west/004.png",
+        "native/Somnax/animacoes/somnax_idle/south-west/005.png",
+        "native/Somnax/animacoes/somnax_idle/south-west/006.png",
+        "native/Somnax/animacoes/somnax_idle/south-west/007.png"
+      ],
+      "sha256": "122ddedc6fe9f249e5f1a9855e05c939289a015e2028c540fd0a2e7668969369",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/walk_south-east",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 10,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_walk/south-east/000.png",
+        "native/Somnax/animacoes/somnax_walk/south-east/001.png",
+        "native/Somnax/animacoes/somnax_walk/south-east/002.png",
+        "native/Somnax/animacoes/somnax_walk/south-east/003.png",
+        "native/Somnax/animacoes/somnax_walk/south-east/004.png",
+        "native/Somnax/animacoes/somnax_walk/south-east/005.png",
+        "native/Somnax/animacoes/somnax_walk/south-east/006.png",
+        "native/Somnax/animacoes/somnax_walk/south-east/007.png"
+      ],
+      "sha256": "24a247a699502f0bd35045ebf48502e7cfd60a79052d93bd76e3943b5952958f",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/walk_north-east",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 10,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_walk/north-east/000.png",
+        "native/Somnax/animacoes/somnax_walk/north-east/001.png",
+        "native/Somnax/animacoes/somnax_walk/north-east/002.png",
+        "native/Somnax/animacoes/somnax_walk/north-east/003.png",
+        "native/Somnax/animacoes/somnax_walk/north-east/004.png",
+        "native/Somnax/animacoes/somnax_walk/north-east/005.png",
+        "native/Somnax/animacoes/somnax_walk/north-east/006.png",
+        "native/Somnax/animacoes/somnax_walk/north-east/007.png"
+      ],
+      "sha256": "ce81516dab585a4bbca18010cd9913af3494705e05275476f9fc6997865b94b3",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/walk_north-west",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 10,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_walk/north-west/000.png",
+        "native/Somnax/animacoes/somnax_walk/north-west/001.png",
+        "native/Somnax/animacoes/somnax_walk/north-west/002.png",
+        "native/Somnax/animacoes/somnax_walk/north-west/003.png",
+        "native/Somnax/animacoes/somnax_walk/north-west/004.png",
+        "native/Somnax/animacoes/somnax_walk/north-west/005.png",
+        "native/Somnax/animacoes/somnax_walk/north-west/006.png",
+        "native/Somnax/animacoes/somnax_walk/north-west/007.png"
+      ],
+      "sha256": "5bca766dc580f86721cb9b4698d3bc87180c38fcb4e5c1ae8b3c680eb0c44361",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/walk_south-west",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 10,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_walk/south-west/000.png",
+        "native/Somnax/animacoes/somnax_walk/south-west/001.png",
+        "native/Somnax/animacoes/somnax_walk/south-west/002.png",
+        "native/Somnax/animacoes/somnax_walk/south-west/003.png",
+        "native/Somnax/animacoes/somnax_walk/south-west/004.png",
+        "native/Somnax/animacoes/somnax_walk/south-west/005.png",
+        "native/Somnax/animacoes/somnax_walk/south-west/006.png",
+        "native/Somnax/animacoes/somnax_walk/south-west/007.png"
+      ],
+      "sha256": "f3c001c827499fbfd87f35db12afe1c2e44c5b8f5a79f86de85c0cdc85c21f36",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/hit_south-east",
+      "frames": 4,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_hurt/south-east/000.png",
+        "native/Somnax/animacoes/somnax_hurt/south-east/001.png",
+        "native/Somnax/animacoes/somnax_hurt/south-east/002.png",
+        "native/Somnax/animacoes/somnax_hurt/south-east/003.png"
+      ],
+      "sha256": "dbf4a53cd2bf57289a3325b9112cef62680898ef022af78b1870704eee923685",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/hit_north-east",
+      "frames": 4,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/revisao-hurt-v3/north-east/000.png",
+        "native/Somnax/revisao-hurt-v2/north-east/001.png",
+        "native/Somnax/revisao-hurt-v2/north-east/002.png",
+        "native/Somnax/animacoes/somnax_hurt/north-east/003.png"
+      ],
+      "sha256": "fd358019784b39f88ae65717b3d9269a85ab77acdfec14a7f1907c1a5e24e8c4",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/hit_north-west",
+      "frames": 4,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/revisao-hurt-v2/north-west/000.png",
+        "native/Somnax/revisao-hurt-v2/north-west/001.png",
+        "native/Somnax/animacoes/somnax_hurt/north-west/002.png",
+        "native/Somnax/animacoes/somnax_hurt/north-west/003.png"
+      ],
+      "sha256": "a9ea8545c9b526ef4cf9c7980d74ba6ab127a423a2f0f7394d6ebffb226f5d5e",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/hit_south-west",
+      "frames": 4,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_hurt/south-west/000.png",
+        "native/Somnax/animacoes/somnax_hurt/south-west/001.png",
+        "native/Somnax/animacoes/somnax_hurt/south-west/002.png",
+        "native/Somnax/animacoes/somnax_hurt/south-west/003.png"
+      ],
+      "sha256": "d2e38dadfe9f11a6b3c7a4680dad23ef3e4286dcd193f1b361e59f3182287024",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/death_south-east",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 10,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_death/south-east/000.png",
+        "native/Somnax/animacoes/somnax_death/south-east/001.png",
+        "native/Somnax/animacoes/somnax_death/south-east/002.png",
+        "native/Somnax/animacoes/somnax_death/south-east/003.png",
+        "native/Somnax/animacoes/somnax_death/south-east/004.png",
+        "native/Somnax/animacoes/somnax_death/south-east/005.png",
+        "native/Somnax/animacoes/somnax_death/south-east/006.png",
+        "native/Somnax/animacoes/somnax_death/south-east/007.png"
+      ],
+      "sha256": "2f73e431d2186a9678e06014ad62f18fdd3a0637c58e303865bdf33bfd31277e",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/death_north-east",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 10,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_death/north-east/000.png",
+        "native/Somnax/animacoes/somnax_death/north-east/001.png",
+        "native/Somnax/animacoes/somnax_death/north-east/002.png",
+        "native/Somnax/animacoes/somnax_death/north-east/003.png",
+        "native/Somnax/animacoes/somnax_death/north-east/004.png",
+        "native/Somnax/animacoes/somnax_death/north-east/005.png",
+        "native/Somnax/animacoes/somnax_death/north-east/006.png",
+        "native/Somnax/animacoes/somnax_death/north-east/007.png"
+      ],
+      "sha256": "a2533b53c4de9f3f9a7c381e666f6ce40a70ee34c15a84dece2d4f0f73e5f559",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/death_north-west",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 10,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_death/north-west/000.png",
+        "native/Somnax/animacoes/somnax_death/north-west/001.png",
+        "native/Somnax/animacoes/somnax_death/north-west/002.png",
+        "native/Somnax/animacoes/somnax_death/north-west/003.png",
+        "native/Somnax/animacoes/somnax_death/north-west/004.png",
+        "native/Somnax/animacoes/somnax_death/north-west/005.png",
+        "native/Somnax/animacoes/somnax_death/north-west/006.png",
+        "native/Somnax/animacoes/somnax_death/north-west/007.png"
+      ],
+      "sha256": "f0538fe38e97a4488035a97e409b4086c4ed97f4ffabe40beb124b697fb2ed81",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/death_south-west",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 10,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_death/south-west/000.png",
+        "native/Somnax/animacoes/somnax_death/south-west/001.png",
+        "native/Somnax/animacoes/somnax_death/south-west/002.png",
+        "native/Somnax/animacoes/somnax_death/south-west/003.png",
+        "native/Somnax/animacoes/somnax_death/south-west/004.png",
+        "native/Somnax/animacoes/somnax_death/south-west/005.png",
+        "native/Somnax/animacoes/somnax_death/south-west/006.png",
+        "native/Somnax/animacoes/somnax_death/south-west/007.png"
+      ],
+      "sha256": "d6ce0ae39423e7056b0ecb14c29024eb0d24a8502c5d88a3083c86dfe76be808",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/pacto_south-east",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_pacto/south-east/000.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/001.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/002.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/003.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/004.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/005.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/006.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/007.png"
+      ],
+      "sha256": "070f7914876272991f38378dc7ecb63623f035d3f143650d8a388a88ab1a9c7e",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/pacto_north-east",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_pacto/north-east/000.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/001.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/002.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/003.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/004.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/005.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/006.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/007.png"
+      ],
+      "sha256": "9113e9fc3e6c636bdbc55c510de7a4fa261e43b1144232bd030058e95a061a77",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/pacto_north-west",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_pacto/north-west/000.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/001.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/002.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/003.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/004.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/005.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/006.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/007.png"
+      ],
+      "sha256": "29192b10065670d4fc535ecc3f0530a1cfe4cc7d1fc5b474dce40eeab319787f",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/pacto_south-west",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_pacto/south-west/000.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/001.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/002.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/003.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/004.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/005.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/006.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/007.png"
+      ],
+      "sha256": "368ed793165dd5e2e908f10deee5caac62d46bac53a40e5b6f1e15469d46a689",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/renuncia_south-east",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_renuncia/south-east/000.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-east/001.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-east/002.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-east/003.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-east/004.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-east/005.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-east/006.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-east/007.png"
+      ],
+      "sha256": "2a6f92bd86279a3221a532c73e511669da2ba5ecc042ef6035176ae8c7bc06ff",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/renuncia_north-east",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_renuncia/north-east/000.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-east/001.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-east/002.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-east/003.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-east/004.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-east/005.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-east/006.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-east/007.png"
+      ],
+      "sha256": "e4e05c2f4d831bd054f6f71eba2eb328943f807e7c8f0450aef814c3f5eee6a1",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/renuncia_north-west",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_renuncia/north-west/000.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-west/001.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-west/002.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-west/003.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-west/004.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-west/005.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-west/006.png",
+        "native/Somnax/animacoes/somnax_renuncia/north-west/007.png"
+      ],
+      "sha256": "df434203d6b1dfbe0cadcd680522d4cec7044471d3c1dd151541d2520018093d",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/renuncia_south-west",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_renuncia/south-west/000.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-west/001.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-west/002.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-west/003.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-west/004.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-west/005.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-west/006.png",
+        "native/Somnax/animacoes/somnax_renuncia/south-west/007.png"
+      ],
+      "sha256": "59a0b4168635f842f912934abb3ee7426b99dfc61c1109c2988ee15d77c09aeb",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/blinkout_south-east",
+      "frames": 4,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_passo_out/south-east/000.png",
+        "native/Somnax/animacoes/somnax_passo_out/south-east/001.png",
+        "native/Somnax/animacoes/somnax_passo_out/south-east/002.png",
+        "native/Somnax/animacoes/somnax_passo_out/south-east/003.png"
+      ],
+      "sha256": "055dc45fd3135c007e4970efa57d0134c2432ef1d9c575ec0cb2f2b2655116bb",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/blinkout_north-east",
+      "frames": 4,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_passo_out/north-east/000.png",
+        "native/Somnax/animacoes/somnax_passo_out/north-east/001.png",
+        "native/Somnax/animacoes/somnax_passo_out/north-east/002.png",
+        "native/Somnax/animacoes/somnax_passo_out/north-east/003.png"
+      ],
+      "sha256": "5abab4aecda16bc4d32512dbdc9038171385c0620fe847c07feb16210e97a55c",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/blinkout_north-west",
+      "frames": 4,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_passo_out/north-west/000.png",
+        "native/Somnax/animacoes/somnax_passo_out/north-west/001.png",
+        "native/Somnax/animacoes/somnax_passo_out/north-west/002.png",
+        "native/Somnax/animacoes/somnax_passo_out/north-west/003.png"
+      ],
+      "sha256": "aa9b5056806d76779be3e4fb27b1b9154dac3cc4ee9c27afba2fe4f6c738bc13",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/blinkout_south-west",
+      "frames": 4,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_passo_out/south-west/000.png",
+        "native/Somnax/animacoes/somnax_passo_out/south-west/001.png",
+        "native/Somnax/animacoes/somnax_passo_out/south-west/002.png",
+        "native/Somnax/animacoes/somnax_passo_out/south-west/003.png"
+      ],
+      "sha256": "cea980f207ebd1aef0809f26d77f5c4a0445950fb15ec04c056d10913ad729af",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/blinkin_south-east",
+      "frames": 4,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_passo_in/south-east/000.png",
+        "native/Somnax/animacoes/somnax_passo_in/south-east/001.png",
+        "native/Somnax/animacoes/somnax_passo_in/south-east/002.png",
+        "native/Somnax/animacoes/somnax_passo_in/south-east/003.png"
+      ],
+      "sha256": "7b30cec8df14d16c077c05ebeaeeadc55dbdd147d959c204afee8d5d521756fb",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/blinkin_north-east",
+      "frames": 4,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_passo_in/north-east/000.png",
+        "native/Somnax/animacoes/somnax_passo_in/north-east/001.png",
+        "native/Somnax/animacoes/somnax_passo_in/north-east/002.png",
+        "native/Somnax/animacoes/somnax_passo_in/north-east/003.png"
+      ],
+      "sha256": "deaeb8849e9fd9df879b11c099cc720fa79179a2276c1f0862ecc6504a669738",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/blinkin_north-west",
+      "frames": 4,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_passo_in/north-west/000.png",
+        "native/Somnax/animacoes/somnax_passo_in/north-west/001.png",
+        "native/Somnax/animacoes/somnax_passo_in/north-west/002.png",
+        "native/Somnax/animacoes/somnax_passo_in/north-west/003.png"
+      ],
+      "sha256": "fe8d0ef9ab0988c7d381c8b9816c8ed6ed9531fed53b4d64fbee969b36b8c385",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/blinkin_south-west",
+      "frames": 4,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_passo_in/south-west/000.png",
+        "native/Somnax/animacoes/somnax_passo_in/south-west/001.png",
+        "native/Somnax/animacoes/somnax_passo_in/south-west/002.png",
+        "native/Somnax/animacoes/somnax_passo_in/south-west/003.png"
+      ],
+      "sha256": "6c9e6834f4a07eb7d6239f7d26aa9d8b2c69b53fa11bf5049e707cdfcdfaf45e",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/support_south-east",
+      "frames": 12,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/000.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/001.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/002.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/003.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/004.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/005.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/006.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/007.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/008.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/009.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/010.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-east/011.png"
+      ],
+      "sha256": "aa416f2c0a8d3520806f5ca89a00ff2a134cb87112e00ccd40dbf1dd781dd5b3",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/support_north-east",
+      "frames": 12,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/000.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/001.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/002.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/003.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/004.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/005.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/006.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/007.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/008.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/009.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/010.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-east/011.png"
+      ],
+      "sha256": "13f9afee68a618309512a469610d329de16ed33a642ea89d94cea26fb7df69fb",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/support_north-west",
+      "frames": 12,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/000.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/001.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/002.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/003.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/004.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/005.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/006.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/007.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/008.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/009.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/010.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/north-west/011.png"
+      ],
+      "sha256": "f9ddec994e7a52afc43df8eccd6f7a0207ff6b155072138ff7c2fa63614c3184",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/support_south-west",
+      "frames": 12,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/000.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/001.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/002.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/003.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/004.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/005.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/006.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/007.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/008.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/009.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/010.png",
+        "native/Somnax/animacoes/somnax_doce_salgado/south-west/011.png"
+      ],
+      "sha256": "33dc0d2edc8d901d611321add7eced90d6d285b8fcebc3d9bc502989fe837365",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/ult_south-east",
+      "frames": 12,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_ruptura/south-east/000.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/001.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/002.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/003.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/004.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/005.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/006.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/007.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/008.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/009.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/010.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-east/011.png"
+      ],
+      "sha256": "0b768ad6462e6fc2b29fbe4fb3cf0f3cc29d449b06a07c7c35c6c62ee2a9677d",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/ult_north-east",
+      "frames": 12,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_ruptura/north-east/000.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/001.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/002.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/003.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/004.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/005.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/006.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/007.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/008.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/009.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/010.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-east/011.png"
+      ],
+      "sha256": "ad953b182fd2c67c060cb23dee8f2dd356f97182d2488e47f699ff89e4a86a54",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/ult_north-west",
+      "frames": 12,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_ruptura/north-west/000.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/001.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/002.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/003.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/004.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/005.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/006.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/007.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/008.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/009.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/010.png",
+        "native/Somnax/animacoes/somnax_ruptura/north-west/011.png"
+      ],
+      "sha256": "7f6dd4b285496eb7001abd4e916ae8c94e250d9d68fb208a4d7b47f9a7ed1a83",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Somnax/ult_south-west",
+      "frames": 12,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 12,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_ruptura/south-west/000.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/001.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/002.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/003.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/004.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/005.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/006.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/007.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/008.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/009.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/010.png",
+        "native/Somnax/animacoes/somnax_ruptura/south-west/011.png"
+      ],
+      "sha256": "63009013793fa981f64bb979db847f813f93cc389f2fe867393fabf7415012e2",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/idle_south-east",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 8,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/animacoes/south-east/000.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-east/001.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-east/002.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-east/003.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-east/004.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-east/005.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-east/006.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-east/007.png"
+      ],
+      "sha256": "ad6779db3aab34403dc16b2cd808a354aaddcdb0853838062f83165cba379983",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/idle_north-east",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 8,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/animacoes/north-east/000.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-east/001.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-east/002.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-east/003.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-east/004.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-east/005.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-east/006.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-east/007.png"
+      ],
+      "sha256": "8695166bfcff281d83f4b5718f2f587a6867da231d331f55100af3032bb84a52",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/idle_north-west",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 8,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/animacoes/north-west/000.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-west/001.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-west/002.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-west/003.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-west/004.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-west/005.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-west/006.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/north-west/007.png"
+      ],
+      "sha256": "c84a7626e6381c2c723e520debfb51a3a7cf546b905e9050c968495564a99e33",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/TchuTchaGuarda/idle_south-west",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 8,
+      "loop": true,
+      "kind": "actor",
+      "sources": [
+        "native/TchuTcha-Guarda-direcional/animacoes/south-west/000.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-west/001.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-west/002.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-west/003.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-west/004.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-west/005.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-west/006.png",
+        "native/TchuTcha-Guarda-direcional/animacoes/south-west/007.png"
+      ],
+      "sha256": "c7d3d57776192514bffe3c3b1cb0d1902ec177f7920734ba80b970a6aa833fe2",
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "resource": "Sprites/Efeitos/pacto/impacto",
+      "frames": 8,
+      "frameSize": 128,
+      "fps": 16,
+      "loop": false,
+      "unityPivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 128,
+      "kind": "vfx",
+      "impactFrame0": 0,
+      "peakFrame0": 0,
+      "inheritTargetVisibility": false,
+      "source": "vfx_pacto_slash",
+      "sha256": "c9b733adb4462f44c2997a10668c36ce4275442d89edeb8c787ba7cfcd7ed506"
+    },
+    {
+      "resource": "Sprites/Efeitos/renuncia/impacto",
+      "frames": 8,
+      "frameSize": 128,
+      "fps": 16,
+      "loop": false,
+      "unityPivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 128,
+      "kind": "vfx",
+      "impactFrame0": 0,
+      "peakFrame0": 0,
+      "inheritTargetVisibility": false,
+      "source": "vfx_renuncia_hit",
+      "sha256": "94f68fe3c475174f7225cde475be9f11c9c1d3b8db5e4f2ffad0cd344cd9ccdd"
+    },
+    {
+      "resource": "Sprites/Efeitos/elo-duas-laminas/uso",
+      "frames": 4,
+      "frameSize": 128,
+      "fps": 16,
+      "loop": false,
+      "unityPivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 128,
+      "kind": "vfx",
+      "impactFrame0": 0,
+      "peakFrame0": 0,
+      "inheritTargetVisibility": true,
+      "source": "vfx_elo_resonancia",
+      "sha256": "aebfb3743c81b52e869091ada1c0d975ee42ceeb13c2272541c1b814ce242fcb"
+    },
+    {
+      "resource": "Sprites/Efeitos/passo-do-crepusculo/saida",
+      "frames": 4,
+      "frameSize": 128,
+      "fps": 12,
+      "loop": false,
+      "unityPivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 128,
+      "kind": "vfx",
+      "impactFrame0": 0,
+      "peakFrame0": 0,
+      "inheritTargetVisibility": false,
+      "source": "vfx_passo_out",
+      "sha256": "cde7aab5ca0223852137c07352858be8e8157cae479ca6bd538d7b10b4d616b2"
+    },
+    {
+      "resource": "Sprites/Efeitos/passo-do-crepusculo/chegada",
+      "frames": 4,
+      "frameSize": 128,
+      "fps": 12,
+      "loop": false,
+      "unityPivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 128,
+      "kind": "vfx",
+      "impactFrame0": 0,
+      "peakFrame0": 3,
+      "inheritTargetVisibility": false,
+      "source": "vfx_passo_in",
+      "sha256": "d7d9fc74254af920568c4c04749026b3dbf651f1e3cd5d3e6737c37d9892398b"
+    },
+    {
+      "resource": "Sprites/Efeitos/doce-e-salgado/sorvete",
+      "frames": 4,
+      "frameSize": 128,
+      "fps": 4,
+      "loop": false,
+      "unityPivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 128,
+      "kind": "vfx",
+      "impactFrame0": 0,
+      "peakFrame0": 0,
+      "inheritTargetVisibility": false,
+      "source": "vfx_doce_sorvete",
+      "sha256": "085f57e09bb6da707f1e8f942fe788738761f3af8f8bafc3d4631d4dc508b4d5"
+    },
+    {
+      "resource": "Sprites/Efeitos/doce-e-salgado/cura",
+      "frames": 8,
+      "frameSize": 128,
+      "fps": 12,
+      "loop": false,
+      "unityPivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 128,
+      "kind": "vfx",
+      "impactFrame0": 0,
+      "peakFrame0": 0,
+      "inheritTargetVisibility": true,
+      "source": "vfx_doce_cura",
+      "sha256": "8a6388fb13db7ee046c1e4501c4536157960bfe8e68b3bc3e060dfd239052485"
+    },
+    {
+      "resource": "Sprites/Efeitos/ruptura-das-memorias/conjuracao",
+      "frames": 8,
+      "frameSize": 128,
+      "fps": 12,
+      "loop": false,
+      "unityPivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 128,
+      "kind": "vfx",
+      "impactFrame0": 0,
+      "peakFrame0": 1,
+      "inheritTargetVisibility": false,
+      "source": "vfx_ruptura_foco",
+      "sha256": "bc15b6f5ee44991b9c6357bade544ff37eceb0d8a9f8913a3794c1dcb381d454"
+    },
+    {
+      "resource": "Sprites/Efeitos/ruptura-das-memorias/pilar",
+      "frames": 8,
+      "frameSize": 128,
+      "fps": 12,
+      "loop": false,
+      "unityPivot": [
+        0.5,
+        0.03125
+      ],
+      "pixelsPerUnit": 128,
+      "kind": "vfx",
+      "impactFrame0": 2,
+      "peakFrame0": 1,
+      "inheritTargetVisibility": false,
+      "source": "vfx_ruptura_pilar",
+      "sha256": "334a72c4c156124d3fa22e7a9b543fbb66450fa13a6b91d2847904c09d4da59d"
+    },
+    {
+      "resource": "Sprites/Somnax/attack_south-east",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_pacto/south-east/000.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/001.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/002.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/003.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/004.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/005.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/006.png",
+        "native/Somnax/animacoes/somnax_pacto/south-east/007.png"
+      ],
+      "sha256": "070f7914876272991f38378dc7ecb63623f035d3f143650d8a388a88ab1a9c7e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "technicalAliasOf": "Sprites/Somnax/pacto_south-east"
+    },
+    {
+      "resource": "Sprites/Somnax/attack_north-east",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_pacto/north-east/000.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/001.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/002.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/003.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/004.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/005.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/006.png",
+        "native/Somnax/animacoes/somnax_pacto/north-east/007.png"
+      ],
+      "sha256": "9113e9fc3e6c636bdbc55c510de7a4fa261e43b1144232bd030058e95a061a77",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "technicalAliasOf": "Sprites/Somnax/pacto_north-east"
+    },
+    {
+      "resource": "Sprites/Somnax/attack_north-west",
+      "frames": 8,
+      "frameSize": 168,
+      "unityPivot": [
+        0.5,
+        0.14285714285714285
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_pacto/north-west/000.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/001.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/002.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/003.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/004.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/005.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/006.png",
+        "native/Somnax/animacoes/somnax_pacto/north-west/007.png"
+      ],
+      "sha256": "29192b10065670d4fc535ecc3f0530a1cfe4cc7d1fc5b474dce40eeab319787f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "technicalAliasOf": "Sprites/Somnax/pacto_north-west"
+    },
+    {
+      "resource": "Sprites/Somnax/attack_south-west",
+      "frames": 8,
+      "frameSize": 172,
+      "unityPivot": [
+        0.5,
+        0.1511627906976744
+      ],
+      "pixelsPerUnit": 128,
+      "fps": 14,
+      "loop": false,
+      "kind": "actor",
+      "sources": [
+        "native/Somnax/animacoes/somnax_pacto/south-west/000.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/001.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/002.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/003.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/004.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/005.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/006.png",
+        "native/Somnax/animacoes/somnax_pacto/south-west/007.png"
+      ],
+      "sha256": "368ed793165dd5e2e908f10deee5caac62d46bac53a40e5b6f1e15469d46a689",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "technicalAliasOf": "Sprites/Somnax/pacto_south-west"
+    }
+  ],
+  "source": "PixelLab native; originais preservados; tiras técnicas sem reescala",
+  "createdAt": "2026-10-23T17:53:15.727363+00:00",
+  "audio": [
+    "Audio/Vozes/damian_acerto",
+    "Audio/Vozes/damian_canhao",
+    "Audio/Vozes/damian_martelo",
+    "Audio/Vozes/damian_morte",
+    "Audio/Vozes/damian_pele_d_ark",
+    "Audio/Vozes/damian_pistola",
+    "Audio/Vozes/jack_flecha_abissal",
+    "Audio/Vozes/jack_ultimate",
+    "Audio/Vozes/primal_cacador",
+    "Audio/Vozes/tchu_escudo",
+    "Audio/Vozes/tchu_morte",
+    "Audio/Vozes/tchu_possessao",
+    "Audio/Vozes/tchu_proteger_aliado",
+    "Audio/Vozes/tchu_sair_ultimate"
+  ],
+  "audioReview": "8 falas provisórias aguardam arquivos de entonação do autor; não aprovadas"
+}
