@@ -50,3 +50,6 @@ No principal, alterei `Core/Match.cs` (fim de `ViewFor`), `Core/Match.Inventores
 - Somnax: Passo do Crepúsculo sem recarga e sem visão; Doce e Salgado ultimate com alcance 4, cura 3 e sem visão. Pacto e Renúncia já estavam como o autor pediu.
 - Viúva da Agulha: Teia 2×2 (família invisível nela), até 3 aranhas com IA (intruso da teia ou alvo da mãe, 50% de erro fora da teia), números do autor (PV 7, PM 5, Nível 3, aura +1) na ficha padrão; protocolo 17.
 - Tchu berserk volta a refletir dano (edição do PC).
+
+## 1.2.17 (24/10)
+- Teia da Viúva: inimigo que pisa ou começa o turno nela perde 4 PM (pmLoss da skill), uma vez por turno.

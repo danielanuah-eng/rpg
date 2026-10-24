@@ -3,7 +3,7 @@ public static partial class Content {
  static string DescribeLuna(SkillDef sk) {
   string detail=null;
   switch(sk.effect){
-   case "teia-viuva":detail="Joga uma teia de 4 casas (2×2) no chão. Em cima dela a Viúva e as aranhas ficam invisíveis. O último inimigo que pisar nela ou começar o turno nela vira o alvo das aranhas. Uma teia por vez.";break;
+   case "teia-viuva":detail=$"Joga uma teia de 4 casas (2×2) no chão. Em cima dela a Viúva e as aranhas ficam invisíveis. Inimigo que pisar nela ou começar o turno nela perde {sk.pmLoss} PM (uma vez por turno). O último inimigo que pisar nela ou começar o turno nela vira o alvo das aranhas. Uma teia por vez.";break;
    case "comando-blip":detail="Se Blip estiver vivo, abre a loja de qualquer lugar. Se estiver caído, invoca somente Blip perto de Nikola.";break;
    case "comando-celinos":detail="Se Celinos estiver vivo, marca um inimigo em qualquer lugar do mapa para ele priorizar. Se estiver caído, invoca somente Celinos.";break;
    case "eletaser":detail=$"{sk.damage} de dano, alcance {sk.maxRange}. Reduz os PA restantes do alvo pela metade (mínimo 1, sem criar PA). A cada 2 engrenagens: +1 de alcance.";break;

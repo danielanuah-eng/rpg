@@ -54,9 +54,20 @@ namespace ArenaTatica.Core
                 {
                     if(!f.hidden) { f.hidden=true; f.pm=Math.Min(f.pm,HiddenCap(f)); (log??events).Add(new GameEvent{kind="esconder",actor=f.id,info=WebEffect,cell=f.cell}); }
                 }
-                else if(!S.Ally(f.team,mother.team)) w.last=f.id;
+                else if(!S.Ally(f.team,mother.team))
+                {
+                    w.last=f.id;
+                    // Grudar (pmLoss da Teia na ficha, autor 24/10): perde os PM uma vez por turno ao pisar ou começar nela.
+                    int loss=Content.Def(mother).skills.Where(x=>x.effect==WebEffect).Select(x=>x.pmLoss).DefaultIfEmpty(0).Max();
+                    if(loss>0&&!f.used.Contains(WebStuck)&&!Unbreakable(f))
+                    {
+                        f.used.Add(WebStuck); f.pm=Math.Max(0,f.pm-loss);
+                        (log??events).Add(new GameEvent{kind="buff",target=f.id,info=WebEffect,cell=f.cell,value=-loss});
+                    }
+                }
             }
         }
+        const string WebStuck="teia-grudou";
         // A Viúva atacou: as aranhas sem alvo da teia vão atrás desse inimigo.
         void WebPrey(Fighter by,Fighter v)
         {
