@@ -18,7 +18,8 @@ namespace ArenaTatica
         // e times grandes passavam do limite do Relay (80 KB) e derrubavam os clientes.
         // 14: inventores/lua, estado das máquinas e terreno de água.
         // 16 (24/10): chance de erro das skills, skills conhecidas da ficha editada e rodada da marca do Celinos.
-        public int protocol=16;
+        // 17 (24/10): teia da Viúva da Agulha no estado (LunaState.webs).
+        public int protocol=17;
         public string kind, text, token;
         public string[] fighters; // hello: time escolhido no aparelho do jogador
         public string[] pool;     // hello/escolha: pool do torneio

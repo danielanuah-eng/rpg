@@ -51,7 +51,7 @@ namespace ArenaTatica
             ["rei-thaagarys"]=3.7f, ["guarda-do-trono"]=1.8f, ["somnax"]=1.6f, ["ciantia"]=1.6f, ["talyssa"]=1.6f, ["teantha"]=1.65f, ["devon"]=1.7f, ["diantus"]=1.6f, ["damian"]=1.6f,
             ["ezequiela"]=1.3f, ["ilusao"]=1.3f, ["tchu-tcha"]=1.85f, ["arqueiro-jack"]=1.6f, ["perry"]=1.2f, ["dragao-espectral"]=2f, ["lobo-de-cinzas"]=.8f, ["ossyro"]=1.8f,
             ["asamyh"]=1.5f, ["gato-laranja"]=.55f, ["gato-branco"]=.55f, ["gato-malhado"]=.55f, ["gato-manchado"]=.55f, ["colosso"]=3.1f, ["cheiro-pneu"]=2.1f, ["edgar"]=1.65f, ["navio-fantasma"]=2.1f,
-            ["rei-bobett"]=1.5f, ["principe-kellen"]=1f, ["vespa-cinzenta"]=.8f, ["viuva-da-agulha"]=1.55f, ["guardiao-de-musgo"]=1.8f, ["domador-de-correntes"]=1.65f,
+            ["rei-bobett"]=1.5f, ["principe-kellen"]=1f, ["vespa-cinzenta"]=.8f, ["viuva-da-agulha"]=1.95f, ["aranha-viuva"]=.6f, ["guardiao-de-musgo"]=1.8f, ["domador-de-correntes"]=1.65f,
             ["ogro-de-pedra"]=2f, ["baltazar"]=1.8f, ["totem-de-cura"]=.9f, ["papa-moedas"]=.6f, ["brutamontes-errante"]=2.5f,
             ["chefe-dragao"]=2.6f, ["chefe-necromante"]=2.1f, ["chefe-rei-goblin"]=2.3f,
             ["pele-negra"]=1.75f, ["lela"]=1.75f, ["gumbald"]=1.25f, ["daemion"]=1.75f, ["ikaito"]=1.65f,

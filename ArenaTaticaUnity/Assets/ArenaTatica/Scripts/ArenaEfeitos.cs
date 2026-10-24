@@ -30,10 +30,14 @@ namespace ArenaTatica
         }
         public static void Reset() { manifest=null; }
         // Fases usam a identidade visual original, inclusive skills sorteadas ou devoradas.
-        public static string SkillPhase(string id,string phase) => string.IsNullOrEmpty(id)?null:Core.Content.BaseSkill(id)+"/"+phase;
+        // Skins emprestadas (autor 24/10): skills da Viúva usam os efeitos de teia e de esconder que já existem.
+        static readonly System.Collections.Generic.Dictionary<string,string> Skins=new System.Collections.Generic.Dictionary<string,string>{
+            ["viuva-da-agulha-teia"]="teia", ["teia-viuva"]="teia", ["viuva-da-agulha-esconder-se"]="esconder-se", ["viuva-da-agulha-clone-das-sombras"]="teia", ["mordida-aranha"]="ferrao" };
+        public static string Skin(string id) => id!=null&&Skins.TryGetValue(id,out var s)?s:id;
+        public static string SkillPhase(string id,string phase) => string.IsNullOrEmpty(id)?null:Skin(Core.Content.BaseSkill(id))+"/"+phase;
         public static string UsePhase(string kind,string id)
         {
-            id=Core.Content.BaseSkill(id);
+            id=Skin(Core.Content.BaseSkill(id));
             if(string.IsNullOrEmpty(id)) return null;
             switch(kind) {
                 case "esconder": case "armadilha-posta": return SkillPhase(id,"uso");

@@ -1259,6 +1259,7 @@ namespace ArenaTatica.Core
             if(main!=null&&!sk.Custom&&(main.prisoned>0||(!intercepted&&S.Ally(main.team,f.team))||(sk.foes&&S.Ally(main.team,f.team)))) main=null;
             // Chance de erro do Editor (autor 24/10): missPct vale em qualquer ataque; sem ela, "Pode errar" usa o dado.
             bool missed=sk.missPct>0?Dice.Range(S,100)<sk.missPct:sk.wild&&(a==Face.Esquiva||a==Face.CoringaEsquivaTrava);
+            if(main!=null) WebPrey(f,main);
             bool ambush=f.hidden;
             int bonus=S.fighters.Where(g=>g.Alive&&g.id!=f.id&&S.Ally(g.team,f.team)&&Content.Def(g).allyBonus>0&&Board.Gap(g,f)<=Content.Def(g).auraRange).Select(g=>Content.Def(g).allyBonus).DefaultIfEmpty(0).Max();
             bonus+=Passive(f,PassiveStat.Dano)+f.buffs.Sum(b=>b.dmg)+EventDamage(f);

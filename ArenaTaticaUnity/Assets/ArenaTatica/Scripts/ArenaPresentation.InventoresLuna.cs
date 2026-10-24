@@ -53,6 +53,14 @@ public sealed partial class ArenaPresentation {
    var at=Position(s,c)+Vector3.up*.12f;LunaSprite(g.value>1?"funilaria-especial":"funilaria-engrenagem",at,.7f,lunaRoot,true);
    for(int i=0;i<g.hits;i++){var mark=GameObject.CreatePrimitive(PrimitiveType.Sphere);Destroy(mark.GetComponent<Collider>());mark.name="Marcador de golpe "+(i+1);mark.transform.SetParent(lunaRoot,false);mark.transform.position=at+new Vector3((i-1)*.12f,.55f,0);mark.transform.localScale=Vector3.one*.085f;mark.GetComponent<Renderer>().sharedMaterial=coinMaterial;}
   }
+  // Teia da Viúva (autor 24/10): a arte de impacto da Teia deitada em cada casa, translúcida.
+  var web=Resources.LoadAll<Sprite>("Sprites/Efeitos/teia/impacto").OrderBy(x=>x.name,StringComparer.Ordinal).FirstOrDefault();
+  foreach(var w in s.Luna.webs) foreach(int i in w.cells??new int[0]) {
+   var c=new Cell(i%s.width,i/s.width);if(!Board.Contains(s,c))continue;
+   var go=new GameObject("Teia",typeof(SpriteRenderer));go.transform.SetParent(lunaRoot,false);go.transform.position=Position(s,c)+Vector3.up*.03f;go.transform.rotation=Quaternion.Euler(90,0,0);
+   var sr=go.GetComponent<SpriteRenderer>();sr.sprite=web;sr.color=new Color(.92f,.92f,1,.6f);
+   if(web)go.transform.localScale=Vector3.one*(.95f/Mathf.Max(.01f,web.bounds.size.x));
+  }
   foreach(var f in s.fighters.Where(x=>x.Alive)) {
    if(!units.TryGetValue(f.id,out var actor)||!actor.gameObject.activeInHierarchy)continue;
    // Contador de engrenagens: fica ao lado da barra de vida (ArenaPresentation.UpdateBars).

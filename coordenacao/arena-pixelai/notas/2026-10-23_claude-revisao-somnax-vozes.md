@@ -45,3 +45,8 @@ No principal, alterei `Core/Match.cs` (fim de `ViewFor`), `Core/Match.Inventores
 - Fichas editadas antes de 24/10 ganham as skills novas do padrão (`knownSkills`), a chance de erro e o lendário. A edição antiga da Ezequiela (21/10) foi tirada do PC do autor, com backup em `arena-edicoes.backup-2410.json`: ela escondia as skills novas.
 - Loja no meio das Docas. Gigante só paga água com o corpo todo nela.
 - EditMode **757/757**. Build: Success. Contrato de rede PASS 3×.
+
+## 1.2.16 (24/10)
+- Somnax: Passo do Crepúsculo sem recarga e sem visão; Doce e Salgado ultimate com alcance 4, cura 3 e sem visão. Pacto e Renúncia já estavam como o autor pediu.
+- Viúva da Agulha: Teia 2×2 (família invisível nela), até 3 aranhas com IA (intruso da teia ou alvo da mãe, 50% de erro fora da teia), números do autor (PV 7, PM 5, Nível 3, aura +1) na ficha padrão; protocolo 17.
+- Tchu berserk volta a refletir dano (edição do PC).

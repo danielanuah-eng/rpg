@@ -12,8 +12,8 @@ namespace ArenaTatica.Core
             ["somnax"]=new FighterDef { id="somnax", name="Somnax", sprites="Somnax", hp=11, pa=6, pm=4, initiative=6, level=5, armor=0, size=1, legendary=true, skills=new[] {
                 new SkillDef { id="pacto", name="Pacto", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=2, precise=true, perTurn=2, anim="pacto" },
                 new SkillDef { id="renuncia", name="Renúncia", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=2, pierce=true, perTurn=1, anim="renuncia" },
-                new SkillDef { id="passo-do-crepusculo", name="Passo do Crepúsculo", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=3, cooldown=1, sight=true, anim="blinkout" },
-                new SkillDef { id="doce-e-salgado", name="Doce e Salgado", kind=SkillKind.DoceSalgado, pa=5, minRange=0, maxRange=2, heal=2, perMatch=1, twoCells=true, hits=(int)(Hit.Si|Hit.Aliado), anim="support" },
+                new SkillDef { id="passo-do-crepusculo", name="Passo do Crepúsculo", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=3, sight=false, anim="blinkout" },
+                new SkillDef { id="doce-e-salgado", name="Doce e Salgado", kind=SkillKind.DoceSalgado, pa=5, minRange=0, maxRange=4, heal=3, sight=false, perMatch=1, ultimate=true, twoCells=true, hits=(int)(Hit.Si|Hit.Aliado), anim="support" },
                 new SkillDef { id="ruptura-das-memorias", name="Ruptura das Memórias", kind=SkillKind.Dano, pa=5, minRange=1, maxRange=3, area=1, square=true, foes=true, damage=5, perMatch=1, ultimate=true, anim="ult" } } },
             ["ciantia"]=new FighterDef { id="ciantia", name="Ciantia", sprites="Ciantia", hp=11, pa=6, pm=3, initiative=5, level=4, skills=new[] {
                 new SkillDef { id="dragao-dourado", name="Dragão Dourado", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=4, damage=2, line=true, modifiable=true },
@@ -63,7 +63,7 @@ namespace ArenaTatica.Core
                     new SkillDef { id="guarda-direcional", name="Guarda direcional", kind=SkillKind.GuardaDirecional, pa=0, minRange=0, maxRange=1, sight=false, area=2, buffArmor=1, anim="idle", form="normal" },
                     new SkillDef { id="escudada", name="Escudada", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, pmLoss=1, form="normal" },
                     new SkillDef { id="olho-abissal", name="Olho abissal", kind=SkillKind.Forma, pa=2, minRange=0, maxRange=0, sight=false, toForm="berserk", turns=3, perMatch=1, ultimate=true, form="normal", anim="transform" },
-                    new SkillDef { id="furia-negra", name="Fúria negra", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=5, wild=true, missPct=15, form="berserk" } } },
+                    new SkillDef { id="furia-negra", name="Fúria negra", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=3, wild=true, missPct=15, form="berserk" } } },
             // Anjo caído: tiro carregado de longe; a ultimate abre as asas e prepara uma flecha devastadora.
             ["arqueiro-jack"]=new FighterDef { id="arqueiro-jack", name="Arqueiro Jack", sprites="ArqueiroJack", hp=9, pa=6, pm=4, initiative=7, level=4, startForm="capuz",
                 forms=new[] { new FormDef { id="capuz", name="Capuz" }, new FormDef { id="asas", name="Asas abertas", armor=-1 } },
@@ -123,8 +123,14 @@ namespace ArenaTatica.Core
             // Fichas extras: mobilidade, armadura perfurante/posicional, defesa, controle de grupo e muito PV.
             ["vespa-cinzenta"]=new FighterDef { id="vespa-cinzenta", name="Vespa Cinzenta", sprites="VespaCinzenta", hp=6, pa=6, pm=6, initiative=9, level=2, flying=true, skills=new[] {
                 new SkillDef { id="ferrao", name="Ferrão", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=1, perTurn=2, pmLoss=1 } } },
-            ["viuva-da-agulha"]=new FighterDef { id="viuva-da-agulha", name="Viúva da Agulha", sprites="ViuvaAgulha", hp=9, pa=6, pm=4, initiative=7, level=4, skills=new[] {
-                new SkillDef { id="agulha", name="Agulha", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=2, damage=2, pierce=true, isolatedBonus=2 } } },
+            ["viuva-da-agulha"]=new FighterDef { id="viuva-da-agulha", name="Viúva da Agulha", sprites="ViuvaAgulha", hp=7, pa=6, pm=5, initiative=7, level=3, allyBonus=1, auraRange=1, skills=new[] {
+                new SkillDef { id="agulha", name="Agulha", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=2, damage=2, pierce=true, isolatedBonus=2 },
+                // Autor 24/10: teia de 4 casas no chão, aranhas (até 3) e esconder (ids iguais aos da ficha que ele montou no Editor).
+                new SkillDef { id="viuva-da-agulha-clone-das-sombras", name="Aranhas", kind=SkillKind.Invocacao, summon="aranha-viuva", pa=2, minRange=1, maxRange=1, cooldown=3, maxActive=3, anim="attack" },
+                new SkillDef { id="viuva-da-agulha-esconder-se", name="Esconder-se", kind=SkillKind.Esconder, pa=2, minRange=0, maxRange=0, sight=false, perTurn=1, cooldown=1, anim="hide" },
+                new SkillDef { id="viuva-da-agulha-teia", name="Teia", kind=SkillKind.Suporte, effect="teia-viuva", pa=3, minRange=1, maxRange=4, cooldown=3, anim="attack" } } },
+            // Aranha da Viúva: versão pequena dela, sem turno próprio (age no fim do turno da mãe), 3 PM e 1 de dano.
+            ["aranha-viuva"]=new FighterDef { id="aranha-viuva", name="Aranha", sprites="ViuvaAgulha", hp=2, pa=0, pm=3, level=0, picker=false, noTurn=true, noLock=true, noReveal=true, skills=new SkillDef[0] },
             ["guardiao-de-musgo"]=new FighterDef { id="guardiao-de-musgo", name="Guardião de Musgo", sprites="GuardiaoMusgo", hp=13, pa=6, pm=2, initiative=3, level=4, skills=new[] {
                 new SkillDef { id="casca", name="Casca", kind=SkillKind.Suporte, pa=2, minRange=0, maxRange=3, buffArmor=2, turns=1, anim="bark" },
                 new SkillDef { id="raizes", name="Raízes", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=1, pmLoss=10, cooldown=2, anim="roots" } } },

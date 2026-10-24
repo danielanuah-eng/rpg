@@ -380,6 +380,8 @@ namespace ArenaTatica.Core
     // Marca do Celinos: casa em que o alvo foi marcado (trocar de casa ou morrer desfaz a marca).
     // round: rodada do último comando (o Celinos larga o alvo depois de 2 rodadas sem comando novo).
     [Serializable] public class LunaMark { public int by, id, x, z, round; }
+    // Teia da Viúva da Agulha: dona, casas (índices), último inimigo que pisou/começou o turno nela e o último alvo da dona.
+    [Serializable] public class LunaWeb { public int by, last, prey; public int[] cells; }
     // Clone do eco-de-aliado: turns = turnos do Desland que faltam para o clone sumir.
     [Serializable] public class LunaClone { public int id, by, turns; }
     [Serializable] public class LunaSeen { public int team, id; }
@@ -394,6 +396,7 @@ namespace ArenaTatica.Core
         public List<Gear> gears=new List<Gear>();
         public List<LunaFamily> families=new List<LunaFamily>();
         public List<LunaMark> marks=new List<LunaMark>();
+        public List<LunaWeb> webs=new List<LunaWeb>();
         public List<LunaClone> clones=new List<LunaClone>();
         public List<LunaField> fields=new List<LunaField>();
         public LunaBox box=new LunaBox();
