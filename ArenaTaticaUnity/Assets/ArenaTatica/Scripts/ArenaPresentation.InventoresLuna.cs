@@ -20,7 +20,7 @@ public sealed partial class ArenaPresentation {
    case "comando-blip":case "comando-celinos":case "blipware":id="funilaria-especial";break;
    case "funilaria":id="funilaria-engrenagem";break;
    case "mover-esfera":case "loucura-negra":case "nepturius-esfera":case "esfera-orfa":id="aura-nepturius";break;
-   case "nepturius-cubo":id="explosao-antimateria";break;
+   case "nepturius-cubo":id="aura-nepturius";break;
    case "saida-matriz":case "caixa-voo":id="matriz-protecao";break;
    case "tiro-celinos":id="eletaser";break;
    case "mover-peao":case "mover-torre":case "mover-cavalo":case "mover-bispo":case "mover-rainha":id="dominio-xadrez";break;
@@ -90,9 +90,12 @@ public sealed partial class ArenaPresentation {
   if(id=="blip-loja") Game.Hud?.OpenRemoteShop(e.actor);
   if(id=="viva-luna-fim"||id=="dominio-xadrez-fim"||id=="matriz-protecao-fim"||id=="funilaria-fim"||id=="funilaria-golpe"||id=="matriz-dano") {lunaRevision=-1;yield break;}
   if(id=="nepturius-esfera"||id=="loucura-negra"||id=="esfera-orfa")id="aura-nepturius";
-  if(id=="nepturius-cubo")id="explosao-antimateria";
+  // Cubo (dano numa casa): pulso escuro de uma casa; o estilhaço grande saiu (autor 24/10).
+  if(id=="nepturius-cubo")id="aura-nepturius";
   if(id=="funilaria")id="funilaria-engrenagem";
   if(actor&&e.kind=="skill")PlayClip(actor,"cast");
+  // Agarrão (autor 24/10): as mãos saem da esfera e se esticam até cada alvo.
+  if(id=="agarrao-negro"&&target&&actor){var hand=LunaSprite(id,actor.position+Vector3.up*.65f,1.6f,effectRoot);if(hand){var from=hand.transform.position;var to=target.position+Vector3.up*.65f;float t=0;while(t<.3f&&hand){t+=Time.deltaTime;hand.transform.position=Vector3.Lerp(from,to,Mathf.Clamp01(t/.3f));yield return null;}if(hand)Destroy(hand,1.7f);}if(e.value!=0)Float(target.position+Vector3.up*1.8f,e.value.ToString(),Blue);yield return Wait(.2f);yield break;}
   if(id=="agarrao-negro"&&target)at=target.position+Vector3.up*.65f;
   var fx=LunaSprite(id,at,id=="viva-luna"?3.5f:id=="explosao-antimateria"?3f:1.6f,effectRoot);
   if(fx)Destroy(fx,id=="agarrao-negro"?2f:.9f);
@@ -108,6 +111,9 @@ public sealed partial class ArenaPresentation {
   foreach(int side in new[]{-1,1}){Add(2,new Vector3(0,.5f,side*edge),new Vector3(s.width+1,1.2f,.5f));Add(2,new Vector3(side*edge,.5f,0),new Vector3(.5f,1.2f,s.height+1));}
   var mats=new[]{wet,dry,stone};for(int i=0;i<groups.Length;i++){if(groups[i].Count==0)continue;var mesh=new Mesh{name="Docas "+i,indexFormat=UnityEngine.Rendering.IndexFormat.UInt32};mesh.CombineMeshes(groups[i].ToArray());generatedMeshes.Add(mesh);var go=new GameObject(mesh.name,typeof(MeshFilter),typeof(MeshRenderer));go.transform.SetParent(boardRoot,false);go.GetComponent<MeshFilter>().sharedMesh=mesh;go.GetComponent<MeshRenderer>().sharedMaterial=mats[i];if(i==0)go.AddComponent<LunaWaterFlow>().material=wet;}
   LunaLabel("Água: movimento pela metade (mín. 1)",new Vector3(0,.2f,-s.height*.5f-1.1f),Blue,boardRoot,null,.035f);
+  // Loja no meio das docas também (autor 24/10): a mesma barraca do mascate dos mapas abertos.
+  var shop=MapGen.ShopCells(s);
+  if(shop.All(c=>s.At(c).terrain==Terrain.Loja)){var center=shop.Aggregate(Vector3.zero,(a,c)=>a+Position(s,c))/shop.Length;center.y=shop.Max(c=>s.At(c).height)*HStep;PlaceKit(0,"loja_mascate",center,180,boardRoot);}
  }
 }
 sealed class LunaFacing:MonoBehaviour {public Camera camera;void LateUpdate(){if(camera)transform.rotation=camera.transform.rotation;}}

@@ -34,7 +34,7 @@ namespace ArenaTatica
             saved=e.fighters.Count==0?"":JsonUtility.ToJson(e);
             try { if(saved=="") { if(File.Exists(FilePath)) File.Delete(FilePath); } else File.WriteAllText(FilePath,saved); } catch(Exception ex) { Debug.LogWarning("Edições: "+ex.Message); }
         }
-        public static void Put(FighterDef d) { var e=Load(); e.fighters.RemoveAll(x=>x.id==d.id); e.fighters.Add(Content.Sanitize(Content.Copy(d))); Save(e); }
+        public static void Put(FighterDef d) { var e=Load(); e.fighters.RemoveAll(x=>x.id==d.id); var copy=Content.Sanitize(Content.Copy(d)); copy.knownSkills=Content.SkillIds(d.id); e.fighters.Add(copy); Save(e); }
         public static void Reset(string id) { var e=Load(); e.fighters.RemoveAll(x=>x.id==id); Save(e); }
         public static void ResetAll() => Save(new GameEdits());
         public static FighterDef Get(string id) => Load().fighters.Find(x=>x.id==id);
@@ -779,7 +779,7 @@ namespace ArenaTatica
             Flag(grid,"Linha reta",()=>s.line,x=>s.line=x); Flag(grid,"Precisa de visão",()=>s.sight,x=>s.sight=x); Flag(grid,"+alcance no alto",()=>s.modifiable,x=>s.modifiable=x);
             Flag(grid,"Em volta de si",()=>s.selfArea,x=>{ s.selfArea=x; if(x) { s.minRange=0; s.maxRange=0; } }); Flag(grid,"Área nas 8 casas",()=>s.square,x=>s.square=x); Flag(grid,"Área só inimigos",()=>s.foes,x=>s.foes=x);
             Flag(grid,"Puxa até colar",()=>s.pull,x=>s.pull=x); Flag(grid,"Ignora armadura e Escudo",()=>s.pierce,x=>s.pierce=x); Flag(grid,"Ignora só armadura",()=>s.ignoreArmor,x=>s.ignoreArmor=x); Flag(grid,"Ignora Escudo",()=>s.precise,x=>s.precise=x);
-            Flag(grid,"Congela casas (zona)",()=>s.freeze,x=>s.freeze=x); Flag(grid,"Pode errar",()=>s.wild,x=>s.wild=x); Flag(grid,"Ultimate",()=>s.ultimate,x=>{ s.ultimate=x; if(x&&s.perTurn==0&&s.perMatch==0&&s.cooldown==0) s.perMatch=1; });
+            Flag(grid,"Congela casas (zona)",()=>s.freeze,x=>s.freeze=x); Flag(grid,"Pode errar",()=>s.wild,x=>s.wild=x); Stepper(grid,"Chance de erro % (0 = sem; com Pode errar, dado)",()=>s.missPct,x=>s.missPct=x); Flag(grid,"Ultimate",()=>s.ultimate,x=>{ s.ultimate=x; if(x&&s.perTurn==0&&s.perMatch==0&&s.cooldown==0) s.perMatch=1; });
             Flag(grid,"Canalizada (próximo turno)",()=>s.channeled,x=>s.channeled=x); Flag(grid,"Mina (não para o movimento)",()=>s.mine,x=>s.mine=x); Flag(grid,"Grátis sem usar arma",()=>s.freeSwap,x=>s.freeSwap=x);
             Flag(grid,"Anula formas e buffs",()=>s.dispel,x=>s.dispel=x); Flag(grid,"Tira buffs de inimigos",()=>s.purge,x=>s.purge=x); Flag(grid,"Limpa males de aliados",()=>s.cleanse,x=>s.cleanse=x);
             Flag(grid,"Reflete o próximo golpe (suporte)",()=>s.buffReflect,x=>s.buffReflect=x); Flag(grid,"Imune a efeitos ruins (suporte)",()=>s.buffImmune,x=>s.buffImmune=x); Flag(grid,"Revela escondidos (zona)",()=>s.reveal,x=>s.reveal=x);

@@ -36,3 +36,12 @@ No principal, alterei `Core/Match.cs` (fim de `ViewFor`), `Core/Match.Inventores
 - Música ambiente de RPG desligada: menu e modo sem forma ficam em silêncio (a trilha `Ambient` segue no código, sem tocar).
 - Xadrez do Desland: `dominio-xadrez` com recarga 2 (não é mais 1 vez por partida); dano das peças `pieceDamage=2` e rainha `queenDamage=4` (editáveis no `LunaDef`); torre, bispo e rainha deslizam; peão que chega à borda mais longe do Desland vira rainha. Mover inimigo continua 1 vez por ultimate.
 - EditMode **736/736**. Build Windows: Success, 0 erros. Contrato de rede PASS 3×. Publicado no itch (windows, 1.2.14).
+
+## Publicado no principal (24/10, 1.2.15, protocolo 16)
+- Nepturius: dono e esfera nunca se afetam (aura, agarrão, explosão, cubo); num espelho, a esfera pega o outro Nepturius. A esfera anda 1 PM por casa em qualquer terreno, nada a afeta, os bots não a atacam. Mover esfera custa 0 PA. A explosão causa +2 de dano com o dono vivo. Esfera órfã: no fim de todo turno anda até 8 PM e usa um ataque sorteado. Braços do agarrão saem da esfera; o cubo virou pulso escuro.
+- Nikola lendário. Engrenagens a cada 4/3/2/1 rodadas (x1, x3 ou dupla x dupla, x4, x5+); 2 golpes para destruir; oponente nunca coleta. Celinos travado na marca até o alvo cair ou 2 rodadas sem comando.
+- Desland: domínio 4 turnos, +1 de armadura, 16 botões de skill (a rainha aparecia fora). Peças ficam após a ult, e a nova ult só repõe as que caíram. Cada peça só anda com o próprio movimento. Movimentos ignoram terreno, altura e visão. Peças imunes a condições: bispo até 3 nas diagonais, peão e rainha colados, cavalo em área onde cai, torre com 3 PV, atordoa e dá +1 de armadura aos aliados colados.
+- Tchu demoníaco: 15% de erro (`missPct`, editável no Editor para qualquer ataque). Somnax: Pacto 2 fixo (sem dados), Renúncia 2 fixo (ignora armadura e Escudo), Passo do Crepúsculo com recarga 1. Damon com recarga 4. Lendários: Pele D. Ark, Damian e Damon.
+- Fichas editadas antes de 24/10 ganham as skills novas do padrão (`knownSkills`), a chance de erro e o lendário. A edição antiga da Ezequiela (21/10) foi tirada do PC do autor, com backup em `arena-edicoes.backup-2410.json`: ela escondia as skills novas.
+- Loja no meio das Docas. Gigante só paga água com o corpo todo nela.
+- EditMode **757/757**. Build: Success. Contrato de rede PASS 3×.

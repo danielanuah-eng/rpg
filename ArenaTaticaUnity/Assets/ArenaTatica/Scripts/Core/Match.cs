@@ -404,7 +404,7 @@ namespace ArenaTatica.Core
         public int HiddenCap(Fighter f) => HiddenPm+Math.Max(0,f.bonusPm+f.buffs.Sum(b=>b.pm)+(Content.Form(f)?.pm??0)+Passive(f,PassiveStat.PM));
         // Forma fantasma (Edgar): golpes de inimigos não o acertam.
         static bool Ghost(Fighter v) => Content.Form(v)?.intangible??false;
-        int Armor(Fighter f) => f.armor+Content.Def(f).armor+f.buffs.Sum(b=>b.armor)+(Content.Form(f)?.armor??0)+Passive(f,PassiveStat.Armadura);
+        int Armor(Fighter f) => f.armor+Content.Def(f).armor+f.buffs.Sum(b=>b.armor)+(Content.Form(f)?.armor??0)+Passive(f,PassiveStat.Armadura)+TowerArmor(f);
         // Passivas do editor (FighterDef.passives): soma do que os donos vivos dão a v.
         public int Passive(Fighter v,PassiveStat stat)
         {
@@ -1257,7 +1257,8 @@ namespace ArenaTatica.Core
             // Bolinhas (3.1): com hits marcado, alvo e área seguem só as bolinhas (🔵 pode acertar e nocautear quem usa).
             if(main!=null&&sk.Custom&&!intercepted&&(main.prisoned>0||!Hits(f,sk,main))) main=null;
             if(main!=null&&!sk.Custom&&(main.prisoned>0||(!intercepted&&S.Ally(main.team,f.team))||(sk.foes&&S.Ally(main.team,f.team)))) main=null;
-            bool missed=sk.wild&&(a==Face.Esquiva||a==Face.CoringaEsquivaTrava);
+            // Chance de erro do Editor (autor 24/10): missPct vale em qualquer ataque; sem ela, "Pode errar" usa o dado.
+            bool missed=sk.missPct>0?Dice.Range(S,100)<sk.missPct:sk.wild&&(a==Face.Esquiva||a==Face.CoringaEsquivaTrava);
             bool ambush=f.hidden;
             int bonus=S.fighters.Where(g=>g.Alive&&g.id!=f.id&&S.Ally(g.team,f.team)&&Content.Def(g).allyBonus>0&&Board.Gap(g,f)<=Content.Def(g).auraRange).Select(g=>Content.Def(g).allyBonus).DefaultIfEmpty(0).Max();
             bonus+=Passive(f,PassiveStat.Dano)+f.buffs.Sum(b=>b.dmg)+EventDamage(f);

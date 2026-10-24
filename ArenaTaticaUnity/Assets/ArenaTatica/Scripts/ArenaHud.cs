@@ -68,8 +68,8 @@ namespace ArenaTatica
             labels.Add(LabelRow("AÇÕES",actionsPage,12,muted,18));
             actions=Grid("Acoes",actionsPage);
             move=Button("Mover",actions,()=>{ confirm.Reset(); Game.Mode=""; });
-            // 8 botões: Asamyh tem 5 skills e o Desejo do Kellen abre 6 opções.
-            for(int i=0;i<8;i++) { int k=i; skillButtons.Add(Button("",actions,()=>ChooseSkill(k))); }
+            // 16 botões (limite do Editor): o Desland no domínio de xadrez tem 9 skills (autor 24/10: faltava mover a rainha).
+            for(int i=0;i<16;i++) { int k=i; skillButtons.Add(Button("",actions,()=>ChooseSkill(k))); }
             // Passar (e o Espaço) usa o mesmo método: o primeiro toque destaca, o segundo passa o turno.
             pass=Button("Passar  [Espaço]",actions,ConfirmPass);
             // Sprint 3.5: números de altura no tabuleiro, só neste aparelho.

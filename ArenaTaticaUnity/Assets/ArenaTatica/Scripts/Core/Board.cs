@@ -54,9 +54,13 @@ namespace ArenaTatica.Core
         // Passo do lutador inteiro de a para b: cada casa dele faz o mesmo passo; vale o mais caro. -1 = não passa.
         public static int Step(MatchState s,Fighter f,Cell a,Cell b,bool flying,bool climber=false,bool doors=false)
         {
+            // Esfera do Nepturius (autor 23/10): nada no jogo a afeta, então água, altura e gelo não custam a mais.
+            if(Content.Def(f).luna?.invulnerable??false) return Contains(s,b)&&Walkable(s,b,false)?1:-1;
             int n=SizeOf(f); if(n==1) return StepCost(s,a,b,flying,climber,doors);
-            int worst=-1;
-            for(int x=0;x<n;x++) for(int z=0;z<n;z++) { var o=new Cell(x,z); int c=StepCost(s,a+o,b+o,flying,climber,doors); if(c<0) return -1; worst=Math.Max(worst,c); }
+            // Gigante (autor 24/10, Primal Beast nas Docas): só paga a água se o corpo inteiro cair nela.
+            int worst=-1; bool dry=false;
+            for(int x=0;x<n;x++) for(int z=0;z<n;z++) { var o=new Cell(x,z); if(Contains(s,b+o)&&s.At(b+o).terrain!=Terrain.Agua) dry=true; }
+            for(int x=0;x<n;x++) for(int z=0;z<n;z++) { var o=new Cell(x,z); int c=StepCost(s,a+o,b+o,flying,climber,doors); if(c<0) return -1; if(dry&&s.At(b+o).terrain==Terrain.Agua) c-=WaterCost-1; worst=Math.Max(worst,c); }
             return worst;
         }
         // Outro lutador conhecido em alguma casa que f ocuparia com o canto em at.

@@ -11,8 +11,8 @@ namespace ArenaTatica.Core
         static bool RegisterLuna()
         {
             // ── NIKOLA (inventor): comanda dois autômatos e vive de engrenagens. ──
-            Fighters["nikola"]=new FighterDef { id="nikola", name="Nikola", sprites="Nikola", hp=11, pa=6, pm=3, initiative=5, level=4,
-                luna=new LunaDef { family="nikola", techProtect=true, gearStep=2, gearDamage=1, gearRange=1, gearDrops=3, gearEvery=2, gearSpecial=20, gearHits=3 },
+            Fighters["nikola"]=new FighterDef { id="nikola", name="Nikola", sprites="Nikola", hp=11, pa=6, pm=3, initiative=5, level=4, legendary=true,
+                luna=new LunaDef { family="nikola", techProtect=true, gearStep=2, gearDamage=1, gearRange=1, gearDrops=3, gearSpecial=20, gearHits=2 },
                 skills=new[] {
                     new SkillDef { id="comando-blip", name="Comando: Blip", kind=SkillKind.Invocacao, effect="comando-blip", pa=3, minRange=0, maxRange=1, sight=false, anim="summon" },
                     new SkillDef { id="comando-celinos", name="Comando: Celinos", kind=SkillKind.Invocacao, effect="comando-celinos", pa=3, minRange=0, maxRange=99, sight=false, global=true, anim="cast" },
@@ -41,8 +41,8 @@ namespace ArenaTatica.Core
             // ── DESLAND (roque e xadrez): move aliados, clona quem ele matou e abre o domínio de xadrez. ──
             // A forma "dominio" existe só para as skills de movimento do xadrez aparecerem na ficha enquanto o domínio dura.
             Fighters["desland"]=new FighterDef { id="desland", name="Desland", sprites="Desland", hp=11, pa=6, pm=3, initiative=5, level=4,
-                luna=new LunaDef { family="desland", ecoCooldown=2, cloneTurns=1, chessTurns=2, pieceDamage=2, queenDamage=4 },
-                forms=new[] { new FormDef { id="dominio", name="Domínio de xadrez", color="#E8D8A0" } },
+                luna=new LunaDef { family="desland", ecoCooldown=2, cloneTurns=1, chessTurns=4, pieceDamage=2, queenDamage=4 },
+                forms=new[] { new FormDef { id="dominio", name="Domínio de xadrez", color="#E8D8A0", armor=1 } },
                 skills=new[] {
                     new SkillDef { id="roque", name="Roque", kind=SkillKind.Suporte, effect="roque", pa=3, minRange=0, maxRange=8, sight=false, twoCells=true, anim="cast" },
                     new SkillDef { id="xeque-mate", name="Xeque-mate", kind=SkillKind.Dano, effect="xeque-mate", pa=3, minRange=1, maxRange=5, damage=2, modifiable=true, anim="attack" },
@@ -57,7 +57,7 @@ namespace ArenaTatica.Core
             Fighters["nepturius"]=new FighterDef { id="nepturius", name="Nepturius", sprites="Nepturius", hp=11, pa=6, pm=3, initiative=5, level=4,
                 luna=new LunaDef { family="nepturius", auraRange=4, auraPa=2, auraPm=1, grabCount=4, grabRange=4, blastRadius=3, blastDamage=2, cubeDamage=2, cubeHeal=2, armorBuff=1, armorTurns=1 },
                 skills=new[] {
-                    new SkillDef { id="mover-esfera", name="Mover esfera", kind=SkillKind.Teleporte, effect="mover-esfera", pa=2, minRange=0, maxRange=8, sight=false, anim="cast" },
+                    new SkillDef { id="mover-esfera", name="Mover esfera", kind=SkillKind.Teleporte, effect="mover-esfera", pa=0, minRange=0, maxRange=8, sight=false, anim="cast" },
                     new SkillDef { id="agarrao-negro", name="Agarrão negro", kind=SkillKind.Dano, effect="agarrao-negro", pa=3, minRange=0, maxRange=0, sight=false, damage=0, anim="cast" },
                     new SkillDef { id="loucura-negra", name="Loucura negra", kind=SkillKind.Suporte, effect="loucura-negra", pa=3, minRange=0, maxRange=0, sight=false, anim="cast" },
                     new SkillDef { id="explosao-antimateria", name="Explosão de antimatéria", kind=SkillKind.Dano, effect="explosao-antimateria", pa=3, minRange=0, maxRange=0, sight=false, selfArea=true, damage=2, anim="attack" } } };
@@ -70,15 +70,16 @@ namespace ArenaTatica.Core
                 skills=new[] { new SkillDef { id="mordida-tubarao", name="Mordida", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=1, anim="attack" } } };
             // Peças do domínio de xadrez: 1 PV cada, sem turno (agem no fim do turno do Desland), nenhum rei.
             Piece("peca-peao","Peão de xadrez","XadrezPeao");
-            Piece("peca-torre","Torre de xadrez","XadrezTorre");
+            Piece("peca-torre","Torre de xadrez","XadrezTorre",3);
             Piece("peca-cavalo","Cavalo de xadrez","XadrezCavalo");
             Piece("peca-bispo","Bispo de xadrez","XadrezBispo");
             Piece("peca-rainha","Rainha de xadrez","XadrezRainha");
             return true;
         }
         // Peça do domínio de xadrez: 1 PV, sem turno, sem skill própria (o motor move e ataca pelas regras do xadrez).
-        static void Piece(string id,string name,string sprites) =>
-            Fighters[id]=new FighterDef { id=id, name=name, sprites=sprites, hp=1, pa=0, pm=0, level=0, picker=false, noTurn=true, noLock=true, noReveal=true,
-                luna=new LunaDef { family="desland" }, skills=new SkillDef[0] };
+        // Peças (autor 24/10): imunes a condições (proteção tecnológica), terreno não as atrapalha; a torre tem 3 PV.
+        static void Piece(string id,string name,string sprites,int hp=1) =>
+            Fighters[id]=new FighterDef { id=id, name=name, sprites=sprites, hp=hp, pa=0, pm=0, level=0, picker=false, noTurn=true, noLock=true, noReveal=true,
+                luna=new LunaDef { family="desland", techProtect=true }, skills=new SkillDef[0] };
     }
 }

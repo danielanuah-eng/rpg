@@ -81,6 +81,8 @@ namespace ArenaTatica.Core
         public bool ultimate;
         public string form, toForm, anim;
         public bool endsForm, precise, wild;
+        // Chance de erro do "Pode errar" em %; 0 = pelo dado (Esquiva), cerca de 33%. Tchu tcha berserk: 15 (autor 24/10).
+        public int missPct;
         // Somnax: máximo explícito do dano-base (sorteado somente pelo Host); ignoreArmor conserva o dado Escudo.
         public int maxDamage;
         public bool ignoreArmor;
@@ -157,25 +159,28 @@ namespace ArenaTatica.Core
     // family: grupo de autômatos (nikola, desland, nepturius, tubarao). techProtect: proteção tecnológica do Nikola e robôs.
     // invulnerable: não recebe dano nem habilidade de ninguém (esfera). waterOnly: só anda em água (tubarão).
     // survivesOwner: continua em campo quando o dono cai (robôs e esfera).
-    // Engrenagens: gearStep (bônus a cada N), gearDamage/gearRange/gearPm/gearReveal (bônus por passo), gearDrops (por vez), gearEvery (a cada N rodadas; 1 = toda rodada),
+    // Engrenagens: gearStep (bônus a cada N), gearDamage/gearRange/gearPm/gearReveal (bônus por passo), gearDrops (por vez), gearEvery (a cada N rodadas; 0 = automático pelo número de jogadores),
     // gearSpecial (% de drop especial), gearMorph (engrenagens da transformação), gearHits (marcadores do drop).
     // Bifia: vivaTurns/vivaRadius/vivaInit/vivaPm. Desland: ecoCooldown/cloneTurns/chessTurns/pieceDamage (peças)/queenDamage (rainha).
-    // Nepturius: auraRange/auraPa/auraPm, grabCount/grabRange, blastRadius/blastDamage, cubeDamage/cubeHeal, armorBuff/armorTurns.
+    // Nepturius: auraRange/auraPa/auraPm, grabCount/grabRange, blastRadius/blastDamage, sphereBonus (dano extra com o dono vivo), cubeDamage/cubeHeal, armorBuff/armorTurns.
     // Robôs: healTurn (cura no começo do turno controlável), revealBase/shotRange/chainRange (Celinos), gearPmBase (PM do Blip).
     [Serializable] public class LunaDef
     {
         public string family;
         public bool techProtect, invulnerable, waterOnly, survivesOwner;
-        public int gearStep=2, gearDamage=1, gearRange=1, gearPm, gearReveal, gearDrops=2, gearEvery=1, gearSpecial=20, gearMorph, gearHits=3, gearValue=1;
+        public int gearStep=2, gearDamage=1, gearRange=1, gearPm, gearReveal, gearDrops=2, gearEvery, gearSpecial=20, gearMorph, gearHits=3, gearValue=1;
         public int vivaTurns=2, vivaRadius=6, vivaInit=1, vivaPm=2;
         public int ecoCooldown=2, cloneTurns=1, chessTurns=2, pieceDamage=2, queenDamage=4;
-        public int auraRange=4, auraPa=2, auraPm=1, grabCount=4, grabRange=4, blastRadius=3, blastDamage=2, cubeDamage=2, cubeHeal=2, armorBuff=1, armorTurns=1;
+        public int auraRange=4, auraPa=2, auraPm=1, grabCount=4, grabRange=4, blastRadius=3, blastDamage=2, sphereBonus=2, cubeDamage=2, cubeHeal=2, armorBuff=1, armorTurns=1;
         public int healTurn, revealBase=4, shotRange=3, chainRange=2, gearPmBase=4;
         public LunaDef Clone() => (LunaDef)MemberwiseClone();
     }
     [Serializable] public class FighterDef
     {
         public string id, name, sprites;
+        // Ficha editada: skills da ficha padrão que existiam quando ela foi salva. Skill nova do padrão (fora desta
+        // lista) entra sozinha na ficha editada; skill que o autor apagou no Editor continua apagada.
+        public string[] knownSkills;
         public int hp, pa=6, pm=3, initiative, level;
         public bool flying;
         public SkillDef[] skills;
@@ -373,7 +378,8 @@ namespace ArenaTatica.Core
     // família: contador de engrenagens compartilhado (owner = Fighter.id do Nikola; os robôs leem mesmo com ele morto).
     [Serializable] public class LunaFamily { public int owner, gears; }
     // Marca do Celinos: casa em que o alvo foi marcado (trocar de casa ou morrer desfaz a marca).
-    [Serializable] public class LunaMark { public int by, id, x, z; }
+    // round: rodada do último comando (o Celinos larga o alvo depois de 2 rodadas sem comando novo).
+    [Serializable] public class LunaMark { public int by, id, x, z, round; }
     // Clone do eco-de-aliado: turns = turnos do Desland que faltam para o clone sumir.
     [Serializable] public class LunaClone { public int id, by, turns; }
     [Serializable] public class LunaSeen { public int team, id; }

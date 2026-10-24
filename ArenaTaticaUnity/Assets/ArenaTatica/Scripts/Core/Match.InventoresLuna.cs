@@ -100,7 +100,6 @@ namespace ArenaTatica.Core
         {
             // Nikola morto: os robôs continuam agindo no fim da rodada.
             foreach(var owner in S.fighters.Where(x=>!x.Alive&&x.summoner==0&&x.def=="nikola").ToList()) ActRobots(owner);
-            foreach(var machine in S.Luna.machines.Where(x=>x.sphereMad).ToList()) if(S.F(machine.by) is Fighter owner) MadSphere(owner);
             // Iniciativa do Viva Luna: a nova ordem vale na rodada seguinte (sem repetir nem perder o turno em curso).
             if(S.fighters.Any(x=>x.def=="bifia"||x.initBonus!=0)) RebuildTimelineKeepingSummons();
         }
@@ -134,13 +133,8 @@ namespace ArenaTatica.Core
             var mechanism=Mechanism(f);
             if(f==null||!f.Alive) return;
             var l=Luna(f);
-            // Rede de segurança (autor 23/10): domínio acabado (forma ou contagem) não deixa peça no tabuleiro.
-            if(f.def=="desland"&&(f.form!="dominio"||mechanism.chessBy!=f.id||mechanism.chessTurns<=0)&&S.fighters.Any(x=>x.Alive&&x.summoner==f.id&&x.def.StartsWith("peca-")))
-            {
-                StoreMechanism(f); var held=Mechanism(f);
-                foreach(var p in S.fighters.Where(x=>x.Alive&&x.summoner==f.id&&x.def.StartsWith("peca-")).ToList()) if(!held.chess.Contains(p.id)) held.chess.Add(p.id);
-                EndChess(f);
-            }
+            // Rede de segurança: forma do domínio sobrando sem contagem volta ao normal (as peças ficam, autor 24/10).
+            if(f.def=="desland"&&f.form=="dominio"&&(mechanism.chessBy!=f.id||mechanism.chessTurns<=0)) EndChess(f);
             // Blipware: recupera PV no começo do turno controlável.
             if(Cfg(l?.healTurn,0)>0) Heal(f,Cfg(l.healTurn,0),f,"blipware");
             // Blip/Celinos acertam o PM pelo contador compartilhado do dono.
@@ -171,6 +165,8 @@ namespace ArenaTatica.Core
             foreach(var v in S.Luna.fields.Where(x=>x.by==f.id).ToList()) if(--v.turns<=0) EndVivaLuna(v);
             // Nepturius: nenhuma skill de esfera usada no turno → um cubo sorteado leva 2 de dano e cura o dono.
             if(f.def=="nepturius"&&f.Alive&&!mechanism.sphereUsed) AntimatterCube(f);
+            // Esfera enlouquecida (dono morto): age no fim de todo turno (autor 23/10).
+            foreach(var machine in S.Luna.machines.Where(x=>x.sphereMad).ToList()) if(S.F(machine.by) is Fighter owner) MadSphere(owner);
             // Desland: peças do domínio agem uma de cada vez depois dele; clones dele expiram.
             if(f.def=="desland")
             {
@@ -197,13 +193,22 @@ namespace ArenaTatica.Core
                 Emit(new GameEvent{kind="status",info="esfera-orfa",actor=v.id,target=sp.id,cell=sp.cell});
             }
             // Peças do domínio: sem dono, somem.
-            if(v.def=="desland") foreach(var id in mechanism.chess.ToList()) if(S.F(id) is Fighter p&&p.Alive) { p.hp=0; p.deathProcessed=true; Emit(new GameEvent{kind="sumir",target=p.id,cell=p.cell}); }
+            if(v.def=="desland") foreach(var p in S.fighters.Where(x=>x.Alive&&x.summoner==v.id&&x.def.StartsWith("peca-")).ToList()) { p.hp=0; p.deathProcessed=true; Emit(new GameEvent{kind="sumir",target=p.id,cell=p.cell}); }
         }
 
         // ── Nikola: funilaria (engrenagens) ──
+        // Intervalo automático (autor 23/10): x1 a cada 4 rodadas, x3 a cada 3, x4 a cada 2, x5/x6 toda rodada.
+        // Em equipe conta um jogador a menos (dupla x dupla = x3).
+        public int GearEvery()
+        {
+            int players=Math.Max(2,S.players);
+            int teams=S.fighters.Where(x=>x.summoner==0&&x.team!=MatchState.Neutral).Select(x=>x.team).Distinct().Count();
+            if(teams>=2&&teams<players) players--;
+            return players<=2?4:players==3?3:players==4?2:1;
+        }
         void Funilaria(Fighter owner)
         {
-            var l=Luna(owner); int drops=Cfg(l?.gearDrops,2), special=Cfg(l?.gearSpecial,20), every=Math.Max(1,Cfg(l?.gearEvery,1));
+            var l=Luna(owner); int drops=Cfg(l?.gearDrops,2), special=Cfg(l?.gearSpecial,20), every=Math.Max(1,Cfg(l?.gearEvery,GearEvery()));
             if((S.round-1)%every!=0) return;
             for(int i=0;i<drops;i++)
             {
@@ -233,7 +238,8 @@ namespace ArenaTatica.Core
             if(g==null) return;
             var owner=S.F(g.owner);
             // Adversário não coleta: o drop fica no chão (só ataques o destroem).
-            if(owner!=null&&MatchState.Player(f.team)&&!S.Ally(f.team,owner.team)) return;
+            // Autor 24/10: oponente (de qualquer time, invocação ou neutro) passa por cima sem pegar nada.
+            if(owner==null||f.team!=owner.team&&!S.Ally(f.team,owner.team)) return;
             if(owner!=null&&(f.id==g.owner||f.summoner==g.owner))
             {
                 AddFamilyGears(g.owner,g.value);
@@ -335,9 +341,11 @@ namespace ArenaTatica.Core
             int damage=Content.Def(r).skills.Length>0?Content.Def(r).skills[0].damage:1;
             damage+=gears/step*Cfg(l?.gearDamage,1);
             RevealCelinos();
+            // Alvo marcado (autor 24/10): o Celinos fica travado nele até ele cair ou passarem 2 rodadas sem comando novo.
+            S.Luna.marks.RemoveAll(m=>m.by==owner.id&&S.round-m.round>2);
             var marks=S.Luna.marks.Where(m=>m.by==owner.id&&S.F(m.id) is Fighter v&&v.Alive).Select(m=>S.F(m.id)).ToList();
             var visible=S.fighters.Where(x=>x.Alive&&!S.Ally(x.team,r.team)&&!Concealed(S,r.team,x)).ToList();
-            var target=marks.FirstOrDefault(v=>visible.Contains(v))??visible.OrderBy(v=>Board.Gap(r,v)).ThenBy(v=>v.hp).ThenBy(v=>v.id).FirstOrDefault();
+            var target=marks.FirstOrDefault()??visible.OrderBy(v=>Board.Gap(r,v)).ThenBy(v=>v.hp).ThenBy(v=>v.id).FirstOrDefault();
             if(target==null) return;
             // Anda até ficar no alcance de tiro (caminho legal, coletando o que passar).
             if(Board.Gap(r,target)>range)
@@ -508,7 +516,8 @@ namespace ArenaTatica.Core
                 case "dominio-xadrez":
                 {
                     if(mechanism.chessBy==f.id&&mechanism.chessTurns>0) { reason="O domínio de xadrez já está no tabuleiro."; return false; }
-                    if(FreeAround(f.cell,5).Count<5) { reason="Sem 5 casas livres em volta para as peças."; return false; }
+                    int need=MissingPieces(f).Count;
+                    if(FreeAround(f.cell,need).Count<need) { reason=$"Sem {need} casas livres em volta para as peças."; return false; }
                     return true;
                 }
                 case "mover-peao": case "mover-torre": case "mover-cavalo": case "mover-bispo": case "mover-rainha":
@@ -517,10 +526,12 @@ namespace ArenaTatica.Core
                     if(c2==Cell.Unknown) return true;
                     var who=Board.At(S,c);
                     if(who==null) { reason="Escolha um personagem ou peça."; return false; }
+                    // Autor 24/10: peça do xadrez só anda com o movimento dela (torre com Mover torre...).
+                    if(who.def.StartsWith("peca-")&&EffectFor(who.def)!=sk.effect) { reason="Essa peça só se move com o movimento dela."; return false; }
                     if(!Board.Contains(S,c2)) { reason="Fora do mapa."; return false; }
                     if(Board.At(S,c2)!=null) { reason="A casa de destino precisa estar livre."; return false; }
                     if(!Board.Walkable(S,c2,Content.Def(who).flying)||!Board.Fits(S,who,c2)) { reason="Casa de destino bloqueada."; return false; }
-                    if(Fixed(who)||Unbreakable(who)) { reason="Esse personagem não pode ser movido."; return false; }
+                    if(!(IsPiece(who)&&who.summoner==f.id)&&(Fixed(who)||Unbreakable(who))) { reason="Esse personagem não pode ser movido."; return false; }
                     // Autor (23/10): mover um inimigo vale uma vez por domínio (ultimate).
                     if(!S.Ally(who.team,f.team)&&mechanism.chessFoe) { reason="Já moveu um inimigo neste domínio."; return false; }
                     if(!ChessMove(who.cell,c2,sk.effect)) { reason="Movimento fora da geometria dessa peça ou com o caminho tapado."; return false; }
@@ -577,8 +588,8 @@ namespace ArenaTatica.Core
                     var cel=RobotOf(f,"celinos");
                     if(cel==null) { SpawnRobots(f,"celinos"); break; }
                     var v=Board.At(S,c);
-                    S.Luna.marks.RemoveAll(m=>m.id==v.id);
-                    S.Luna.marks.Add(new LunaMark{by=f.id,id=v.id,x=v.cell.x,z=v.cell.z});
+                    S.Luna.marks.RemoveAll(m=>m.id==v.id||m.by==f.id);
+                    S.Luna.marks.Add(new LunaMark{by=f.id,id=v.id,x=v.cell.x,z=v.cell.z,round=S.round});
                     Emit(new GameEvent{kind="skill",info="comando-celinos",actor=f.id,target=v.id,cell=v.cell});
                     break;
                 }
@@ -660,7 +671,7 @@ namespace ArenaTatica.Core
                 case "mover-peao": case "mover-torre": case "mover-cavalo": case "mover-bispo": case "mover-rainha":
                 {
                     var who=Board.At(S,c);
-                    if(who==null||Board.At(S,c2)!=null||!ChessMove(who.cell,c2,sk.effect)) break;
+                    if(who==null||Board.At(S,c2)!=null||!ChessMove(who.cell,c2,sk.effect)||who.def.StartsWith("peca-")&&EffectFor(who.def)!=sk.effect) break;
                     if(!S.Ally(who.team,f.team)) Mechanism(f).chessFoe=true;
                     var from=who.cell; who.cell=c2; Collect(who);
                     Emit(new GameEvent{kind="mover",actor=who.id,info=sk.effect,path=new[]{from,c2},cell=c2});
@@ -826,25 +837,29 @@ namespace ArenaTatica.Core
         void OpenChess(Fighter f)
         {
             var mechanism=Mechanism(f);
-            var spots=FreeAround(f.cell,5);
-            if(spots.Count<ChessOrder.Length) return;
+            // Autor 24/10: as peças ficam no tabuleiro depois da ult; ultar de novo só repõe as que caíram.
+            var missing=MissingPieces(f);
+            var spots=FreeAround(f.cell,missing.Count);
+            if(spots.Count<missing.Count) return;
             mechanism.chessBy=f.id; mechanism.chessTurns=Math.Max(1,Cfg(Luna(f)?.chessTurns,2)); f.form="dominio";
             mechanism.chess.Clear(); mechanism.chessFoe=false; mechanism.chessEdge=FarEdge(f.cell);
-            for(int i=0;i<ChessOrder.Length;i++)
+            mechanism.chess.AddRange(S.fighters.Where(x=>x.Alive&&x.summoner==f.id&&x.def.StartsWith("peca-")).Select(x=>x.id));
+            for(int i=0;i<missing.Count;i++)
             {
-                var p=Spawn(ChessOrder[i],f.team,spots[i],f.id);
+                var p=Spawn(missing[i],f.team,spots[i],f.id);
                 mechanism.chess.Add(p.id);
                 Emit(new GameEvent{kind="invocar",actor=f.id,target=p.id,info=p.def,cell=spots[i]});
             }
             SetForm(f,"dominio",mechanism.chessTurns,"dominio-xadrez");
-            Emit(new GameEvent{kind="skill",info="dominio-xadrez",actor=f.id,cell=f.cell,value=mechanism.chessTurns,path=spots.Take(ChessOrder.Length).ToArray()});
+            Emit(new GameEvent{kind="skill",info="dominio-xadrez",actor=f.id,cell=f.cell,value=mechanism.chessTurns,path=spots.Take(missing.Count).ToArray()});
         }
+        // Peças que faltam no tabuleiro (a rainha promovida conta como rainha; o peão que virou rainha volta).
+        List<string> MissingPieces(Fighter f) => ChessOrder.Where(def=>!S.fighters.Any(x=>x.Alive&&x.summoner==f.id&&x.def==def)).ToList();
+        // Fim do domínio: as peças continuam em campo (paradas até a próxima ult) e somem só se o Desland cair.
         void EndChess(Fighter owner)
         {
             var mechanism=Mechanism(owner);
             mechanism.chessTurns=0; mechanism.chessBy=0; if(owner.form=="dominio")owner.form=null;
-            foreach(var id in mechanism.chess.ToList()) if(S.F(id) is Fighter p&&p.Alive) { p.hp=0; p.deathProcessed=true; Emit(new GameEvent{kind="sumir",target=p.id,cell=p.cell}); AnyDeath(p); }
-            mechanism.chess.Clear();
             if(owner!=null&&owner.Alive&&owner.form=="dominio") SetForm(owner,Content.Def(owner).startForm,0,"dominio-xadrez");
             Emit(new GameEvent{kind="skill",info="dominio-xadrez-fim",actor=owner?.id??0,cell=owner?.cell??Cell.Unknown});
         }
@@ -862,14 +877,25 @@ namespace ArenaTatica.Core
             }
             if(--mechanism.chessTurns<=0) EndChess(owner);
         }
+        // Ataques das peças (autor 24/10): bispo até 3 casas nas diagonais, peão e rainha colados, torre colada e atordoa;
+        // o cavalo ataca em área onde cai (ChessAdvance). Peças ignoram terreno e condições.
+        static bool IsPiece(Fighter f) => f!=null&&f.def!=null&&f.def.StartsWith("peca-");
         bool ChessCapture(Fighter p,Fighter owner)
         {
+            if(p.def=="peca-cavalo") return false;
             var hit=PieceHunt(p,owner); if(hit==null) return false;
             var skill=PieceHit(owner,p);
             Emit(new GameEvent{kind="skill",info="dominio-xadrez",actor=p.id,target=hit.id,cell=hit.cell});
             Strike(p,skill,hit.cell);
+            if(p.def=="peca-torre"&&hit.Alive&&hit.lastDamageBy==p.id&&!FormImmune(hit)&&!Unstoppable(hit))
+            {
+                hit.stunned=Math.Max(hit.stunned,1);
+                Emit(new GameEvent{kind="status",info="agarrao-negro",actor=p.id,target=hit.id,value=1,cell=hit.cell});
+            }
             return true;
         }
+        // Torre: +1 de armadura para aliados colados nela.
+        int TowerArmor(Fighter f) => f!=null&&!IsPiece(f)&&S.fighters.Any(t=>t.Alive&&t.def=="peca-torre"&&S.Ally(t.team,f.team)&&Board.Gap(t,f)<=1)?1:0;
         // Autor 23/10: rainha 4 de dano, as outras peças 2 (queenDamage/pieceDamage, editáveis).
         SkillDef PieceHit(Fighter owner,Fighter piece)
         {
@@ -879,46 +905,44 @@ namespace ArenaTatica.Core
         // Primeiro inimigo encontrado na direção legal da peça (torre/bispo/rainha param no primeiro obstáculo; cavalo salta).
         Fighter PieceHunt(Fighter p,Fighter owner)
         {
-            var dirs=ChessDirs(p.def);
-            foreach(var d in dirs)
+            bool Foe(Fighter v) => v!=null&&v.Alive&&!S.Ally(v.team,owner.team)&&!Unbreakable(v);
+            if(p.def=="peca-bispo")
             {
-                if(p.def=="peca-cavalo")
-                {
-                    var c=p.cell+d; var v=Board.At(S,c);
-                    if(v!=null&&v.Alive&&!S.Ally(v.team,owner.team)) return v;
-                    continue;
-                }
-                for(var c=p.cell+d;Board.Contains(S,c);c=c+d)
-                {
-                    var v=Board.At(S,c);
-                    if(v!=null) { if(v.Alive&&!S.Ally(v.team,owner.team)) return v; break; }
-                    if(!Board.Walkable(S,c,false)) break;
-                }
+                // Até 3 casas nas diagonais; para no primeiro personagem (o terreno não tapa).
+                foreach(var d in ChessDirs(p.def))
+                    for(int i=1;i<=3;i++) { var v=Board.At(S,p.cell+new Cell(d.x*i,d.z*i)); if(v==null) continue; if(Foe(v)) return v; break; }
+                return null;
             }
-            return null;
+            // Peão, rainha e torre: golpe colado.
+            return S.fighters.Where(v=>Foe(v)&&Board.Gap(p,v)==1).OrderBy(v=>v.hp).ThenBy(v=>v.id).FirstOrDefault();
         }
         // Sem captura: vai atrás do inimigo mais próximo como no xadrez (torre/bispo/rainha deslizam quantas casas quiserem;
         // peão anda 1 e cavalo salta em L). Peão que chega à borda oposta ao Desland vira rainha.
         void ChessAdvance(Fighter p,Fighter owner)
         {
-            var prey=S.fighters.Where(x=>x.Alive&&!S.Ally(x.team,owner.team)).OrderBy(x=>Board.Gap(x,p)).ThenBy(x=>x.id).FirstOrDefault();
+            var foes=S.fighters.Where(x=>x.Alive&&!S.Ally(x.team,owner.team)&&!Unbreakable(x)).ToList();
+            var prey=foes.OrderBy(x=>Board.Gap(x,p)).ThenBy(x=>x.id).FirstOrDefault();
             if(prey==null) return;
-            Cell? best=null; int top=Board.Gap(prey,p.cell);
+            Cell? best=null; int top=Board.Gap(prey,p.cell), most=0;
             var dirs=ChessDirs(p.def);
             bool slides=p.def=="peca-torre"||p.def=="peca-bispo"||p.def=="peca-rainha";
             foreach(var d in dirs)
             {
                 for(var c=p.cell+d;Board.Contains(S,c);c=c+d)
                 {
-                    if(Board.At(S,c)!=null||!Board.Walkable(S,c,false)) break;
-                    if(!ChessMove(p.cell,c,EffectFor(p.def))) break;
-                    int g=Board.Gap(prey,c); if(g<top) { top=g; best=c; }
+                    if(Board.At(S,c)!=null) break;
+                    if(!ChessMove(p.cell,c,EffectFor(p.def),p)) break;
+                    if(!Board.Walkable(S,c,false)) { if(slides) continue; break; }
+                    // Cavalo: prefere a casa que cai colada em mais inimigos (ataque em área).
+                    int near=p.def=="peca-cavalo"?foes.Count(v=>Board.Gap(v,c)==1):0;
+                    int g=Board.Gap(prey,c); if(near>most||near==most&&g<top) { most=near; top=g; best=c; }
                     if(!slides) break;
                 }
             }
             if(best==null) return;
             var from=p.cell; p.cell=best.Value;
             Emit(new GameEvent{kind="mover",actor=p.id,info="dominio-xadrez",path=new[]{from,p.cell},cell=p.cell});
+            if(p.def=="peca-cavalo") HorseLanding(p,owner);
             Promote(p,owner);
         }
         // Borda de promoção: a mais longe do Desland quando o domínio abre (0: x=0, 1: x=fim, 2: z=0, 3: z=fim).
@@ -948,27 +972,40 @@ namespace ArenaTatica.Core
         }
         // Geometria das skills de movimento (dois cliques): peão anda 1 em linha reta, cavalo em L com salto, torre em
         // linha/coluna, bispo na diagonal e rainha nas duas, sem atravessar ocupado ou obstáculo.
-        bool ChessMove(Cell from,Cell to,string effect)
+        // Movimento do xadrez passa por cima de obstáculo, relevo e água: só personagem no caminho tapa.
+        bool ChessMove(Cell from,Cell to,string effect,Fighter mover=null)
         {
             if(from==to) return false;
+            // Autor 24/10: o caminho de qualquer movimento do xadrez (peça ou personagem) ignora terreno, altura e visão;
+            // a casa de destino do personagem continua precisando ser andável (LunaCheck).
+            bool piece=true;
             int dx=to.x-from.x, dz=to.z-from.z, adx=Math.Abs(dx), adz=Math.Abs(dz);
             switch(effect)
             {
-                case "mover-peao": return adx+adz==1&&Board.Walkable(S,to,false);
-                case "mover-cavalo": return adx*adz==2&&Board.Walkable(S,to,false);
-                case "mover-torre": return (dx==0||dz==0)&&ChessClear(from,to);
-                case "mover-bispo": return adx==adz&&adx>0&&ChessClear(from,to);
-                case "mover-rainha": return (dx==0||dz==0||adx==adz)&&ChessClear(from,to);
+                case "mover-peao": return adx+adz==1&&(piece||Board.Walkable(S,to,false));
+                case "mover-cavalo": return adx*adz==2&&(piece||Board.Walkable(S,to,false));
+                case "mover-torre": return (dx==0||dz==0)&&ChessClear(from,to,piece);
+                case "mover-bispo": return adx==adz&&adx>0&&ChessClear(from,to,piece);
+                case "mover-rainha": return (dx==0||dz==0||adx==adz)&&ChessClear(from,to,piece);
             }
             return false;
         }
-        bool ChessClear(Cell from,Cell to)
+        bool ChessClear(Cell from,Cell to,bool piece=false)
         {
             var dir=new Cell(Math.Sign(to.x-from.x),Math.Sign(to.z-from.z));
             if(dir.x==0&&dir.z==0) return false;
             for(var c=from+dir;c!=to;c=c+dir)
-                if(!Board.Contains(S,c)||!Board.Walkable(S,c,false)||Board.At(S,c)!=null) return false;
+                if(!Board.Contains(S,c)||!piece&&!Board.Walkable(S,c,false)||Board.At(S,c)!=null) return false;
             return true;
+        }
+        // Cavalo cai: dano em todo inimigo colado na casa onde ele parou.
+        void HorseLanding(Fighter p,Fighter owner)
+        {
+            var hits=S.fighters.Where(v=>v.Alive&&!S.Ally(v.team,owner.team)&&!Unbreakable(v)&&Board.Gap(v,p)==1).ToList();
+            if(hits.Count==0) return;
+            Emit(new GameEvent{kind="skill",info="dominio-xadrez",actor=p.id,cell=p.cell,value=hits.Count});
+            var skill=PieceHit(owner,p);
+            foreach(var v in hits) if(v.Alive&&p.Alive) Strike(p,skill,v.cell);
         }
 
         // ── Nepturius: esfera de antimatéria ──
@@ -989,11 +1026,13 @@ namespace ArenaTatica.Core
             sp.pm=Math.Max(0,units);
             if(walked.Count>1) Emit(new GameEvent{kind="mover",actor=sp.id,info="mover-esfera",path=walked.ToArray(),cell=sp.cell});
         }
-        // Aura passiva: quem começa o turno até N casas da esfera perde PA e PM (aliados, dono e inimigos).
+        // Dono e esfera nunca se afetam (autor 23/10); num espelho a esfera de um Nepturius pega o outro normalmente.
+        static bool SphereSpares(Fighter sp,Fighter x) => x==sp||x.id==sp.summoner||Unbreakable(x);
+        // Aura passiva: quem começa o turno até N casas da esfera perde PA e PM (aliados e inimigos; o dono não).
         void SphereAura(Fighter f)
         {
             if(f==null||!f.Alive||TechProtected(f)||Unbreakable(f)) return;
-            foreach(var sp in S.fighters.Where(x=>x.Alive&&x.def=="esfera-nepturius"&&x!=f).ToList()) {
+            foreach(var sp in S.fighters.Where(x=>x.Alive&&x.def=="esfera-nepturius"&&!SphereSpares(x,f)).ToList()) {
                 var cfg=Luna(S.F(sp.summoner))??Luna(sp);
                 if(Board.Gap(sp,f)>Cfg(cfg?.auraRange,4)) continue;
                 int pa=Math.Min(f.pa,Cfg(cfg?.auraPa,2)),pm=Math.Min(f.pm,Cfg(cfg?.auraPm,1));
@@ -1007,7 +1046,7 @@ namespace ArenaTatica.Core
             var sp=Sphere(owner); if(sp==null) return;
              var l=Luna(owner)??Luna(sp);
             int count=Cfg(l?.grabCount,4), range=Cfg(l?.grabRange,4);
-            var targets=S.fighters.Where(x=>x.Alive&&x!=sp&&x.prisoned==0&&Board.Gap(sp,x)<=range&&!TechProtected(x)&&!Unstoppable(x)&&!(Content.Form(x)?.intangible??false)&&(!Immune(x)||Content.Def(x).exposed))
+            var targets=S.fighters.Where(x=>x.Alive&&!SphereSpares(sp,x)&&x.prisoned==0&&Board.Gap(sp,x)<=range&&!TechProtected(x)&&!Unstoppable(x)&&!(Content.Form(x)?.intangible??false)&&(!Immune(x)||Content.Def(x).exposed))
                 .OrderBy(x=>Board.Gap(sp,x)).ThenBy(x=>x.id).Take(count).ToList();
             Emit(new GameEvent{kind="skill",info="agarrao-negro",actor=sp.id,cell=sp.cell,value=targets.Count});
             var log=new List<GameEvent>();
@@ -1029,7 +1068,9 @@ namespace ArenaTatica.Core
             var sp=Sphere(owner); if(sp==null) return;
             var damageOwner=mad?null:owner; var l=Luna(owner)??Luna(sp);
             int radius=Cfg(l?.blastRadius,3), dmg=Math.Max(1,Cfg(l?.blastDamage,2));
-            var targets=S.fighters.Where(x=>x.Alive&&x!=sp&&x.prisoned==0&&Board.Gap(sp,x)<=radius).ToList();
+            // Nepturius vivo: a esfera bate mais forte (autor 23/10).
+            if(owner.Alive) dmg+=Cfg(l?.sphereBonus,2);
+            var targets=S.fighters.Where(x=>x.Alive&&!SphereSpares(sp,x)&&x.prisoned==0&&Board.Gap(sp,x)<=radius).ToList();
             Emit(new GameEvent{kind="skill",info="explosao-antimateria",actor=sp.id,cell=sp.cell,value=radius});
             var log=new List<GameEvent>();
             GearHits(mad?sp:owner,Area(sp.cell,radius,false),log);
@@ -1050,7 +1091,7 @@ namespace ArenaTatica.Core
             var c=new Cell(Dice.Range(S,S.width),Dice.Range(S,S.height));
             var v=Board.At(S,c); int dealt=0;var log=new List<GameEvent>();
             GearHits(owner,new[]{c},log);
-            if(v!=null&&!Unbreakable(v))
+            if(v!=null&&!Unbreakable(v)&&v!=owner)
             {
                 dealt=Math.Max(1,Cfg(l?.cubeDamage,2));
                 Hurt(v,dealt,log,owner);
@@ -1077,21 +1118,21 @@ namespace ArenaTatica.Core
             AddBuff(v,new Buff{id="nepturius-esfera",from="nepturius",turns=turns,armor=armor});
             Emit(new GameEvent{kind="status",info="nepturius-esfera",actor=sp.id,target=v.id,value=armor,cell=v.cell});
         }
-        // Dono morto: a esfera enlouquece e, no fim de cada rodada, nada até 8 PM, explode em área e agarra até 4.
+        // Dono morto: a esfera enlouquece e, no fim de todo turno, vaga até 8 PM para uma casa sorteada e usa um ataque
+        // sorteado (explosão ou agarrão).
         void MadSphere(Fighter owner)
         {
-            var mechanism=Mechanism(owner);
             var sp=Sphere(owner); if(sp==null||!sp.Alive) return;
             sp.team=MatchState.Neutral;
             sp.pm=8;
-            var water=Enumerable.Range(0,S.tiles.Length).Where(i=>Board.Walkable(S,new Cell(i%S.width,i/S.width),false)).ToList();
-            if(water.Count>0)
+            var costs=Board.Costs(S,sp);
+            var reach=Enumerable.Range(0,costs.Length).Where(i=>costs[i]>0&&costs[i]<=sp.pm&&Board.At(S,new Cell(i%S.width,i/S.width))==null).ToList();
+            if(reach.Count>0)
             {
-                int index=water[Dice.Range(S,water.Count)];var to=new Cell(index%S.width,index/S.width);
-                MoveSphere(owner,to);
+                int index=reach[Dice.Range(S,reach.Count)];
+                MoveSphere(owner,new Cell(index%S.width,index/S.width));
             }
-            SphereBlast(owner,true);
-            SphereGrab(owner,true);
+            if(Dice.Range(S,2)==0) SphereBlast(owner,true); else SphereGrab(owner,true);
         }
 
         // ── Tubarões (evento das Docas inundadas): neutros que só nadam em água ──

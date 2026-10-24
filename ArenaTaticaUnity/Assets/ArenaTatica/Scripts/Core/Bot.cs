@@ -152,7 +152,7 @@ namespace ArenaTatica.Core
             return best==me.cell?null:new Command{kind="mover",cell=best};
         }
 
-        static List<Fighter> Foes(MatchState s,Fighter me) => s.fighters.Where(x=>x.Alive&&!s.Ally(x.team,me.team)&&!x.hidden).ToList();
+        static List<Fighter> Foes(MatchState s,Fighter me) => s.fighters.Where(x=>x.Alive&&!s.Ally(x.team,me.team)&&!x.hidden&&!(Content.Def(x).luna?.invulnerable??false)).ToList();
         // Maior alcance entre as skills de dano que ele tem agora.
         static int Reach(Fighter me) => Match.Skills(me).Where(k=>k.kind==SkillKind.Dano&&!k.selfArea).Select(k=>k.maxRange).DefaultIfEmpty(1).Max();
         static bool SelfCast(SkillDef sk) => sk.selfArea||sk.kind==SkillKind.Forma||sk.kind==SkillKind.Pulso||sk.kind==SkillKind.Esconder||sk.kind==SkillKind.Aura||sk.kind==SkillKind.Desejo&&(string.IsNullOrEmpty(sk.wish)||sk.wish=="f");
@@ -274,7 +274,7 @@ namespace ArenaTatica.Core
             if(sk.area>0) victims.AddRange(s.fighters.Where(x=>x.Alive&&x!=main&&x!=me&&x.prisoned==0&&Inside(center,x.cell,sk.area,sk.square)&&(!sk.foes||!s.Ally(x.team,me.team))));
             double total=victims.Sum(v=>Hit(s,me,sk,v,v==main));
             if(sk.drain>0) total+=Math.Min(sk.drain,Content.MaxHp(me)-me.hp)*.5;
-            if(sk.wild) total*=.83;
+            if(sk.missPct>0) total*=1-sk.missPct/100.0; else if(sk.wild) total*=.83;
             return total;
         }
         static double Hit(MatchState s,Fighter me,SkillDef sk,Fighter v,bool main)

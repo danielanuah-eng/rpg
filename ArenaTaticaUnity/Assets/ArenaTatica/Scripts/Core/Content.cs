@@ -10,9 +10,9 @@ namespace ArenaTatica.Core
         {
             // Somnax: ficha do autor, escala regular 1x1 e uma lendária por time.
             ["somnax"]=new FighterDef { id="somnax", name="Somnax", sprites="Somnax", hp=11, pa=6, pm=4, initiative=6, level=5, armor=0, size=1, legendary=true, skills=new[] {
-                new SkillDef { id="pacto", name="Pacto", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=1, maxDamage=2, precise=true, perTurn=2, anim="pacto" },
-                new SkillDef { id="renuncia", name="Renúncia", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=1, maxDamage=2, ignoreArmor=true, perTurn=1, anim="renuncia" },
-                new SkillDef { id="passo-do-crepusculo", name="Passo do Crepúsculo", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=3, cooldown=2, sight=true, anim="blinkout" },
+                new SkillDef { id="pacto", name="Pacto", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=2, precise=true, perTurn=2, anim="pacto" },
+                new SkillDef { id="renuncia", name="Renúncia", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=2, pierce=true, perTurn=1, anim="renuncia" },
+                new SkillDef { id="passo-do-crepusculo", name="Passo do Crepúsculo", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=3, cooldown=1, sight=true, anim="blinkout" },
                 new SkillDef { id="doce-e-salgado", name="Doce e Salgado", kind=SkillKind.DoceSalgado, pa=5, minRange=0, maxRange=2, heal=2, perMatch=1, twoCells=true, hits=(int)(Hit.Si|Hit.Aliado), anim="support" },
                 new SkillDef { id="ruptura-das-memorias", name="Ruptura das Memórias", kind=SkillKind.Dano, pa=5, minRange=1, maxRange=3, area=1, square=true, foes=true, damage=5, perMatch=1, ultimate=true, anim="ult" } } },
             ["ciantia"]=new FighterDef { id="ciantia", name="Ciantia", sprites="Ciantia", hp=11, pa=6, pm=3, initiative=5, level=4, skills=new[] {
@@ -34,7 +34,7 @@ namespace ArenaTatica.Core
                 new SkillDef { id="estocada", name="Estocada flamejante", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=2, drain=1 },
                 new SkillDef { id="salto-do-duelista", name="Salto do duelista", kind=SkillKind.Salto, pa=2, minRange=2, maxRange=4, perTurn=1, sight=true, anim="leap" } } },
             // Pistoleiro: o camaleão vira pistola (precisa, armadura normal), canhão (área, impreciso, armadura menor) ou martelo (perto, armadura maior).
-            ["damian"]=new FighterDef { id="damian", name="Damian", sprites="Damian", hp=10, pa=6, pm=4, initiative=5, level=4, startForm="pistola",
+            ["damian"]=new FighterDef { id="damian", name="Damian", sprites="Damian", hp=10, pa=6, pm=4, initiative=5, level=4, legendary=true, startForm="pistola",
                 forms=new[] {
                     new FormDef { id="pistola", name="Pistola", armor=0 },
                     new FormDef { id="canhao", name="Canhão de mão", armor=-1, pose="cannon" },
@@ -63,7 +63,7 @@ namespace ArenaTatica.Core
                     new SkillDef { id="guarda-direcional", name="Guarda direcional", kind=SkillKind.GuardaDirecional, pa=0, minRange=0, maxRange=1, sight=false, area=2, buffArmor=1, anim="idle", form="normal" },
                     new SkillDef { id="escudada", name="Escudada", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, pmLoss=1, form="normal" },
                     new SkillDef { id="olho-abissal", name="Olho abissal", kind=SkillKind.Forma, pa=2, minRange=0, maxRange=0, sight=false, toForm="berserk", turns=3, perMatch=1, ultimate=true, form="normal", anim="transform" },
-                    new SkillDef { id="furia-negra", name="Fúria negra", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=5, wild=true, form="berserk" } } },
+                    new SkillDef { id="furia-negra", name="Fúria negra", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=5, wild=true, missPct=15, form="berserk" } } },
             // Anjo caído: tiro carregado de longe; a ultimate abre as asas e prepara uma flecha devastadora.
             ["arqueiro-jack"]=new FighterDef { id="arqueiro-jack", name="Arqueiro Jack", sprites="ArqueiroJack", hp=9, pa=6, pm=4, initiative=7, level=4, startForm="capuz",
                 forms=new[] { new FormDef { id="capuz", name="Capuz" }, new FormDef { id="asas", name="Asas abertas", armor=-1 } },
@@ -172,7 +172,7 @@ namespace ArenaTatica.Core
                 new SkillDef { id="esporos", name="Esporos", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=1, paLoss=1, perTurn=1 } } },
             // ── Elenco de 20/10 (pedido do autor). PV, Iniciativa, Nível e números que o autor não deu são provisórios. ──
             // Pirata das trevas: anula tudo no alvo, tira PA de quem fica perto, engole alguém no buraco negro e corta o mapa em linha.
-            ["pele-negra"]=new FighterDef { id="pele-negra", name="Pele D. Ark", sprites="PeleNegra", hp=14, pa=6, pm=2, initiative=2, level=5, fieldPa=3, fieldRange=1, meleeWeak=1, skills=new[] {
+            ["pele-negra"]=new FighterDef { id="pele-negra", name="Pele D. Ark", sprites="PeleNegra", hp=14, pa=6, pm=2, initiative=2, level=5, legendary=true, fieldPa=3, fieldRange=1, meleeWeak=1, skills=new[] {
                 new SkillDef { id="nulification", name="Nulification", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, dispel=true, anim="attack" },
                 new SkillDef { id="black-hole", name="Black Hole", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=3, damage=0, prison=1, banish=true, returnDamage=3, cooldown=3, hits=(int)(Hit.Inimigo|Hit.Aliado), anim="cast" },
                 new SkillDef { id="light-speed", name="Light Speed", kind=SkillKind.Teleporte, pa=3, minRange=1, maxRange=3, line=true, sight=false, pmRange=true, perTurn=1, anim="teleport" } } },
@@ -212,10 +212,10 @@ namespace ArenaTatica.Core
             // Vampiro moderno (21/10: visual de motoqueiro): fareja sangue (anda o dobro até quem está ferido), todo golpe cura, acertar
             // ferido dá PM e Transformar em Vampiro levanta uma Cria Vampírica (o visual antigo de Drácula).
             // Nome exibido Damon (autor 22/10); o id "daemion" fica (DungeonBDX, rede e saves usam o id).
-            ["daemion"]=new FighterDef { id="daemion", name="Damon", sprites="Daemion", hp=12, pa=6, pm=3, initiative=5, level=5, bloodScent=true, lifesteal=3, bloodlust=2, skills=new[] {
+            ["daemion"]=new FighterDef { id="daemion", name="Damon", sprites="Daemion", hp=12, pa=6, pm=3, initiative=5, level=5, legendary=true, bloodScent=true, lifesteal=3, bloodlust=2, skills=new[] {
                 new SkillDef { id="mordida-vampirica", name="Mordida vampírica", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2, anim="attack" },
                 new SkillDef { id="lanca-de-sangue", name="Lança de sangue", kind=SkillKind.Dano, pa=4, minRange=2, maxRange=4, damage=2, perTurn=1, anim="blood" },
-                new SkillDef { id="transformar-em-vampiro", name="Transformar em Vampiro", kind=SkillKind.Invocacao, pa=4, minRange=1, maxRange=2, sight=false, summon="cria-vampirica", maxActive=2, cooldown=3, anim="summon" } } },
+                new SkillDef { id="transformar-em-vampiro", name="Transformar em Vampiro", kind=SkillKind.Invocacao, pa=4, minRange=1, maxRange=2, sight=false, summon="cria-vampirica", maxActive=2, cooldown=4, anim="summon" } } },
             // O zumbi do Damon: PV máximo pelo número de jogadores (2=2, 3=4, 4=6, 5+=6; autor 22/10).
             ["cria-vampirica"]=new FighterDef { id="cria-vampirica", name="Cria Vampírica", sprites="CriaVampirica", hp=6, hpByPlayers=new[]{2,4,6,6}, pa=6, pm=3, level=0, picker=false, lifesteal=1, skills=new[] {
                 new SkillDef { id="garras-da-cria", name="Garras da cria", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=1, damage=2 } } },
@@ -428,10 +428,21 @@ namespace ArenaTatica.Core
             defaults??=new Dictionary<string,FighterDef>(Fighters);
             foreach(var kv in defaults) Fighters[kv.Key]=kv.Value;
             if(json!="")
-                try { var e=UnityEngine.JsonUtility.FromJson<GameEdits>(json); foreach(var d in e?.fighters??new List<FighterDef>()) if(d!=null&&defaults.ContainsKey(d.id)) { d.size=defaults[d.id].size; if(d.id=="pele-negra"&&new[]{"Pele D. N","Pele D. Negra","Pele de Negra","Pele Negra"}.Contains(d.name)||d.id=="espelhos"&&new[]{"Reflectius","Homem dos Espelhos","Homem ods espelhos"}.Contains(d.name)) d.name=defaults[d.id].name; if(d.id=="ikaito"&&d.name=="Capitão Ikaito D. Razer") d.name=defaults[d.id].name; Fighters[d.id]=Sanitize(d); } }
+                try { var e=UnityEngine.JsonUtility.FromJson<GameEdits>(json); foreach(var d in e?.fighters??new List<FighterDef>()) if(d!=null&&defaults.ContainsKey(d.id)) { d.size=defaults[d.id].size; if(d.id=="pele-negra"&&new[]{"Pele D. N","Pele D. Negra","Pele de Negra","Pele Negra"}.Contains(d.name)||d.id=="espelhos"&&new[]{"Reflectius","Homem dos Espelhos","Homem ods espelhos"}.Contains(d.name)) d.name=defaults[d.id].name; if(d.id=="ikaito"&&d.name=="Capitão Ikaito D. Razer") d.name=defaults[d.id].name; d.skills=WithNewSkills(d,defaults[d.id]); if((d.knownSkills?.Length??0)==0) d.legendary|=defaults[d.id].legendary; Fighters[d.id]=Sanitize(d); } }
                 catch(System.Exception) { json=""; }
             EditsJson=json; ClearCaches();
         }
+        // Skills que o padrão ganhou depois de a ficha ser editada (ex.: Guarda direcional do Tchu tcha, autor 23/10).
+        public static SkillDef[] WithNewSkills(FighterDef edit,FighterDef original)
+        {
+            var have=(edit.skills??new SkillDef[0]).Where(s=>s!=null).ToList();
+            var known=new HashSet<string>(edit.knownSkills??new string[0]);
+            // Ficha salva antes de 24/10 (sem knownSkills) não tinha a chance de erro: herda a do padrão.
+            if((edit.knownSkills?.Length??0)==0) foreach(var s in have) if(s.missPct==0&&original?.skills?.FirstOrDefault(x=>x.id==s.id) is SkillDef o) s.missPct=o.missPct;
+            foreach(var s in original?.skills??new SkillDef[0]) if(!known.Contains(s.id)&&!have.Any(x=>x.id==s.id)) have.Add(s.Clone());
+            return have.ToArray();
+        }
+        public static string[] SkillIds(string id) => Default(id)?.skills?.Select(s=>s.id).ToArray()??new string[0];
         static int Clamp(int v,int min,int max) => v<min?min:v>max?max:v;
         // Limites do editor: nada de números que quebrem o tabuleiro ou a rede.
         // Alcance do halfMap e raio do domo −1: pct% do maior lado do mapa (0 = metade).
@@ -444,7 +455,7 @@ namespace ArenaTatica.Core
             d.skills=(d.skills??new SkillDef[0]).Where(s=>s!=null&&!string.IsNullOrEmpty(s.id)).Take(boss?12:16).ToArray();
             foreach(var s in d.skills)
             {
-                s.pa=Clamp(s.pa,0,12); s.damage=Clamp(s.damage,0,20); s.maxDamage=s.maxDamage>0?Clamp(s.maxDamage,s.damage,20):0; s.heal=Clamp(s.heal,0,20); s.minRange=Clamp(s.minRange,0,12); s.maxRange=Clamp(s.maxRange,s.minRange,s.kind==SkillKind.Comando||s.kind==SkillKind.Desejo?99:12);
+                s.pa=Clamp(s.pa,0,12); s.missPct=Clamp(s.missPct,0,100); s.damage=Clamp(s.damage,0,20); s.maxDamage=s.maxDamage>0?Clamp(s.maxDamage,s.damage,20):0; s.heal=Clamp(s.heal,0,20); s.minRange=Clamp(s.minRange,0,12); s.maxRange=Clamp(s.maxRange,s.minRange,s.kind==SkillKind.Comando||s.kind==SkillKind.Desejo?99:12);
                 s.area=Clamp(s.area,0,6); s.perTurn=Clamp(s.perTurn,0,5); s.cooldown=Clamp(s.cooldown,0,9); s.push=Clamp(s.push,0,6); s.prison=Clamp(s.prison,0,2);
                 s.pmLoss=Clamp(s.pmLoss,0,10); s.paLoss=Clamp(s.paLoss,0,6); s.buffPa=Clamp(s.buffPa,-6,6); s.buffPm=Clamp(s.buffPm,-6,6); s.buffArmor=Clamp(s.buffArmor,-3,4); s.turns=Clamp(s.turns,0,5); s.hits&=7;
                 s.amplify=Clamp(s.amplify,0,4); s.gainPm=Clamp(s.gainPm,0,10); s.stun=Clamp(s.stun,0,2); s.sealUlt=Clamp(s.sealUlt,0,5); s.doubleDamage=Clamp(s.doubleDamage,0,3); s.mark=Clamp(s.mark,0,5); s.pmCost=Clamp(s.pmCost,0,10); s.returnDamage=Clamp(s.returnDamage,0,20); s.perForm=Clamp(s.perForm,0,5); s.mapPct=Clamp(s.mapPct,0,100); s.hitsOut&=7; s.weight=Clamp(s.weight,0,20); s.walls=Clamp(s.walls,0,12);
@@ -523,7 +534,7 @@ namespace ArenaTatica.Core
             if(sk.push>0) e.Add($"empurra {sk.push}"); if(sk.pull) e.Add("puxa até colar");
             if(sk.pmLoss>=10) e.Add("prende no lugar (0 PM)"); else if(sk.pmLoss>0) e.Add($"−{sk.pmLoss} PM"); if(sk.paLoss>0) e.Add($"−{sk.paLoss} PA");
             if(sk.prison>0&&!sk.banish) e.Add($"aprisiona {sk.prison} turno (Esquiva escapa)");
-            if(sk.drain>0&&sk.kind!=SkillKind.Cura) e.Add($"cura {sk.drain} ao acertar"); if(sk.wild) e.Add("pode errar");
+            if(sk.drain>0&&sk.kind!=SkillKind.Cura) e.Add($"cura {sk.drain} ao acertar"); if(sk.missPct>0) e.Add($"{sk.missPct}% de chance de errar"); else if(sk.wild) e.Add("pode errar");
             if(sk.freeIn&&!string.IsNullOrEmpty(sk.halfMapIn)) e.Add($"na forma {sk.halfMapIn} ignora visão e muro");
             if(sk.hitsOut!=0&&!string.IsNullOrEmpty(sk.halfMapIn)) e.Add($"fora da forma {sk.halfMapIn} só pega "+string.Join("/",new[]{(sk.hitsOut&(int)Hit.Si)!=0?"si":null,(sk.hitsOut&(int)Hit.Inimigo)!=0?"inimigos":null,(sk.hitsOut&(int)Hit.Aliado)!=0?"aliados":null}.Where(x=>x!=null)));
             if(sk.Custom) e.Add("pega "+string.Join("/",new[]{sk.CanHitSelf?"si":null,sk.CanHitEnemy?"inimigos":null,sk.CanHitAlly?"aliados":null}.Where(x=>x!=null)));
