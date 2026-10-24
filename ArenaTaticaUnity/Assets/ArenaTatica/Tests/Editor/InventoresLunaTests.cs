@@ -70,5 +70,15 @@ public class InventoresLunaTests {
  [Test] public void ChessPiecesVanishAfterTheDomainInRealTurns(){var m=New("desland");var f=Hero(m);Assert.IsTrue(Skill(m,f,"dominio-xadrez",f.cell,out var why),why);
   int deslandTurns=1;for(int k=0;k<40&&m.S.fighters.Any(x=>x.Alive&&x.def.StartsWith("peca-"));k++){var a=m.S.Active;if(a==null)break;if(a==f&&k>0)deslandTurns++;Assert.IsTrue(m.Apply(new Command{kind="passar",fighter=a.id,revision=m.S.revision},a.team,out _,out why),why);}
   Assert.IsFalse(m.S.fighters.Any(x=>x.Alive&&x.def.StartsWith("peca-")),"peças continuam vivas");Assert.LessOrEqual(deslandTurns,2);Assert.AreNotEqual("dominio",f.form);}
+ // Autor 23/10: rainha dá 4 de dano, as outras peças 2; peão na borda oposta vira rainha; domínio com recarga de 2 turnos.
+ [Test] public void QueenHitsForFourOtherPiecesForTwo(){var m=New("desland");var f=Hero(m);Assert.IsTrue(Skill(m,f,"dominio-xadrez",f.cell,out var why),why);
+  int Dmg(string def)=>((SkillDef)Call(m,"PieceHit",f,m.S.fighters.First(x=>x.def==def&&x.summoner==f.id))).damage;
+  Assert.AreEqual(4,Dmg("peca-rainha"));foreach(var d in new[]{"peca-peao","peca-torre","peca-cavalo","peca-bispo"}) Assert.AreEqual(2,Dmg(d),d);}
+ [Test] public void PawnReachingTheFarEdgeBecomesAQueen(){var m=New("desland");var f=Hero(m);Assert.IsTrue(Skill(m,f,"dominio-xadrez",f.cell,out var why),why);
+  var mc=m.S.Luna.machines.First(x=>x.by==f.id);var pawn=m.S.fighters.First(x=>x.Alive&&x.def=="peca-peao"&&x.summoner==f.id);
+  int e=mc.chessEdge;pawn.cell=e==0?new Cell(0,pawn.cell.z):e==1?new Cell(m.S.width-1,pawn.cell.z):e==2?new Cell(pawn.cell.x,0):new Cell(pawn.cell.x,m.S.height-1);
+  if(Board.At(m.S,pawn.cell) is Fighter o&&o!=pawn) o.cell=new Cell(m.S.width/2,m.S.height/2);var at=pawn.cell;
+  Call(m,"Promote",pawn,f);Assert.IsFalse(pawn.Alive);var q=Board.At(m.S,at);Assert.NotNull(q);Assert.AreEqual("peca-rainha",q.def);Assert.Contains(q.id,mc.chess);}
+ [Test] public void ChessDomainHasTwoTurnCooldownNotOncePerMatch(){var sk=Content.Fighters["desland"].skills.First(x=>x.id=="dominio-xadrez");Assert.AreEqual(2,sk.cooldown);Assert.AreEqual(0,sk.perMatch);}
 }
 }

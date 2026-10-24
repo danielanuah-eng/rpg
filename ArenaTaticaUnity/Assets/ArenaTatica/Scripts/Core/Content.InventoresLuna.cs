@@ -41,13 +41,13 @@ namespace ArenaTatica.Core
             // ── DESLAND (roque e xadrez): move aliados, clona quem ele matou e abre o domínio de xadrez. ──
             // A forma "dominio" existe só para as skills de movimento do xadrez aparecerem na ficha enquanto o domínio dura.
             Fighters["desland"]=new FighterDef { id="desland", name="Desland", sprites="Desland", hp=11, pa=6, pm=3, initiative=5, level=4,
-                luna=new LunaDef { family="desland", ecoCooldown=2, cloneTurns=1, chessTurns=2, pieceDamage=1 },
+                luna=new LunaDef { family="desland", ecoCooldown=2, cloneTurns=1, chessTurns=2, pieceDamage=2, queenDamage=4 },
                 forms=new[] { new FormDef { id="dominio", name="Domínio de xadrez", color="#E8D8A0" } },
                 skills=new[] {
                     new SkillDef { id="roque", name="Roque", kind=SkillKind.Suporte, effect="roque", pa=3, minRange=0, maxRange=8, sight=false, twoCells=true, anim="cast" },
                     new SkillDef { id="xeque-mate", name="Xeque-mate", kind=SkillKind.Dano, effect="xeque-mate", pa=3, minRange=1, maxRange=5, damage=2, modifiable=true, anim="attack" },
                     new SkillDef { id="eco-de-aliado", name="Eco de aliado", kind=SkillKind.Invocacao, effect="eco-de-aliado", pa=0, minRange=0, maxRange=99, sight=false, global=true, anim="summon" },
-                    new SkillDef { id="dominio-xadrez", name="Domínio de xadrez", kind=SkillKind.Invocacao, effect="dominio-xadrez", pa=3, minRange=0, maxRange=0, sight=false, anim="cast" },
+                    new SkillDef { id="dominio-xadrez", name="Domínio de xadrez", kind=SkillKind.Invocacao, effect="dominio-xadrez", pa=3, minRange=0, maxRange=0, cooldown=2, sight=false, anim="cast" },
                     new SkillDef { id="mover-peao", name="Mover peão", kind=SkillKind.Teleporte, effect="mover-peao", pa=2, minRange=0, maxRange=99, sight=false, global=true, twoCells=true, form="dominio", anim="teleport" },
                     new SkillDef { id="mover-torre", name="Mover torre", kind=SkillKind.Teleporte, effect="mover-torre", pa=2, minRange=0, maxRange=99, sight=false, global=true, twoCells=true, form="dominio", anim="teleport" },
                     new SkillDef { id="mover-cavalo", name="Mover cavalo", kind=SkillKind.Teleporte, effect="mover-cavalo", pa=2, minRange=0, maxRange=99, sight=false, global=true, twoCells=true, form="dominio", anim="teleport" },

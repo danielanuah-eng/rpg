@@ -31,3 +31,8 @@ No principal, alterei `Core/Match.cs` (fim de `ViewFor`), `Core/Match.Inventores
 - Mescla por hash contra `integracao/baseline-main.json`: 10 arquivos só da cópia + 203 novos copiados; `Match.cs`, `CoreTypes.cs`, `ArenaGame.cs`, `ClosedMapTests.cs` e `network-contract.mjs` mesclados à mão (Somnax + radar/engrenagens/marcas da revisão 020). `.meta` em conflito: ficou o do principal. Protocolo **15**.
 - Pedidos do autor na mesma versão: contador de engrenagens (ícone + ×N ao lado da vida) para Nikola/Blip/Blipware/Celinos; esfera do Nepturius flutua (só no desenho); radar do Celinos menor e translúcido; funilaria 3 engrenagens rodada sim, rodada não (`gearEvery`, editável); matriz fechada bloqueia qualquer skill/ataque e a saída só vale a partir do próximo turno; Roque em quaisquer dois aliados, sem limite de distância do Desland; rede de segurança que remove peças do xadrez se o domínio acabou.
 - EditMode no principal: **733/733**. Build Windows: Success, 0 erros.
+
+## Publicado no principal (23/10, 1.2.14)
+- Música ambiente de RPG desligada: menu e modo sem forma ficam em silêncio (a trilha `Ambient` segue no código, sem tocar).
+- Xadrez do Desland: `dominio-xadrez` com recarga 2 (não é mais 1 vez por partida); dano das peças `pieceDamage=2` e rainha `queenDamage=4` (editáveis no `LunaDef`); torre, bispo e rainha deslizam; peão que chega à borda mais longe do Desland vira rainha. Mover inimigo continua 1 vez por ultimate.
+- EditMode **736/736**. Build Windows: Success, 0 erros. Contrato de rede PASS 3×. Publicado no itch (windows, 1.2.14).

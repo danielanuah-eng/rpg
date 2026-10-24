@@ -159,7 +159,7 @@ namespace ArenaTatica.Core
     // survivesOwner: continua em campo quando o dono cai (robôs e esfera).
     // Engrenagens: gearStep (bônus a cada N), gearDamage/gearRange/gearPm/gearReveal (bônus por passo), gearDrops (por vez), gearEvery (a cada N rodadas; 1 = toda rodada),
     // gearSpecial (% de drop especial), gearMorph (engrenagens da transformação), gearHits (marcadores do drop).
-    // Bifia: vivaTurns/vivaRadius/vivaInit/vivaPm. Desland: ecoCooldown/cloneTurns/chessTurns/pieceDamage.
+    // Bifia: vivaTurns/vivaRadius/vivaInit/vivaPm. Desland: ecoCooldown/cloneTurns/chessTurns/pieceDamage (peças)/queenDamage (rainha).
     // Nepturius: auraRange/auraPa/auraPm, grabCount/grabRange, blastRadius/blastDamage, cubeDamage/cubeHeal, armorBuff/armorTurns.
     // Robôs: healTurn (cura no começo do turno controlável), revealBase/shotRange/chainRange (Celinos), gearPmBase (PM do Blip).
     [Serializable] public class LunaDef
@@ -168,7 +168,7 @@ namespace ArenaTatica.Core
         public bool techProtect, invulnerable, waterOnly, survivesOwner;
         public int gearStep=2, gearDamage=1, gearRange=1, gearPm, gearReveal, gearDrops=2, gearEvery=1, gearSpecial=20, gearMorph, gearHits=3, gearValue=1;
         public int vivaTurns=2, vivaRadius=6, vivaInit=1, vivaPm=2;
-        public int ecoCooldown=2, cloneTurns=1, chessTurns=2, pieceDamage=1;
+        public int ecoCooldown=2, cloneTurns=1, chessTurns=2, pieceDamage=2, queenDamage=4;
         public int auraRange=4, auraPa=2, auraPm=1, grabCount=4, grabRange=4, blastRadius=3, blastDamage=2, cubeDamage=2, cubeHeal=2, armorBuff=1, armorTurns=1;
         public int healTurn, revealBase=4, shotRange=3, chainRange=2, gearPmBase=4;
         public LunaDef Clone() => (LunaDef)MemberwiseClone();
@@ -381,7 +381,7 @@ namespace ArenaTatica.Core
     [Serializable] public class LunaBox { public int by, hp, cell, turns; }
     // Viva Luna: centro e raio do efeito, turnos da Bifia que faltam, quem foi pego e o bônus de iniciativa aplicado.
     [Serializable] public class LunaField { public int by, center, radius, turns, init; public List<int> affected=new List<int>(); public List<int> enemies=new List<int>(); }
-    [Serializable] public class LunaMachine { public int by, chessBy, chessTurns, sphere, sphereBy; public bool sphereUsed,sphereCrazy,sphereMad,chessFoe; public LunaBox box=new LunaBox(); public List<int> chess=new List<int>(); }
+    [Serializable] public class LunaMachine { public int by, chessBy, chessTurns, chessEdge, sphere, sphereBy; public bool sphereUsed,sphereCrazy,sphereMad,chessFoe; public LunaBox box=new LunaBox(); public List<int> chess=new List<int>(); }
     [Serializable] public class LunaState
     {
         public List<LunaMachine> machines=new List<LunaMachine>();

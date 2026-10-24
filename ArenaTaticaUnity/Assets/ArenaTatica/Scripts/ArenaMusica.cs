@@ -51,8 +51,7 @@ namespace ArenaTatica
                 var who=s.fighters.Where(f=>f.Alive&&!string.IsNullOrEmpty(Content.Form(f)?.music)).OrderBy(f=>s.Ally(f.team,viewer)?0:1).ThenBy(f=>f.id).FirstOrDefault();
                 want=who==null?"":Content.Form(who).music;
             }
-            // Modo Novo: sem forma com música (e no menu), toca a trilha ambiente calma de RPG.
-            if(want==""&&ArenaSom.Recorded) want=Ambient;
+            // Modo Novo: sem forma com música (e no menu), silêncio (autor 23/10: sem a trilha ambiente de RPG).
             // Troca de modo de som (gravada x sintetizada): a mesma forma reinicia com a outra versão.
             if(want!=""&&ArenaSom.Recorded!=recorded) { recorded=ArenaSom.Recorded; playing=""; }
             if(want!=playing) {

@@ -664,6 +664,7 @@ namespace ArenaTatica.Core
                     if(!S.Ally(who.team,f.team)) Mechanism(f).chessFoe=true;
                     var from=who.cell; who.cell=c2; Collect(who);
                     Emit(new GameEvent{kind="mover",actor=who.id,info=sk.effect,path=new[]{from,c2},cell=c2});
+                    if(who.summoner==f.id) Promote(who,f);
                     break;
                 }
                 case "puxao-blipware":
@@ -828,7 +829,7 @@ namespace ArenaTatica.Core
             var spots=FreeAround(f.cell,5);
             if(spots.Count<ChessOrder.Length) return;
             mechanism.chessBy=f.id; mechanism.chessTurns=Math.Max(1,Cfg(Luna(f)?.chessTurns,2)); f.form="dominio";
-            mechanism.chess.Clear(); mechanism.chessFoe=false;
+            mechanism.chess.Clear(); mechanism.chessFoe=false; mechanism.chessEdge=FarEdge(f.cell);
             for(int i=0;i<ChessOrder.Length;i++)
             {
                 var p=Spawn(ChessOrder[i],f.team,spots[i],f.id);
@@ -864,14 +865,15 @@ namespace ArenaTatica.Core
         bool ChessCapture(Fighter p,Fighter owner)
         {
             var hit=PieceHunt(p,owner); if(hit==null) return false;
-            var skill=PieceHit(owner);
+            var skill=PieceHit(owner,p);
             Emit(new GameEvent{kind="skill",info="dominio-xadrez",actor=p.id,target=hit.id,cell=hit.cell});
             Strike(p,skill,hit.cell);
             return true;
         }
-        SkillDef PieceHit(Fighter owner)
+        // Autor 23/10: rainha 4 de dano, as outras peças 2 (queenDamage/pieceDamage, editáveis).
+        SkillDef PieceHit(Fighter owner,Fighter piece)
         {
-            int dmg=Math.Max(1,Cfg(Luna(owner)?.pieceDamage,1));
+            var l=Luna(owner); int dmg=piece?.def=="peca-rainha"?Math.Max(1,Cfg(l?.queenDamage,4)):Math.Max(1,Cfg(l?.pieceDamage,2));
             return new SkillDef{ id="dominio-xadrez", name="Domínio de xadrez", kind=SkillKind.Dano, pa=0, minRange=1, maxRange=1, damage=dmg, precise=true };
         }
         // Primeiro inimigo encontrado na direção legal da peça (torre/bispo/rainha param no primeiro obstáculo; cavalo salta).
@@ -895,23 +897,46 @@ namespace ArenaTatica.Core
             }
             return null;
         }
-        // Sem captura: anda 1 casa na direção legal mais perto do inimigo mais próximo (sem promoção nem regras novas).
+        // Sem captura: vai atrás do inimigo mais próximo como no xadrez (torre/bispo/rainha deslizam quantas casas quiserem;
+        // peão anda 1 e cavalo salta em L). Peão que chega à borda oposta ao Desland vira rainha.
         void ChessAdvance(Fighter p,Fighter owner)
         {
             var prey=S.fighters.Where(x=>x.Alive&&!S.Ally(x.team,owner.team)).OrderBy(x=>Board.Gap(x,p)).ThenBy(x=>x.id).FirstOrDefault();
             if(prey==null) return;
             Cell? best=null; int top=Board.Gap(prey,p.cell);
             var dirs=ChessDirs(p.def);
+            bool slides=p.def=="peca-torre"||p.def=="peca-bispo"||p.def=="peca-rainha";
             foreach(var d in dirs)
             {
-                var c=p.cell+d;
-                if(!Board.Contains(S,c)||Board.At(S,c)!=null||!Board.Walkable(S,c,false)) continue;
-                if(!ChessMove(p.cell,c,EffectFor(p.def))) continue;
-                int g=Board.Gap(prey,c); if(g<top) { top=g; best=c; }
+                for(var c=p.cell+d;Board.Contains(S,c);c=c+d)
+                {
+                    if(Board.At(S,c)!=null||!Board.Walkable(S,c,false)) break;
+                    if(!ChessMove(p.cell,c,EffectFor(p.def))) break;
+                    int g=Board.Gap(prey,c); if(g<top) { top=g; best=c; }
+                    if(!slides) break;
+                }
             }
             if(best==null) return;
             var from=p.cell; p.cell=best.Value;
             Emit(new GameEvent{kind="mover",actor=p.id,info="dominio-xadrez",path=new[]{from,p.cell},cell=p.cell});
+            Promote(p,owner);
+        }
+        // Borda de promoção: a mais longe do Desland quando o domínio abre (0: x=0, 1: x=fim, 2: z=0, 3: z=fim).
+        int FarEdge(Cell c)
+        {
+            var d=new[]{ c.x, S.width-1-c.x, c.z, S.height-1-c.z };
+            int best=0; for(int i=1;i<4;i++) if(d[i]>d[best]) best=i; return best;
+        }
+        void Promote(Fighter p,Fighter owner)
+        {
+            if(p==null||!p.Alive||p.def!="peca-peao"||owner==null) return;
+            var mechanism=Mechanism(owner); int e=mechanism.chessEdge;
+            bool end=e==0?p.cell.x==0:e==1?p.cell.x==S.width-1:e==2?p.cell.z==0:p.cell.z==S.height-1;
+            if(!end) return;
+            var at=p.cell; p.hp=0; p.deathProcessed=true; Emit(new GameEvent{kind="sumir",target=p.id,cell=at});
+            mechanism.chess.Remove(p.id);
+            var q=Spawn("peca-rainha",p.team,at,owner.id); mechanism.chess.Add(q.id);
+            Emit(new GameEvent{kind="invocar",actor=owner.id,target=q.id,info=q.def,cell=at});
         }
         static string EffectFor(string def) => def=="peca-peao"?"mover-peao":def=="peca-torre"?"mover-torre":def=="peca-cavalo"?"mover-cavalo":def=="peca-bispo"?"mover-bispo":"mover-rainha";
         static Cell[] ChessDirs(string def)
