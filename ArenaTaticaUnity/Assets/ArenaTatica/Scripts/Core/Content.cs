@@ -12,7 +12,7 @@ namespace ArenaTatica.Core
             ["somnax"]=new FighterDef { id="somnax", name="Somnax", sprites="Somnax", hp=11, pa=6, pm=4, initiative=6, level=5, armor=0, size=1, legendary=true, skills=new[] {
                 new SkillDef { id="pacto", name="Pacto", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=2, precise=true, perTurn=2, anim="pacto" },
                 new SkillDef { id="renuncia", name="Renúncia", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=2, pierce=true, perTurn=1, anim="renuncia" },
-                new SkillDef { id="passo-do-crepusculo", name="Passo do Crepúsculo", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=3, sight=false, anim="blinkout" },
+                new SkillDef { id="passo-do-crepusculo", name="Passo do Crepúsculo", kind=SkillKind.Teleporte, pa=2, minRange=1, maxRange=3, sight=false, perTurn=1, anim="blinkout" },
                 new SkillDef { id="doce-e-salgado", name="Doce e Salgado", kind=SkillKind.DoceSalgado, pa=5, minRange=0, maxRange=4, heal=3, sight=false, perMatch=1, ultimate=true, twoCells=true, hits=(int)(Hit.Si|Hit.Aliado), anim="support" },
                 new SkillDef { id="ruptura-das-memorias", name="Ruptura das Memórias", kind=SkillKind.Dano, pa=5, minRange=1, maxRange=3, area=1, square=true, foes=true, damage=5, perMatch=1, ultimate=true, anim="ult" } } },
             ["ciantia"]=new FighterDef { id="ciantia", name="Ciantia", sprites="Ciantia", hp=11, pa=6, pm=3, initiative=5, level=4, skills=new[] {

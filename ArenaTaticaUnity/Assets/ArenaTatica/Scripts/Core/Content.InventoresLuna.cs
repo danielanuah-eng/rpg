@@ -58,7 +58,7 @@ namespace ArenaTatica.Core
                 luna=new LunaDef { family="nepturius", auraRange=4, auraPa=2, auraPm=1, grabCount=4, grabRange=4, blastRadius=3, blastDamage=2, cubeDamage=2, cubeHeal=2, armorBuff=1, armorTurns=1 },
                 skills=new[] {
                     new SkillDef { id="mover-esfera", name="Mover esfera", kind=SkillKind.Teleporte, effect="mover-esfera", pa=0, minRange=0, maxRange=8, sight=false, anim="cast" },
-                    new SkillDef { id="agarrao-negro", name="Agarrão negro", kind=SkillKind.Dano, effect="agarrao-negro", pa=3, minRange=0, maxRange=0, sight=false, damage=0, anim="cast" },
+                    new SkillDef { id="agarrao-negro", name="Agarrão negro", kind=SkillKind.Dano, effect="agarrao-negro", pa=3, minRange=0, maxRange=0, sight=false, damage=0, cooldown=2, anim="cast" },
                     new SkillDef { id="loucura-negra", name="Loucura negra", kind=SkillKind.Suporte, effect="loucura-negra", pa=3, minRange=0, maxRange=0, sight=false, anim="cast" },
                     new SkillDef { id="explosao-antimateria", name="Explosão de antimatéria", kind=SkillKind.Dano, effect="explosao-antimateria", pa=3, minRange=0, maxRange=0, sight=false, selfArea=true, damage=2, anim="attack" } } };
             // Esfera: invulnerável, sem turno próprio, PM 4 (recarrega a cada turno do dono) e imune a qualquer habilidade alheia.
