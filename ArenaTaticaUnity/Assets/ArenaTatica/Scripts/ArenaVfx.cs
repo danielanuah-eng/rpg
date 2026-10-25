@@ -63,3 +63,53 @@ namespace ArenaTatica
         }
     }
 }
+namespace ArenaTatica
+{
+    // Atordoado (todo atordoamento que não é o Agarrão espectral da Pistoleira, autor 25/10): estrelinhas girando em volta
+    // da cabeça, desenhadas na hora (sem arquivo).
+    public sealed class DizzyStars : MonoBehaviour
+    {
+        public Transform target; public float height=.75f;
+        readonly SpriteRenderer[] stars=new SpriteRenderer[4]; float t;
+        static Sprite star;
+
+        public void Build(Material sprite)
+        {
+            star??=StarSprite();
+            for(int i=0;i<stars.Length;i++) {
+                var r=new GameObject("Estrela"+i,typeof(SpriteRenderer)).GetComponent<SpriteRenderer>(); r.transform.SetParent(transform,false);
+                r.sprite=star; if(sprite) r.sharedMaterial=sprite; r.sortingOrder=5; stars[i]=r;
+            }
+        }
+        void LateUpdate()
+        {
+            var cam=Camera.main; if(!target||!cam||!stars[0]) return;
+            t+=Time.deltaTime;
+            transform.position=target.position+Vector3.up*(height+.12f);
+            for(int i=0;i<stars.Length;i++) {
+                float a=t*3.2f+i*Mathf.PI*2/stars.Length; float depth=Mathf.Sin(a);
+                var r=stars[i];
+                r.transform.position=transform.position+cam.transform.right*Mathf.Cos(a)*.3f+Vector3.up*depth*.07f-cam.transform.forward*depth*.1f;
+                r.transform.rotation=cam.transform.rotation*Quaternion.Euler(0,0,t*140+i*40);
+                r.transform.localScale=Vector3.one*(.22f+.05f*depth);
+                r.color=new Color(1,.88f,.3f,.75f+.25f*depth);
+            }
+        }
+
+        // Estrela de 5 pontas (32×32, pivô no centro), borda clara para brilhar.
+        static Sprite StarSprite()
+        {
+            const int N=32; var tex=new Texture2D(N,N,TextureFormat.RGBA32,false){ filterMode=FilterMode.Point, wrapMode=TextureWrapMode.Clamp };
+            var px=new Color[N*N];
+            for(int y=0;y<N;y++) for(int x=0;x<N;x++) {
+                var p=new Vector2(x+.5f-N/2f,y+.5f-N/2f); float ang=Mathf.Atan2(p.y,p.x)+Mathf.PI/2;
+                float k=Mathf.Abs(Mathf.Repeat(ang*5/(2*Mathf.PI),1)-.5f)*2; // 0 na ponta, 1 entre pontas
+                float edge=Mathf.Lerp(15f,6.5f,k); float d=p.magnitude-edge;
+                float alpha=d>1?0:d>-2?1:.85f;
+                px[y*N+x]=new Color(1,1,1,alpha);
+            }
+            tex.SetPixels(px); tex.Apply();
+            return Sprite.Create(tex,new Rect(0,0,N,N),new Vector2(.5f,.5f),32);
+        }
+    }
+}

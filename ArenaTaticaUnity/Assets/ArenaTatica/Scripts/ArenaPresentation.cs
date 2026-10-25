@@ -1980,19 +1980,26 @@ namespace ArenaTatica
             for(float t=0;t<.35f;t+=Time.deltaTime) { float k=t/.35f; Rings(.8f*size*(1-k),6.3f+t*6,1-k); yield return null; }
             transient.Remove(go); Destroy(go);
         }
-        // Mãos de energia em quem está atordoado (ArenaVfx.GripHands).
-        readonly Dictionary<int,GripHands> stunHands=new Dictionary<int,GripHands>();
+        // Atordoado: mãos de energia (ArenaVfx.GripHands) só no Agarrão espectral da Pistoleira; o resto, estrelinhas (DizzyStars).
+        readonly Dictionary<int,(MonoBehaviour fx,bool hands)> stunHands=new Dictionary<int,(MonoBehaviour,bool)>();
+        static bool StunHands(Fighter f) => Content.BaseSkill(f.stunFrom??"")=="agarrao-espectral";
         void UpdateStunHands(MatchState s)
         {
             foreach(var id in stunHands.Keys.ToList()) {
-                var f=s.F(id); bool keep=f!=null&&f.Alive&&f.stunned>0&&stunHands[id]&&units.TryGetValue(id,out var u)&&u&&u.gameObject.activeSelf&&!Match.Concealed(s,Game.LocalTeam,f);
-                if(!keep) { if(stunHands[id]) Destroy(stunHands[id].gameObject); stunHands.Remove(id); }
+                var f=s.F(id); var (fx,hands)=stunHands[id];
+                bool keep=f!=null&&f.Alive&&f.stunned>0&&fx&&hands==StunHands(f)&&units.TryGetValue(id,out var u)&&u&&u.gameObject.activeSelf&&!Match.Concealed(s,Game.LocalTeam,f);
+                if(!keep) { if(fx) Destroy(fx.gameObject); stunHands.Remove(id); }
             }
             foreach(var f in s.fighters) {
                 if(!f.Alive||f.stunned<=0||stunHands.ContainsKey(f.id)||Match.Concealed(s,Game.LocalTeam,f)||!units.TryGetValue(f.id,out var unit)||!unit||!unit.gameObject.activeSelf) continue;
-                var grip=new GameObject("MaosEspectrais").AddComponent<GripHands>(); grip.transform.SetParent(effectRoot,false);
-                grip.Build(spriteMaterial,Spark,C(.45f,.95f,1)); grip.target=unit; grip.height=Heights.TryGetValue(f.def,out float h)?h:.75f;
-                stunHands[f.id]=grip;
+                float h=Heights.TryGetValue(f.def,out float height)?height:.75f;
+                if(StunHands(f)) {
+                    var grip=new GameObject("MaosEspectrais").AddComponent<GripHands>(); grip.transform.SetParent(effectRoot,false);
+                    grip.Build(spriteMaterial,Spark,C(.45f,.95f,1)); grip.target=unit; grip.height=h; stunHands[f.id]=(grip,true);
+                } else {
+                    var stars=new GameObject("EstrelasAtordoado").AddComponent<DizzyStars>(); stars.transform.SetParent(effectRoot,false);
+                    stars.Build(spriteMaterial); stars.target=unit; stars.height=h; stunHands[f.id]=(stars,false);
+                }
             }
         }
         IEnumerator DisposeEffect(GameObject effect,float duration) { yield return new WaitForSeconds(duration); transient.Remove(effect); Destroy(effect); }

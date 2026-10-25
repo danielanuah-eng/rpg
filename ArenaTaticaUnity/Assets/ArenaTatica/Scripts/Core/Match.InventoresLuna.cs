@@ -907,7 +907,7 @@ namespace ArenaTatica.Core
             Strike(p,skill,hit.cell);
             if(p.def=="peca-torre"&&hit.Alive&&hit.lastDamageBy==p.id&&!FormImmune(hit)&&!Unstoppable(hit))
             {
-                hit.stunned=Math.Max(hit.stunned,1);
+                hit.stunned=Math.Max(hit.stunned,1); hit.stunFrom="agarrao-negro";
                 Emit(new GameEvent{kind="status",info="agarrao-negro",actor=p.id,target=hit.id,value=1,cell=hit.cell});
             }
             return true;
@@ -1086,7 +1086,7 @@ namespace ArenaTatica.Core
             {
                 // Imunidades: proteção tecnológica, intangível e imparável seguram o agarrão (o dano não existe aqui).
                 if(TechProtected(v)||Unstoppable(v)||(Content.Form(v)?.intangible??false)||Immune(v)&&!Content.Def(v).exposed) continue;
-                v.stunned=Math.Max(v.stunned,1);
+                v.stunned=Math.Max(v.stunned,1); v.stunFrom="agarrao-negro";
                 var stun=new GameEvent{kind="status",info="agarrao-negro"}; stun.actor=sp.id; stun.target=v.id; stun.value=1; stun.cell=v.cell;
                 log.Add(stun);
             }

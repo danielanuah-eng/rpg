@@ -641,7 +641,7 @@ namespace ArenaTatica.Core
                 var m=UnityEngine.JsonUtility.FromJson<Fighter>(UnityEngine.JsonUtility.ToJson(real));
                 m.id=f.id; m.cell=f.cell; m.hidden=f.hidden; m.pm=f.pm; m.moveBudget=f.moveBudget; m.deathProcessed=f.deathProcessed;
                 m.hp=!f.Alive?f.hp:real.Alive?Math.Max(1,real.hp-lost):f.hp;
-                m.prisoned=f.prisoned; m.stunned=f.stunned; m.marks=f.marks; m.drained=f.drained; m.banished=f.banished; m.banishDamage=f.banishDamage; m.lastDamageBy=f.lastDamageBy;
+                m.prisoned=f.prisoned; m.stunned=f.stunned; m.stunFrom=f.stunFrom; m.marks=f.marks; m.drained=f.drained; m.banished=f.banished; m.banishDamage=f.banishDamage; m.lastDamageBy=f.lastDamageBy;
                 m.buffs.AddRange(f.buffs);
                 v.fighters[i]=m;
             }
@@ -1339,7 +1339,7 @@ namespace ArenaTatica.Core
                 if(hit&&sk.cleanse&&!foe) Cleanse(f,v);
                 if(hit&&sk.sealUlt>0&&foe&&!guarded) Seal(f,v,sk.sealUlt);
                 if(hit&&sk.doubleDamage>0&&foe&&!guarded) { AddBuff(v,new Buff{id="vulneravel",from=sk.id,turns=sk.doubleDamage,taken=2}); log.Add(new GameEvent{kind="vulneravel",actor=f.id,target=v.id,value=sk.doubleDamage,cell=v.cell}); }
-                if(hit&&sk.stun>0&&foe&&!guarded&&(bare||!Unstoppable(v))) { v.stunned=Math.Max(v.stunned,sk.stun); log.Add(new GameEvent{kind="atordoar",actor=f.id,target=v.id,value=sk.stun,cell=v.cell}); }
+                if(hit&&sk.stun>0&&foe&&!guarded&&(bare||!Unstoppable(v))) { v.stunned=Math.Max(v.stunned,sk.stun); v.stunFrom=sk.id; log.Add(new GameEvent{kind="atordoar",actor=f.id,target=v.id,value=sk.stun,cell=v.cell}); }
                 if(hit&&sk.consumeMarks&&v==main&&v.marks>0) { log.Add(new GameEvent{kind="marca",actor=f.id,target=v.id,value=-v.marks,cell=v.cell}); v.marks=0; }
                 if(hit&&sk.mark>0&&foe&&!guarded) { v.marks+=sk.mark; log.Add(new GameEvent{kind="marca",actor=f.id,target=v.id,value=v.marks,cell=v.cell}); }
                 if(hit&&sk.noHeal&&foe&&!guarded&&!NoHeal(v)) { AddBuff(v,new Buff{id=NoHealBuff,from=f.id.ToString(),turns=99}); log.Add(new GameEvent{kind="sem-cura",actor=f.id,target=v.id,cell=v.cell}); }

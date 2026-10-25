@@ -291,17 +291,20 @@ namespace ArenaTatica.Core
         // stunned: turnos atordoado (perde o turno, mas pode ser alvo).
         [NonSerialized] public int marks, drained, banishDamage, stunned;
         [NonSerialized] public bool banished;
+        // stunFrom: skill que atordoou (a tela usa as mãos espectrais só no Agarrão da Pistoleira; o resto, estrelinhas).
+        [NonSerialized] public string stunFrom;
         [NonSerialized] public List<string> usedForm=new List<string>();
         public string ext;
         public void OnBeforeSerialize() => ext=marks==0&&drained==0&&banishDamage==0&&!banished&&stunned==0&&(usedForm==null||usedForm.Count==0)?""
-            :$"{marks}.{drained}.{banishDamage}.{(banished?1:0)}.{string.Join("|",usedForm??new List<string>())}.{stunned}";
+            :$"{marks}.{drained}.{banishDamage}.{(banished?1:0)}.{string.Join("|",usedForm??new List<string>())}.{stunned}.{stunFrom}";
         public void OnAfterDeserialize()
         {
-            marks=drained=banishDamage=stunned=0; banished=false; usedForm=new List<string>();
+            marks=drained=banishDamage=stunned=0; banished=false; stunFrom=null; usedForm=new List<string>();
             var p=(ext??"").Split('.'); if(p.Length<5) return;
             int.TryParse(p[0],out marks); int.TryParse(p[1],out drained); int.TryParse(p[2],out banishDamage); banished=p[3]=="1";
             usedForm.AddRange(p[4].Split(new[]{'|'},StringSplitOptions.RemoveEmptyEntries));
             if(p.Length>5) int.TryParse(p[5],out stunned);
+            if(p.Length>6&&p[6]!="") stunFrom=p[6];
         }
         // stolen: skills devoradas (Colosso, +1 PA). learned: skills copiadas pelo Desejo.
         public List<string> stolen=new List<string>();
