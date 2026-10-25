@@ -758,8 +758,10 @@ namespace ArenaTatica
         MatchState seenFrom, seenView; int seenRevision=-1, seenTeam=-1;
         public MatchState Seen(MatchState s)
         {
-            if(s==null||!s.fog||s.rng==0||Game.Client||Game.EditingMap) return s;
+            if(s==null||s.rng==0||Game.Client||Game.EditingMap) return s;
             int team=Game.LocalTeam; if(team<=0) return s;
+            // Sem névoa, a vista só muda com ilusão inimiga disfarçada (autor 25/10): o Host e o jogo local também não a distinguem.
+            if(!s.fog&&!s.fighters.Any(x=>!string.IsNullOrEmpty(x.disguise)&&!s.Ally(x.team,team))) return s;
             if(seenFrom==s&&seenRevision==s.revision&&seenTeam==team&&seenView!=null) return seenView;
             seenFrom=s; seenRevision=s.revision; seenTeam=team; return seenView=Match.ViewFor(s,team);
         }
@@ -1999,7 +2001,7 @@ namespace ArenaTatica
         void SkillVoice(string skill)
         {
             var generated=ArenaVoiceCatalog.ForSkill(skill);
-            if(generated!=null) { float end=PlayLine(generated,batchVoiceActor); if(generated=="jack_flecha_abissal") jackVoiceUntil=end; return; }
+            if(generated!=null) { PlayLine(generated,batchVoiceActor); return; }
             if(!skillVoices.TryGetValue(skill,out var clip)) skillVoices[skill]=clip=Resources.Load<AudioClip>("Audio/Skills/"+skill);
             if(clip&&ArenaSom.Recorded) AudioSource.PlayClipAtPoint(clip,BoardCamera?BoardCamera.transform.position:Vector3.zero,1);
         }

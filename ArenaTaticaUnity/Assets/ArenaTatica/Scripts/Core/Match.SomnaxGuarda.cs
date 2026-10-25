@@ -72,6 +72,21 @@ namespace ArenaTatica.Core
             if(!trigger) return 0;
             f.twinBondUsed=true; Emit(new GameEvent{kind="elo-duas-laminas",actor=f.id,target=target.id,cell=target.cell,value=1}); return 1;
         }
+        // Vozes do Somnax (pacote do autor, 25/10): a fala é escolhida no uso aceito, antes de registrar o uso, e viaja no evento;
+        // a tela só toca. Pacto: 1º do turno "Eu sou eu", depois "Até o fim". Renúncia: "E mais ninguém" se já houve Pacto no turno.
+        void SomnaxVoice(Fighter f,SkillDef sk)
+        {
+            if(f.def!="somnax") return;
+            int pacts=f.used.Count(id=>Content.BaseSkill(id)=="pacto");
+            string voice=Content.BaseSkill(sk.id) switch {
+                "pacto"=>pacts==0?"somnax_pacto_1":"somnax_pacto_2",
+                "renuncia"=>pacts>0?"somnax_renuncia_apos_pacto":"somnax_renuncia_sem_pacto",
+                "doce-e-salgado"=>"somnax_doce_e_salgado",
+                "passo-do-crepusculo"=>"somnax_passo_do_crepusculo",
+                "ruptura-das-memorias"=>"somnax_ruptura_das_memorias",
+                _=>null };
+            if(voice!=null) Emit(new GameEvent{kind="voz-personagem",actor=f.id,info=voice,cell=f.cell});
+        }
         void DamianGreeting(Fighter f)
         {
             const string marker="voz:damian-capitao";

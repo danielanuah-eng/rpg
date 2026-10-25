@@ -509,8 +509,8 @@ namespace ArenaTatica.Core
         bool Tackle(Fighter f,List<GameEvent> log)
         {
             if(TechProtected(f)||Unbreakable(f)) return true;
-            // Trava só quem é herói: invocação (summoner != 0) e ficha com noLock nunca travam ninguém.
-            var enemies=S.fighters.Where(e=>e.Alive&&!e.hidden&&!S.Ally(e.team,f.team)&&Board.Gap(e,f)==1&&e.summoner==0&&!e.noLock&&!Content.Def(e).noLock&&e.prisoned==0).ToList();
+            // Trava só quem é herói: invocação (summoner != 0) e ficha com noLock nunca travam ninguém (a ilusão trava como a original).
+            var enemies=S.fighters.Where(e=>e.Alive&&!e.hidden&&!S.Ally(e.team,f.team)&&Board.Gap(e,f)==1&&Board.Locks(e)&&e.prisoned==0).ToList();
             if(enemies.Count==0) return true;
             var locks=enemies.Select(_=>Roll()).ToArray(); int need=locks.Count(Dice.Lock);
             var dodges=Enumerable.Range(0,need).Select(_=>Roll()).ToArray();
@@ -629,18 +629,21 @@ namespace ArenaTatica.Core
             else if(s.fog) for(int i=0;i<v.tiles.Length;i++) if(v.tiles[i].Obj==TileObj.Espetos&&!s.sprung.Contains(i)) v.tiles[i].obj=0;
             foreach(var t in v.tiles) if(t.trap!=0&&!s.Ally(t.trap,player)) { t.trap=0; t.trapDamage=0; t.trapPa=0; t.trapBy=0; }
             v.mines.RemoveAll(i=>i<0||i>=v.tiles.Length||v.tiles[i].trap==0);
-            // Ilusão: para os inimigos é igual à original (mesmo nome, PV e sem marca de invocação).
-            foreach(var f in v.fighters.Where(x=>!string.IsNullOrEmpty(x.disguise)&&!s.Ally(x.team,player)))
+            // Ilusão (autor 25/10): para os inimigos é IDÊNTICA à original em tudo (nome, PV, PA, itens, efeitos, recargas, usos,
+            // trava), mesmo que o PV mostrado engane. Da cópia só ficam a casa, o PM do movimento dela e o que o inimigo pôs nela.
+            for(int i=0;i<v.fighters.Count;i++)
             {
-                var real=v.fighters.Find(x=>x.id==f.summoner);
-                // PV mostrado = PV da original menos o dano que a ilusão já levou.
+                var f=v.fighters[i]; if(string.IsNullOrEmpty(f.disguise)||s.Ally(f.team,player)) continue;
+                var real=v.fighters.Find(x=>x.id==f.summoner&&string.IsNullOrEmpty(x.disguise));
+                // PV mostrado = PV da original menos o dano que a ilusão já levou (o máximo é o da original: ValidState, 21/10).
                 int lost=Content.MaxHp(f)-f.hp;
-                // PV máximo igual ao da original (itens de PV): sem isso o PV mostrado passava do máximo e o cliente recusava todo
-                // estado (ValidState), perdendo a sala (bug da Ezequiela, 21/10).
-                f.def=f.disguise; f.summoner=0; if(real!=null) { f.bonusHp=real.bonusHp; f.hp=f.Alive&&real.Alive?Math.Max(1,real.hp-lost):f.hp; f.form=real.form; f.roll=real.roll;
-                    // Recargas e usos iguais aos da original (3.7): a ficha das duas mostra o mesmo.
-                    f.cooldowns=real.cooldowns.Select(c=>new Charge{skill=c.skill,uses=c.uses}).ToList(); f.used=new List<string>(real.used); f.usedMatch=new List<string>(real.usedMatch); }
-                f.disguise=null;
+                if(real==null) { f.def=f.disguise; f.summoner=0; f.disguise=null; f.noLock=f.noReveal=false; continue; }
+                var m=UnityEngine.JsonUtility.FromJson<Fighter>(UnityEngine.JsonUtility.ToJson(real));
+                m.id=f.id; m.cell=f.cell; m.hidden=f.hidden; m.pm=f.pm; m.moveBudget=f.moveBudget; m.deathProcessed=f.deathProcessed;
+                m.hp=!f.Alive?f.hp:real.Alive?Math.Max(1,real.hp-lost):f.hp;
+                m.prisoned=f.prisoned; m.stunned=f.stunned; m.marks=f.marks; m.drained=f.drained; m.banished=f.banished; m.banishDamage=f.banishDamage; m.lastDamageBy=f.lastDamageBy;
+                m.buffs.AddRange(f.buffs);
+                v.fighters[i]=m;
             }
             // Névoa: quem o time não vê vai como escondido.
             foreach(var f in v.fighters.Where(x=>x.Alive&&!x.hidden&&!Sees(s,player,s.F(x.id)??x))) f.hidden=true;
@@ -893,7 +896,7 @@ namespace ArenaTatica.Core
             }
             if(Revives(sk)) { int dead=Graveyard(S,f).Count; if(dead>1&&(slot<0||slot>=dead)) { reason="Escolha quem vai reviver."; return false; } }
             if(sk.kind==SkillKind.Comando&&!FindUnit(f,sk,c,c2,out _,out reason)) return false;
-            f.pa-=Cost(f,sk,S,c,c2); f.used.Add(sk.id); if(sk.perMatch>0) f.usedMatch.Add(sk.id);
+            f.pa-=Cost(f,sk,S,c,c2); SomnaxVoice(f,sk); f.used.Add(sk.id); if(sk.perMatch>0) f.usedMatch.Add(sk.id);
             f.pm=Math.Max(0,f.pm-sk.pmCost)+sk.gainPm; if(sk.perForm>0) f.usedForm.Add(sk.id);
             if(sk.cooldown>0) f.cooldowns.Add(new Charge{skill=sk.id,uses=sk.cooldown});
             if(sk.kind!=SkillKind.Espelho&&sk.kind!=SkillKind.Desejo) f.lastSkill=sk.id;

@@ -197,6 +197,8 @@ namespace ArenaTatica
         static string Short(string name) { if(string.IsNullOrEmpty(name)) return "?"; if(name.StartsWith("O ")) name=name.Substring(2); if(name.Length<=14) return name; int i=name.IndexOf(' '); return i>0?name.Substring(0,i):name; }
         // Cartões: ordem de iniciativa, PV/PA/PM, estado e as marcas de turno ATUAL e PRÓXIMO. A identidade mostrada
         // é a do disfarce (clone ilusório aparece como o conjurador; nenhuma etiqueta de Ilusão em lugar nenhum).
+        // Ilusão inimiga (autor 25/10): o HUD do Host e do jogo local mostra a mesma vista que o cliente recebe (Match.ViewFor).
+        MatchState Seen(MatchState s) => Game.View!=null?Game.View.Seen(s):s;
         void RefreshTimeline(MatchState s)
         {
             if(!timelineContent||s==null) return;
@@ -275,7 +277,7 @@ namespace ArenaTatica
         }
         void RefreshInspect()
         {
-            var s=Game.State; var f=s?.F(inspectId);
+            var s=Seen(Game.State); var f=s?.F(inspectId);
             if(f==null||!f.Alive||(f.hidden&&!s.Ally(f.team,Game.LocalTeam))) { inspect.gameObject.SetActive(false); return; }
             // Disfarce: o clone ilusório mostra a identidade do conjurador (nome, retrato, atributos e habilidades).
             bool veiled=!string.IsNullOrEmpty(f.disguise);
@@ -734,9 +736,9 @@ namespace ArenaTatica
             if(!canvas||Game.State==null) return;
             if(Screen.width!=width||Screen.height!=height) Layout();
             SyncConfirmation(); // a mira armada cai antes de desenhar: perder CanAct, menu/picker/loja ou troca de estado
-            var s=Game.State; var f=Game.Active;
+            var s=Game.State; var f=Game.Active; var shown=Seen(s); var shownActive=f==null?null:shown.F(f.id)??f;
             string Team(int t) => $"<color=#{ColorUtility.ToHtmlStringRGB(ArenaPresentation.TeamColor(t))}>P{t}</color>";
-            turn.text=Game.Placing?$"POSICIONAMENTO   •   vez de {Team(s.placing)}":f==null?$"RODADA {s.round}":$"RODADA {s.round}   •   {ArenaPresentation.Shown(f).name} {Team(f.team)}   •   {f.pa} PA   •   {f.pm} PM";
+            turn.text=Game.Placing?$"POSICIONAMENTO   •   vez de {Team(s.placing)}":f==null?$"RODADA {s.round}":$"RODADA {s.round}   •   {ArenaPresentation.Shown(shownActive).name} {Team(f.team)}   •   {shownActive.pa} PA   •   {shownActive.pm} PM";
             // Tempo de turno da sala: contagem no Host e no cliente (o cliente conta a partir do estado recebido).
             if(Game.TurnLeft>=0) turn.text+=$"   •   {Mathf.CeilToInt(Game.TurnLeft)} s";
             string Goal(int t) => s.eliminated[t]?"fora":s.mode==VictoryMode.Galeoes?$"{s.galeoes[t]} Galeões":s.mode==VictoryMode.Tesouro?$"{s.collected[t]}/{s.target} moedas":s.mode==VictoryMode.Dominio?$"domínio {s.domain[t]}/{s.target}":"eliminação";
@@ -749,7 +751,7 @@ namespace ArenaTatica
             }));
             // Na ordem da linha do tempo (Krosmaster: cada jogador joga o time inteiro, da maior Iniciativa para a menor).
             int Order(Fighter x) { int i=s.timeline.IndexOf(x.id); return i<0?999:i; }
-            fighters.text=string.Join("\n",s.fighters.Where(x=>x.Alive||x.summoner==0).OrderBy(Order).Select(x=>{
+            fighters.text=string.Join("\n",shown.fighters.Where(x=>x.Alive||x.summoner==0).OrderBy(Order).Select(x=>{
                 string n=ArenaPresentation.Shown(x).name; bool on=f!=null&&x.id==f.id; // disfarce: o clone aparece como o conjurador
                 return $"{(on?"▶ ":"")}{(MatchState.Player(x.team)?Team(x.team):"Neutro")} {n}{(x.summoner==0&&MatchState.Player(x.team)?$" <color=#a7b4c2>Ini {ArenaPresentation.Shown(x).initiative}</color>":"")}  {(x.Alive?$"{x.hp}/{Content.MaxHp(x)} PV":"nocauteado")}{(x.summoner==0&&MatchState.Player(x.team)?$" · {s.coins[x.team]} moedas":"")}{(x.prisoned>0?" · preso":"")}";
             }));
@@ -760,7 +762,7 @@ namespace ArenaTatica
                 if(portraitDef!=art) { portraitDef=art; portraitArt.sprite=Face(art); portraitArt.color=portraitArt.sprite?Color.white:Color.clear; }
                 portraitText.text=$"{ArenaPresentation.Shown(f).name}  {f.hp}/{Content.MaxHp(f)} PV";
             }
-            RefreshTimeline(s); // retratos, PV/PA/PM, estado e turno ATUAL/PRÓXIMO, a cada revisão/turno/HP
+            RefreshTimeline(Seen(s)); // retratos, PV/PA/PM, estado e turno ATUAL/PRÓXIMO, a cada revisão/turno/HP
             }
             var skills=f==null?new List<SkillDef>():Match.Skills(f);
             for(int i=0;i<skillButtons.Count;i++) {
