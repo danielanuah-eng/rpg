@@ -509,7 +509,7 @@ namespace ArenaTatica.Core
         bool Tackle(Fighter f,List<GameEvent> log)
         {
             if(TechProtected(f)||Unbreakable(f)) return true;
-            // Trava só quem é herói: invocação (summoner != 0) e ficha com noLock nunca travam ninguém (a ilusão trava como a original).
+            // Trava só quem é herói: invocação (summoner != 0) e ficha com noLock nunca travam ninguém (REGRA MASTER: a ilusão nunca trava).
             var enemies=S.fighters.Where(e=>e.Alive&&!e.hidden&&!S.Ally(e.team,f.team)&&Board.Gap(e,f)==1&&Board.Locks(e)&&e.prisoned==0).ToList();
             if(enemies.Count==0) return true;
             var locks=enemies.Select(_=>Roll()).ToArray(); int need=locks.Count(Dice.Lock);

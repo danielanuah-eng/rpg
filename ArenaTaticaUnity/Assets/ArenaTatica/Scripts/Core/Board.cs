@@ -140,8 +140,8 @@ namespace ArenaTatica.Core
             while(true) { int l=2*k+1, r=l+1, m=k; if(l<h.Count&&Less(h[l],h[m])) m=l; if(r<h.Count&&Less(h[r],h[m])) m=r; if(m==k) break; (h[k],h[m])=(h[m],h[k]); k=m; }
             return top;
         }
-        // Trava: herói sem noLock. A ilusão disfarçada trava como a original (autor 25/10: ninguém distingue as duas).
-        public static bool Locks(Fighter e) => !string.IsNullOrEmpty(e.disguise)&&e.summoner!=0&&Content.Fighters.TryGetValue(e.disguise,out var d)?!d.noLock:e.summoner==0&&!e.noLock&&!Content.Def(e).noLock;
+        // Trava: só herói sem noLock. REGRA MASTER (autor 25/10): a ilusão nunca trava.
+        public static bool Locks(Fighter e) => e.summoner==0&&!e.noLock&&!Content.Def(e).noLock;
         // Risco de Trava ao SAIR de c: inimigos conhecidos, soltos e que travam, colados nela.
         public static int LockRisk(MatchState s,Fighter f,Cell c)
         {
