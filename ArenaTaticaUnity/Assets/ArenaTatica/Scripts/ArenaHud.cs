@@ -557,6 +557,8 @@ namespace ArenaTatica
             var sk=skills[index];
             SyncConfirmation();
             if(!Game.CanAct) { confirm.Reset(); return; }
+            // Mover esfera (autor 25/10): já entra na mira no 1º toque; o toque na casa confirma.
+            if(sk.effect=="mover-esfera") { confirm.Reset(); Game.Mode=Game.Mode==sk.id?"":sk.id; return; }
             if(!PressAction(ArenaActionConfirmation.Skill(sk.id),f)) { Game.Mode=""; return; } // 1º toque: só destaca
             if(Game.Mode==sk.id) { Game.Mode=""; return; }                                     // tocar de novo enquanto mira cancela a mira
             if(sk.kind==SkillKind.GuardaDirecional&&Match.GuardActive(f)) { Game.Mode=""; Game.Submit("skill",f.cell,sk.id); return; }

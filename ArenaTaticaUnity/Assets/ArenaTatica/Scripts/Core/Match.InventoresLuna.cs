@@ -171,12 +171,14 @@ namespace ArenaTatica.Core
             if(f.def=="viuva-da-agulha"&&f.summoner==0) SpidersAct(f);
             // Esfera enlouquecida (dono morto): age no fim de todo turno (autor 23/10).
             foreach(var machine in S.Luna.machines.Where(x=>x.sphereMad).ToList()) if(S.F(machine.by) is Fighter owner) MadSphere(owner);
-            // Desland: peças do domínio agem uma de cada vez depois dele; clones dele expiram.
+            // Desland: peças do domínio agem uma de cada vez depois dele. Clone do eco conta os próprios turnos
+            // (autor 25/10: dura 2 turnos); clone sem turno próprio conta os do Desland.
             if(f.def=="desland")
             {
                 ChessPiecesAct(f);
-                foreach(var c in S.Luna.clones.Where(x=>x.by==f.id).ToList()) if(--c.turns<=0) EndClone(c);
+                foreach(var c in S.Luna.clones.Where(x=>x.by==f.id&&S.F(x.id) is Fighter g&&Content.Def(g).noTurn).ToList()) if(--c.turns<=0) EndClone(c);
             }
+            if(S.Luna.clones.FirstOrDefault(x=>x.id==f.id) is LunaClone own&&--own.turns<=0) EndClone(own);
         }
         // Morte: marcas do Celinos, direito do eco-de-aliado, peças do domínio e a esfera órfã.
         void LunaDeath(Fighter v,List<GameEvent> log)
