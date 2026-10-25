@@ -139,7 +139,7 @@ namespace ArenaTatica.Core
             if(Cfg(l?.healTurn,0)>0) Heal(f,Cfg(l.healTurn,0),f,"blipware");
             // Blip/Celinos acertam o PM pelo contador compartilhado do dono.
             RobotTurn(f);
-            // Nikola vivo: funilaria (3 engrenagens, rodada sim, rodada não; autor 23/10) e respawn do robô ausente.
+            // Nikola vivo: funilaria (5 engrenagens desde 25/10, rodada sim, rodada não; autor 23/10) e respawn do robô ausente.
             if(f.def=="nikola")
             {
                 Funilaria(f);
@@ -151,6 +151,8 @@ namespace ArenaTatica.Core
                 mechanism.sphereUsed=false; mechanism.sphereCrazy=false;
             }
             SphereAura(f);
+            // Teia com duração (Teia.turns, autor 25/10: 3): conta os turnos da dona e some no começo do turno em que acaba.
+            WebAge(f);
             // Começar o turno na teia da Viúva conta como pisar nela.
             WebTouch(f,f.cell,null);
         }
@@ -711,7 +713,7 @@ namespace ArenaTatica.Core
                     break;
                 }
                 case "explosao-antimateria": SphereBlast(f,false); break;
-                case WebEffect: CastWeb(f,c); break;
+                case WebEffect: CastWeb(f,sk,c); break;
             }
         }
         // Caixa da matriz: fecha (quebra ou expira) e avisa a apresentação.

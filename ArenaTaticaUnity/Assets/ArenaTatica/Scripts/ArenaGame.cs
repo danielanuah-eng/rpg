@@ -19,7 +19,8 @@ namespace ArenaTatica
         // 14: inventores/lua, estado das máquinas e terreno de água.
         // 16 (24/10): chance de erro das skills, skills conhecidas da ficha editada e rodada da marca do Celinos.
         // 17 (24/10): teia da Viúva da Agulha no estado (LunaState.webs).
-        public int protocol=17;
+        // 18 (25/10): duração da teia (LunaWeb.turns), lado da teia (SkillDef.side) e passo livre do chefe (BossDef.preMove).
+        public int protocol=18;
         public string kind, text, token;
         public string[] fighters; // hello: time escolhido no aparelho do jogador
         public string[] pool;     // hello/escolha: pool do torneio

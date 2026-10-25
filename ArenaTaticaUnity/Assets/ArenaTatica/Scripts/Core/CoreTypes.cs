@@ -75,7 +75,9 @@ namespace ArenaTatica.Core
         // (turns 0 = até trocar). endsForm: usar a skill encerra a forma. area: atinge inimigos até essa distância do alvo.
         // drain: cura quem acerta. precise: ignora o Escudo do defensor. wild: erra com Esquiva no dado de ataque. pmLoss: alvo perde PM no próximo turno.
         // anim: clipe da apresentação (padrão "attack").
+        // side: lado do quadrado de casas (Teia da Viúva; 0 = 2).
         public int perMatch, turns, area, drain, pmLoss;
+        public int side;
         // cooldown: depois de usar, volta a cada N turnos do lutador. ultimate: precisa ter limite (perTurn, perMatch ou cooldown).
         public int cooldown;
         public bool ultimate;
@@ -163,7 +165,7 @@ namespace ArenaTatica.Core
     // gearSpecial (% de drop especial), gearMorph (engrenagens da transformação), gearHits (marcadores do drop).
     // Bifia: vivaTurns/vivaRadius/vivaInit/vivaPm. Desland: ecoCooldown/cloneTurns/chessTurns/pieceDamage (peças)/queenDamage (rainha).
     // Nepturius: auraRange/auraPa/auraPm, grabCount/grabRange, blastRadius/blastDamage, sphereBonus (dano extra com o dono morto), cubeDamage/cubeHeal, armorBuff/armorTurns.
-    // Robôs: healTurn (cura no começo do turno controlável), revealBase/shotRange/chainRange (Celinos), gearPmBase (PM do Blip).
+    // Robôs: healTurn (cura no começo do turno controlável), revealBase/shotRange/chainRange (Celinos), gearPmBase (PM do Blip; 6 desde 25/10).
     [Serializable] public class LunaDef
     {
         public string family;
@@ -384,7 +386,8 @@ namespace ArenaTatica.Core
     // round: rodada do último comando (o Celinos larga o alvo depois de 2 rodadas sem comando novo).
     [Serializable] public class LunaMark { public int by, id, x, z, round; }
     // Teia da Viúva da Agulha: dona, casas (índices), último inimigo que pisou/começou o turno nela e o último alvo da dona.
-    [Serializable] public class LunaWeb { public int by, last, prey; public int[] cells; }
+    // turns: turnos da dona que faltam para a teia sumir (0 = não some).
+    [Serializable] public class LunaWeb { public int by, last, prey, turns; public int[] cells; }
     // Clone do eco-de-aliado: turns = turnos do Desland que faltam para o clone sumir.
     [Serializable] public class LunaClone { public int id, by, turns; }
     [Serializable] public class LunaSeen { public int team, id; }

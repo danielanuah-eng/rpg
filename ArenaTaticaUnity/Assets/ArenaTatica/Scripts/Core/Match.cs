@@ -328,7 +328,7 @@ namespace ArenaTatica.Core
                 {
                     var t=S.At(cell);
                     CollectGears(f,cell,after);
-                    if(t.coins>0) { S.coins[f.team]+=t.coins; S.collected[S.Team(f.team)]+=t.coins; after.Add(new GameEvent{kind="moeda",actor=f.id,cell=cell,value=t.coins}); t.coins=0; }
+                    if(t.coins>0&&MatchState.Player(f.team)) { S.coins[f.team]+=t.coins; S.collected[S.Team(f.team)]+=t.coins; after.Add(new GameEvent{kind="moeda",actor=f.id,cell=cell,value=t.coins}); t.coins=0; }
                     if(t.lava&&!flying) { Burn(f,after); if(!f.Alive) { stop=true; break; } }
                     Enter(f,t,flying,after); if(!f.Alive) { stop=true; break; }
                     if(t.trap!=0&&!S.Ally(t.trap,f.team)&&!flying) { if(Spring(f,t,after)||!f.Alive) { stop=true; break; } }
@@ -1452,7 +1452,7 @@ namespace ArenaTatica.Core
         {
             CollectGears(f,f.cell,null);
             var t=S.At(f.cell);
-            if(t.coins>0) { S.coins[f.team]+=t.coins; S.collected[S.Team(f.team)]+=t.coins; Emit(new GameEvent{kind="moeda",actor=f.id,cell=f.cell,value=t.coins}); t.coins=0; }
+            if(t.coins>0&&MatchState.Player(f.team)) { S.coins[f.team]+=t.coins; S.collected[S.Team(f.team)]+=t.coins; Emit(new GameEvent{kind="moeda",actor=f.id,cell=f.cell,value=t.coins}); t.coins=0; }
             if(t.Obj==TileObj.Bau) { var log=new List<GameEvent>(); Enter(f,t,true,log); events.AddRange(log); }
         }
         // Objetos fixos do mapa (TileObj, 18/10): o baú abre para quem entra; os espetos ferem quem entra sem voar e não param ninguém.

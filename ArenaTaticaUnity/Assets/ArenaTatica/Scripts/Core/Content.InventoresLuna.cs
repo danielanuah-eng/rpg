@@ -12,7 +12,7 @@ namespace ArenaTatica.Core
         {
             // ── NIKOLA (inventor): comanda dois autômatos e vive de engrenagens. ──
             Fighters["nikola"]=new FighterDef { id="nikola", name="Nikola", sprites="Nikola", hp=11, pa=6, pm=3, initiative=5, level=4, legendary=true,
-                luna=new LunaDef { family="nikola", techProtect=true, gearStep=2, gearDamage=1, gearRange=1, gearDrops=3, gearSpecial=20, gearHits=2 },
+                luna=new LunaDef { family="nikola", techProtect=true, gearStep=2, gearDamage=1, gearRange=1, gearDrops=5, gearSpecial=20, gearHits=2 },
                 skills=new[] {
                     new SkillDef { id="comando-blip", name="Comando: Blip", kind=SkillKind.Invocacao, effect="comando-blip", pa=3, minRange=0, maxRange=1, sight=false, anim="summon" },
                     new SkillDef { id="comando-celinos", name="Comando: Celinos", kind=SkillKind.Invocacao, effect="comando-celinos", pa=3, minRange=0, maxRange=99, sight=false, global=true, anim="cast" },
@@ -20,8 +20,8 @@ namespace ArenaTatica.Core
                     new SkillDef { id="matriz-protecao", name="Matriz de proteção", kind=SkillKind.Suporte, effect="matriz-protecao", pa=3, minRange=0, maxRange=0, sight=false, anim="cast" },
                     new SkillDef { id="saida-matriz", name="Saída da matriz", kind=SkillKind.Teleporte, effect="saida-matriz", pa=3, minRange=0, maxRange=99, sight=false, global=true, anim="teleport" } } };
             // Blip: sem turno, 3 PV. Aos 10 de engrenagem vira ModoBlipware (ficha separada, com turno controlável).
-            Fighters["blip"]=new FighterDef { id="blip", name="Blip", sprites="Blip", hp=3, pa=0, pm=4, level=0, picker=false, noTurn=true, noLock=true, noReveal=true,
-                luna=new LunaDef { family="nikola", techProtect=true, survivesOwner=true, gearMorph=10, gearPmBase=4 }, skills=new SkillDef[0] };
+            Fighters["blip"]=new FighterDef { id="blip", name="Blip", sprites="Blip", hp=3, pa=0, pm=6, level=0, picker=false, noTurn=true, noLock=true, noReveal=true,
+                luna=new LunaDef { family="nikola", techProtect=true, survivesOwner=true, gearMorph=8, gearPmBase=6 }, skills=new SkillDef[0] };
             Fighters["blipware"]=new FighterDef { id="blipware", name="Blipware", sprites="Blipware", hp=3, pa=6, pm=4, initiative=5, level=0, picker=false, noLock=true, noReveal=true,
                 luna=new LunaDef { family="nikola", techProtect=true, survivesOwner=true, healTurn=2 },
                 skills=new[] {

@@ -125,10 +125,9 @@ namespace ArenaTatica.Core
                 new SkillDef { id="ferrao", name="Ferrão", kind=SkillKind.Dano, pa=2, minRange=1, maxRange=1, damage=1, perTurn=2, pmLoss=1 } } },
             ["viuva-da-agulha"]=new FighterDef { id="viuva-da-agulha", name="Viúva da Agulha", sprites="ViuvaAgulha", hp=7, pa=6, pm=5, initiative=7, level=3, allyBonus=1, auraRange=1, skills=new[] {
                 new SkillDef { id="agulha", name="Agulha", kind=SkillKind.Dano, pa=3, minRange=1, maxRange=2, damage=2, pierce=true, isolatedBonus=2 },
-                // Autor 24/10: teia de 4 casas no chão, aranhas (até 3) e esconder (ids iguais aos da ficha que ele montou no Editor).
+                // Autor 24/10 (25/10: teia 4×4, sem Esconder-se; só some em cima da teia): teia no chão, aranhas (até 3) (ids iguais aos da ficha que ele montou no Editor).
                 new SkillDef { id="viuva-da-agulha-clone-das-sombras", name="Aranhas", kind=SkillKind.Invocacao, summon="aranha-viuva", pa=2, minRange=1, maxRange=1, cooldown=3, maxActive=3, anim="attack" },
-                new SkillDef { id="viuva-da-agulha-esconder-se", name="Esconder-se", kind=SkillKind.Esconder, pa=2, minRange=0, maxRange=0, sight=false, perTurn=1, cooldown=1, anim="hide" },
-                new SkillDef { id="viuva-da-agulha-teia", name="Teia", kind=SkillKind.Suporte, effect="teia-viuva", pa=3, minRange=1, maxRange=4, pmLoss=4, cooldown=3, anim="attack" } } },
+                new SkillDef { id="viuva-da-agulha-teia", name="Teia", kind=SkillKind.Suporte, effect="teia-viuva", pa=3, minRange=1, maxRange=4, side=4, turns=3, pmLoss=4, cooldown=3, anim="attack" } } },
             // Aranha da Viúva: versão pequena dela, sem turno próprio (age no fim do turno da mãe), 3 PM e 1 de dano.
             ["aranha-viuva"]=new FighterDef { id="aranha-viuva", name="Aranha", sprites="ViuvaAgulha", hp=2, pa=0, pm=3, level=0, picker=false, noTurn=true, noLock=true, noReveal=true, skills=new SkillDef[0] },
             ["guardiao-de-musgo"]=new FighterDef { id="guardiao-de-musgo", name="Guardião de Musgo", sprites="GuardiaoMusgo", hp=13, pa=6, pm=2, initiative=3, level=4, skills=new[] {

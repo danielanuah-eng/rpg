@@ -183,6 +183,16 @@ namespace ArenaTatica.Core.Tests
             BossTurn();
             Assert.AreEqual(1,Board.Gap(b,hero),"as 5 casas livres o colam no herói"); Assert.AreEqual(Content.Default(King).pm,b.pm,"sem gastar os PM do turno");
         }
+        // Log do autor 25/10: o chefe (time neutro) pisou em moeda e o motor estourou o vetor de moedas; a moeda fica no chão.
+        [Test] public void BossWalkingOverCoinsLeavesThem()
+        {
+            Only("none",move:0,pre:5); var b=Stand(); foreach(var h in Heroes.Skip(1)) h.cell=new Cell(0,S.height-1);
+            var hero=Heroes[0]; hero.cell=new Cell(b.cell.x*2>S.width?0:S.width-1,b.cell.z);
+            foreach(var t in S.tiles) if(t.terrain==Terrain.Livre) t.coins=1;
+            int before=S.tiles.Sum(t=>t.coins);
+            BossTurn();
+            Assert.AreEqual(1,Board.Gap(b,hero),"andou por cima das moedas"); Assert.AreEqual(before,S.tiles.Sum(t=>t.coins),"neutro não coleta");
+        }
         [Test] public void TheKingFallingKeepsPvpAndAllHeroesDownLose()
         {
             var b=Stand(); var hero=Heroes[0]; S.active=S.timeline.IndexOf(hero.id); b.hp=0;

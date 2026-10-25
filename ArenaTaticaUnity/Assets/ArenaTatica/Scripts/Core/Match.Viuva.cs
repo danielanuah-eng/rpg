@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 namespace ArenaTatica.Core
 {
-    // Viúva da Agulha (autor 24/10): a Teia cobre 4 casas (2×2) no chão; em cima dela a Viúva e as aranhas ficam invisíveis.
+    // Viúva da Agulha (autor 24/10): a Teia cobre um quadrado no chão (SkillDef.side; 4×4 desde 25/10); em cima dela a Viúva e as aranhas ficam invisíveis.
     // As aranhas (até 3, invocadas pela skill de aranhas) agem no fim do turno dela: andam 3 PM rumo ao último inimigo que
     // pisou na teia ou começou o turno nela; sem ninguém marcado, seguem a mãe e atacam quem ela atacou. 1 de dano; alvo
     // fora da teia: 50% de erro.
@@ -20,32 +20,44 @@ namespace ArenaTatica.Core
         {
             reason="";
             if(!InRange(f,sk,c,out reason)) return false;
-            if(WebCells(c).Count==0) { reason="A teia precisa de chão livre."; return false; }
+            if(WebCells(sk,c).Count==0) { reason="A teia precisa de chão livre."; return false; }
             return true;
         }
-        // 2×2 a partir da casa escolhida (só chão andável).
-        List<int> WebCells(Cell c)
+        // Quadrado de lado side (0 = 2) em volta da casa escolhida (2×2 começa nela; 4×4 começa 1 antes). Só chão andável.
+        List<int> WebCells(SkillDef sk,Cell c)
         {
-            var list=new List<int>();
-            foreach(var o in new[]{ new Cell(0,0), new Cell(1,0), new Cell(0,1), new Cell(1,1) })
+            var list=new List<int>(); int n=sk.side>0?sk.side:2, s0=-(n-1)/2;
+            for(int dz=0;dz<n;dz++) for(int dx=0;dx<n;dx++)
             {
-                var x=c+o; if(Board.Contains(S,x)&&Board.Walkable(S,x,false)) list.Add(Board.Index(S,x));
+                var x=new Cell(c.x+s0+dx,c.z+s0+dz); if(Board.Contains(S,x)&&Board.Walkable(S,x,false)) list.Add(Board.Index(S,x));
             }
             return list;
         }
-        void CastWeb(Fighter f,Cell c)
+        void CastWeb(Fighter f,SkillDef sk,Cell c)
         {
             S.Luna.webs.RemoveAll(w=>w.by==f.id);
-            var web=new LunaWeb{by=f.id,cells=WebCells(c).ToArray()};
+            var web=new LunaWeb{by=f.id,turns=Math.Max(0,sk.turns),cells=WebCells(sk,c).ToArray()};
             S.Luna.webs.Add(web);
             Emit(new GameEvent{kind="skill",info=WebEffect,actor=f.id,cell=c,value=web.cells.Length});
             // Quem já está em cima conta como quem pisou; a família some de vista.
             foreach(var v in S.fighters.Where(x=>x.Alive&&OnAnyWeb(x)).ToList()) WebTouch(v,v.cell,null);
         }
+        // Começo do turno da dona: a teia com duração perde 1 turno; ao zerar, some (a família em cima volta a aparecer).
+        void WebAge(Fighter f)
+        {
+            var w=WebOf(f.id); if(w==null||w.turns<=0||w.cells==null||w.cells.Length==0) return;
+            if(--w.turns>0) return;
+            w.cells=new int[0];
+            Emit(new GameEvent{kind="status",info="teia-some",actor=f.id,cell=f.cell});
+            foreach(var v in S.fighters.Where(x=>x.Alive&&WebFamily(x)==f.id).ToList()) WebTouch(v,v.cell,null);
+        }
         // Pisar ou começar o turno na teia: inimigo vira o alvo das aranhas; a família fica invisível.
         void WebTouch(Fighter f,Cell cell,List<GameEvent> log)
         {
-            if(f==null||!f.Alive||S.Luna.webs.Count==0) return;
+            if(f==null||!f.Alive) return;
+            // Fora da teia a família não tem como se esconder (autor 25/10): saiu dela, aparece.
+            if(WebFamily(f)!=0&&f.hidden&&!OnWeb(S,0,cell)) { f.hidden=false; (log??events).Add(new GameEvent{kind="revelar",target=f.id,cell=cell}); }
+            if(S.Luna.webs.Count==0) return;
             foreach(var w in S.Luna.webs)
             {
                 if(w.cells==null||!w.cells.Contains(Board.Index(S,cell))) continue;

@@ -783,7 +783,8 @@ namespace ArenaTatica
             SetLabel(pass,Game.Placing?"Pronto  [Espaço]":Confirming(ArenaActionConfirmation.Pass)?"Toque novamente para passar":"Passar  [Espaço]");
             ArenaTema.Paint(pass,Confirming(ArenaActionConfirmation.Pass),chosen,idle);
             ArenaTema.Paint(heights,ArenaPresentation.ShowHeights,chosen,idle);
-            int team=f?.team??1; var slots=s.shops[team].slots;
+            // Neutro na vez (chefe/invocação) não tem loja: mostra a do próprio assento (antes estourava o vetor e travava a tela).
+            int team=f!=null&&MatchState.Player(f.team)?f.team:MatchState.Player(Game.Seat)?Game.Seat:1; var slots=s.shops[team].slots;
             shopLabel.text=$"LOJA DE P{team} · {s.coins[team]} MOEDAS";
             shopTitle.text=$"Loja do Castor  ·  P{team}  ·  {s.coins[team]} moedas";
             // Só dá para abrir a loja numa casa ao lado dela; saindo dali, a janela fecha.

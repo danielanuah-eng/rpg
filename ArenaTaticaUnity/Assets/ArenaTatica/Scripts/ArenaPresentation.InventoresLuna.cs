@@ -8,7 +8,7 @@ using Terrain=ArenaTatica.Core.Terrain;
 namespace ArenaTatica {
 public sealed partial class ArenaPresentation {
  Transform lunaRoot; Mesh lunaChessMesh; Material lunaChessMaterial; MatchState lunaState; int lunaRevision=-1; static bool lunaStyle;
- static readonly HashSet<string> LunaEvents=new HashSet<string>{"funilaria","funilaria-golpe","funilaria-fim","blip-loja","comando-celinos","matriz-protecao","matriz-protecao-fim","matriz-dano","caixa-voo","viva-luna","viva-luna-fim","roque","dominio-xadrez","dominio-xadrez-fim","eco-de-aliado","aura-nepturius","nepturius-esfera","nepturius-cubo","esfera-orfa","agarrao-negro","loucura-negra","explosao-antimateria","mordida-tubarao","tubaroes-inicio","tubaroes-fim"};
+ static readonly HashSet<string> LunaEvents=new HashSet<string>{"funilaria","teia-some","funilaria-golpe","funilaria-fim","blip-loja","comando-celinos","matriz-protecao","matriz-protecao-fim","matriz-dano","caixa-voo","viva-luna","viva-luna-fim","roque","dominio-xadrez","dominio-xadrez-fim","eco-de-aliado","aura-nepturius","nepturius-esfera","nepturius-cubo","esfera-orfa","agarrao-negro","loucura-negra","explosao-antimateria","mordida-tubarao","tubaroes-inicio","tubaroes-fim"};
  static void EnsureLunaStyle() {
   if(lunaStyle)return;lunaStyle=true;
   foreach(var x in new Dictionary<string,float>{{"nikola",1.7f},{"bifia",1.7f},{"desland",1.75f},{"nepturius",1.75f},{"blip",1.15f},{"blipware",2.35f},{"celinos",.85f},{"esfera-nepturius",.9f},{"peca-peao",.85f},{"peca-torre",1f},{"peca-cavalo",1.1f},{"peca-bispo",1.15f},{"peca-rainha",1.25f},{"tubarao",.85f}})Heights[x.Key]=x.Value;
@@ -96,7 +96,7 @@ public sealed partial class ArenaPresentation {
   string id=e.info;
   if(id=="comando-celinos") {lunaRevision=-1;yield break;}
   if(id=="blip-loja") Game.Hud?.OpenRemoteShop(e.actor);
-  if(id=="viva-luna-fim"||id=="dominio-xadrez-fim"||id=="matriz-protecao-fim"||id=="funilaria-fim"||id=="funilaria-golpe"||id=="matriz-dano") {lunaRevision=-1;yield break;}
+  if(id=="teia-some"||id=="viva-luna-fim"||id=="dominio-xadrez-fim"||id=="matriz-protecao-fim"||id=="funilaria-fim"||id=="funilaria-golpe"||id=="matriz-dano") {lunaRevision=-1;yield break;}
   if(id=="nepturius-esfera"||id=="loucura-negra"||id=="esfera-orfa")id="aura-nepturius";
   // Cubo (dano numa casa): pulso escuro de uma casa; o estilhaço grande saiu (autor 24/10).
   if(id=="nepturius-cubo")id="aura-nepturius";

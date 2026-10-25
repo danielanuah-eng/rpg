@@ -3,7 +3,7 @@ public static partial class Content {
  static string DescribeLuna(SkillDef sk) {
   string detail=null;
   switch(sk.effect){
-   case "teia-viuva":detail=$"Joga uma teia de 4 casas (2×2) no chão. Em cima dela a Viúva e as aranhas ficam invisíveis. Inimigo que pisar nela ou começar o turno nela perde {sk.pmLoss} PM (uma vez por turno). O último inimigo que pisar nela ou começar o turno nela vira o alvo das aranhas. Uma teia por vez.";break;
+   case "teia-viuva":detail=$"Joga uma teia de {(sk.side>0?sk.side:2)}×{(sk.side>0?sk.side:2)} casas no chão, em volta da casa escolhida. Em cima dela a Viúva e as aranhas ficam invisíveis. Inimigo que pisar nela ou começar o turno nela perde {sk.pmLoss} PM (uma vez por turno). O último inimigo que pisar nela ou começar o turno nela vira o alvo das aranhas.{(sk.turns>0?$" Dura {sk.turns} turnos da Viúva.":"")} Uma teia por vez.";break;
    case "comando-blip":detail="Se Blip estiver vivo, abre a loja de qualquer lugar. Se estiver caído, invoca somente Blip perto de Nikola.";break;
    case "comando-celinos":detail="Se Celinos estiver vivo, marca um inimigo em qualquer lugar do mapa para ele priorizar. Se estiver caído, invoca somente Celinos.";break;
    case "eletaser":detail=$"{sk.damage} de dano, alcance {sk.maxRange}. Reduz os PA restantes do alvo pela metade (mínimo 1, sem criar PA). A cada 2 engrenagens: +1 de alcance.";break;
@@ -27,10 +27,10 @@ public static partial class Content {
  }
  static string LunaTraits(FighterDef d){
   switch(d.id){
-   case "viuva-da-agulha":return "Mãe das aranhas: até 3 aranhas pequenas vivas. No fim do turno dela, cada aranha anda 3 PM até o último inimigo que pisou na teia; sem ninguém na teia, segue a Viúva e ataca quem ela atacou. Mordida de 1 de dano; alvo fora da teia: 50% de chance de errar. Se a Viúva cair, as aranhas e a teia somem.";
+   case "viuva-da-agulha":return "Não tem Esconder-se: só fica invisível em cima da teia, junto com as aranhas. Mãe das aranhas: até 3 aranhas pequenas vivas. No fim do turno dela, cada aranha anda 3 PM até o último inimigo que pisou na teia; sem ninguém na teia, segue a Viúva e ataca quem ela atacou. Mordida de 1 de dano; alvo fora da teia: 50% de chance de errar. Se a Viúva cair, as aranhas e a teia somem.";
    case "aranha-viuva":return "Aranha da Viúva: sem turno próprio, 3 PM, mordida de 1 (50% de erro fora da teia), invisível em cima da teia.";
    case "nikola":return "Funilaria: começa com Blip e Celinos; surgem 3 engrenagens na 1ª rodada e depois a cada 4 rodadas no x1, 3 no x3 (e dupla x dupla), 2 no x4 e toda rodada no x5 e x6, às vezes especiais que valem 2. O contador é compartilhado com seus robôs. Outro aliado coleta +2 PM e +1 PA por valor até acabar o turno. Cada engrenagem exige 2 golpes para ser destruída. Proteção tecnológica: Nikola e seus robôs recebem dano, mas ignoram efeitos e controle externos. Os robôs sobrevivem à morte dele.";
-   case "blip":return "Autômato coletor: alterna entre engrenagens e ouro, procurando o mais próximo. Tudo vai para Nikola, mesmo se Blip cair. Tem +1 PM por engrenagem. Com 10, transforma-se em Blipware.";
+   case "blip":return "Autômato coletor: alterna entre engrenagens e ouro, procurando o mais próximo. Tudo vai para Nikola, mesmo se Blip cair. Tem +1 PM por engrenagem. Com 8, transforma-se em Blipware.";
    case "blipware":return "Modo armado de Blip, controlável como invocação. Recupera 2 PV por turno. Mantém a proteção tecnológica.";
    case "celinos":return "Autômato: revela ao time do dono os invisíveis até 4 casas (para os outros times continuam escondidos); tiro até 3, atingindo até 2 inimigos a até 2 casas entre si. A cada 3 engrenagens: +1 dano, +1 PM e +1 detecção. Fica travado na marca de Nikola até o alvo cair ou passarem 2 rodadas sem comando novo; sem marca, prioriza proximidade e menor PV no empate. Proteção tecnológica.";
    case "bifia":return "Arqueira da lua: cada flecha que acerta um inimigo rouba 1 PM dele. As flechas são azuis e o arco é prateado.";
