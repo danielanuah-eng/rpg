@@ -8,12 +8,13 @@ namespace ArenaTatica.Core
     // on: a ficha é um chefe. every: o chefe entra na linha do tempo a cada N turnos de jogadores. phase2: % da vida em que ele
     // passa à fase 2 (forma phase2Form). actions1/actions2: ações por turno em cada fase. wake: levanta do trono no fim dessa
     // rodada (0 = já começa de pé). moveWeight: peso do "movimento normal" no pool. hpPlayer: PV a mais por jogador além do 1º.
+    // preMove: antes de qualquer ação do turno, anda de graça até N casas rumo ao jogador da vez (0 = não; Rei 5, autor 25/10).
     // events: pool do evento aleatório (ids de Match.Cataclysms separados por vírgula; vazio = o sorteio normal).
     // seatForm/standForm/phase2Form: formas sentado no trono, de pé e na fase 2 (sprites e música vêm de cada FormDef).
     [Serializable] public class BossDef
     {
         public bool on;
-        public int every=2, phase2=50, actions1=1, actions2=2, wake=1, moveWeight=3, hpPlayer=15;
+        public int every=2, phase2=50, actions1=1, actions2=2, wake=1, moveWeight=3, hpPlayer=15, preMove;
         public string events="", seatForm="trono", standForm="espada", phase2Form="duas-espadas";
         // Recompensa (autor): derrotado pelo golpe final de um jogador, o chefe vira aliado dele na MESMA partida.
         // rewardAlly: liga o recrutamento. allyHpFactor: multiplica os PV do aliado. allyForm: forma em que ele passa a lutar.
@@ -85,6 +86,7 @@ namespace ArenaTatica.Core
         {
             if(Seated(f)) { Emit(new GameEvent{kind="chefe-trono",actor=f.id,cell=f.cell}); return; }
             BossPhaseCheck(f,b);
+            BossPreMove(f,b);
             int actions=Math.Max(1,BossPhase(f)==2?b.actions2:b.actions1);
             for(int i=0;i<actions&&f.Alive&&!S.over;i++) { if(!BossAction(f,b)) break; CheckVictory(); }
         }
@@ -236,6 +238,14 @@ namespace ArenaTatica.Core
             }
         }
         IEnumerable<Cell> Cells() => Enumerable.Range(0,S.tiles.Length).Select(i=>new Cell(i%S.width,i/S.width));
+        // Movimento livre antes das ações (preMove): anda até N casas rumo ao jogador da vez sem gastar os PM do turno.
+        void BossPreMove(Fighter f,BossDef b)
+        {
+            if(b.preMove<=0||!f.Alive||S.over) return;
+            int pm=f.pm; f.pm=b.preMove;
+            BossMove(f,BossSeat(f,BossCycleOf(f)));
+            f.pm=pm;
+        }
         // Movimento normal: anda pelos PM até a casa que mais o aproxima de um lutador do jogador da vez (colado já basta).
         bool BossMove(Fighter f,int seat)
         {

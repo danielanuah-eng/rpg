@@ -1102,8 +1102,8 @@ namespace ArenaTatica.Core
             var sp=Sphere(owner); if(sp==null) return;
             var damageOwner=mad?null:owner; var l=Luna(owner)??Luna(sp);
             int radius=Cfg(l?.blastRadius,3), dmg=Math.Max(1,Cfg(l?.blastDamage,2));
-            // Nepturius vivo: a esfera bate mais forte (autor 23/10).
-            if(owner.Alive) dmg+=Cfg(l?.sphereBonus,2);
+            // Nepturius morto: a esfera bate mais forte (autor 25/10; antes era com ele vivo).
+            if(!owner.Alive) dmg+=Cfg(l?.sphereBonus,2);
             var targets=S.fighters.Where(x=>x.Alive&&!SphereSpares(sp,x)&&x.prisoned==0&&Board.Gap(sp,x)<=radius).ToList();
             Emit(new GameEvent{kind="skill",info="explosao-antimateria",actor=sp.id,cell=sp.cell,value=radius});
             var log=new List<GameEvent>();

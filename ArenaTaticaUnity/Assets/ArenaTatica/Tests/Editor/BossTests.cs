@@ -20,11 +20,11 @@ namespace ArenaTatica.Core.Tests
         [TearDown] public void Clean() => Content.ApplyEdits("");
 
         // Só essa skill no pool (peso 10); o movimento fica com o peso dado.
-        static void Only(string skill,int move=0)
+        static void Only(string skill,int move=0,int pre=0)
         {
             var d=Content.Copy(Content.Default(King));
             foreach(var s in d.skills) s.weight=s.id==skill?10:0;
-            d.boss.moveWeight=move;
+            d.boss.moveWeight=move; d.boss.preMove=pre;
             Content.ApplyEdits(JsonUtility.ToJson(new GameEdits{fighters=new List<FighterDef>{d}}));
         }
         // De pé, colado no Trono (lado de baixo), e os heróis longe, salvo quem o teste aproxima.
@@ -52,7 +52,7 @@ namespace ArenaTatica.Core.Tests
             CollectionAssert.AreEquivalent(throne,Board.Footprint(b).ToArray(),"sentado em cima das 4 casas do Trono");
             Assert.IsTrue(throne.All(c=>S.At(c).terrain==Terrain.Loja),"o Trono é a loja");
             Assert.AreNotEqual(S.alliance[1],S.alliance[2],"PvP desde o início"); Assert.AreEqual(VictoryMode.Eliminacao,S.mode);
-            Assert.AreEqual(50+15,Content.MaxHp(b)); Assert.AreEqual(Content.MaxHp(b),b.hp);
+            Assert.AreEqual(23+15,Content.MaxHp(b)); Assert.AreEqual(Content.MaxHp(b),b.hp);
             Assert.IsTrue(ArenaGame.ValidState(S));
             // Estado da rede: os campos novos voltam iguais.
             var copy=JsonUtility.FromJson<MatchState>(JsonUtility.ToJson(S));
@@ -173,6 +173,16 @@ namespace ArenaTatica.Core.Tests
             Assert.Less(Heroes.Min(h=>Board.Gap(b,h)),before,"aproxima depois do desvio");
         }
 
+        // Autor 25/10: antes de qualquer ação o Rei anda até 5 casas de graça, sem gastar os PM do turno.
+        [Test] public void WalksFiveFreeCellsBeforeActing()
+        {
+            Assert.AreEqual(5,Content.Default(King).boss.preMove);
+            Only("none",move:0,pre:5); var b=Stand(); foreach(var h in Heroes.Skip(1)) h.cell=new Cell(0,S.height-1);
+            var hero=Heroes[0]; hero.cell=new Cell(b.cell.x*2>S.width?0:S.width-1,b.cell.z);
+            int before=Board.Gap(b,hero); Assert.GreaterOrEqual(before,5,"herói além dos 3 PM");
+            BossTurn();
+            Assert.AreEqual(1,Board.Gap(b,hero),"as 5 casas livres o colam no herói"); Assert.AreEqual(Content.Default(King).pm,b.pm,"sem gastar os PM do turno");
+        }
         [Test] public void TheKingFallingKeepsPvpAndAllHeroesDownLose()
         {
             var b=Stand(); var hero=Heroes[0]; S.active=S.timeline.IndexOf(hero.id); b.hp=0;

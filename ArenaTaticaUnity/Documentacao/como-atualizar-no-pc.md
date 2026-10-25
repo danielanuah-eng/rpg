@@ -19,7 +19,7 @@ As opções (time, loja, tempo de turno, som da L.E.L.A) ficam no registro do Wi
 ## Pelo site (zip)
 1. Baixe o `.zip` novo na página do jogo no itch.
 2. **Feche o jogo.**
-3. Extraia o zip numa pasta nova, por exemplo `Arena Tática 1.2.21`.
+3. Extraia o zip numa pasta nova, por exemplo `Arena Tática 1.2.22`.
 4. Rode o `.exe` da pasta nova. Fichas e mapas aparecem iguais.
 5. Se tudo estiver certo, apague a pasta da versão antiga.
 

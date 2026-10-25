@@ -162,7 +162,7 @@ namespace ArenaTatica.Core
     // Engrenagens: gearStep (bônus a cada N), gearDamage/gearRange/gearPm/gearReveal (bônus por passo), gearDrops (por vez), gearEvery (a cada N rodadas; 0 = automático pelo número de jogadores),
     // gearSpecial (% de drop especial), gearMorph (engrenagens da transformação), gearHits (marcadores do drop).
     // Bifia: vivaTurns/vivaRadius/vivaInit/vivaPm. Desland: ecoCooldown/cloneTurns/chessTurns/pieceDamage (peças)/queenDamage (rainha).
-    // Nepturius: auraRange/auraPa/auraPm, grabCount/grabRange, blastRadius/blastDamage, sphereBonus (dano extra com o dono vivo), cubeDamage/cubeHeal, armorBuff/armorTurns.
+    // Nepturius: auraRange/auraPa/auraPm, grabCount/grabRange, blastRadius/blastDamage, sphereBonus (dano extra com o dono morto), cubeDamage/cubeHeal, armorBuff/armorTurns.
     // Robôs: healTurn (cura no começo do turno controlável), revealBase/shotRange/chainRange (Celinos), gearPmBase (PM do Blip).
     [Serializable] public class LunaDef
     {

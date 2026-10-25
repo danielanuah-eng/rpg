@@ -310,8 +310,8 @@ namespace ArenaTatica.Core
             // Rei Thaagarys (batalha contra o chefe, autor 22/10; Boss.cs): 2×2, começa sentado no Trono e levanta no fim da rodada 1.
             // Pool da IA = skills com weight (fase 1 = notForm duas-espadas, fase 2 = form duas-espadas) + movimento (boss.moveWeight).
             // Fase 2 (≤ 50%): saca a segunda espada, 2 ações por turno e +1 uso de cada skill por turno. Números provisórios do Claude.
-            ["rei-thaagarys"]=new FighterDef { id="rei-thaagarys", name="Rei Thaagarys", sprites="ReiThaagarys", hp=50, pa=6, pm=3, level=0, picker=false, size=2, armor=1, immovable=true, startForm="espada",
-                boss=new BossDef { on=true, every=2, phase2=50, actions1=1, actions2=2, wake=1, moveWeight=3, hpPlayer=15 },
+            ["rei-thaagarys"]=new FighterDef { id="rei-thaagarys", name="Rei Thaagarys", sprites="ReiThaagarys", hp=23, pa=6, pm=3, level=0, picker=false, size=2, armor=1, immovable=true, startForm="espada",
+                boss=new BossDef { on=true, every=2, phase2=50, actions1=1, actions2=2, wake=1, moveWeight=3, hpPlayer=15, preMove=5 },
                 forms=new[] {
                     new FormDef { id="trono", name="No trono", sprites="ReiThaagarysTrono", music="ansiedade", locked=true, unstoppable=true },
                     new FormDef { id="espada", name="Espada real", sprites="ReiThaagarys", music="ira", locked=true, unstoppable=true },
@@ -473,7 +473,7 @@ namespace ArenaTatica.Core
             d.duelBonus=Clamp(d.duelBonus,0,6); d.duelRange=Clamp(d.duelRange,0,6); d.farImmune=Clamp(d.farImmune,0,12); d.fullHitHeal=Clamp(d.fullHitHeal,0,10); d.splitCount=Clamp(d.splitCount,0,4);
             if(!string.IsNullOrEmpty(d.split)&&(!Fighters.ContainsKey(d.split)||d.split==d.id)) d.split=null;
             d.fieldPa=Clamp(d.fieldPa,0,6); d.fieldRange=Clamp(d.fieldRange,0,4); d.meleeWeak=Clamp(d.meleeWeak,0,5); d.lifesteal=Clamp(d.lifesteal,0,10); d.bloodlust=Clamp(d.bloodlust,0,6);
-            if(boss) { var b=d.boss; b.every=Clamp(b.every,1,6); b.phase2=Clamp(b.phase2,0,99); b.actions1=Clamp(b.actions1,1,4); b.actions2=Clamp(b.actions2,1,4); b.wake=Clamp(b.wake,0,9); b.moveWeight=Clamp(b.moveWeight,0,20); b.hpPlayer=Clamp(b.hpPlayer,0,60); }
+            if(boss) { var b=d.boss; b.every=Clamp(b.every,1,6); b.phase2=Clamp(b.phase2,0,99); b.actions1=Clamp(b.actions1,1,4); b.actions2=Clamp(b.actions2,1,4); b.wake=Clamp(b.wake,0,9); b.moveWeight=Clamp(b.moveWeight,0,20); b.hpPlayer=Clamp(b.hpPlayer,0,60); b.preMove=Clamp(b.preMove,0,12); }
             d.passives=(d.passives??new PassiveDef[0]).Where(x=>x!=null).Take(8).ToArray();
             foreach(var x in d.passives) { x.amount=Clamp(x.amount,-5,5); x.range=Clamp(x.range,0,12); x.lonely=Clamp(x.lonely,0,12); }
             return d;

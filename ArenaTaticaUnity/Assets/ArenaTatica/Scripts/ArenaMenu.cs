@@ -679,7 +679,7 @@ namespace ArenaTatica
             var g=Grid(c);
             Stepper(g,"Turno a cada N turnos",()=>b.every,x=>b.every=Mathf.Clamp(x,1,6)); Stepper(g,"Fase 2 com vida ≤ %",()=>b.phase2,x=>b.phase2=Mathf.Clamp(x,0,99));
             Stepper(g,"Ações por turno (fase 1)",()=>b.actions1,x=>b.actions1=Mathf.Clamp(x,1,4)); Stepper(g,"Ações por turno (fase 2)",()=>b.actions2,x=>b.actions2=Mathf.Clamp(x,1,4));
-            Stepper(g,"Levanta no fim da rodada",()=>b.wake,x=>b.wake=Mathf.Clamp(x,0,9)); Stepper(g,"Peso do movimento",()=>b.moveWeight,x=>b.moveWeight=Mathf.Clamp(x,0,20));
+            Stepper(g,"Levanta no fim da rodada",()=>b.wake,x=>b.wake=Mathf.Clamp(x,0,9)); Stepper(g,"Peso do movimento",()=>b.moveWeight,x=>b.moveWeight=Mathf.Clamp(x,0,20)); Stepper(g,"Anda antes de agir",()=>b.preMove,x=>b.preMove=Mathf.Clamp(x,0,12));
             Stepper(g,"PV a mais por jogador",()=>b.hpPlayer,x=>b.hpPlayer=Mathf.Clamp(x,0,60));
             TextSetting(c,"Forma no trono",b.seatForm,x=>b.seatForm=x);
             TextSetting(c,"Forma da fase 1",b.standForm,x=>b.standForm=x);

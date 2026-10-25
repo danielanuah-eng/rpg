@@ -20,7 +20,7 @@ public static partial class Content {
    case "mover-esfera":detail="Não gasta PA. Move a esfera a partir da posição e dos PM dela. Não depende da distância até Nepturius. Mover conta como habilidade usada pela esfera.";break;
    case "agarrao-negro":detail="Mãos negras saem da esfera e atordoam até 4 personagens próximos, aliados ou inimigos, no raio 4. Nunca pegam Nepturius nem a esfera. Proteções contra controle continuam valendo. Recarga: depois de usar, fica 1 turno sem poder usar.";break;
    case "loucura-negra":detail="Afeta a esfera, não o Nepturius: ela ganha +4 PM neste turno, mesmo que já tenha se movido. Ainda pode se mover, mas não pode usar Agarrão negro nem Explosão de antimatéria até o turno terminar.";break;
-   case "explosao-antimateria":detail=$"A esfera causa {sk.damage} de dano (+2 enquanto Nepturius estiver vivo) em todos os personagens até 3 casas dela, inclusive aliados, menos Nepturius.";break;
+   case "explosao-antimateria":detail=$"A esfera causa {sk.damage} de dano (+2 depois que Nepturius morrer) em todos os personagens até 3 casas dela, inclusive aliados, menos Nepturius.";break;
    case "puxao-blipware":detail=$"Estica o braço mecânico e puxa um inimigo a até {sk.maxRange} casas para perto de Blipware.";break;
   }
   return detail==null?null:sk.name+": "+sk.pa+" PA · "+detail;
